@@ -1,0 +1,2413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	 <meta name="description" content="">
+
+    <meta name="author" content="dmey (forked from NREL)" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>DataCostEstimate.f90 &ndash; EnergyPlusFortran</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">EnergyPlusFortran <small>8.1.0.009</small></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+		 aria-expanded="false">Contents <span class="caret"></span></a>
+	      <ul class="dropdown-menu">
+
+            <li><a href="../lists/files.html">Source Files</a></li>
+
+
+            <li><a href="../lists/modules.html">Modules</a></li>
+
+
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+
+
+            <li><a href="../lists/types.html">Derived Types</a></li>
+
+
+            <li><a href="../program/energyplus.html">Program</a></li>
+
+            </ul>
+            </li>
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/energyplus.html">Program</a></li>
+
+          </ul>
+
+
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+
+  <div class="row">
+    <h1>DataCostEstimate.f90
+    <small>Source File</small>
+
+    </h1>
+
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+	  data-placement="bottom" data-html="true"
+	  title=" 0.0% of total for source files.">50 statements</a>
+     </li>
+
+
+    <li><i class="fa fa-code"></i><a href="../src/DataCostEstimate.f90"> Source File</a></li>
+
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+
+     <li class="active">DataCostEstimate.f90</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+
+<div id="sidebar">
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#mods-0">Modules</a></h3></div>
+  <div id="mods-0" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../module/datacostestimate.html">DataCostEstimate</a>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/datacostestimate.f90.html#src">DataCostEstimate.f90</a>
+  </div>
+</div>
+
+
+  <hr>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allfiles-0">All Source Files</a></h3></div>
+  <div id="allfiles-0" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../sourcefile/airflownetworkbalancemanager.f90.html">AirflowNetworkBalanceManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/airflownetworksolver.f90.html">AirflowNetworkSolver.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/baseboardradiator.f90.html">BaseboardRadiator.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/baseboardradiatorelectric.f90.html">BaseboardRadiatorElectric.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/baseboardradiatorsteam.f90.html">BaseboardRadiatorSteam.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/baseboardradiatorwater.f90.html">BaseboardRadiatorWater.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/branchinputmanager.f90.html">BranchInputManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/branchnodeconnections.f90.html">BranchNodeConnections.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/conductiontransferfunctioncalc.f90.html">ConductionTransferFunctionCalc.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/cooltower.f90.html">CoolTower.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/costestimatemanager.f90.html">CostEstimateManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/curvemanager.f90.html">CurveManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/cvfonlyroutines.f90.html">CVFOnlyRoutines.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataairflownetwork.f90.html">DataAirflowNetwork.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataairloop.f90.html">DataAirLoop.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataairsystems.f90.html">DataAirSystems.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/databranchairloopplant.f90.html">DataBranchAirLoopPlant.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/databranchnodeconnections.f90.html">DataBranchNodeConnections.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/databsdfwindow.f90.html">DataBSDFWindow.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datacomplexfenestration.f90.html">DataComplexFenestration.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datacontaminantbalance.f90.html">DataContaminantBalance.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataconvergparams.f90.html">DataConvergParams.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataconversions.f90.html">DataConversions.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datacostestimate.f90.html">DataCostEstimate.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datadaylighting.f90.html">DataDaylighting.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datadaylightingdevices.f90.html">DataDaylightingDevices.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datadefineequip.f90.html">Datadefineequip.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datadelight.f90.html">DataDElight.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataenvironment.f90.html">DataEnvironment.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataequivalentlayerwindow.f90.html">DataEquivalentLayerWindow.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataerrortracking.f90.html">DataErrorTracking.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datagenerators.f90.html">DataGenerators.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataglobalconstants.f90.html">DataGlobalConstants.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataglobals.f90.html">DataGlobals.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataheatbalance.f90.html">DataHeatBalance.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataheatbalfansys.f90.html">DataHeatBalFanSys.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataheatbalsurface.f90.html">DataHeatBalSurface.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datahvaccontrollers.f90.html">DataHVACControllers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datahvacglobals.f90.html">DataHVACGlobals.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datainterfaces.f90.html">DataInterfaces.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataipshortcuts.f90.html">DataIPShortCuts.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataloopnode.f90.html">DataLoopNode.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datamoisturebalance.f90.html">DataMoistureBalance.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datamoisturebalanceempd.f90.html">DataMoistureBalanceEMPD.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataoutputs.f90.html">DataOutputs.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataphotovoltaics.f90.html">DataPhotovoltaics.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataplant.f90.html">DataPlant.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataplantpipingsystems.f90.html">DataPlantPipingSystems.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataprecisionglobals.f90.html">DataPrecisionGlobals.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datareportingflags.f90.html">DataReportingFlags.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataroomair.f90.html">DataRoomAir.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datarootfinder.f90.html">DataRootFinder.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataruntimelanguage.f90.html">DataRuntimeLanguage.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datashadowingcombinations.f90.html">DataShadowingCombinations.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datasizing.f90.html">DataSizing.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datastringglobals.f90.html">DataStringGlobals.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datasurfacecolors.f90.html">DataSurfaceColors.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datasurfacelists.f90.html">DataSurfaceLists.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datasurfaces.f90.html">DataSurfaces.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datasystemvariables.f90.html">DataSystemVariables.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datatimings.f90.html">DataTimings.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataucsdshareddata.f90.html">DataUCSDSharedData.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datavectortypes.f90.html">DataVectorTypes.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataviewfactorinformation.f90.html">DataViewFactorInformation.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datawater.f90.html">DataWater.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datazonecontrols.f90.html">DataZoneControls.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datazoneenergydemands.f90.html">DataZoneEnergyDemands.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datazoneequipment.f90.html">DataZoneEquipment.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/daylightingdevices.f90.html">DaylightingDevices.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/daylightingmanager.f90.html">DaylightingManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/delightmanagerf.f90.html">DElightManagerF.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/delightmanagerf_no.f90.html">DElightManagerF_NO.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/demandmanager.f90.html">DemandManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/desiccantdehumidifiers.f90.html">DesiccantDehumidifiers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/directair.f90.html">DirectAir.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/displayroutines.f90.html">DisplayRoutines.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dxcoil.f90.html">DXCoil.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/earthtube.f90.html">EarthTube.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/economiclifecyclecost.f90.html">EconomicLifeCycleCost.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/economictariff.f90.html">EconomicTariff.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/ecoroof.f90.html">EcoRoof.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/electricpowergenerators.f90.html">ElectricPowerGenerators.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/electricpowermanager.f90.html">ElectricPowerManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/emsmanager.f90.html">EMSManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/energyplus.f90.html">EnergyPlus.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/exteriorenergyusemanager.f90.html">ExteriorEnergyUseManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/externalinterface_no.f90.html">ExternalInterface_NO.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/fancoilunits.f90.html">FanCoilUnits.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/faultsmanager.f90.html">FaultsManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/fluidproperties.f90.html">FluidProperties.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/general.f90.html">General.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/generalroutines.f90.html">GeneralRoutines.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/globalnames.f90.html">GlobalNames.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalanceairmanager.f90.html">HeatBalanceAirManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalanceconvectioncoeffs.f90.html">HeatBalanceConvectionCoeffs.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalancehamtmanager.f90.html">HeatBalanceHAMTManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalanceinternalheatgains.f90.html">HeatBalanceInternalHeatGains.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalanceintradexchange.f90.html">HeatBalanceIntRadExchange.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalancemanager.f90.html">HeatBalanceManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalancemovableinsulation.f90.html">HeatBalanceMovableInsulation.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalancesurfacemanager.f90.html">HeatBalanceSurfaceManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalfinitedifferencemanager.f90.html">HeatBalFiniteDifferenceManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatrecovery.f90.html">HeatRecovery.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/humidifiers.f90.html">Humidifiers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvaccontrollers.f90.html">HVACControllers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvaccooledbeam.f90.html">HVACCooledBeam.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacdualductsystem.f90.html">HVACDualDuctSystem.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacduct.f90.html">HVACDuct.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacdxsystem.f90.html">HVACDXSystem.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacevapcomponent.f90.html">HVACEvapComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacfancomponent.f90.html">HVACFanComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacfurnace.f90.html">HVACFurnace.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacheatingcoils.f90.html">HVACHeatingCoils.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvachxassistedcoolingcoil.f90.html">HVACHXAssistedCoolingCoil.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacinterfacemanager.f90.html">HVACInterfaceManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacmanager.f90.html">HVACManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacmixercomponent.f90.html">HVACMixerComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacmultispeedheatpump.f90.html">HVACMultiSpeedHeatPump.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacsingleductinduc.f90.html">HVACSingleDuctInduc.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacsingleductsystem.f90.html">HVACSingleDuctSystem.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacsplittercomponent.f90.html">HVACSplitterComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacstandaloneerv.f90.html">HVACStandAloneERV.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacsteamcoilcomponent.f90.html">HVACSteamCoilComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvactranspiredcollector.f90.html">HVACTranspiredCollector.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacunitarybypassvav.f90.html">HVACUnitaryBypassVAV.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacunitarysystem.f90.html">HVACUnitarySystem.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacvariablerefrigerantflow.f90.html">HVACVariableRefrigerantFlow.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacwatercoilcomponent.f90.html">HVACWaterCoilComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacwatertoair.f90.html">HVACWatertoAir.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacwatertoairmultispeedhp.f90.html">HVACWatertoAirMultiSpeedHP.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/inputprocessor.f90.html">InputProcessor.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/matrixdatamanager.f90.html">MatrixDataManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/mixedair.f90.html">MixedAir.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/moisturebalanceempdmanager.f90.html">MoistureBalanceEMPDManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/nodeinputmanager.f90.html">NodeInputManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/nonzoneequipmentmanager.f90.html">NonZoneEquipmentManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/outairnodemanager.f90.html">OutAirNodeManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/outdoorairunit.f90.html">OutdoorAirUnit.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/outputprocessor.f90.html">OutputProcessor.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/outputreportpredefined.f90.html">OutputReportPredefined.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/outputreports.f90.html">OutputReports.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/outputreporttabular.f90.html">OutputReportTabular.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/packagedterminalheatpump.f90.html">PackagedTerminalHeatPump.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/packagedthermalstoragecoil.f90.html">PackagedThermalStorageCoil.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/photovoltaics.f90.html">Photovoltaics.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/photovoltaicthermalcollectors.f90.html">PhotovoltaicThermalCollectors.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantabsorptionchillers.f90.html">PlantAbsorptionChillers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantboilers.f90.html">PlantBoilers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantboilerssteam.f90.html">PlantBoilersSteam.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantcentralgshp.f90.html">PlantCentralGSHP.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantchillers.f90.html">PlantChillers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantcondloopoperation.f90.html">PlantCondLoopOperation.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantcondlooptowers.f90.html">PlantCondLoopTowers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/planteirchillers.f90.html">PlantEIRChillers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantevapfluidcoolers.f90.html">PlantEvapFluidCoolers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantexhaustabsorptionchiller.f90.html">PlantExhaustAbsorptionChiller.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantfluidcoolers.f90.html">PlantFluidCoolers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantgasabsorptionchiller.f90.html">PlantGasAbsorptionChiller.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantgroundheatexchangers.f90.html">PlantGroundHeatExchangers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantheatexchanger.f90.html">PlantHeatExchanger.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/planticethermalstorage.f90.html">PlantIceThermalStorage.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantloadprofile.f90.html">PlantLoadProfile.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantloopequipment.f90.html">PlantLoopEquipment.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantloopsolver.f90.html">PlantLoopSolver.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantmanager.f90.html">PlantManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantoutsideenergysources.f90.html">PlantOutsideEnergySources.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantpipeheattransfer.f90.html">PlantPipeHeatTransfer.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantpipes.f90.html">PlantPipes.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantpipingsystemmanager.f90.html">PlantPipingSystemManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantpondgroundheatexchanger.f90.html">PlantPondGroundHeatExchanger.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantpressuresystem.f90.html">PlantPressureSystem.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantpumps.f90.html">PlantPumps.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantsolarcollectors.f90.html">PlantSolarCollectors.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantsurfacegroundheatexchanger.f90.html">PlantSurfaceGroundHeatExchanger.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantutilities.f90.html">PlantUtilities.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantvalves.f90.html">PlantValves.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantwatersources.f90.html">PlantWaterSources.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantwaterthermaltank.f90.html">PlantWaterThermalTank.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantwatertowatergshp.f90.html">PlantWatertoWaterGSHP.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantwateruse.f90.html">PlantWaterUse.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/pollutionanalysismodule.f90.html">PollutionAnalysisModule.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/poweredinductionunits.f90.html">PoweredInductionUnits.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/psychroutines.f90.html">PsychRoutines.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/purchasedairmanager.f90.html">Purchasedairmanager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/radiantsystemhightemp.f90.html">RadiantSystemHighTemp.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/radiantsystemlowtemp.f90.html">RadiantSystemLowTemp.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/refrigeratedcase.f90.html">RefrigeratedCase.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/reportsizingmanager.f90.html">ReportSizingManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/returnairpath.f90.html">ReturnAirPath.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/roomairmanager.f90.html">RoomAirManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/roomairmodelcrossvent.f90.html">RoomAirModelCrossVent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/roomairmodeldisplacementvent.f90.html">RoomAirModelDisplacementVent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/roomairmodelmundt.f90.html">RoomAirModelMundt.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/roomairmodelufad.f90.html">RoomAirModelUFAD.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/roomairmodelusertemppattern.f90.html">RoomAirModelUserTempPattern.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/rootfinder.f90.html">RootFinder.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/runtimelanguageprocessor.f90.html">RuntimeLanguageProcessor.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/schedulemanager.f90.html">ScheduleManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/setpointmanager.f90.html">SetPointManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/simairservingzones.f90.html">SimAirServingZones.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/simulationmanager.f90.html">SimulationManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/sizingmanager.f90.html">SizingManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/solarreflectionmanager.f90.html">SolarReflectionManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/solarshading.f90.html">SolarShading.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/sortandstringutilities.f90.html">SortAndStringUtilities.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/sqlite3.c.html">sqlite3.c</a>
+
+      <a class="list-group-item" href="../sourcefile/sqlitecroutines.c.html">SQLiteCRoutines.c</a>
+
+      <a class="list-group-item" href="../sourcefile/sqlitefortranroutines.f90.html">SQLiteFortranRoutines.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/sqlitefortranroutines_no.f90.html">SQLiteFortranRoutines_NO.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/standardratings.f90.html">StandardRatings.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/surfacegeometry.f90.html">SurfaceGeometry.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/systemavailabilitymanager.f90.html">SystemAvailabilityManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/systemreports.f90.html">SystemReports.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/tarcogcomplexfenestration.f90.html">TarcogComplexFenestration.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/thermalchimney.f90.html">ThermalChimney.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/thermalcomfort.f90.html">ThermalComfort.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/unitheater.f90.html">UnitHeater.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/unitventilator.f90.html">UnitVentilator.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/userdefinedcomponents.f90.html">UserDefinedComponents.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/utilityroutines.f90.html">UtilityRoutines.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/vectorutilities.f90.html">VectorUtilities.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/ventilatedslab.f90.html">VentilatedSlab.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/watermanager.f90.html">WaterManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/weathermanager.f90.html">WeatherManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/windowac.f90.html">WindowAC.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/windowcomplexmanager.f90.html">WindowComplexManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/windowequivalentlayer.f90.html">WindowEquivalentLayer.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/windowmanager.f90.html">WindowManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/windturbine.f90.html">WindTurbine.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/zoneairloopequipmentmanager.f90.html">Zoneairloopequipmentmanager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/zonecontaminantpredictorcorrector.f90.html">ZoneContaminantPredictorCorrector.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/zonedehumidifier.f90.html">ZoneDehumidifier.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/zoneequipmentmanager.f90.html">Zoneequipmentmanager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/zoneplenumcomponent.f90.html">ZonePlenumComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/zonetemppredictorcorrector.f90.html">ZoneTempPredictorCorrector.f90</a>
+
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+    </div>
+    <div class="col-md-9" id='text'>
+
+
+    <h3>This File Depends On</h3>
+
+                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: sourcefile~~datacostestimate.f90~~EfferentGraph Pages: 1 -->
+<svg id="sourcefiledatacostestimatef90EfferentGraph" width="412pt" height="50pt"
+ viewBox="0.00 0.00 411.90 49.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="sourcefile~~datacostestimate.f90~~EfferentGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 45.5)">
+<title>sourcefile~~datacostestimate.f90~~EfferentGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-45.5 407.9021,-45.5 407.9021,4 -4,4"/>
+<!-- sourcefile~datacostestimate.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~EfferentGraph_node1" class="node">
+<title>sourcefile~datacostestimate.f90</title>
+<polygon fill="none" stroke="#000000" points="403.9666,-41.2554 289.7087,-41.2554 289.7087,-19.2446 403.9666,-19.2446 403.9666,-41.2554"/>
+<text text-anchor="middle" x="346.8376" y="-27.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">DataCostEstimate.f90</text>
+</g>
+<!-- sourcefile~dataglobals.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~EfferentGraph_node2" class="node">
+<title>sourcefile~dataglobals.f90</title>
+<g id="a_sourcefile~~datacostestimate.f90~~EfferentGraph_node2"><a xlink:href="../sourcefile/dataglobals.f90.html" xlink:title="DataGlobals.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="253.9209,-22.2554 166.331,-22.2554 166.331,-.2446 253.9209,-.2446 253.9209,-22.2554"/>
+<text text-anchor="middle" x="210.126" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataGlobals.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~dataglobals.f90&#45;&gt;sourcefile~datacostestimate.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~EfferentGraph_edge2" class="edge">
+<title>sourcefile~dataglobals.f90&#45;&gt;sourcefile~datacostestimate.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M254.1349,-17.3663C262.2138,-18.4891 270.8147,-19.6844 279.3963,-20.8771"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="279.0424,-24.3615 289.4291,-22.2714 280.0061,-17.4281 279.0424,-24.3615"/>
+</g>
+<!-- sourcefile~dataprecisionglobals.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~EfferentGraph_node3" class="node">
+<title>sourcefile~dataprecisionglobals.f90</title>
+<g id="a_sourcefile~~datacostestimate.f90~~EfferentGraph_node3"><a xlink:href="../sourcefile/dataprecisionglobals.f90.html" xlink:title="DataPrecisionGlobals.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="130.719,-41.2554 -.2403,-41.2554 -.2403,-19.2446 130.719,-19.2446 130.719,-41.2554"/>
+<text text-anchor="middle" x="65.2394" y="-27.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataPrecisionGlobals.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~dataprecisionglobals.f90&#45;&gt;sourcefile~datacostestimate.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~EfferentGraph_edge3" class="edge">
+<title>sourcefile~dataprecisionglobals.f90&#45;&gt;sourcefile~datacostestimate.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M130.5906,-30.9902C142.5298,-31.0985 154.878,-31.1927 166.4788,-31.25 205.2758,-31.4416 214.9762,-31.4584 253.7732,-31.25 262.1348,-31.2051 270.9188,-31.1375 279.6128,-31.0581"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="279.781,-34.5568 289.7467,-30.9603 279.7134,-27.5571 279.781,-34.5568"/>
+</g>
+<!-- sourcefile~dataprecisionglobals.f90&#45;&gt;sourcefile~dataglobals.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~EfferentGraph_edge1" class="edge">
+<title>sourcefile~dataprecisionglobals.f90&#45;&gt;sourcefile~dataglobals.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M130.9,-21.6395C139.3232,-20.5349 147.8699,-19.4141 156.079,-18.3376"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="156.802,-21.7728 166.262,-17.0022 155.8918,-14.8322 156.802,-21.7728"/>
+</g>
+</g>
+</svg>
+</div>
+                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
+                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                      </div>
+                      <div class="modal-body">
+
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="186pt" height="31pt"
+ viewBox="0.00 0.00 186.41 30.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 26.5)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-26.5 182.4064,-26.5 182.4064,4 -4,4"/>
+<!-- Source File -->
+<g id="node1" class="node">
+<title>Source File</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="65.1576,-22.2554 -.0526,-22.2554 -.0526,-.2446 65.1576,-.2446 65.1576,-22.2554"/>
+<text text-anchor="middle" x="32.5525" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Source File</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node2" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="178.2607,-22.2554 82.8443,-22.2554 82.8443,-.2446 178.2607,-.2446 178.2607,-22.2554"/>
+<text text-anchor="middle" x="130.5525" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+
+    <p>Solid arrows point from a file to a file which depends upon it. A file
+    is dependent upon another if the latter must be compiled before the former
+    can be. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+      <h3>Files Dependent On This One</h3>
+
+                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: sourcefile~~datacostestimate.f90~~AfferentGraph Pages: 1 -->
+<svg id="sourcefiledatacostestimatef90AfferentGraph" width="641pt" height="209pt"
+ viewBox="0.00 0.00 641.00 209.13" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph" class="graph" transform="scale(.2525 .2525) rotate(0) translate(4 824.25)">
+<title>sourcefile~~datacostestimate.f90~~AfferentGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-824.25 2534.6091,-824.25 2534.6091,4 -4,4"/>
+<!-- sourcefile~datacostestimate.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_node1" class="node">
+<title>sourcefile~datacostestimate.f90</title>
+<polygon fill="none" stroke="#000000" points="114.1934,-551.2554 -.0645,-551.2554 -.0645,-529.2446 114.1934,-529.2446 114.1934,-551.2554"/>
+<text text-anchor="middle" x="57.0645" y="-537.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">DataCostEstimate.f90</text>
+</g>
+<!-- sourcefile~outputreporttabular.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_node2" class="node">
+<title>sourcefile~outputreporttabular.f90</title>
+<g id="a_sourcefile~~datacostestimate.f90~~AfferentGraph_node2"><a xlink:href="../sourcefile/outputreporttabular.f90.html" xlink:title="OutputReportTabular.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="276.7492,-551.2554 149.9217,-551.2554 149.9217,-529.2446 276.7492,-529.2446 276.7492,-551.2554"/>
+<text text-anchor="middle" x="213.3354" y="-537.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">OutputReportTabular.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~datacostestimate.f90&#45;&gt;sourcefile~outputreporttabular.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge91" class="edge">
+<title>sourcefile~datacostestimate.f90&#45;&gt;sourcefile~outputreporttabular.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M114.3667,-540.25C122.6937,-540.25 131.3613,-540.25 139.952,-540.25"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="139.9765,-543.7501 149.9765,-540.25 139.9764,-536.7501 139.9765,-543.7501"/>
+</g>
+<!-- sourcefile~economictariff.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_node3" class="node">
+<title>sourcefile~economictariff.f90</title>
+<g id="a_sourcefile~~datacostestimate.f90~~AfferentGraph_node3"><a xlink:href="../sourcefile/economictariff.f90.html" xlink:title="EconomicTariff.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="448.8603,-736.2554 350.4918,-736.2554 350.4918,-714.2446 448.8603,-714.2446 448.8603,-736.2554"/>
+<text text-anchor="middle" x="399.676" y="-722.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">EconomicTariff.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~datacostestimate.f90&#45;&gt;sourcefile~economictariff.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge92" class="edge">
+<title>sourcefile~datacostestimate.f90&#45;&gt;sourcefile~economictariff.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M213.3354,-686.25C253.4681,-704.5513 302.3973,-714.3701 340.0456,-719.5768"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="339.9786,-723.0978 350.3485,-720.9262 340.8877,-716.1571 339.9786,-723.0978"/>
+</g>
+<!-- sourcefile~economiclifecyclecost.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_node4" class="node">
+<title>sourcefile~economiclifecyclecost.f90</title>
+<g id="a_sourcefile~~datacostestimate.f90~~AfferentGraph_node4"><a xlink:href="../sourcefile/economiclifecyclecost.f90.html" xlink:title="EconomicLifeCycleCost.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="684.9942,-698.2554 544.2148,-698.2554 544.2148,-676.2446 684.9942,-676.2446 684.9942,-698.2554"/>
+<text text-anchor="middle" x="614.6045" y="-684.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">EconomicLifeCycleCost.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~datacostestimate.f90&#45;&gt;sourcefile~economiclifecyclecost.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge93" class="edge">
+<title>sourcefile~datacostestimate.f90&#45;&gt;sourcefile~economiclifecyclecost.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M64.9541,-551.5645C85.5336,-580.0444 144.0825,-654.6692 213.3354,-686.25"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M213.3354,-686.25C268.4116,-711.3659 433.624,-702.8435 534.064,-694.7787"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="534.4951,-698.2552 544.1761,-693.9508 533.9238,-691.2785 534.4951,-698.2552"/>
+</g>
+<!-- sourcefile~costestimatemanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_node5" class="node">
+<title>sourcefile~costestimatemanager.f90</title>
+<g id="a_sourcefile~~datacostestimate.f90~~AfferentGraph_node5"><a xlink:href="../sourcefile/costestimatemanager.f90.html" xlink:title="CostEstimateManager.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="2107.5139,-22.2554 1974.8804,-22.2554 1974.8804,-.2446 2107.5139,-.2446 2107.5139,-22.2554"/>
+<text text-anchor="middle" x="2041.1971" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">CostEstimateManager.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~datacostestimate.f90&#45;&gt;sourcefile~costestimatemanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge94" class="edge">
+<title>sourcefile~datacostestimate.f90&#45;&gt;sourcefile~costestimatemanager.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M58.5551,-529.222C69.4719,-453.3994 143.9751,-12.25 399.676,-12.25 399.676,-12.25 399.676,-12.25 1652.4609,-12.25 1760.8094,-12.25 1886.1441,-11.8567 1964.5494,-11.5634"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="1964.8339,-15.0625 1974.8206,-11.5246 1964.8074,-8.0625 1964.8339,-15.0625"/>
+</g>
+<!-- sourcefile~outputreporttabular.f90&#45;&gt;sourcefile~economictariff.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge82" class="edge">
+<title>sourcefile~outputreporttabular.f90&#45;&gt;sourcefile~economictariff.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M220.9584,-551.5023C236.5407,-574.0407 273.8479,-625.6902 312.542,-662.25 331.1449,-679.8268 354.8136,-696.6464 372.7865,-708.4786"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="371.3122,-711.6935 381.609,-714.189 375.1159,-705.8171 371.3122,-711.6935"/>
+</g>
+<!-- sourcefile~outputreporttabular.f90&#45;&gt;sourcefile~economiclifecyclecost.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge79" class="edge">
+<title>sourcefile~outputreporttabular.f90&#45;&gt;sourcefile~economiclifecyclecost.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M399.676,-648.25C449.6394,-655.9714 505.8506,-666.227 548.2533,-674.2836"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="547.696,-677.7404 558.1748,-676.1764 549.0079,-670.8644 547.696,-677.7404"/>
+</g>
+<!-- sourcefile~sizingmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_node6" class="node">
+<title>sourcefile~sizingmanager.f90</title>
+<g id="a_sourcefile~~datacostestimate.f90~~AfferentGraph_node6"><a xlink:href="../sourcefile/sizingmanager.f90.html" xlink:title="SizingManager.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="2242.5736,-485.2554 2143.6161,-485.2554 2143.6161,-463.2446 2242.5736,-463.2446 2242.5736,-485.2554"/>
+<text text-anchor="middle" x="2193.0948" y="-471.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">SizingManager.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~outputreporttabular.f90&#45;&gt;sourcefile~sizingmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge75" class="edge">
+<title>sourcefile~outputreporttabular.f90&#45;&gt;sourcefile~sizingmanager.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M831.5684,-668.25C1063.7566,-650.1077 1122.5219,-658.3568 1355.2397,-649.25 1577.5782,-640.5494 1633.2508,-640.1018 1855.4436,-628.25"/>
+</g>
+<!-- sourcefile~heatbalanceinternalheatgains.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_node7" class="node">
+<title>sourcefile~heatbalanceinternalheatgains.f90</title>
+<g id="a_sourcefile~~datacostestimate.f90~~AfferentGraph_node7"><a xlink:href="../sourcefile/heatbalanceinternalheatgains.f90.html" xlink:title="HeatBalanceInternalHeatGains.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="486.9443,-424.2554 312.4078,-424.2554 312.4078,-402.2446 486.9443,-402.2446 486.9443,-424.2554"/>
+<text text-anchor="middle" x="399.676" y="-410.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">HeatBalanceInternalHeatGains.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~outputreporttabular.f90&#45;&gt;sourcefile~heatbalanceinternalheatgains.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge76" class="edge">
+<title>sourcefile~outputreporttabular.f90&#45;&gt;sourcefile~heatbalanceinternalheatgains.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M229.546,-529.2017C262.1717,-506.9658 335.949,-456.683 374.7516,-430.2372"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="377.0781,-432.8872 383.3703,-424.3631 373.1358,-427.1029 377.0781,-432.8872"/>
+</g>
+<!-- sourcefile~simulationmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_node8" class="node">
+<title>sourcefile~simulationmanager.f90</title>
+<g id="a_sourcefile~~datacostestimate.f90~~AfferentGraph_node8"><a xlink:href="../sourcefile/simulationmanager.f90.html" xlink:title="SimulationManager.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="2398.1917,-485.2554 2278.3813,-485.2554 2278.3813,-463.2446 2398.1917,-463.2446 2398.1917,-485.2554"/>
+<text text-anchor="middle" x="2338.2865" y="-471.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">SimulationManager.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~outputreporttabular.f90&#45;&gt;sourcefile~simulationmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge77" class="edge">
+<title>sourcefile~outputreporttabular.f90&#45;&gt;sourcefile~simulationmanager.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1855.4436,-50.25C1937.8879,-54.5656 1969.8547,-8.7056 2041.1971,-50.25"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M2041.1971,-50.25C2067.726,-65.6984 2087.7159,-45.8655 2107.6055,-69.25 2196.0402,-173.2241 2064.4769,-263.0296 2143.6055,-374.25 2157.7767,-394.1685 2173.7045,-383.3643 2193.0948,-398.25"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1652.4609,-50.25C1742.5481,-55.0415 1765.3524,-45.5342 1855.4436,-50.25"/>
+</g>
+<!-- sourcefile~heatbalancemanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_node9" class="node">
+<title>sourcefile~heatbalancemanager.f90</title>
+<g id="a_sourcefile~~datacostestimate.f90~~AfferentGraph_node9"><a xlink:href="../sourcefile/heatbalancemanager.f90.html" xlink:title="HeatBalanceManager.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="2106.2025,-100.2554 1976.1918,-100.2554 1976.1918,-78.2446 2106.2025,-78.2446 2106.2025,-100.2554"/>
+<text text-anchor="middle" x="2041.1971" y="-86.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">HeatBalanceManager.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~outputreporttabular.f90&#45;&gt;sourcefile~heatbalancemanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge78" class="edge">
+<title>sourcefile~outputreporttabular.f90&#45;&gt;sourcefile~heatbalancemanager.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1855.4436,-50.25C1903.7204,-52.7771 1957.6689,-65.2159 1994.9337,-75.3762"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="1994.4111,-78.8636 2004.9833,-78.1714 1996.2869,-72.1196 1994.4111,-78.8636"/>
+</g>
+<!-- sourcefile~roomairmodelusertemppattern.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_node10" class="node">
+<title>sourcefile~roomairmodelusertemppattern.f90</title>
+<g id="a_sourcefile~~datacostestimate.f90~~AfferentGraph_node10"><a xlink:href="../sourcefile/roomairmodelusertemppattern.f90.html" xlink:title="RoomAirModelUserTempPattern.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="704.756,-486.2554 524.453,-486.2554 524.453,-464.2446 704.756,-464.2446 704.756,-486.2554"/>
+<text text-anchor="middle" x="614.6045" y="-472.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">RoomAirModelUserTempPattern.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~outputreporttabular.f90&#45;&gt;sourcefile~roomairmodelusertemppattern.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge80" class="edge">
+<title>sourcefile~outputreporttabular.f90&#45;&gt;sourcefile~roomairmodelusertemppattern.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M399.676,-648.25C484.239,-661.3184 450.8349,-546.5237 522.8101,-500.25 529.1142,-496.197 536.0674,-492.7954 543.2415,-489.9415"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="544.9009,-493.0638 553.1211,-486.3797 542.5267,-486.4787 544.9009,-493.0638"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M225.1577,-551.4736C252.8873,-576.739 325.4005,-636.7714 399.676,-648.25"/>
+</g>
+<!-- sourcefile~hvacmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_node11" class="node">
+<title>sourcefile~hvacmanager.f90</title>
+<g id="a_sourcefile~~datacostestimate.f90~~AfferentGraph_node11"><a xlink:href="../sourcefile/hvacmanager.f90.html" xlink:title="HVACManager.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1511.3107,-601.2554 1412.7526,-601.2554 1412.7526,-579.2446 1511.3107,-579.2446 1511.3107,-601.2554"/>
+<text text-anchor="middle" x="1462.0316" y="-587.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">HVACManager.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~outputreporttabular.f90&#45;&gt;sourcefile~hvacmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge81" class="edge">
+<title>sourcefile~outputreporttabular.f90&#45;&gt;sourcefile~hvacmanager.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M831.5684,-668.25C929.7616,-663.7456 940.6632,-594.7106 1038.8987,-591.25"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M399.676,-648.25C447.1519,-655.587 783.5794,-670.4514 831.5684,-668.25"/>
+</g>
+<!-- sourcefile~thermalcomfort.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_node12" class="node">
+<title>sourcefile~thermalcomfort.f90</title>
+<g id="a_sourcefile~~datacostestimate.f90~~AfferentGraph_node12"><a xlink:href="../sourcefile/thermalcomfort.f90.html" xlink:title="ThermalComfort.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="667.4669,-602.2554 561.7421,-602.2554 561.7421,-580.2446 667.4669,-580.2446 667.4669,-602.2554"/>
+<text text-anchor="middle" x="614.6045" y="-588.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">ThermalComfort.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~outputreporttabular.f90&#45;&gt;sourcefile~thermalcomfort.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge83" class="edge">
+<title>sourcefile~outputreporttabular.f90&#45;&gt;sourcefile~thermalcomfort.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M399.676,-648.25C467.4894,-658.73 544.7498,-627.1769 585.6454,-606.9084"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="587.4268,-609.9292 594.7563,-602.2788 584.2557,-603.6887 587.4268,-609.9292"/>
+</g>
+<!-- sourcefile~heatbalancesurfacemanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_node13" class="node">
+<title>sourcefile~heatbalancesurfacemanager.f90</title>
+<g id="a_sourcefile~~datacostestimate.f90~~AfferentGraph_node13"><a xlink:href="../sourcefile/heatbalancesurfacemanager.f90.html" xlink:title="HeatBalanceSurfaceManager.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1938.6343,-100.2554 1772.2529,-100.2554 1772.2529,-78.2446 1938.6343,-78.2446 1938.6343,-100.2554"/>
+<text text-anchor="middle" x="1855.4436" y="-86.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">HeatBalanceSurfaceManager.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~outputreporttabular.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge84" class="edge">
+<title>sourcefile~outputreporttabular.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M216.2665,-529.095C236.1646,-456.1584 358.4105,-50.25 614.6045,-50.25 614.6045,-50.25 614.6045,-50.25 1256.1497,-50.25 1432.288,-50.25 1476.5245,-41.8185 1652.4609,-50.25"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1652.4609,-50.25C1705.428,-53.0672 1764.9003,-65.633 1805.7074,-75.7507"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="1804.8542,-79.1451 1815.4065,-78.1967 1806.566,-72.3576 1804.8542,-79.1451"/>
+</g>
+<!-- sourcefile~economictariff.f90&#45;&gt;sourcefile~economiclifecyclecost.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge86" class="edge">
+<title>sourcefile~economictariff.f90&#45;&gt;sourcefile~economiclifecyclecost.f90</title>
+<path fill="none" stroke="#7fff00" stroke-dasharray="5,2" d="M448.985,-716.532C476.4877,-711.6695 511.2626,-705.5212 541.8391,-700.1151"/>
+<polygon fill="#7fff00" stroke="#7fff00" points="542.7932,-703.5008 552.0311,-698.3132 541.5744,-696.6077 542.7932,-703.5008"/>
+</g>
+<!-- sourcefile~economictariff.f90&#45;&gt;sourcefile~simulationmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge87" class="edge">
+<title>sourcefile~economictariff.f90&#45;&gt;sourcefile~simulationmanager.f90</title>
+<path fill="none" stroke="#7fff00" stroke-dasharray="5,2" d="M831.5684,-744.25C923.7093,-743.2115 947.1627,-735.5581 1038.8987,-744.25"/>
+</g>
+<!-- sourcefile~economictariff.f90&#45;&gt;sourcefile~heatbalancemanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge85" class="edge">
+<title>sourcefile~economictariff.f90&#45;&gt;sourcefile~heatbalancemanager.f90</title>
+<path fill="none" stroke="#7fff00" stroke-dasharray="5,2" d="M448.9044,-730.2873C529.0826,-737.8456 692.8637,-750.5922 831.5684,-744.25"/>
+<path fill="none" stroke="#7fff00" stroke-dasharray="5,2" d="M831.5684,-744.25C887.5089,-742.2086 901.0246,-735.6857 956.7378,-730.25 1212.4489,-705.3015 1292.172,-772.2361 1532.8235,-682.25 1748.0143,-601.7843 1806.342,-549.9723 1938.7888,-362.25 1997.404,-279.1723 2027.082,-158.4053 2037.1481,-110.2309"/>
+<polygon fill="#7fff00" stroke="#7fff00" points="2040.5952,-110.8423 2039.1478,-100.3469 2033.7342,-109.4542 2040.5952,-110.8423"/>
+</g>
+<!-- sourcefile~economiclifecyclecost.f90&#45;&gt;sourcefile~simulationmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge88" class="edge">
+<title>sourcefile~economiclifecyclecost.f90&#45;&gt;sourcefile~simulationmanager.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M685.1671,-696.7851C769.3606,-708.1492 914.3885,-727.6839 1038.8987,-744.25"/>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M1038.8987,-744.25C1226.3228,-767.1332 1273.2157,-782.25 1462.0316,-782.25 1462.0316,-782.25 1462.0316,-782.25 1855.4436,-782.25 2006.5085,-782.25 2064.3947,-822.3505 2193.0948,-743.25"/>
+</g>
+<!-- sourcefile~costestimatemanager.f90&#45;&gt;sourcefile~sizingmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge89" class="edge">
+<title>sourcefile~costestimatemanager.f90&#45;&gt;sourcefile~sizingmanager.f90</title>
+<path fill="none" stroke="#7f00ff" stroke-dasharray="5,2" d="M2060.4849,-22.3648C2076.0469,-32.4602 2097.0284,-48.8701 2107.6055,-69.25 2178.2148,-205.3001 2085.4553,-270.4266 2143.6055,-412.25 2150.3978,-428.8159 2163.0536,-444.5452 2173.8663,-456.0157"/>
+<polygon fill="#7f00ff" stroke="#7f00ff" points="2171.4564,-458.5568 2180.9629,-463.2343 2176.4483,-453.6495 2171.4564,-458.5568"/>
+</g>
+<!-- sourcefile~costestimatemanager.f90&#45;&gt;sourcefile~simulationmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge90" class="edge">
+<title>sourcefile~costestimatemanager.f90&#45;&gt;sourcefile~simulationmanager.f90</title>
+<path fill="none" stroke="#7f00ff" stroke-dasharray="5,2" d="M2090.0872,-22.3221C2096.8301,-25.7756 2103.0074,-30.3062 2107.6055,-36.25 2200.0425,-155.7411 2056.7293,-250.6569 2143.6055,-374.25 2157.6631,-394.2488 2173.4709,-383.6736 2193.0948,-398.25"/>
+<path fill="none" stroke="#7f00ff" stroke-dasharray="5,2" d="M2193.0948,-398.25C2227.4096,-423.7385 2271.4548,-445.486 2301.9904,-459.1047"/>
+<polygon fill="#7f00ff" stroke="#7f00ff" points="2300.837,-462.4207 2311.4005,-463.2351 2303.6505,-456.0109 2300.837,-462.4207"/>
+</g>
+<!-- sourcefile~sizingmanager.f90&#45;&gt;sourcefile~simulationmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge1" class="edge">
+<title>sourcefile~sizingmanager.f90&#45;&gt;sourcefile~simulationmanager.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M2242.6555,-474.25C2250.9219,-474.25 2259.6328,-474.25 2268.2942,-474.25"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="2268.4097,-477.7501 2278.4096,-474.25 2268.4096,-470.7501 2268.4097,-477.7501"/>
+</g>
+<!-- sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~heatbalancemanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge37" class="edge">
+<title>sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~heatbalancemanager.f90</title>
+<path fill="none" stroke="#ffbf00" stroke-dasharray="5,2" d="M1038.8987,-318.25C1348.7397,-329.2179 1426.0869,-345.0731 1736.0984,-341.25 1826.2036,-340.1388 1864.4778,-387.2212 1938.7888,-336.25 2016.0343,-283.266 2035.1322,-160.3516 2039.7568,-110.6645"/>
+<polygon fill="#ffbf00" stroke="#ffbf00" points="2043.265,-110.7068 2040.5947,-100.454 2036.2885,-110.1342 2043.265,-110.7068"/>
+</g>
+<!-- sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~roomairmodelusertemppattern.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge38" class="edge">
+<title>sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~roomairmodelusertemppattern.f90</title>
+<path fill="none" stroke="#ffbf00" stroke-dasharray="5,2" d="M430.0375,-424.2701C454.8065,-433.0392 490.8086,-445.2843 522.8101,-454.25 532.3734,-456.9293 542.5671,-459.5196 552.5536,-461.9122"/>
+<polygon fill="#ffbf00" stroke="#ffbf00" points="551.9044,-465.3549 562.4398,-464.2349 553.5054,-458.5405 551.9044,-465.3549"/>
+</g>
+<!-- sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~hvacmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge39" class="edge">
+<title>sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~hvacmanager.f90</title>
+<path fill="none" stroke="#ffbf00" stroke-dasharray="5,2" d="M1038.8987,-591.25C1135.4554,-591.0278 1160.404,-577.759 1256.1497,-590.25"/>
+<path fill="none" stroke="#ffbf00" stroke-dasharray="5,2" d="M614.6045,-514.25C626.398,-516.347 1026.9203,-591.2776 1038.8987,-591.25"/>
+</g>
+<!-- sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge42" class="edge">
+<title>sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90</title>
+<path fill="none" stroke="#ffbf00" stroke-dasharray="5,2" d="M831.5684,-318.25C923.6714,-321.0908 946.8095,-314.9902 1038.8987,-318.25"/>
+<path fill="none" stroke="#ffbf00" stroke-dasharray="5,2" d="M1038.8987,-318.25C1076.3549,-319.5759 1088.7716,-318.2819 1121.0596,-299.25 1141.6641,-287.1049 1136.2292,-271.0034 1157.0596,-259.25 1196.1139,-237.2138 1211.6946,-246.1306 1256.1497,-240.25"/>
+</g>
+<!-- sourcefile~zoneequipmentmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_node14" class="node">
+<title>sourcefile~zoneequipmentmanager.f90</title>
+<g id="a_sourcefile~~datacostestimate.f90~~AfferentGraph_node14"><a xlink:href="../sourcefile/zoneequipmentmanager.f90.html" xlink:title="Zoneequipmentmanager.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1327.9975,-484.2554 1184.3018,-484.2554 1184.3018,-462.2446 1327.9975,-462.2446 1327.9975,-484.2554"/>
+<text text-anchor="middle" x="1256.1497" y="-470.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Zoneequipmentmanager.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~zoneequipmentmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge33" class="edge">
+<title>sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~zoneequipmentmanager.f90</title>
+<path fill="none" stroke="#ffbf00" stroke-dasharray="5,2" d="M1038.8987,-318.25C1085.5406,-319.9011 1193.3159,-414.9451 1237.1206,-455.3672"/>
+<polygon fill="#ffbf00" stroke="#ffbf00" points="1234.8168,-458.0043 1244.5262,-462.2444 1239.5802,-452.8749 1234.8168,-458.0043"/>
+</g>
+<!-- sourcefile~daylightingmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_node15" class="node">
+<title>sourcefile~daylightingmanager.f90</title>
+<g id="a_sourcefile~~datacostestimate.f90~~AfferentGraph_node15"><a xlink:href="../sourcefile/daylightingmanager.f90.html" xlink:title="DaylightingManager.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1317.477,-290.2554 1194.8223,-290.2554 1194.8223,-268.2446 1317.477,-268.2446 1317.477,-290.2554"/>
+<text text-anchor="middle" x="1256.1497" y="-276.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DaylightingManager.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~daylightingmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge34" class="edge">
+<title>sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~daylightingmanager.f90</title>
+<path fill="none" stroke="#ffbf00" stroke-dasharray="5,2" d="M1038.8987,-318.25C1069.1197,-319.3198 1144.6526,-304.2469 1198.1396,-292.5292"/>
+<polygon fill="#ffbf00" stroke="#ffbf00" points="1199.1782,-295.8842 1208.1884,-290.3106 1197.669,-289.0488 1199.1782,-295.8842"/>
+</g>
+<!-- sourcefile~roomairmodelcrossvent.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_node16" class="node">
+<title>sourcefile~roomairmodelcrossvent.f90</title>
+<g id="a_sourcefile~~datacostestimate.f90~~AfferentGraph_node16"><a xlink:href="../sourcefile/roomairmodelcrossvent.f90.html" xlink:title="RoomAirModelCrossVent.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="688.5027,-445.2554 540.7062,-445.2554 540.7062,-423.2446 688.5027,-423.2446 688.5027,-445.2554"/>
+<text text-anchor="middle" x="614.6045" y="-431.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">RoomAirModelCrossVent.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~roomairmodelcrossvent.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge35" class="edge">
+<title>sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~roomairmodelcrossvent.f90</title>
+<path fill="none" stroke="#ffbf00" stroke-dasharray="5,2" d="M487.0957,-421.7915C501.4042,-423.1895 516.2043,-424.6356 530.4322,-426.0258"/>
+<polygon fill="#ffbf00" stroke="#ffbf00" points="530.3829,-429.5376 540.6759,-427.0267 531.0637,-422.5707 530.3829,-429.5376"/>
+</g>
+<!-- sourcefile~zonecontaminantpredictorcorrector.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_node17" class="node">
+<title>sourcefile~zonecontaminantpredictorcorrector.f90</title>
+<g id="a_sourcefile~~datacostestimate.f90~~AfferentGraph_node17"><a xlink:href="../sourcefile/zonecontaminantpredictorcorrector.f90.html" xlink:title="ZoneContaminantPredictorCorrector.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1355.3299,-368.2554 1156.9694,-368.2554 1156.9694,-346.2446 1355.3299,-346.2446 1355.3299,-368.2554"/>
+<text text-anchor="middle" x="1256.1497" y="-354.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">ZoneContaminantPredictorCorrector.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~zonecontaminantpredictorcorrector.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge36" class="edge">
+<title>sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~zonecontaminantpredictorcorrector.f90</title>
+<path fill="none" stroke="#ffbf00" stroke-dasharray="5,2" d="M1038.8987,-318.25C1096.455,-320.2874 1161.3097,-333.3745 1205.0555,-343.8349"/>
+<polygon fill="#ffbf00" stroke="#ffbf00" points="1204.3366,-347.262 1214.8805,-346.2251 1205.9913,-340.4604 1204.3366,-347.262"/>
+</g>
+<!-- sourcefile~delightmanagerf.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_node18" class="node">
+<title>sourcefile~delightmanagerf.f90</title>
+<g id="a_sourcefile~~datacostestimate.f90~~AfferentGraph_node18"><a xlink:href="../sourcefile/delightmanagerf.f90.html" xlink:title="DElightManagerF.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1093.9517,-290.2554 983.8457,-290.2554 983.8457,-268.2446 1093.9517,-268.2446 1093.9517,-290.2554"/>
+<text text-anchor="middle" x="1038.8987" y="-276.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DElightManagerF.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~delightmanagerf.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge40" class="edge">
+<title>sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~delightmanagerf.f90</title>
+<path fill="none" stroke="#ffbf00" stroke-dasharray="5,2" d="M831.5684,-318.25C889.6703,-321.5988 955.5219,-305.7651 997.1182,-293.2718"/>
+<polygon fill="#ffbf00" stroke="#ffbf00" points="998.367,-296.5495 1006.8947,-290.2622 996.3075,-289.8593 998.367,-296.5495"/>
+<path fill="none" stroke="#ffbf00" stroke-dasharray="5,2" d="M406.5389,-401.9633C422.8663,-376.3501 466.8733,-314.2683 522.8101,-291.25 598.2661,-260.1994 625.2638,-282.5988 706.3989,-291.25 762.9885,-297.284 774.7523,-314.9753 831.5684,-318.25"/>
+</g>
+<!-- sourcefile~roomairmodelufad.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_node19" class="node">
+<title>sourcefile~roomairmodelufad.f90</title>
+<g id="a_sourcefile~~datacostestimate.f90~~AfferentGraph_node19"><a xlink:href="../sourcefile/roomairmodelufad.f90.html" xlink:title="RoomAirModelUFAD.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="678.0662,-404.2554 551.1428,-404.2554 551.1428,-382.2446 678.0662,-382.2446 678.0662,-404.2554"/>
+<text text-anchor="middle" x="614.6045" y="-390.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">RoomAirModelUFAD.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~roomairmodelufad.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge41" class="edge">
+<title>sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~roomairmodelufad.f90</title>
+<path fill="none" stroke="#ffbf00" stroke-dasharray="5,2" d="M487.0957,-405.1152C504.9716,-403.4518 523.6147,-401.717 540.9507,-400.1038"/>
+<polygon fill="#ffbf00" stroke="#ffbf00" points="541.3586,-403.5811 550.9912,-399.1695 540.7099,-396.6112 541.3586,-403.5811"/>
+</g>
+<!-- sourcefile~roomairmodeldisplacementvent.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_node20" class="node">
+<title>sourcefile~roomairmodeldisplacementvent.f90</title>
+<g id="a_sourcefile~~datacostestimate.f90~~AfferentGraph_node20"><a xlink:href="../sourcefile/roomairmodeldisplacementvent.f90.html" xlink:title="RoomAirModelDisplacementVent.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="706.1938,-363.2554 523.0152,-363.2554 523.0152,-341.2446 706.1938,-341.2446 706.1938,-363.2554"/>
+<text text-anchor="middle" x="614.6045" y="-349.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">RoomAirModelDisplacementVent.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~roomairmodeldisplacementvent.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge43" class="edge">
+<title>sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~roomairmodeldisplacementvent.f90</title>
+<path fill="none" stroke="#ffbf00" stroke-dasharray="5,2" d="M431.0758,-402.1929C455.82,-393.6883 491.2863,-381.9574 522.8101,-373.25 532.3831,-370.6057 542.582,-368.0339 552.5706,-365.649"/>
+<polygon fill="#ffbf00" stroke="#ffbf00" points="553.5211,-369.0211 562.4581,-363.3306 551.9231,-362.2059 553.5211,-369.0211"/>
+</g>
+<!-- sourcefile~zonetemppredictorcorrector.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_node21" class="node">
+<title>sourcefile~zonetemppredictorcorrector.f90</title>
+<g id="a_sourcefile~~datacostestimate.f90~~AfferentGraph_node21"><a xlink:href="../sourcefile/zonetemppredictorcorrector.f90.html" xlink:title="ZoneTempPredictorCorrector.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1121.2208,-465.2554 956.5766,-465.2554 956.5766,-443.2446 1121.2208,-443.2446 1121.2208,-465.2554"/>
+<text text-anchor="middle" x="1038.8987" y="-451.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">ZoneTempPredictorCorrector.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~zonetemppredictorcorrector.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge44" class="edge">
+<title>sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~zonetemppredictorcorrector.f90</title>
+<path fill="none" stroke="#ffbf00" stroke-dasharray="5,2" d="M831.5684,-476.25C868.6809,-467.8593 910.2722,-462.65 946.407,-459.4242"/>
+<polygon fill="#ffbf00" stroke="#ffbf00" points="946.7804,-462.9051 956.4459,-458.5659 946.1841,-455.9305 946.7804,-462.9051"/>
+<path fill="none" stroke="#ffbf00" stroke-dasharray="5,2" d="M614.6045,-514.25C662.7967,-522.8192 783.8253,-487.0441 831.5684,-476.25"/>
+<path fill="none" stroke="#ffbf00" stroke-dasharray="5,2" d="M412.7197,-424.4462C434.1871,-442.2655 478.9684,-476.9306 522.8101,-495.25 561.2514,-511.3128 573.5856,-506.9563 614.6045,-514.25"/>
+</g>
+<!-- sourcefile~roomairmodelmundt.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_node22" class="node">
+<title>sourcefile~roomairmodelmundt.f90</title>
+<g id="a_sourcefile~~datacostestimate.f90~~AfferentGraph_node22"><a xlink:href="../sourcefile/roomairmodelmundt.f90.html" xlink:title="RoomAirModelMundt.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="678.7403,-322.2554 550.4687,-322.2554 550.4687,-300.2446 678.7403,-300.2446 678.7403,-322.2554"/>
+<text text-anchor="middle" x="614.6045" y="-308.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">RoomAirModelMundt.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~roomairmodelmundt.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge45" class="edge">
+<title>sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~roomairmodelmundt.f90</title>
+<path fill="none" stroke="#ffbf00" stroke-dasharray="5,2" d="M413.1414,-402.018C434.8407,-384.4903 479.5068,-350.731 522.8101,-332.25 529.0736,-329.5769 535.7292,-327.2176 542.4834,-325.141"/>
+<polygon fill="#ffbf00" stroke="#ffbf00" points="543.7656,-328.4146 552.4157,-322.2969 541.8385,-321.685 543.7656,-328.4146"/>
+</g>
+<!-- sourcefile~utilityroutines.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_node24" class="node">
+<title>sourcefile~utilityroutines.f90</title>
+<g id="a_sourcefile~~datacostestimate.f90~~AfferentGraph_node24"><a xlink:href="../sourcefile/utilityroutines.f90.html" xlink:title="UtilityRoutines.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="2530.4201,-464.2554 2434.1778,-464.2554 2434.1778,-442.2446 2530.4201,-442.2446 2530.4201,-464.2554"/>
+<text text-anchor="middle" x="2482.299" y="-450.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">UtilityRoutines.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~simulationmanager.f90&#45;&gt;sourcefile~utilityroutines.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge47" class="edge">
+<title>sourcefile~simulationmanager.f90&#45;&gt;sourcefile~utilityroutines.f90</title>
+<path fill="none" stroke="#7fff00" stroke-dasharray="5,2" d="M2398.1096,-465.5265C2406.5706,-464.2928 2415.2626,-463.0253 2423.7001,-461.7949"/>
+<polygon fill="#7fff00" stroke="#7fff00" points="2424.4427,-465.2237 2433.833,-460.3173 2423.4326,-458.297 2424.4427,-465.2237"/>
+</g>
+<!-- sourcefile~energyplus.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_node29" class="node">
+<title>sourcefile~energyplus.f90</title>
+<g id="a_sourcefile~~datacostestimate.f90~~AfferentGraph_node29"><a xlink:href="../sourcefile/energyplus.f90.html" xlink:title="EnergyPlus.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="2524.0075,-505.2554 2440.5904,-505.2554 2440.5904,-483.2446 2524.0075,-483.2446 2524.0075,-505.2554"/>
+<text text-anchor="middle" x="2482.299" y="-491.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">EnergyPlus.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~simulationmanager.f90&#45;&gt;sourcefile~energyplus.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge46" class="edge">
+<title>sourcefile~simulationmanager.f90&#45;&gt;sourcefile~energyplus.f90</title>
+<path fill="none" stroke="#7fff00" stroke-dasharray="5,2" d="M2398.1096,-482.558C2408.7742,-484.0391 2419.8061,-485.5712 2430.2324,-487.0192"/>
+<polygon fill="#7fff00" stroke="#7fff00" points="2430.0345,-490.5252 2440.4209,-488.4341 2430.9974,-483.5917 2430.0345,-490.5252"/>
+</g>
+<!-- sourcefile~heatbalancemanager.f90&#45;&gt;sourcefile~sizingmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge48" class="edge">
+<title>sourcefile~heatbalancemanager.f90&#45;&gt;sourcefile~sizingmanager.f90</title>
+<path fill="none" stroke="#00ff3f" stroke-dasharray="5,2" d="M2043.1944,-100.419C2051.1228,-143.0174 2082.9352,-298.5979 2143.6055,-412.25 2152.0371,-428.0447 2164.6673,-443.786 2175.0577,-455.4552"/>
+<polygon fill="#00ff3f" stroke="#00ff3f" points="2172.4795,-457.8222 2181.814,-462.8339 2177.6421,-453.095 2172.4795,-457.8222"/>
+</g>
+<!-- sourcefile~heatbalancemanager.f90&#45;&gt;sourcefile~simulationmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge49" class="edge">
+<title>sourcefile~heatbalancemanager.f90&#45;&gt;sourcefile~simulationmanager.f90</title>
+<path fill="none" stroke="#00ff3f" stroke-dasharray="5,2" d="M2042.2025,-100.3044C2046.505,-141.5984 2066.8153,-288.8064 2143.6055,-374.25 2159.9457,-392.4315 2173.4709,-383.6736 2193.0948,-398.25"/>
+</g>
+<!-- sourcefile~roomairmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_node28" class="node">
+<title>sourcefile~roomairmanager.f90</title>
+<g id="a_sourcefile~~datacostestimate.f90~~AfferentGraph_node28"><a xlink:href="../sourcefile/roomairmanager.f90.html" xlink:title="RoomAirManager.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="887.2905,-425.2554 775.8462,-425.2554 775.8462,-403.2446 887.2905,-403.2446 887.2905,-425.2554"/>
+<text text-anchor="middle" x="831.5684" y="-411.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">RoomAirManager.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~roomairmodelusertemppattern.f90&#45;&gt;sourcefile~roomairmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge50" class="edge">
+<title>sourcefile~roomairmodelusertemppattern.f90&#45;&gt;sourcefile~roomairmanager.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M666.2578,-464.2373C679.4038,-461.2144 693.4687,-457.7883 706.3989,-454.25 734.5384,-446.5498 765.7987,-436.5612 790.0402,-428.492"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="791.2641,-431.7732 799.6337,-425.277 789.0398,-425.136 791.2641,-431.7732"/>
+</g>
+<!-- sourcefile~hvacmanager.f90&#45;&gt;sourcefile~simulationmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge54" class="edge">
+<title>sourcefile~hvacmanager.f90&#45;&gt;sourcefile~simulationmanager.f90</title>
+<path fill="none" stroke="#003fff" stroke-dasharray="5,2" d="M1495.5386,-601.3229C1576.9399,-628.001 1783.6775,-694.3648 1855.4436,-704.25"/>
+<path fill="none" stroke="#003fff" stroke-dasharray="5,2" d="M1855.4436,-704.25C1967.5966,-711.54 1996.5204,-706.1758 2107.6055,-723.25 2146.1737,-729.1781 2159.5846,-763.2429 2193.0948,-743.25"/>
+<path fill="none" stroke="#003fff" stroke-dasharray="5,2" d="M2193.0948,-743.25C2285.747,-686.305 2323.1011,-548.1588 2334.3185,-495.3008"/>
+<polygon fill="#003fff" stroke="#003fff" points="2337.7739,-495.8713 2336.3259,-485.3759 2330.9128,-494.4836 2337.7739,-495.8713"/>
+</g>
+<!-- sourcefile~heatbalanceairmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_node30" class="node">
+<title>sourcefile~heatbalanceairmanager.f90</title>
+<g id="a_sourcefile~~datacostestimate.f90~~AfferentGraph_node30"><a xlink:href="../sourcefile/heatbalanceairmanager.f90.html" xlink:title="HeatBalanceAirManager.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1724.2985,-524.2554 1580.6234,-524.2554 1580.6234,-502.2446 1724.2985,-502.2446 1724.2985,-524.2554"/>
+<text text-anchor="middle" x="1652.4609" y="-510.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">HeatBalanceAirManager.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~hvacmanager.f90&#45;&gt;sourcefile~heatbalanceairmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge53" class="edge">
+<title>sourcefile~hvacmanager.f90&#45;&gt;sourcefile~heatbalanceairmanager.f90</title>
+<path fill="none" stroke="#003fff" stroke-dasharray="5,2" d="M1489.3155,-579.2178C1522.5465,-565.7808 1578.8126,-543.0297 1615.803,-528.0726"/>
+<polygon fill="#003fff" stroke="#003fff" points="1617.2689,-531.2552 1625.2277,-524.2618 1614.6448,-524.7657 1617.2689,-531.2552"/>
+</g>
+<!-- sourcefile~thermalcomfort.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge69" class="edge">
+<title>sourcefile~thermalcomfort.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90</title>
+<path fill="none" stroke="#7f00ff" stroke-dasharray="5,2" d="M667.6008,-581.1087C779.8139,-559.295 1037.9074,-507.2265 1121.0596,-474.25 1138.2782,-467.4214 1140.1265,-460.7588 1157.0596,-453.25 1317.2014,-382.2367 1381.1758,-421.95 1532.8235,-334.25 1551.6128,-323.3839 1550.7181,-313.2211 1568.8235,-301.25 1636.9387,-256.2128 1670.5275,-273.9171 1736.0984,-225.25 1781.6209,-191.4629 1822.2708,-137.7257 1842.2951,-108.9572"/>
+<polygon fill="#7f00ff" stroke="#7f00ff" points="1845.2892,-110.7794 1848.0518,-100.551 1839.5137,-106.8242 1845.2892,-110.7794"/>
+</g>
+<!-- sourcefile~thermalcomfort.f90&#45;&gt;sourcefile~zonetemppredictorcorrector.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge70" class="edge">
+<title>sourcefile~thermalcomfort.f90&#45;&gt;sourcefile~zonetemppredictorcorrector.f90</title>
+<path fill="none" stroke="#7f00ff" stroke-dasharray="5,2" d="M628.7715,-580.223C661.9034,-555.2636 747.9886,-495.1463 831.5684,-476.25"/>
+</g>
+<!-- sourcefile~airflownetworkbalancemanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_node31" class="node">
+<title>sourcefile~airflownetworkbalancemanager.f90</title>
+<g id="a_sourcefile~~datacostestimate.f90~~AfferentGraph_node31"><a xlink:href="../sourcefile/airflownetworkbalancemanager.f90.html" xlink:title="AirflowNetworkBalanceManager.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="920.9075,-602.2554 742.2292,-602.2554 742.2292,-580.2446 920.9075,-580.2446 920.9075,-602.2554"/>
+<text text-anchor="middle" x="831.5684" y="-588.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">AirflowNetworkBalanceManager.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~thermalcomfort.f90&#45;&gt;sourcefile~airflownetworkbalancemanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge71" class="edge">
+<title>sourcefile~thermalcomfort.f90&#45;&gt;sourcefile~airflownetworkbalancemanager.f90</title>
+<path fill="none" stroke="#7f00ff" stroke-dasharray="5,2" d="M667.4024,-591.25C686.873,-591.25 709.627,-591.25 731.8839,-591.25"/>
+<polygon fill="#7f00ff" stroke="#7f00ff" points="732.0615,-594.7501 742.0615,-591.25 732.0615,-587.7501 732.0615,-594.7501"/>
+</g>
+<!-- sourcefile~weathermanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_node32" class="node">
+<title>sourcefile~weathermanager.f90</title>
+<g id="a_sourcefile~~datacostestimate.f90~~AfferentGraph_node32"><a xlink:href="../sourcefile/weathermanager.f90.html" xlink:title="WeatherManager.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="2096.0759,-754.2554 1986.3184,-754.2554 1986.3184,-732.2446 2096.0759,-732.2446 2096.0759,-754.2554"/>
+<text text-anchor="middle" x="2041.1971" y="-740.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">WeatherManager.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~thermalcomfort.f90&#45;&gt;sourcefile~weathermanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge72" class="edge">
+<title>sourcefile~thermalcomfort.f90&#45;&gt;sourcefile~weathermanager.f90</title>
+<path fill="none" stroke="#7f00ff" stroke-dasharray="5,2" d="M667.571,-601.9479C840.4633,-636.7095 1381.8148,-744.25 1462.0316,-744.25 1462.0316,-744.25 1462.0316,-744.25 1652.4609,-744.25 1766.2994,-744.25 1898.8893,-743.8159 1976.0982,-743.5197"/>
+<polygon fill="#7f00ff" stroke="#7f00ff" points="1976.1698,-747.0195 1986.1562,-743.4807 1976.1426,-740.0196 1976.1698,-747.0195"/>
+</g>
+<!-- sourcefile~heatbalancesurfacemanager.f90&#45;&gt;sourcefile~simulationmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge74" class="edge">
+<title>sourcefile~heatbalancesurfacemanager.f90&#45;&gt;sourcefile~simulationmanager.f90</title>
+<path fill="none" stroke="#ff00bf" stroke-dasharray="5,2" d="M1894.424,-78.1857C1945.096,-64.244 2028.6322,-42.9331 2041.1971,-50.25"/>
+</g>
+<!-- sourcefile~heatbalancesurfacemanager.f90&#45;&gt;sourcefile~heatbalancemanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge73" class="edge">
+<title>sourcefile~heatbalancesurfacemanager.f90&#45;&gt;sourcefile~heatbalancemanager.f90</title>
+<path fill="none" stroke="#ff00bf" stroke-dasharray="5,2" d="M1938.8117,-89.25C1947.7542,-89.25 1956.8155,-89.25 1965.6593,-89.25"/>
+<polygon fill="#ff00bf" stroke="#ff00bf" points="1965.9212,-92.7501 1975.9212,-89.25 1965.9211,-85.7501 1965.9212,-92.7501"/>
+</g>
+<!-- sourcefile~zoneequipmentmanager.f90&#45;&gt;sourcefile~sizingmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge2" class="edge">
+<title>sourcefile~zoneequipmentmanager.f90&#45;&gt;sourcefile~sizingmanager.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1328.1053,-473.5406C1407.5139,-473.8358 1539.1059,-474.25 1652.4609,-474.25 1652.4609,-474.25 1652.4609,-474.25 1855.4436,-474.25 1952.8802,-474.25 2066.1328,-474.25 2133.5866,-474.25"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="2133.6044,-477.7501 2143.6044,-474.25 2133.6044,-470.7501 2133.6044,-477.7501"/>
+</g>
+<!-- sourcefile~zoneequipmentmanager.f90&#45;&gt;sourcefile~hvacmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge3" class="edge">
+<title>sourcefile~zoneequipmentmanager.f90&#45;&gt;sourcefile~hvacmanager.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1275.5185,-484.2571C1312.0756,-505.032 1391.3752,-550.0969 1433.8424,-574.2305"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="1432.1407,-577.2891 1442.5642,-579.1869 1435.5993,-571.2031 1432.1407,-577.2891"/>
+</g>
+<!-- sourcefile~daylightingmanager.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge16" class="edge">
+<title>sourcefile~daylightingmanager.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90</title>
+<path fill="none" stroke="#ffaa00" stroke-dasharray="5,2" d="M1317.5351,-270.3378C1368.3994,-262.4544 1436.3553,-250.6258 1462.0316,-240.25"/>
+</g>
+<!-- sourcefile~solarshading.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_node23" class="node">
+<title>sourcefile~solarshading.f90</title>
+<g id="a_sourcefile~~datacostestimate.f90~~AfferentGraph_node23"><a xlink:href="../sourcefile/solarshading.f90.html" xlink:title="SolarShading.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1698.5218,-332.2554 1606.4001,-332.2554 1606.4001,-310.2446 1698.5218,-310.2446 1698.5218,-332.2554"/>
+<text text-anchor="middle" x="1652.4609" y="-318.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">SolarShading.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~daylightingmanager.f90&#45;&gt;sourcefile~solarshading.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge17" class="edge">
+<title>sourcefile~daylightingmanager.f90&#45;&gt;sourcefile~solarshading.f90</title>
+<path fill="none" stroke="#ffaa00" stroke-dasharray="5,2" d="M1462.0316,-320.25C1506.6901,-327.0865 1557.9324,-326.9093 1596.0046,-325.2583"/>
+<polygon fill="#ffaa00" stroke="#ffaa00" points="1596.5575,-328.7358 1606.3773,-324.7581 1596.2203,-321.7439 1596.5575,-328.7358"/>
+<path fill="none" stroke="#ffaa00" stroke-dasharray="5,2" d="M1305.0182,-290.262C1346.5971,-299.3232 1407.9932,-311.9776 1462.0316,-320.25"/>
+</g>
+<!-- sourcefile~daylightingmanager.f90&#45;&gt;sourcefile~utilityroutines.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge18" class="edge">
+<title>sourcefile~daylightingmanager.f90&#45;&gt;sourcefile~utilityroutines.f90</title>
+<path fill="none" stroke="#ffaa00" stroke-dasharray="5,2" d="M1462.0316,-320.25C1509.8466,-327.5697 1520.9089,-334.6132 1568.8235,-341.25 1748.1357,-366.0872 1793.9135,-366.9106 1974.7888,-374.25 2033.7699,-376.6433 2048.7702,-379.0357 2107.6055,-374.25 2145.9801,-371.1286 2154.6145,-358.9783 2193.0948,-360.25"/>
+</g>
+<!-- sourcefile~windowequivalentlayer.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_node25" class="node">
+<title>sourcefile~windowequivalentlayer.f90</title>
+<g id="a_sourcefile~~datacostestimate.f90~~AfferentGraph_node25"><a xlink:href="../sourcefile/windowequivalentlayer.f90.html" xlink:title="WindowEquivalentLayer.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1532.616,-290.2554 1391.4473,-290.2554 1391.4473,-268.2446 1532.616,-268.2446 1532.616,-290.2554"/>
+<text text-anchor="middle" x="1462.0316" y="-276.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">WindowEquivalentLayer.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~daylightingmanager.f90&#45;&gt;sourcefile~windowequivalentlayer.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge19" class="edge">
+<title>sourcefile~daylightingmanager.f90&#45;&gt;sourcefile~windowequivalentlayer.f90</title>
+<path fill="none" stroke="#ffaa00" stroke-dasharray="5,2" d="M1317.3636,-279.25C1337.3288,-279.25 1359.8148,-279.25 1381.0022,-279.25"/>
+<polygon fill="#ffaa00" stroke="#ffaa00" points="1381.2823,-282.7501 1391.2823,-279.25 1381.2822,-275.7501 1381.2823,-282.7501"/>
+</g>
+<!-- sourcefile~roomairmodelcrossvent.f90&#45;&gt;sourcefile~roomairmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge21" class="edge">
+<title>sourcefile~roomairmodelcrossvent.f90&#45;&gt;sourcefile~roomairmanager.f90</title>
+<path fill="none" stroke="#aaff00" stroke-dasharray="5,2" d="M688.3613,-427.451C713.4069,-425.1423 741.2132,-422.5791 765.6103,-420.3301"/>
+<polygon fill="#aaff00" stroke="#aaff00" points="766.2031,-423.7904 775.8395,-419.3872 765.5605,-416.8199 766.2031,-423.7904"/>
+</g>
+<!-- sourcefile~zonecontaminantpredictorcorrector.f90&#45;&gt;sourcefile~simulationmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge22" class="edge">
+<title>sourcefile~zonecontaminantpredictorcorrector.f90&#45;&gt;sourcefile~simulationmanager.f90</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M1275.4772,-368.4003C1311.0021,-387.9835 1389.6806,-427.1599 1462.0316,-434.25"/>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M1462.0316,-434.25C1747.7513,-462.2493 1821.9001,-440.395 2107.6055,-412.25 2145.9214,-408.4755 2162.4541,-374.9369 2193.0948,-398.25"/>
+</g>
+<!-- sourcefile~zonecontaminantpredictorcorrector.f90&#45;&gt;sourcefile~hvacmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge23" class="edge">
+<title>sourcefile~zonecontaminantpredictorcorrector.f90&#45;&gt;sourcefile~hvacmanager.f90</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M1268.5826,-368.2605C1287.9025,-385.5935 1325.954,-420.6357 1355.2397,-453.25 1391.0821,-493.1662 1428.6779,-543.7606 1448.2833,-570.9188"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1445.5393,-573.0982 1454.2138,-579.1812 1451.226,-569.0164 1445.5393,-573.0982"/>
+</g>
+<!-- sourcefile~delightmanagerf.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge24" class="edge">
+<title>sourcefile~delightmanagerf.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90</title>
+<path fill="none" stroke="#00ffa9" stroke-dasharray="5,2" d="M1256.1497,-240.25C1346.8625,-228.2504 1377.1936,-274.5331 1462.0316,-240.25"/>
+<path fill="none" stroke="#00ffa9" stroke-dasharray="5,2" d="M1462.0316,-240.25C1532.3178,-211.8473 1501.5293,-142.155 1568.8235,-107.25 1631.5813,-74.698 1712.7514,-72.6843 1772.6829,-77.3659"/>
+<polygon fill="#00ffa9" stroke="#00ffa9" points="1772.6002,-80.8716 1782.8633,-78.241 1773.1998,-73.8974 1772.6002,-80.8716"/>
+<path fill="none" stroke="#00ffa9" stroke-dasharray="5,2" d="M1092.6974,-268.166C1136.5304,-259.48 1200.1156,-247.6622 1256.1497,-240.25"/>
+</g>
+<!-- sourcefile~delightmanagerf.f90&#45;&gt;sourcefile~daylightingmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge25" class="edge">
+<title>sourcefile~delightmanagerf.f90&#45;&gt;sourcefile~daylightingmanager.f90</title>
+<path fill="none" stroke="#00ffa9" stroke-dasharray="5,2" d="M1094.0011,-279.25C1121.5515,-279.25 1155.2257,-279.25 1184.7333,-279.25"/>
+<polygon fill="#00ffa9" stroke="#00ffa9" points="1184.9798,-282.7501 1194.9798,-279.25 1184.9798,-275.7501 1184.9798,-282.7501"/>
+</g>
+<!-- sourcefile~roomairmodelufad.f90&#45;&gt;sourcefile~roomairmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge26" class="edge">
+<title>sourcefile~roomairmodelufad.f90&#45;&gt;sourcefile~roomairmanager.f90</title>
+<path fill="none" stroke="#00a9ff" stroke-dasharray="5,2" d="M678.2348,-399.4088C705.7414,-402.0712 737.9173,-405.1855 765.6723,-407.8719"/>
+<polygon fill="#00a9ff" stroke="#00a9ff" points="765.3903,-411.3609 775.681,-408.8406 766.0647,-404.3934 765.3903,-411.3609"/>
+</g>
+<!-- sourcefile~roomairmodeldisplacementvent.f90&#45;&gt;sourcefile~roomairmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge27" class="edge">
+<title>sourcefile~roomairmodeldisplacementvent.f90&#45;&gt;sourcefile~roomairmanager.f90</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M666.757,-363.3088C679.7641,-366.306 693.6391,-369.7087 706.3989,-373.25 734.8667,-381.1508 766.4815,-391.5198 790.8158,-399.8532"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="789.8374,-403.218 800.4321,-403.17 792.1199,-396.6006 789.8374,-403.218"/>
+</g>
+<!-- sourcefile~zonetemppredictorcorrector.f90&#45;&gt;sourcefile~simulationmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge30" class="edge">
+<title>sourcefile~zonetemppredictorcorrector.f90&#45;&gt;sourcefile~simulationmanager.f90</title>
+<path fill="none" stroke="#aa00ff" stroke-dasharray="5,2" d="M1112.1939,-443.2247C1196.7974,-432.2471 1339.9745,-419.0494 1462.0316,-434.25"/>
+</g>
+<!-- sourcefile~zonetemppredictorcorrector.f90&#45;&gt;sourcefile~hvacmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge31" class="edge">
+<title>sourcefile~zonetemppredictorcorrector.f90&#45;&gt;sourcefile~hvacmanager.f90</title>
+<path fill="none" stroke="#aa00ff" stroke-dasharray="5,2" d="M1051.1113,-465.3742C1067.3725,-480.2916 1096.8924,-507.742 1121.0596,-532.25 1137.6224,-549.0464 1136.4426,-559.7877 1157.0596,-571.25 1196.252,-593.0396 1211.6841,-584.449 1256.1497,-590.25"/>
+<path fill="none" stroke="#aa00ff" stroke-dasharray="5,2" d="M1256.1497,-590.25C1305.1608,-596.644 1361.2951,-596.1304 1402.5571,-594.3061"/>
+<polygon fill="#aa00ff" stroke="#aa00ff" points="1402.8934,-597.794 1412.7136,-593.8174 1402.5569,-590.8021 1402.8934,-597.794"/>
+</g>
+<!-- sourcefile~zonetemppredictorcorrector.f90&#45;&gt;sourcefile~zoneequipmentmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge29" class="edge">
+<title>sourcefile~zonetemppredictorcorrector.f90&#45;&gt;sourcefile~zoneequipmentmanager.f90</title>
+<path fill="none" stroke="#aa00ff" stroke-dasharray="5,2" d="M1121.3417,-461.4602C1138.7011,-462.9784 1157.009,-464.5795 1174.3448,-466.0956"/>
+<polygon fill="#aa00ff" stroke="#aa00ff" points="1174.1581,-469.5926 1184.425,-466.9772 1174.768,-462.6192 1174.1581,-469.5926"/>
+</g>
+<!-- sourcefile~zonetemppredictorcorrector.f90&#45;&gt;sourcefile~zonecontaminantpredictorcorrector.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge28" class="edge">
+<title>sourcefile~zonetemppredictorcorrector.f90&#45;&gt;sourcefile~zonecontaminantpredictorcorrector.f90</title>
+<path fill="none" stroke="#aa00ff" stroke-dasharray="5,2" d="M1053.7758,-443.1417C1075.4365,-427.4577 1117.4071,-398.884 1157.0596,-382.25 1167.5625,-377.8441 1179.029,-374.0758 1190.3152,-370.9024"/>
+<polygon fill="#aa00ff" stroke="#aa00ff" points="1191.4045,-374.2341 1200.1584,-368.2657 1189.5933,-367.4724 1191.4045,-374.2341"/>
+</g>
+<!-- sourcefile~roomairmodelmundt.f90&#45;&gt;sourcefile~roomairmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge32" class="edge">
+<title>sourcefile~roomairmodelmundt.f90&#45;&gt;sourcefile~roomairmanager.f90</title>
+<path fill="none" stroke="#ff00aa" stroke-dasharray="5,2" d="M676.7868,-322.3121C686.8798,-325.0015 697.0728,-328.2802 706.3989,-332.25 745.7834,-349.0145 786.3213,-378.167 810.2132,-396.8167"/>
+<polygon fill="#ff00aa" stroke="#ff00aa" points="808.2183,-399.7016 818.2294,-403.1701 812.5663,-394.2157 808.2183,-399.7016"/>
+</g>
+<!-- sourcefile~solarshading.f90&#45;&gt;sourcefile~simulationmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge7" class="edge">
+<title>sourcefile~solarshading.f90&#45;&gt;sourcefile~simulationmanager.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M2041.1971,-360.25C2075.5306,-365.9004 2165.4036,-377.181 2193.0948,-398.25"/>
+</g>
+<!-- sourcefile~solarshading.f90&#45;&gt;sourcefile~heatbalancemanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge4" class="edge">
+<title>sourcefile~solarshading.f90&#45;&gt;sourcefile~heatbalancemanager.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1855.4436,-322.25C1958.6535,-297.0785 2015.8066,-162.3643 2034.3814,-110.0454"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="2037.7327,-111.0628 2037.6736,-100.4681 2031.1128,-108.7872 2037.7327,-111.0628"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1698.7499,-327.7668C1740.3809,-332.1542 1802.8899,-335.0672 1855.4436,-322.25"/>
+</g>
+<!-- sourcefile~solarshading.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge5" class="edge">
+<title>sourcefile~solarshading.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1698.5528,-314.3011C1711.7173,-310.6006 1725.383,-304.932 1736.0984,-296.25 1762.0596,-275.2152 1755.5947,-259.303 1772.0984,-230.25 1796.8492,-186.6787 1827.018,-136.2805 1843.4173,-109.1006"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="1846.4356,-110.8731 1848.6123,-100.5043 1840.4446,-107.2526 1846.4356,-110.8731"/>
+</g>
+<!-- sourcefile~solarshading.f90&#45;&gt;sourcefile~utilityroutines.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge6" class="edge">
+<title>sourcefile~solarshading.f90&#45;&gt;sourcefile~utilityroutines.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1855.4436,-322.25C1937.3109,-302.2836 1958.0487,-346.5658 2041.1971,-360.25"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M2193.0948,-360.25C2293.4825,-353.9959 2404.7981,-408.6712 2455.0488,-436.9672"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="2453.5676,-440.1522 2463.9844,-442.086 2457.0471,-434.0782 2453.5676,-440.1522"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M2041.1971,-360.25C2107.8111,-371.213 2125.6216,-358.0201 2193.0948,-360.25"/>
+</g>
+<!-- sourcefile~windowequivalentlayer.f90&#45;&gt;sourcefile~heatbalancemanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge13" class="edge">
+<title>sourcefile~windowequivalentlayer.f90&#45;&gt;sourcefile~heatbalancemanager.f90</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M1532.6693,-281.7713C1612.7585,-282.632 1746.3666,-277.9686 1855.4436,-244.25"/>
+</g>
+<!-- sourcefile~windowequivalentlayer.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge15" class="edge">
+<title>sourcefile~windowequivalentlayer.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M1509.2938,-268.1547C1517.7568,-264.6773 1526.0307,-260.1442 1532.8235,-254.25 1558.9489,-231.5804 1541.4269,-206.3657 1568.8235,-185.25 1629.2079,-138.7092 1664.1703,-172.5219 1736.0984,-147.25 1768.5251,-135.8569 1803.6911,-118.0438 1827.3898,-105.1635"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="1829.1146,-108.2093 1836.1879,-100.3214 1825.7395,-102.0767 1829.1146,-108.2093"/>
+</g>
+<!-- sourcefile~windowequivalentlayer.f90&#45;&gt;sourcefile~solarshading.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge12" class="edge">
+<title>sourcefile~windowequivalentlayer.f90&#45;&gt;sourcefile~solarshading.f90</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M1512.0647,-290.285C1537.9589,-295.9961 1569.6569,-302.9872 1596.3773,-308.8805"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="1595.8328,-312.3445 1606.3519,-311.0805 1597.3405,-305.5087 1595.8328,-312.3445"/>
+</g>
+<!-- sourcefile~windowmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_node26" class="node">
+<title>sourcefile~windowmanager.f90</title>
+<g id="a_sourcefile~~datacostestimate.f90~~AfferentGraph_node26"><a xlink:href="../sourcefile/windowmanager.f90.html" xlink:title="WindowManager.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1706.1866,-216.2554 1598.7352,-216.2554 1598.7352,-194.2446 1706.1866,-194.2446 1706.1866,-216.2554"/>
+<text text-anchor="middle" x="1652.4609" y="-202.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">WindowManager.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~windowequivalentlayer.f90&#45;&gt;sourcefile~windowmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge11" class="edge">
+<title>sourcefile~windowequivalentlayer.f90&#45;&gt;sourcefile~windowmanager.f90</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M1498.7619,-268.2194C1509.9394,-264.351 1522.0986,-259.6137 1532.8235,-254.25 1550.0222,-245.6487 1551.4192,-238.4272 1568.8235,-230.25 1577.5786,-226.1365 1587.1672,-222.5201 1596.6294,-219.4087"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="1597.906,-222.6766 1606.404,-216.3493 1595.8151,-215.9962 1597.906,-222.6766"/>
+</g>
+<!-- sourcefile~heatbalanceintradexchange.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_node27" class="node">
+<title>sourcefile~heatbalanceintradexchange.f90</title>
+<g id="a_sourcefile~~datacostestimate.f90~~AfferentGraph_node27"><a xlink:href="../sourcefile/heatbalanceintradexchange.f90.html" xlink:title="HeatBalanceIntRadExchange.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1736.2361,-138.2554 1568.6858,-138.2554 1568.6858,-116.2446 1736.2361,-116.2446 1736.2361,-138.2554"/>
+<text text-anchor="middle" x="1652.4609" y="-124.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">HeatBalanceIntRadExchange.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~windowequivalentlayer.f90&#45;&gt;sourcefile~heatbalanceintradexchange.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge14" class="edge">
+<title>sourcefile~windowequivalentlayer.f90&#45;&gt;sourcefile~heatbalanceintradexchange.f90</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M1511.8093,-268.111C1519.552,-264.6612 1526.9255,-260.1491 1532.8235,-254.25 1566.8138,-220.2534 1534.0102,-185.4033 1568.8235,-152.25 1572.6355,-148.6197 1576.9528,-145.5144 1581.5681,-142.8583"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="1583.364,-145.874 1590.7564,-138.2843 1580.2445,-139.6075 1583.364,-145.874"/>
+</g>
+<!-- sourcefile~windowmanager.f90&#45;&gt;sourcefile~heatbalancemanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge8" class="edge">
+<title>sourcefile~windowmanager.f90&#45;&gt;sourcefile~heatbalancemanager.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1855.4436,-244.25C1932.7588,-220.3498 1998.9143,-144.6266 2026.9135,-108.625"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="2029.9164,-110.4589 2033.1934,-100.3836 2024.3486,-106.2163 2029.9164,-110.4589"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1688.1772,-216.2868C1737.7456,-230.8886 1824.7595,-253.7353 1855.4436,-244.25"/>
+</g>
+<!-- sourcefile~windowmanager.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge9" class="edge">
+<title>sourcefile~windowmanager.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1700.5038,-194.1166C1712.4629,-190.4801 1725.024,-185.8887 1736.0984,-180.25 1774.976,-160.4549 1814.0517,-127.6254 1836.4351,-107.28"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="1838.9193,-109.7501 1843.8951,-100.3964 1834.1723,-104.6056 1838.9193,-109.7501"/>
+</g>
+<!-- sourcefile~heatbalanceintradexchange.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge10" class="edge">
+<title>sourcefile~heatbalanceintradexchange.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M1711.4446,-116.2078C1734.9009,-111.8166 1762.0546,-106.7332 1786.4183,-102.1721"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="1787.1277,-105.6002 1796.3128,-100.3198 1785.8395,-98.7197 1787.1277,-105.6002"/>
+</g>
+<!-- sourcefile~roomairmanager.f90&#45;&gt;sourcefile~zonetemppredictorcorrector.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge20" class="edge">
+<title>sourcefile~roomairmanager.f90&#45;&gt;sourcefile~zonetemppredictorcorrector.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M887.4018,-425.0219C913.359,-430.0298 944.4406,-436.0263 971.6766,-441.2809"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="971.0384,-444.7223 981.5204,-443.1801 972.3645,-437.849 971.0384,-444.7223"/>
+</g>
+<!-- sourcefile~heatbalanceairmanager.f90&#45;&gt;sourcefile~simulationmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge52" class="edge">
+<title>sourcefile~heatbalanceairmanager.f90&#45;&gt;sourcefile~simulationmanager.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1724.3659,-512.2587C1815.9139,-508.9969 1977.7814,-496.4671 2107.6055,-450.25 2149.5018,-435.335 2157.3939,-371.7319 2193.0948,-398.25"/>
+</g>
+<!-- sourcefile~heatbalanceairmanager.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge51" class="edge">
+<title>sourcefile~heatbalanceairmanager.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1658.4913,-502.2248C1673.0743,-475.29 1710.902,-403.7684 1736.0984,-341.25 1755.4851,-293.1467 1750.7739,-277.5263 1772.0984,-230.25 1792.5977,-184.8032 1824.1115,-135.4705 1841.9374,-108.8917"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="1844.9224,-110.7257 1847.6313,-100.483 1839.1262,-106.8008 1844.9224,-110.7257"/>
+</g>
+<!-- sourcefile~airflownetworkbalancemanager.f90&#45;&gt;sourcefile~hvacmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge66" class="edge">
+<title>sourcefile~airflownetworkbalancemanager.f90&#45;&gt;sourcefile~hvacmanager.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M920.8637,-591.3399C957.4477,-591.3533 1000.2043,-591.3391 1038.8987,-591.25"/>
+</g>
+<!-- sourcefile~systemavailabilitymanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_node33" class="node">
+<title>sourcefile~systemavailabilitymanager.f90</title>
+<g id="a_sourcefile~~datacostestimate.f90~~AfferentGraph_node33"><a xlink:href="../sourcefile/systemavailabilitymanager.f90.html" xlink:title="SystemAvailabilityManager.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1116.205,-563.2554 961.5924,-563.2554 961.5924,-541.2446 1116.205,-541.2446 1116.205,-563.2554"/>
+<text text-anchor="middle" x="1038.8987" y="-549.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">SystemAvailabilityManager.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~airflownetworkbalancemanager.f90&#45;&gt;sourcefile~systemavailabilitymanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge65" class="edge">
+<title>sourcefile~airflownetworkbalancemanager.f90&#45;&gt;sourcefile~systemavailabilitymanager.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M890.1496,-580.2305C914.9922,-575.5575 944.1248,-570.0775 969.9921,-565.2117"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="970.9223,-568.5982 980.1029,-563.3098 969.6282,-561.7189 970.9223,-568.5982"/>
+</g>
+<!-- sourcefile~weathermanager.f90&#45;&gt;sourcefile~sizingmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge67" class="edge">
+<title>sourcefile~weathermanager.f90&#45;&gt;sourcefile~sizingmanager.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M2049.1887,-731.9996C2062.1096,-713.6172 2088.1074,-675.8217 2107.6055,-642.25 2137.712,-590.4129 2168.5034,-526.7446 2183.5856,-494.716"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="2186.8376,-496.0244 2187.9096,-485.4839 2180.4984,-493.0553 2186.8376,-496.0244"/>
+</g>
+<!-- sourcefile~weathermanager.f90&#45;&gt;sourcefile~simulationmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge68" class="edge">
+<title>sourcefile~weathermanager.f90&#45;&gt;sourcefile~simulationmanager.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M2083.5837,-754.2999C2115.8871,-760.2396 2160.257,-762.8417 2193.0948,-743.25"/>
+</g>
+<!-- sourcefile~systemavailabilitymanager.f90&#45;&gt;sourcefile~hvacmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge61" class="edge">
+<title>sourcefile~systemavailabilitymanager.f90&#45;&gt;sourcefile~hvacmanager.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1094.0578,-563.2629C1137.8493,-571.6754 1200.7163,-583.0182 1256.1497,-590.25"/>
+</g>
+<!-- sourcefile~systemavailabilitymanager.f90&#45;&gt;sourcefile~zoneequipmentmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge60" class="edge">
+<title>sourcefile~systemavailabilitymanager.f90&#45;&gt;sourcefile~zoneequipmentmanager.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1086.1943,-541.2276C1097.9404,-537.589 1110.2535,-532.9688 1121.0596,-527.25 1139.219,-517.6397 1138.6736,-507.4196 1157.0596,-498.25 1165.8714,-493.8553 1175.5198,-490.1911 1185.2279,-487.1472"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="1186.3143,-490.4761 1194.9271,-484.306 1184.3464,-483.7584 1186.3143,-490.4761"/>
+</g>
+<!-- sourcefile~systemavailabilitymanager.f90&#45;&gt;sourcefile~heatbalanceairmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge64" class="edge">
+<title>sourcefile~systemavailabilitymanager.f90&#45;&gt;sourcefile~heatbalanceairmanager.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1091.9061,-541.2035C1112.1976,-537.4035 1135.6161,-533.5338 1157.0596,-531.25 1301.9122,-515.8228 1471.7837,-512.927 1570.2685,-512.7357"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="1570.4556,-516.2357 1580.4519,-512.7252 1570.4482,-509.2357 1570.4556,-516.2357"/>
+</g>
+<!-- sourcefile~simairservingzones.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_node34" class="node">
+<title>sourcefile~simairservingzones.f90</title>
+<g id="a_sourcefile~~datacostestimate.f90~~AfferentGraph_node34"><a xlink:href="../sourcefile/simairservingzones.f90.html" xlink:title="SimAirServingZones.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1318.8632,-562.2554 1193.4361,-562.2554 1193.4361,-540.2446 1318.8632,-540.2446 1318.8632,-562.2554"/>
+<text text-anchor="middle" x="1256.1497" y="-548.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">SimAirServingZones.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~systemavailabilitymanager.f90&#45;&gt;sourcefile~simairservingzones.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge62" class="edge">
+<title>sourcefile~systemavailabilitymanager.f90&#45;&gt;sourcefile~simairservingzones.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1116.4112,-551.8932C1138.1871,-551.793 1161.7849,-551.6844 1183.2802,-551.5854"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="1183.3353,-555.0853 1193.3191,-551.5392 1183.303,-548.0854 1183.3353,-555.0853"/>
+</g>
+<!-- sourcefile~plantmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_node35" class="node">
+<title>sourcefile~plantmanager.f90</title>
+<g id="a_sourcefile~~datacostestimate.f90~~AfferentGraph_node35"><a xlink:href="../sourcefile/plantmanager.f90.html" xlink:title="PlantManager.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1303.4634,-640.2554 1208.8359,-640.2554 1208.8359,-618.2446 1303.4634,-618.2446 1303.4634,-640.2554"/>
+<text text-anchor="middle" x="1256.1497" y="-626.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">PlantManager.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~systemavailabilitymanager.f90&#45;&gt;sourcefile~plantmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge63" class="edge">
+<title>sourcefile~systemavailabilitymanager.f90&#45;&gt;sourcefile~plantmanager.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1061.1033,-563.3635C1084.5239,-574.7646 1122.7203,-592.4551 1157.0596,-604.25 1170.4272,-608.8415 1185.0708,-612.9963 1198.9017,-616.5416"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="1198.2493,-619.9861 1208.7993,-619.0129 1199.9451,-613.1946 1198.2493,-619.9861"/>
+</g>
+<!-- sourcefile~simairservingzones.f90&#45;&gt;sourcefile~sizingmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge55" class="edge">
+<title>sourcefile~simairservingzones.f90&#45;&gt;sourcefile~sizingmanager.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1855.4436,-628.25C1986.4372,-640.4059 2123.274,-535.1992 2173.2977,-492.1151"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="2175.8694,-494.5156 2181.0899,-485.2962 2171.2595,-489.2478 2175.8694,-494.5156"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1318.8974,-547.4585C1411.5295,-543.4374 1589.7137,-541.7472 1736.0984,-576.25 1792.4138,-589.5235 1797.6289,-630.5023 1855.4436,-628.25"/>
+</g>
+<!-- sourcefile~simairservingzones.f90&#45;&gt;sourcefile~hvacmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge56" class="edge">
+<title>sourcefile~simairservingzones.f90&#45;&gt;sourcefile~hvacmanager.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1314.3216,-562.2695C1341.9625,-567.5054 1374.9516,-573.7545 1402.7352,-579.0175"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="1402.2395,-582.4858 1412.7162,-580.9082 1403.5424,-575.6081 1402.2395,-582.4858"/>
+</g>
+<!-- sourcefile~plantmanager.f90&#45;&gt;sourcefile~simulationmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge57" class="edge">
+<title>sourcefile~plantmanager.f90&#45;&gt;sourcefile~simulationmanager.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M1303.442,-636.0621C1404.5508,-650.429 1649.3304,-684.1597 1855.4436,-704.25"/>
+</g>
+<!-- sourcefile~plantmanager.f90&#45;&gt;sourcefile~hvacmanager.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge59" class="edge">
+<title>sourcefile~plantmanager.f90&#45;&gt;sourcefile~hvacmanager.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M1303.3831,-620.3026C1332.8423,-614.7222 1371.0116,-607.4918 1402.5285,-601.5216"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="1403.3342,-604.9313 1412.508,-599.6312 1402.0313,-598.0536 1403.3342,-604.9313"/>
+</g>
+<!-- sourcefile~plantmanager.f90&#45;&gt;sourcefile~utilityroutines.f90 -->
+<g id="sourcefile~~datacostestimate.f90~~AfferentGraph_edge58" class="edge">
+<title>sourcefile~plantmanager.f90&#45;&gt;sourcefile~utilityroutines.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M1268.4271,-640.3445C1314.8603,-681.1086 1485.5755,-820.25 1652.4609,-820.25 1652.4609,-820.25 1652.4609,-820.25 2193.0948,-820.25 2380.4723,-820.25 2289.8437,-593.9684 2433.9888,-474.25 2436.1983,-472.4149 2438.5928,-470.714 2441.0936,-469.142"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="2442.8278,-472.1826 2449.8916,-464.2861 2439.4453,-466.0541 2442.8278,-472.1826"/>
+</g>
+</g>
+</svg>
+</div>
+                <script>var pansourcefiledatacostestimatef90AfferentGraph = svgPanZoom('#sourcefiledatacostestimatef90AfferentGraph', {
+                    zoomEnabled: true,
+                    controlIconsEnabled: true,
+                    fit: true,
+                    center: true,});
+                    </script>
+                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
+                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                      </div>
+                      <div class="modal-body">
+
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="186pt" height="31pt"
+ viewBox="0.00 0.00 186.41 30.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 26.5)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-26.5 182.4064,-26.5 182.4064,4 -4,4"/>
+<!-- Source File -->
+<g id="node1" class="node">
+<title>Source File</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="65.1576,-22.2554 -.0526,-22.2554 -.0526,-.2446 65.1576,-.2446 65.1576,-22.2554"/>
+<text text-anchor="middle" x="32.5525" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Source File</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node2" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="178.2607,-22.2554 82.8443,-22.2554 82.8443,-.2446 178.2607,-.2446 178.2607,-22.2554"/>
+<text text-anchor="middle" x="130.5525" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+
+    <p>Solid arrows point from a file to a file which depends upon it. A file
+    is dependent upon another if the latter must be compiled before the former
+    can be. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+      <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#mods-1">Modules</a></h3></div>
+  <div id="mods-1" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../module/datacostestimate.html">DataCostEstimate</a>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/datacostestimate.f90.html#src">DataCostEstimate.f90</a>
+  </div>
+</div>
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    <section>
+      <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl"><pre><span></span><a name="ln-1"></a><span class="k">MODULE </span><span class="n">DataCostEstimate</span>      <span class="c">! EnergyPlus Data-Only Module</span>
+<a name="ln-2"></a>          <span class="c">! PURPOSE OF THIS MODULE:</span>
+<a name="ln-3"></a>          <span class="c">! This data-only module is a repository for Cost Estimation variables which are considered</span>
+<a name="ln-4"></a>          <span class="c">! to be &quot;global&quot; in nature in EnergyPlus.</span>
+<a name="ln-5"></a>
+<a name="ln-6"></a>          <span class="c">! METHODOLOGY EMPLOYED:</span>
+<a name="ln-7"></a>
+<a name="ln-8"></a>          <span class="c">! REFERENCES:</span>
+<a name="ln-9"></a>
+<a name="ln-10"></a>          <span class="c">! OTHER NOTES:</span>
+<a name="ln-11"></a>
+<a name="ln-12"></a>          <span class="c">! USE STATEMENTS:</span>
+<a name="ln-13"></a><span class="k">USE </span><span class="n">DataPrecisionGlobals</span>
+<a name="ln-14"></a><span class="k">USE </span><span class="n">DataGlobals</span><span class="p">,</span> <span class="n">ONLY</span><span class="p">:</span> <span class="n">MaxNameLength</span>
+<a name="ln-15"></a>
+<a name="ln-16"></a><span class="k">IMPLICIT NONE</span>   <span class="c">! Enforce explicit typing of all variables</span>
+<a name="ln-17"></a>
+<a name="ln-18"></a><span class="k">PUBLIC</span>          <span class="c">! By definition, all variables which are placed in this data</span>
+<a name="ln-19"></a>                <span class="c">! -only module should be available to other modules and routines.</span>
+<a name="ln-20"></a>                <span class="c">! Thus, all variables in this module must be PUBLIC.</span>
+<a name="ln-21"></a>
+<a name="ln-22"></a>
+<a name="ln-23"></a>          <span class="c">! MODULE PARAMETER DEFINITIONS:</span>
+<a name="ln-24"></a>          <span class="c">! na</span>
+<a name="ln-25"></a>
+<a name="ln-26"></a>          <span class="c">! DERIVED TYPE DEFINITIONS</span>
+<a name="ln-27"></a><span class="k">TYPE</span>                   <span class="kd">::</span> <span class="n">CostLineItemStruct</span>
+<a name="ln-28"></a>  <span class="kt">CHARACTER</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="n">MaxNameLength</span><span class="p">)</span> <span class="kd">::</span> <span class="n">LineName</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span> <span class="c">! object name (needed ?)</span>
+<a name="ln-29"></a>  <span class="kt">CHARACTER</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="n">MaxNameLength</span><span class="p">)</span> <span class="kd">::</span> <span class="n">LineType</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span> <span class="c">! Case statement driver?</span>
+<a name="ln-30"></a>  <span class="kt">CHARACTER</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="n">MaxNameLength</span><span class="p">)</span> <span class="kd">::</span> <span class="n">ParentObjType</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span> <span class="c">! parent reference to IDD object type</span>
+<a name="ln-31"></a>  <span class="kt">CHARACTER</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="n">MaxNameLength</span><span class="p">)</span> <span class="kd">::</span> <span class="n">ParentObjName</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span> <span class="c">! parent instance in IDF</span>
+<a name="ln-32"></a>  <span class="kt">CHARACTER</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="n">MaxNameLength</span><span class="p">)</span> <span class="kd">::</span> <span class="n">ParentObjKey</span>  <span class="o">=</span> <span class="s1">&#39;&#39;</span> <span class="c">! end use key for parent object</span>
+<a name="ln-33"></a>  <span class="kt">INTEGER</span> <span class="kd">::</span> <span class="n">ParentObjIDinList</span>  <span class="o">=</span> <span class="mi">1</span>  <span class="c">!</span>
+<a name="ln-34"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">PerSquareMeter</span>     <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! cost per square meter</span>
+<a name="ln-35"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">PerEach</span>            <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! cost per each</span>
+<a name="ln-36"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">PerKiloWattCap</span>     <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! cost per kW of nominal capacity</span>
+<a name="ln-37"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">PerKWCapPerCOP</span>     <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! cost per kW of nominal capacity per COP</span>
+<a name="ln-38"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">PerCubicMeter</span>      <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! cost per cubic meter</span>
+<a name="ln-39"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">PerCubMeterPerSec</span>  <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! cost per cubic meter per second</span>
+<a name="ln-40"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">PerUAinWattperDelK</span> <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! cost per (UA) in Watt/deltaK</span>
+<a name="ln-41"></a><span class="c">!  REAL(r64)    :: AnnualMaintFract   = 0.0d0 ! cost for annual service and non energy consumables</span>
+<a name="ln-42"></a><span class="c">!  REAL(r64)    :: MinorOverhallFract = 0.0d0 ! cost for minor overhalls</span>
+<a name="ln-43"></a><span class="c">!  INTEGER :: MinorOverhallYears = 0   ! year interval for minor overhalls</span>
+<a name="ln-44"></a><span class="c">!  REAL(r64)    :: MajorOverhallFract = 0.0d0 ! cost for major overhall</span>
+<a name="ln-45"></a><span class="c">!  INTEGER :: MajorOverhallYears = 0   ! year interval for major overhalls</span>
+<a name="ln-46"></a><span class="c">!  INTEGER :: LifeYears          = 0.0 ! expected life in years</span>
+<a name="ln-47"></a><span class="c">!  REAL(r64)    :: ValueAtReplacement = 0.0d0 ! residual value at end of life</span>
+<a name="ln-48"></a>  <span class="kt">INTEGER</span> <span class="kd">::</span> <span class="n">LineNumber</span>         <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>  <span class="c">! number of line item in detail list</span>
+<a name="ln-49"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">Qty</span>                <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! quantity in calculations (can be input)</span>
+<a name="ln-50"></a>  <span class="kt">Character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="n">MaxNameLength</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">Units</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="c">! Reported units</span>
+<a name="ln-51"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">ValuePer</span>           <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! Cost used in final calculation</span>
+<a name="ln-52"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">LineSubTotal</span>       <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! line item total  Qty * ValuePer</span>
+<a name="ln-53"></a><span class="k">END TYPE </span><span class="n">CostLineItemStruct</span>
+<a name="ln-54"></a>
+<a name="ln-55"></a><span class="k">TYPE</span>  <span class="kd">::</span> <span class="n">CostAdjustmentStruct</span>
+<a name="ln-56"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">LineItemTot</span>        <span class="c">!= 0.0 ! holds total from line item cost calculations</span>
+<a name="ln-57"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">MiscCostperSqMeter</span> <span class="c">!= 0.0 ! holds user-defined constant cost model</span>
+<a name="ln-58"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">DesignFeeFrac</span>      <span class="c">!= 0.0 ! holds user-defined fraction for design fees</span>
+<a name="ln-59"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">ContractorFeeFrac</span>  <span class="c">!= 0.0 ! holds user-defined fraction for contractor fees</span>
+<a name="ln-60"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">ContingencyFrac</span>    <span class="c">!= 0.0 ! holds user-defined fraction for contingencies</span>
+<a name="ln-61"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">BondCostFrac</span>       <span class="c">!= 0.0 ! holds user-defined fraction for bonding costs</span>
+<a name="ln-62"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">CommissioningFrac</span>  <span class="c">!= 0.0 ! holds user-defined fraction for commissioning costs</span>
+<a name="ln-63"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">RegionalModifier</span>   <span class="c">!= 1.0 ! holds user-defined multiplier to account for regional diffs</span>
+<a name="ln-64"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">GrandTotal</span>         <span class="c">!= 0.0 ! the Grand Total of all line items plus all other costs</span>
+<a name="ln-65"></a><span class="k">END TYPE </span><span class="n">CostAdjustmentStruct</span>
+<a name="ln-66"></a>
+<a name="ln-67"></a>          <span class="c">! INTERFACE BLOCK SPECIFICATIONS</span>
+<a name="ln-68"></a>          <span class="c">! na</span>
+<a name="ln-69"></a>
+<a name="ln-70"></a>          <span class="c">! MODULE VARIABLE DECLARATIONS:</span>
+<a name="ln-71"></a><span class="k">TYPE</span> <span class="p">(</span><span class="n">CostLineItemStruct</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:)</span> <span class="kd">::</span> <span class="n">CostLineItem</span>
+<a name="ln-72"></a>
+<a name="ln-73"></a> <span class="c">! CurntBldg holds results for current bldg. cost estimate</span>
+<a name="ln-74"></a><span class="k">TYPE</span> <span class="p">(</span><span class="n">CostAdjustmentStruct</span><span class="p">),</span><span class="k">SAVE</span> <span class="kd">::</span> <span class="n">CurntBldg</span>  <span class="o">=</span><span class="n">CostAdjustmentStruct</span>  <span class="p">&amp;</span>
+<a name="ln-75"></a>   <span class="p">(</span><span class="mf">0.0d0</span><span class="p">,</span>  <span class="p">&amp;</span>   <span class="c">! holds total from line item cost calculations</span>
+<a name="ln-76"></a>    <span class="mf">0.0d0</span><span class="p">,</span>  <span class="p">&amp;</span>   <span class="c">! holds user-defined constant cost model</span>
+<a name="ln-77"></a>    <span class="mf">0.0d0</span><span class="p">,</span>  <span class="p">&amp;</span>   <span class="c">! holds user-defined fraction for design fees</span>
+<a name="ln-78"></a>    <span class="mf">0.0d0</span><span class="p">,</span>  <span class="p">&amp;</span>   <span class="c">! holds user-defined fraction for contractor fees</span>
+<a name="ln-79"></a>    <span class="mf">0.0d0</span><span class="p">,</span>  <span class="p">&amp;</span>   <span class="c">! holds user-defined fraction for contingencies</span>
+<a name="ln-80"></a>    <span class="mf">0.0d0</span><span class="p">,</span>  <span class="p">&amp;</span>   <span class="c">! holds user-defined fraction for bonding costs</span>
+<a name="ln-81"></a>    <span class="mf">0.0d0</span><span class="p">,</span>  <span class="p">&amp;</span>   <span class="c">! holds user-defined fraction for commissioning costs</span>
+<a name="ln-82"></a>    <span class="mf">1.0d0</span><span class="p">,</span>  <span class="p">&amp;</span>   <span class="c">! holds user-defined multiplier to account for regional diffs</span>
+<a name="ln-83"></a>    <span class="mf">0.0d0</span><span class="p">)</span>      <span class="c">! the Grand Total of all line items plus all other costs</span>
+<a name="ln-84"></a> <span class="c">! RefrnceBldg holds user input for comparison.</span>
+<a name="ln-85"></a><span class="k">TYPE</span> <span class="p">(</span><span class="n">CostAdjustmentStruct</span><span class="p">),</span><span class="k">SAVE</span> <span class="kd">::</span> <span class="n">RefrncBldg</span> <span class="o">=</span><span class="n">CostAdjustmentStruct</span>  <span class="p">&amp;</span>
+<a name="ln-86"></a>   <span class="p">(</span><span class="mf">0.0d0</span><span class="p">,</span>  <span class="p">&amp;</span>   <span class="c">! holds total from line item cost calculations</span>
+<a name="ln-87"></a>    <span class="mf">0.0d0</span><span class="p">,</span>  <span class="p">&amp;</span>   <span class="c">! holds user-defined constant cost model</span>
+<a name="ln-88"></a>    <span class="mf">0.0d0</span><span class="p">,</span>  <span class="p">&amp;</span>   <span class="c">! holds user-defined fraction for design fees</span>
+<a name="ln-89"></a>    <span class="mf">0.0d0</span><span class="p">,</span>  <span class="p">&amp;</span>   <span class="c">! holds user-defined fraction for contractor fees</span>
+<a name="ln-90"></a>    <span class="mf">0.0d0</span><span class="p">,</span>  <span class="p">&amp;</span>   <span class="c">! holds user-defined fraction for contingencies</span>
+<a name="ln-91"></a>    <span class="mf">0.0d0</span><span class="p">,</span>  <span class="p">&amp;</span>   <span class="c">! holds user-defined fraction for bonding costs</span>
+<a name="ln-92"></a>    <span class="mf">0.0d0</span><span class="p">,</span>  <span class="p">&amp;</span>   <span class="c">! holds user-defined fraction for commissioning costs</span>
+<a name="ln-93"></a>    <span class="mf">1.0d0</span><span class="p">,</span>  <span class="p">&amp;</span>   <span class="c">! holds user-defined multiplier to account for regional diffs</span>
+<a name="ln-94"></a>    <span class="mf">0.0d0</span><span class="p">)</span>      <span class="c">! the Grand Total of all line items plus all other costs</span>
+<a name="ln-95"></a>
+<a name="ln-96"></a><span class="kt">INTEGER</span>  <span class="kd">::</span> <span class="n">NumLineItems</span><span class="o">=</span><span class="mi">0</span>  <span class="c">! number of cost estimate line items</span>
+<a name="ln-97"></a><span class="kt">LOGICAL</span>  <span class="kd">::</span> <span class="n">DoCostEstimate</span>   <span class="o">=</span> <span class="p">.</span><span class="n">FALSE</span><span class="p">.</span> <span class="c">!set to true if any cost estimating needed</span>
+<a name="ln-98"></a>
+<a name="ln-99"></a><span class="k">TYPE </span><span class="n">monetaryUnitType</span>
+<a name="ln-100"></a>  <span class="kt">CHARACTER</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="n">MaxNameLength</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">code</span>      <span class="o">=</span> <span class="s1">&#39;&#39;</span> <span class="c">!ISO code for currency such as USD or EUR</span>
+<a name="ln-101"></a>  <span class="kt">CHARACTER</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="n">MaxNameLength</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">txt</span>       <span class="o">=</span> <span class="s1">&#39;&#39;</span> <span class="c">!text representation of the currency</span>
+<a name="ln-102"></a>  <span class="kt">CHARACTER</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="n">MaxNameLength</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">html</span>      <span class="o">=</span> <span class="s1">&#39;&#39;</span> <span class="c">!representation for HTML file - contains unicode references</span>
+<a name="ln-103"></a><span class="k">END TYPE</span>
+<a name="ln-104"></a><span class="k">TYPE</span> <span class="p">(</span><span class="n">monetaryUnitType</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:)</span> <span class="kd">::</span> <span class="n">monetaryUnit</span>
+<a name="ln-105"></a><span class="kt">INTEGER</span>                           <span class="kd">::</span> <span class="n">numMonetaryUnit</span><span class="o">=</span><span class="mi">0</span>
+<a name="ln-106"></a><span class="kt">INTEGER</span>                           <span class="kd">::</span> <span class="n">selectedMonetaryUnit</span><span class="o">=</span><span class="mi">0</span>
+<a name="ln-107"></a>
+<a name="ln-108"></a>
+<a name="ln-109"></a><span class="c">!     NOTICE</span>
+<a name="ln-110"></a><span class="c">!</span>
+<a name="ln-111"></a><span class="c">!     Copyright © 1996-2013 The Board of Trustees of the University of Illinois</span>
+<a name="ln-112"></a><span class="c">!     and The Regents of the University of California through Ernest Orlando Lawrence</span>
+<a name="ln-113"></a><span class="c">!     Berkeley National Laboratory.  All rights reserved.</span>
+<a name="ln-114"></a><span class="c">!</span>
+<a name="ln-115"></a><span class="c">!     Portions of the EnergyPlus software package have been developed and copyrighted</span>
+<a name="ln-116"></a><span class="c">!     by other individuals, companies and institutions.  These portions have been</span>
+<a name="ln-117"></a><span class="c">!     incorporated into the EnergyPlus software package under license.   For a complete</span>
+<a name="ln-118"></a><span class="c">!     list of contributors, see &quot;Notice&quot; located in EnergyPlus.f90.</span>
+<a name="ln-119"></a><span class="c">!</span>
+<a name="ln-120"></a><span class="c">!     NOTICE: The U.S. Government is granted for itself and others acting on its</span>
+<a name="ln-121"></a><span class="c">!     behalf a paid-up, nonexclusive, irrevocable, worldwide license in this data to</span>
+<a name="ln-122"></a><span class="c">!     reproduce, prepare derivative works, and perform publicly and display publicly.</span>
+<a name="ln-123"></a><span class="c">!     Beginning five (5) years after permission to assert copyright is granted,</span>
+<a name="ln-124"></a><span class="c">!     subject to two possible five year renewals, the U.S. Government is granted for</span>
+<a name="ln-125"></a><span class="c">!     itself and others acting on its behalf a paid-up, non-exclusive, irrevocable</span>
+<a name="ln-126"></a><span class="c">!     worldwide license in this data to reproduce, prepare derivative works,</span>
+<a name="ln-127"></a><span class="c">!     distribute copies to the public, perform publicly and display publicly, and to</span>
+<a name="ln-128"></a><span class="c">!     permit others to do so.</span>
+<a name="ln-129"></a><span class="c">!</span>
+<a name="ln-130"></a><span class="c">!     TRADEMARKS: EnergyPlus is a trademark of the US Department of Energy.</span>
+<a name="ln-131"></a><span class="c">!</span>
+<a name="ln-132"></a>
+<a name="ln-133"></a><span class="k">END MODULE </span><span class="n">DataCostEstimate</span>
+</pre></div>
+
+    </section>
+    </div>
+  </div>
+
+  <section class="visible-xs visible-sm hidden-md">
+    <hr>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allfiles-1">All Source Files</a></h3></div>
+  <div id="allfiles-1" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../sourcefile/airflownetworkbalancemanager.f90.html">AirflowNetworkBalanceManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/airflownetworksolver.f90.html">AirflowNetworkSolver.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/baseboardradiator.f90.html">BaseboardRadiator.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/baseboardradiatorelectric.f90.html">BaseboardRadiatorElectric.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/baseboardradiatorsteam.f90.html">BaseboardRadiatorSteam.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/baseboardradiatorwater.f90.html">BaseboardRadiatorWater.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/branchinputmanager.f90.html">BranchInputManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/branchnodeconnections.f90.html">BranchNodeConnections.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/conductiontransferfunctioncalc.f90.html">ConductionTransferFunctionCalc.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/cooltower.f90.html">CoolTower.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/costestimatemanager.f90.html">CostEstimateManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/curvemanager.f90.html">CurveManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/cvfonlyroutines.f90.html">CVFOnlyRoutines.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataairflownetwork.f90.html">DataAirflowNetwork.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataairloop.f90.html">DataAirLoop.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataairsystems.f90.html">DataAirSystems.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/databranchairloopplant.f90.html">DataBranchAirLoopPlant.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/databranchnodeconnections.f90.html">DataBranchNodeConnections.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/databsdfwindow.f90.html">DataBSDFWindow.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datacomplexfenestration.f90.html">DataComplexFenestration.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datacontaminantbalance.f90.html">DataContaminantBalance.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataconvergparams.f90.html">DataConvergParams.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataconversions.f90.html">DataConversions.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datacostestimate.f90.html">DataCostEstimate.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datadaylighting.f90.html">DataDaylighting.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datadaylightingdevices.f90.html">DataDaylightingDevices.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datadefineequip.f90.html">Datadefineequip.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datadelight.f90.html">DataDElight.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataenvironment.f90.html">DataEnvironment.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataequivalentlayerwindow.f90.html">DataEquivalentLayerWindow.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataerrortracking.f90.html">DataErrorTracking.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datagenerators.f90.html">DataGenerators.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataglobalconstants.f90.html">DataGlobalConstants.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataglobals.f90.html">DataGlobals.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataheatbalance.f90.html">DataHeatBalance.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataheatbalfansys.f90.html">DataHeatBalFanSys.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataheatbalsurface.f90.html">DataHeatBalSurface.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datahvaccontrollers.f90.html">DataHVACControllers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datahvacglobals.f90.html">DataHVACGlobals.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datainterfaces.f90.html">DataInterfaces.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataipshortcuts.f90.html">DataIPShortCuts.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataloopnode.f90.html">DataLoopNode.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datamoisturebalance.f90.html">DataMoistureBalance.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datamoisturebalanceempd.f90.html">DataMoistureBalanceEMPD.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataoutputs.f90.html">DataOutputs.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataphotovoltaics.f90.html">DataPhotovoltaics.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataplant.f90.html">DataPlant.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataplantpipingsystems.f90.html">DataPlantPipingSystems.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataprecisionglobals.f90.html">DataPrecisionGlobals.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datareportingflags.f90.html">DataReportingFlags.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataroomair.f90.html">DataRoomAir.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datarootfinder.f90.html">DataRootFinder.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataruntimelanguage.f90.html">DataRuntimeLanguage.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datashadowingcombinations.f90.html">DataShadowingCombinations.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datasizing.f90.html">DataSizing.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datastringglobals.f90.html">DataStringGlobals.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datasurfacecolors.f90.html">DataSurfaceColors.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datasurfacelists.f90.html">DataSurfaceLists.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datasurfaces.f90.html">DataSurfaces.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datasystemvariables.f90.html">DataSystemVariables.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datatimings.f90.html">DataTimings.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataucsdshareddata.f90.html">DataUCSDSharedData.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datavectortypes.f90.html">DataVectorTypes.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataviewfactorinformation.f90.html">DataViewFactorInformation.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datawater.f90.html">DataWater.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datazonecontrols.f90.html">DataZoneControls.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datazoneenergydemands.f90.html">DataZoneEnergyDemands.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datazoneequipment.f90.html">DataZoneEquipment.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/daylightingdevices.f90.html">DaylightingDevices.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/daylightingmanager.f90.html">DaylightingManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/delightmanagerf.f90.html">DElightManagerF.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/delightmanagerf_no.f90.html">DElightManagerF_NO.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/demandmanager.f90.html">DemandManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/desiccantdehumidifiers.f90.html">DesiccantDehumidifiers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/directair.f90.html">DirectAir.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/displayroutines.f90.html">DisplayRoutines.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dxcoil.f90.html">DXCoil.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/earthtube.f90.html">EarthTube.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/economiclifecyclecost.f90.html">EconomicLifeCycleCost.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/economictariff.f90.html">EconomicTariff.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/ecoroof.f90.html">EcoRoof.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/electricpowergenerators.f90.html">ElectricPowerGenerators.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/electricpowermanager.f90.html">ElectricPowerManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/emsmanager.f90.html">EMSManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/energyplus.f90.html">EnergyPlus.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/exteriorenergyusemanager.f90.html">ExteriorEnergyUseManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/externalinterface_no.f90.html">ExternalInterface_NO.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/fancoilunits.f90.html">FanCoilUnits.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/faultsmanager.f90.html">FaultsManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/fluidproperties.f90.html">FluidProperties.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/general.f90.html">General.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/generalroutines.f90.html">GeneralRoutines.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/globalnames.f90.html">GlobalNames.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalanceairmanager.f90.html">HeatBalanceAirManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalanceconvectioncoeffs.f90.html">HeatBalanceConvectionCoeffs.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalancehamtmanager.f90.html">HeatBalanceHAMTManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalanceinternalheatgains.f90.html">HeatBalanceInternalHeatGains.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalanceintradexchange.f90.html">HeatBalanceIntRadExchange.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalancemanager.f90.html">HeatBalanceManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalancemovableinsulation.f90.html">HeatBalanceMovableInsulation.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalancesurfacemanager.f90.html">HeatBalanceSurfaceManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalfinitedifferencemanager.f90.html">HeatBalFiniteDifferenceManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatrecovery.f90.html">HeatRecovery.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/humidifiers.f90.html">Humidifiers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvaccontrollers.f90.html">HVACControllers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvaccooledbeam.f90.html">HVACCooledBeam.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacdualductsystem.f90.html">HVACDualDuctSystem.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacduct.f90.html">HVACDuct.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacdxsystem.f90.html">HVACDXSystem.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacevapcomponent.f90.html">HVACEvapComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacfancomponent.f90.html">HVACFanComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacfurnace.f90.html">HVACFurnace.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacheatingcoils.f90.html">HVACHeatingCoils.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvachxassistedcoolingcoil.f90.html">HVACHXAssistedCoolingCoil.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacinterfacemanager.f90.html">HVACInterfaceManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacmanager.f90.html">HVACManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacmixercomponent.f90.html">HVACMixerComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacmultispeedheatpump.f90.html">HVACMultiSpeedHeatPump.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacsingleductinduc.f90.html">HVACSingleDuctInduc.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacsingleductsystem.f90.html">HVACSingleDuctSystem.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacsplittercomponent.f90.html">HVACSplitterComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacstandaloneerv.f90.html">HVACStandAloneERV.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacsteamcoilcomponent.f90.html">HVACSteamCoilComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvactranspiredcollector.f90.html">HVACTranspiredCollector.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacunitarybypassvav.f90.html">HVACUnitaryBypassVAV.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacunitarysystem.f90.html">HVACUnitarySystem.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacvariablerefrigerantflow.f90.html">HVACVariableRefrigerantFlow.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacwatercoilcomponent.f90.html">HVACWaterCoilComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacwatertoair.f90.html">HVACWatertoAir.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacwatertoairmultispeedhp.f90.html">HVACWatertoAirMultiSpeedHP.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/inputprocessor.f90.html">InputProcessor.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/matrixdatamanager.f90.html">MatrixDataManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/mixedair.f90.html">MixedAir.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/moisturebalanceempdmanager.f90.html">MoistureBalanceEMPDManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/nodeinputmanager.f90.html">NodeInputManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/nonzoneequipmentmanager.f90.html">NonZoneEquipmentManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/outairnodemanager.f90.html">OutAirNodeManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/outdoorairunit.f90.html">OutdoorAirUnit.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/outputprocessor.f90.html">OutputProcessor.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/outputreportpredefined.f90.html">OutputReportPredefined.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/outputreports.f90.html">OutputReports.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/outputreporttabular.f90.html">OutputReportTabular.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/packagedterminalheatpump.f90.html">PackagedTerminalHeatPump.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/packagedthermalstoragecoil.f90.html">PackagedThermalStorageCoil.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/photovoltaics.f90.html">Photovoltaics.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/photovoltaicthermalcollectors.f90.html">PhotovoltaicThermalCollectors.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantabsorptionchillers.f90.html">PlantAbsorptionChillers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantboilers.f90.html">PlantBoilers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantboilerssteam.f90.html">PlantBoilersSteam.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantcentralgshp.f90.html">PlantCentralGSHP.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantchillers.f90.html">PlantChillers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantcondloopoperation.f90.html">PlantCondLoopOperation.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantcondlooptowers.f90.html">PlantCondLoopTowers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/planteirchillers.f90.html">PlantEIRChillers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantevapfluidcoolers.f90.html">PlantEvapFluidCoolers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantexhaustabsorptionchiller.f90.html">PlantExhaustAbsorptionChiller.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantfluidcoolers.f90.html">PlantFluidCoolers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantgasabsorptionchiller.f90.html">PlantGasAbsorptionChiller.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantgroundheatexchangers.f90.html">PlantGroundHeatExchangers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantheatexchanger.f90.html">PlantHeatExchanger.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/planticethermalstorage.f90.html">PlantIceThermalStorage.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantloadprofile.f90.html">PlantLoadProfile.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantloopequipment.f90.html">PlantLoopEquipment.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantloopsolver.f90.html">PlantLoopSolver.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantmanager.f90.html">PlantManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantoutsideenergysources.f90.html">PlantOutsideEnergySources.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantpipeheattransfer.f90.html">PlantPipeHeatTransfer.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantpipes.f90.html">PlantPipes.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantpipingsystemmanager.f90.html">PlantPipingSystemManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantpondgroundheatexchanger.f90.html">PlantPondGroundHeatExchanger.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantpressuresystem.f90.html">PlantPressureSystem.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantpumps.f90.html">PlantPumps.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantsolarcollectors.f90.html">PlantSolarCollectors.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantsurfacegroundheatexchanger.f90.html">PlantSurfaceGroundHeatExchanger.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantutilities.f90.html">PlantUtilities.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantvalves.f90.html">PlantValves.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantwatersources.f90.html">PlantWaterSources.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantwaterthermaltank.f90.html">PlantWaterThermalTank.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantwatertowatergshp.f90.html">PlantWatertoWaterGSHP.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantwateruse.f90.html">PlantWaterUse.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/pollutionanalysismodule.f90.html">PollutionAnalysisModule.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/poweredinductionunits.f90.html">PoweredInductionUnits.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/psychroutines.f90.html">PsychRoutines.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/purchasedairmanager.f90.html">Purchasedairmanager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/radiantsystemhightemp.f90.html">RadiantSystemHighTemp.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/radiantsystemlowtemp.f90.html">RadiantSystemLowTemp.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/refrigeratedcase.f90.html">RefrigeratedCase.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/reportsizingmanager.f90.html">ReportSizingManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/returnairpath.f90.html">ReturnAirPath.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/roomairmanager.f90.html">RoomAirManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/roomairmodelcrossvent.f90.html">RoomAirModelCrossVent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/roomairmodeldisplacementvent.f90.html">RoomAirModelDisplacementVent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/roomairmodelmundt.f90.html">RoomAirModelMundt.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/roomairmodelufad.f90.html">RoomAirModelUFAD.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/roomairmodelusertemppattern.f90.html">RoomAirModelUserTempPattern.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/rootfinder.f90.html">RootFinder.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/runtimelanguageprocessor.f90.html">RuntimeLanguageProcessor.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/schedulemanager.f90.html">ScheduleManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/setpointmanager.f90.html">SetPointManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/simairservingzones.f90.html">SimAirServingZones.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/simulationmanager.f90.html">SimulationManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/sizingmanager.f90.html">SizingManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/solarreflectionmanager.f90.html">SolarReflectionManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/solarshading.f90.html">SolarShading.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/sortandstringutilities.f90.html">SortAndStringUtilities.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/sqlite3.c.html">sqlite3.c</a>
+
+      <a class="list-group-item" href="../sourcefile/sqlitecroutines.c.html">SQLiteCRoutines.c</a>
+
+      <a class="list-group-item" href="../sourcefile/sqlitefortranroutines.f90.html">SQLiteFortranRoutines.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/sqlitefortranroutines_no.f90.html">SQLiteFortranRoutines_NO.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/standardratings.f90.html">StandardRatings.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/surfacegeometry.f90.html">SurfaceGeometry.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/systemavailabilitymanager.f90.html">SystemAvailabilityManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/systemreports.f90.html">SystemReports.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/tarcogcomplexfenestration.f90.html">TarcogComplexFenestration.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/thermalchimney.f90.html">ThermalChimney.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/thermalcomfort.f90.html">ThermalComfort.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/unitheater.f90.html">UnitHeater.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/unitventilator.f90.html">UnitVentilator.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/userdefinedcomponents.f90.html">UserDefinedComponents.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/utilityroutines.f90.html">UtilityRoutines.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/vectorutilities.f90.html">VectorUtilities.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/ventilatedslab.f90.html">VentilatedSlab.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/watermanager.f90.html">WaterManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/weathermanager.f90.html">WeatherManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/windowac.f90.html">WindowAC.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/windowcomplexmanager.f90.html">WindowComplexManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/windowequivalentlayer.f90.html">WindowEquivalentLayer.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/windowmanager.f90.html">WindowManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/windturbine.f90.html">WindTurbine.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/zoneairloopequipmentmanager.f90.html">Zoneairloopequipmentmanager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/zonecontaminantpredictorcorrector.f90.html">ZoneContaminantPredictorCorrector.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/zonedehumidifier.f90.html">ZoneDehumidifier.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/zoneequipmentmanager.f90.html">Zoneequipmentmanager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/zoneplenumcomponent.f90.html">ZonePlenumComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/zonetemppredictorcorrector.f90.html">ZoneTempPredictorCorrector.f90</a>
+
+    </div>
+  </div>
+</div>
+
+
+  </section>
+
+    <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2017 </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> EnergyPlusFortran</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js'],
+        'HTML-CSS': {
+           styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#000000 ! important'} }
+        }
+      });
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>

@@ -1,0 +1,4416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	 <meta name="description" content="">
+
+    <meta name="author" content="dmey (forked from NREL)" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>SurfaceGroundHeatExchanger &ndash; EnergyPlusFortran</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">EnergyPlusFortran <small>8.1.0.009</small></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+		 aria-expanded="false">Contents <span class="caret"></span></a>
+	      <ul class="dropdown-menu">
+
+            <li><a href="../lists/files.html">Source Files</a></li>
+
+
+            <li><a href="../lists/modules.html">Modules</a></li>
+
+
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+
+
+            <li><a href="../lists/types.html">Derived Types</a></li>
+
+
+            <li><a href="../program/energyplus.html">Program</a></li>
+
+            </ul>
+            </li>
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/energyplus.html">Program</a></li>
+
+          </ul>
+
+
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+
+  <div class="row">
+    <h1>SurfaceGroundHeatExchanger
+    <small>Module</small>
+
+    </h1>
+
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+	  data-placement="bottom" data-html="true"
+	  title=" 0.2% of total for modules and submodules.">860 statements</a>
+     </li>
+
+
+    <li><i class="fa fa-code"></i><a href="../src/PlantSurfaceGroundHeatExchanger.f90"> Source File</a></li>
+
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+
+     <li><a href='../sourcefile/plantsurfacegroundheatexchanger.f90.html'>PlantSurfaceGroundHeatExchanger.f90</a></li>
+
+     <li class="active">SurfaceGroundHeatExchanger</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+
+<div id="sidebar">
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-smallnum%7E2">SmallNum</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-stefboltzmann%7E2">StefBoltzmann</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-surfacehxheight">SurfaceHXHeight</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-blank%7E16">Blank</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-surfcond_ground">SurfCond_Ground</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-surfcond_exposed">SurfCond_Exposed</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-surfaceghe">SurfaceGHE</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-surfacegheqtf">SurfaceGHEQTF</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-surfaceghereport">SurfaceGHEReport</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-numofsurfaceghes">NumOfSurfaceGHEs</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-nosurfacegroundtempobjwarning">NoSurfaceGroundTempObjWarning</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-inletnodenum%7E32">InletNodeNum</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-outletnodenum%7E30">OutletNodeNum</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-constructionnum%7E4">ConstructionNum</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-toproughness%7E2">TopRoughness</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-btmroughness%7E2">BtmRoughness</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-inlettemp%7E24">InletTemp</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-outlettemp%7E27">OutletTemp</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-flowrate%7E7">FlowRate</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-topsurftemp">TopSurfTemp</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-btmsurftemp">BtmSurfTemp</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-topsurfflux">TopSurfFlux</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-btmsurfflux">BtmSurfFlux</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-sourceflux%7E2">SourceFlux</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-sourcetemp%7E3">SourceTemp</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-surfacearea%7E3">SurfaceArea</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-topthermabs%7E2">TopThermAbs</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-btmthermabs%7E2">BtmThermAbs</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-topsolarabs%7E2">TopSolarAbs</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-checkequipname%7E66">CheckEquipName</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-pastbeamsolarrad">PastBeamSolarRad</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-pastsolardircosvert">PastSolarDirCosVert</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-pastdifsolarrad">PastDifSolarRad</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-pastgroundtemp">PastGroundTemp</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-pastisrain">PastIsRain</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-pastissnow">PastIsSnow</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-pastoutbaropress">PastOutBaroPress</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-pastoutdrybulbtemp">PastOutDryBulbTemp</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-pastouthumrat">PastOutHumRat</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-pastoutairdensity">PastOutAirDensity</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-pastoutwetbulbtemp">PastOutWetBulbTemp</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-pastoutdewpointtemp">PastOutDewPointTemp</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-pastskytemp">PastSkyTemp</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-pastwindspeed">PastWindSpeed</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-pastcloudfraction">PastCloudFraction</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-qradsyssrcavg">QRadSysSrcAvg</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-lastsystimeelapsed%7E5">LastSysTimeElapsed</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-lasttimestepsys%7E5">LastTimeStepSys</a>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#types-0">Derived Types</a></h3></div>
+  <div id="types-0" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#type-surfacegroundheatexchangerdata">SurfaceGroundHeatExchangerData</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#type-surfacegroundheatexchangerqtf">SurfaceGroundHeatExchangerQTF</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#type-surfacegroundheatexchngrreport">SurfaceGroundHeatExchngrReport</a>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#funcs-0">Functions</a></h3></div>
+  <div id="funcs-0" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#proc-calcsourceflux">CalcSourceFlux</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#proc-calchxeffectterm">CalcHXEffectTerm</a>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-0">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-0" class="panel-collapse collapse">
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#proc-simsurfacegroundheatexchanger">SimSurfaceGroundHeatExchanger</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#proc-getsurfacegroundheatexchanger">GetSurfaceGroundHeatExchanger</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#proc-initsurfacegroundheatexchanger">InitSurfaceGroundHeatExchanger</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#proc-calcsurfacegroundheatexchanger">CalcSurfaceGroundHeatExchanger</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#proc-calcbottomfluxcoefficents">CalcBottomFluxCoefficents</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#proc-calctopfluxcoefficents">CalcTopFluxCoefficents</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#proc-calcsourcetempcoefficents">CalcSourceTempCoefficents</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#proc-updatehistories">UpdateHistories</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#proc-calctopsurftemp">CalcTopSurfTemp</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#proc-calcbottomsurftemp">CalcBottomSurfTemp</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#proc-updatesurfacegroundheatexchngr">UpdateSurfaceGroundHeatExchngr</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#proc-reportsurfacegroundheatexchngr">ReportSurfaceGroundHeatExchngr</a>
+
+    </div>
+  </div>
+</div>
+
+
+  <hr>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allmods-0">All Modules</a></h3></div>
+  <div id="allmods-0" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../module/airflownetworkbalancemanager.html">AirflowNetworkBalanceManager</a>
+
+      <a class="list-group-item" href="../module/airflownetworksolver.html">AirflowNetworkSolver</a>
+
+      <a class="list-group-item" href="../module/baseboardelectric.html">BaseboardElectric</a>
+
+      <a class="list-group-item" href="../module/baseboardradiator.html">BaseboardRadiator</a>
+
+      <a class="list-group-item" href="../module/boilers.html">Boilers</a>
+
+      <a class="list-group-item" href="../module/boilersteam.html">BoilerSteam</a>
+
+      <a class="list-group-item" href="../module/branchinputmanager.html">BranchInputManager</a>
+
+      <a class="list-group-item" href="../module/branchnodeconnections.html">BranchNodeConnections</a>
+
+      <a class="list-group-item" href="../module/chillerabsorption.html">ChillerAbsorption</a>
+
+      <a class="list-group-item" href="../module/chillerelectriceir.html">ChillerElectricEIR</a>
+
+      <a class="list-group-item" href="../module/chillerexhaustabsorption.html">ChillerExhaustAbsorption</a>
+
+      <a class="list-group-item" href="../module/chillergasabsorption.html">ChillerGasAbsorption</a>
+
+      <a class="list-group-item" href="../module/chillerindirectabsorption.html">ChillerIndirectAbsorption</a>
+
+      <a class="list-group-item" href="../module/chillerreformulatedeir.html">ChillerReformulatedEIR</a>
+
+      <a class="list-group-item" href="../module/condenserlooptowers.html">CondenserLoopTowers</a>
+
+      <a class="list-group-item" href="../module/conductiontransferfunctioncalc.html">ConductionTransferFunctionCalc</a>
+
+      <a class="list-group-item" href="../module/convectioncoefficients.html">ConvectionCoefficients</a>
+
+      <a class="list-group-item" href="../module/cooltower.html">CoolTower</a>
+
+      <a class="list-group-item" href="../module/costestimatemanager.html">CostEstimateManager</a>
+
+      <a class="list-group-item" href="../module/crossventmgr.html">CrossVentMgr</a>
+
+      <a class="list-group-item" href="../module/ctelectricgenerator.html">CTElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/curvemanager.html">CurveManager</a>
+
+      <a class="list-group-item" href="../module/dataairflownetwork.html">DataAirflowNetwork</a>
+
+      <a class="list-group-item" href="../module/dataairloop.html">DataAirLoop</a>
+
+      <a class="list-group-item" href="../module/dataairsystems.html">DataAirSystems</a>
+
+      <a class="list-group-item" href="../module/databranchairloopplant.html">DataBranchAirLoopPlant</a>
+
+      <a class="list-group-item" href="../module/databranchnodeconnections.html">DataBranchNodeConnections</a>
+
+      <a class="list-group-item" href="../module/databsdfwindow.html">DataBSDFWindow</a>
+
+      <a class="list-group-item" href="../module/datacomplexfenestration.html">DataComplexFenestration</a>
+
+      <a class="list-group-item" href="../module/datacontaminantbalance.html">DataContaminantBalance</a>
+
+      <a class="list-group-item" href="../module/dataconvergparams.html">DataConvergParams</a>
+
+      <a class="list-group-item" href="../module/dataconversions.html">DataConversions</a>
+
+      <a class="list-group-item" href="../module/datacostestimate.html">DataCostEstimate</a>
+
+      <a class="list-group-item" href="../module/datadaylighting.html">DataDaylighting</a>
+
+      <a class="list-group-item" href="../module/datadaylightingdevices.html">DataDaylightingDevices</a>
+
+      <a class="list-group-item" href="../module/datadefineequip.html">DataDefineEquip</a>
+
+      <a class="list-group-item" href="../module/datadelight.html">DataDElight</a>
+
+      <a class="list-group-item" href="../module/dataenvironment.html">DataEnvironment</a>
+
+      <a class="list-group-item" href="../module/dataerrortracking.html">DataErrorTracking</a>
+
+      <a class="list-group-item" href="../module/datagenerators.html">DataGenerators</a>
+
+      <a class="list-group-item" href="../module/dataglobalconstants.html">DataGlobalConstants</a>
+
+      <a class="list-group-item" href="../module/dataglobals.html">DataGlobals</a>
+
+      <a class="list-group-item" href="../module/dataheatbalance.html">DataHeatBalance</a>
+
+      <a class="list-group-item" href="../module/dataheatbalfansys.html">DataHeatBalFanSys</a>
+
+      <a class="list-group-item" href="../module/dataheatbalsurface.html">DataHeatBalSurface</a>
+
+      <a class="list-group-item" href="../module/datahvaccontrollers.html">DataHVACControllers</a>
+
+      <a class="list-group-item" href="../module/datahvacglobals.html">DataHVACGlobals</a>
+
+      <a class="list-group-item" href="../module/datainterfaces.html">DataInterfaces</a>
+
+      <a class="list-group-item" href="../module/dataipshortcuts.html">DataIPShortCuts</a>
+
+      <a class="list-group-item" href="../module/dataloopnode.html">DataLoopNode</a>
+
+      <a class="list-group-item" href="../module/datamoisturebalance.html">DataMoistureBalance</a>
+
+      <a class="list-group-item" href="../module/datamoisturebalanceempd.html">DataMoistureBalanceEMPD</a>
+
+      <a class="list-group-item" href="../module/dataoutputs.html">DataOutputs</a>
+
+      <a class="list-group-item" href="../module/dataphotovoltaics.html">DataPhotovoltaics</a>
+
+      <a class="list-group-item" href="../module/dataplant.html">DataPlant</a>
+
+      <a class="list-group-item" href="../module/dataplantpipingsystems.html">DataPlantPipingSystems</a>
+
+      <a class="list-group-item" href="../module/dataprecisionglobals.html">DataPrecisionGlobals</a>
+
+      <a class="list-group-item" href="../module/datareportingflags.html">DataReportingFlags</a>
+
+      <a class="list-group-item" href="../module/dataroomairmodel.html">DataRoomAirModel</a>
+
+      <a class="list-group-item" href="../module/datarootfinder.html">DataRootFinder</a>
+
+      <a class="list-group-item" href="../module/dataruntimelanguage.html">DataRuntimeLanguage</a>
+
+      <a class="list-group-item" href="../module/datashadowingcombinations.html">DataShadowingCombinations</a>
+
+      <a class="list-group-item" href="../module/datasizing.html">DataSizing</a>
+
+      <a class="list-group-item" href="../module/datastringglobals.html">DataStringGlobals</a>
+
+      <a class="list-group-item" href="../module/datasurfacecolors.html">DataSurfaceColors</a>
+
+      <a class="list-group-item" href="../module/datasurfacelists.html">DataSurfaceLists</a>
+
+      <a class="list-group-item" href="../module/datasurfaces.html">DataSurfaces</a>
+
+      <a class="list-group-item" href="../module/datasystemvariables.html">DataSystemVariables</a>
+
+      <a class="list-group-item" href="../module/datatimings.html">DataTimings</a>
+
+      <a class="list-group-item" href="../module/dataucsdshareddata.html">DataUCSDSharedData</a>
+
+      <a class="list-group-item" href="../module/datavectortypes.html">DataVectorTypes</a>
+
+      <a class="list-group-item" href="../module/dataviewfactorinformation.html">DataViewFactorInformation</a>
+
+      <a class="list-group-item" href="../module/datawater.html">DataWater</a>
+
+      <a class="list-group-item" href="../module/datawindowequivalentlayer.html">DataWindowEquivalentLayer</a>
+
+      <a class="list-group-item" href="../module/datazonecontrols.html">DataZoneControls</a>
+
+      <a class="list-group-item" href="../module/datazoneenergydemands.html">DataZoneEnergyDemands</a>
+
+      <a class="list-group-item" href="../module/datazoneequipment.html">DataZoneEquipment</a>
+
+      <a class="list-group-item" href="../module/daylightingdevices.html">DaylightingDevices</a>
+
+      <a class="list-group-item" href="../module/daylightingmanager.html">DaylightingManager</a>
+
+      <a class="list-group-item" href="../module/delightmanagerf%7E2.html">DELIGHTMANAGERF</a>
+
+      <a class="list-group-item" href="../module/delightmanagerf.html">DELIGHTMANAGERF</a>
+
+      <a class="list-group-item" href="../module/demandmanager.html">DemandManager</a>
+
+      <a class="list-group-item" href="../module/desiccantdehumidifiers.html">DesiccantDehumidifiers</a>
+
+      <a class="list-group-item" href="../module/directairmanager.html">DirectAirManager</a>
+
+      <a class="list-group-item" href="../module/displacementventmgr.html">DisplacementVentMgr</a>
+
+      <a class="list-group-item" href="../module/dualduct.html">DualDuct</a>
+
+      <a class="list-group-item" href="../module/dxcoils.html">DXCoils</a>
+
+      <a class="list-group-item" href="../module/dxfearclipping.html">DXFEarClipping</a>
+
+      <a class="list-group-item" href="../module/earthtube.html">EarthTube</a>
+
+      <a class="list-group-item" href="../module/economiclifecyclecost.html">EconomicLifeCycleCost</a>
+
+      <a class="list-group-item" href="../module/economictariff.html">EconomicTariff</a>
+
+      <a class="list-group-item" href="../module/ecoroofmanager.html">EcoRoofManager</a>
+
+      <a class="list-group-item" href="../module/electricbaseboardradiator.html">ElectricBaseboardRadiator</a>
+
+      <a class="list-group-item" href="../module/emsmanager.html">EMSManager</a>
+
+      <a class="list-group-item" href="../module/evaporativecoolers.html">EvaporativeCoolers</a>
+
+      <a class="list-group-item" href="../module/evaporativefluidcoolers.html">EvaporativeFluidCoolers</a>
+
+      <a class="list-group-item" href="../module/exteriorenergyuse.html">ExteriorEnergyUse</a>
+
+      <a class="list-group-item" href="../module/externalinterface.html">ExternalInterface</a>
+
+      <a class="list-group-item" href="../module/fancoilunits.html">FanCoilUnits</a>
+
+      <a class="list-group-item" href="../module/fans.html">Fans</a>
+
+      <a class="list-group-item" href="../module/faultsmanager.html">FaultsManager</a>
+
+      <a class="list-group-item" href="../module/fluidcoolers.html">FluidCoolers</a>
+
+      <a class="list-group-item" href="../module/fluidproperties.html">FluidProperties</a>
+
+      <a class="list-group-item" href="../module/fuelcellelectricgenerator.html">FuelCellElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/furnaces.html">Furnaces</a>
+
+      <a class="list-group-item" href="../module/general.html">General</a>
+
+      <a class="list-group-item" href="../module/generatordynamicsmanager.html">GeneratorDynamicsManager</a>
+
+      <a class="list-group-item" href="../module/generatorfuelsupply.html">GeneratorFuelSupply</a>
+
+      <a class="list-group-item" href="../module/globalnames.html">GlobalNames</a>
+
+      <a class="list-group-item" href="../module/groundheatexchangers.html">GroundHeatExchangers</a>
+
+      <a class="list-group-item" href="../module/heatbalanceairmanager.html">HeatBalanceAirManager</a>
+
+      <a class="list-group-item" href="../module/heatbalancehamtmanager.html">HeatBalanceHAMTManager</a>
+
+      <a class="list-group-item" href="../module/heatbalanceintradexchange.html">HeatBalanceIntRadExchange</a>
+
+      <a class="list-group-item" href="../module/heatbalancemanager.html">HeatBalanceManager</a>
+
+      <a class="list-group-item" href="../module/heatbalancemovableinsulation.html">HeatBalanceMovableInsulation</a>
+
+      <a class="list-group-item" href="../module/heatbalancesurfacemanager.html">HeatBalanceSurfaceManager</a>
+
+      <a class="list-group-item" href="../module/heatbalfinitediffmanager.html">HeatBalFiniteDiffManager</a>
+
+      <a class="list-group-item" href="../module/heatingcoils.html">HeatingCoils</a>
+
+      <a class="list-group-item" href="../module/heatpumpwatertowatercooling.html">HeatPumpWaterToWaterCOOLING</a>
+
+      <a class="list-group-item" href="../module/heatpumpwatertowaterheating.html">HeatPumpWaterToWaterHEATING</a>
+
+      <a class="list-group-item" href="../module/heatpumpwatertowatersimple.html">HeatPumpWaterToWaterSimple</a>
+
+      <a class="list-group-item" href="../module/heatrecovery.html">HeatRecovery</a>
+
+      <a class="list-group-item" href="../module/hightempradiantsystem.html">HighTempRadiantSystem</a>
+
+      <a class="list-group-item" href="../module/humidifiers.html">Humidifiers</a>
+
+      <a class="list-group-item" href="../module/hvaccontrollers.html">HVACControllers</a>
+
+      <a class="list-group-item" href="../module/hvaccooledbeam.html">HVACCooledBeam</a>
+
+      <a class="list-group-item" href="../module/hvacduct.html">HVACDuct</a>
+
+      <a class="list-group-item" href="../module/hvacdxheatpumpsystem.html">HVACDXHeatPumpSystem</a>
+
+      <a class="list-group-item" href="../module/hvacdxsystem.html">HVACDXSystem</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html">HVACHXAssistedCoolingCoil</a>
+
+      <a class="list-group-item" href="../module/hvacinterfacemanager.html">HVACInterfaceManager</a>
+
+      <a class="list-group-item" href="../module/hvacmanager.html">HVACManager</a>
+
+      <a class="list-group-item" href="../module/hvacmultispeedheatpump.html">HVACMultiSpeedHeatPump</a>
+
+      <a class="list-group-item" href="../module/hvacsingleductinduc.html">HVACSingleDuctInduc</a>
+
+      <a class="list-group-item" href="../module/hvacstandaloneerv.html">HVACStandAloneERV</a>
+
+      <a class="list-group-item" href="../module/hvacunitarybypassvav.html">HVACUnitaryBypassVAV</a>
+
+      <a class="list-group-item" href="../module/hvacunitarysystem.html">HVACUnitarySystem</a>
+
+      <a class="list-group-item" href="../module/hvacvariablerefrigerantflow.html">HVACVariableRefrigerantFlow</a>
+
+      <a class="list-group-item" href="../module/hwbaseboardradiator.html">HWBaseboardRadiator</a>
+
+      <a class="list-group-item" href="../module/icengineelectricgenerator.html">ICEngineElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/icethermalstorage.html">IceThermalStorage</a>
+
+      <a class="list-group-item" href="../module/inputprocessor.html">InputProcessor</a>
+
+      <a class="list-group-item" href="../module/internalheatgains.html">InternalHeatGains</a>
+
+      <a class="list-group-item" href="../module/iso_c_function_binding.html">ISO_C_FUNCTION_BINDING</a>
+
+      <a class="list-group-item" href="../module/iso_c_function_binding%7E2.html">ISO_C_FUNCTION_BINDING</a>
+
+      <a class="list-group-item" href="../module/lowtempradiantsystem.html">LowTempRadiantSystem</a>
+
+      <a class="list-group-item" href="../module/manageelectricpower.html">ManageElectricPower</a>
+
+      <a class="list-group-item" href="../module/matrixdatamanager.html">MatrixDataManager</a>
+
+      <a class="list-group-item" href="../module/microchpelectricgenerator.html">MicroCHPElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/microturbineelectricgenerator.html">MicroturbineElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/mixedair.html">MixedAir</a>
+
+      <a class="list-group-item" href="../module/mixercomponent.html">MixerComponent</a>
+
+      <a class="list-group-item" href="../module/moisturebalanceempdmanager.html">MoistureBalanceEMPDManager</a>
+
+      <a class="list-group-item" href="../module/mundtsimmgr.html">MundtSimMgr</a>
+
+      <a class="list-group-item" href="../module/nodeinputmanager.html">NodeInputManager</a>
+
+      <a class="list-group-item" href="../module/nonzoneequipmentmanager.html">NonZoneEquipmentManager</a>
+
+      <a class="list-group-item" href="../module/outairnodemanager.html">OutAirNodeManager</a>
+
+      <a class="list-group-item" href="../module/outdoorairunit.html">OutdoorAirUnit</a>
+
+      <a class="list-group-item" href="../module/outputprocessor.html">OutputProcessor</a>
+
+      <a class="list-group-item" href="../module/outputreportpredefined.html">OutputReportPredefined</a>
+
+      <a class="list-group-item" href="../module/outputreporttabular.html">OutputReportTabular</a>
+
+      <a class="list-group-item" href="../module/outsideenergysources.html">OutsideEnergySources</a>
+
+      <a class="list-group-item" href="../module/packagedterminalheatpump.html">PackagedTerminalHeatPump</a>
+
+      <a class="list-group-item" href="../module/packagedthermalstoragecoil.html">PackagedThermalStorageCoil</a>
+
+      <a class="list-group-item" href="../module/photovoltaics.html">Photovoltaics</a>
+
+      <a class="list-group-item" href="../module/photovoltaicthermalcollectors.html">PhotovoltaicThermalCollectors</a>
+
+      <a class="list-group-item" href="../module/pipeheattransfer.html">PipeHeatTransfer</a>
+
+      <a class="list-group-item" href="../module/pipes.html">Pipes</a>
+
+      <a class="list-group-item" href="../module/plantcentralgshp.html">PlantCentralGSHP</a>
+
+      <a class="list-group-item" href="../module/plantchillers.html">PlantChillers</a>
+
+      <a class="list-group-item" href="../module/plantcomponenttemperaturesources.html">PlantComponentTemperatureSources</a>
+
+      <a class="list-group-item" href="../module/plantcondloopoperation.html">PlantCondLoopOperation</a>
+
+      <a class="list-group-item" href="../module/plantheatexchangerfluidtofluid.html">PlantHeatExchangerFluidToFluid</a>
+
+      <a class="list-group-item" href="../module/plantloadprofile.html">PlantLoadProfile</a>
+
+      <a class="list-group-item" href="../module/plantloopequip.html">PlantLoopEquip</a>
+
+      <a class="list-group-item" href="../module/plantloopsolver.html">PlantLoopSolver</a>
+
+      <a class="list-group-item" href="../module/plantmanager.html">PlantManager</a>
+
+      <a class="list-group-item" href="../module/plantpipingsystemsmanager.html">PlantPipingSystemsManager</a>
+
+      <a class="list-group-item" href="../module/plantpressuresystem.html">PlantPressureSystem</a>
+
+      <a class="list-group-item" href="../module/plantutilities.html">PlantUtilities</a>
+
+      <a class="list-group-item" href="../module/plantvalves.html">PlantValves</a>
+
+      <a class="list-group-item" href="../module/pollutionmodule.html">PollutionModule</a>
+
+      <a class="list-group-item" href="../module/pondgroundheatexchanger.html">PondGroundHeatExchanger</a>
+
+      <a class="list-group-item" href="../module/poweredinductionunits.html">PoweredInductionUnits</a>
+
+      <a class="list-group-item" href="../module/psychrometrics.html">Psychrometrics</a>
+
+      <a class="list-group-item" href="../module/pumps.html">Pumps</a>
+
+      <a class="list-group-item" href="../module/purchasedairmanager.html">PurchasedAirManager</a>
+
+      <a class="list-group-item" href="../module/refrigeratedcase.html">RefrigeratedCase</a>
+
+      <a class="list-group-item" href="../module/reportsizingmanager.html">ReportSizingManager</a>
+
+      <a class="list-group-item" href="../module/returnairpathmanager.html">ReturnAirPathManager</a>
+
+      <a class="list-group-item" href="../module/roomairmodelmanager.html">RoomAirModelManager</a>
+
+      <a class="list-group-item" href="../module/roomairmodelusertemppattern.html">RoomAirModelUserTempPattern</a>
+
+      <a class="list-group-item" href="../module/rootfinder.html">RootFinder</a>
+
+      <a class="list-group-item" href="../module/runtimelanguageprocessor.html">RuntimeLanguageProcessor</a>
+
+      <a class="list-group-item" href="../module/schedulemanager.html">ScheduleManager</a>
+
+      <a class="list-group-item" href="../module/setpointmanager.html">SetPointManager</a>
+
+      <a class="list-group-item" href="../module/simairservingzones.html">SimAirServingZones</a>
+
+      <a class="list-group-item" href="../module/simulationmanager.html">SimulationManager</a>
+
+      <a class="list-group-item" href="../module/singleduct.html">SingleDuct</a>
+
+      <a class="list-group-item" href="../module/sizingmanager.html">SizingManager</a>
+
+      <a class="list-group-item" href="../module/solarcollectors.html">SolarCollectors</a>
+
+      <a class="list-group-item" href="../module/solarreflectionmanager.html">SolarReflectionManager</a>
+
+      <a class="list-group-item" href="../module/solarshading.html">SolarShading</a>
+
+      <a class="list-group-item" href="../module/sortandstringutilities.html">SortAndStringUtilities</a>
+
+      <a class="list-group-item" href="../module/splittercomponent.html">SplitterComponent</a>
+
+      <a class="list-group-item" href="../module/sqliteprocedures%7E2.html">SQLiteProcedures</a>
+
+      <a class="list-group-item" href="../module/sqliteprocedures.html">SQLiteProcedures</a>
+
+      <a class="list-group-item" href="../module/standardratings.html">StandardRatings</a>
+
+      <a class="list-group-item" href="../module/steambaseboardradiator.html">SteamBaseboardRadiator</a>
+
+      <a class="list-group-item" href="../module/steamcoils.html">SteamCoils</a>
+
+      <a class="list-group-item" href="../module/surfacegeometry.html">SurfaceGeometry</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html">SurfaceGroundHeatExchanger</a>
+
+      <a class="list-group-item" href="../module/systemavailabilitymanager.html">SystemAvailabilityManager</a>
+
+      <a class="list-group-item" href="../module/systemreports.html">SystemReports</a>
+
+      <a class="list-group-item" href="../module/tarcogargs.html">TARCOGArgs</a>
+
+      <a class="list-group-item" href="../module/tarcogcommon.html">TARCOGCommon</a>
+
+      <a class="list-group-item" href="../module/tarcogdeflection.html">TARCOGDeflection</a>
+
+      <a class="list-group-item" href="../module/tarcoggasses90.html">TARCOGGasses90</a>
+
+      <a class="list-group-item" href="../module/tarcoggassesparams.html">TARCOGGassesParams</a>
+
+      <a class="list-group-item" href="../module/tarcogmain.html">TARCOGMain</a>
+
+      <a class="list-group-item" href="../module/tarcogoutput.html">TARCOGOutput</a>
+
+      <a class="list-group-item" href="../module/tarcogparams.html">TARCOGParams</a>
+
+      <a class="list-group-item" href="../module/tarcogshading.html">TarcogShading</a>
+
+      <a class="list-group-item" href="../module/thermalchimney.html">ThermalChimney</a>
+
+      <a class="list-group-item" href="../module/thermalcomfort.html">ThermalComfort</a>
+
+      <a class="list-group-item" href="../module/thermalen673calc.html">ThermalEN673Calc</a>
+
+      <a class="list-group-item" href="../module/thermaliso15099calc.html">ThermalISO15099Calc</a>
+
+      <a class="list-group-item" href="../module/transpiredcollector.html">TranspiredCollector</a>
+
+      <a class="list-group-item" href="../module/ufadmanager.html">UFADManager</a>
+
+      <a class="list-group-item" href="../module/unitheater.html">UnitHeater</a>
+
+      <a class="list-group-item" href="../module/unitventilator.html">UnitVentilator</a>
+
+      <a class="list-group-item" href="../module/userdefinedcomponents.html">UserDefinedComponents</a>
+
+      <a class="list-group-item" href="../module/variablespeedcoils.html">VariableSpeedCoils</a>
+
+      <a class="list-group-item" href="../module/vectors.html">vectors</a>
+
+      <a class="list-group-item" href="../module/ventilatedslab.html">VentilatedSlab</a>
+
+      <a class="list-group-item" href="../module/watercoils.html">WaterCoils</a>
+
+      <a class="list-group-item" href="../module/watermanager.html">WaterManager</a>
+
+      <a class="list-group-item" href="../module/waterthermaltanks.html">WaterThermalTanks</a>
+
+      <a class="list-group-item" href="../module/watertoairheatpump.html">WatertoAirHeatPump</a>
+
+      <a class="list-group-item" href="../module/watertoairheatpumpsimple.html">WatertoAirHeatPumpSimple</a>
+
+      <a class="list-group-item" href="../module/wateruse.html">WaterUse</a>
+
+      <a class="list-group-item" href="../module/weathermanager.html">WeatherManager</a>
+
+      <a class="list-group-item" href="../module/windowac.html">WindowAC</a>
+
+      <a class="list-group-item" href="../module/windowcomplexmanager.html">WindowComplexManager</a>
+
+      <a class="list-group-item" href="../module/windowequivalentlayer.html">WindowEquivalentLayer</a>
+
+      <a class="list-group-item" href="../module/windowmanager.html">WindowManager</a>
+
+      <a class="list-group-item" href="../module/windturbine.html">WindTurbine</a>
+
+      <a class="list-group-item" href="../module/zoneairloopequipmentmanager.html">ZoneAirLoopEquipmentManager</a>
+
+      <a class="list-group-item" href="../module/zonecontaminantpredictorcorrector.html">ZoneContaminantPredictorCorrector</a>
+
+      <a class="list-group-item" href="../module/zonedehumidifier.html">ZoneDehumidifier</a>
+
+      <a class="list-group-item" href="../module/zoneequipmentmanager.html">ZoneEquipmentManager</a>
+
+      <a class="list-group-item" href="../module/zoneplenum.html">ZonePlenum</a>
+
+      <a class="list-group-item" href="../module/zonetemppredictorcorrector.html">ZoneTempPredictorCorrector</a>
+
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+
+
+    <ul class="list-inline">
+      <li><h4>Uses:</h4></li>
+
+      <li><a href='../module/dataprecisionglobals.html'>DataPrecisionGlobals</a></li>
+
+      <li><a href='../module/dataglobals.html'>DataGlobals</a></li>
+
+      <li><a href='../module/datainterfaces.html'>DataInterfaces</a></li>
+
+      <li><a href='../module/dataloopnode.html'>DataLoopNode</a></li>
+
+      <li><a href='../module/dataheatbalance.html'>DataHeatBalance</a></li>
+
+    </ul>
+
+                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: module~~surfacegroundheatexchanger~~UsesGraph Pages: 1 -->
+<svg id="modulesurfacegroundheatexchangerUsesGraph" width="641pt" height="270pt"
+ viewBox="0.00 0.00 641.00 270.39" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~surfacegroundheatexchanger~~UsesGraph" class="graph" transform="scale(.7368 .7368) rotate(0) translate(4 362.9543)">
+<title>module~~surfacegroundheatexchanger~~UsesGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-362.9543 865.9331,-362.9543 865.9331,4 -4,4"/>
+<!-- module~surfacegroundheatexchanger -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_node1" class="node">
+<title>module~surfacegroundheatexchanger</title>
+<polygon fill="none" stroke="#000000" points="861.7264,-178.2554 706.5544,-178.2554 706.5544,-156.2446 861.7264,-156.2446 861.7264,-178.2554"/>
+<text text-anchor="middle" x="784.1404" y="-164.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">SurfaceGroundHeatExchanger</text>
+</g>
+<!-- module~dataglobals -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_node2" class="node">
+<title>module~dataglobals</title>
+<g id="a_module~~surfacegroundheatexchanger~~UsesGraph_node2"><a xlink:href="../module/dataglobals.html" xlink:title="DataGlobals">
+<polygon fill="#337ab7" stroke="#337ab7" points="229.7313,-198.2554 160.1691,-198.2554 160.1691,-176.2446 229.7313,-176.2446 229.7313,-198.2554"/>
+<text text-anchor="middle" x="194.9502" y="-184.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataGlobals</text>
+</a>
+</g>
+</g>
+<!-- module~dataglobals&#45;&gt;module~surfacegroundheatexchanger -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_edge24" class="edge">
+<title>module~dataglobals&#45;&gt;module~surfacegroundheatexchanger</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M499.9017,-206.25C554.5308,-201.9567 571.6031,-224.7142 623.1962,-206.25"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M623.1962,-206.25C652.8585,-195.6344 686.616,-186.961 715.5279,-180.5122"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="716.5157,-183.879 725.5377,-178.3244 715.0209,-177.0404 716.5157,-183.879"/>
+</g>
+<!-- module~dataheatbalance -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_node3" class="node">
+<title>module~dataheatbalance</title>
+<g id="a_module~~surfacegroundheatexchanger~~UsesGraph_node3"><a xlink:href="../module/dataheatbalance.html" xlink:title="DataHeatBalance">
+<polygon fill="#337ab7" stroke="#337ab7" points="670.4996,-178.2554 575.8927,-178.2554 575.8927,-156.2446 670.4996,-156.2446 670.4996,-178.2554"/>
+<text text-anchor="middle" x="623.1962" y="-164.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataHeatBalance</text>
+</a>
+</g>
+</g>
+<!-- module~dataglobals&#45;&gt;module~dataheatbalance -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_edge15" class="edge">
+<title>module~dataglobals&#45;&gt;module~dataheatbalance</title>
+<path fill="none" stroke="#cbff00" stroke-dasharray="5,2" d="M499.9017,-206.25C531.3759,-203.7764 565.4754,-192.2522 589.8187,-182.3671"/>
+<polygon fill="#cbff00" stroke="#cbff00" points="591.4189,-185.4916 599.2926,-178.4025 588.7166,-179.0342 591.4189,-185.4916"/>
+<path fill="none" stroke="#cbff00" stroke-dasharray="5,2" d="M350.347,-206.25C416.51,-199.8811 433.6373,-211.4578 499.9017,-206.25"/>
+</g>
+<!-- module~dataloopnode -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_node4" class="node">
+<title>module~dataloopnode</title>
+<g id="a_module~~surfacegroundheatexchanger~~UsesGraph_node4"><a xlink:href="../module/dataloopnode.html" xlink:title="DataLoopNode">
+<polygon fill="#337ab7" stroke="#337ab7" points="391.487,-297.2554 309.2071,-297.2554 309.2071,-275.2446 391.487,-275.2446 391.487,-297.2554"/>
+<text text-anchor="middle" x="350.347" y="-283.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataLoopNode</text>
+</a>
+</g>
+</g>
+<!-- module~dataglobals&#45;&gt;module~dataloopnode -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_edge21" class="edge">
+<title>module~dataglobals&#45;&gt;module~dataloopnode</title>
+<path fill="none" stroke="#00ff66" stroke-dasharray="5,2" d="M203.5348,-198.3059C217.2424,-215.2117 245.7272,-247.3998 276.9353,-265.25 283.8125,-269.1836 291.4798,-272.4251 299.1935,-275.0832"/>
+<polygon fill="#00ff66" stroke="#00ff66" points="298.3435,-278.4849 308.9329,-278.1464 300.4437,-271.8073 298.3435,-278.4849"/>
+</g>
+<!-- module~datawindowequivalentlayer -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_node7" class="node">
+<title>module~datawindowequivalentlayer</title>
+<g id="a_module~~surfacegroundheatexchanger~~UsesGraph_node7"><a xlink:href="../module/datawindowequivalentlayer.html" xlink:title="DataWindowEquivalentLayer">
+<polygon fill="#337ab7" stroke="#337ab7" points="423.6706,-256.2554 277.0235,-256.2554 277.0235,-234.2446 423.6706,-234.2446 423.6706,-256.2554"/>
+<text text-anchor="middle" x="350.347" y="-242.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataWindowEquivalentLayer</text>
+</a>
+</g>
+</g>
+<!-- module~dataglobals&#45;&gt;module~datawindowequivalentlayer -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_edge2" class="edge">
+<title>module~dataglobals&#45;&gt;module~datawindowequivalentlayer</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M221.3923,-198.3186C237.3862,-204.9071 258.2359,-213.3085 276.9353,-220.25 286.5913,-223.8345 297.0319,-227.5091 306.9259,-230.8999"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="305.9939,-234.2797 316.5883,-234.1823 308.2456,-227.6517 305.9939,-234.2797"/>
+</g>
+<!-- module~databsdfwindow -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_node8" class="node">
+<title>module~databsdfwindow</title>
+<g id="a_module~~surfacegroundheatexchanger~~UsesGraph_node8"><a xlink:href="../module/databsdfwindow.html" xlink:title="DataBSDFWindow">
+<polygon fill="#337ab7" stroke="#337ab7" points="399.8755,-100.2554 300.8186,-100.2554 300.8186,-78.2446 399.8755,-78.2446 399.8755,-100.2554"/>
+<text text-anchor="middle" x="350.347" y="-86.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataBSDFWindow</text>
+</a>
+</g>
+</g>
+<!-- module~dataglobals&#45;&gt;module~databsdfwindow -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_edge5" class="edge">
+<title>module~dataglobals&#45;&gt;module~databsdfwindow</title>
+<path fill="none" stroke="#cbff00" stroke-dasharray="5,2" d="M212.4741,-176.1987C239.6379,-159.068 292.0845,-125.9929 323.8806,-105.9409"/>
+<polygon fill="#cbff00" stroke="#cbff00" points="326.0573,-108.7061 332.6487,-100.4113 322.3233,-102.7852 326.0573,-108.7061"/>
+</g>
+<!-- module~datacomplexfenestration -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_node9" class="node">
+<title>module~datacomplexfenestration</title>
+<g id="a_module~~surfacegroundheatexchanger~~UsesGraph_node9"><a xlink:href="../module/datacomplexfenestration.html" xlink:title="DataComplexFenestration">
+<polygon fill="#337ab7" stroke="#337ab7" points="417.3224,-178.2554 283.3717,-178.2554 283.3717,-156.2446 417.3224,-156.2446 417.3224,-178.2554"/>
+<text text-anchor="middle" x="350.347" y="-164.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataComplexFenestration</text>
+</a>
+</g>
+</g>
+<!-- module~dataglobals&#45;&gt;module~datacomplexfenestration -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_edge7" class="edge">
+<title>module~dataglobals&#45;&gt;module~datacomplexfenestration</title>
+<path fill="none" stroke="#00ff66" stroke-dasharray="5,2" d="M229.8243,-182.7616C242.7436,-181.0989 257.9602,-179.1404 273.1511,-177.1853"/>
+<polygon fill="#00ff66" stroke="#00ff66" points="273.6342,-180.6521 283.1056,-175.9042 272.7406,-173.7094 273.6342,-180.6521"/>
+</g>
+<!-- module~datasurfaces -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_node11" class="node">
+<title>module~datasurfaces</title>
+<g id="a_module~~surfacegroundheatexchanger~~UsesGraph_node11"><a xlink:href="../module/datasurfaces.html" xlink:title="DataSurfaces">
+<polygon fill="#337ab7" stroke="#337ab7" points="537.5179,-120.2554 462.2855,-120.2554 462.2855,-98.2446 537.5179,-98.2446 537.5179,-120.2554"/>
+<text text-anchor="middle" x="499.9017" y="-106.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataSurfaces</text>
+</a>
+</g>
+</g>
+<!-- module~dataglobals&#45;&gt;module~datasurfaces -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_edge12" class="edge">
+<title>module~dataglobals&#45;&gt;module~datasurfaces</title>
+<path fill="none" stroke="#cc00ff" stroke-dasharray="5,2" d="M350.347,-206.25C383.8945,-203.0207 394.6011,-204.1524 423.7588,-187.25 449.5067,-172.3242 472.3552,-146.3006 486.1496,-128.4471"/>
+<polygon fill="#cc00ff" stroke="#cc00ff" points="488.9673,-130.5235 492.1671,-120.4235 483.3672,-126.3236 488.9673,-130.5235"/>
+<path fill="none" stroke="#cc00ff" stroke-dasharray="5,2" d="M229.7646,-195.8713C261.2217,-202.6201 308.8184,-210.2476 350.347,-206.25"/>
+</g>
+<!-- module~dataheatbalance&#45;&gt;module~surfacegroundheatexchanger -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_edge25" class="edge">
+<title>module~dataheatbalance&#45;&gt;module~surfacegroundheatexchanger</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M670.6142,-167.25C678.6783,-167.25 687.2784,-167.25 695.9997,-167.25"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="696.2686,-170.7501 706.2686,-167.25 696.2685,-163.7501 696.2686,-170.7501"/>
+</g>
+<!-- module~dataloopnode&#45;&gt;module~surfacegroundheatexchanger -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_edge26" class="edge">
+<title>module~dataloopnode&#45;&gt;module~surfacegroundheatexchanger</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M499.9017,-325.25C572.217,-301.3649 551.492,-231.9115 623.1962,-206.25"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M384.5473,-297.2602C425.2005,-310.0195 488.9458,-328.8686 499.9017,-325.25"/>
+</g>
+<!-- module~datainterfaces -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_node5" class="node">
+<title>module~datainterfaces</title>
+<g id="a_module~~surfacegroundheatexchanger~~UsesGraph_node5"><a xlink:href="../module/datainterfaces.html" xlink:title="DataInterfaces">
+<polygon fill="#337ab7" stroke="#337ab7" points="540.1881,-22.2554 459.6153,-22.2554 459.6153,-.2446 540.1881,-.2446 540.1881,-22.2554"/>
+<text text-anchor="middle" x="499.9017" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataInterfaces</text>
+</a>
+</g>
+</g>
+<!-- module~datainterfaces&#45;&gt;module~surfacegroundheatexchanger -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_edge27" class="edge">
+<title>module~datainterfaces&#45;&gt;module~surfacegroundheatexchanger</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M520.3435,-22.4691C570.022,-49.7345 697.2391,-119.5556 754.9221,-151.214"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="753.4334,-154.3894 763.8839,-156.1325 756.8014,-148.2529 753.4334,-154.3894"/>
+</g>
+<!-- module~dataprecisionglobals -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_node6" class="node">
+<title>module~dataprecisionglobals</title>
+<g id="a_module~~surfacegroundheatexchanger~~UsesGraph_node6"><a xlink:href="../module/dataprecisionglobals.html" xlink:title="DataPrecisionGlobals">
+<polygon fill="#337ab7" stroke="#337ab7" points="112.9476,-139.2554 .0175,-139.2554 .0175,-117.2446 112.9476,-117.2446 112.9476,-139.2554"/>
+<text text-anchor="middle" x="56.4825" y="-125.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataPrecisionGlobals</text>
+</a>
+</g>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~surfacegroundheatexchanger -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_edge28" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~surfacegroundheatexchanger</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M194.9502,-325.25C322.0752,-372.2469 371.2059,-367.7571 499.9017,-325.25"/>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~dataglobals -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_edge1" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~dataglobals</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M82.5273,-139.3474C104.2853,-148.6184 135.5187,-161.9267 159.5453,-172.1643"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="158.4506,-175.5022 169.0223,-176.2023 161.1946,-169.0624 158.4506,-175.5022"/>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~dataheatbalance -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_edge20" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~dataheatbalance</title>
+<path fill="none" stroke="#cbff00" stroke-dasharray="5,2" d="M350.347,-12.25C418.8229,-8.4569 436.1748,-24.9081 499.9017,-50.25"/>
+<path fill="none" stroke="#cbff00" stroke-dasharray="5,2" d="M499.9017,-50.25C549.1729,-69.8434 590.0202,-119.5737 609.9947,-147.4815"/>
+<polygon fill="#cbff00" stroke="#cbff00" points="607.3637,-149.828 615.9505,-156.0342 613.1081,-145.8277 607.3637,-149.828"/>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~dataloopnode -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_edge22" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~dataloopnode</title>
+<path fill="none" stroke="#00ff66" stroke-dasharray="5,2" d="M194.9502,-325.25C205.3663,-329.1007 263.2593,-312.9704 305.342,-300.2895"/>
+<polygon fill="#00ff66" stroke="#00ff66" points="306.5743,-303.5732 315.1257,-297.3183 304.5401,-296.8753 306.5743,-303.5732"/>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~datainterfaces -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_edge23" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~datainterfaces</title>
+<path fill="none" stroke="#0066ff" stroke-dasharray="5,2" d="M350.347,-12.25C383.2378,-14.2766 420.2738,-14.048 449.2612,-13.3022"/>
+<polygon fill="#0066ff" stroke="#0066ff" points="449.6585,-16.7923 459.5541,-13.0072 449.4579,-9.7952 449.6585,-16.7923"/>
+<path fill="none" stroke="#0066ff" stroke-dasharray="5,2" d="M70.9911,-117.2429C112.468,-86.9776 235.9294,-5.2001 350.347,-12.25"/>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~datawindowequivalentlayer -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_edge3" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~datawindowequivalentlayer</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M194.9502,-325.25C237.0572,-340.8166 236.5357,-285.8252 276.9353,-266.25 281.9308,-263.8295 287.2563,-261.6389 292.6702,-259.6679"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="294.1084,-262.8762 302.4584,-256.3548 291.8641,-256.2457 294.1084,-262.8762"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M59.5128,-139.3924C70.2803,-176.3156 110.6466,-294.0837 194.9502,-325.25"/>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~databsdfwindow -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_edge6" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~databsdfwindow</title>
+<path fill="none" stroke="#cbff00" stroke-dasharray="5,2" d="M194.9502,-128.25C216.1431,-128.25 267.1658,-114.4316 304.9972,-103.2455"/>
+<polygon fill="#cbff00" stroke="#cbff00" points="306.2115,-106.5357 314.7925,-100.3215 304.2091,-99.8282 306.2115,-106.5357"/>
+<path fill="none" stroke="#cbff00" stroke-dasharray="5,2" d="M113.0731,-128.25C138.1568,-128.25 168.0259,-128.25 194.9502,-128.25"/>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~datacomplexfenestration -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_edge8" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~datacomplexfenestration</title>
+<path fill="none" stroke="#00ff66" stroke-dasharray="5,2" d="M194.9502,-128.25C216.1431,-128.25 267.1658,-142.0684 304.9972,-153.2545"/>
+<polygon fill="#00ff66" stroke="#00ff66" points="304.2091,-156.6718 314.7925,-156.1785 306.2115,-149.9643 304.2091,-156.6718"/>
+</g>
+<!-- module~datavectortypes -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_node10" class="node">
+<title>module~datavectortypes</title>
+<g id="a_module~~surfacegroundheatexchanger~~UsesGraph_node10"><a xlink:href="../module/datavectortypes.html" xlink:title="DataVectorTypes">
+<polygon fill="#337ab7" stroke="#337ab7" points="240.9204,-100.2554 148.98,-100.2554 148.98,-78.2446 240.9204,-78.2446 240.9204,-100.2554"/>
+<text text-anchor="middle" x="194.9502" y="-86.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataVectorTypes</text>
+</a>
+</g>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~datavectortypes -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_edge9" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~datavectortypes</title>
+<path fill="none" stroke="#0066ff" stroke-dasharray="5,2" d="M95.7914,-117.1785C111.2853,-112.8146 129.2551,-107.7533 145.6072,-103.1477"/>
+<polygon fill="#0066ff" stroke="#0066ff" points="146.8664,-106.4293 155.543,-100.3492 144.9686,-99.6914 146.8664,-106.4293"/>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~datasurfaces -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_edge13" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~datasurfaces</title>
+<path fill="none" stroke="#cc00ff" stroke-dasharray="5,2" d="M194.9502,-128.25C285.7748,-128.25 391.5213,-119.7507 451.6009,-114.1213"/>
+<polygon fill="#cc00ff" stroke="#cc00ff" points="452.2918,-117.5715 461.9157,-113.1408 451.6293,-110.6029 452.2918,-117.5715"/>
+</g>
+<!-- module~datawindowequivalentlayer&#45;&gt;module~dataheatbalance -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_edge14" class="edge">
+<title>module~datawindowequivalentlayer&#45;&gt;module~dataheatbalance</title>
+<path fill="none" stroke="#cbff00" stroke-dasharray="5,2" d="M423.8487,-244.5357C460.0204,-241.9735 503.5746,-235.4993 540.0447,-220.25 558.7455,-212.4306 559.0265,-203.2612 576.0447,-192.25 580.8094,-189.1671 585.9933,-186.1283 591.123,-183.289"/>
+<polygon fill="#cbff00" stroke="#cbff00" points="593.0346,-186.2355 600.1957,-178.4272 589.7283,-180.0655 593.0346,-186.2355"/>
+</g>
+<!-- module~databsdfwindow&#45;&gt;module~dataheatbalance -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_edge16" class="edge">
+<title>module~databsdfwindow&#45;&gt;module~dataheatbalance</title>
+<path fill="none" stroke="#cbff00" stroke-dasharray="5,2" d="M384.2684,-78.1445C424.9829,-65.1684 489.1491,-45.9741 499.9017,-50.25"/>
+</g>
+<!-- module~databsdfwindow&#45;&gt;module~datasurfaces -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_edge10" class="edge">
+<title>module~databsdfwindow&#45;&gt;module~datasurfaces</title>
+<path fill="none" stroke="#cc00ff" stroke-dasharray="5,2" d="M400.1466,-95.9097C416.894,-98.1493 435.5299,-100.6415 452.1186,-102.8599"/>
+<polygon fill="#cc00ff" stroke="#cc00ff" points="451.772,-106.3447 462.1477,-104.2011 452.6999,-99.4064 451.772,-106.3447"/>
+</g>
+<!-- module~datacomplexfenestration&#45;&gt;module~dataheatbalance -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_edge17" class="edge">
+<title>module~datacomplexfenestration&#45;&gt;module~dataheatbalance</title>
+<path fill="none" stroke="#cbff00" stroke-dasharray="5,2" d="M417.4429,-167.25C462.8732,-167.25 522.2735,-167.25 565.5658,-167.25"/>
+<polygon fill="#cbff00" stroke="#cbff00" points="565.6518,-170.7501 575.6518,-167.25 565.6518,-163.7501 565.6518,-170.7501"/>
+</g>
+<!-- module~datavectortypes&#45;&gt;module~dataheatbalance -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_edge18" class="edge">
+<title>module~datavectortypes&#45;&gt;module~dataheatbalance</title>
+<path fill="none" stroke="#cbff00" stroke-dasharray="5,2" d="M350.347,-50.25C416.7941,-48.5506 438.1374,-25.6886 499.9017,-50.25"/>
+<path fill="none" stroke="#cbff00" stroke-dasharray="5,2" d="M223.0653,-78.2115C253.7956,-67.0939 304.7449,-51.4163 350.347,-50.25"/>
+</g>
+<!-- module~datavectortypes&#45;&gt;module~databsdfwindow -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_edge4" class="edge">
+<title>module~datavectortypes&#45;&gt;module~databsdfwindow</title>
+<path fill="none" stroke="#cbff00" stroke-dasharray="5,2" d="M241.1536,-89.25C256.7124,-89.25 274.2993,-89.25 290.7416,-89.25"/>
+<polygon fill="#cbff00" stroke="#cbff00" points="290.8031,-92.7501 300.803,-89.25 290.803,-85.7501 290.8031,-92.7501"/>
+</g>
+<!-- module~datavectortypes&#45;&gt;module~datasurfaces -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_edge11" class="edge">
+<title>module~datavectortypes&#45;&gt;module~datasurfaces</title>
+<path fill="none" stroke="#cc00ff" stroke-dasharray="5,2" d="M350.347,-50.25C397.1777,-49.0523 446.8853,-74.7846 475.5685,-92.6506"/>
+<polygon fill="#cc00ff" stroke="#cc00ff" points="473.8053,-95.6777 484.1123,-98.1308 477.5846,-89.7856 473.8053,-95.6777"/>
+</g>
+<!-- module~datasurfaces&#45;&gt;module~dataheatbalance -->
+<g id="module~~surfacegroundheatexchanger~~UsesGraph_edge19" class="edge">
+<title>module~datasurfaces&#45;&gt;module~dataheatbalance</title>
+<path fill="none" stroke="#cbff00" stroke-dasharray="5,2" d="M523.3827,-120.2959C542.2865,-129.1886 569.0842,-141.7947 590.154,-151.7063"/>
+<polygon fill="#cbff00" stroke="#cbff00" points="588.844,-154.958 599.3827,-156.0477 591.8238,-148.6238 588.844,-154.958"/>
+</g>
+</g>
+</svg>
+</div>
+                <script>var panmodulesurfacegroundheatexchangerUsesGraph = svgPanZoom('#modulesurfacegroundheatexchangerUsesGraph', {
+                    zoomEnabled: true,
+                    controlIconsEnabled: true,
+                    fit: true,
+                    center: true,});
+                    </script>
+                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
+                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                      </div>
+                      <div class="modal-body">
+
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="484pt" height="31pt"
+ viewBox="0.00 0.00 483.85 30.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 26.5)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-26.5 479.8539,-26.5 479.8539,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-22.2554 0,-22.2554 0,-.2446 54,-.2446 54,-22.2554"/>
+<text text-anchor="middle" x="27" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="137.6205,-22.2554 72.3795,-22.2554 72.3795,-.2446 137.6205,-.2446 137.6205,-22.2554"/>
+<text text-anchor="middle" x="105" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="218.288,-22.2554 155.712,-22.2554 155.712,-.2446 218.288,-.2446 218.288,-22.2554"/>
+<text text-anchor="middle" x="187" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="290,-22.2554 236,-22.2554 236,-.2446 290,-.2446 290,-22.2554"/>
+<text text-anchor="middle" x="263" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="362,-22.2554 308,-22.2554 308,-.2446 362,-.2446 362,-22.2554"/>
+<text text-anchor="middle" x="335" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="475.7082,-22.2554 380.2918,-22.2554 380.2918,-.2446 475.7082,-.2446 475.7082,-22.2554"/>
+<text text-anchor="middle" x="428" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+
+    <p>Solid arrows point from a parent (sub)module to the submodule which is
+    descended from it. Dashed arrows point from a module being used to the
+    module or program unit using it. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+    <h3>Used By</h3>
+
+                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: module~~surfacegroundheatexchanger~~UsedByGraph Pages: 1 -->
+<svg id="modulesurfacegroundheatexchangerUsedByGraph" width="280pt" height="31pt"
+ viewBox="0.00 0.00 280.46 30.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~surfacegroundheatexchanger~~UsedByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 26.5)">
+<title>module~~surfacegroundheatexchanger~~UsedByGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-26.5 276.4558,-26.5 276.4558,4 -4,4"/>
+<!-- module~surfacegroundheatexchanger -->
+<g id="module~~surfacegroundheatexchanger~~UsedByGraph_node1" class="node">
+<title>module~surfacegroundheatexchanger</title>
+<polygon fill="none" stroke="#000000" points="155.3787,-22.2554 .2067,-22.2554 .2067,-.2446 155.3787,-.2446 155.3787,-22.2554"/>
+<text text-anchor="middle" x="77.7927" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">SurfaceGroundHeatExchanger</text>
+</g>
+<!-- proc~simplantequip -->
+<g id="module~~surfacegroundheatexchanger~~UsedByGraph_node2" class="node">
+<title>proc~simplantequip</title>
+<g id="a_module~~surfacegroundheatexchanger~~UsedByGraph_node2"><a xlink:href="../proc/simplantequip.html" xlink:title="SimPlantEquip">
+<polygon fill="#d9534f" stroke="#d9534f" points="272.3911,-22.2554 191.6502,-22.2554 191.6502,-.2446 272.3911,-.2446 272.3911,-22.2554"/>
+<text text-anchor="middle" x="232.0206" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">SimPlantEquip</text>
+</a>
+</g>
+</g>
+<!-- module~surfacegroundheatexchanger&#45;&gt;proc~simplantequip -->
+<g id="module~~surfacegroundheatexchanger~~UsedByGraph_edge1" class="edge">
+<title>module~surfacegroundheatexchanger&#45;&gt;proc~simplantequip</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M155.8103,-11.25C164.5308,-11.25 173.2359,-11.25 181.4794,-11.25"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="181.6408,-14.7501 191.6407,-11.25 181.6407,-7.7501 181.6408,-14.7501"/>
+</g>
+</g>
+</svg>
+</div>
+                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
+                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                      </div>
+                      <div class="modal-body">
+
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="484pt" height="31pt"
+ viewBox="0.00 0.00 483.85 30.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 26.5)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-26.5 479.8539,-26.5 479.8539,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-22.2554 0,-22.2554 0,-.2446 54,-.2446 54,-22.2554"/>
+<text text-anchor="middle" x="27" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="137.6205,-22.2554 72.3795,-22.2554 72.3795,-.2446 137.6205,-.2446 137.6205,-22.2554"/>
+<text text-anchor="middle" x="105" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="218.288,-22.2554 155.712,-22.2554 155.712,-.2446 218.288,-.2446 218.288,-22.2554"/>
+<text text-anchor="middle" x="187" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="290,-22.2554 236,-22.2554 236,-.2446 290,-.2446 290,-22.2554"/>
+<text text-anchor="middle" x="263" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="362,-22.2554 308,-22.2554 308,-.2446 362,-.2446 362,-22.2554"/>
+<text text-anchor="middle" x="335" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="475.7082,-22.2554 380.2918,-22.2554 380.2918,-.2446 475.7082,-.2446 475.7082,-22.2554"/>
+<text text-anchor="middle" x="428" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+
+    <p>Solid arrows point from a parent (sub)module to the submodule which is
+    descended from it. Dashed arrows point from a module being used to the
+    module or program unit using it. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+    <br>
+
+
+    <section class="visible-xs visible-sm hidden-md">
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-smallnum%7E2">SmallNum</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-stefboltzmann%7E2">StefBoltzmann</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-surfacehxheight">SurfaceHXHeight</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-blank%7E16">Blank</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-surfcond_ground">SurfCond_Ground</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-surfcond_exposed">SurfCond_Exposed</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-surfaceghe">SurfaceGHE</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-surfacegheqtf">SurfaceGHEQTF</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-surfaceghereport">SurfaceGHEReport</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-numofsurfaceghes">NumOfSurfaceGHEs</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-nosurfacegroundtempobjwarning">NoSurfaceGroundTempObjWarning</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-inletnodenum%7E32">InletNodeNum</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-outletnodenum%7E30">OutletNodeNum</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-constructionnum%7E4">ConstructionNum</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-toproughness%7E2">TopRoughness</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-btmroughness%7E2">BtmRoughness</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-inlettemp%7E24">InletTemp</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-outlettemp%7E27">OutletTemp</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-flowrate%7E7">FlowRate</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-topsurftemp">TopSurfTemp</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-btmsurftemp">BtmSurfTemp</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-topsurfflux">TopSurfFlux</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-btmsurfflux">BtmSurfFlux</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-sourceflux%7E2">SourceFlux</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-sourcetemp%7E3">SourceTemp</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-surfacearea%7E3">SurfaceArea</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-topthermabs%7E2">TopThermAbs</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-btmthermabs%7E2">BtmThermAbs</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-topsolarabs%7E2">TopSolarAbs</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-checkequipname%7E66">CheckEquipName</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-pastbeamsolarrad">PastBeamSolarRad</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-pastsolardircosvert">PastSolarDirCosVert</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-pastdifsolarrad">PastDifSolarRad</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-pastgroundtemp">PastGroundTemp</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-pastisrain">PastIsRain</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-pastissnow">PastIsSnow</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-pastoutbaropress">PastOutBaroPress</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-pastoutdrybulbtemp">PastOutDryBulbTemp</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-pastouthumrat">PastOutHumRat</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-pastoutairdensity">PastOutAirDensity</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-pastoutwetbulbtemp">PastOutWetBulbTemp</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-pastoutdewpointtemp">PastOutDewPointTemp</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-pastskytemp">PastSkyTemp</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-pastwindspeed">PastWindSpeed</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-pastcloudfraction">PastCloudFraction</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-qradsyssrcavg">QRadSysSrcAvg</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-lastsystimeelapsed%7E5">LastSysTimeElapsed</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#variable-lasttimestepsys%7E5">LastTimeStepSys</a>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#types-1">Derived Types</a></h3></div>
+  <div id="types-1" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#type-surfacegroundheatexchangerdata">SurfaceGroundHeatExchangerData</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#type-surfacegroundheatexchangerqtf">SurfaceGroundHeatExchangerQTF</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#type-surfacegroundheatexchngrreport">SurfaceGroundHeatExchngrReport</a>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#funcs-1">Functions</a></h3></div>
+  <div id="funcs-1" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#proc-calcsourceflux">CalcSourceFlux</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#proc-calchxeffectterm">CalcHXEffectTerm</a>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-1">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-1" class="panel-collapse collapse">
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#proc-simsurfacegroundheatexchanger">SimSurfaceGroundHeatExchanger</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#proc-getsurfacegroundheatexchanger">GetSurfaceGroundHeatExchanger</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#proc-initsurfacegroundheatexchanger">InitSurfaceGroundHeatExchanger</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#proc-calcsurfacegroundheatexchanger">CalcSurfaceGroundHeatExchanger</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#proc-calcbottomfluxcoefficents">CalcBottomFluxCoefficents</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#proc-calctopfluxcoefficents">CalcTopFluxCoefficents</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#proc-calcsourcetempcoefficents">CalcSourceTempCoefficents</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#proc-updatehistories">UpdateHistories</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#proc-calctopsurftemp">CalcTopSurfTemp</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#proc-calcbottomsurftemp">CalcBottomSurfTemp</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#proc-updatesurfacegroundheatexchngr">UpdateSurfaceGroundHeatExchngr</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html#proc-reportsurfacegroundheatexchngr">ReportSurfaceGroundHeatExchngr</a>
+
+    </div>
+  </div>
+</div>
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+
+    <section>
+    <h2>Variables</h2>
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-smallnum%7E2"></span>real(kind=r64),</td>
+
+  <td>private,</td>
+  <td>parameter</td><td>::</td>
+  <td><strong>SmallNum</strong></td><td> =</td><td>1.0d-30</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-stefboltzmann%7E2"></span>real(kind=r64),</td>
+
+  <td>private,</td>
+  <td>parameter</td><td>::</td>
+  <td><strong>StefBoltzmann</strong></td><td> =</td><td>5.6697d-08</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-surfacehxheight"></span>real(kind=r64),</td>
+
+  <td>private,</td>
+  <td>parameter</td><td>::</td>
+  <td><strong>SurfaceHXHeight</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-blank%7E16"></span>character(len=*),</td>
+
+  <td>private,</td>
+  <td>parameter</td><td>::</td>
+  <td><strong>Blank</strong></td><td> =</td><td>' '</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-surfcond_ground"></span>integer,</td>
+
+  <td>private,</td>
+  <td>parameter</td><td>::</td>
+  <td><strong>SurfCond_Ground</strong></td><td> =</td><td>1</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-surfcond_exposed"></span>integer,</td>
+
+  <td>private,</td>
+  <td>parameter</td><td>::</td>
+  <td><strong>SurfCond_Exposed</strong></td><td> =</td><td>2</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-surfaceghe"></span>type(<a href='../type/surfacegroundheatexchangerdata.html'>SurfaceGroundHeatExchangerData</a>),</td>
+
+  <td>private,</td>
+  <td>DIMENSION(:), ALLOCATABLE</td><td>::</td>
+  <td><strong>SurfaceGHE</strong></td><td></td><td></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-surfacegheqtf"></span>type(<a href='../type/surfacegroundheatexchangerqtf.html'>SurfaceGroundHeatExchangerQTF</a>),</td>
+
+  <td>private,</td>
+  <td>DIMENSION(:), ALLOCATABLE</td><td>::</td>
+  <td><strong>SurfaceGHEQTF</strong></td><td></td><td></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-surfaceghereport"></span>type(<a href='../type/surfacegroundheatexchngrreport.html'>SurfaceGroundHeatExchngrReport</a>),</td>
+
+  <td>private,</td>
+  <td>DIMENSION(:), ALLOCATABLE</td><td>::</td>
+  <td><strong>SurfaceGHEReport</strong></td><td></td><td></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-numofsurfaceghes"></span>integer,</td>
+
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>NumOfSurfaceGHEs</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-nosurfacegroundtempobjwarning"></span>logical,</td>
+
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>NoSurfaceGroundTempObjWarning</strong></td><td> =</td><td>.true.</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-inletnodenum%7E32"></span>integer,</td>
+
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>InletNodeNum</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-outletnodenum%7E30"></span>integer,</td>
+
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>OutletNodeNum</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-constructionnum%7E4"></span>integer,</td>
+
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>ConstructionNum</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-toproughness%7E2"></span>integer,</td>
+
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>TopRoughness</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-btmroughness%7E2"></span>integer,</td>
+
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>BtmRoughness</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-inlettemp%7E24"></span>real(kind=r64),</td>
+
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>InletTemp</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-outlettemp%7E27"></span>real(kind=r64),</td>
+
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>OutletTemp</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-flowrate%7E7"></span>real(kind=r64),</td>
+
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>FlowRate</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-topsurftemp"></span>real(kind=r64),</td>
+
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>TopSurfTemp</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-btmsurftemp"></span>real(kind=r64),</td>
+
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>BtmSurfTemp</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-topsurfflux"></span>real(kind=r64),</td>
+
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>TopSurfFlux</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-btmsurfflux"></span>real(kind=r64),</td>
+
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>BtmSurfFlux</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-sourceflux%7E2"></span>real(kind=r64),</td>
+
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>SourceFlux</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-sourcetemp%7E3"></span>real(kind=r64),</td>
+
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>SourceTemp</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-surfacearea%7E3"></span>real(kind=r64),</td>
+
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>SurfaceArea</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-topthermabs%7E2"></span>real(kind=r64),</td>
+
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>TopThermAbs</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-btmthermabs%7E2"></span>real(kind=r64),</td>
+
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>BtmThermAbs</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-topsolarabs%7E2"></span>real(kind=r64),</td>
+
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>TopSolarAbs</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-checkequipname%7E66"></span>logical,</td>
+
+  <td>private,</td>
+  <td>ALLOCATABLE, DIMENSION(:)</td><td>::</td>
+  <td><strong>CheckEquipName</strong></td><td></td><td></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-pastbeamsolarrad"></span>real(kind=r64),</td>
+
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>PastBeamSolarRad</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-pastsolardircosvert"></span>real(kind=r64),</td>
+
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>PastSolarDirCosVert</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-pastdifsolarrad"></span>real(kind=r64),</td>
+
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>PastDifSolarRad</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-pastgroundtemp"></span>real(kind=r64),</td>
+
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>PastGroundTemp</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-pastisrain"></span>logical,</td>
+
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>PastIsRain</strong></td><td> =</td><td>.false.</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-pastissnow"></span>logical,</td>
+
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>PastIsSnow</strong></td><td> =</td><td>.false.</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-pastoutbaropress"></span>real(kind=r64),</td>
+
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>PastOutBaroPress</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-pastoutdrybulbtemp"></span>real(kind=r64),</td>
+
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>PastOutDryBulbTemp</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-pastouthumrat"></span>real(kind=r64),</td>
+
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>PastOutHumRat</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-pastoutairdensity"></span>real(kind=r64),</td>
+
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>PastOutAirDensity</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-pastoutwetbulbtemp"></span>real(kind=r64),</td>
+
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>PastOutWetBulbTemp</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-pastoutdewpointtemp"></span>real(kind=r64),</td>
+
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>PastOutDewPointTemp</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-pastskytemp"></span>real(kind=r64),</td>
+
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>PastSkyTemp</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-pastwindspeed"></span>real(kind=r64),</td>
+
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>PastWindSpeed</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-pastcloudfraction"></span>real(kind=r64),</td>
+
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>PastCloudFraction</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-qradsyssrcavg"></span>real(kind=r64),</td>
+
+  <td>private,</td>
+  <td>ALLOCATABLE, DIMENSION(:)</td><td>::</td>
+  <td><strong>QRadSysSrcAvg</strong></td><td></td><td></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-lastsystimeelapsed%7E5"></span>real(kind=r64),</td>
+
+  <td>private,</td>
+  <td>ALLOCATABLE, DIMENSION(:)</td><td>::</td>
+  <td><strong>LastSysTimeElapsed</strong></td><td></td><td></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-lasttimestepsys%7E5"></span>real(kind=r64),</td>
+
+  <td>private,</td>
+  <td>ALLOCATABLE, DIMENSION(:)</td><td>::</td>
+  <td><strong>LastTimeStepSys</strong></td><td></td><td></td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+
+
+    <section>
+     <h2>Derived Types</h2>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="type-surfacegroundheatexchangerdata"></span><h3>type, private :: <a href='../type/surfacegroundheatexchangerdata.html'>SurfaceGroundHeatExchangerData</a>
+
+  </h3></div>
+  <div class="panel-body">
+
+
+     <h4>Components</h4>
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-name%7E255"></span>character(len=MaxNameLength),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>Name</strong></td><td> =</td><td>Blank</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-constructionname"></span>character(len=MaxNameLength),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ConstructionName</strong></td><td> =</td><td>Blank</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-inletnode%7E17"></span>character(len=MaxNameLength),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>InletNode</strong></td><td> =</td><td>Blank</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-outletnode%7E14"></span>character(len=MaxNameLength),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>OutletNode</strong></td><td> =</td><td>Blank</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-designmassflowrate%7E7"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>DesignMassFlowRate</strong></td><td> =</td><td>0.d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-tubediameter"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>TubeDiameter</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-tubespacing"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>TubeSpacing</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-surfacelength"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>SurfaceLength</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-surfacewidth"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>SurfaceWidth</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-topthermabs"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>TopThermAbs</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-topsolarabs"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>TopSolarAbs</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-btmthermabs"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>BtmThermAbs</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-lowersurfcond"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>LowerSurfCond</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-tubecircuits"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>TubeCircuits</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-constructionnum%7E2"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ConstructionNum</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-inletnodenum%7E17"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>InletNodeNum</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-outletnodenum%7E16"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>OutletNodeNum</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-toproughness"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>TopRoughness</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-btmroughness"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>BtmRoughness</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-frozenerrindex1"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>FrozenErrIndex1</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-frozenerrindex2"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>FrozenErrIndex2</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-converrindex1"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ConvErrIndex1</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-converrindex2"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ConvErrIndex2</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-converrindex3"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ConvErrIndex3</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-loopnum%7E34"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>LoopNum</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-loopsidenum%7E23"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>LoopSideNum</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-branchnum%7E34"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>BranchNum</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-compnum%7E38"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>CompNum</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+  </div>
+</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="type-surfacegroundheatexchangerqtf"></span><h3>type, private :: <a href='../type/surfacegroundheatexchangerqtf.html'>SurfaceGroundHeatExchangerQTF</a>
+
+  </h3></div>
+  <div class="panel-body">
+
+
+     <h4>Components</h4>
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-tsrcconstcoef"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>TsrcConstCoef</strong></td><td> =</td><td>0.0D0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-tsrcvarcoef"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>TsrcVarCoef</strong></td><td> =</td><td>0.0D0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-qbtmconstcoef"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>QbtmConstCoef</strong></td><td> =</td><td>0.0D0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-qbtmvarcoef"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>QbtmVarCoef</strong></td><td> =</td><td>0.0D0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-qtopconstcoef"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>QtopConstCoef</strong></td><td> =</td><td>0.0D0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-qtopvarcoef"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>QtopVarCoef</strong></td><td> =</td><td>0.0D0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-numctfterms%7E2"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>NumCTFTerms</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-ctfin"></span>real(kind=r64),</td>
+
+  <td>public,</td>
+  <td>DIMENSION(0:MaxCTFTerms-1)</td><td>::</td>
+  <td><strong>CTFin</strong></td><td> =</td><td>0.0D0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-ctfout"></span>real(kind=r64),</td>
+
+  <td>public,</td>
+  <td>DIMENSION(0:MaxCTFTerms-1)</td><td>::</td>
+  <td><strong>CTFout</strong></td><td> =</td><td>0.0D0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-ctfcross"></span>real(kind=r64),</td>
+
+  <td>public,</td>
+  <td>DIMENSION(0:MaxCTFTerms-1)</td><td>::</td>
+  <td><strong>CTFcross</strong></td><td> =</td><td>0.0D0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-ctfflux"></span>real(kind=r64),</td>
+
+  <td>public,</td>
+  <td>DIMENSION(0:MaxCTFTerms-1)</td><td>::</td>
+  <td><strong>CTFflux</strong></td><td> =</td><td>0.0D0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-ctfsourcein%7E2"></span>real(kind=r64),</td>
+
+  <td>public,</td>
+  <td>DIMENSION(0:MaxCTFTerms-1)</td><td>::</td>
+  <td><strong>CTFSourceIn</strong></td><td> =</td><td>0.0D0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-ctfsourceout%7E2"></span>real(kind=r64),</td>
+
+  <td>public,</td>
+  <td>DIMENSION(0:MaxCTFTerms-1)</td><td>::</td>
+  <td><strong>CTFSourceOut</strong></td><td> =</td><td>0.0D0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-ctftsourceout%7E2"></span>real(kind=r64),</td>
+
+  <td>public,</td>
+  <td>DIMENSION(0:MaxCTFTerms-1)</td><td>::</td>
+  <td><strong>CTFTSourceOut</strong></td><td> =</td><td>0.0D0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-ctftsourcein%7E2"></span>real(kind=r64),</td>
+
+  <td>public,</td>
+  <td>DIMENSION(0:MaxCTFTerms-1)</td><td>::</td>
+  <td><strong>CTFTSourceIn</strong></td><td> =</td><td>0.0D0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-ctftsourceq%7E2"></span>real(kind=r64),</td>
+
+  <td>public,</td>
+  <td>DIMENSION(0:MaxCTFTerms-1)</td><td>::</td>
+  <td><strong>CTFTSourceQ</strong></td><td> =</td><td>0.0D0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-tbtmhistory"></span>real(kind=r64),</td>
+
+  <td>public,</td>
+  <td>DIMENSION(0:MaxCTFTerms-1)</td><td>::</td>
+  <td><strong>TbtmHistory</strong></td><td> =</td><td>0.0D0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-ttophistory"></span>real(kind=r64),</td>
+
+  <td>public,</td>
+  <td>DIMENSION(0:MaxCTFTerms-1)</td><td>::</td>
+  <td><strong>TtopHistory</strong></td><td> =</td><td>0.0D0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-tsrchistory"></span>real(kind=r64),</td>
+
+  <td>public,</td>
+  <td>DIMENSION(0:MaxCTFTerms-1)</td><td>::</td>
+  <td><strong>TsrcHistory</strong></td><td> =</td><td>0.0D0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-qbtmhistory"></span>real(kind=r64),</td>
+
+  <td>public,</td>
+  <td>DIMENSION(0:MaxCTFTerms-1)</td><td>::</td>
+  <td><strong>QbtmHistory</strong></td><td> =</td><td>0.0D0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-qtophistory"></span>real(kind=r64),</td>
+
+  <td>public,</td>
+  <td>DIMENSION(0:MaxCTFTerms-1)</td><td>::</td>
+  <td><strong>QtopHistory</strong></td><td> =</td><td>0.0D0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-qsrchistory"></span>real(kind=r64),</td>
+
+  <td>public,</td>
+  <td>DIMENSION(0:MaxCTFTerms-1)</td><td>::</td>
+  <td><strong>QsrcHistory</strong></td><td> =</td><td>0.0D0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-qsrc"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>Qsrc</strong></td><td> =</td><td>0.0D0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-qsrcavg"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>QsrcAvg</strong></td><td> =</td><td>0.0D0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-lastqsrc"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>LastQSrc</strong></td><td> =</td><td>0.0D0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-lastsystimeelapsed"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>LastSysTimeElapsed</strong></td><td> =</td><td>0.0D0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-lasttimestepsys"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>LastTimeStepSys</strong></td><td> =</td><td>0.0D0</td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+  </div>
+</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="type-surfacegroundheatexchngrreport"></span><h3>type, private :: <a href='../type/surfacegroundheatexchngrreport.html'>SurfaceGroundHeatExchngrReport</a>
+
+  </h3></div>
+  <div class="panel-body">
+
+
+     <h4>Components</h4>
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-inlettemp%7E11"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>InletTemp</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-outlettemp%7E12"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>OutletTemp</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-massflowrate%7E14"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>MassFlowRate</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-topsurfacetemp"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>TopSurfaceTemp</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-btmsurfacetemp"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>BtmSurfaceTemp</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-topsurfaceflux"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>TopSurfaceFlux</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-btmsurfaceflux"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>BtmSurfaceFlux</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-heattransferrate%7E3"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>HeatTransferRate</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-surfheattransferrate"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>SurfHeatTransferRate</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-energy%7E16"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>Energy</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-surfenergy"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>SurfEnergy</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-sourcetemp"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>SourceTemp</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+  </div>
+</div>
+
+
+    </section>
+	<br>
+
+
+    <section>
+    <h2>Functions</h2>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-calcsourceflux"></span><h3>
+private function <a href='../proc/calcsourceflux.html'>CalcSourceFlux</a>(SurfaceGHENum)
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>SurfaceGHENum</strong></td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+     <h4>Return Value <small>real(kind=r64)
+  </small></h4>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-calchxeffectterm"></span><h3>
+private function <a href='../proc/calchxeffectterm.html'>CalcHXEffectTerm</a>(SurfaceGHENum, Temperature, WaterMassFlow)
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>SurfaceGHENum</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>Temperature</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>WaterMassFlow</strong></td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+     <h4>Return Value <small>real(kind=r64)
+  </small></h4>
+
+
+  </div>
+  </div>
+
+
+    </section>
+    <br>
+
+
+    <section>
+    <h2>Subroutines</h2>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-simsurfacegroundheatexchanger"></span><h3>
+public subroutine <a href='../proc/simsurfacegroundheatexchanger.html'>SimSurfaceGroundHeatExchanger</a>(CompName, CompIndex, FirstHVACIteration, RunFlag, InitLoopEquip)
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>CompName</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(inout)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>CompIndex</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>FirstHVACIteration</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>RunFlag</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>logical</td>
+  <td></td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>InitLoopEquip</strong></td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-getsurfacegroundheatexchanger"></span><h3>
+private subroutine <a href='../proc/getsurfacegroundheatexchanger.html'>GetSurfaceGroundHeatExchanger</a>()
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+      <em>None</em>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-initsurfacegroundheatexchanger"></span><h3>
+private subroutine <a href='../proc/initsurfacegroundheatexchanger.html'>InitSurfaceGroundHeatExchanger</a>(SurfaceGHENum, RunFlag)
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>SurfaceGHENum</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>RunFlag</strong></td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-calcsurfacegroundheatexchanger"></span><h3>
+private subroutine <a href='../proc/calcsurfacegroundheatexchanger.html'>CalcSurfaceGroundHeatExchanger</a>(SurfaceGHENum, FirstHVACIteration)
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>SurfaceGHENum</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>FirstHVACIteration</strong></td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-calcbottomfluxcoefficents"></span><h3>
+private subroutine <a href='../proc/calcbottomfluxcoefficents.html'>CalcBottomFluxCoefficents</a>(SurfaceGHENum, Tbottom, Ttop)
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>SurfaceGHENum</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>Tbottom</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>Ttop</strong></td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-calctopfluxcoefficents"></span><h3>
+private subroutine <a href='../proc/calctopfluxcoefficents.html'>CalcTopFluxCoefficents</a>(SurfaceGHENum, Tbottom, Ttop)
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>SurfaceGHENum</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>Tbottom</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>Ttop</strong></td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-calcsourcetempcoefficents"></span><h3>
+private subroutine <a href='../proc/calcsourcetempcoefficents.html'>CalcSourceTempCoefficents</a>(SurfaceGHENum, Tbottom, Ttop)
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>SurfaceGHENum</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>Tbottom</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>Ttop</strong></td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-updatehistories"></span><h3>
+private subroutine <a href='../proc/updatehistories.html'>UpdateHistories</a>(SurfaceGHENum, TopFlux, BottomFlux, SourceFlux, SourceTemp)
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>SurfaceGHENum</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>TopFlux</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>BottomFlux</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>SourceFlux</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>SourceTemp</strong></td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-calctopsurftemp"></span><h3>
+private subroutine <a href='../proc/calctopsurftemp.html'>CalcTopSurfTemp</a>(SurfaceNum, FluxTop, TempTop, ThisDrybulb, ThisWetbulb, ThisSkyTemp, ThisBeamSolarRad, ThisDifSolarRad, ThisSolarDirCosVert, ThisWindSpeed, ThisIsRain, ThisIsSnow)
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>SurfaceNum</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>FluxTop</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(out)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>TempTop</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>ThisDrybulb</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>ThisWetbulb</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>ThisSkyTemp</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>ThisBeamSolarRad</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>ThisDifSolarRad</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>ThisSolarDirCosVert</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>ThisWindSpeed</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>ThisIsRain</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>ThisIsSnow</strong></td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-calcbottomsurftemp"></span><h3>
+private subroutine <a href='../proc/calcbottomsurftemp.html'>CalcBottomSurfTemp</a>(SurfaceNum, FluxBtm, TempBtm, ThisDrybulb, ThisWindSpeed, ThisGroundTemp)
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>SurfaceNum</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>FluxBtm</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(out)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>TempBtm</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>ThisDrybulb</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>ThisWindSpeed</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>ThisGroundTemp</strong></td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-updatesurfacegroundheatexchngr"></span><h3>
+private subroutine <a href='../proc/updatesurfacegroundheatexchngr.html'>UpdateSurfaceGroundHeatExchngr</a>(SurfaceGHENum)
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>SurfaceGHENum</strong></td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-reportsurfacegroundheatexchngr"></span><h3>
+private subroutine <a href='../proc/reportsurfacegroundheatexchngr.html'>ReportSurfaceGroundHeatExchngr</a>(SurfaceGHENum)
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>SurfaceGHENum</strong></td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+  </div>
+  </div>
+
+
+    </section>
+    <br>
+
+
+    </div>
+  </div>
+
+  <section class="visible-xs visible-sm hidden-md">
+    <hr>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allmods-1">All Modules</a></h3></div>
+  <div id="allmods-1" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../module/airflownetworkbalancemanager.html">AirflowNetworkBalanceManager</a>
+
+      <a class="list-group-item" href="../module/airflownetworksolver.html">AirflowNetworkSolver</a>
+
+      <a class="list-group-item" href="../module/baseboardelectric.html">BaseboardElectric</a>
+
+      <a class="list-group-item" href="../module/baseboardradiator.html">BaseboardRadiator</a>
+
+      <a class="list-group-item" href="../module/boilers.html">Boilers</a>
+
+      <a class="list-group-item" href="../module/boilersteam.html">BoilerSteam</a>
+
+      <a class="list-group-item" href="../module/branchinputmanager.html">BranchInputManager</a>
+
+      <a class="list-group-item" href="../module/branchnodeconnections.html">BranchNodeConnections</a>
+
+      <a class="list-group-item" href="../module/chillerabsorption.html">ChillerAbsorption</a>
+
+      <a class="list-group-item" href="../module/chillerelectriceir.html">ChillerElectricEIR</a>
+
+      <a class="list-group-item" href="../module/chillerexhaustabsorption.html">ChillerExhaustAbsorption</a>
+
+      <a class="list-group-item" href="../module/chillergasabsorption.html">ChillerGasAbsorption</a>
+
+      <a class="list-group-item" href="../module/chillerindirectabsorption.html">ChillerIndirectAbsorption</a>
+
+      <a class="list-group-item" href="../module/chillerreformulatedeir.html">ChillerReformulatedEIR</a>
+
+      <a class="list-group-item" href="../module/condenserlooptowers.html">CondenserLoopTowers</a>
+
+      <a class="list-group-item" href="../module/conductiontransferfunctioncalc.html">ConductionTransferFunctionCalc</a>
+
+      <a class="list-group-item" href="../module/convectioncoefficients.html">ConvectionCoefficients</a>
+
+      <a class="list-group-item" href="../module/cooltower.html">CoolTower</a>
+
+      <a class="list-group-item" href="../module/costestimatemanager.html">CostEstimateManager</a>
+
+      <a class="list-group-item" href="../module/crossventmgr.html">CrossVentMgr</a>
+
+      <a class="list-group-item" href="../module/ctelectricgenerator.html">CTElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/curvemanager.html">CurveManager</a>
+
+      <a class="list-group-item" href="../module/dataairflownetwork.html">DataAirflowNetwork</a>
+
+      <a class="list-group-item" href="../module/dataairloop.html">DataAirLoop</a>
+
+      <a class="list-group-item" href="../module/dataairsystems.html">DataAirSystems</a>
+
+      <a class="list-group-item" href="../module/databranchairloopplant.html">DataBranchAirLoopPlant</a>
+
+      <a class="list-group-item" href="../module/databranchnodeconnections.html">DataBranchNodeConnections</a>
+
+      <a class="list-group-item" href="../module/databsdfwindow.html">DataBSDFWindow</a>
+
+      <a class="list-group-item" href="../module/datacomplexfenestration.html">DataComplexFenestration</a>
+
+      <a class="list-group-item" href="../module/datacontaminantbalance.html">DataContaminantBalance</a>
+
+      <a class="list-group-item" href="../module/dataconvergparams.html">DataConvergParams</a>
+
+      <a class="list-group-item" href="../module/dataconversions.html">DataConversions</a>
+
+      <a class="list-group-item" href="../module/datacostestimate.html">DataCostEstimate</a>
+
+      <a class="list-group-item" href="../module/datadaylighting.html">DataDaylighting</a>
+
+      <a class="list-group-item" href="../module/datadaylightingdevices.html">DataDaylightingDevices</a>
+
+      <a class="list-group-item" href="../module/datadefineequip.html">DataDefineEquip</a>
+
+      <a class="list-group-item" href="../module/datadelight.html">DataDElight</a>
+
+      <a class="list-group-item" href="../module/dataenvironment.html">DataEnvironment</a>
+
+      <a class="list-group-item" href="../module/dataerrortracking.html">DataErrorTracking</a>
+
+      <a class="list-group-item" href="../module/datagenerators.html">DataGenerators</a>
+
+      <a class="list-group-item" href="../module/dataglobalconstants.html">DataGlobalConstants</a>
+
+      <a class="list-group-item" href="../module/dataglobals.html">DataGlobals</a>
+
+      <a class="list-group-item" href="../module/dataheatbalance.html">DataHeatBalance</a>
+
+      <a class="list-group-item" href="../module/dataheatbalfansys.html">DataHeatBalFanSys</a>
+
+      <a class="list-group-item" href="../module/dataheatbalsurface.html">DataHeatBalSurface</a>
+
+      <a class="list-group-item" href="../module/datahvaccontrollers.html">DataHVACControllers</a>
+
+      <a class="list-group-item" href="../module/datahvacglobals.html">DataHVACGlobals</a>
+
+      <a class="list-group-item" href="../module/datainterfaces.html">DataInterfaces</a>
+
+      <a class="list-group-item" href="../module/dataipshortcuts.html">DataIPShortCuts</a>
+
+      <a class="list-group-item" href="../module/dataloopnode.html">DataLoopNode</a>
+
+      <a class="list-group-item" href="../module/datamoisturebalance.html">DataMoistureBalance</a>
+
+      <a class="list-group-item" href="../module/datamoisturebalanceempd.html">DataMoistureBalanceEMPD</a>
+
+      <a class="list-group-item" href="../module/dataoutputs.html">DataOutputs</a>
+
+      <a class="list-group-item" href="../module/dataphotovoltaics.html">DataPhotovoltaics</a>
+
+      <a class="list-group-item" href="../module/dataplant.html">DataPlant</a>
+
+      <a class="list-group-item" href="../module/dataplantpipingsystems.html">DataPlantPipingSystems</a>
+
+      <a class="list-group-item" href="../module/dataprecisionglobals.html">DataPrecisionGlobals</a>
+
+      <a class="list-group-item" href="../module/datareportingflags.html">DataReportingFlags</a>
+
+      <a class="list-group-item" href="../module/dataroomairmodel.html">DataRoomAirModel</a>
+
+      <a class="list-group-item" href="../module/datarootfinder.html">DataRootFinder</a>
+
+      <a class="list-group-item" href="../module/dataruntimelanguage.html">DataRuntimeLanguage</a>
+
+      <a class="list-group-item" href="../module/datashadowingcombinations.html">DataShadowingCombinations</a>
+
+      <a class="list-group-item" href="../module/datasizing.html">DataSizing</a>
+
+      <a class="list-group-item" href="../module/datastringglobals.html">DataStringGlobals</a>
+
+      <a class="list-group-item" href="../module/datasurfacecolors.html">DataSurfaceColors</a>
+
+      <a class="list-group-item" href="../module/datasurfacelists.html">DataSurfaceLists</a>
+
+      <a class="list-group-item" href="../module/datasurfaces.html">DataSurfaces</a>
+
+      <a class="list-group-item" href="../module/datasystemvariables.html">DataSystemVariables</a>
+
+      <a class="list-group-item" href="../module/datatimings.html">DataTimings</a>
+
+      <a class="list-group-item" href="../module/dataucsdshareddata.html">DataUCSDSharedData</a>
+
+      <a class="list-group-item" href="../module/datavectortypes.html">DataVectorTypes</a>
+
+      <a class="list-group-item" href="../module/dataviewfactorinformation.html">DataViewFactorInformation</a>
+
+      <a class="list-group-item" href="../module/datawater.html">DataWater</a>
+
+      <a class="list-group-item" href="../module/datawindowequivalentlayer.html">DataWindowEquivalentLayer</a>
+
+      <a class="list-group-item" href="../module/datazonecontrols.html">DataZoneControls</a>
+
+      <a class="list-group-item" href="../module/datazoneenergydemands.html">DataZoneEnergyDemands</a>
+
+      <a class="list-group-item" href="../module/datazoneequipment.html">DataZoneEquipment</a>
+
+      <a class="list-group-item" href="../module/daylightingdevices.html">DaylightingDevices</a>
+
+      <a class="list-group-item" href="../module/daylightingmanager.html">DaylightingManager</a>
+
+      <a class="list-group-item" href="../module/delightmanagerf%7E2.html">DELIGHTMANAGERF</a>
+
+      <a class="list-group-item" href="../module/delightmanagerf.html">DELIGHTMANAGERF</a>
+
+      <a class="list-group-item" href="../module/demandmanager.html">DemandManager</a>
+
+      <a class="list-group-item" href="../module/desiccantdehumidifiers.html">DesiccantDehumidifiers</a>
+
+      <a class="list-group-item" href="../module/directairmanager.html">DirectAirManager</a>
+
+      <a class="list-group-item" href="../module/displacementventmgr.html">DisplacementVentMgr</a>
+
+      <a class="list-group-item" href="../module/dualduct.html">DualDuct</a>
+
+      <a class="list-group-item" href="../module/dxcoils.html">DXCoils</a>
+
+      <a class="list-group-item" href="../module/dxfearclipping.html">DXFEarClipping</a>
+
+      <a class="list-group-item" href="../module/earthtube.html">EarthTube</a>
+
+      <a class="list-group-item" href="../module/economiclifecyclecost.html">EconomicLifeCycleCost</a>
+
+      <a class="list-group-item" href="../module/economictariff.html">EconomicTariff</a>
+
+      <a class="list-group-item" href="../module/ecoroofmanager.html">EcoRoofManager</a>
+
+      <a class="list-group-item" href="../module/electricbaseboardradiator.html">ElectricBaseboardRadiator</a>
+
+      <a class="list-group-item" href="../module/emsmanager.html">EMSManager</a>
+
+      <a class="list-group-item" href="../module/evaporativecoolers.html">EvaporativeCoolers</a>
+
+      <a class="list-group-item" href="../module/evaporativefluidcoolers.html">EvaporativeFluidCoolers</a>
+
+      <a class="list-group-item" href="../module/exteriorenergyuse.html">ExteriorEnergyUse</a>
+
+      <a class="list-group-item" href="../module/externalinterface.html">ExternalInterface</a>
+
+      <a class="list-group-item" href="../module/fancoilunits.html">FanCoilUnits</a>
+
+      <a class="list-group-item" href="../module/fans.html">Fans</a>
+
+      <a class="list-group-item" href="../module/faultsmanager.html">FaultsManager</a>
+
+      <a class="list-group-item" href="../module/fluidcoolers.html">FluidCoolers</a>
+
+      <a class="list-group-item" href="../module/fluidproperties.html">FluidProperties</a>
+
+      <a class="list-group-item" href="../module/fuelcellelectricgenerator.html">FuelCellElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/furnaces.html">Furnaces</a>
+
+      <a class="list-group-item" href="../module/general.html">General</a>
+
+      <a class="list-group-item" href="../module/generatordynamicsmanager.html">GeneratorDynamicsManager</a>
+
+      <a class="list-group-item" href="../module/generatorfuelsupply.html">GeneratorFuelSupply</a>
+
+      <a class="list-group-item" href="../module/globalnames.html">GlobalNames</a>
+
+      <a class="list-group-item" href="../module/groundheatexchangers.html">GroundHeatExchangers</a>
+
+      <a class="list-group-item" href="../module/heatbalanceairmanager.html">HeatBalanceAirManager</a>
+
+      <a class="list-group-item" href="../module/heatbalancehamtmanager.html">HeatBalanceHAMTManager</a>
+
+      <a class="list-group-item" href="../module/heatbalanceintradexchange.html">HeatBalanceIntRadExchange</a>
+
+      <a class="list-group-item" href="../module/heatbalancemanager.html">HeatBalanceManager</a>
+
+      <a class="list-group-item" href="../module/heatbalancemovableinsulation.html">HeatBalanceMovableInsulation</a>
+
+      <a class="list-group-item" href="../module/heatbalancesurfacemanager.html">HeatBalanceSurfaceManager</a>
+
+      <a class="list-group-item" href="../module/heatbalfinitediffmanager.html">HeatBalFiniteDiffManager</a>
+
+      <a class="list-group-item" href="../module/heatingcoils.html">HeatingCoils</a>
+
+      <a class="list-group-item" href="../module/heatpumpwatertowatercooling.html">HeatPumpWaterToWaterCOOLING</a>
+
+      <a class="list-group-item" href="../module/heatpumpwatertowaterheating.html">HeatPumpWaterToWaterHEATING</a>
+
+      <a class="list-group-item" href="../module/heatpumpwatertowatersimple.html">HeatPumpWaterToWaterSimple</a>
+
+      <a class="list-group-item" href="../module/heatrecovery.html">HeatRecovery</a>
+
+      <a class="list-group-item" href="../module/hightempradiantsystem.html">HighTempRadiantSystem</a>
+
+      <a class="list-group-item" href="../module/humidifiers.html">Humidifiers</a>
+
+      <a class="list-group-item" href="../module/hvaccontrollers.html">HVACControllers</a>
+
+      <a class="list-group-item" href="../module/hvaccooledbeam.html">HVACCooledBeam</a>
+
+      <a class="list-group-item" href="../module/hvacduct.html">HVACDuct</a>
+
+      <a class="list-group-item" href="../module/hvacdxheatpumpsystem.html">HVACDXHeatPumpSystem</a>
+
+      <a class="list-group-item" href="../module/hvacdxsystem.html">HVACDXSystem</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html">HVACHXAssistedCoolingCoil</a>
+
+      <a class="list-group-item" href="../module/hvacinterfacemanager.html">HVACInterfaceManager</a>
+
+      <a class="list-group-item" href="../module/hvacmanager.html">HVACManager</a>
+
+      <a class="list-group-item" href="../module/hvacmultispeedheatpump.html">HVACMultiSpeedHeatPump</a>
+
+      <a class="list-group-item" href="../module/hvacsingleductinduc.html">HVACSingleDuctInduc</a>
+
+      <a class="list-group-item" href="../module/hvacstandaloneerv.html">HVACStandAloneERV</a>
+
+      <a class="list-group-item" href="../module/hvacunitarybypassvav.html">HVACUnitaryBypassVAV</a>
+
+      <a class="list-group-item" href="../module/hvacunitarysystem.html">HVACUnitarySystem</a>
+
+      <a class="list-group-item" href="../module/hvacvariablerefrigerantflow.html">HVACVariableRefrigerantFlow</a>
+
+      <a class="list-group-item" href="../module/hwbaseboardradiator.html">HWBaseboardRadiator</a>
+
+      <a class="list-group-item" href="../module/icengineelectricgenerator.html">ICEngineElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/icethermalstorage.html">IceThermalStorage</a>
+
+      <a class="list-group-item" href="../module/inputprocessor.html">InputProcessor</a>
+
+      <a class="list-group-item" href="../module/internalheatgains.html">InternalHeatGains</a>
+
+      <a class="list-group-item" href="../module/iso_c_function_binding.html">ISO_C_FUNCTION_BINDING</a>
+
+      <a class="list-group-item" href="../module/iso_c_function_binding%7E2.html">ISO_C_FUNCTION_BINDING</a>
+
+      <a class="list-group-item" href="../module/lowtempradiantsystem.html">LowTempRadiantSystem</a>
+
+      <a class="list-group-item" href="../module/manageelectricpower.html">ManageElectricPower</a>
+
+      <a class="list-group-item" href="../module/matrixdatamanager.html">MatrixDataManager</a>
+
+      <a class="list-group-item" href="../module/microchpelectricgenerator.html">MicroCHPElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/microturbineelectricgenerator.html">MicroturbineElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/mixedair.html">MixedAir</a>
+
+      <a class="list-group-item" href="../module/mixercomponent.html">MixerComponent</a>
+
+      <a class="list-group-item" href="../module/moisturebalanceempdmanager.html">MoistureBalanceEMPDManager</a>
+
+      <a class="list-group-item" href="../module/mundtsimmgr.html">MundtSimMgr</a>
+
+      <a class="list-group-item" href="../module/nodeinputmanager.html">NodeInputManager</a>
+
+      <a class="list-group-item" href="../module/nonzoneequipmentmanager.html">NonZoneEquipmentManager</a>
+
+      <a class="list-group-item" href="../module/outairnodemanager.html">OutAirNodeManager</a>
+
+      <a class="list-group-item" href="../module/outdoorairunit.html">OutdoorAirUnit</a>
+
+      <a class="list-group-item" href="../module/outputprocessor.html">OutputProcessor</a>
+
+      <a class="list-group-item" href="../module/outputreportpredefined.html">OutputReportPredefined</a>
+
+      <a class="list-group-item" href="../module/outputreporttabular.html">OutputReportTabular</a>
+
+      <a class="list-group-item" href="../module/outsideenergysources.html">OutsideEnergySources</a>
+
+      <a class="list-group-item" href="../module/packagedterminalheatpump.html">PackagedTerminalHeatPump</a>
+
+      <a class="list-group-item" href="../module/packagedthermalstoragecoil.html">PackagedThermalStorageCoil</a>
+
+      <a class="list-group-item" href="../module/photovoltaics.html">Photovoltaics</a>
+
+      <a class="list-group-item" href="../module/photovoltaicthermalcollectors.html">PhotovoltaicThermalCollectors</a>
+
+      <a class="list-group-item" href="../module/pipeheattransfer.html">PipeHeatTransfer</a>
+
+      <a class="list-group-item" href="../module/pipes.html">Pipes</a>
+
+      <a class="list-group-item" href="../module/plantcentralgshp.html">PlantCentralGSHP</a>
+
+      <a class="list-group-item" href="../module/plantchillers.html">PlantChillers</a>
+
+      <a class="list-group-item" href="../module/plantcomponenttemperaturesources.html">PlantComponentTemperatureSources</a>
+
+      <a class="list-group-item" href="../module/plantcondloopoperation.html">PlantCondLoopOperation</a>
+
+      <a class="list-group-item" href="../module/plantheatexchangerfluidtofluid.html">PlantHeatExchangerFluidToFluid</a>
+
+      <a class="list-group-item" href="../module/plantloadprofile.html">PlantLoadProfile</a>
+
+      <a class="list-group-item" href="../module/plantloopequip.html">PlantLoopEquip</a>
+
+      <a class="list-group-item" href="../module/plantloopsolver.html">PlantLoopSolver</a>
+
+      <a class="list-group-item" href="../module/plantmanager.html">PlantManager</a>
+
+      <a class="list-group-item" href="../module/plantpipingsystemsmanager.html">PlantPipingSystemsManager</a>
+
+      <a class="list-group-item" href="../module/plantpressuresystem.html">PlantPressureSystem</a>
+
+      <a class="list-group-item" href="../module/plantutilities.html">PlantUtilities</a>
+
+      <a class="list-group-item" href="../module/plantvalves.html">PlantValves</a>
+
+      <a class="list-group-item" href="../module/pollutionmodule.html">PollutionModule</a>
+
+      <a class="list-group-item" href="../module/pondgroundheatexchanger.html">PondGroundHeatExchanger</a>
+
+      <a class="list-group-item" href="../module/poweredinductionunits.html">PoweredInductionUnits</a>
+
+      <a class="list-group-item" href="../module/psychrometrics.html">Psychrometrics</a>
+
+      <a class="list-group-item" href="../module/pumps.html">Pumps</a>
+
+      <a class="list-group-item" href="../module/purchasedairmanager.html">PurchasedAirManager</a>
+
+      <a class="list-group-item" href="../module/refrigeratedcase.html">RefrigeratedCase</a>
+
+      <a class="list-group-item" href="../module/reportsizingmanager.html">ReportSizingManager</a>
+
+      <a class="list-group-item" href="../module/returnairpathmanager.html">ReturnAirPathManager</a>
+
+      <a class="list-group-item" href="../module/roomairmodelmanager.html">RoomAirModelManager</a>
+
+      <a class="list-group-item" href="../module/roomairmodelusertemppattern.html">RoomAirModelUserTempPattern</a>
+
+      <a class="list-group-item" href="../module/rootfinder.html">RootFinder</a>
+
+      <a class="list-group-item" href="../module/runtimelanguageprocessor.html">RuntimeLanguageProcessor</a>
+
+      <a class="list-group-item" href="../module/schedulemanager.html">ScheduleManager</a>
+
+      <a class="list-group-item" href="../module/setpointmanager.html">SetPointManager</a>
+
+      <a class="list-group-item" href="../module/simairservingzones.html">SimAirServingZones</a>
+
+      <a class="list-group-item" href="../module/simulationmanager.html">SimulationManager</a>
+
+      <a class="list-group-item" href="../module/singleduct.html">SingleDuct</a>
+
+      <a class="list-group-item" href="../module/sizingmanager.html">SizingManager</a>
+
+      <a class="list-group-item" href="../module/solarcollectors.html">SolarCollectors</a>
+
+      <a class="list-group-item" href="../module/solarreflectionmanager.html">SolarReflectionManager</a>
+
+      <a class="list-group-item" href="../module/solarshading.html">SolarShading</a>
+
+      <a class="list-group-item" href="../module/sortandstringutilities.html">SortAndStringUtilities</a>
+
+      <a class="list-group-item" href="../module/splittercomponent.html">SplitterComponent</a>
+
+      <a class="list-group-item" href="../module/sqliteprocedures%7E2.html">SQLiteProcedures</a>
+
+      <a class="list-group-item" href="../module/sqliteprocedures.html">SQLiteProcedures</a>
+
+      <a class="list-group-item" href="../module/standardratings.html">StandardRatings</a>
+
+      <a class="list-group-item" href="../module/steambaseboardradiator.html">SteamBaseboardRadiator</a>
+
+      <a class="list-group-item" href="../module/steamcoils.html">SteamCoils</a>
+
+      <a class="list-group-item" href="../module/surfacegeometry.html">SurfaceGeometry</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html">SurfaceGroundHeatExchanger</a>
+
+      <a class="list-group-item" href="../module/systemavailabilitymanager.html">SystemAvailabilityManager</a>
+
+      <a class="list-group-item" href="../module/systemreports.html">SystemReports</a>
+
+      <a class="list-group-item" href="../module/tarcogargs.html">TARCOGArgs</a>
+
+      <a class="list-group-item" href="../module/tarcogcommon.html">TARCOGCommon</a>
+
+      <a class="list-group-item" href="../module/tarcogdeflection.html">TARCOGDeflection</a>
+
+      <a class="list-group-item" href="../module/tarcoggasses90.html">TARCOGGasses90</a>
+
+      <a class="list-group-item" href="../module/tarcoggassesparams.html">TARCOGGassesParams</a>
+
+      <a class="list-group-item" href="../module/tarcogmain.html">TARCOGMain</a>
+
+      <a class="list-group-item" href="../module/tarcogoutput.html">TARCOGOutput</a>
+
+      <a class="list-group-item" href="../module/tarcogparams.html">TARCOGParams</a>
+
+      <a class="list-group-item" href="../module/tarcogshading.html">TarcogShading</a>
+
+      <a class="list-group-item" href="../module/thermalchimney.html">ThermalChimney</a>
+
+      <a class="list-group-item" href="../module/thermalcomfort.html">ThermalComfort</a>
+
+      <a class="list-group-item" href="../module/thermalen673calc.html">ThermalEN673Calc</a>
+
+      <a class="list-group-item" href="../module/thermaliso15099calc.html">ThermalISO15099Calc</a>
+
+      <a class="list-group-item" href="../module/transpiredcollector.html">TranspiredCollector</a>
+
+      <a class="list-group-item" href="../module/ufadmanager.html">UFADManager</a>
+
+      <a class="list-group-item" href="../module/unitheater.html">UnitHeater</a>
+
+      <a class="list-group-item" href="../module/unitventilator.html">UnitVentilator</a>
+
+      <a class="list-group-item" href="../module/userdefinedcomponents.html">UserDefinedComponents</a>
+
+      <a class="list-group-item" href="../module/variablespeedcoils.html">VariableSpeedCoils</a>
+
+      <a class="list-group-item" href="../module/vectors.html">vectors</a>
+
+      <a class="list-group-item" href="../module/ventilatedslab.html">VentilatedSlab</a>
+
+      <a class="list-group-item" href="../module/watercoils.html">WaterCoils</a>
+
+      <a class="list-group-item" href="../module/watermanager.html">WaterManager</a>
+
+      <a class="list-group-item" href="../module/waterthermaltanks.html">WaterThermalTanks</a>
+
+      <a class="list-group-item" href="../module/watertoairheatpump.html">WatertoAirHeatPump</a>
+
+      <a class="list-group-item" href="../module/watertoairheatpumpsimple.html">WatertoAirHeatPumpSimple</a>
+
+      <a class="list-group-item" href="../module/wateruse.html">WaterUse</a>
+
+      <a class="list-group-item" href="../module/weathermanager.html">WeatherManager</a>
+
+      <a class="list-group-item" href="../module/windowac.html">WindowAC</a>
+
+      <a class="list-group-item" href="../module/windowcomplexmanager.html">WindowComplexManager</a>
+
+      <a class="list-group-item" href="../module/windowequivalentlayer.html">WindowEquivalentLayer</a>
+
+      <a class="list-group-item" href="../module/windowmanager.html">WindowManager</a>
+
+      <a class="list-group-item" href="../module/windturbine.html">WindTurbine</a>
+
+      <a class="list-group-item" href="../module/zoneairloopequipmentmanager.html">ZoneAirLoopEquipmentManager</a>
+
+      <a class="list-group-item" href="../module/zonecontaminantpredictorcorrector.html">ZoneContaminantPredictorCorrector</a>
+
+      <a class="list-group-item" href="../module/zonedehumidifier.html">ZoneDehumidifier</a>
+
+      <a class="list-group-item" href="../module/zoneequipmentmanager.html">ZoneEquipmentManager</a>
+
+      <a class="list-group-item" href="../module/zoneplenum.html">ZonePlenum</a>
+
+      <a class="list-group-item" href="../module/zonetemppredictorcorrector.html">ZoneTempPredictorCorrector</a>
+
+    </div>
+  </div>
+</div>
+
+
+  </section>
+
+    <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2017 </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> EnergyPlusFortran</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js'],
+        'HTML-CSS': {
+           styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#000000 ! important'} }
+        }
+      });
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>

@@ -1,0 +1,2658 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	 <meta name="description" content="">
+
+    <meta name="author" content="dmey (forked from NREL)" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>DataDaylightingDevices &ndash; EnergyPlusFortran</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">EnergyPlusFortran <small>8.1.0.009</small></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+		 aria-expanded="false">Contents <span class="caret"></span></a>
+	      <ul class="dropdown-menu">
+
+            <li><a href="../lists/files.html">Source Files</a></li>
+
+
+            <li><a href="../lists/modules.html">Modules</a></li>
+
+
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+
+
+            <li><a href="../lists/types.html">Derived Types</a></li>
+
+
+            <li><a href="../program/energyplus.html">Program</a></li>
+
+            </ul>
+            </li>
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/energyplus.html">Program</a></li>
+
+          </ul>
+
+
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+
+  <div class="row">
+    <h1>DataDaylightingDevices
+    <small>Module</small>
+
+    </h1>
+
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+	  data-placement="bottom" data-html="true"
+	  title=" 0.0% of total for modules and submodules.">55 statements</a>
+     </li>
+
+
+    <li><i class="fa fa-code"></i><a href="../src/DataDaylightingDevices.f90"> Source File</a></li>
+
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+
+     <li><a href='../sourcefile/datadaylightingdevices.f90.html'>DataDaylightingDevices.f90</a></li>
+
+     <li class="active">DataDaylightingDevices</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+
+<div id="sidebar">
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../module/datadaylightingdevices.html#variable-maxtzones">MaxTZones</a>
+
+      <a class="list-group-item" href="../module/datadaylightingdevices.html#variable-numofangles">NumOfAngles</a>
+
+      <a class="list-group-item" href="../module/datadaylightingdevices.html#variable-visiblebeam">VisibleBeam</a>
+
+      <a class="list-group-item" href="../module/datadaylightingdevices.html#variable-solarbeam">SolarBeam</a>
+
+      <a class="list-group-item" href="../module/datadaylightingdevices.html#variable-solaraniso">SolarAniso</a>
+
+      <a class="list-group-item" href="../module/datadaylightingdevices.html#variable-solariso">SolarIso</a>
+
+      <a class="list-group-item" href="../module/datadaylightingdevices.html#variable-tddpipe">TDDPipe</a>
+
+      <a class="list-group-item" href="../module/datadaylightingdevices.html#variable-shelf%7E2">Shelf</a>
+
+      <a class="list-group-item" href="../module/datadaylightingdevices.html#variable-numoftddpipes">NumOfTDDPipes</a>
+
+      <a class="list-group-item" href="../module/datadaylightingdevices.html#variable-numofshelf">NumOfShelf</a>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#types-0">Derived Types</a></h3></div>
+  <div id="types-0" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../module/datadaylightingdevices.html#type-tddpipedata">TDDPipeData</a>
+
+      <a class="list-group-item" href="../module/datadaylightingdevices.html#type-shelfdata">ShelfData</a>
+
+    </div>
+  </div>
+</div>
+
+
+  <hr>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allmods-0">All Modules</a></h3></div>
+  <div id="allmods-0" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../module/airflownetworkbalancemanager.html">AirflowNetworkBalanceManager</a>
+
+      <a class="list-group-item" href="../module/airflownetworksolver.html">AirflowNetworkSolver</a>
+
+      <a class="list-group-item" href="../module/baseboardelectric.html">BaseboardElectric</a>
+
+      <a class="list-group-item" href="../module/baseboardradiator.html">BaseboardRadiator</a>
+
+      <a class="list-group-item" href="../module/boilers.html">Boilers</a>
+
+      <a class="list-group-item" href="../module/boilersteam.html">BoilerSteam</a>
+
+      <a class="list-group-item" href="../module/branchinputmanager.html">BranchInputManager</a>
+
+      <a class="list-group-item" href="../module/branchnodeconnections.html">BranchNodeConnections</a>
+
+      <a class="list-group-item" href="../module/chillerabsorption.html">ChillerAbsorption</a>
+
+      <a class="list-group-item" href="../module/chillerelectriceir.html">ChillerElectricEIR</a>
+
+      <a class="list-group-item" href="../module/chillerexhaustabsorption.html">ChillerExhaustAbsorption</a>
+
+      <a class="list-group-item" href="../module/chillergasabsorption.html">ChillerGasAbsorption</a>
+
+      <a class="list-group-item" href="../module/chillerindirectabsorption.html">ChillerIndirectAbsorption</a>
+
+      <a class="list-group-item" href="../module/chillerreformulatedeir.html">ChillerReformulatedEIR</a>
+
+      <a class="list-group-item" href="../module/condenserlooptowers.html">CondenserLoopTowers</a>
+
+      <a class="list-group-item" href="../module/conductiontransferfunctioncalc.html">ConductionTransferFunctionCalc</a>
+
+      <a class="list-group-item" href="../module/convectioncoefficients.html">ConvectionCoefficients</a>
+
+      <a class="list-group-item" href="../module/cooltower.html">CoolTower</a>
+
+      <a class="list-group-item" href="../module/costestimatemanager.html">CostEstimateManager</a>
+
+      <a class="list-group-item" href="../module/crossventmgr.html">CrossVentMgr</a>
+
+      <a class="list-group-item" href="../module/ctelectricgenerator.html">CTElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/curvemanager.html">CurveManager</a>
+
+      <a class="list-group-item" href="../module/dataairflownetwork.html">DataAirflowNetwork</a>
+
+      <a class="list-group-item" href="../module/dataairloop.html">DataAirLoop</a>
+
+      <a class="list-group-item" href="../module/dataairsystems.html">DataAirSystems</a>
+
+      <a class="list-group-item" href="../module/databranchairloopplant.html">DataBranchAirLoopPlant</a>
+
+      <a class="list-group-item" href="../module/databranchnodeconnections.html">DataBranchNodeConnections</a>
+
+      <a class="list-group-item" href="../module/databsdfwindow.html">DataBSDFWindow</a>
+
+      <a class="list-group-item" href="../module/datacomplexfenestration.html">DataComplexFenestration</a>
+
+      <a class="list-group-item" href="../module/datacontaminantbalance.html">DataContaminantBalance</a>
+
+      <a class="list-group-item" href="../module/dataconvergparams.html">DataConvergParams</a>
+
+      <a class="list-group-item" href="../module/dataconversions.html">DataConversions</a>
+
+      <a class="list-group-item" href="../module/datacostestimate.html">DataCostEstimate</a>
+
+      <a class="list-group-item" href="../module/datadaylighting.html">DataDaylighting</a>
+
+      <a class="list-group-item" href="../module/datadaylightingdevices.html">DataDaylightingDevices</a>
+
+      <a class="list-group-item" href="../module/datadefineequip.html">DataDefineEquip</a>
+
+      <a class="list-group-item" href="../module/datadelight.html">DataDElight</a>
+
+      <a class="list-group-item" href="../module/dataenvironment.html">DataEnvironment</a>
+
+      <a class="list-group-item" href="../module/dataerrortracking.html">DataErrorTracking</a>
+
+      <a class="list-group-item" href="../module/datagenerators.html">DataGenerators</a>
+
+      <a class="list-group-item" href="../module/dataglobalconstants.html">DataGlobalConstants</a>
+
+      <a class="list-group-item" href="../module/dataglobals.html">DataGlobals</a>
+
+      <a class="list-group-item" href="../module/dataheatbalance.html">DataHeatBalance</a>
+
+      <a class="list-group-item" href="../module/dataheatbalfansys.html">DataHeatBalFanSys</a>
+
+      <a class="list-group-item" href="../module/dataheatbalsurface.html">DataHeatBalSurface</a>
+
+      <a class="list-group-item" href="../module/datahvaccontrollers.html">DataHVACControllers</a>
+
+      <a class="list-group-item" href="../module/datahvacglobals.html">DataHVACGlobals</a>
+
+      <a class="list-group-item" href="../module/datainterfaces.html">DataInterfaces</a>
+
+      <a class="list-group-item" href="../module/dataipshortcuts.html">DataIPShortCuts</a>
+
+      <a class="list-group-item" href="../module/dataloopnode.html">DataLoopNode</a>
+
+      <a class="list-group-item" href="../module/datamoisturebalance.html">DataMoistureBalance</a>
+
+      <a class="list-group-item" href="../module/datamoisturebalanceempd.html">DataMoistureBalanceEMPD</a>
+
+      <a class="list-group-item" href="../module/dataoutputs.html">DataOutputs</a>
+
+      <a class="list-group-item" href="../module/dataphotovoltaics.html">DataPhotovoltaics</a>
+
+      <a class="list-group-item" href="../module/dataplant.html">DataPlant</a>
+
+      <a class="list-group-item" href="../module/dataplantpipingsystems.html">DataPlantPipingSystems</a>
+
+      <a class="list-group-item" href="../module/dataprecisionglobals.html">DataPrecisionGlobals</a>
+
+      <a class="list-group-item" href="../module/datareportingflags.html">DataReportingFlags</a>
+
+      <a class="list-group-item" href="../module/dataroomairmodel.html">DataRoomAirModel</a>
+
+      <a class="list-group-item" href="../module/datarootfinder.html">DataRootFinder</a>
+
+      <a class="list-group-item" href="../module/dataruntimelanguage.html">DataRuntimeLanguage</a>
+
+      <a class="list-group-item" href="../module/datashadowingcombinations.html">DataShadowingCombinations</a>
+
+      <a class="list-group-item" href="../module/datasizing.html">DataSizing</a>
+
+      <a class="list-group-item" href="../module/datastringglobals.html">DataStringGlobals</a>
+
+      <a class="list-group-item" href="../module/datasurfacecolors.html">DataSurfaceColors</a>
+
+      <a class="list-group-item" href="../module/datasurfacelists.html">DataSurfaceLists</a>
+
+      <a class="list-group-item" href="../module/datasurfaces.html">DataSurfaces</a>
+
+      <a class="list-group-item" href="../module/datasystemvariables.html">DataSystemVariables</a>
+
+      <a class="list-group-item" href="../module/datatimings.html">DataTimings</a>
+
+      <a class="list-group-item" href="../module/dataucsdshareddata.html">DataUCSDSharedData</a>
+
+      <a class="list-group-item" href="../module/datavectortypes.html">DataVectorTypes</a>
+
+      <a class="list-group-item" href="../module/dataviewfactorinformation.html">DataViewFactorInformation</a>
+
+      <a class="list-group-item" href="../module/datawater.html">DataWater</a>
+
+      <a class="list-group-item" href="../module/datawindowequivalentlayer.html">DataWindowEquivalentLayer</a>
+
+      <a class="list-group-item" href="../module/datazonecontrols.html">DataZoneControls</a>
+
+      <a class="list-group-item" href="../module/datazoneenergydemands.html">DataZoneEnergyDemands</a>
+
+      <a class="list-group-item" href="../module/datazoneequipment.html">DataZoneEquipment</a>
+
+      <a class="list-group-item" href="../module/daylightingdevices.html">DaylightingDevices</a>
+
+      <a class="list-group-item" href="../module/daylightingmanager.html">DaylightingManager</a>
+
+      <a class="list-group-item" href="../module/delightmanagerf%7E2.html">DELIGHTMANAGERF</a>
+
+      <a class="list-group-item" href="../module/delightmanagerf.html">DELIGHTMANAGERF</a>
+
+      <a class="list-group-item" href="../module/demandmanager.html">DemandManager</a>
+
+      <a class="list-group-item" href="../module/desiccantdehumidifiers.html">DesiccantDehumidifiers</a>
+
+      <a class="list-group-item" href="../module/directairmanager.html">DirectAirManager</a>
+
+      <a class="list-group-item" href="../module/displacementventmgr.html">DisplacementVentMgr</a>
+
+      <a class="list-group-item" href="../module/dualduct.html">DualDuct</a>
+
+      <a class="list-group-item" href="../module/dxcoils.html">DXCoils</a>
+
+      <a class="list-group-item" href="../module/dxfearclipping.html">DXFEarClipping</a>
+
+      <a class="list-group-item" href="../module/earthtube.html">EarthTube</a>
+
+      <a class="list-group-item" href="../module/economiclifecyclecost.html">EconomicLifeCycleCost</a>
+
+      <a class="list-group-item" href="../module/economictariff.html">EconomicTariff</a>
+
+      <a class="list-group-item" href="../module/ecoroofmanager.html">EcoRoofManager</a>
+
+      <a class="list-group-item" href="../module/electricbaseboardradiator.html">ElectricBaseboardRadiator</a>
+
+      <a class="list-group-item" href="../module/emsmanager.html">EMSManager</a>
+
+      <a class="list-group-item" href="../module/evaporativecoolers.html">EvaporativeCoolers</a>
+
+      <a class="list-group-item" href="../module/evaporativefluidcoolers.html">EvaporativeFluidCoolers</a>
+
+      <a class="list-group-item" href="../module/exteriorenergyuse.html">ExteriorEnergyUse</a>
+
+      <a class="list-group-item" href="../module/externalinterface.html">ExternalInterface</a>
+
+      <a class="list-group-item" href="../module/fancoilunits.html">FanCoilUnits</a>
+
+      <a class="list-group-item" href="../module/fans.html">Fans</a>
+
+      <a class="list-group-item" href="../module/faultsmanager.html">FaultsManager</a>
+
+      <a class="list-group-item" href="../module/fluidcoolers.html">FluidCoolers</a>
+
+      <a class="list-group-item" href="../module/fluidproperties.html">FluidProperties</a>
+
+      <a class="list-group-item" href="../module/fuelcellelectricgenerator.html">FuelCellElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/furnaces.html">Furnaces</a>
+
+      <a class="list-group-item" href="../module/general.html">General</a>
+
+      <a class="list-group-item" href="../module/generatordynamicsmanager.html">GeneratorDynamicsManager</a>
+
+      <a class="list-group-item" href="../module/generatorfuelsupply.html">GeneratorFuelSupply</a>
+
+      <a class="list-group-item" href="../module/globalnames.html">GlobalNames</a>
+
+      <a class="list-group-item" href="../module/groundheatexchangers.html">GroundHeatExchangers</a>
+
+      <a class="list-group-item" href="../module/heatbalanceairmanager.html">HeatBalanceAirManager</a>
+
+      <a class="list-group-item" href="../module/heatbalancehamtmanager.html">HeatBalanceHAMTManager</a>
+
+      <a class="list-group-item" href="../module/heatbalanceintradexchange.html">HeatBalanceIntRadExchange</a>
+
+      <a class="list-group-item" href="../module/heatbalancemanager.html">HeatBalanceManager</a>
+
+      <a class="list-group-item" href="../module/heatbalancemovableinsulation.html">HeatBalanceMovableInsulation</a>
+
+      <a class="list-group-item" href="../module/heatbalancesurfacemanager.html">HeatBalanceSurfaceManager</a>
+
+      <a class="list-group-item" href="../module/heatbalfinitediffmanager.html">HeatBalFiniteDiffManager</a>
+
+      <a class="list-group-item" href="../module/heatingcoils.html">HeatingCoils</a>
+
+      <a class="list-group-item" href="../module/heatpumpwatertowatercooling.html">HeatPumpWaterToWaterCOOLING</a>
+
+      <a class="list-group-item" href="../module/heatpumpwatertowaterheating.html">HeatPumpWaterToWaterHEATING</a>
+
+      <a class="list-group-item" href="../module/heatpumpwatertowatersimple.html">HeatPumpWaterToWaterSimple</a>
+
+      <a class="list-group-item" href="../module/heatrecovery.html">HeatRecovery</a>
+
+      <a class="list-group-item" href="../module/hightempradiantsystem.html">HighTempRadiantSystem</a>
+
+      <a class="list-group-item" href="../module/humidifiers.html">Humidifiers</a>
+
+      <a class="list-group-item" href="../module/hvaccontrollers.html">HVACControllers</a>
+
+      <a class="list-group-item" href="../module/hvaccooledbeam.html">HVACCooledBeam</a>
+
+      <a class="list-group-item" href="../module/hvacduct.html">HVACDuct</a>
+
+      <a class="list-group-item" href="../module/hvacdxheatpumpsystem.html">HVACDXHeatPumpSystem</a>
+
+      <a class="list-group-item" href="../module/hvacdxsystem.html">HVACDXSystem</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html">HVACHXAssistedCoolingCoil</a>
+
+      <a class="list-group-item" href="../module/hvacinterfacemanager.html">HVACInterfaceManager</a>
+
+      <a class="list-group-item" href="../module/hvacmanager.html">HVACManager</a>
+
+      <a class="list-group-item" href="../module/hvacmultispeedheatpump.html">HVACMultiSpeedHeatPump</a>
+
+      <a class="list-group-item" href="../module/hvacsingleductinduc.html">HVACSingleDuctInduc</a>
+
+      <a class="list-group-item" href="../module/hvacstandaloneerv.html">HVACStandAloneERV</a>
+
+      <a class="list-group-item" href="../module/hvacunitarybypassvav.html">HVACUnitaryBypassVAV</a>
+
+      <a class="list-group-item" href="../module/hvacunitarysystem.html">HVACUnitarySystem</a>
+
+      <a class="list-group-item" href="../module/hvacvariablerefrigerantflow.html">HVACVariableRefrigerantFlow</a>
+
+      <a class="list-group-item" href="../module/hwbaseboardradiator.html">HWBaseboardRadiator</a>
+
+      <a class="list-group-item" href="../module/icengineelectricgenerator.html">ICEngineElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/icethermalstorage.html">IceThermalStorage</a>
+
+      <a class="list-group-item" href="../module/inputprocessor.html">InputProcessor</a>
+
+      <a class="list-group-item" href="../module/internalheatgains.html">InternalHeatGains</a>
+
+      <a class="list-group-item" href="../module/iso_c_function_binding.html">ISO_C_FUNCTION_BINDING</a>
+
+      <a class="list-group-item" href="../module/iso_c_function_binding%7E2.html">ISO_C_FUNCTION_BINDING</a>
+
+      <a class="list-group-item" href="../module/lowtempradiantsystem.html">LowTempRadiantSystem</a>
+
+      <a class="list-group-item" href="../module/manageelectricpower.html">ManageElectricPower</a>
+
+      <a class="list-group-item" href="../module/matrixdatamanager.html">MatrixDataManager</a>
+
+      <a class="list-group-item" href="../module/microchpelectricgenerator.html">MicroCHPElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/microturbineelectricgenerator.html">MicroturbineElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/mixedair.html">MixedAir</a>
+
+      <a class="list-group-item" href="../module/mixercomponent.html">MixerComponent</a>
+
+      <a class="list-group-item" href="../module/moisturebalanceempdmanager.html">MoistureBalanceEMPDManager</a>
+
+      <a class="list-group-item" href="../module/mundtsimmgr.html">MundtSimMgr</a>
+
+      <a class="list-group-item" href="../module/nodeinputmanager.html">NodeInputManager</a>
+
+      <a class="list-group-item" href="../module/nonzoneequipmentmanager.html">NonZoneEquipmentManager</a>
+
+      <a class="list-group-item" href="../module/outairnodemanager.html">OutAirNodeManager</a>
+
+      <a class="list-group-item" href="../module/outdoorairunit.html">OutdoorAirUnit</a>
+
+      <a class="list-group-item" href="../module/outputprocessor.html">OutputProcessor</a>
+
+      <a class="list-group-item" href="../module/outputreportpredefined.html">OutputReportPredefined</a>
+
+      <a class="list-group-item" href="../module/outputreporttabular.html">OutputReportTabular</a>
+
+      <a class="list-group-item" href="../module/outsideenergysources.html">OutsideEnergySources</a>
+
+      <a class="list-group-item" href="../module/packagedterminalheatpump.html">PackagedTerminalHeatPump</a>
+
+      <a class="list-group-item" href="../module/packagedthermalstoragecoil.html">PackagedThermalStorageCoil</a>
+
+      <a class="list-group-item" href="../module/photovoltaics.html">Photovoltaics</a>
+
+      <a class="list-group-item" href="../module/photovoltaicthermalcollectors.html">PhotovoltaicThermalCollectors</a>
+
+      <a class="list-group-item" href="../module/pipeheattransfer.html">PipeHeatTransfer</a>
+
+      <a class="list-group-item" href="../module/pipes.html">Pipes</a>
+
+      <a class="list-group-item" href="../module/plantcentralgshp.html">PlantCentralGSHP</a>
+
+      <a class="list-group-item" href="../module/plantchillers.html">PlantChillers</a>
+
+      <a class="list-group-item" href="../module/plantcomponenttemperaturesources.html">PlantComponentTemperatureSources</a>
+
+      <a class="list-group-item" href="../module/plantcondloopoperation.html">PlantCondLoopOperation</a>
+
+      <a class="list-group-item" href="../module/plantheatexchangerfluidtofluid.html">PlantHeatExchangerFluidToFluid</a>
+
+      <a class="list-group-item" href="../module/plantloadprofile.html">PlantLoadProfile</a>
+
+      <a class="list-group-item" href="../module/plantloopequip.html">PlantLoopEquip</a>
+
+      <a class="list-group-item" href="../module/plantloopsolver.html">PlantLoopSolver</a>
+
+      <a class="list-group-item" href="../module/plantmanager.html">PlantManager</a>
+
+      <a class="list-group-item" href="../module/plantpipingsystemsmanager.html">PlantPipingSystemsManager</a>
+
+      <a class="list-group-item" href="../module/plantpressuresystem.html">PlantPressureSystem</a>
+
+      <a class="list-group-item" href="../module/plantutilities.html">PlantUtilities</a>
+
+      <a class="list-group-item" href="../module/plantvalves.html">PlantValves</a>
+
+      <a class="list-group-item" href="../module/pollutionmodule.html">PollutionModule</a>
+
+      <a class="list-group-item" href="../module/pondgroundheatexchanger.html">PondGroundHeatExchanger</a>
+
+      <a class="list-group-item" href="../module/poweredinductionunits.html">PoweredInductionUnits</a>
+
+      <a class="list-group-item" href="../module/psychrometrics.html">Psychrometrics</a>
+
+      <a class="list-group-item" href="../module/pumps.html">Pumps</a>
+
+      <a class="list-group-item" href="../module/purchasedairmanager.html">PurchasedAirManager</a>
+
+      <a class="list-group-item" href="../module/refrigeratedcase.html">RefrigeratedCase</a>
+
+      <a class="list-group-item" href="../module/reportsizingmanager.html">ReportSizingManager</a>
+
+      <a class="list-group-item" href="../module/returnairpathmanager.html">ReturnAirPathManager</a>
+
+      <a class="list-group-item" href="../module/roomairmodelmanager.html">RoomAirModelManager</a>
+
+      <a class="list-group-item" href="../module/roomairmodelusertemppattern.html">RoomAirModelUserTempPattern</a>
+
+      <a class="list-group-item" href="../module/rootfinder.html">RootFinder</a>
+
+      <a class="list-group-item" href="../module/runtimelanguageprocessor.html">RuntimeLanguageProcessor</a>
+
+      <a class="list-group-item" href="../module/schedulemanager.html">ScheduleManager</a>
+
+      <a class="list-group-item" href="../module/setpointmanager.html">SetPointManager</a>
+
+      <a class="list-group-item" href="../module/simairservingzones.html">SimAirServingZones</a>
+
+      <a class="list-group-item" href="../module/simulationmanager.html">SimulationManager</a>
+
+      <a class="list-group-item" href="../module/singleduct.html">SingleDuct</a>
+
+      <a class="list-group-item" href="../module/sizingmanager.html">SizingManager</a>
+
+      <a class="list-group-item" href="../module/solarcollectors.html">SolarCollectors</a>
+
+      <a class="list-group-item" href="../module/solarreflectionmanager.html">SolarReflectionManager</a>
+
+      <a class="list-group-item" href="../module/solarshading.html">SolarShading</a>
+
+      <a class="list-group-item" href="../module/sortandstringutilities.html">SortAndStringUtilities</a>
+
+      <a class="list-group-item" href="../module/splittercomponent.html">SplitterComponent</a>
+
+      <a class="list-group-item" href="../module/sqliteprocedures%7E2.html">SQLiteProcedures</a>
+
+      <a class="list-group-item" href="../module/sqliteprocedures.html">SQLiteProcedures</a>
+
+      <a class="list-group-item" href="../module/standardratings.html">StandardRatings</a>
+
+      <a class="list-group-item" href="../module/steambaseboardradiator.html">SteamBaseboardRadiator</a>
+
+      <a class="list-group-item" href="../module/steamcoils.html">SteamCoils</a>
+
+      <a class="list-group-item" href="../module/surfacegeometry.html">SurfaceGeometry</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html">SurfaceGroundHeatExchanger</a>
+
+      <a class="list-group-item" href="../module/systemavailabilitymanager.html">SystemAvailabilityManager</a>
+
+      <a class="list-group-item" href="../module/systemreports.html">SystemReports</a>
+
+      <a class="list-group-item" href="../module/tarcogargs.html">TARCOGArgs</a>
+
+      <a class="list-group-item" href="../module/tarcogcommon.html">TARCOGCommon</a>
+
+      <a class="list-group-item" href="../module/tarcogdeflection.html">TARCOGDeflection</a>
+
+      <a class="list-group-item" href="../module/tarcoggasses90.html">TARCOGGasses90</a>
+
+      <a class="list-group-item" href="../module/tarcoggassesparams.html">TARCOGGassesParams</a>
+
+      <a class="list-group-item" href="../module/tarcogmain.html">TARCOGMain</a>
+
+      <a class="list-group-item" href="../module/tarcogoutput.html">TARCOGOutput</a>
+
+      <a class="list-group-item" href="../module/tarcogparams.html">TARCOGParams</a>
+
+      <a class="list-group-item" href="../module/tarcogshading.html">TarcogShading</a>
+
+      <a class="list-group-item" href="../module/thermalchimney.html">ThermalChimney</a>
+
+      <a class="list-group-item" href="../module/thermalcomfort.html">ThermalComfort</a>
+
+      <a class="list-group-item" href="../module/thermalen673calc.html">ThermalEN673Calc</a>
+
+      <a class="list-group-item" href="../module/thermaliso15099calc.html">ThermalISO15099Calc</a>
+
+      <a class="list-group-item" href="../module/transpiredcollector.html">TranspiredCollector</a>
+
+      <a class="list-group-item" href="../module/ufadmanager.html">UFADManager</a>
+
+      <a class="list-group-item" href="../module/unitheater.html">UnitHeater</a>
+
+      <a class="list-group-item" href="../module/unitventilator.html">UnitVentilator</a>
+
+      <a class="list-group-item" href="../module/userdefinedcomponents.html">UserDefinedComponents</a>
+
+      <a class="list-group-item" href="../module/variablespeedcoils.html">VariableSpeedCoils</a>
+
+      <a class="list-group-item" href="../module/vectors.html">vectors</a>
+
+      <a class="list-group-item" href="../module/ventilatedslab.html">VentilatedSlab</a>
+
+      <a class="list-group-item" href="../module/watercoils.html">WaterCoils</a>
+
+      <a class="list-group-item" href="../module/watermanager.html">WaterManager</a>
+
+      <a class="list-group-item" href="../module/waterthermaltanks.html">WaterThermalTanks</a>
+
+      <a class="list-group-item" href="../module/watertoairheatpump.html">WatertoAirHeatPump</a>
+
+      <a class="list-group-item" href="../module/watertoairheatpumpsimple.html">WatertoAirHeatPumpSimple</a>
+
+      <a class="list-group-item" href="../module/wateruse.html">WaterUse</a>
+
+      <a class="list-group-item" href="../module/weathermanager.html">WeatherManager</a>
+
+      <a class="list-group-item" href="../module/windowac.html">WindowAC</a>
+
+      <a class="list-group-item" href="../module/windowcomplexmanager.html">WindowComplexManager</a>
+
+      <a class="list-group-item" href="../module/windowequivalentlayer.html">WindowEquivalentLayer</a>
+
+      <a class="list-group-item" href="../module/windowmanager.html">WindowManager</a>
+
+      <a class="list-group-item" href="../module/windturbine.html">WindTurbine</a>
+
+      <a class="list-group-item" href="../module/zoneairloopequipmentmanager.html">ZoneAirLoopEquipmentManager</a>
+
+      <a class="list-group-item" href="../module/zonecontaminantpredictorcorrector.html">ZoneContaminantPredictorCorrector</a>
+
+      <a class="list-group-item" href="../module/zonedehumidifier.html">ZoneDehumidifier</a>
+
+      <a class="list-group-item" href="../module/zoneequipmentmanager.html">ZoneEquipmentManager</a>
+
+      <a class="list-group-item" href="../module/zoneplenum.html">ZonePlenum</a>
+
+      <a class="list-group-item" href="../module/zonetemppredictorcorrector.html">ZoneTempPredictorCorrector</a>
+
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+
+
+    <ul class="list-inline">
+      <li><h4>Uses:</h4></li>
+
+      <li><a href='../module/dataprecisionglobals.html'>DataPrecisionGlobals</a></li>
+
+      <li><a href='../module/dataglobals.html'>DataGlobals</a></li>
+
+    </ul>
+
+                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: module~~datadaylightingdevices~~UsesGraph Pages: 1 -->
+<svg id="moduledatadaylightingdevicesUsesGraph" width="386pt" height="50pt"
+ viewBox="0.00 0.00 386.22 49.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~datadaylightingdevices~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 45.5)">
+<title>module~~datadaylightingdevices~~UsesGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-45.5 382.2161,-45.5 382.2161,4 -4,4"/>
+<!-- module~datadaylightingdevices -->
+<g id="module~~datadaylightingdevices~~UsesGraph_node1" class="node">
+<title>module~datadaylightingdevices</title>
+<polygon fill="none" stroke="#000000" points="378.4521,-41.2554 254.5098,-41.2554 254.5098,-19.2446 378.4521,-19.2446 378.4521,-41.2554"/>
+<text text-anchor="middle" x="316.481" y="-27.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">DataDaylightingDevices</text>
+</g>
+<!-- module~dataglobals -->
+<g id="module~~datadaylightingdevices~~UsesGraph_node2" class="node">
+<title>module~dataglobals</title>
+<g id="a_module~~datadaylightingdevices~~UsesGraph_node2"><a xlink:href="../module/dataglobals.html" xlink:title="DataGlobals">
+<polygon fill="#337ab7" stroke="#337ab7" points="218.6366,-22.2554 149.0744,-22.2554 149.0744,-.2446 218.6366,-.2446 218.6366,-22.2554"/>
+<text text-anchor="middle" x="183.8555" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataGlobals</text>
+</a>
+</g>
+</g>
+<!-- module~dataglobals&#45;&gt;module~datadaylightingdevices -->
+<g id="module~~datadaylightingdevices~~UsesGraph_edge2" class="edge">
+<title>module~dataglobals&#45;&gt;module~datadaylightingdevices</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M218.7013,-16.242C226.7309,-17.3924 235.562,-18.6575 244.5315,-19.9425"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="244.2867,-23.4431 254.682,-21.3966 245.2795,-16.5138 244.2867,-23.4431"/>
+</g>
+<!-- module~dataprecisionglobals -->
+<g id="module~~datadaylightingdevices~~UsesGraph_node3" class="node">
+<title>module~dataprecisionglobals</title>
+<g id="a_module~~datadaylightingdevices~~UsesGraph_node3"><a xlink:href="../module/dataprecisionglobals.html" xlink:title="DataPrecisionGlobals">
+<polygon fill="#337ab7" stroke="#337ab7" points="112.9476,-41.2554 .0175,-41.2554 .0175,-19.2446 112.9476,-19.2446 112.9476,-41.2554"/>
+<text text-anchor="middle" x="56.4825" y="-27.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataPrecisionGlobals</text>
+</a>
+</g>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~datadaylightingdevices -->
+<g id="module~~datadaylightingdevices~~UsesGraph_edge3" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~datadaylightingdevices</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M113.2165,-30.9603C125.0309,-31.0811 137.4043,-31.1875 148.9651,-31.25 179.9783,-31.4177 187.7326,-31.4087 218.7458,-31.25 227.1002,-31.2073 235.8561,-31.144 244.5501,-31.0696"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="244.732,-34.5682 254.6999,-30.9778 244.6686,-27.5685 244.732,-34.5682"/>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~dataglobals -->
+<g id="module~~datadaylightingdevices~~UsesGraph_edge1" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~dataglobals</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M113.0919,-21.8057C121.7833,-20.5092 130.6528,-19.1862 139.0419,-17.9348"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="139.6182,-21.3876 148.9924,-16.4505 138.5854,-14.4642 139.6182,-21.3876"/>
+</g>
+</g>
+</svg>
+</div>
+                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
+                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                      </div>
+                      <div class="modal-body">
+
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="484pt" height="31pt"
+ viewBox="0.00 0.00 483.85 30.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 26.5)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-26.5 479.8539,-26.5 479.8539,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-22.2554 0,-22.2554 0,-.2446 54,-.2446 54,-22.2554"/>
+<text text-anchor="middle" x="27" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="137.6205,-22.2554 72.3795,-22.2554 72.3795,-.2446 137.6205,-.2446 137.6205,-22.2554"/>
+<text text-anchor="middle" x="105" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="218.288,-22.2554 155.712,-22.2554 155.712,-.2446 218.288,-.2446 218.288,-22.2554"/>
+<text text-anchor="middle" x="187" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="290,-22.2554 236,-22.2554 236,-.2446 290,-.2446 290,-22.2554"/>
+<text text-anchor="middle" x="263" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="362,-22.2554 308,-22.2554 308,-.2446 362,-.2446 362,-22.2554"/>
+<text text-anchor="middle" x="335" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="475.7082,-22.2554 380.2918,-22.2554 380.2918,-.2446 475.7082,-.2446 475.7082,-22.2554"/>
+<text text-anchor="middle" x="428" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+
+    <p>Solid arrows point from a parent (sub)module to the submodule which is
+    descended from it. Dashed arrows point from a module being used to the
+    module or program unit using it. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+    <h3>Used By</h3>
+
+                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: module~~datadaylightingdevices~~UsedByGraph Pages: 1 -->
+<svg id="moduledatadaylightingdevicesUsedByGraph" width="641pt" height="511pt"
+ viewBox="0.00 0.00 641.00 511.40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~datadaylightingdevices~~UsedByGraph" class="graph" transform="scale(.6284 .6284) rotate(0) translate(4 809.8641)">
+<title>module~~datadaylightingdevices~~UsedByGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-809.8641 1016.1206,-809.8641 1016.1206,4 -4,4"/>
+<!-- module~datadaylightingdevices -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_node1" class="node">
+<title>module~datadaylightingdevices</title>
+<polygon fill="none" stroke="#000000" points="123.7062,-532.5383 -.236,-532.5383 -.236,-510.5274 123.7062,-510.5274 123.7062,-532.5383"/>
+<text text-anchor="middle" x="61.7351" y="-518.3828" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">DataDaylightingDevices</text>
+</g>
+<!-- proc~initsolarheatgains -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_node2" class="node">
+<title>proc~initsolarheatgains</title>
+<g id="a_module~~datadaylightingdevices~~UsedByGraph_node2"><a xlink:href="../proc/initsolarheatgains.html" xlink:title="InitSolarHeatGains">
+<polygon fill="#d9534f" stroke="#d9534f" points="808.3429,-755.5383 708.0883,-755.5383 708.0883,-733.5274 808.3429,-733.5274 808.3429,-755.5383"/>
+<text text-anchor="middle" x="758.2156" y="-741.3828" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">InitSolarHeatGains</text>
+</a>
+</g>
+</g>
+<!-- module~datadaylightingdevices&#45;&gt;proc~initsolarheatgains -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge32" class="edge">
+<title>module~datadaylightingdevices&#45;&gt;proc~initsolarheatgains</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M525.8888,-783.5328C586.9906,-780.9731 655.9761,-768.0981 702.7897,-757.8313"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="703.7247,-761.2089 712.7246,-755.6186 702.2029,-754.3763 703.7247,-761.2089"/>
+</g>
+<!-- proc~calcheatbalanceinsidesurf -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_node3" class="node">
+<title>proc~calcheatbalanceinsidesurf</title>
+<g id="a_module~~datadaylightingdevices~~UsedByGraph_node3"><a xlink:href="../proc/calcheatbalanceinsidesurf.html" xlink:title="CalcHeatBalanceInsideSurf">
+<polygon fill="#d9534f" stroke="#d9534f" points="1012.3235,-675.5383 871.5132,-675.5383 871.5132,-653.5274 1012.3235,-653.5274 1012.3235,-675.5383"/>
+<text text-anchor="middle" x="941.9183" y="-661.3828" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">CalcHeatBalanceInsideSurf</text>
+</a>
+</g>
+</g>
+<!-- module~datadaylightingdevices&#45;&gt;proc~calcheatbalanceinsidesurf -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge33" class="edge">
+<title>module~datadaylightingdevices&#45;&gt;proc~calcheatbalanceinsidesurf</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M525.8888,-783.5328C663.7276,-777.7583 709.0964,-819.3082 835.7161,-764.5328 875.7003,-747.2357 909.9029,-708.0309 928.0395,-684.1711"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="931.0557,-685.9786 934.1825,-675.8557 925.4254,-681.8193 931.0557,-685.9786"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M265.2664,-783.5328C371.1337,-830.5349 410.1856,-788.9988 525.8888,-783.5328"/>
+</g>
+<!-- proc~calcoutsidesurftemp -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_node4" class="node">
+<title>proc~calcoutsidesurftemp</title>
+<g id="a_module~~datadaylightingdevices~~UsedByGraph_node4"><a xlink:href="../proc/calcoutsidesurftemp.html" xlink:title="CalcOutsideSurfTemp">
+<polygon fill="#d9534f" stroke="#d9534f" points="583.0126,-755.5383 468.7649,-755.5383 468.7649,-733.5274 583.0126,-733.5274 583.0126,-755.5383"/>
+<text text-anchor="middle" x="525.8888" y="-741.3828" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">CalcOutsideSurfTemp</text>
+</a>
+</g>
+</g>
+<!-- module~datadaylightingdevices&#45;&gt;proc~calcoutsidesurftemp -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge34" class="edge">
+<title>module~datadaylightingdevices&#45;&gt;proc~calcoutsidesurftemp</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M265.2664,-783.5328C282.9768,-791.3958 391.3895,-771.7709 462.6964,-757.5968"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="463.8136,-760.9427 472.9327,-755.549 462.4403,-754.0787 463.8136,-760.9427"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M65.807,-532.5686C82.3803,-575.5777 149.4512,-732.1142 265.2664,-783.5328"/>
+</g>
+<!-- proc~checktddsandlightshelvesindaylitzones -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_node5" class="node">
+<title>proc~checktddsandlightshelvesindaylitzones</title>
+<g id="a_module~~datadaylightingdevices~~UsedByGraph_node5"><a xlink:href="../proc/checktddsandlightshelvesindaylitzones.html" xlink:title="CheckTDDsAndLightShelvesInDaylitZones">
+<polygon fill="#d9534f" stroke="#d9534f" points="370.859,-591.5383 159.6737,-591.5383 159.6737,-569.5274 370.859,-569.5274 370.859,-591.5383"/>
+<text text-anchor="middle" x="265.2664" y="-577.3828" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">CheckTDDsAndLightShelvesInDaylitZones</text>
+</a>
+</g>
+</g>
+<!-- module~datadaylightingdevices&#45;&gt;proc~checktddsandlightshelvesindaylitzones -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge35" class="edge">
+<title>module~datadaylightingdevices&#45;&gt;proc~checktddsandlightshelvesindaylitzones</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M90.9917,-532.5943C110.2787,-539.6665 136.1846,-548.7508 159.4702,-555.5328 173.7513,-559.6923 189.2664,-563.6601 203.9021,-567.1601"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="203.3323,-570.6215 213.8681,-569.505 204.9356,-563.8076 203.3323,-570.6215"/>
+</g>
+<!-- proc~calcinteriorsolardistribution -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_node6" class="node">
+<title>proc~calcinteriorsolardistribution</title>
+<g id="a_module~~datadaylightingdevices~~UsedByGraph_node6"><a xlink:href="../proc/calcinteriorsolardistribution.html" xlink:title="CalcInteriorSolarDistribution">
+<polygon fill="#d9534f" stroke="#d9534f" points="597.1059,-714.5383 454.6717,-714.5383 454.6717,-692.5274 597.1059,-692.5274 597.1059,-714.5383"/>
+<text text-anchor="middle" x="525.8888" y="-700.3828" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">CalcInteriorSolarDistribution</text>
+</a>
+</g>
+</g>
+<!-- module~datadaylightingdevices&#45;&gt;proc~calcinteriorsolardistribution -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge36" class="edge">
+<title>module~datadaylightingdevices&#45;&gt;proc~calcinteriorsolardistribution</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M123.4827,-521.5992C202.8407,-522.9591 334.7362,-529.9325 371.0625,-560.5328 412.9977,-595.8579 366.6095,-641.5196 407.0625,-678.5328 417.5129,-688.0947 430.6634,-694.3594 444.3766,-698.3991"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="443.8761,-701.8834 454.4308,-700.9627 445.6056,-695.1004 443.8761,-701.8834"/>
+</g>
+<!-- module~daylightingdevices -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_node7" class="node">
+<title>module~daylightingdevices</title>
+<g id="a_module~~datadaylightingdevices~~UsedByGraph_node7"><a xlink:href="../module/daylightingdevices.html" xlink:title="DaylightingDevices">
+<polygon fill="#337ab7" stroke="#337ab7" points="316.0578,-513.5383 214.4749,-513.5383 214.4749,-491.5274 316.0578,-491.5274 316.0578,-513.5383"/>
+<text text-anchor="middle" x="265.2664" y="-499.3828" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DaylightingDevices</text>
+</a>
+</g>
+</g>
+<!-- module~datadaylightingdevices&#45;&gt;module~daylightingdevices -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge37" class="edge">
+<title>module~datadaylightingdevices&#45;&gt;module~daylightingdevices</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M123.6302,-515.7548C149.2251,-513.3655 178.8168,-510.603 204.3124,-508.223"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="204.9647,-511.6774 214.5961,-507.263 204.314,-504.7077 204.9647,-511.6774"/>
+</g>
+<!-- module~daylightingmanager -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_node8" class="node">
+<title>module~daylightingmanager</title>
+<g id="a_module~~datadaylightingdevices~~UsedByGraph_node8"><a xlink:href="../module/daylightingmanager.html" xlink:title="DaylightingManager">
+<polygon fill="#337ab7" stroke="#337ab7" points="318.1545,-168.5383 212.3782,-168.5383 212.3782,-146.5274 318.1545,-146.5274 318.1545,-168.5383"/>
+<text text-anchor="middle" x="265.2664" y="-154.3828" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DaylightingManager</text>
+</a>
+</g>
+</g>
+<!-- module~datadaylightingdevices&#45;&gt;module~daylightingmanager -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge38" class="edge">
+<title>module~datadaylightingdevices&#45;&gt;module~daylightingmanager</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M68.0496,-510.2399C96.956,-458.543 216.8475,-244.1262 254.1429,-177.4263"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="257.2,-179.1305 259.0255,-168.6941 251.0902,-175.7141 257.2,-179.1305"/>
+</g>
+<!-- proc~initsurfaceheatbalance -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_node9" class="node">
+<title>proc~initsurfaceheatbalance</title>
+<g id="a_module~~datadaylightingdevices~~UsedByGraph_node9"><a xlink:href="../proc/initsurfaceheatbalance.html" xlink:title="InitSurfaceHeatBalance">
+<polygon fill="#d9534f" stroke="#d9534f" points="819.5326,-26.5383 696.8985,-26.5383 696.8985,-4.5274 819.5326,-4.5274 819.5326,-26.5383"/>
+<text text-anchor="middle" x="758.2156" y="-12.3828" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">InitSurfaceHeatBalance</text>
+</a>
+</g>
+</g>
+<!-- module~datadaylightingdevices&#45;&gt;proc~initsurfaceheatbalance -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge39" class="edge">
+<title>module~datadaylightingdevices&#45;&gt;proc~initsurfaceheatbalance</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M63.1507,-510.4752C70.6156,-453.7299 107.0597,-195.6393 159.4702,-137.5328 294.7159,12.4113 559.8553,6.8249 686.9572,-5.9029"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="686.6647,-9.3913 696.9744,-6.9497 687.3924,-2.4292 686.6647,-9.3913"/>
+</g>
+<!-- module~daylightingdevices&#45;&gt;proc~initsolarheatgains -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge4" class="edge">
+<title>module~daylightingdevices&#45;&gt;proc~initsolarheatgains</title>
+<path fill="none" stroke="#003fff" stroke-dasharray="5,2" d="M525.8888,-664.5328C575.8801,-683.5395 594.0469,-666.4121 644.7151,-683.5328 676.9397,-694.4215 710.9249,-713.8948 733.2113,-727.9138"/>
+<polygon fill="#003fff" stroke="#003fff" points="731.4122,-730.9179 741.7215,-733.361 735.1859,-725.0221 731.4122,-730.9179"/>
+</g>
+<!-- module~daylightingdevices&#45;&gt;proc~calcheatbalanceinsidesurf -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge10" class="edge">
+<title>module~daylightingdevices&#45;&gt;proc~calcheatbalanceinsidesurf</title>
+<path fill="none" stroke="#003fff" stroke-dasharray="5,2" d="M315.9361,-499.6773C335.2507,-501.1817 356.1755,-506.3194 371.0625,-519.5328 414.6206,-558.1941 363.4896,-606.8883 407.0625,-645.5328 447.0755,-681.02 475.8975,-645.5262 525.8888,-664.5328"/>
+<path fill="none" stroke="#003fff" stroke-dasharray="5,2" d="M525.8888,-664.5328C585.0186,-687.0139 758.0117,-678.7298 861.3629,-671.257"/>
+<polygon fill="#003fff" stroke="#003fff" points="861.7332,-674.7393 871.4492,-670.5143 861.2191,-667.7582 861.7332,-674.7393"/>
+</g>
+<!-- module~daylightingdevices&#45;&gt;proc~calcoutsidesurftemp -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge11" class="edge">
+<title>module~daylightingdevices&#45;&gt;proc~calcoutsidesurftemp</title>
+<path fill="none" stroke="#003fff" stroke-dasharray="5,2" d="M301.4355,-513.5957C324.7593,-522.5764 353.8481,-537.5728 371.0625,-560.5328 415.5673,-619.8921 353.5006,-672.1975 407.0625,-723.5328 420.8443,-736.7417 439.8701,-743.2079 458.6606,-746.058"/>
+<polygon fill="#003fff" stroke="#003fff" points="458.3926,-749.5507 468.7373,-747.2624 459.2234,-742.6002 458.3926,-749.5507"/>
+</g>
+<!-- module~daylightingdevices&#45;&gt;proc~calcinteriorsolardistribution -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge12" class="edge">
+<title>module~daylightingdevices&#45;&gt;proc~calcinteriorsolardistribution</title>
+<path fill="none" stroke="#003fff" stroke-dasharray="5,2" d="M315.9954,-503.5014C335.5514,-506.4349 356.6351,-513.1342 371.0625,-527.5328 419.8959,-576.2689 357.6315,-630.4031 407.0625,-678.5328 417.4324,-688.6298 430.7868,-695.1091 444.7789,-699.1849"/>
+<polygon fill="#003fff" stroke="#003fff" points="443.9873,-702.5948 454.5388,-701.6376 445.6934,-695.8058 443.9873,-702.5948"/>
+</g>
+<!-- proc~figuredayltgcoeffsatpointssetupforwindow -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_node10" class="node">
+<title>proc~figuredayltgcoeffsatpointssetupforwindow</title>
+<g id="a_module~~datadaylightingdevices~~UsedByGraph_node10"><a xlink:href="../proc/figuredayltgcoeffsatpointssetupforwindow.html" xlink:title="FigureDayltgCoeffsAtPointsSetupForWindow">
+<polygon fill="#d9534f" stroke="#d9534f" points="636.7123,-636.5383 415.0653,-636.5383 415.0653,-614.5274 636.7123,-614.5274 636.7123,-636.5383"/>
+<text text-anchor="middle" x="525.8888" y="-622.3828" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">FigureDayltgCoeffsAtPointsSetupForWindow</text>
+</a>
+</g>
+</g>
+<!-- module~daylightingdevices&#45;&gt;proc~figuredayltgcoeffsatpointssetupforwindow -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge1" class="edge">
+<title>module~daylightingdevices&#45;&gt;proc~figuredayltgcoeffsatpointssetupforwindow</title>
+<path fill="none" stroke="#003fff" stroke-dasharray="5,2" d="M315.9514,-505.2693C334.9313,-508.5161 355.6146,-514.9702 371.0625,-527.5328 400.372,-551.368 377.0843,-581.5444 407.0625,-604.5328 409.4392,-606.3554 411.9211,-608.0399 414.4889,-609.596"/>
+<polygon fill="#003fff" stroke="#003fff" points="413.0514,-612.7958 423.5231,-614.4066 416.3415,-606.6172 413.0514,-612.7958"/>
+</g>
+<!-- proc~calcdayltgcoeffsrefpoints -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_node11" class="node">
+<title>proc~calcdayltgcoeffsrefpoints</title>
+<g id="a_module~~datadaylightingdevices~~UsedByGraph_node11"><a xlink:href="../proc/calcdayltgcoeffsrefpoints.html" xlink:title="CalcDayltgCoeffsRefPoints">
+<polygon fill="#d9534f" stroke="#d9534f" points="595.3407,-595.5383 456.4369,-595.5383 456.4369,-573.5274 595.3407,-573.5274 595.3407,-595.5383"/>
+<text text-anchor="middle" x="525.8888" y="-581.3828" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">CalcDayltgCoeffsRefPoints</text>
+</a>
+</g>
+</g>
+<!-- module~daylightingdevices&#45;&gt;proc~calcdayltgcoeffsrefpoints -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge2" class="edge">
+<title>module~daylightingdevices&#45;&gt;proc~calcdayltgcoeffsrefpoints</title>
+<path fill="none" stroke="#003fff" stroke-dasharray="5,2" d="M316.0757,-508.664C334.2371,-512.3408 354.332,-518.2025 371.0625,-527.5328 390.8245,-538.5538 386.9938,-553.0807 407.0625,-563.5328 419.2479,-569.8791 432.9883,-574.352 446.6873,-577.4949"/>
+<polygon fill="#003fff" stroke="#003fff" points="446.1299,-580.9537 456.6322,-579.5561 447.5506,-574.0994 446.1299,-580.9537"/>
+</g>
+<!-- proc~calcdayltgcoeffsmappoints -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_node12" class="node">
+<title>proc~calcdayltgcoeffsmappoints</title>
+<g id="a_module~~datadaylightingdevices~~UsedByGraph_node12"><a xlink:href="../proc/calcdayltgcoeffsmappoints.html" xlink:title="CalcDayltgCoeffsMapPoints">
+<polygon fill="#d9534f" stroke="#d9534f" points="596.9269,-554.5383 454.8507,-554.5383 454.8507,-532.5274 596.9269,-532.5274 596.9269,-554.5383"/>
+<text text-anchor="middle" x="525.8888" y="-540.3828" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">CalcDayltgCoeffsMapPoints</text>
+</a>
+</g>
+</g>
+<!-- module~daylightingdevices&#45;&gt;proc~calcdayltgcoeffsmappoints -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge3" class="edge">
+<title>module~daylightingdevices&#45;&gt;proc~calcdayltgcoeffsmappoints</title>
+<path fill="none" stroke="#003fff" stroke-dasharray="5,2" d="M316.1357,-510.5354C353.0269,-516.3389 403.6543,-524.3034 445.9277,-530.9537"/>
+<polygon fill="#003fff" stroke="#003fff" points="445.4998,-534.4293 455.9223,-532.526 446.5877,-527.5144 445.4998,-534.4293"/>
+</g>
+<!-- proc~calcdayltgcoefficients -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_node13" class="node">
+<title>proc~calcdayltgcoefficients</title>
+<g id="a_module~~datadaylightingdevices~~UsedByGraph_node13"><a xlink:href="../proc/calcdayltgcoefficients.html" xlink:title="CalcDayltgCoefficients">
+<polygon fill="#d9534f" stroke="#d9534f" points="584.5149,-513.5383 467.2627,-513.5383 467.2627,-491.5274 584.5149,-491.5274 584.5149,-513.5383"/>
+<text text-anchor="middle" x="525.8888" y="-499.3828" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">CalcDayltgCoefficients</text>
+</a>
+</g>
+</g>
+<!-- module~daylightingdevices&#45;&gt;proc~calcdayltgcoefficients -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge5" class="edge">
+<title>module~daylightingdevices&#45;&gt;proc~calcdayltgcoefficients</title>
+<path fill="none" stroke="#003fff" stroke-dasharray="5,2" d="M316.1357,-502.5328C356.2656,-502.5328 412.6496,-502.5328 456.8534,-502.5328"/>
+<polygon fill="#003fff" stroke="#003fff" points="456.948,-506.0329 466.948,-502.5328 456.9479,-499.0329 456.948,-506.0329"/>
+</g>
+<!-- proc~initinternalheatgains -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_node14" class="node">
+<title>proc~initinternalheatgains</title>
+<g id="a_module~~datadaylightingdevices~~UsedByGraph_node14"><a xlink:href="../proc/initinternalheatgains.html" xlink:title="InitInternalHeatGains">
+<polygon fill="#d9534f" stroke="#d9534f" points="581.0268,-472.5383 470.7508,-472.5383 470.7508,-450.5274 581.0268,-450.5274 581.0268,-472.5383"/>
+<text text-anchor="middle" x="525.8888" y="-458.3828" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">InitInternalHeatGains</text>
+</a>
+</g>
+</g>
+<!-- module~daylightingdevices&#45;&gt;proc~initinternalheatgains -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge6" class="edge">
+<title>module~daylightingdevices&#45;&gt;proc~initinternalheatgains</title>
+<path fill="none" stroke="#003fff" stroke-dasharray="5,2" d="M316.1357,-494.5303C357.4519,-488.0306 415.9972,-478.8205 460.7407,-471.7816"/>
+<polygon fill="#003fff" stroke="#003fff" points="461.3078,-475.2356 470.6424,-470.224 460.2199,-468.3206 461.3078,-475.2356"/>
+</g>
+<!-- proc~figuredayltgcoeffsatpointsforwindowelements -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_node15" class="node">
+<title>proc~figuredayltgcoeffsatpointsforwindowelements</title>
+<g id="a_module~~datadaylightingdevices~~UsedByGraph_node15"><a xlink:href="../proc/figuredayltgcoeffsatpointsforwindowelements.html" xlink:title="FigureDayltgCoeffsAtPointsForWindowElements">
+<polygon fill="#d9534f" stroke="#d9534f" points="644.5416,-431.5383 407.236,-431.5383 407.236,-409.5274 644.5416,-409.5274 644.5416,-431.5383"/>
+<text text-anchor="middle" x="525.8888" y="-417.3828" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">FigureDayltgCoeffsAtPointsForWindowElements</text>
+</a>
+</g>
+</g>
+<!-- module~daylightingdevices&#45;&gt;proc~figuredayltgcoeffsatpointsforwindowelements -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge7" class="edge">
+<title>module~daylightingdevices&#45;&gt;proc~figuredayltgcoeffsatpointsforwindowelements</title>
+<path fill="none" stroke="#003fff" stroke-dasharray="5,2" d="M286.7835,-491.4057C314.0726,-477.7362 362.9013,-454.7396 407.0625,-441.5328 417.0251,-438.5534 427.5915,-435.9399 438.1531,-433.6624"/>
+<polygon fill="#003fff" stroke="#003fff" points="439.1697,-437.0266 448.2578,-431.5808 437.7573,-430.1706 439.1697,-437.0266"/>
+</g>
+<!-- proc~dayltginterreflectedillum -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_node16" class="node">
+<title>proc~dayltginterreflectedillum</title>
+<g id="a_module~~datadaylightingdevices~~UsedByGraph_node16"><a xlink:href="../proc/dayltginterreflectedillum.html" xlink:title="DayltgInterReflectedIllum">
+<polygon fill="#d9534f" stroke="#d9534f" points="590.6887,-390.5383 461.0889,-390.5383 461.0889,-368.5274 590.6887,-368.5274 590.6887,-390.5383"/>
+<text text-anchor="middle" x="525.8888" y="-376.3828" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DayltgInterReflectedIllum</text>
+</a>
+</g>
+</g>
+<!-- module~daylightingdevices&#45;&gt;proc~dayltginterreflectedillum -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge8" class="edge">
+<title>module~daylightingdevices&#45;&gt;proc~dayltginterreflectedillum</title>
+<path fill="none" stroke="#003fff" stroke-dasharray="5,2" d="M276.651,-491.5066C299.3771,-470.1867 352.8591,-423.4021 407.0625,-400.5328 420.7847,-394.7432 436.0496,-390.5497 450.942,-387.5122"/>
+<polygon fill="#003fff" stroke="#003fff" points="451.9883,-390.8769 461.169,-385.5887 450.6943,-383.9975 451.9883,-390.8769"/>
+</g>
+<!-- proc~initintsolardistribution -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_node17" class="node">
+<title>proc~initintsolardistribution</title>
+<g id="a_module~~datadaylightingdevices~~UsedByGraph_node17"><a xlink:href="../proc/initintsolardistribution.html" xlink:title="InitIntSolarDistribution">
+<polygon fill="#d9534f" stroke="#d9534f" points="583.1025,-349.5383 468.6751,-349.5383 468.6751,-327.5274 583.1025,-327.5274 583.1025,-349.5383"/>
+<text text-anchor="middle" x="525.8888" y="-335.3828" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">InitIntSolarDistribution</text>
+</a>
+</g>
+</g>
+<!-- module~daylightingdevices&#45;&gt;proc~initintsolardistribution -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge9" class="edge">
+<title>module~daylightingdevices&#45;&gt;proc~initintsolardistribution</title>
+<path fill="none" stroke="#003fff" stroke-dasharray="5,2" d="M272.6196,-491.3239C291.3503,-463.7777 343.8743,-392.6121 407.0625,-359.5328 422.7325,-351.3295 440.9912,-346.253 458.4267,-343.1331"/>
+<polygon fill="#003fff" stroke="#003fff" points="459.2485,-346.5463 468.5716,-341.5134 458.1448,-339.6338 459.2485,-346.5463"/>
+</g>
+<!-- proc~initheatbalance -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_node18" class="node">
+<title>proc~initheatbalance</title>
+<g id="a_module~~datadaylightingdevices~~UsedByGraph_node18"><a xlink:href="../proc/initheatbalance.html" xlink:title="InitHeatBalance">
+<polygon fill="#d9534f" stroke="#d9534f" points="801.3463,-313.5383 715.0849,-313.5383 715.0849,-291.5274 801.3463,-291.5274 801.3463,-313.5383"/>
+<text text-anchor="middle" x="758.2156" y="-299.3828" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">InitHeatBalance</text>
+</a>
+</g>
+</g>
+<!-- module~daylightingdevices&#45;&gt;proc~initheatbalance -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge13" class="edge">
+<title>module~daylightingdevices&#45;&gt;proc~initheatbalance</title>
+<path fill="none" stroke="#003fff" stroke-dasharray="5,2" d="M269.873,-491.117C284.1979,-457.3422 331.5787,-357.8187 407.0625,-318.5328 502.3877,-268.9204 632.718,-279.9897 704.7948,-291.7343"/>
+<polygon fill="#003fff" stroke="#003fff" points="704.5507,-295.2428 714.9953,-293.4648 705.7216,-288.3414 704.5507,-295.2428"/>
+</g>
+<!-- proc~calcdayltgcoeffsrefmappoints -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_node19" class="node">
+<title>proc~calcdayltgcoeffsrefmappoints</title>
+<g id="a_module~~datadaylightingdevices~~UsedByGraph_node19"><a xlink:href="../proc/calcdayltgcoeffsrefmappoints.html" xlink:title="CalcDayltgCoeffsRefMapPoints">
+<polygon fill="#d9534f" stroke="#d9534f" points="605.2658,-271.5383 446.5118,-271.5383 446.5118,-249.5274 605.2658,-249.5274 605.2658,-271.5383"/>
+<text text-anchor="middle" x="525.8888" y="-257.3828" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">CalcDayltgCoeffsRefMapPoints</text>
+</a>
+</g>
+</g>
+<!-- module~daylightingdevices&#45;&gt;proc~calcdayltgcoeffsrefmappoints -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge14" class="edge">
+<title>module~daylightingdevices&#45;&gt;proc~calcdayltgcoeffsrefmappoints</title>
+<path fill="none" stroke="#003fff" stroke-dasharray="5,2" d="M269.0442,-491.3158C281.8896,-455.0056 327.5595,-339.8873 407.0625,-285.5328 415.9896,-279.4296 426.1101,-274.7685 436.5874,-271.2166"/>
+<polygon fill="#003fff" stroke="#003fff" points="437.7428,-274.5234 446.2857,-268.257 435.6996,-267.8282 437.7428,-274.5234"/>
+</g>
+<!-- proc~performsolarcalculations -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_node20" class="node">
+<title>proc~performsolarcalculations</title>
+<g id="a_module~~datadaylightingdevices~~UsedByGraph_node20"><a xlink:href="../proc/performsolarcalculations.html" xlink:title="PerformSolarCalculations">
+<polygon fill="#d9534f" stroke="#d9534f" points="591.4367,-230.5383 460.3409,-230.5383 460.3409,-208.5274 591.4367,-208.5274 591.4367,-230.5383"/>
+<text text-anchor="middle" x="525.8888" y="-216.3828" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">PerformSolarCalculations</text>
+</a>
+</g>
+</g>
+<!-- module~daylightingmanager&#45;&gt;proc~performsolarcalculations -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge27" class="edge">
+<title>module~daylightingmanager&#45;&gt;proc~performsolarcalculations</title>
+<path fill="none" stroke="#7f00ff" stroke-dasharray="5,2" d="M299.6689,-168.5961C328.2183,-177.5068 369.9947,-189.9241 407.0625,-198.5328 420.9897,-201.7673 435.9366,-204.7698 450.3696,-207.434"/>
+<polygon fill="#7f00ff" stroke="#7f00ff" points="449.7975,-210.8872 460.2608,-209.2231 451.0435,-203.999 449.7975,-210.8872"/>
+</g>
+<!-- proc~calceqlopticalproperty -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_node21" class="node">
+<title>proc~calceqlopticalproperty</title>
+<g id="a_module~~datadaylightingdevices~~UsedByGraph_node21"><a xlink:href="../proc/calceqlopticalproperty.html" xlink:title="CalcEQLOpticalProperty">
+<polygon fill="#d9534f" stroke="#d9534f" points="589.2666,-189.5383 462.511,-189.5383 462.511,-167.5274 589.2666,-167.5274 589.2666,-189.5383"/>
+<text text-anchor="middle" x="525.8888" y="-175.3828" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">CalcEQLOpticalProperty</text>
+</a>
+</g>
+</g>
+<!-- module~daylightingmanager&#45;&gt;proc~calceqlopticalproperty -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge28" class="edge">
+<title>module~daylightingmanager&#45;&gt;proc~calceqlopticalproperty</title>
+<path fill="none" stroke="#7f00ff" stroke-dasharray="5,2" d="M318.0072,-161.7825C356.701,-164.9003 409.7413,-169.1741 452.5602,-172.6243"/>
+<polygon fill="#7f00ff" stroke="#7f00ff" points="452.3998,-176.1226 462.6487,-173.4372 452.9621,-169.1452 452.3998,-176.1226"/>
+</g>
+<!-- module~solarshading -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_node22" class="node">
+<title>module~solarshading</title>
+<g id="a_module~~datadaylightingdevices~~UsedByGraph_node22"><a xlink:href="../module/solarshading.html" xlink:title="SolarShading">
+<polygon fill="#337ab7" stroke="#337ab7" points="563.435,-148.5383 488.3426,-148.5383 488.3426,-126.5274 563.435,-126.5274 563.435,-148.5383"/>
+<text text-anchor="middle" x="525.8888" y="-134.3828" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">SolarShading</text>
+</a>
+</g>
+</g>
+<!-- module~daylightingmanager&#45;&gt;module~solarshading -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge29" class="edge">
+<title>module~daylightingmanager&#45;&gt;module~solarshading</title>
+<path fill="none" stroke="#7f00ff" stroke-dasharray="5,2" d="M318.0072,-153.4855C364.7861,-149.8957 432.5333,-144.6969 477.8384,-141.2202"/>
+<polygon fill="#7f00ff" stroke="#7f00ff" points="478.2936,-144.6956 487.9964,-140.4407 477.7579,-137.7162 478.2936,-144.6956"/>
+</g>
+<!-- proc~closemiscopenfiles -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_node23" class="node">
+<title>proc~closemiscopenfiles</title>
+<g id="a_module~~datadaylightingdevices~~UsedByGraph_node23"><a xlink:href="../proc/closemiscopenfiles.html" xlink:title="CloseMiscOpenFiles">
+<polygon fill="#d9534f" stroke="#d9534f" points="580.1682,-107.5383 471.6094,-107.5383 471.6094,-85.5274 580.1682,-85.5274 580.1682,-107.5383"/>
+<text text-anchor="middle" x="525.8888" y="-93.3828" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">CloseMiscOpenFiles</text>
+</a>
+</g>
+</g>
+<!-- module~daylightingmanager&#45;&gt;proc~closemiscopenfiles -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge30" class="edge">
+<title>module~daylightingmanager&#45;&gt;proc~closemiscopenfiles</title>
+<path fill="none" stroke="#7f00ff" stroke-dasharray="5,2" d="M300.5602,-146.5144C329.0964,-137.8635 370.4098,-125.9193 407.0625,-117.5328 424.5604,-113.5292 443.6567,-109.853 461.3211,-106.7337"/>
+<polygon fill="#7f00ff" stroke="#7f00ff" points="462.2783,-110.1201 471.5334,-104.9632 461.0824,-103.223 462.2783,-110.1201"/>
+</g>
+<!-- module~heatbalancesurfacemanager -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_node24" class="node">
+<title>module~heatbalancesurfacemanager</title>
+<g id="a_module~~datadaylightingdevices~~UsedByGraph_node24"><a xlink:href="../module/heatbalancesurfacemanager.html" xlink:title="HeatBalanceSurfaceManager">
+<polygon fill="#337ab7" stroke="#337ab7" points="832.9668,-67.5383 683.4644,-67.5383 683.4644,-45.5274 832.9668,-45.5274 832.9668,-67.5383"/>
+<text text-anchor="middle" x="758.2156" y="-53.3828" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">HeatBalanceSurfaceManager</text>
+</a>
+</g>
+</g>
+<!-- module~daylightingmanager&#45;&gt;module~heatbalancesurfacemanager -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge31" class="edge">
+<title>module~daylightingmanager&#45;&gt;module~heatbalancesurfacemanager</title>
+<path fill="none" stroke="#7f00ff" stroke-dasharray="5,2" d="M279.538,-146.3329C303.9999,-127.8692 356.2292,-91.5887 407.0625,-76.5328 494.9543,-50.5009 600.5147,-48.1218 672.7998,-50.607"/>
+<polygon fill="#7f00ff" stroke="#7f00ff" points="673.0904,-54.1206 683.2172,-51.0067 673.3588,-47.1258 673.0904,-54.1206"/>
+</g>
+<!-- module~solarshading&#45;&gt;proc~initsolarheatgains -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge17" class="edge">
+<title>module~solarshading&#45;&gt;proc~initsolarheatgains</title>
+<path fill="none" stroke="#00ff66" stroke-dasharray="5,2" d="M563.5339,-133.8981C589.7492,-133.5512 623.6577,-137.8179 644.7151,-158.5328 649.9494,-163.6821 734.9481,-619.4024 754.311,-723.5161"/>
+<polygon fill="#00ff66" stroke="#00ff66" points="750.8903,-724.2659 756.1591,-733.4577 757.7724,-722.9864 750.8903,-724.2659"/>
+</g>
+<!-- module~solarshading&#45;&gt;proc~initsurfaceheatbalance -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge23" class="edge">
+<title>module~solarshading&#45;&gt;proc~initsurfaceheatbalance</title>
+<path fill="none" stroke="#00ff66" stroke-dasharray="5,2" d="M563.5375,-139.5856C588.9172,-139.0397 621.8192,-134.3551 644.7151,-116.5328 675.4824,-92.5835 651.0524,-61.8374 680.7151,-36.5328 682.9522,-34.6244 685.3468,-32.8879 687.8577,-31.308"/>
+<polygon fill="#00ff66" stroke="#00ff66" points="689.6278,-34.3303 696.7836,-26.517 686.3173,-28.1626 689.6278,-34.3303"/>
+</g>
+<!-- module~solarshading&#45;&gt;proc~initheatbalance -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge22" class="edge">
+<title>module~solarshading&#45;&gt;proc~initheatbalance</title>
+<path fill="none" stroke="#00ff66" stroke-dasharray="5,2" d="M563.5153,-134.5065C589.3799,-134.5176 622.8696,-138.9634 644.7151,-158.5328 687.1415,-196.5387 640.0352,-241.6632 680.7151,-281.5328 687.4415,-288.1253 696.0155,-292.7007 704.9934,-295.8645"/>
+<polygon fill="#00ff66" stroke="#00ff66" points="704.2436,-299.2926 714.8256,-298.7723 706.2288,-292.58 704.2436,-299.2926"/>
+</g>
+<!-- module~solarshading&#45;&gt;module~heatbalancesurfacemanager -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge19" class="edge">
+<title>module~solarshading&#45;&gt;module~heatbalancesurfacemanager</title>
+<path fill="none" stroke="#00ff66" stroke-dasharray="5,2" d="M563.5293,-137.0028C587.9756,-135.2313 619.8059,-130.1456 644.7151,-116.5328 665.4148,-105.2205 660.5434,-89.7617 680.7151,-77.5328 684.5744,-75.1932 688.6971,-73.1094 692.9548,-71.2543"/>
+<polygon fill="#00ff66" stroke="#00ff66" points="694.401,-74.4469 702.4415,-67.5476 691.8534,-67.9269 694.401,-74.4469"/>
+</g>
+<!-- proc~reportsurfaceheatbalance -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_node25" class="node">
+<title>proc~reportsurfaceheatbalance</title>
+<g id="a_module~~datadaylightingdevices~~UsedByGraph_node25"><a xlink:href="../proc/reportsurfaceheatbalance.html" xlink:title="ReportSurfaceHeatBalance">
+<polygon fill="#d9534f" stroke="#d9534f" points="828.0409,-272.5383 688.3903,-272.5383 688.3903,-250.5274 828.0409,-250.5274 828.0409,-272.5383"/>
+<text text-anchor="middle" x="758.2156" y="-258.3828" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">ReportSurfaceHeatBalance</text>
+</a>
+</g>
+</g>
+<!-- module~solarshading&#45;&gt;proc~reportsurfaceheatbalance -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge15" class="edge">
+<title>module~solarshading&#45;&gt;proc~reportsurfaceheatbalance</title>
+<path fill="none" stroke="#00ff66" stroke-dasharray="5,2" d="M563.5893,-135.4139C588.9924,-135.9298 621.9011,-140.6059 644.7151,-158.5328 676.011,-183.1248 650.5531,-214.5626 680.7151,-240.5328 682.7486,-242.2838 684.9146,-243.8901 687.1815,-245.3637"/>
+<polygon fill="#00ff66" stroke="#00ff66" points="685.9108,-248.6594 696.3593,-250.4145 689.2858,-242.5268 685.9108,-248.6594"/>
+</g>
+<!-- proc~abortenergyplus -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_node26" class="node">
+<title>proc~abortenergyplus</title>
+<g id="a_module~~datadaylightingdevices~~UsedByGraph_node26"><a xlink:href="../proc/abortenergyplus.html" xlink:title="AbortEnergyPlus">
+<polygon fill="#d9534f" stroke="#d9534f" points="803.5068,-231.5383 712.9243,-231.5383 712.9243,-209.5274 803.5068,-209.5274 803.5068,-231.5383"/>
+<text text-anchor="middle" x="758.2156" y="-217.3828" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">AbortEnergyPlus</text>
+</a>
+</g>
+</g>
+<!-- module~solarshading&#45;&gt;proc~abortenergyplus -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge16" class="edge">
+<title>module~solarshading&#45;&gt;proc~abortenergyplus</title>
+<path fill="none" stroke="#00ff66" stroke-dasharray="5,2" d="M563.6431,-137.8577C588.1367,-139.5438 619.977,-144.6114 644.7151,-158.5328 665.8483,-170.4256 660.1363,-186.7046 680.7151,-199.5328 687.6115,-203.8319 695.386,-207.2619 703.281,-209.9959"/>
+<polygon fill="#00ff66" stroke="#00ff66" points="702.3315,-213.3659 712.92,-212.997 704.4126,-206.6824 702.3315,-213.3659"/>
+</g>
+<!-- proc~checkscheduledsurfacegains -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_node27" class="node">
+<title>proc~checkscheduledsurfacegains</title>
+<g id="a_module~~datadaylightingdevices~~UsedByGraph_node27"><a xlink:href="../proc/checkscheduledsurfacegains.html" xlink:title="CheckScheduledSurfaceGains">
+<polygon fill="#d9534f" stroke="#d9534f" points="835.7166,-190.5383 680.7146,-190.5383 680.7146,-168.5274 835.7166,-168.5274 835.7166,-190.5383"/>
+<text text-anchor="middle" x="758.2156" y="-176.3828" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">CheckScheduledSurfaceGains</text>
+</a>
+</g>
+</g>
+<!-- module~solarshading&#45;&gt;proc~checkscheduledsurfacegains -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge18" class="edge">
+<title>module~solarshading&#45;&gt;proc~checkscheduledsurfacegains</title>
+<path fill="none" stroke="#00ff66" stroke-dasharray="5,2" d="M563.631,-144.1233C586.9946,-148.2227 617.6067,-153.6297 644.7151,-158.5328 659.0548,-161.1265 674.4061,-163.9411 689.0373,-166.6419"/>
+<polygon fill="#00ff66" stroke="#00ff66" points="688.5605,-170.113 699.0302,-168.4893 689.8332,-163.2296 688.5605,-170.113"/>
+</g>
+<!-- proc~endenergyplus -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_node28" class="node">
+<title>proc~endenergyplus</title>
+<g id="a_module~~datadaylightingdevices~~UsedByGraph_node28"><a xlink:href="../proc/endenergyplus.html" xlink:title="EndEnergyPlus">
+<polygon fill="#d9534f" stroke="#d9534f" points="800.5936,-149.5383 715.8375,-149.5383 715.8375,-127.5274 800.5936,-127.5274 800.5936,-149.5383"/>
+<text text-anchor="middle" x="758.2156" y="-135.3828" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">EndEnergyPlus</text>
+</a>
+</g>
+</g>
+<!-- module~solarshading&#45;&gt;proc~endenergyplus -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge20" class="edge">
+<title>module~solarshading&#45;&gt;proc~endenergyplus</title>
+<path fill="none" stroke="#00ff66" stroke-dasharray="5,2" d="M563.4743,-137.6946C602.1146,-137.8609 662.5921,-138.1212 705.8974,-138.3076"/>
+<polygon fill="#00ff66" stroke="#00ff66" points="705.9464,-141.8078 715.9614,-138.351 705.9766,-134.8078 705.9464,-141.8078"/>
+</g>
+<!-- proc~closeoutputfiles -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_node29" class="node">
+<title>proc~closeoutputfiles</title>
+<g id="a_module~~datadaylightingdevices~~UsedByGraph_node29"><a xlink:href="../proc/closeoutputfiles.html" xlink:title="CloseOutputFiles">
+<polygon fill="#d9534f" stroke="#d9534f" points="804.2509,-108.5383 712.1802,-108.5383 712.1802,-86.5274 804.2509,-86.5274 804.2509,-108.5383"/>
+<text text-anchor="middle" x="758.2156" y="-94.3828" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">CloseOutputFiles</text>
+</a>
+</g>
+</g>
+<!-- module~solarshading&#45;&gt;proc~closeoutputfiles -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge21" class="edge">
+<title>module~solarshading&#45;&gt;proc~closeoutputfiles</title>
+<path fill="none" stroke="#00ff66" stroke-dasharray="5,2" d="M563.4743,-131.0617C600.9257,-124.6136 658.8911,-114.6337 701.8523,-107.237"/>
+<polygon fill="#00ff66" stroke="#00ff66" points="702.6161,-110.657 711.8772,-105.511 701.4283,-103.7585 702.6161,-110.657"/>
+</g>
+<!-- module~heatbalancesurfacemanager&#45;&gt;proc~calcheatbalanceinsidesurf -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge24" class="edge">
+<title>module~heatbalancesurfacemanager&#45;&gt;proc~calcheatbalanceinsidesurf</title>
+<path fill="none" stroke="#cc00ff" stroke-dasharray="5,2" d="M822.9437,-67.5855C827.685,-70.2552 832.0398,-73.5275 835.7161,-77.5328 914.1137,-162.9479 936.6151,-547.9688 941.0255,-643.1864"/>
+<polygon fill="#cc00ff" stroke="#cc00ff" points="937.5354,-643.4875 941.4762,-653.3221 944.5284,-643.1764 937.5354,-643.4875"/>
+</g>
+<!-- proc~manageheatbalance -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_node30" class="node">
+<title>proc~manageheatbalance</title>
+<g id="a_module~~datadaylightingdevices~~UsedByGraph_node30"><a xlink:href="../proc/manageheatbalance.html" xlink:title="ManageHeatBalance">
+<polygon fill="#d9534f" stroke="#d9534f" points="996.9867,-87.5383 886.85,-87.5383 886.85,-65.5274 996.9867,-65.5274 996.9867,-87.5383"/>
+<text text-anchor="middle" x="941.9183" y="-73.3828" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">ManageHeatBalance</text>
+</a>
+</g>
+</g>
+<!-- module~heatbalancesurfacemanager&#45;&gt;proc~manageheatbalance -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge25" class="edge">
+<title>module~heatbalancesurfacemanager&#45;&gt;proc~manageheatbalance</title>
+<path fill="none" stroke="#cc00ff" stroke-dasharray="5,2" d="M833.1995,-64.6964C847.6493,-66.2696 862.676,-67.9056 876.7819,-69.4413"/>
+<polygon fill="#cc00ff" stroke="#cc00ff" points="876.5489,-72.9366 886.869,-70.5395 877.3066,-65.9777 876.5489,-72.9366"/>
+</g>
+<!-- proc~resimulate -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_node31" class="node">
+<title>proc~resimulate</title>
+<g id="a_module~~datadaylightingdevices~~UsedByGraph_node31"><a xlink:href="../proc/resimulate.html" xlink:title="Resimulate">
+<polygon fill="#d9534f" stroke="#d9534f" points="973.9406,-46.5383 909.8961,-46.5383 909.8961,-24.5274 973.9406,-24.5274 973.9406,-46.5383"/>
+<text text-anchor="middle" x="941.9183" y="-32.3828" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Resimulate</text>
+</a>
+</g>
+</g>
+<!-- module~heatbalancesurfacemanager&#45;&gt;proc~resimulate -->
+<g id="module~~datadaylightingdevices~~UsedByGraph_edge26" class="edge">
+<title>module~heatbalancesurfacemanager&#45;&gt;proc~resimulate</title>
+<path fill="none" stroke="#cc00ff" stroke-dasharray="5,2" d="M833.1995,-47.961C855.7373,-45.3846 879.6783,-42.6478 899.3403,-40.4001"/>
+<polygon fill="#cc00ff" stroke="#cc00ff" points="899.9561,-43.8526 909.4939,-39.2394 899.1611,-36.8979 899.9561,-43.8526"/>
+</g>
+</g>
+</svg>
+</div>
+                <script>var panmoduledatadaylightingdevicesUsedByGraph = svgPanZoom('#moduledatadaylightingdevicesUsedByGraph', {
+                    zoomEnabled: true,
+                    controlIconsEnabled: true,
+                    fit: true,
+                    center: true,});
+                    </script>
+                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
+                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                      </div>
+                      <div class="modal-body">
+
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="484pt" height="31pt"
+ viewBox="0.00 0.00 483.85 30.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 26.5)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-26.5 479.8539,-26.5 479.8539,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-22.2554 0,-22.2554 0,-.2446 54,-.2446 54,-22.2554"/>
+<text text-anchor="middle" x="27" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="137.6205,-22.2554 72.3795,-22.2554 72.3795,-.2446 137.6205,-.2446 137.6205,-22.2554"/>
+<text text-anchor="middle" x="105" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="218.288,-22.2554 155.712,-22.2554 155.712,-.2446 218.288,-.2446 218.288,-22.2554"/>
+<text text-anchor="middle" x="187" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="290,-22.2554 236,-22.2554 236,-.2446 290,-.2446 290,-22.2554"/>
+<text text-anchor="middle" x="263" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="362,-22.2554 308,-22.2554 308,-.2446 362,-.2446 362,-22.2554"/>
+<text text-anchor="middle" x="335" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="475.7082,-22.2554 380.2918,-22.2554 380.2918,-.2446 475.7082,-.2446 475.7082,-22.2554"/>
+<text text-anchor="middle" x="428" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+
+    <p>Solid arrows point from a parent (sub)module to the submodule which is
+    descended from it. Dashed arrows point from a module being used to the
+    module or program unit using it. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+    <br>
+
+
+    <section class="visible-xs visible-sm hidden-md">
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../module/datadaylightingdevices.html#variable-maxtzones">MaxTZones</a>
+
+      <a class="list-group-item" href="../module/datadaylightingdevices.html#variable-numofangles">NumOfAngles</a>
+
+      <a class="list-group-item" href="../module/datadaylightingdevices.html#variable-visiblebeam">VisibleBeam</a>
+
+      <a class="list-group-item" href="../module/datadaylightingdevices.html#variable-solarbeam">SolarBeam</a>
+
+      <a class="list-group-item" href="../module/datadaylightingdevices.html#variable-solaraniso">SolarAniso</a>
+
+      <a class="list-group-item" href="../module/datadaylightingdevices.html#variable-solariso">SolarIso</a>
+
+      <a class="list-group-item" href="../module/datadaylightingdevices.html#variable-tddpipe">TDDPipe</a>
+
+      <a class="list-group-item" href="../module/datadaylightingdevices.html#variable-shelf%7E2">Shelf</a>
+
+      <a class="list-group-item" href="../module/datadaylightingdevices.html#variable-numoftddpipes">NumOfTDDPipes</a>
+
+      <a class="list-group-item" href="../module/datadaylightingdevices.html#variable-numofshelf">NumOfShelf</a>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#types-1">Derived Types</a></h3></div>
+  <div id="types-1" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../module/datadaylightingdevices.html#type-tddpipedata">TDDPipeData</a>
+
+      <a class="list-group-item" href="../module/datadaylightingdevices.html#type-shelfdata">ShelfData</a>
+
+    </div>
+  </div>
+</div>
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+
+    <section>
+    <h2>Variables</h2>
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-maxtzones"></span>integer,</td>
+
+  <td>public,</td>
+  <td>parameter</td><td>::</td>
+  <td><strong>MaxTZones</strong></td><td> =</td><td>10</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-numofangles"></span>integer,</td>
+
+  <td>public,</td>
+  <td>parameter</td><td>::</td>
+  <td><strong>NumOfAngles</strong></td><td> =</td><td>19</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-visiblebeam"></span>integer,</td>
+
+  <td>public,</td>
+  <td>parameter</td><td>::</td>
+  <td><strong>VisibleBeam</strong></td><td> =</td><td>1</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-solarbeam"></span>integer,</td>
+
+  <td>public,</td>
+  <td>parameter</td><td>::</td>
+  <td><strong>SolarBeam</strong></td><td> =</td><td>2</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-solaraniso"></span>integer,</td>
+
+  <td>public,</td>
+  <td>parameter</td><td>::</td>
+  <td><strong>SolarAniso</strong></td><td> =</td><td>3</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-solariso"></span>integer,</td>
+
+  <td>public,</td>
+  <td>parameter</td><td>::</td>
+  <td><strong>SolarIso</strong></td><td> =</td><td>4</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-tddpipe"></span>type(<a href='../type/tddpipedata.html'>TDDPipeData</a>),</td>
+
+  <td>public,</td>
+  <td>ALLOCATABLE, DIMENSION(:)</td><td>::</td>
+  <td><strong>TDDPipe</strong></td><td></td><td></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-shelf%7E2"></span>type(<a href='../type/shelfdata.html'>ShelfData</a>),</td>
+
+  <td>public,</td>
+  <td>ALLOCATABLE, DIMENSION(:)</td><td>::</td>
+  <td><strong>Shelf</strong></td><td></td><td></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-numoftddpipes"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>NumOfTDDPipes</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-numofshelf"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>NumOfShelf</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+
+
+    <section>
+     <h2>Derived Types</h2>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="type-tddpipedata"></span><h3>type, public :: <a href='../type/tddpipedata.html'>TDDPipeData</a>
+
+  </h3></div>
+  <div class="panel-body">
+
+
+     <h4>Components</h4>
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-name%7E53"></span>character(len=MaxNameLength),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>Name</strong></td><td> =</td><td>''</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-dome"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>Dome</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-diffuser"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>Diffuser</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-construction"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>Construction</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-diameter"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>Diameter</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-totlength"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>TotLength</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-reff"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>Reff</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-numoftzones"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>NumOfTZones</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-tzone"></span>integer,</td>
+
+  <td>public,</td>
+  <td>ALLOCATABLE, DIMENSION(:)</td><td>::</td>
+  <td><strong>TZone</strong></td><td></td><td></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-tzonelength"></span>real(kind=r64),</td>
+
+  <td>public,</td>
+  <td>ALLOCATABLE, DIMENSION(:)</td><td>::</td>
+  <td><strong>TZoneLength</strong></td><td></td><td></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-aspectratio%7E2"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>AspectRatio</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-reflectvis"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ReflectVis</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-reflectsol"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ReflectSol</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-pipetransvisbeam"></span>real(kind=r64),</td>
+
+  <td>public,</td>
+  <td>DIMENSION(NumOfAngles)</td><td>::</td>
+  <td><strong>PipeTransVisBeam</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-pipetranssolbeam"></span>real(kind=r64),</td>
+
+  <td>public,</td>
+  <td>DIMENSION(NumOfAngles)</td><td>::</td>
+  <td><strong>PipeTransSolBeam</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-transsoliso"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>TransSolIso</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-transsolhorizon"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>TransSolHorizon</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-extlength"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ExtLength</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-tzoneheatgain"></span>real(kind=r64),</td>
+
+  <td>public,</td>
+  <td>ALLOCATABLE, DIMENSION(:)</td><td>::</td>
+  <td><strong>TZoneHeatGain</strong></td><td></td><td></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-transmittedsolar"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>TransmittedSolar</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-pipeabsorbedsolar"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>PipeAbsorbedSolar</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-heatgain"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>HeatGain</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-heatloss"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>HeatLoss</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-transvisbeam"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>TransVisBeam</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-transsolbeam"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>TransSolBeam</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-transvisdiff"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>TransVisDiff</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-transsoldiff"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>TransSolDiff</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+  </div>
+</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="type-shelfdata"></span><h3>type, public :: <a href='../type/shelfdata.html'>ShelfData</a>
+
+  </h3></div>
+  <div class="panel-body">
+
+
+     <h4>Components</h4>
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-name%7E54"></span>character(len=MaxNameLength),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>Name</strong></td><td> =</td><td>''</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-window"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>Window</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-insurf"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>InSurf</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-outsurf"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>OutSurf</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-construction%7E2"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>Construction</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-outreflectvis"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>OutReflectVis</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-outreflectsol"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>OutReflectSol</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-viewfactor"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ViewFactor</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+  </div>
+</div>
+
+
+    </section>
+	<br>
+
+
+    </div>
+  </div>
+
+  <section class="visible-xs visible-sm hidden-md">
+    <hr>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allmods-1">All Modules</a></h3></div>
+  <div id="allmods-1" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../module/airflownetworkbalancemanager.html">AirflowNetworkBalanceManager</a>
+
+      <a class="list-group-item" href="../module/airflownetworksolver.html">AirflowNetworkSolver</a>
+
+      <a class="list-group-item" href="../module/baseboardelectric.html">BaseboardElectric</a>
+
+      <a class="list-group-item" href="../module/baseboardradiator.html">BaseboardRadiator</a>
+
+      <a class="list-group-item" href="../module/boilers.html">Boilers</a>
+
+      <a class="list-group-item" href="../module/boilersteam.html">BoilerSteam</a>
+
+      <a class="list-group-item" href="../module/branchinputmanager.html">BranchInputManager</a>
+
+      <a class="list-group-item" href="../module/branchnodeconnections.html">BranchNodeConnections</a>
+
+      <a class="list-group-item" href="../module/chillerabsorption.html">ChillerAbsorption</a>
+
+      <a class="list-group-item" href="../module/chillerelectriceir.html">ChillerElectricEIR</a>
+
+      <a class="list-group-item" href="../module/chillerexhaustabsorption.html">ChillerExhaustAbsorption</a>
+
+      <a class="list-group-item" href="../module/chillergasabsorption.html">ChillerGasAbsorption</a>
+
+      <a class="list-group-item" href="../module/chillerindirectabsorption.html">ChillerIndirectAbsorption</a>
+
+      <a class="list-group-item" href="../module/chillerreformulatedeir.html">ChillerReformulatedEIR</a>
+
+      <a class="list-group-item" href="../module/condenserlooptowers.html">CondenserLoopTowers</a>
+
+      <a class="list-group-item" href="../module/conductiontransferfunctioncalc.html">ConductionTransferFunctionCalc</a>
+
+      <a class="list-group-item" href="../module/convectioncoefficients.html">ConvectionCoefficients</a>
+
+      <a class="list-group-item" href="../module/cooltower.html">CoolTower</a>
+
+      <a class="list-group-item" href="../module/costestimatemanager.html">CostEstimateManager</a>
+
+      <a class="list-group-item" href="../module/crossventmgr.html">CrossVentMgr</a>
+
+      <a class="list-group-item" href="../module/ctelectricgenerator.html">CTElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/curvemanager.html">CurveManager</a>
+
+      <a class="list-group-item" href="../module/dataairflownetwork.html">DataAirflowNetwork</a>
+
+      <a class="list-group-item" href="../module/dataairloop.html">DataAirLoop</a>
+
+      <a class="list-group-item" href="../module/dataairsystems.html">DataAirSystems</a>
+
+      <a class="list-group-item" href="../module/databranchairloopplant.html">DataBranchAirLoopPlant</a>
+
+      <a class="list-group-item" href="../module/databranchnodeconnections.html">DataBranchNodeConnections</a>
+
+      <a class="list-group-item" href="../module/databsdfwindow.html">DataBSDFWindow</a>
+
+      <a class="list-group-item" href="../module/datacomplexfenestration.html">DataComplexFenestration</a>
+
+      <a class="list-group-item" href="../module/datacontaminantbalance.html">DataContaminantBalance</a>
+
+      <a class="list-group-item" href="../module/dataconvergparams.html">DataConvergParams</a>
+
+      <a class="list-group-item" href="../module/dataconversions.html">DataConversions</a>
+
+      <a class="list-group-item" href="../module/datacostestimate.html">DataCostEstimate</a>
+
+      <a class="list-group-item" href="../module/datadaylighting.html">DataDaylighting</a>
+
+      <a class="list-group-item" href="../module/datadaylightingdevices.html">DataDaylightingDevices</a>
+
+      <a class="list-group-item" href="../module/datadefineequip.html">DataDefineEquip</a>
+
+      <a class="list-group-item" href="../module/datadelight.html">DataDElight</a>
+
+      <a class="list-group-item" href="../module/dataenvironment.html">DataEnvironment</a>
+
+      <a class="list-group-item" href="../module/dataerrortracking.html">DataErrorTracking</a>
+
+      <a class="list-group-item" href="../module/datagenerators.html">DataGenerators</a>
+
+      <a class="list-group-item" href="../module/dataglobalconstants.html">DataGlobalConstants</a>
+
+      <a class="list-group-item" href="../module/dataglobals.html">DataGlobals</a>
+
+      <a class="list-group-item" href="../module/dataheatbalance.html">DataHeatBalance</a>
+
+      <a class="list-group-item" href="../module/dataheatbalfansys.html">DataHeatBalFanSys</a>
+
+      <a class="list-group-item" href="../module/dataheatbalsurface.html">DataHeatBalSurface</a>
+
+      <a class="list-group-item" href="../module/datahvaccontrollers.html">DataHVACControllers</a>
+
+      <a class="list-group-item" href="../module/datahvacglobals.html">DataHVACGlobals</a>
+
+      <a class="list-group-item" href="../module/datainterfaces.html">DataInterfaces</a>
+
+      <a class="list-group-item" href="../module/dataipshortcuts.html">DataIPShortCuts</a>
+
+      <a class="list-group-item" href="../module/dataloopnode.html">DataLoopNode</a>
+
+      <a class="list-group-item" href="../module/datamoisturebalance.html">DataMoistureBalance</a>
+
+      <a class="list-group-item" href="../module/datamoisturebalanceempd.html">DataMoistureBalanceEMPD</a>
+
+      <a class="list-group-item" href="../module/dataoutputs.html">DataOutputs</a>
+
+      <a class="list-group-item" href="../module/dataphotovoltaics.html">DataPhotovoltaics</a>
+
+      <a class="list-group-item" href="../module/dataplant.html">DataPlant</a>
+
+      <a class="list-group-item" href="../module/dataplantpipingsystems.html">DataPlantPipingSystems</a>
+
+      <a class="list-group-item" href="../module/dataprecisionglobals.html">DataPrecisionGlobals</a>
+
+      <a class="list-group-item" href="../module/datareportingflags.html">DataReportingFlags</a>
+
+      <a class="list-group-item" href="../module/dataroomairmodel.html">DataRoomAirModel</a>
+
+      <a class="list-group-item" href="../module/datarootfinder.html">DataRootFinder</a>
+
+      <a class="list-group-item" href="../module/dataruntimelanguage.html">DataRuntimeLanguage</a>
+
+      <a class="list-group-item" href="../module/datashadowingcombinations.html">DataShadowingCombinations</a>
+
+      <a class="list-group-item" href="../module/datasizing.html">DataSizing</a>
+
+      <a class="list-group-item" href="../module/datastringglobals.html">DataStringGlobals</a>
+
+      <a class="list-group-item" href="../module/datasurfacecolors.html">DataSurfaceColors</a>
+
+      <a class="list-group-item" href="../module/datasurfacelists.html">DataSurfaceLists</a>
+
+      <a class="list-group-item" href="../module/datasurfaces.html">DataSurfaces</a>
+
+      <a class="list-group-item" href="../module/datasystemvariables.html">DataSystemVariables</a>
+
+      <a class="list-group-item" href="../module/datatimings.html">DataTimings</a>
+
+      <a class="list-group-item" href="../module/dataucsdshareddata.html">DataUCSDSharedData</a>
+
+      <a class="list-group-item" href="../module/datavectortypes.html">DataVectorTypes</a>
+
+      <a class="list-group-item" href="../module/dataviewfactorinformation.html">DataViewFactorInformation</a>
+
+      <a class="list-group-item" href="../module/datawater.html">DataWater</a>
+
+      <a class="list-group-item" href="../module/datawindowequivalentlayer.html">DataWindowEquivalentLayer</a>
+
+      <a class="list-group-item" href="../module/datazonecontrols.html">DataZoneControls</a>
+
+      <a class="list-group-item" href="../module/datazoneenergydemands.html">DataZoneEnergyDemands</a>
+
+      <a class="list-group-item" href="../module/datazoneequipment.html">DataZoneEquipment</a>
+
+      <a class="list-group-item" href="../module/daylightingdevices.html">DaylightingDevices</a>
+
+      <a class="list-group-item" href="../module/daylightingmanager.html">DaylightingManager</a>
+
+      <a class="list-group-item" href="../module/delightmanagerf%7E2.html">DELIGHTMANAGERF</a>
+
+      <a class="list-group-item" href="../module/delightmanagerf.html">DELIGHTMANAGERF</a>
+
+      <a class="list-group-item" href="../module/demandmanager.html">DemandManager</a>
+
+      <a class="list-group-item" href="../module/desiccantdehumidifiers.html">DesiccantDehumidifiers</a>
+
+      <a class="list-group-item" href="../module/directairmanager.html">DirectAirManager</a>
+
+      <a class="list-group-item" href="../module/displacementventmgr.html">DisplacementVentMgr</a>
+
+      <a class="list-group-item" href="../module/dualduct.html">DualDuct</a>
+
+      <a class="list-group-item" href="../module/dxcoils.html">DXCoils</a>
+
+      <a class="list-group-item" href="../module/dxfearclipping.html">DXFEarClipping</a>
+
+      <a class="list-group-item" href="../module/earthtube.html">EarthTube</a>
+
+      <a class="list-group-item" href="../module/economiclifecyclecost.html">EconomicLifeCycleCost</a>
+
+      <a class="list-group-item" href="../module/economictariff.html">EconomicTariff</a>
+
+      <a class="list-group-item" href="../module/ecoroofmanager.html">EcoRoofManager</a>
+
+      <a class="list-group-item" href="../module/electricbaseboardradiator.html">ElectricBaseboardRadiator</a>
+
+      <a class="list-group-item" href="../module/emsmanager.html">EMSManager</a>
+
+      <a class="list-group-item" href="../module/evaporativecoolers.html">EvaporativeCoolers</a>
+
+      <a class="list-group-item" href="../module/evaporativefluidcoolers.html">EvaporativeFluidCoolers</a>
+
+      <a class="list-group-item" href="../module/exteriorenergyuse.html">ExteriorEnergyUse</a>
+
+      <a class="list-group-item" href="../module/externalinterface.html">ExternalInterface</a>
+
+      <a class="list-group-item" href="../module/fancoilunits.html">FanCoilUnits</a>
+
+      <a class="list-group-item" href="../module/fans.html">Fans</a>
+
+      <a class="list-group-item" href="../module/faultsmanager.html">FaultsManager</a>
+
+      <a class="list-group-item" href="../module/fluidcoolers.html">FluidCoolers</a>
+
+      <a class="list-group-item" href="../module/fluidproperties.html">FluidProperties</a>
+
+      <a class="list-group-item" href="../module/fuelcellelectricgenerator.html">FuelCellElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/furnaces.html">Furnaces</a>
+
+      <a class="list-group-item" href="../module/general.html">General</a>
+
+      <a class="list-group-item" href="../module/generatordynamicsmanager.html">GeneratorDynamicsManager</a>
+
+      <a class="list-group-item" href="../module/generatorfuelsupply.html">GeneratorFuelSupply</a>
+
+      <a class="list-group-item" href="../module/globalnames.html">GlobalNames</a>
+
+      <a class="list-group-item" href="../module/groundheatexchangers.html">GroundHeatExchangers</a>
+
+      <a class="list-group-item" href="../module/heatbalanceairmanager.html">HeatBalanceAirManager</a>
+
+      <a class="list-group-item" href="../module/heatbalancehamtmanager.html">HeatBalanceHAMTManager</a>
+
+      <a class="list-group-item" href="../module/heatbalanceintradexchange.html">HeatBalanceIntRadExchange</a>
+
+      <a class="list-group-item" href="../module/heatbalancemanager.html">HeatBalanceManager</a>
+
+      <a class="list-group-item" href="../module/heatbalancemovableinsulation.html">HeatBalanceMovableInsulation</a>
+
+      <a class="list-group-item" href="../module/heatbalancesurfacemanager.html">HeatBalanceSurfaceManager</a>
+
+      <a class="list-group-item" href="../module/heatbalfinitediffmanager.html">HeatBalFiniteDiffManager</a>
+
+      <a class="list-group-item" href="../module/heatingcoils.html">HeatingCoils</a>
+
+      <a class="list-group-item" href="../module/heatpumpwatertowatercooling.html">HeatPumpWaterToWaterCOOLING</a>
+
+      <a class="list-group-item" href="../module/heatpumpwatertowaterheating.html">HeatPumpWaterToWaterHEATING</a>
+
+      <a class="list-group-item" href="../module/heatpumpwatertowatersimple.html">HeatPumpWaterToWaterSimple</a>
+
+      <a class="list-group-item" href="../module/heatrecovery.html">HeatRecovery</a>
+
+      <a class="list-group-item" href="../module/hightempradiantsystem.html">HighTempRadiantSystem</a>
+
+      <a class="list-group-item" href="../module/humidifiers.html">Humidifiers</a>
+
+      <a class="list-group-item" href="../module/hvaccontrollers.html">HVACControllers</a>
+
+      <a class="list-group-item" href="../module/hvaccooledbeam.html">HVACCooledBeam</a>
+
+      <a class="list-group-item" href="../module/hvacduct.html">HVACDuct</a>
+
+      <a class="list-group-item" href="../module/hvacdxheatpumpsystem.html">HVACDXHeatPumpSystem</a>
+
+      <a class="list-group-item" href="../module/hvacdxsystem.html">HVACDXSystem</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html">HVACHXAssistedCoolingCoil</a>
+
+      <a class="list-group-item" href="../module/hvacinterfacemanager.html">HVACInterfaceManager</a>
+
+      <a class="list-group-item" href="../module/hvacmanager.html">HVACManager</a>
+
+      <a class="list-group-item" href="../module/hvacmultispeedheatpump.html">HVACMultiSpeedHeatPump</a>
+
+      <a class="list-group-item" href="../module/hvacsingleductinduc.html">HVACSingleDuctInduc</a>
+
+      <a class="list-group-item" href="../module/hvacstandaloneerv.html">HVACStandAloneERV</a>
+
+      <a class="list-group-item" href="../module/hvacunitarybypassvav.html">HVACUnitaryBypassVAV</a>
+
+      <a class="list-group-item" href="../module/hvacunitarysystem.html">HVACUnitarySystem</a>
+
+      <a class="list-group-item" href="../module/hvacvariablerefrigerantflow.html">HVACVariableRefrigerantFlow</a>
+
+      <a class="list-group-item" href="../module/hwbaseboardradiator.html">HWBaseboardRadiator</a>
+
+      <a class="list-group-item" href="../module/icengineelectricgenerator.html">ICEngineElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/icethermalstorage.html">IceThermalStorage</a>
+
+      <a class="list-group-item" href="../module/inputprocessor.html">InputProcessor</a>
+
+      <a class="list-group-item" href="../module/internalheatgains.html">InternalHeatGains</a>
+
+      <a class="list-group-item" href="../module/iso_c_function_binding.html">ISO_C_FUNCTION_BINDING</a>
+
+      <a class="list-group-item" href="../module/iso_c_function_binding%7E2.html">ISO_C_FUNCTION_BINDING</a>
+
+      <a class="list-group-item" href="../module/lowtempradiantsystem.html">LowTempRadiantSystem</a>
+
+      <a class="list-group-item" href="../module/manageelectricpower.html">ManageElectricPower</a>
+
+      <a class="list-group-item" href="../module/matrixdatamanager.html">MatrixDataManager</a>
+
+      <a class="list-group-item" href="../module/microchpelectricgenerator.html">MicroCHPElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/microturbineelectricgenerator.html">MicroturbineElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/mixedair.html">MixedAir</a>
+
+      <a class="list-group-item" href="../module/mixercomponent.html">MixerComponent</a>
+
+      <a class="list-group-item" href="../module/moisturebalanceempdmanager.html">MoistureBalanceEMPDManager</a>
+
+      <a class="list-group-item" href="../module/mundtsimmgr.html">MundtSimMgr</a>
+
+      <a class="list-group-item" href="../module/nodeinputmanager.html">NodeInputManager</a>
+
+      <a class="list-group-item" href="../module/nonzoneequipmentmanager.html">NonZoneEquipmentManager</a>
+
+      <a class="list-group-item" href="../module/outairnodemanager.html">OutAirNodeManager</a>
+
+      <a class="list-group-item" href="../module/outdoorairunit.html">OutdoorAirUnit</a>
+
+      <a class="list-group-item" href="../module/outputprocessor.html">OutputProcessor</a>
+
+      <a class="list-group-item" href="../module/outputreportpredefined.html">OutputReportPredefined</a>
+
+      <a class="list-group-item" href="../module/outputreporttabular.html">OutputReportTabular</a>
+
+      <a class="list-group-item" href="../module/outsideenergysources.html">OutsideEnergySources</a>
+
+      <a class="list-group-item" href="../module/packagedterminalheatpump.html">PackagedTerminalHeatPump</a>
+
+      <a class="list-group-item" href="../module/packagedthermalstoragecoil.html">PackagedThermalStorageCoil</a>
+
+      <a class="list-group-item" href="../module/photovoltaics.html">Photovoltaics</a>
+
+      <a class="list-group-item" href="../module/photovoltaicthermalcollectors.html">PhotovoltaicThermalCollectors</a>
+
+      <a class="list-group-item" href="../module/pipeheattransfer.html">PipeHeatTransfer</a>
+
+      <a class="list-group-item" href="../module/pipes.html">Pipes</a>
+
+      <a class="list-group-item" href="../module/plantcentralgshp.html">PlantCentralGSHP</a>
+
+      <a class="list-group-item" href="../module/plantchillers.html">PlantChillers</a>
+
+      <a class="list-group-item" href="../module/plantcomponenttemperaturesources.html">PlantComponentTemperatureSources</a>
+
+      <a class="list-group-item" href="../module/plantcondloopoperation.html">PlantCondLoopOperation</a>
+
+      <a class="list-group-item" href="../module/plantheatexchangerfluidtofluid.html">PlantHeatExchangerFluidToFluid</a>
+
+      <a class="list-group-item" href="../module/plantloadprofile.html">PlantLoadProfile</a>
+
+      <a class="list-group-item" href="../module/plantloopequip.html">PlantLoopEquip</a>
+
+      <a class="list-group-item" href="../module/plantloopsolver.html">PlantLoopSolver</a>
+
+      <a class="list-group-item" href="../module/plantmanager.html">PlantManager</a>
+
+      <a class="list-group-item" href="../module/plantpipingsystemsmanager.html">PlantPipingSystemsManager</a>
+
+      <a class="list-group-item" href="../module/plantpressuresystem.html">PlantPressureSystem</a>
+
+      <a class="list-group-item" href="../module/plantutilities.html">PlantUtilities</a>
+
+      <a class="list-group-item" href="../module/plantvalves.html">PlantValves</a>
+
+      <a class="list-group-item" href="../module/pollutionmodule.html">PollutionModule</a>
+
+      <a class="list-group-item" href="../module/pondgroundheatexchanger.html">PondGroundHeatExchanger</a>
+
+      <a class="list-group-item" href="../module/poweredinductionunits.html">PoweredInductionUnits</a>
+
+      <a class="list-group-item" href="../module/psychrometrics.html">Psychrometrics</a>
+
+      <a class="list-group-item" href="../module/pumps.html">Pumps</a>
+
+      <a class="list-group-item" href="../module/purchasedairmanager.html">PurchasedAirManager</a>
+
+      <a class="list-group-item" href="../module/refrigeratedcase.html">RefrigeratedCase</a>
+
+      <a class="list-group-item" href="../module/reportsizingmanager.html">ReportSizingManager</a>
+
+      <a class="list-group-item" href="../module/returnairpathmanager.html">ReturnAirPathManager</a>
+
+      <a class="list-group-item" href="../module/roomairmodelmanager.html">RoomAirModelManager</a>
+
+      <a class="list-group-item" href="../module/roomairmodelusertemppattern.html">RoomAirModelUserTempPattern</a>
+
+      <a class="list-group-item" href="../module/rootfinder.html">RootFinder</a>
+
+      <a class="list-group-item" href="../module/runtimelanguageprocessor.html">RuntimeLanguageProcessor</a>
+
+      <a class="list-group-item" href="../module/schedulemanager.html">ScheduleManager</a>
+
+      <a class="list-group-item" href="../module/setpointmanager.html">SetPointManager</a>
+
+      <a class="list-group-item" href="../module/simairservingzones.html">SimAirServingZones</a>
+
+      <a class="list-group-item" href="../module/simulationmanager.html">SimulationManager</a>
+
+      <a class="list-group-item" href="../module/singleduct.html">SingleDuct</a>
+
+      <a class="list-group-item" href="../module/sizingmanager.html">SizingManager</a>
+
+      <a class="list-group-item" href="../module/solarcollectors.html">SolarCollectors</a>
+
+      <a class="list-group-item" href="../module/solarreflectionmanager.html">SolarReflectionManager</a>
+
+      <a class="list-group-item" href="../module/solarshading.html">SolarShading</a>
+
+      <a class="list-group-item" href="../module/sortandstringutilities.html">SortAndStringUtilities</a>
+
+      <a class="list-group-item" href="../module/splittercomponent.html">SplitterComponent</a>
+
+      <a class="list-group-item" href="../module/sqliteprocedures%7E2.html">SQLiteProcedures</a>
+
+      <a class="list-group-item" href="../module/sqliteprocedures.html">SQLiteProcedures</a>
+
+      <a class="list-group-item" href="../module/standardratings.html">StandardRatings</a>
+
+      <a class="list-group-item" href="../module/steambaseboardradiator.html">SteamBaseboardRadiator</a>
+
+      <a class="list-group-item" href="../module/steamcoils.html">SteamCoils</a>
+
+      <a class="list-group-item" href="../module/surfacegeometry.html">SurfaceGeometry</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html">SurfaceGroundHeatExchanger</a>
+
+      <a class="list-group-item" href="../module/systemavailabilitymanager.html">SystemAvailabilityManager</a>
+
+      <a class="list-group-item" href="../module/systemreports.html">SystemReports</a>
+
+      <a class="list-group-item" href="../module/tarcogargs.html">TARCOGArgs</a>
+
+      <a class="list-group-item" href="../module/tarcogcommon.html">TARCOGCommon</a>
+
+      <a class="list-group-item" href="../module/tarcogdeflection.html">TARCOGDeflection</a>
+
+      <a class="list-group-item" href="../module/tarcoggasses90.html">TARCOGGasses90</a>
+
+      <a class="list-group-item" href="../module/tarcoggassesparams.html">TARCOGGassesParams</a>
+
+      <a class="list-group-item" href="../module/tarcogmain.html">TARCOGMain</a>
+
+      <a class="list-group-item" href="../module/tarcogoutput.html">TARCOGOutput</a>
+
+      <a class="list-group-item" href="../module/tarcogparams.html">TARCOGParams</a>
+
+      <a class="list-group-item" href="../module/tarcogshading.html">TarcogShading</a>
+
+      <a class="list-group-item" href="../module/thermalchimney.html">ThermalChimney</a>
+
+      <a class="list-group-item" href="../module/thermalcomfort.html">ThermalComfort</a>
+
+      <a class="list-group-item" href="../module/thermalen673calc.html">ThermalEN673Calc</a>
+
+      <a class="list-group-item" href="../module/thermaliso15099calc.html">ThermalISO15099Calc</a>
+
+      <a class="list-group-item" href="../module/transpiredcollector.html">TranspiredCollector</a>
+
+      <a class="list-group-item" href="../module/ufadmanager.html">UFADManager</a>
+
+      <a class="list-group-item" href="../module/unitheater.html">UnitHeater</a>
+
+      <a class="list-group-item" href="../module/unitventilator.html">UnitVentilator</a>
+
+      <a class="list-group-item" href="../module/userdefinedcomponents.html">UserDefinedComponents</a>
+
+      <a class="list-group-item" href="../module/variablespeedcoils.html">VariableSpeedCoils</a>
+
+      <a class="list-group-item" href="../module/vectors.html">vectors</a>
+
+      <a class="list-group-item" href="../module/ventilatedslab.html">VentilatedSlab</a>
+
+      <a class="list-group-item" href="../module/watercoils.html">WaterCoils</a>
+
+      <a class="list-group-item" href="../module/watermanager.html">WaterManager</a>
+
+      <a class="list-group-item" href="../module/waterthermaltanks.html">WaterThermalTanks</a>
+
+      <a class="list-group-item" href="../module/watertoairheatpump.html">WatertoAirHeatPump</a>
+
+      <a class="list-group-item" href="../module/watertoairheatpumpsimple.html">WatertoAirHeatPumpSimple</a>
+
+      <a class="list-group-item" href="../module/wateruse.html">WaterUse</a>
+
+      <a class="list-group-item" href="../module/weathermanager.html">WeatherManager</a>
+
+      <a class="list-group-item" href="../module/windowac.html">WindowAC</a>
+
+      <a class="list-group-item" href="../module/windowcomplexmanager.html">WindowComplexManager</a>
+
+      <a class="list-group-item" href="../module/windowequivalentlayer.html">WindowEquivalentLayer</a>
+
+      <a class="list-group-item" href="../module/windowmanager.html">WindowManager</a>
+
+      <a class="list-group-item" href="../module/windturbine.html">WindTurbine</a>
+
+      <a class="list-group-item" href="../module/zoneairloopequipmentmanager.html">ZoneAirLoopEquipmentManager</a>
+
+      <a class="list-group-item" href="../module/zonecontaminantpredictorcorrector.html">ZoneContaminantPredictorCorrector</a>
+
+      <a class="list-group-item" href="../module/zonedehumidifier.html">ZoneDehumidifier</a>
+
+      <a class="list-group-item" href="../module/zoneequipmentmanager.html">ZoneEquipmentManager</a>
+
+      <a class="list-group-item" href="../module/zoneplenum.html">ZonePlenum</a>
+
+      <a class="list-group-item" href="../module/zonetemppredictorcorrector.html">ZoneTempPredictorCorrector</a>
+
+    </div>
+  </div>
+</div>
+
+
+  </section>
+
+    <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2017 </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> EnergyPlusFortran</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js'],
+        'HTML-CSS': {
+           styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#000000 ! important'} }
+        }
+      });
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>

@@ -1,0 +1,2335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	 <meta name="description" content="">
+
+    <meta name="author" content="dmey (forked from NREL)" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>DataDaylighting.f90 &ndash; EnergyPlusFortran</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">EnergyPlusFortran <small>8.1.0.009</small></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+		 aria-expanded="false">Contents <span class="caret"></span></a>
+	      <ul class="dropdown-menu">
+
+            <li><a href="../lists/files.html">Source Files</a></li>
+
+
+            <li><a href="../lists/modules.html">Modules</a></li>
+
+
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+
+
+            <li><a href="../lists/types.html">Derived Types</a></li>
+
+
+            <li><a href="../program/energyplus.html">Program</a></li>
+
+            </ul>
+            </li>
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/energyplus.html">Program</a></li>
+
+          </ul>
+
+
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+
+  <div class="row">
+    <h1>DataDaylighting.f90
+    <small>Source File</small>
+
+    </h1>
+
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+	  data-placement="bottom" data-html="true"
+	  title=" 0.0% of total for source files.">125 statements</a>
+     </li>
+
+
+    <li><i class="fa fa-code"></i><a href="../src/DataDaylighting.f90"> Source File</a></li>
+
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+
+     <li class="active">DataDaylighting.f90</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+
+<div id="sidebar">
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#mods-0">Modules</a></h3></div>
+  <div id="mods-0" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../module/datadaylighting.html">DataDaylighting</a>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/datadaylighting.f90.html#src">DataDaylighting.f90</a>
+  </div>
+</div>
+
+
+  <hr>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allfiles-0">All Source Files</a></h3></div>
+  <div id="allfiles-0" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../sourcefile/airflownetworkbalancemanager.f90.html">AirflowNetworkBalanceManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/airflownetworksolver.f90.html">AirflowNetworkSolver.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/baseboardradiator.f90.html">BaseboardRadiator.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/baseboardradiatorelectric.f90.html">BaseboardRadiatorElectric.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/baseboardradiatorsteam.f90.html">BaseboardRadiatorSteam.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/baseboardradiatorwater.f90.html">BaseboardRadiatorWater.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/branchinputmanager.f90.html">BranchInputManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/branchnodeconnections.f90.html">BranchNodeConnections.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/conductiontransferfunctioncalc.f90.html">ConductionTransferFunctionCalc.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/cooltower.f90.html">CoolTower.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/costestimatemanager.f90.html">CostEstimateManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/curvemanager.f90.html">CurveManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/cvfonlyroutines.f90.html">CVFOnlyRoutines.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataairflownetwork.f90.html">DataAirflowNetwork.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataairloop.f90.html">DataAirLoop.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataairsystems.f90.html">DataAirSystems.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/databranchairloopplant.f90.html">DataBranchAirLoopPlant.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/databranchnodeconnections.f90.html">DataBranchNodeConnections.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/databsdfwindow.f90.html">DataBSDFWindow.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datacomplexfenestration.f90.html">DataComplexFenestration.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datacontaminantbalance.f90.html">DataContaminantBalance.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataconvergparams.f90.html">DataConvergParams.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataconversions.f90.html">DataConversions.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datacostestimate.f90.html">DataCostEstimate.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datadaylighting.f90.html">DataDaylighting.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datadaylightingdevices.f90.html">DataDaylightingDevices.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datadefineequip.f90.html">Datadefineequip.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datadelight.f90.html">DataDElight.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataenvironment.f90.html">DataEnvironment.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataequivalentlayerwindow.f90.html">DataEquivalentLayerWindow.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataerrortracking.f90.html">DataErrorTracking.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datagenerators.f90.html">DataGenerators.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataglobalconstants.f90.html">DataGlobalConstants.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataglobals.f90.html">DataGlobals.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataheatbalance.f90.html">DataHeatBalance.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataheatbalfansys.f90.html">DataHeatBalFanSys.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataheatbalsurface.f90.html">DataHeatBalSurface.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datahvaccontrollers.f90.html">DataHVACControllers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datahvacglobals.f90.html">DataHVACGlobals.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datainterfaces.f90.html">DataInterfaces.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataipshortcuts.f90.html">DataIPShortCuts.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataloopnode.f90.html">DataLoopNode.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datamoisturebalance.f90.html">DataMoistureBalance.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datamoisturebalanceempd.f90.html">DataMoistureBalanceEMPD.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataoutputs.f90.html">DataOutputs.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataphotovoltaics.f90.html">DataPhotovoltaics.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataplant.f90.html">DataPlant.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataplantpipingsystems.f90.html">DataPlantPipingSystems.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataprecisionglobals.f90.html">DataPrecisionGlobals.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datareportingflags.f90.html">DataReportingFlags.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataroomair.f90.html">DataRoomAir.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datarootfinder.f90.html">DataRootFinder.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataruntimelanguage.f90.html">DataRuntimeLanguage.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datashadowingcombinations.f90.html">DataShadowingCombinations.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datasizing.f90.html">DataSizing.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datastringglobals.f90.html">DataStringGlobals.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datasurfacecolors.f90.html">DataSurfaceColors.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datasurfacelists.f90.html">DataSurfaceLists.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datasurfaces.f90.html">DataSurfaces.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datasystemvariables.f90.html">DataSystemVariables.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datatimings.f90.html">DataTimings.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataucsdshareddata.f90.html">DataUCSDSharedData.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datavectortypes.f90.html">DataVectorTypes.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataviewfactorinformation.f90.html">DataViewFactorInformation.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datawater.f90.html">DataWater.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datazonecontrols.f90.html">DataZoneControls.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datazoneenergydemands.f90.html">DataZoneEnergyDemands.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datazoneequipment.f90.html">DataZoneEquipment.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/daylightingdevices.f90.html">DaylightingDevices.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/daylightingmanager.f90.html">DaylightingManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/delightmanagerf.f90.html">DElightManagerF.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/delightmanagerf_no.f90.html">DElightManagerF_NO.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/demandmanager.f90.html">DemandManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/desiccantdehumidifiers.f90.html">DesiccantDehumidifiers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/directair.f90.html">DirectAir.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/displayroutines.f90.html">DisplayRoutines.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dxcoil.f90.html">DXCoil.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/earthtube.f90.html">EarthTube.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/economiclifecyclecost.f90.html">EconomicLifeCycleCost.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/economictariff.f90.html">EconomicTariff.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/ecoroof.f90.html">EcoRoof.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/electricpowergenerators.f90.html">ElectricPowerGenerators.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/electricpowermanager.f90.html">ElectricPowerManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/emsmanager.f90.html">EMSManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/energyplus.f90.html">EnergyPlus.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/exteriorenergyusemanager.f90.html">ExteriorEnergyUseManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/externalinterface_no.f90.html">ExternalInterface_NO.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/fancoilunits.f90.html">FanCoilUnits.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/faultsmanager.f90.html">FaultsManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/fluidproperties.f90.html">FluidProperties.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/general.f90.html">General.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/generalroutines.f90.html">GeneralRoutines.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/globalnames.f90.html">GlobalNames.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalanceairmanager.f90.html">HeatBalanceAirManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalanceconvectioncoeffs.f90.html">HeatBalanceConvectionCoeffs.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalancehamtmanager.f90.html">HeatBalanceHAMTManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalanceinternalheatgains.f90.html">HeatBalanceInternalHeatGains.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalanceintradexchange.f90.html">HeatBalanceIntRadExchange.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalancemanager.f90.html">HeatBalanceManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalancemovableinsulation.f90.html">HeatBalanceMovableInsulation.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalancesurfacemanager.f90.html">HeatBalanceSurfaceManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalfinitedifferencemanager.f90.html">HeatBalFiniteDifferenceManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatrecovery.f90.html">HeatRecovery.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/humidifiers.f90.html">Humidifiers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvaccontrollers.f90.html">HVACControllers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvaccooledbeam.f90.html">HVACCooledBeam.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacdualductsystem.f90.html">HVACDualDuctSystem.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacduct.f90.html">HVACDuct.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacdxsystem.f90.html">HVACDXSystem.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacevapcomponent.f90.html">HVACEvapComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacfancomponent.f90.html">HVACFanComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacfurnace.f90.html">HVACFurnace.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacheatingcoils.f90.html">HVACHeatingCoils.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvachxassistedcoolingcoil.f90.html">HVACHXAssistedCoolingCoil.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacinterfacemanager.f90.html">HVACInterfaceManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacmanager.f90.html">HVACManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacmixercomponent.f90.html">HVACMixerComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacmultispeedheatpump.f90.html">HVACMultiSpeedHeatPump.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacsingleductinduc.f90.html">HVACSingleDuctInduc.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacsingleductsystem.f90.html">HVACSingleDuctSystem.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacsplittercomponent.f90.html">HVACSplitterComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacstandaloneerv.f90.html">HVACStandAloneERV.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacsteamcoilcomponent.f90.html">HVACSteamCoilComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvactranspiredcollector.f90.html">HVACTranspiredCollector.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacunitarybypassvav.f90.html">HVACUnitaryBypassVAV.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacunitarysystem.f90.html">HVACUnitarySystem.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacvariablerefrigerantflow.f90.html">HVACVariableRefrigerantFlow.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacwatercoilcomponent.f90.html">HVACWaterCoilComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacwatertoair.f90.html">HVACWatertoAir.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacwatertoairmultispeedhp.f90.html">HVACWatertoAirMultiSpeedHP.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/inputprocessor.f90.html">InputProcessor.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/matrixdatamanager.f90.html">MatrixDataManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/mixedair.f90.html">MixedAir.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/moisturebalanceempdmanager.f90.html">MoistureBalanceEMPDManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/nodeinputmanager.f90.html">NodeInputManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/nonzoneequipmentmanager.f90.html">NonZoneEquipmentManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/outairnodemanager.f90.html">OutAirNodeManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/outdoorairunit.f90.html">OutdoorAirUnit.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/outputprocessor.f90.html">OutputProcessor.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/outputreportpredefined.f90.html">OutputReportPredefined.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/outputreports.f90.html">OutputReports.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/outputreporttabular.f90.html">OutputReportTabular.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/packagedterminalheatpump.f90.html">PackagedTerminalHeatPump.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/packagedthermalstoragecoil.f90.html">PackagedThermalStorageCoil.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/photovoltaics.f90.html">Photovoltaics.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/photovoltaicthermalcollectors.f90.html">PhotovoltaicThermalCollectors.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantabsorptionchillers.f90.html">PlantAbsorptionChillers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantboilers.f90.html">PlantBoilers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantboilerssteam.f90.html">PlantBoilersSteam.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantcentralgshp.f90.html">PlantCentralGSHP.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantchillers.f90.html">PlantChillers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantcondloopoperation.f90.html">PlantCondLoopOperation.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantcondlooptowers.f90.html">PlantCondLoopTowers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/planteirchillers.f90.html">PlantEIRChillers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantevapfluidcoolers.f90.html">PlantEvapFluidCoolers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantexhaustabsorptionchiller.f90.html">PlantExhaustAbsorptionChiller.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantfluidcoolers.f90.html">PlantFluidCoolers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantgasabsorptionchiller.f90.html">PlantGasAbsorptionChiller.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantgroundheatexchangers.f90.html">PlantGroundHeatExchangers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantheatexchanger.f90.html">PlantHeatExchanger.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/planticethermalstorage.f90.html">PlantIceThermalStorage.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantloadprofile.f90.html">PlantLoadProfile.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantloopequipment.f90.html">PlantLoopEquipment.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantloopsolver.f90.html">PlantLoopSolver.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantmanager.f90.html">PlantManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantoutsideenergysources.f90.html">PlantOutsideEnergySources.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantpipeheattransfer.f90.html">PlantPipeHeatTransfer.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantpipes.f90.html">PlantPipes.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantpipingsystemmanager.f90.html">PlantPipingSystemManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantpondgroundheatexchanger.f90.html">PlantPondGroundHeatExchanger.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantpressuresystem.f90.html">PlantPressureSystem.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantpumps.f90.html">PlantPumps.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantsolarcollectors.f90.html">PlantSolarCollectors.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantsurfacegroundheatexchanger.f90.html">PlantSurfaceGroundHeatExchanger.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantutilities.f90.html">PlantUtilities.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantvalves.f90.html">PlantValves.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantwatersources.f90.html">PlantWaterSources.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantwaterthermaltank.f90.html">PlantWaterThermalTank.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantwatertowatergshp.f90.html">PlantWatertoWaterGSHP.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantwateruse.f90.html">PlantWaterUse.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/pollutionanalysismodule.f90.html">PollutionAnalysisModule.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/poweredinductionunits.f90.html">PoweredInductionUnits.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/psychroutines.f90.html">PsychRoutines.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/purchasedairmanager.f90.html">Purchasedairmanager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/radiantsystemhightemp.f90.html">RadiantSystemHighTemp.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/radiantsystemlowtemp.f90.html">RadiantSystemLowTemp.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/refrigeratedcase.f90.html">RefrigeratedCase.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/reportsizingmanager.f90.html">ReportSizingManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/returnairpath.f90.html">ReturnAirPath.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/roomairmanager.f90.html">RoomAirManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/roomairmodelcrossvent.f90.html">RoomAirModelCrossVent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/roomairmodeldisplacementvent.f90.html">RoomAirModelDisplacementVent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/roomairmodelmundt.f90.html">RoomAirModelMundt.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/roomairmodelufad.f90.html">RoomAirModelUFAD.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/roomairmodelusertemppattern.f90.html">RoomAirModelUserTempPattern.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/rootfinder.f90.html">RootFinder.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/runtimelanguageprocessor.f90.html">RuntimeLanguageProcessor.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/schedulemanager.f90.html">ScheduleManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/setpointmanager.f90.html">SetPointManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/simairservingzones.f90.html">SimAirServingZones.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/simulationmanager.f90.html">SimulationManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/sizingmanager.f90.html">SizingManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/solarreflectionmanager.f90.html">SolarReflectionManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/solarshading.f90.html">SolarShading.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/sortandstringutilities.f90.html">SortAndStringUtilities.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/sqlite3.c.html">sqlite3.c</a>
+
+      <a class="list-group-item" href="../sourcefile/sqlitecroutines.c.html">SQLiteCRoutines.c</a>
+
+      <a class="list-group-item" href="../sourcefile/sqlitefortranroutines.f90.html">SQLiteFortranRoutines.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/sqlitefortranroutines_no.f90.html">SQLiteFortranRoutines_NO.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/standardratings.f90.html">StandardRatings.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/surfacegeometry.f90.html">SurfaceGeometry.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/systemavailabilitymanager.f90.html">SystemAvailabilityManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/systemreports.f90.html">SystemReports.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/tarcogcomplexfenestration.f90.html">TarcogComplexFenestration.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/thermalchimney.f90.html">ThermalChimney.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/thermalcomfort.f90.html">ThermalComfort.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/unitheater.f90.html">UnitHeater.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/unitventilator.f90.html">UnitVentilator.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/userdefinedcomponents.f90.html">UserDefinedComponents.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/utilityroutines.f90.html">UtilityRoutines.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/vectorutilities.f90.html">VectorUtilities.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/ventilatedslab.f90.html">VentilatedSlab.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/watermanager.f90.html">WaterManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/weathermanager.f90.html">WeatherManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/windowac.f90.html">WindowAC.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/windowcomplexmanager.f90.html">WindowComplexManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/windowequivalentlayer.f90.html">WindowEquivalentLayer.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/windowmanager.f90.html">WindowManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/windturbine.f90.html">WindTurbine.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/zoneairloopequipmentmanager.f90.html">Zoneairloopequipmentmanager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/zonecontaminantpredictorcorrector.f90.html">ZoneContaminantPredictorCorrector.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/zonedehumidifier.f90.html">ZoneDehumidifier.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/zoneequipmentmanager.f90.html">Zoneequipmentmanager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/zoneplenumcomponent.f90.html">ZonePlenumComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/zonetemppredictorcorrector.f90.html">ZoneTempPredictorCorrector.f90</a>
+
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+    </div>
+    <div class="col-md-9" id='text'>
+
+
+    <h3>This File Depends On</h3>
+
+                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: sourcefile~~datadaylighting.f90~~EfferentGraph Pages: 1 -->
+<svg id="sourcefiledatadaylightingf90EfferentGraph" width="401pt" height="50pt"
+ viewBox="0.00 0.00 401.41 49.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="sourcefile~~datadaylighting.f90~~EfferentGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 45.5)">
+<title>sourcefile~~datadaylighting.f90~~EfferentGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-45.5 397.4124,-45.5 397.4124,4 -4,4"/>
+<!-- sourcefile~datadaylighting.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~EfferentGraph_node1" class="node">
+<title>sourcefile~datadaylighting.f90</title>
+<polygon fill="none" stroke="#000000" points="393.2326,-41.2554 289.953,-41.2554 289.953,-19.2446 393.2326,-19.2446 393.2326,-41.2554"/>
+<text text-anchor="middle" x="341.5928" y="-27.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">DataDaylighting.f90</text>
+</g>
+<!-- sourcefile~dataglobals.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~EfferentGraph_node2" class="node">
+<title>sourcefile~dataglobals.f90</title>
+<g id="a_sourcefile~~datadaylighting.f90~~EfferentGraph_node2"><a xlink:href="../sourcefile/dataglobals.f90.html" xlink:title="DataGlobals.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="253.9209,-22.2554 166.331,-22.2554 166.331,-.2446 253.9209,-.2446 253.9209,-22.2554"/>
+<text text-anchor="middle" x="210.126" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataGlobals.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~dataglobals.f90&#45;&gt;sourcefile~datadaylighting.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~EfferentGraph_edge2" class="edge">
+<title>sourcefile~dataglobals.f90&#45;&gt;sourcefile~datadaylighting.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M253.9025,-17.5767C262.1703,-18.7716 270.9617,-20.0422 279.6638,-21.2998"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="279.4039,-24.7985 289.8017,-22.765 280.4052,-17.8705 279.4039,-24.7985"/>
+</g>
+<!-- sourcefile~dataprecisionglobals.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~EfferentGraph_node3" class="node">
+<title>sourcefile~dataprecisionglobals.f90</title>
+<g id="a_sourcefile~~datadaylighting.f90~~EfferentGraph_node3"><a xlink:href="../sourcefile/dataprecisionglobals.f90.html" xlink:title="DataPrecisionGlobals.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="130.719,-41.2554 -.2403,-41.2554 -.2403,-19.2446 130.719,-19.2446 130.719,-41.2554"/>
+<text text-anchor="middle" x="65.2394" y="-27.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataPrecisionGlobals.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~dataprecisionglobals.f90&#45;&gt;sourcefile~datadaylighting.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~EfferentGraph_edge3" class="edge">
+<title>sourcefile~dataprecisionglobals.f90&#45;&gt;sourcefile~datadaylighting.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M130.5906,-30.9902C142.5298,-31.0985 154.878,-31.1927 166.4788,-31.25 205.2758,-31.4416 214.9763,-31.4709 253.7732,-31.25 262.102,-31.2026 270.8749,-31.1299 279.5231,-31.0448"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="279.6211,-34.5441 289.5841,-30.9401 279.5481,-27.5445 279.6211,-34.5441"/>
+</g>
+<!-- sourcefile~dataprecisionglobals.f90&#45;&gt;sourcefile~dataglobals.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~EfferentGraph_edge1" class="edge">
+<title>sourcefile~dataprecisionglobals.f90&#45;&gt;sourcefile~dataglobals.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M130.9,-21.6395C139.3232,-20.5349 147.8699,-19.4141 156.079,-18.3376"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="156.802,-21.7728 166.262,-17.0022 155.8918,-14.8322 156.802,-21.7728"/>
+</g>
+</g>
+</svg>
+</div>
+                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
+                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                      </div>
+                      <div class="modal-body">
+
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="186pt" height="31pt"
+ viewBox="0.00 0.00 186.41 30.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 26.5)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-26.5 182.4064,-26.5 182.4064,4 -4,4"/>
+<!-- Source File -->
+<g id="node1" class="node">
+<title>Source File</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="65.1576,-22.2554 -.0526,-22.2554 -.0526,-.2446 65.1576,-.2446 65.1576,-22.2554"/>
+<text text-anchor="middle" x="32.5525" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Source File</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node2" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="178.2607,-22.2554 82.8443,-22.2554 82.8443,-.2446 178.2607,-.2446 178.2607,-22.2554"/>
+<text text-anchor="middle" x="130.5525" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+
+    <p>Solid arrows point from a file to a file which depends upon it. A file
+    is dependent upon another if the latter must be compiled before the former
+    can be. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+      <h3>Files Dependent On This One</h3>
+
+                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: sourcefile~~datadaylighting.f90~~AfferentGraph Pages: 1 -->
+<svg id="sourcefiledatadaylightingf90AfferentGraph" width="641pt" height="180pt"
+ viewBox="0.00 0.00 641.00 180.12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph" class="graph" transform="scale(.2613 .2613) rotate(0) translate(4 685.3987)">
+<title>sourcefile~~datadaylighting.f90~~AfferentGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-685.3987 2449.394,-685.3987 2449.394,4 -4,4"/>
+<!-- sourcefile~datadaylighting.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_node1" class="node">
+<title>sourcefile~datadaylighting.f90</title>
+<polygon fill="none" stroke="#000000" points="103.4594,-315.0054 .1798,-315.0054 .1798,-292.9946 103.4594,-292.9946 103.4594,-315.0054"/>
+<text text-anchor="middle" x="51.8196" y="-300.85" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">DataDaylighting.f90</text>
+</g>
+<!-- sourcefile~daylightingdevices.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_node2" class="node">
+<title>sourcefile~daylightingdevices.f90</title>
+<g id="a_sourcefile~~datadaylighting.f90~~AfferentGraph_node2"><a xlink:href="../sourcefile/daylightingdevices.f90.html" xlink:title="DaylightingDevices.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="258.3464,-276.0054 139.7367,-276.0054 139.7367,-253.9946 258.3464,-253.9946 258.3464,-276.0054"/>
+<text text-anchor="middle" x="199.0415" y="-261.85" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DaylightingDevices.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~datadaylighting.f90&#45;&gt;sourcefile~daylightingdevices.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge64" class="edge">
+<title>sourcefile~datadaylighting.f90&#45;&gt;sourcefile~daylightingdevices.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M93.6137,-292.9285C110.3135,-288.5046 129.7188,-283.364 147.2949,-278.708"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="148.6276,-281.9758 157.3979,-276.0317 146.835,-275.2092 148.6276,-281.9758"/>
+</g>
+<!-- sourcefile~outputreports.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_node3" class="node">
+<title>sourcefile~outputreports.f90</title>
+<g id="a_sourcefile~~datadaylighting.f90~~AfferentGraph_node3"><a xlink:href="../sourcefile/outputreports.f90.html" xlink:title="OutputReports.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="247.8413,-354.0054 150.2417,-354.0054 150.2417,-331.9946 247.8413,-331.9946 247.8413,-354.0054"/>
+<text text-anchor="middle" x="199.0415" y="-339.85" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">OutputReports.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~datadaylighting.f90&#45;&gt;sourcefile~outputreports.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge65" class="edge">
+<title>sourcefile~datadaylighting.f90&#45;&gt;sourcefile~outputreports.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M93.6137,-315.0715C110.3135,-319.4954 129.7188,-324.636 147.2949,-329.292"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="146.835,-332.7908 157.3979,-331.9683 148.6276,-326.0242 146.835,-332.7908"/>
+</g>
+<!-- sourcefile~daylightingmanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_node4" class="node">
+<title>sourcefile~daylightingmanager.f90</title>
+<g id="a_sourcefile~~datadaylighting.f90~~AfferentGraph_node4"><a xlink:href="../sourcefile/daylightingmanager.f90.html" xlink:title="DaylightingManager.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1232.2619,-204.0054 1109.6072,-204.0054 1109.6072,-181.9946 1232.2619,-181.9946 1232.2619,-204.0054"/>
+<text text-anchor="middle" x="1170.9346" y="-189.85" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DaylightingManager.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~datadaylighting.f90&#45;&gt;sourcefile~daylightingmanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge66" class="edge">
+<title>sourcefile~datadaylighting.f90&#45;&gt;sourcefile~daylightingmanager.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M103.5478,-307.7975C131.9034,-308.9285 167.5838,-308.7974 199.0415,-304"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M199.0415,-304C459.2089,-264.3239 518.8006,-221.8975 779.9117,-189"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M779.9117,-189C856.9933,-171.8643 874.8996,-146.6826 953.6836,-152"/>
+</g>
+<!-- sourcefile~heatbalanceinternalheatgains.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_node5" class="node">
+<title>sourcefile~heatbalanceinternalheatgains.f90</title>
+<g id="a_sourcefile~~datadaylighting.f90~~AfferentGraph_node5"><a xlink:href="../sourcefile/heatbalanceinternalheatgains.f90.html" xlink:title="HeatBalanceInternalHeatGains.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="468.8462,-468.0054 294.3096,-468.0054 294.3096,-445.9946 468.8462,-445.9946 468.8462,-468.0054"/>
+<text text-anchor="middle" x="381.5779" y="-453.85" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">HeatBalanceInternalHeatGains.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~datadaylighting.f90&#45;&gt;sourcefile~heatbalanceinternalheatgains.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge67" class="edge">
+<title>sourcefile~datadaylighting.f90&#45;&gt;sourcefile~heatbalanceinternalheatgains.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M66.1194,-315.0603C83.0116,-327.7741 112.2837,-348.7211 139.6392,-363 205.4153,-397.3336 286.6665,-426.3882 336.275,-442.7511"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="335.4696,-446.17 346.0621,-445.9499 337.6442,-439.5164 335.4696,-446.17"/>
+</g>
+<!-- sourcefile~solarshading.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_node6" class="node">
+<title>sourcefile~solarshading.f90</title>
+<g id="a_sourcefile~~datadaylighting.f90~~AfferentGraph_node6"><a xlink:href="../sourcefile/solarshading.f90.html" xlink:title="SolarShading.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1613.3067,-164.0054 1521.185,-164.0054 1521.185,-141.9946 1613.3067,-141.9946 1613.3067,-164.0054"/>
+<text text-anchor="middle" x="1567.2458" y="-149.85" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">SolarShading.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~datadaylighting.f90&#45;&gt;sourcefile~solarshading.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge68" class="edge">
+<title>sourcefile~datadaylighting.f90&#45;&gt;sourcefile~solarshading.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M596.5063,-76C851.032,-49.9093 915.7657,-95.2145 1170.9346,-114"/>
+</g>
+<!-- sourcefile~heatbalancemanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_node7" class="node">
+<title>sourcefile~heatbalancemanager.f90</title>
+<g id="a_sourcefile~~datadaylighting.f90~~AfferentGraph_node7"><a xlink:href="../sourcefile/heatbalancemanager.f90.html" xlink:title="HeatBalanceManager.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="2020.9874,-279.0054 1890.9767,-279.0054 1890.9767,-256.9946 2020.9874,-256.9946 2020.9874,-279.0054"/>
+<text text-anchor="middle" x="1955.9821" y="-264.85" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">HeatBalanceManager.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~datadaylighting.f90&#45;&gt;sourcefile~heatbalancemanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge69" class="edge">
+<title>sourcefile~datadaylighting.f90&#45;&gt;sourcefile~heatbalancemanager.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M596.5063,-76C757.8483,-58.3981 791.3843,0 953.6836,0 953.6836,0 953.6836,0 1567.2458,0 1742.6491,0 1896.4182,-187.2351 1942.1754,-248.7059"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="1939.395,-250.8331 1948.1324,-256.8256 1945.039,-246.6924 1939.395,-250.8331"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M64.394,-292.6183C98.579,-262.3303 197.1866,-179.2618 294.4438,-138 420.6079,-84.4744 459.7719,-85.2763 596.5063,-76"/>
+</g>
+<!-- sourcefile~delightmanagerf.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_node8" class="node">
+<title>sourcefile~delightmanagerf.f90</title>
+<g id="a_sourcefile~~datadaylighting.f90~~AfferentGraph_node8"><a xlink:href="../sourcefile/delightmanagerf.f90.html" xlink:title="DElightManagerF.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="834.9647,-240.0054 724.8588,-240.0054 724.8588,-217.9946 834.9647,-217.9946 834.9647,-240.0054"/>
+<text text-anchor="middle" x="779.9117" y="-225.85" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DElightManagerF.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~datadaylighting.f90&#45;&gt;sourcefile~delightmanagerf.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge70" class="edge">
+<title>sourcefile~datadaylighting.f90&#45;&gt;sourcefile~delightmanagerf.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M381.5779,-304C447.0695,-302.0718 628.0474,-263.2653 721.8493,-242.2514"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="722.7564,-245.6349 731.7459,-240.0278 721.2219,-238.8051 722.7564,-245.6349"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M199.0415,-304C279.2415,-291.7693 300.4915,-301.4246 381.5779,-304"/>
+</g>
+<!-- sourcefile~heatbalancesurfacemanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_node9" class="node">
+<title>sourcefile~heatbalancesurfacemanager.f90</title>
+<g id="a_sourcefile~~datadaylighting.f90~~AfferentGraph_node9"><a xlink:href="../sourcefile/heatbalancesurfacemanager.f90.html" xlink:title="HeatBalanceSurfaceManager.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1853.4192,-318.0054 1687.0378,-318.0054 1687.0378,-295.9946 1853.4192,-295.9946 1853.4192,-318.0054"/>
+<text text-anchor="middle" x="1770.2285" y="-303.85" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">HeatBalanceSurfaceManager.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~datadaylighting.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge71" class="edge">
+<title>sourcefile~datadaylighting.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M381.5779,-304C636.3393,-312.0916 702.016,-384.402 953.6836,-344"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M953.6836,-344C1049.6185,-324.6208 1073.1162,-311.2607 1170.9346,-308"/>
+</g>
+<!-- sourcefile~costestimatemanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_node10" class="node">
+<title>sourcefile~costestimatemanager.f90</title>
+<g id="a_sourcefile~~datadaylighting.f90~~AfferentGraph_node10"><a xlink:href="../sourcefile/costestimatemanager.f90.html" xlink:title="CostEstimateManager.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="2022.2988,-473.0054 1889.6653,-473.0054 1889.6653,-450.9946 2022.2988,-450.9946 2022.2988,-473.0054"/>
+<text text-anchor="middle" x="1955.9821" y="-458.85" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">CostEstimateManager.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~datadaylighting.f90&#45;&gt;sourcefile~costestimatemanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge72" class="edge">
+<title>sourcefile~datadaylighting.f90&#45;&gt;sourcefile~costestimatemanager.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M381.5779,-304C438.9089,-306.9265 448.5147,-331.2834 504.7119,-343 751.6505,-394.4844 819.5966,-365.5337 1071.8445,-365 1159.9244,-364.8136 1183.291,-349.6581 1270.0247,-365 1369.538,-382.6024 1384.469,-423.401 1483.6084,-443 1621.1138,-470.1836 1785.376,-469.5543 1879.5033,-466.1227"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="1879.6505,-469.6197 1889.5085,-465.7377 1879.3813,-462.6249 1879.6505,-469.6197"/>
+</g>
+<!-- sourcefile~daylightingdevices.f90&#45;&gt;sourcefile~daylightingmanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge1" class="edge">
+<title>sourcefile~daylightingdevices.f90&#45;&gt;sourcefile~daylightingmanager.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M779.9117,-133C857.6036,-132.7794 876.1677,-146.7682 953.6836,-152"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M953.6836,-152C1010.8843,-155.8607 1075.2938,-169.1736 1119.0277,-179.5946"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="1118.3156,-183.0232 1128.8581,-181.9713 1119.9607,-176.2192 1118.3156,-183.0232"/>
+</g>
+<!-- sourcefile~daylightingdevices.f90&#45;&gt;sourcefile~heatbalanceinternalheatgains.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge2" class="edge">
+<title>sourcefile~daylightingdevices.f90&#45;&gt;sourcefile~heatbalanceinternalheatgains.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M234.0728,-276.0827C242.5492,-279.7202 251.2347,-284.3247 258.4438,-290 311.5116,-331.7765 352.8954,-401.9378 371.2443,-436.4976"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="368.2744,-438.3728 375.9938,-445.6297 374.4847,-435.1429 368.2744,-438.3728"/>
+</g>
+<!-- sourcefile~daylightingdevices.f90&#45;&gt;sourcefile~solarshading.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge3" class="edge">
+<title>sourcefile~daylightingdevices.f90&#45;&gt;sourcefile~solarshading.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1170.9346,-114C1293.9002,-124.6731 1324.8684,-124.9868 1447.6084,-138 1468.2597,-140.1895 1490.8719,-142.9347 1510.8239,-145.476"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="1510.6261,-148.9793 1520.9906,-146.7824 1511.5182,-142.0364 1510.6261,-148.9793"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M216.7857,-253.9881C271.0974,-221.2461 440.8486,-126.022 596.5063,-114"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M596.5063,-114C845.9106,-59.4443 917.7935,-80.8576 1170.9346,-114"/>
+</g>
+<!-- sourcefile~daylightingdevices.f90&#45;&gt;sourcefile~heatbalancemanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge4" class="edge">
+<title>sourcefile~daylightingdevices.f90&#45;&gt;sourcefile~heatbalancemanager.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M596.5063,-114C677.5293,-101.7101 697.9623,-133.2327 779.9117,-133"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M779.9117,-133C955.5357,-132.5013 995.3099,-76 1170.9346,-76 1170.9346,-76 1170.9346,-76 1376.8165,-76 1501.2305,-76 1540.5831,-75.444 1650.8833,-133 1670.3945,-143.1812 1667.7692,-156.0914 1686.8833,-167 1753.8413,-205.2136 1781.949,-186.4772 1853.5737,-215 1879.7448,-225.422 1908.0862,-240.3998 1928.3048,-251.7763"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="1926.8375,-254.9685 1937.2588,-256.878 1930.3029,-248.8864 1926.8375,-254.9685"/>
+</g>
+<!-- sourcefile~daylightingdevices.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge5" class="edge">
+<title>sourcefile~daylightingdevices.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M258.514,-267.9067C455.6181,-277.5017 1080.1009,-307.5819 1170.9346,-308"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1170.9346,-308C1262.3869,-304.9515 1287.7496,-287.0263 1376.8165,-308"/>
+</g>
+<!-- sourcefile~daylightingmanager.f90&#45;&gt;sourcefile~solarshading.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge15" class="edge">
+<title>sourcefile~daylightingmanager.f90&#45;&gt;sourcefile~solarshading.f90</title>
+<path fill="none" stroke="#aaff00" stroke-dasharray="5,2" d="M1376.8165,-152C1421.51,-145.3956 1472.7499,-146.127 1510.8123,-148.2444"/>
+<polygon fill="#aaff00" stroke="#aaff00" points="1510.9884,-151.7614 1521.182,-148.8734 1511.4123,-144.7742 1510.9884,-151.7614"/>
+</g>
+<!-- sourcefile~daylightingmanager.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge14" class="edge">
+<title>sourcefile~daylightingmanager.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90</title>
+<path fill="none" stroke="#aaff00" stroke-dasharray="5,2" d="M1376.8165,-308C1460.4707,-329.2212 1481.074,-341.2287 1567.2458,-346"/>
+<path fill="none" stroke="#aaff00" stroke-dasharray="5,2" d="M1232.245,-200.0581C1245.6878,-203.7961 1259.139,-209.4549 1270.0247,-218 1296.9233,-239.115 1279.7077,-264.1643 1306.0247,-286 1331.3805,-307.0383 1344.8807,-299.8986 1376.8165,-308"/>
+</g>
+<!-- sourcefile~utilityroutines.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_node11" class="node">
+<title>sourcefile~utilityroutines.f90</title>
+<g id="a_sourcefile~~datadaylighting.f90~~AfferentGraph_node11"><a xlink:href="../sourcefile/utilityroutines.f90.html" xlink:title="UtilityRoutines.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="2445.205,-278.0054 2348.9628,-278.0054 2348.9628,-255.9946 2445.205,-255.9946 2445.205,-278.0054"/>
+<text text-anchor="middle" x="2397.0839" y="-263.85" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">UtilityRoutines.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~daylightingmanager.f90&#45;&gt;sourcefile~utilityroutines.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge16" class="edge">
+<title>sourcefile~daylightingmanager.f90&#45;&gt;sourcefile~utilityroutines.f90</title>
+<path fill="none" stroke="#aaff00" stroke-dasharray="5,2" d="M1376.8165,-152C1424.5071,-144.9528 1435.5867,-137.2386 1483.6084,-133 1557.6649,-126.4634 1576.7949,-126.8351 1650.8833,-133 1704.48,-137.4598 1716.5082,-150.4255 1770.2285,-153"/>
+<path fill="none" stroke="#aaff00" stroke-dasharray="5,2" d="M1216.4188,-181.98C1257.9336,-172.3917 1321.1254,-158.9706 1376.8165,-152"/>
+<path fill="none" stroke="#aaff00" stroke-dasharray="5,2" d="M1770.2285,-153C1989.5993,-158.9397 2245.4369,-224.14 2349.4686,-253.1826"/>
+<polygon fill="#aaff00" stroke="#aaff00" points="2348.7753,-256.6233 2359.3494,-255.9601 2350.6697,-249.8845 2348.7753,-256.6233"/>
+</g>
+<!-- sourcefile~windowequivalentlayer.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_node12" class="node">
+<title>sourcefile~windowequivalentlayer.f90</title>
+<g id="a_sourcefile~~datadaylighting.f90~~AfferentGraph_node12"><a xlink:href="../sourcefile/windowequivalentlayer.f90.html" xlink:title="WindowEquivalentLayer.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1447.4009,-277.0054 1306.2322,-277.0054 1306.2322,-254.9946 1447.4009,-254.9946 1447.4009,-277.0054"/>
+<text text-anchor="middle" x="1376.8165" y="-262.85" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">WindowEquivalentLayer.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~daylightingmanager.f90&#45;&gt;sourcefile~windowequivalentlayer.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge17" class="edge">
+<title>sourcefile~daylightingmanager.f90&#45;&gt;sourcefile~windowequivalentlayer.f90</title>
+<path fill="none" stroke="#aaff00" stroke-dasharray="5,2" d="M1221.8493,-204.0315C1237.4746,-207.8999 1254.608,-212.637 1270.0247,-218 1296.3296,-227.1507 1325.0681,-240.2561 1346.1001,-250.4617"/>
+<polygon fill="#aaff00" stroke="#aaff00" points="1344.6656,-253.6565 1355.1846,-254.9221 1347.7508,-247.373 1344.6656,-253.6565"/>
+</g>
+<!-- sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~daylightingmanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge40" class="edge">
+<title>sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~daylightingmanager.f90</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M388.1397,-445.7828C408.7795,-410.824 472.8915,-304.7646 504.7119,-281 608.0404,-203.8307 651.6932,-202.8526 779.9117,-189"/>
+</g>
+<!-- sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~heatbalancemanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge43" class="edge">
+<title>sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~heatbalancemanager.f90</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M1567.2458,-227C1659.097,-231.2522 1678.4082,-262.1273 1770.2285,-267"/>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M779.9117,-418C836.0791,-412.2822 821.3964,-355.9774 871.5227,-330 1149.0491,-186.1748 1254.9997,-212.5446 1567.2458,-227"/>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M1770.2285,-267C1806.4178,-268.9205 1846.6283,-269.3476 1880.3564,-269.2224"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1880.6231,-272.7211 1890.604,-269.1668 1880.5851,-265.7212 1880.6231,-272.7211"/>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M442.4883,-445.9672C462.2807,-442.6877 484.3806,-439.3479 504.7119,-437 626.5046,-422.9349 658.0465,-431.4227 779.9117,-418"/>
+</g>
+<!-- sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~delightmanagerf.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge46" class="edge">
+<title>sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~delightmanagerf.f90</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M401.06,-445.8487C465.9197,-408.7241 674.7635,-289.1852 751.3833,-245.3292"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="753.5269,-248.1351 760.4671,-240.1298 750.0496,-242.0599 753.5269,-248.1351"/>
+</g>
+<!-- sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge48" class="edge">
+<title>sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M779.9117,-418C863.4233,-409.4986 870.8017,-357.3056 953.6836,-344"/>
+</g>
+<!-- sourcefile~zoneequipmentmanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_node15" class="node">
+<title>sourcefile~zoneequipmentmanager.f90</title>
+<g id="a_sourcefile~~datadaylighting.f90~~AfferentGraph_node15"><a xlink:href="../sourcefile/zoneequipmentmanager.f90.html" xlink:title="Zoneequipmentmanager.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1242.7824,-396.0054 1099.0867,-396.0054 1099.0867,-373.9946 1242.7824,-373.9946 1242.7824,-396.0054"/>
+<text text-anchor="middle" x="1170.9346" y="-381.85" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Zoneequipmentmanager.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~zoneequipmentmanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge39" class="edge">
+<title>sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~zoneequipmentmanager.f90</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M779.9117,-418C856.7517,-410.1778 876.481,-422.3058 953.6836,-420"/>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M953.6836,-420C1008.9496,-418.3494 1071.1626,-407.3788 1114.8044,-398.1537"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1115.6126,-401.56 1124.6527,-396.0349 1114.1402,-394.7166 1115.6126,-401.56"/>
+</g>
+<!-- sourcefile~roomairmodelcrossvent.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_node16" class="node">
+<title>sourcefile~roomairmodelcrossvent.f90</title>
+<g id="a_sourcefile~~datadaylighting.f90~~AfferentGraph_node16"><a xlink:href="../sourcefile/roomairmodelcrossvent.f90.html" xlink:title="RoomAirModelCrossVent.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="670.4046,-632.0054 522.6081,-632.0054 522.6081,-609.9946 670.4046,-609.9946 670.4046,-632.0054"/>
+<text text-anchor="middle" x="596.5063" y="-617.85" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">RoomAirModelCrossVent.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~roomairmodelcrossvent.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge41" class="edge">
+<title>sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~roomairmodelcrossvent.f90</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M387.6701,-468.0332C403.2662,-495.1781 447.4703,-565.5003 504.7119,-600 508.5974,-602.3418 512.7191,-604.4227 516.9803,-606.2716"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="515.9046,-609.6084 526.4936,-609.9602 518.4352,-603.0818 515.9046,-609.6084"/>
+</g>
+<!-- sourcefile~zonecontaminantpredictorcorrector.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_node17" class="node">
+<title>sourcefile~zonecontaminantpredictorcorrector.f90</title>
+<g id="a_sourcefile~~datadaylighting.f90~~AfferentGraph_node17"><a xlink:href="../sourcefile/zonecontaminantpredictorcorrector.f90.html" xlink:title="ZoneContaminantPredictorCorrector.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1270.1148,-512.0054 1071.7543,-512.0054 1071.7543,-489.9946 1270.1148,-489.9946 1270.1148,-512.0054"/>
+<text text-anchor="middle" x="1170.9346" y="-497.85" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">ZoneContaminantPredictorCorrector.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~zonecontaminantpredictorcorrector.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge42" class="edge">
+<title>sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~zonecontaminantpredictorcorrector.f90</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M384.8698,-468.0362C395.5592,-501.6188 432.8327,-602.6126 504.7119,-641 731.4947,-762.1144 1053.9052,-576.3169 1145.6849,-517.74"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1147.8074,-520.5358 1154.3118,-512.1725 1144.0117,-514.6543 1147.8074,-520.5358"/>
+</g>
+<!-- sourcefile~roomairmodelusertemppattern.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_node18" class="node">
+<title>sourcefile~roomairmodelusertemppattern.f90</title>
+<g id="a_sourcefile~~datadaylighting.f90~~AfferentGraph_node18"><a xlink:href="../sourcefile/roomairmodelusertemppattern.f90.html" xlink:title="RoomAirModelUserTempPattern.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="686.6578,-591.0054 506.3549,-591.0054 506.3549,-568.9946 686.6578,-568.9946 686.6578,-591.0054"/>
+<text text-anchor="middle" x="596.5063" y="-576.85" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">RoomAirModelUserTempPattern.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~roomairmodelusertemppattern.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge44" class="edge">
+<title>sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~roomairmodelusertemppattern.f90</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M391.5501,-468.1846C411.0782,-489.3582 456.6663,-535.2945 504.7119,-559 509.9715,-561.5951 515.5596,-563.8752 521.281,-565.8777"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="520.4097,-569.2738 531.0008,-568.9923 522.5458,-562.6076 520.4097,-569.2738"/>
+</g>
+<!-- sourcefile~hvacmanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_node19" class="node">
+<title>sourcefile~hvacmanager.f90</title>
+<g id="a_sourcefile~~datadaylighting.f90~~AfferentGraph_node19"><a xlink:href="../sourcefile/hvacmanager.f90.html" xlink:title="HVACManager.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1426.0956,-473.0054 1327.5375,-473.0054 1327.5375,-450.9946 1426.0956,-450.9946 1426.0956,-473.0054"/>
+<text text-anchor="middle" x="1376.8165" y="-458.85" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">HVACManager.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~hvacmanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge45" class="edge">
+<title>sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~hvacmanager.f90</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M953.6836,-420C1083.886,-416.1112 1235.6267,-437.5372 1317.3561,-451.2281"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="1317.007,-454.7187 1327.4514,-452.9397 1318.1772,-447.8172 1317.007,-454.7187"/>
+</g>
+<!-- sourcefile~roomairmodelufad.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_node20" class="node">
+<title>sourcefile~roomairmodelufad.f90</title>
+<g id="a_sourcefile~~datadaylighting.f90~~AfferentGraph_node20"><a xlink:href="../sourcefile/roomairmodelufad.f90.html" xlink:title="RoomAirModelUFAD.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="659.968,-550.0054 533.0447,-550.0054 533.0447,-527.9946 659.968,-527.9946 659.968,-550.0054"/>
+<text text-anchor="middle" x="596.5063" y="-535.85" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">RoomAirModelUFAD.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~roomairmodelufad.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge47" class="edge">
+<title>sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~roomairmodelufad.f90</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M400.5789,-468.1786C424.254,-481.6865 466.2852,-504.3019 504.7119,-518 512.3754,-520.7318 520.5283,-523.1951 528.6907,-525.391"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="528.0635,-528.8434 538.6195,-527.9371 529.8023,-522.0628 528.0635,-528.8434"/>
+</g>
+<!-- sourcefile~roomairmodeldisplacementvent.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_node21" class="node">
+<title>sourcefile~roomairmodeldisplacementvent.f90</title>
+<g id="a_sourcefile~~datadaylighting.f90~~AfferentGraph_node21"><a xlink:href="../sourcefile/roomairmodeldisplacementvent.f90.html" xlink:title="RoomAirModelDisplacementVent.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="688.0957,-509.0054 504.917,-509.0054 504.917,-486.9946 688.0957,-486.9946 688.0957,-509.0054"/>
+<text text-anchor="middle" x="596.5063" y="-494.85" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">RoomAirModelDisplacementVent.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~roomairmodeldisplacementvent.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge49" class="edge">
+<title>sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~roomairmodeldisplacementvent.f90</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M439.4575,-468.0412C466.9288,-473.2816 499.937,-479.5783 528.5874,-485.0437"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="528.0446,-488.5032 538.5234,-486.9391 529.3564,-481.6272 528.0446,-488.5032"/>
+</g>
+<!-- sourcefile~zonetemppredictorcorrector.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_node22" class="node">
+<title>sourcefile~zonetemppredictorcorrector.f90</title>
+<g id="a_sourcefile~~datadaylighting.f90~~AfferentGraph_node22"><a xlink:href="../sourcefile/zonetemppredictorcorrector.f90.html" xlink:title="ZoneTempPredictorCorrector.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1036.0057,-470.0054 871.3615,-470.0054 871.3615,-447.9946 1036.0057,-447.9946 1036.0057,-470.0054"/>
+<text text-anchor="middle" x="953.6836" y="-455.85" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">ZoneTempPredictorCorrector.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~zonetemppredictorcorrector.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge50" class="edge">
+<title>sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~zonetemppredictorcorrector.f90</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M779.9117,-418C804.5872,-415.4881 866.3204,-432.1392 909.1363,-444.9761"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="908.1856,-448.3451 918.7708,-447.8956 910.2156,-441.6459 908.1856,-448.3451"/>
+</g>
+<!-- sourcefile~roomairmodelmundt.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_node23" class="node">
+<title>sourcefile~roomairmodelmundt.f90</title>
+<g id="a_sourcefile~~datadaylighting.f90~~AfferentGraph_node23"><a xlink:href="../sourcefile/roomairmodelmundt.f90.html" xlink:title="RoomAirModelMundt.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="660.6422,-468.0054 532.3705,-468.0054 532.3705,-445.9946 660.6422,-445.9946 660.6422,-468.0054"/>
+<text text-anchor="middle" x="596.5063" y="-453.85" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">RoomAirModelMundt.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~roomairmodelmundt.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge51" class="edge">
+<title>sourcefile~heatbalanceinternalheatgains.f90&#45;&gt;sourcefile~roomairmodelmundt.f90</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M468.9975,-457C486.5139,-457 504.7669,-457 521.805,-457"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="522.2391,-460.5001 532.2391,-457 522.2391,-453.5001 522.2391,-460.5001"/>
+</g>
+<!-- sourcefile~solarshading.f90&#45;&gt;sourcefile~heatbalancemanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge52" class="edge">
+<title>sourcefile~solarshading.f90&#45;&gt;sourcefile~heatbalancemanager.f90</title>
+<path fill="none" stroke="#00ffa9" stroke-dasharray="5,2" d="M1770.2285,-229C1809.6376,-238.2867 1854.0081,-247.6431 1889.4989,-254.863"/>
+<polygon fill="#00ffa9" stroke="#00ffa9" points="1889.2403,-258.3816 1899.7361,-256.9365 1890.63,-251.5209 1889.2403,-258.3816"/>
+</g>
+<!-- sourcefile~solarshading.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge53" class="edge">
+<title>sourcefile~solarshading.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90</title>
+<path fill="none" stroke="#00ffa9" stroke-dasharray="5,2" d="M1577.2521,-164.353C1603.5585,-194.1057 1673.553,-272.6282 1686.8833,-281 1694.0795,-285.5194 1702.1209,-289.3062 1710.2923,-292.4647"/>
+<polygon fill="#00ffa9" stroke="#00ffa9" points="1709.3069,-295.8291 1719.9016,-295.89 1711.6573,-289.2354 1709.3069,-295.8291"/>
+</g>
+<!-- sourcefile~solarshading.f90&#45;&gt;sourcefile~utilityroutines.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge54" class="edge">
+<title>sourcefile~solarshading.f90&#45;&gt;sourcefile~utilityroutines.f90</title>
+<path fill="none" stroke="#00ffa9" stroke-dasharray="5,2" d="M1613.6312,-151.7385C1654.7928,-150.9199 1716.5491,-150.4275 1770.2285,-153"/>
+</g>
+<!-- sourcefile~simulationmanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_node25" class="node">
+<title>sourcefile~simulationmanager.f90</title>
+<g id="a_sourcefile~~datadaylighting.f90~~AfferentGraph_node25"><a xlink:href="../sourcefile/simulationmanager.f90.html" xlink:title="SimulationManager.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="2312.9766,-356.0054 2193.1662,-356.0054 2193.1662,-333.9946 2312.9766,-333.9946 2312.9766,-356.0054"/>
+<text text-anchor="middle" x="2253.0714" y="-341.85" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">SimulationManager.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~solarshading.f90&#45;&gt;sourcefile~simulationmanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge55" class="edge">
+<title>sourcefile~solarshading.f90&#45;&gt;sourcefile~simulationmanager.f90</title>
+<path fill="none" stroke="#00ffa9" stroke-dasharray="5,2" d="M1770.2285,-229C1879.6219,-254.7784 1913.5393,-220.0201 2022.3904,-248 2062.8378,-258.3969 2067.5889,-276.0123 2107.8798,-287"/>
+<path fill="none" stroke="#00ffa9" stroke-dasharray="5,2" d="M2107.8798,-287C2148.273,-297.3642 2192.4753,-316.1776 2221.3671,-329.5663"/>
+<polygon fill="#00ffa9" stroke="#00ffa9" points="2220.0112,-332.7963 2230.5506,-333.8788 2222.9866,-326.4601 2220.0112,-332.7963"/>
+<path fill="none" stroke="#00ffa9" stroke-dasharray="5,2" d="M1590.2689,-164.0708C1614.0983,-175.2756 1652.5717,-192.6619 1686.8833,-205 1723.1569,-218.0437 1732.8792,-219.4639 1770.2285,-229"/>
+</g>
+<!-- sourcefile~sizingmanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_node24" class="node">
+<title>sourcefile~sizingmanager.f90</title>
+<g id="a_sourcefile~~datadaylighting.f90~~AfferentGraph_node24"><a xlink:href="../sourcefile/sizingmanager.f90.html" xlink:title="SizingManager.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="2157.3585,-376.0054 2058.401,-376.0054 2058.401,-353.9946 2157.3585,-353.9946 2157.3585,-376.0054"/>
+<text text-anchor="middle" x="2107.8798" y="-361.85" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">SizingManager.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~heatbalancemanager.f90&#45;&gt;sourcefile~sizingmanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge56" class="edge">
+<title>sourcefile~heatbalancemanager.f90&#45;&gt;sourcefile~sizingmanager.f90</title>
+<path fill="none" stroke="#00a9ff" stroke-dasharray="5,2" d="M1973.4067,-279.1271C1999.9329,-296.0665 2050.6266,-328.4388 2081.6277,-348.2358"/>
+<polygon fill="#00a9ff" stroke="#00a9ff" points="2079.8786,-351.2716 2090.1905,-353.7039 2083.6461,-345.3719 2079.8786,-351.2716"/>
+</g>
+<!-- sourcefile~heatbalancemanager.f90&#45;&gt;sourcefile~simulationmanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge57" class="edge">
+<title>sourcefile~heatbalancemanager.f90&#45;&gt;sourcefile~simulationmanager.f90</title>
+<path fill="none" stroke="#00a9ff" stroke-dasharray="5,2" d="M2021.3429,-272.4867C2048.4173,-275.2939 2079.9566,-279.8033 2107.8798,-287"/>
+</g>
+<!-- sourcefile~delightmanagerf.f90&#45;&gt;sourcefile~daylightingmanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge59" class="edge">
+<title>sourcefile~delightmanagerf.f90&#45;&gt;sourcefile~daylightingmanager.f90</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M953.6836,-230C1009.9046,-227.9013 1073.2174,-216.0061 1116.9258,-206.2609"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="1117.7921,-209.6534 1126.7703,-204.0284 1116.2439,-202.8268 1117.7921,-209.6534"/>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M835.105,-230.5296C869.2715,-231.1756 914.0387,-231.4799 953.6836,-230"/>
+</g>
+<!-- sourcefile~delightmanagerf.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge58" class="edge">
+<title>sourcefile~delightmanagerf.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M953.6836,-230C1144.7781,-222.8666 1191.46,-260.9793 1376.8165,-308"/>
+</g>
+<!-- sourcefile~heatbalancesurfacemanager.f90&#45;&gt;sourcefile~heatbalancemanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge60" class="edge">
+<title>sourcefile~heatbalancesurfacemanager.f90&#45;&gt;sourcefile~heatbalancemanager.f90</title>
+<path fill="none" stroke="#aa00ff" stroke-dasharray="5,2" d="M1822.9612,-295.9285C1844.9179,-291.3185 1870.5813,-285.9304 1893.4774,-281.1232"/>
+<polygon fill="#aa00ff" stroke="#aa00ff" points="1894.3719,-284.5118 1903.4393,-279.0317 1892.9335,-277.6612 1894.3719,-284.5118"/>
+</g>
+<!-- sourcefile~heatbalancesurfacemanager.f90&#45;&gt;sourcefile~simulationmanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge61" class="edge">
+<title>sourcefile~heatbalancesurfacemanager.f90&#45;&gt;sourcefile~simulationmanager.f90</title>
+<path fill="none" stroke="#aa00ff" stroke-dasharray="5,2" d="M1853.5834,-300.7828C1949.5825,-293.8142 2095.7428,-283.8719 2107.8798,-287"/>
+</g>
+<!-- sourcefile~costestimatemanager.f90&#45;&gt;sourcefile~sizingmanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge62" class="edge">
+<title>sourcefile~costestimatemanager.f90&#45;&gt;sourcefile~sizingmanager.f90</title>
+<path fill="none" stroke="#ff00aa" stroke-dasharray="5,2" d="M1973.4067,-450.8729C1999.9329,-433.9335 2050.6266,-401.5612 2081.6277,-381.7642"/>
+<polygon fill="#ff00aa" stroke="#ff00aa" points="2083.6461,-384.6281 2090.1905,-376.2961 2079.8786,-378.7284 2083.6461,-384.6281"/>
+</g>
+<!-- sourcefile~costestimatemanager.f90&#45;&gt;sourcefile~simulationmanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge63" class="edge">
+<title>sourcefile~costestimatemanager.f90&#45;&gt;sourcefile~simulationmanager.f90</title>
+<path fill="none" stroke="#ff00aa" stroke-dasharray="5,2" d="M2022.6559,-471.5004C2049.79,-472.9554 2081.0212,-471.475 2107.8798,-462"/>
+</g>
+<!-- sourcefile~windowequivalentlayer.f90&#45;&gt;sourcefile~solarshading.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge10" class="edge">
+<title>sourcefile~windowequivalentlayer.f90&#45;&gt;sourcefile~solarshading.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M1395.4224,-254.9593C1429.1261,-234.9597 1500.4247,-192.6514 1539.757,-169.3118"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="1541.7507,-172.1986 1548.5644,-164.0855 1538.1784,-166.1787 1541.7507,-172.1986"/>
+</g>
+<!-- sourcefile~windowequivalentlayer.f90&#45;&gt;sourcefile~heatbalancemanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge11" class="edge">
+<title>sourcefile~windowequivalentlayer.f90&#45;&gt;sourcefile~heatbalancemanager.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M1407.1186,-254.9646C1444.3831,-242.5221 1509.769,-224.3391 1567.2458,-227"/>
+</g>
+<!-- sourcefile~windowequivalentlayer.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge13" class="edge">
+<title>sourcefile~windowequivalentlayer.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M1412.2439,-277.1144C1423.9463,-281.5304 1436.7416,-287.1978 1447.6084,-294 1466.0063,-305.5165 1464.3829,-316.9258 1483.6084,-327 1517.373,-344.6927 1529.1848,-343.8926 1567.2458,-346"/>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M1567.2458,-346C1624.0132,-349.1432 1688.2628,-333.4577 1728.9898,-321.0454"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="1730.0649,-324.3765 1738.5668,-318.0543 1727.978,-317.6948 1730.0649,-324.3765"/>
+</g>
+<!-- sourcefile~windowmanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_node13" class="node">
+<title>sourcefile~windowmanager.f90</title>
+<g id="a_sourcefile~~datadaylighting.f90~~AfferentGraph_node13"><a xlink:href="../sourcefile/windowmanager.f90.html" xlink:title="WindowManager.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1620.9715,-277.0054 1513.5202,-277.0054 1513.5202,-254.9946 1620.9715,-254.9946 1620.9715,-277.0054"/>
+<text text-anchor="middle" x="1567.2458" y="-262.85" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">WindowManager.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~windowequivalentlayer.f90&#45;&gt;sourcefile~windowmanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge9" class="edge">
+<title>sourcefile~windowequivalentlayer.f90&#45;&gt;sourcefile~windowmanager.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M1447.4548,-266C1465.7673,-266 1485.3818,-266 1503.3275,-266"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="1503.3914,-269.5001 1513.3914,-266 1503.3914,-262.5001 1503.3914,-269.5001"/>
+</g>
+<!-- sourcefile~heatbalanceintradexchange.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_node14" class="node">
+<title>sourcefile~heatbalanceintradexchange.f90</title>
+<g id="a_sourcefile~~datadaylighting.f90~~AfferentGraph_node14"><a xlink:href="../sourcefile/heatbalanceintradexchange.f90.html" xlink:title="HeatBalanceIntRadExchange.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1651.021,-318.0054 1483.4707,-318.0054 1483.4707,-295.9946 1651.021,-295.9946 1651.021,-318.0054"/>
+<text text-anchor="middle" x="1567.2458" y="-303.85" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">HeatBalanceIntRadExchange.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~windowequivalentlayer.f90&#45;&gt;sourcefile~heatbalanceintradexchange.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge12" class="edge">
+<title>sourcefile~windowequivalentlayer.f90&#45;&gt;sourcefile~heatbalanceintradexchange.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M1428.0986,-277.0412C1452.1197,-282.213 1480.9188,-288.4135 1506.0692,-293.8285"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="1505.3595,-297.2558 1515.8722,-295.9391 1506.8329,-290.4126 1505.3595,-297.2558"/>
+</g>
+<!-- sourcefile~windowmanager.f90&#45;&gt;sourcefile~heatbalancemanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge6" class="edge">
+<title>sourcefile~windowmanager.f90&#45;&gt;sourcefile~heatbalancemanager.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1621.1354,-264.857C1662.0649,-264.3304 1719.7295,-264.3201 1770.2285,-267"/>
+</g>
+<!-- sourcefile~windowmanager.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge7" class="edge">
+<title>sourcefile~windowmanager.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1621.1086,-276.8796C1647.0504,-282.1195 1678.3615,-288.444 1705.5814,-293.9421"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="1704.9121,-297.3775 1715.4072,-295.9268 1706.2981,-290.5161 1704.9121,-297.3775"/>
+</g>
+<!-- sourcefile~heatbalanceintradexchange.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge8" class="edge">
+<title>sourcefile~heatbalanceintradexchange.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M1650.9786,-307C1659.5342,-307 1668.2637,-307 1676.9134,-307"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="1677.0157,-310.5001 1687.0156,-307 1677.0156,-303.5001 1677.0157,-310.5001"/>
+</g>
+<!-- sourcefile~zoneequipmentmanager.f90&#45;&gt;sourcefile~hvacmanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge22" class="edge">
+<title>sourcefile~zoneequipmentmanager.f90&#45;&gt;sourcefile~hvacmanager.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1230.7009,-396.0138C1243.9987,-399.5688 1257.7756,-404.1536 1270.0247,-410 1288.0741,-418.6149 1288.392,-427.5612 1306.0247,-437 1313.2956,-440.8921 1321.2969,-444.3875 1329.2235,-447.4445"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="1328.2071,-450.7996 1338.8008,-450.9532 1330.6151,-444.2268 1328.2071,-450.7996"/>
+</g>
+<!-- sourcefile~zoneequipmentmanager.f90&#45;&gt;sourcefile~sizingmanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge21" class="edge">
+<title>sourcefile~zoneequipmentmanager.f90&#45;&gt;sourcefile~sizingmanager.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1242.8902,-384.7094C1322.2988,-384.4142 1453.8908,-384 1567.2458,-384 1567.2458,-384 1567.2458,-384 1770.2285,-384 1867.6796,-384 1980.702,-376.013 2048.1389,-370.3959"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="2048.4854,-373.8792 2058.1558,-369.551 2047.8969,-366.904 2048.4854,-373.8792"/>
+</g>
+<!-- sourcefile~roomairmanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_node27" class="node">
+<title>sourcefile~roomairmanager.f90</title>
+<g id="a_sourcefile~~datadaylighting.f90~~AfferentGraph_node27"><a xlink:href="../sourcefile/roomairmanager.f90.html" xlink:title="RoomAirManager.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="835.6339,-529.0054 724.1896,-529.0054 724.1896,-506.9946 835.6339,-506.9946 835.6339,-529.0054"/>
+<text text-anchor="middle" x="779.9117" y="-514.85" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">RoomAirManager.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~roomairmodelcrossvent.f90&#45;&gt;sourcefile~roomairmanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge24" class="edge">
+<title>sourcefile~roomairmodelcrossvent.f90&#45;&gt;sourcefile~roomairmanager.f90</title>
+<path fill="none" stroke="#ffaa00" stroke-dasharray="5,2" d="M663.1256,-609.9869C671.843,-607.3369 680.4602,-604.057 688.3008,-600 718.8518,-584.1918 747.2419,-555.7919 764.0851,-536.9176"/>
+<polygon fill="#ffaa00" stroke="#ffaa00" points="766.8465,-539.076 770.7736,-529.2359 761.5672,-534.4793 766.8465,-539.076"/>
+</g>
+<!-- sourcefile~zonecontaminantpredictorcorrector.f90&#45;&gt;sourcefile~hvacmanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge26" class="edge">
+<title>sourcefile~zonecontaminantpredictorcorrector.f90&#45;&gt;sourcefile~hvacmanager.f90</title>
+<path fill="none" stroke="#aaff00" stroke-dasharray="5,2" d="M1229.1065,-489.9805C1256.7474,-484.7446 1289.7365,-478.4955 1317.5201,-473.2325"/>
+<polygon fill="#aaff00" stroke="#aaff00" points="1318.3273,-476.6419 1327.5011,-471.3418 1317.0244,-469.7642 1318.3273,-476.6419"/>
+</g>
+<!-- sourcefile~zonecontaminantpredictorcorrector.f90&#45;&gt;sourcefile~simulationmanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge25" class="edge">
+<title>sourcefile~zonecontaminantpredictorcorrector.f90&#45;&gt;sourcefile~simulationmanager.f90</title>
+<path fill="none" stroke="#aaff00" stroke-dasharray="5,2" d="M1270.2007,-499.1073C1304.0424,-498.9652 1342.0948,-499.3593 1376.8165,-501"/>
+</g>
+<!-- sourcefile~roomairmodelusertemppattern.f90&#45;&gt;sourcefile~roomairmanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge27" class="edge">
+<title>sourcefile~roomairmodelusertemppattern.f90&#45;&gt;sourcefile~roomairmanager.f90</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M652.8152,-568.9536C664.6559,-566.121 676.9832,-562.7864 688.3008,-559 709.0753,-552.0496 731.5392,-542.0379 749.023,-533.6477"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="750.7264,-536.7112 758.1816,-529.1831 747.6591,-530.419 750.7264,-536.7112"/>
+</g>
+<!-- sourcefile~hvacmanager.f90&#45;&gt;sourcefile~simulationmanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge31" class="edge">
+<title>sourcefile~hvacmanager.f90&#45;&gt;sourcefile~simulationmanager.f90</title>
+<path fill="none" stroke="#00ffa9" stroke-dasharray="5,2" d="M1413.9636,-473.0796C1452.0351,-483.6093 1513.1526,-498.2376 1567.2458,-501"/>
+<path fill="none" stroke="#00ffa9" stroke-dasharray="5,2" d="M1567.2458,-501C1807.8385,-513.2862 1881.7703,-545.128 2107.8798,-462"/>
+</g>
+<!-- sourcefile~heatbalanceairmanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_node28" class="node">
+<title>sourcefile~heatbalanceairmanager.f90</title>
+<g id="a_sourcefile~~datadaylighting.f90~~AfferentGraph_node28"><a xlink:href="../sourcefile/heatbalanceairmanager.f90.html" xlink:title="HeatBalanceAirManager.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1639.0834,-434.0054 1495.4083,-434.0054 1495.4083,-411.9946 1639.0834,-411.9946 1639.0834,-434.0054"/>
+<text text-anchor="middle" x="1567.2458" y="-419.85" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">HeatBalanceAirManager.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~hvacmanager.f90&#45;&gt;sourcefile~heatbalanceairmanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge30" class="edge">
+<title>sourcefile~hvacmanager.f90&#45;&gt;sourcefile~heatbalanceairmanager.f90</title>
+<path fill="none" stroke="#00ffa9" stroke-dasharray="5,2" d="M1426.3525,-451.855C1449.8961,-447.0333 1478.3229,-441.2115 1503.4586,-436.0637"/>
+<polygon fill="#00ffa9" stroke="#00ffa9" points="1504.1808,-439.4885 1513.2752,-434.0532 1502.7763,-432.6308 1504.1808,-439.4885"/>
+</g>
+<!-- sourcefile~roomairmodelufad.f90&#45;&gt;sourcefile~roomairmanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge32" class="edge">
+<title>sourcefile~roomairmodelufad.f90&#45;&gt;sourcefile~roomairmanager.f90</title>
+<path fill="none" stroke="#00a9ff" stroke-dasharray="5,2" d="M660.1379,-531.7142C677.5217,-529.7237 696.395,-527.5627 713.908,-525.5575"/>
+<polygon fill="#00a9ff" stroke="#00a9ff" points="714.5037,-529.0122 724.0406,-524.3973 713.7073,-522.0576 714.5037,-529.0122"/>
+</g>
+<!-- sourcefile~roomairmodeldisplacementvent.f90&#45;&gt;sourcefile~roomairmanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge33" class="edge">
+<title>sourcefile~roomairmodeldisplacementvent.f90&#45;&gt;sourcefile~roomairmanager.f90</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M688.209,-508C696.8677,-508.9442 705.5264,-509.8884 713.8764,-510.799"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="713.567,-514.2859 723.8875,-511.8907 714.3259,-507.3272 713.567,-514.2859"/>
+</g>
+<!-- sourcefile~zonetemppredictorcorrector.f90&#45;&gt;sourcefile~zoneequipmentmanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge35" class="edge">
+<title>sourcefile~zonetemppredictorcorrector.f90&#45;&gt;sourcefile~zoneequipmentmanager.f90</title>
+<path fill="none" stroke="#aa00ff" stroke-dasharray="5,2" d="M991.4452,-447.9635C1005.4427,-443.7535 1021.4166,-438.808 1035.8445,-434 1068.6237,-423.0765 1105.4729,-409.6313 1132.3952,-399.5898"/>
+<polygon fill="#aa00ff" stroke="#aa00ff" points="1133.7002,-402.8385 1141.8388,-396.0552 1131.2465,-396.2826 1133.7002,-402.8385"/>
+</g>
+<!-- sourcefile~zonetemppredictorcorrector.f90&#45;&gt;sourcefile~zonecontaminantpredictorcorrector.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge34" class="edge">
+<title>sourcefile~zonetemppredictorcorrector.f90&#45;&gt;sourcefile~zonecontaminantpredictorcorrector.f90</title>
+<path fill="none" stroke="#aa00ff" stroke-dasharray="5,2" d="M1010.7637,-470.035C1039.3401,-475.5595 1074.1122,-482.2818 1103.9465,-488.0495"/>
+<polygon fill="#aa00ff" stroke="#aa00ff" points="1103.3763,-491.504 1113.8589,-489.9659 1104.705,-484.6313 1103.3763,-491.504"/>
+</g>
+<!-- sourcefile~zonetemppredictorcorrector.f90&#45;&gt;sourcefile~hvacmanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge37" class="edge">
+<title>sourcefile~zonetemppredictorcorrector.f90&#45;&gt;sourcefile~hvacmanager.f90</title>
+<path fill="none" stroke="#aa00ff" stroke-dasharray="5,2" d="M1170.9346,-462C1220.1241,-464.6648 1276.0214,-464.4603 1317.1474,-463.7037"/>
+<polygon fill="#aa00ff" stroke="#aa00ff" points="1317.344,-467.2005 1327.2719,-463.5008 1317.2037,-460.2019 1317.344,-467.2005"/>
+<path fill="none" stroke="#aa00ff" stroke-dasharray="5,2" d="M1036.0089,-458.5752C1076.6487,-458.7633 1126.3951,-459.5871 1170.9346,-462"/>
+</g>
+<!-- sourcefile~zonetemppredictorcorrector.f90&#45;&gt;sourcefile~simulationmanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge36" class="edge">
+<title>sourcefile~zonetemppredictorcorrector.f90&#45;&gt;sourcefile~simulationmanager.f90</title>
+<path fill="none" stroke="#aa00ff" stroke-dasharray="5,2" d="M1376.8165,-501C1461.3575,-504.9947 1482.885,-494.1902 1567.2458,-501"/>
+<path fill="none" stroke="#aa00ff" stroke-dasharray="5,2" d="M1170.9346,-462C1263.9286,-467.0378 1283.79,-496.6044 1376.8165,-501"/>
+</g>
+<!-- sourcefile~roomairmodelmundt.f90&#45;&gt;sourcefile~roomairmanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge38" class="edge">
+<title>sourcefile~roomairmodelmundt.f90&#45;&gt;sourcefile~roomairmanager.f90</title>
+<path fill="none" stroke="#ff00aa" stroke-dasharray="5,2" d="M652.3025,-468.0098C664.2933,-470.8622 676.8107,-474.2141 688.3008,-478 708.8839,-484.782 731.1845,-494.4652 748.6295,-502.6056"/>
+<polygon fill="#ff00aa" stroke="#ff00aa" points="747.2442,-505.8222 757.7798,-506.9411 750.2415,-499.4963 747.2442,-505.8222"/>
+</g>
+<!-- sourcefile~sizingmanager.f90&#45;&gt;sourcefile~simulationmanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge20" class="edge">
+<title>sourcefile~sizingmanager.f90&#45;&gt;sourcefile~simulationmanager.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M2157.4404,-358.1731C2165.7068,-357.0344 2174.4177,-355.8345 2183.0791,-354.6414"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="2183.7657,-358.0799 2193.1945,-353.248 2182.8104,-351.1454 2183.7657,-358.0799"/>
+</g>
+<!-- sourcefile~simulationmanager.f90&#45;&gt;sourcefile~utilityroutines.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge19" class="edge">
+<title>sourcefile~simulationmanager.f90&#45;&gt;sourcefile~utilityroutines.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M2273.3994,-333.9899C2297.9194,-320.7094 2339.3371,-298.2768 2367.4229,-283.065"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="2369.2667,-286.0468 2376.3929,-278.2066 2365.9329,-279.8916 2369.2667,-286.0468"/>
+</g>
+<!-- sourcefile~energyplus.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_node26" class="node">
+<title>sourcefile~energyplus.f90</title>
+<g id="a_sourcefile~~datadaylighting.f90~~AfferentGraph_node26"><a xlink:href="../sourcefile/energyplus.f90.html" xlink:title="EnergyPlus.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="2438.7924,-356.0054 2355.3753,-356.0054 2355.3753,-333.9946 2438.7924,-333.9946 2438.7924,-356.0054"/>
+<text text-anchor="middle" x="2397.0839" y="-341.85" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">EnergyPlus.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~simulationmanager.f90&#45;&gt;sourcefile~energyplus.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge18" class="edge">
+<title>sourcefile~simulationmanager.f90&#45;&gt;sourcefile~energyplus.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M2312.8945,-345C2323.5591,-345 2334.591,-345 2345.0173,-345"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="2345.2058,-348.5001 2355.2058,-345 2345.2058,-341.5001 2345.2058,-348.5001"/>
+</g>
+<!-- sourcefile~roomairmanager.f90&#45;&gt;sourcefile~zonetemppredictorcorrector.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge23" class="edge">
+<title>sourcefile~roomairmanager.f90&#45;&gt;sourcefile~zonetemppredictorcorrector.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M812.5969,-506.9026C840.6306,-497.3844 881.1982,-483.6106 911.6443,-473.2734"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="912.8012,-476.5769 921.145,-470.0477 910.5506,-469.9486 912.8012,-476.5769"/>
+</g>
+<!-- sourcefile~heatbalanceairmanager.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge28" class="edge">
+<title>sourcefile~heatbalanceairmanager.f90&#45;&gt;sourcefile~heatbalancesurfacemanager.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1586.7087,-411.8774C1622.779,-391.2641 1700.1373,-347.0555 1741.9748,-323.1463"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="1743.879,-326.0894 1750.8246,-318.0889 1740.4057,-320.0119 1743.879,-326.0894"/>
+</g>
+<!-- sourcefile~heatbalanceairmanager.f90&#45;&gt;sourcefile~simulationmanager.f90 -->
+<g id="sourcefile~~datadaylighting.f90~~AfferentGraph_edge29" class="edge">
+<title>sourcefile~heatbalanceairmanager.f90&#45;&gt;sourcefile~simulationmanager.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1638.9576,-421.8454C1728.9454,-421.347 1887.8085,-423.6151 2022.3904,-442 2061.0525,-447.2815 2071.0812,-474.9815 2107.8798,-462"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M2107.8798,-462C2162.9512,-441.7533 2212.8216,-391.527 2237.2497,-363.9219"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="2240.0894,-365.9894 2243.9917,-356.1393 2234.7986,-361.406 2240.0894,-365.9894"/>
+</g>
+</g>
+</svg>
+</div>
+                <script>var pansourcefiledatadaylightingf90AfferentGraph = svgPanZoom('#sourcefiledatadaylightingf90AfferentGraph', {
+                    zoomEnabled: true,
+                    controlIconsEnabled: true,
+                    fit: true,
+                    center: true,});
+                    </script>
+                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
+                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                      </div>
+                      <div class="modal-body">
+
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="186pt" height="31pt"
+ viewBox="0.00 0.00 186.41 30.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 26.5)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-26.5 182.4064,-26.5 182.4064,4 -4,4"/>
+<!-- Source File -->
+<g id="node1" class="node">
+<title>Source File</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="65.1576,-22.2554 -.0526,-22.2554 -.0526,-.2446 65.1576,-.2446 65.1576,-22.2554"/>
+<text text-anchor="middle" x="32.5525" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Source File</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node2" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="178.2607,-22.2554 82.8443,-22.2554 82.8443,-.2446 178.2607,-.2446 178.2607,-22.2554"/>
+<text text-anchor="middle" x="130.5525" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+
+    <p>Solid arrows point from a file to a file which depends upon it. A file
+    is dependent upon another if the latter must be compiled before the former
+    can be. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+      <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#mods-1">Modules</a></h3></div>
+  <div id="mods-1" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../module/datadaylighting.html">DataDaylighting</a>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/datadaylighting.f90.html#src">DataDaylighting.f90</a>
+  </div>
+</div>
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    <section>
+      <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl"><pre><span></span><a name="ln-1"></a><span class="k">MODULE </span><span class="n">DataDaylighting</span>
+<a name="ln-2"></a>
+<a name="ln-3"></a>          <span class="c">! MODULE INFORMATION:</span>
+<a name="ln-4"></a>          <span class="c">!       AUTHOR         Linda Lawrie/Fred Winkelmann (Re-engineered by Peter Graham Ellis)</span>
+<a name="ln-5"></a>          <span class="c">!       DATE WRITTEN   May 1998</span>
+<a name="ln-6"></a>          <span class="c">!       MODIFIED       B.Griffith added interior window data for associated exterior windows</span>
+<a name="ln-7"></a>          <span class="c">!       RE-ENGINEERED  April 2003</span>
+<a name="ln-8"></a>
+<a name="ln-9"></a>          <span class="c">! PURPOSE OF THIS MODULE:</span>
+<a name="ln-10"></a>          <span class="c">! This data-only module is a repository for variables used in daylighting which</span>
+<a name="ln-11"></a>          <span class="c">! are shared by several modules.</span>
+<a name="ln-12"></a>
+<a name="ln-13"></a>          <span class="c">! METHODOLOGY EMPLOYED:</span>
+<a name="ln-14"></a>          <span class="c">! na</span>
+<a name="ln-15"></a>
+<a name="ln-16"></a>          <span class="c">! REFERENCES:</span>
+<a name="ln-17"></a>          <span class="c">! na</span>
+<a name="ln-18"></a>
+<a name="ln-19"></a>          <span class="c">! OTHER NOTES:</span>
+<a name="ln-20"></a>          <span class="c">! na</span>
+<a name="ln-21"></a>
+<a name="ln-22"></a>          <span class="c">! USE STATEMENTS:</span>
+<a name="ln-23"></a><span class="k">USE </span><span class="n">DataPrecisionGlobals</span>
+<a name="ln-24"></a><span class="k">USE </span><span class="n">DataGlobals</span><span class="p">,</span> <span class="n">ONLY</span><span class="p">:</span> <span class="n">MaxNameLength</span>
+<a name="ln-25"></a>
+<a name="ln-26"></a><span class="k">IMPLICIT NONE</span>   <span class="c">! Enforce explicit typing of all variables</span>
+<a name="ln-27"></a>
+<a name="ln-28"></a><span class="k">PUBLIC</span>          <span class="c">! By definition, all variables which are placed in this data</span>
+<a name="ln-29"></a>                <span class="c">! -only module should be available to other modules and routines.</span>
+<a name="ln-30"></a>                <span class="c">! Thus, all variables in this module must be PUBLIC.</span>
+<a name="ln-31"></a>
+<a name="ln-32"></a>
+<a name="ln-33"></a>          <span class="c">! MODULE PARAMETER DEFINITIONS:</span>
+<a name="ln-34"></a>          <span class="c">! Two kinds of reference points: used directly in daylighting, used to show illuminance map of zone</span>
+<a name="ln-35"></a><span class="kt">INTEGER</span><span class="p">,</span> <span class="k">PARAMETER</span> <span class="kd">::</span> <span class="n">MaxRefPoints</span> <span class="o">=</span> <span class="mi">2</span>        <span class="c">! Maximum number of daylighting reference points, 2</span>
+<a name="ln-36"></a><span class="kt">INTEGER</span><span class="p">,</span> <span class="k">PARAMETER</span> <span class="kd">::</span> <span class="n">MaxMapRefPoints</span><span class="o">=</span><span class="mi">2500</span>    <span class="c">! Maximum number of Illuminance Map Ref Points</span>
+<a name="ln-37"></a>
+<a name="ln-38"></a><span class="kt">INTEGER</span><span class="p">,</span> <span class="k">PARAMETER</span> <span class="kd">::</span> <span class="n">NotInOrAdjZoneExtWin</span> <span class="o">=</span> <span class="mi">0</span> <span class="c">! Exterior window is not in a Daylighting:Detailed zone</span>
+<a name="ln-39"></a>                                               <span class="c">! or in an adjacent zone with a shared interior window</span>
+<a name="ln-40"></a><span class="kt">INTEGER</span><span class="p">,</span> <span class="k">PARAMETER</span> <span class="kd">::</span> <span class="n">InZoneExtWin</span>         <span class="o">=</span> <span class="mi">1</span> <span class="c">! Exterior window is in a Daylighting:Detailed zone</span>
+<a name="ln-41"></a><span class="kt">INTEGER</span><span class="p">,</span> <span class="k">PARAMETER</span> <span class="kd">::</span> <span class="n">AdjZoneExtWin</span>        <span class="o">=</span> <span class="mi">2</span> <span class="c">! Exterior window is in a zone adjacent to a Daylighting:</span>
+<a name="ln-42"></a>                                               <span class="c">! Detailed zone with which it shares an interior window</span>
+<a name="ln-43"></a>
+<a name="ln-44"></a><span class="kt">INTEGER</span><span class="p">,</span> <span class="k">PARAMETER</span> <span class="kd">::</span> <span class="n">CalledForRefPoint</span>    <span class="o">=</span> <span class="mi">101</span>
+<a name="ln-45"></a><span class="kt">INTEGER</span><span class="p">,</span> <span class="k">PARAMETER</span> <span class="kd">::</span> <span class="n">CalledForMapPoint</span>    <span class="o">=</span> <span class="mi">102</span>
+<a name="ln-46"></a>
+<a name="ln-47"></a><span class="c">! Parameters for &quot;DaylightType&quot;</span>
+<a name="ln-48"></a><span class="kt">INTEGER</span><span class="p">,</span> <span class="k">PARAMETER</span> <span class="kd">::</span> <span class="n">NoDaylighting</span>       <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-49"></a><span class="kt">INTEGER</span><span class="p">,</span> <span class="k">PARAMETER</span> <span class="kd">::</span> <span class="n">DetailedDaylighting</span> <span class="o">=</span> <span class="mi">1</span>
+<a name="ln-50"></a><span class="kt">INTEGER</span><span class="p">,</span> <span class="k">PARAMETER</span> <span class="kd">::</span> <span class="n">DElightDaylighting</span>  <span class="o">=</span> <span class="mi">2</span>
+<a name="ln-51"></a><span class="kt">CHARACTER</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span> <span class="k">PARAMETER</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="kd">::</span> <span class="n">DaylightTypes</span> <span class="o">=</span>   <span class="p">&amp;</span>
+<a name="ln-52"></a>                               <span class="p">(</span><span class="o">/</span><span class="s1">&#39;Daylighting:Controls        &#39;</span><span class="p">,</span>  <span class="p">&amp;</span>
+<a name="ln-53"></a>                                 <span class="s1">&#39;Daylighting:DELight:Controls&#39;</span><span class="o">/</span><span class="p">)</span>
+<a name="ln-54"></a>
+<a name="ln-55"></a>          <span class="c">! DERIVED TYPE DEFINITIONS:</span>
+<a name="ln-56"></a><span class="k">TYPE </span><span class="n">IntWinAdjZoneExtWinStruct</span> <span class="c">! nested structure for ZoneDaylight</span>
+<a name="ln-57"></a>  <span class="kt">INTEGER</span>                            <span class="kd">::</span> <span class="n">SurfNum</span>        <span class="o">=</span><span class="mi">0</span> <span class="c">! exterior window index</span>
+<a name="ln-58"></a>  <span class="kt">INTEGER</span>                            <span class="kd">::</span> <span class="n">NumOfIntWindows</span><span class="o">=</span><span class="mi">0</span> <span class="c">! count of interior windows associated with this ext win</span>
+<a name="ln-59"></a>  <span class="kt">INTEGER</span><span class="p">,</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:)</span> <span class="kd">::</span> <span class="n">IntWinNum</span> <span class="c">! index numbers for interior windows assoc with this ext win</span>
+<a name="ln-60"></a><span class="k">END TYPE </span><span class="n">IntWinAdjZoneExtWinStruct</span>
+<a name="ln-61"></a>
+<a name="ln-62"></a><span class="k">TYPE </span><span class="n">ZoneDaylightCalc</span>
+<a name="ln-63"></a>  <span class="kt">INTEGER</span>  <span class="kd">::</span> <span class="n">DaylightType</span>               <span class="o">=</span> <span class="mi">0</span>   <span class="c">! Type of Daylighting (1=Detailed, 2=DElight)</span>
+<a name="ln-64"></a>  <span class="kt">INTEGER</span>  <span class="kd">::</span> <span class="n">AvailSchedNum</span>             <span class="o">=</span> <span class="mi">0</span>    <span class="c">! pointer to availability schedule if present</span>
+<a name="ln-65"></a>  <span class="kt">INTEGER</span>  <span class="kd">::</span> <span class="n">TotalDaylRefPoints</span>        <span class="o">=</span> <span class="mi">0</span>   <span class="c">! Number of detailed daylighting reference points in a zone (0,1 or 2)</span>
+<a name="ln-66"></a>  <span class="kt">INTEGER</span>  <span class="kd">::</span> <span class="n">TotalDElightRefPts</span>        <span class="o">=</span> <span class="mi">0</span>   <span class="c">! Number of DElight daylighting reference points in a zone (0,1 or 2) - RJH</span>
+<a name="ln-67"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:,:)</span> <span class="kd">::</span> <span class="n">DaylRefPtAbsCoord</span> <span class="c">! =0.0 ! X,Y,Z coordinates of all daylighting reference points</span>
+<a name="ln-68"></a>                                                        <span class="c">! in absolute coordinate system (m)</span>
+<a name="ln-69"></a>                                                        <span class="c">! Points 1 and 2 are the control reference points</span>
+<a name="ln-70"></a>  <span class="kt">LOGICAL</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:)</span> <span class="kd">::</span> <span class="n">DaylRefPtInBounds</span>  <span class="c">! True when coordinates are in bounds of zone coordinates</span>
+<a name="ln-71"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:)</span> <span class="kd">::</span> <span class="n">FracZoneDaylit</span> <span class="c">! =0.0  ! Fraction of zone controlled by each reference point</span>
+<a name="ln-72"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:)</span> <span class="kd">::</span> <span class="n">IllumSetPoint</span>  <span class="c">! =0.0  ! Illuminance setpoint at each reference point (lux)</span>
+<a name="ln-73"></a>  <span class="kt">INTEGER</span>  <span class="kd">::</span> <span class="n">LightControlType</span>          <span class="o">=</span> <span class="mi">1</span>   <span class="c">! Lighting control type (same for all reference points)</span>
+<a name="ln-74"></a>                                              <span class="c">! (1=continuous, 2=stepped, 3=continuous/off)</span>
+<a name="ln-75"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span><span class="kd">::</span> <span class="n">ViewAzimuthForGlare</span>       <span class="o">=</span><span class="mf">0.0d0</span>  <span class="c">! View direction relative to window for glare calculation (deg)</span>
+<a name="ln-76"></a>  <span class="kt">INTEGER</span>  <span class="kd">::</span> <span class="n">MaxGlareallowed</span>           <span class="o">=</span> <span class="mi">0</span>   <span class="c">! Maximum allowable discomfort glare index</span>
+<a name="ln-77"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span><span class="kd">::</span> <span class="n">MinPowerFraction</span>          <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! Minimum fraction of power input that continuous dimming system can dim down to</span>
+<a name="ln-78"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span><span class="kd">::</span> <span class="n">MinLightFraction</span>          <span class="o">=</span><span class="mf">0.0d0</span>  <span class="c">! Minimum fraction of light output that continuous dimming system can dim down to</span>
+<a name="ln-79"></a>  <span class="kt">INTEGER</span>  <span class="kd">::</span> <span class="n">LightControlSteps</span>         <span class="o">=</span> <span class="mi">0</span>   <span class="c">! Number of levels (excluding zero) of stepped control system</span>
+<a name="ln-80"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span><span class="kd">::</span> <span class="n">LightControlProbability</span>   <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! For manual control of stepped systems, probability that lighting will</span>
+<a name="ln-81"></a>  <span class="kt">INTEGER</span>  <span class="kd">::</span> <span class="n">TotalExtWindows</span>           <span class="o">=</span> <span class="mi">0</span>   <span class="c">! Total number of exterior windows in the zone</span>
+<a name="ln-82"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span><span class="kd">::</span> <span class="n">AveVisDiffReflect</span>         <span class="o">=</span><span class="mf">0.0d0</span>  <span class="c">! Area-weighted average inside surface visible reflectance of zone</span>
+<a name="ln-83"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span><span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">Dimension</span> <span class="p">(:)</span> <span class="kd">::</span> <span class="n">RefPtPowerReductionFactor</span> <span class="c">!=1.0  ! Electric power reduction factor at reference points</span>
+<a name="ln-84"></a>                                                                  <span class="c">! due to daylighting</span>
+<a name="ln-85"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span><span class="kd">::</span> <span class="n">ZonePowerReductionFactor</span>      <span class="o">=</span><span class="mf">1.0D0</span>  <span class="c">! Electric power reduction factor for entire zone due to daylighting</span>
+<a name="ln-86"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:)</span> <span class="kd">::</span> <span class="n">DaylIllumAtRefPt</span>  <span class="c">!=0.0 ! Daylight illuminance at reference points (lux)</span>
+<a name="ln-87"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:)</span> <span class="kd">::</span> <span class="n">GlareIndexAtRefPt</span> <span class="c">!=0.0 ! Glare index at reference points</span>
+<a name="ln-88"></a>  <span class="kt">INTEGER</span><span class="p">,</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:)</span> <span class="kd">::</span> <span class="n">AdjIntWinZoneNums</span> <span class="c">! List of zone numbers of adjacent zones that have exterior windows and</span>
+<a name="ln-89"></a>                                     <span class="c">! share one or more interior windows with target zone</span>
+<a name="ln-90"></a>  <span class="kt">INTEGER</span>  <span class="kd">::</span> <span class="n">NumOfIntWinAdjZones</span>        <span class="o">=</span> <span class="mi">0</span>   <span class="c">! Number of adjacent zones that have exterior windows and share one or</span>
+<a name="ln-91"></a>                                              <span class="c">! more interior windows with target zone</span>
+<a name="ln-92"></a>  <span class="kt">INTEGER</span>  <span class="kd">::</span> <span class="n">NumOfIntWinAdjZoneExtWins</span>  <span class="o">=</span> <span class="mi">0</span>   <span class="c">! number of exterior windows associated with zone via interior windows</span>
+<a name="ln-93"></a>  <span class="k">TYPE</span><span class="p">(</span><span class="n">IntWinAdjZoneExtWinStruct</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:)</span> <span class="p">&amp;</span>  <span class="c">! nested structure</span>
+<a name="ln-94"></a>                                     <span class="kd">::</span> <span class="n">IntWinAdjZoneExtWin</span> <span class="c">! info about exterior window associated with zone via interior window</span>
+<a name="ln-95"></a>  <span class="kt">INTEGER</span>  <span class="kd">::</span> <span class="n">NumOfDayltgExtWins</span>         <span class="o">=</span> <span class="mi">0</span>   <span class="c">! Number of associated exterior windows providing daylight to this zone</span>
+<a name="ln-96"></a>  <span class="kt">INTEGER</span><span class="p">,</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:)</span> <span class="kd">::</span>  <span class="n">DayltgExtWinSurfNums</span>  <span class="c">! List of surface numbers of zone&#39;s exterior windows or</span>
+<a name="ln-97"></a>                                                <span class="c">! exterior windows in adjacent zones sharing interior windows with the zone</span>
+<a name="ln-98"></a>  <span class="kt">INTEGER</span><span class="p">,</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:)</span> <span class="kd">::</span>  <span class="n">DayltgFacPtrsForExtWins</span> <span class="c">! Zone&#39;s daylighting factor pointers.</span>
+<a name="ln-99"></a>                                                                 <span class="c">! Entries in this list have a one-to-one</span>
+<a name="ln-100"></a>                                                                 <span class="c">! correspondence with the DayltgExtWinSurfNums list</span>
+<a name="ln-101"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span><span class="kd">::</span> <span class="n">MinIntWinSolidAng</span>             <span class="o">=</span><span class="mf">0.0d0</span> <span class="c">! Minimum solid angle subtended by an interior window in a zone</span>
+<a name="ln-102"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span><span class="kd">::</span> <span class="n">TotInsSurfArea</span>                <span class="o">=</span><span class="mf">0.0d0</span> <span class="c">! Total inside surface area of a daylit zone (m2)</span>
+<a name="ln-103"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span><span class="kd">::</span> <span class="n">FloorVisRefl</span>                  <span class="o">=</span><span class="mf">0.0d0</span> <span class="c">! Area-weighted visible reflectance of floor of a daylit zone</span>
+<a name="ln-104"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span><span class="kd">::</span> <span class="n">InterReflIllFrIntWins</span>         <span class="o">=</span><span class="mf">0.0d0</span> <span class="c">! Inter-reflected illuminance due to beam and diffuse solar passing</span>
+<a name="ln-105"></a>                                             <span class="c">!  through a zone&#39;s interior windows (lux)</span>
+<a name="ln-106"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span><span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:)</span> <span class="kd">::</span> <span class="n">BacLum</span>          <span class="c">! =0.0 ! Background luminance at each reference point (cd/m2)</span>
+<a name="ln-107"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:,:)</span>     <span class="kd">::</span> <span class="n">SolidAngAtRefPt</span> <span class="c">!(MaxRefPoints,50)</span>
+<a name="ln-108"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:,:)</span>     <span class="kd">::</span> <span class="n">SolidAngAtRefPtWtd</span> <span class="c">!(MaxRefPoints,50)</span>
+<a name="ln-109"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:,:,:)</span>   <span class="kd">::</span> <span class="n">IllumFromWinAtRefPt</span> <span class="c">!(MaxRefPoints,2,50)</span>
+<a name="ln-110"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:,:,:)</span>   <span class="kd">::</span> <span class="n">BackLumFromWinAtRefPt</span>  <span class="c">!(MaxRefPoints,2,50)</span>
+<a name="ln-111"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:,:,:)</span>   <span class="kd">::</span> <span class="n">SourceLumFromWinAtRefPt</span>  <span class="c">!(MaxRefPoints,2,50)</span>
+<a name="ln-112"></a>  <span class="c">! Allocatable daylight factor arrays</span>
+<a name="ln-113"></a>  <span class="c">! Arguments for Dayl---Sky are:</span>
+<a name="ln-114"></a>  <span class="c">!  1: Daylit window number (1 to NumOfDayltgExtWins)</span>
+<a name="ln-115"></a>  <span class="c">!  2: Reference point number (1 to MaxRefPoints)</span>
+<a name="ln-116"></a>  <span class="c">!  3: Sky type (1 to 4; 1 = clear, 2 = clear turbid, 3 = intermediate, 4 = overcast</span>
+<a name="ln-117"></a>  <span class="c">!  4: Shading index (1 to MaxSlatAngs+1; 1 = bare window; 2 = with shade, or, if blinds</span>
+<a name="ln-118"></a>  <span class="c">!      2 = first slat position, 3 = second position, ..., MaxSlatAngs+1 = last position)</span>
+<a name="ln-119"></a>  <span class="c">!  5: Sun position index (1 to 24)</span>
+<a name="ln-120"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:,:,:,:,:)</span> <span class="kd">::</span> <span class="n">DaylIllFacSky</span>
+<a name="ln-121"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:,:,:,:,:)</span> <span class="kd">::</span> <span class="n">DaylSourceFacSky</span>
+<a name="ln-122"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:,:,:,:,:)</span> <span class="kd">::</span> <span class="n">DaylBackFacSky</span>
+<a name="ln-123"></a>
+<a name="ln-124"></a>  <span class="c">! Arguments for Dayl---Sun are:</span>
+<a name="ln-125"></a>  <span class="c">!  1: Daylit window number (1 to NumOfDayltgExtWins)</span>
+<a name="ln-126"></a>  <span class="c">!  2: Reference point number (1 to MaxRefPoints)</span>
+<a name="ln-127"></a>  <span class="c">!  3: Shading index (1 to MaxShadeIndex; 1 = no shade; 2 = with shade, or, if blinds</span>
+<a name="ln-128"></a>  <span class="c">!      2 = first slat position, 3 = second position, ..., MaxSlatAngs+1 = last position)</span>
+<a name="ln-129"></a>  <span class="c">!  4: Sun position index (1 to 24)</span>
+<a name="ln-130"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:,:,:,:)</span> <span class="kd">::</span> <span class="n">DaylIllFacSun</span>
+<a name="ln-131"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:,:,:,:)</span> <span class="kd">::</span> <span class="n">DaylIllFacSunDisk</span>
+<a name="ln-132"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:,:,:,:)</span> <span class="kd">::</span> <span class="n">DaylSourceFacSun</span>
+<a name="ln-133"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:,:,:,:)</span> <span class="kd">::</span> <span class="n">DaylSourceFacSunDisk</span>
+<a name="ln-134"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:,:,:,:)</span> <span class="kd">::</span> <span class="n">DaylBackFacSun</span>
+<a name="ln-135"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:,:,:,:)</span> <span class="kd">::</span> <span class="n">DaylBackFacSunDisk</span>
+<a name="ln-136"></a>
+<a name="ln-137"></a>  <span class="c">! Time exceeding maximum allowable discomfort glare index at reference points (hours)</span>
+<a name="ln-138"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:)</span> <span class="kd">::</span> <span class="n">TimeExceedingGlareIndexSPAtRefPt</span>
+<a name="ln-139"></a>
+<a name="ln-140"></a>  <span class="c">! Time exceeding daylight illuminance setpoint at reference points (hours)</span>
+<a name="ln-141"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:)</span> <span class="kd">::</span> <span class="n">TimeExceedingDaylightIlluminanceSPAtRefPt</span>
+<a name="ln-142"></a>
+<a name="ln-143"></a>  <span class="c">! True if at least one adjacent zone, sharing one or more interior windows, has daylighting control</span>
+<a name="ln-144"></a>  <span class="kt">LOGICAL</span> <span class="kd">::</span> <span class="n">AdjZoneHasDayltgCtrl</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-145"></a>  <span class="kt">INTEGER</span> <span class="kd">::</span> <span class="n">MapCount</span>             <span class="o">=</span> <span class="mi">0</span>  <span class="c">! Number of maps assigned to Zone</span>
+<a name="ln-146"></a>  <span class="kt">INTEGER</span><span class="p">,</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:)</span> <span class="kd">::</span> <span class="n">ZoneToMap</span>  <span class="c">! Pointers to maps allocated to Zone</span>
+<a name="ln-147"></a><span class="k">END TYPE </span><span class="n">ZoneDaylightCalc</span>
+<a name="ln-148"></a>
+<a name="ln-149"></a><span class="k">TYPE </span><span class="n">IllumMapData</span>
+<a name="ln-150"></a>  <span class="kt">CHARACTER</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="n">MaxNameLength</span><span class="p">)</span> <span class="kd">::</span> <span class="n">Name</span>     <span class="o">=</span><span class="s1">&#39; &#39;</span>  <span class="c">! Map name</span>
+<a name="ln-151"></a>  <span class="kt">INTEGER</span>                      <span class="kd">::</span> <span class="n">Zone</span>     <span class="o">=</span><span class="mi">0</span>    <span class="c">! Pointer to zone being mapped</span>
+<a name="ln-152"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>                    <span class="kd">::</span> <span class="n">Z</span>        <span class="o">=</span><span class="mf">0.0d0</span>  <span class="c">! Elevation or height</span>
+<a name="ln-153"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>                    <span class="kd">::</span> <span class="n">Xmin</span>     <span class="o">=</span><span class="mf">0.0d0</span>  <span class="c">! Minimum X value</span>
+<a name="ln-154"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>                    <span class="kd">::</span> <span class="n">Xmax</span>     <span class="o">=</span><span class="mf">0.0d0</span>  <span class="c">! Maximum X value</span>
+<a name="ln-155"></a>  <span class="kt">INTEGER</span>                      <span class="kd">::</span> <span class="n">Xnum</span>     <span class="o">=</span><span class="mi">0</span>    <span class="c">! Number of X reference points (going N-S)</span>
+<a name="ln-156"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>                    <span class="kd">::</span> <span class="n">Xinc</span>     <span class="o">=</span><span class="mf">0.0d0</span>  <span class="c">! Increment between X reference points</span>
+<a name="ln-157"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>                    <span class="kd">::</span> <span class="n">Ymin</span>     <span class="o">=</span><span class="mf">0.0d0</span>  <span class="c">! Minimum Y value</span>
+<a name="ln-158"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>                    <span class="kd">::</span> <span class="n">Ymax</span>     <span class="o">=</span><span class="mf">0.0d0</span>  <span class="c">! Maximum Y value</span>
+<a name="ln-159"></a>  <span class="kt">INTEGER</span>                      <span class="kd">::</span> <span class="n">Ynum</span>     <span class="o">=</span><span class="mi">0</span>    <span class="c">! Number of Y reference points (going E-W)</span>
+<a name="ln-160"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>                    <span class="kd">::</span> <span class="n">Yinc</span>     <span class="o">=</span><span class="mf">0.0d0</span>  <span class="c">! Increment between Y reference points</span>
+<a name="ln-161"></a>  <span class="kt">INTEGER</span>                      <span class="kd">::</span> <span class="n">UnitNo</span>   <span class="o">=</span><span class="mi">0</span>    <span class="c">! Unit number for map output (later merged to final file)</span>
+<a name="ln-162"></a>  <span class="kt">LOGICAL</span>                      <span class="kd">::</span> <span class="n">HeaderXLineLengthNeeded</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span> <span class="c">! X header will likely be the longest line in the file</span>
+<a name="ln-163"></a>  <span class="kt">INTEGER</span>                      <span class="kd">::</span> <span class="n">HeaderXLineLength</span> <span class="o">=</span> <span class="mi">0</span>   <span class="c">! actual length of this X header line</span>
+<a name="ln-164"></a><span class="k">END TYPE</span>
+<a name="ln-165"></a>
+<a name="ln-166"></a><span class="k">TYPE </span><span class="n">MapCalcData</span>
+<a name="ln-167"></a>  <span class="kt">INTEGER</span>  <span class="kd">::</span> <span class="n">TotalMapRefPoints</span> <span class="o">=</span> <span class="mi">0</span>   <span class="c">! Number of illuminance map reference points in this zone (up to 100)</span>
+<a name="ln-168"></a>  <span class="kt">INTEGER</span>  <span class="kd">::</span> <span class="n">Zone</span>               <span class="o">=</span><span class="mi">0</span>    <span class="c">! Pointer to zone being mapped</span>
+<a name="ln-169"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:,:)</span> <span class="kd">::</span> <span class="n">MapRefPtAbsCoord</span>  <span class="c">! X,Y,Z coordinates of all illuminance map reference points</span>
+<a name="ln-170"></a>                                                        <span class="c">! in absolute coordinate system (m)</span>
+<a name="ln-171"></a>                                                        <span class="c">! Points 1 and 2 are the control reference points</span>
+<a name="ln-172"></a>  <span class="kt">LOGICAL</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:)</span> <span class="kd">::</span> <span class="n">MapRefPtInBounds</span>  <span class="c">! True when coordinates are in bounds of zone coordinates</span>
+<a name="ln-173"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:)</span>     <span class="kd">::</span> <span class="n">DaylIllumAtMapPt</span>  <span class="c">! Daylight illuminance at illuminance map points (lux)</span>
+<a name="ln-174"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:)</span>     <span class="kd">::</span> <span class="n">GlareIndexAtMapPt</span> <span class="c">! Glare index at illuminance map points</span>
+<a name="ln-175"></a>        <span class="c">! following Hr - report avg hr</span>
+<a name="ln-176"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:)</span>     <span class="kd">::</span> <span class="n">DaylIllumAtMapPtHr</span>  <span class="c">! Daylight illuminance at illuminance map points (lux)</span>
+<a name="ln-177"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:)</span>     <span class="kd">::</span> <span class="n">GlareIndexAtMapPtHr</span> <span class="c">! Glare index at illuminance map points</span>
+<a name="ln-178"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:,:)</span>   <span class="kd">::</span> <span class="n">SolidAngAtMapPt</span> <span class="c">!(MaxRefPoints,50)</span>
+<a name="ln-179"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:,:)</span>   <span class="kd">::</span> <span class="n">SolidAngAtMapPtWtd</span> <span class="c">!(MaxRefPoints,50)</span>
+<a name="ln-180"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:,:,:)</span> <span class="kd">::</span> <span class="n">IllumFromWinAtMapPt</span> <span class="c">!(MaxRefPoints,2,50)</span>
+<a name="ln-181"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:,:,:)</span> <span class="kd">::</span> <span class="n">BackLumFromWinAtMapPt</span>  <span class="c">!(MaxRefPoints,2,50)</span>
+<a name="ln-182"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:,:,:)</span> <span class="kd">::</span> <span class="n">SourceLumFromWinAtMapPt</span>  <span class="c">!(MaxRefPoints,2,50)</span>
+<a name="ln-183"></a>  <span class="c">!  1: Daylit window number (1 to NumOfDayltgExtWins)</span>
+<a name="ln-184"></a>  <span class="c">!  2: Reference point number (1 to MaxRefPoints)</span>
+<a name="ln-185"></a>  <span class="c">!  3: Sky type (1 to 4; 1 = clear, 2 = clear turbid, 3 = intermediate, 4 = overcast</span>
+<a name="ln-186"></a>  <span class="c">!  4: Shading index (1 to MaxSlatAngs+1; 1 = bare window; 2 = with shade, or, if blinds</span>
+<a name="ln-187"></a>  <span class="c">!      2 = first slat position, 3 = second position, ..., MaxSlatAngs+1 = last position)</span>
+<a name="ln-188"></a>  <span class="c">!  5: Sun position index (1 to 24)</span>
+<a name="ln-189"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:,:,:,:,:)</span> <span class="kd">::</span> <span class="n">DaylIllFacSky</span>
+<a name="ln-190"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:,:,:,:,:)</span> <span class="kd">::</span> <span class="n">DaylSourceFacSky</span>
+<a name="ln-191"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:,:,:,:,:)</span> <span class="kd">::</span> <span class="n">DaylBackFacSky</span>
+<a name="ln-192"></a>  <span class="c">! Arguments for Dayl---Sun are:</span>
+<a name="ln-193"></a>  <span class="c">!  1: Daylit window number (1 to NumOfDayltgExtWins)</span>
+<a name="ln-194"></a>  <span class="c">!  2: Reference point number (1 to MaxRefPoints)</span>
+<a name="ln-195"></a>  <span class="c">!  3: Shading index (1 to MaxShadeIndex; 1 = no shade; 2 = with shade, or, if blinds</span>
+<a name="ln-196"></a>  <span class="c">!      2 = first slat position, 3 = second position, ..., MaxSlatAngs+1 = last position)</span>
+<a name="ln-197"></a>  <span class="c">!  4: Sun position index (1 to 24)</span>
+<a name="ln-198"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:,:,:,:)</span> <span class="kd">::</span> <span class="n">DaylIllFacSun</span>
+<a name="ln-199"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:,:,:,:)</span> <span class="kd">::</span> <span class="n">DaylIllFacSunDisk</span>
+<a name="ln-200"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:,:,:,:)</span> <span class="kd">::</span> <span class="n">DaylSourceFacSun</span>
+<a name="ln-201"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:,:,:,:)</span> <span class="kd">::</span> <span class="n">DaylSourceFacSunDisk</span>
+<a name="ln-202"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:,:,:,:)</span> <span class="kd">::</span> <span class="n">DaylBackFacSun</span>
+<a name="ln-203"></a>  <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:,:,:,:)</span> <span class="kd">::</span> <span class="n">DaylBackFacSunDisk</span>
+<a name="ln-204"></a><span class="k">END TYPE</span>
+<a name="ln-205"></a>
+<a name="ln-206"></a>          <span class="c">! MODULE VARIABLE TYPE DECLARATIONS:</span>
+<a name="ln-207"></a><span class="k">TYPE</span> <span class="p">(</span><span class="n">ZoneDaylightCalc</span><span class="p">),</span> <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:)</span> <span class="kd">::</span> <span class="n">ZoneDaylight</span>
+<a name="ln-208"></a><span class="k">TYPE</span> <span class="p">(</span><span class="n">IllumMapData</span><span class="p">),</span>     <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:)</span> <span class="kd">::</span> <span class="n">IllumMap</span>
+<a name="ln-209"></a><span class="k">TYPE</span> <span class="p">(</span><span class="n">MapCalcData</span><span class="p">),</span>      <span class="k">ALLOCATABLE</span><span class="p">,</span> <span class="k">DIMENSION</span><span class="p">(:)</span> <span class="kd">::</span> <span class="n">IllumMapCalc</span>
+<a name="ln-210"></a>
+<a name="ln-211"></a>          <span class="c">! INTERFACE BLOCK SPECIFICATIONS: na</span>
+<a name="ln-212"></a>
+<a name="ln-213"></a>          <span class="c">! MODULE VARIABLE DECLARATIONS:</span>
+<a name="ln-214"></a><span class="kt">INTEGER</span> <span class="kd">::</span> <span class="n">TotIllumMaps</span>    <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-215"></a><span class="kt">LOGICAL</span> <span class="kd">::</span> <span class="n">mapResultsToReport</span><span class="o">=</span><span class="p">.</span><span class="n">false</span><span class="p">.</span>  <span class="c">! used when only partial hour has &quot;sun up&quot;</span>
+<a name="ln-216"></a><span class="kt">LOGICAL</span> <span class="kd">::</span> <span class="n">mapResultsReported</span><span class="o">=</span><span class="p">.</span><span class="n">false</span><span class="p">.</span>  <span class="c">! when no map results are ever reported this will still be false</span>
+<a name="ln-217"></a><span class="kt">CHARACTER</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="kd">::</span> <span class="n">MapColSep</span><span class="o">=</span><span class="s1">&#39; &#39;</span>   <span class="c">! Character for separating map columns (tab, space, comma)</span>
+<a name="ln-218"></a>
+<a name="ln-219"></a><span class="kt">LOGICAL</span> <span class="kd">::</span> <span class="n">DFSReportSizingDays</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-220"></a><span class="kt">LOGICAL</span> <span class="kd">::</span> <span class="n">DFSReportAllShadowCalculationDays</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-221"></a>
+<a name="ln-222"></a>
+<a name="ln-223"></a><span class="c">!     NOTICE</span>
+<a name="ln-224"></a><span class="c">!</span>
+<a name="ln-225"></a><span class="c">!     Copyright © 1996-2013 The Board of Trustees of the University of Illinois</span>
+<a name="ln-226"></a><span class="c">!     and The Regents of the University of California through Ernest Orlando Lawrence</span>
+<a name="ln-227"></a><span class="c">!     Berkeley National Laboratory.  All rights reserved.</span>
+<a name="ln-228"></a><span class="c">!</span>
+<a name="ln-229"></a><span class="c">!     Portions of the EnergyPlus software package have been developed and copyrighted</span>
+<a name="ln-230"></a><span class="c">!     by other individuals, companies and institutions.  These portions have been</span>
+<a name="ln-231"></a><span class="c">!     incorporated into the EnergyPlus software package under license.   For a complete</span>
+<a name="ln-232"></a><span class="c">!     list of contributors, see &quot;Notice&quot; located in EnergyPlus.f90.</span>
+<a name="ln-233"></a><span class="c">!</span>
+<a name="ln-234"></a><span class="c">!     NOTICE: The U.S. Government is granted for itself and others acting on its</span>
+<a name="ln-235"></a><span class="c">!     behalf a paid-up, nonexclusive, irrevocable, worldwide license in this data to</span>
+<a name="ln-236"></a><span class="c">!     reproduce, prepare derivative works, and perform publicly and display publicly.</span>
+<a name="ln-237"></a><span class="c">!     Beginning five (5) years after permission to assert copyright is granted,</span>
+<a name="ln-238"></a><span class="c">!     subject to two possible five year renewals, the U.S. Government is granted for</span>
+<a name="ln-239"></a><span class="c">!     itself and others acting on its behalf a paid-up, non-exclusive, irrevocable</span>
+<a name="ln-240"></a><span class="c">!     worldwide license in this data to reproduce, prepare derivative works,</span>
+<a name="ln-241"></a><span class="c">!     distribute copies to the public, perform publicly and display publicly, and to</span>
+<a name="ln-242"></a><span class="c">!     permit others to do so.</span>
+<a name="ln-243"></a><span class="c">!</span>
+<a name="ln-244"></a><span class="c">!     TRADEMARKS: EnergyPlus is a trademark of the US Department of Energy.</span>
+<a name="ln-245"></a><span class="c">!</span>
+<a name="ln-246"></a>
+<a name="ln-247"></a><span class="k">END MODULE </span><span class="n">DataDaylighting</span>
+</pre></div>
+
+    </section>
+    </div>
+  </div>
+
+  <section class="visible-xs visible-sm hidden-md">
+    <hr>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allfiles-1">All Source Files</a></h3></div>
+  <div id="allfiles-1" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../sourcefile/airflownetworkbalancemanager.f90.html">AirflowNetworkBalanceManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/airflownetworksolver.f90.html">AirflowNetworkSolver.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/baseboardradiator.f90.html">BaseboardRadiator.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/baseboardradiatorelectric.f90.html">BaseboardRadiatorElectric.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/baseboardradiatorsteam.f90.html">BaseboardRadiatorSteam.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/baseboardradiatorwater.f90.html">BaseboardRadiatorWater.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/branchinputmanager.f90.html">BranchInputManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/branchnodeconnections.f90.html">BranchNodeConnections.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/conductiontransferfunctioncalc.f90.html">ConductionTransferFunctionCalc.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/cooltower.f90.html">CoolTower.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/costestimatemanager.f90.html">CostEstimateManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/curvemanager.f90.html">CurveManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/cvfonlyroutines.f90.html">CVFOnlyRoutines.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataairflownetwork.f90.html">DataAirflowNetwork.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataairloop.f90.html">DataAirLoop.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataairsystems.f90.html">DataAirSystems.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/databranchairloopplant.f90.html">DataBranchAirLoopPlant.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/databranchnodeconnections.f90.html">DataBranchNodeConnections.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/databsdfwindow.f90.html">DataBSDFWindow.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datacomplexfenestration.f90.html">DataComplexFenestration.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datacontaminantbalance.f90.html">DataContaminantBalance.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataconvergparams.f90.html">DataConvergParams.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataconversions.f90.html">DataConversions.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datacostestimate.f90.html">DataCostEstimate.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datadaylighting.f90.html">DataDaylighting.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datadaylightingdevices.f90.html">DataDaylightingDevices.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datadefineequip.f90.html">Datadefineequip.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datadelight.f90.html">DataDElight.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataenvironment.f90.html">DataEnvironment.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataequivalentlayerwindow.f90.html">DataEquivalentLayerWindow.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataerrortracking.f90.html">DataErrorTracking.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datagenerators.f90.html">DataGenerators.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataglobalconstants.f90.html">DataGlobalConstants.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataglobals.f90.html">DataGlobals.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataheatbalance.f90.html">DataHeatBalance.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataheatbalfansys.f90.html">DataHeatBalFanSys.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataheatbalsurface.f90.html">DataHeatBalSurface.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datahvaccontrollers.f90.html">DataHVACControllers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datahvacglobals.f90.html">DataHVACGlobals.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datainterfaces.f90.html">DataInterfaces.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataipshortcuts.f90.html">DataIPShortCuts.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataloopnode.f90.html">DataLoopNode.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datamoisturebalance.f90.html">DataMoistureBalance.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datamoisturebalanceempd.f90.html">DataMoistureBalanceEMPD.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataoutputs.f90.html">DataOutputs.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataphotovoltaics.f90.html">DataPhotovoltaics.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataplant.f90.html">DataPlant.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataplantpipingsystems.f90.html">DataPlantPipingSystems.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataprecisionglobals.f90.html">DataPrecisionGlobals.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datareportingflags.f90.html">DataReportingFlags.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataroomair.f90.html">DataRoomAir.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datarootfinder.f90.html">DataRootFinder.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataruntimelanguage.f90.html">DataRuntimeLanguage.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datashadowingcombinations.f90.html">DataShadowingCombinations.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datasizing.f90.html">DataSizing.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datastringglobals.f90.html">DataStringGlobals.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datasurfacecolors.f90.html">DataSurfaceColors.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datasurfacelists.f90.html">DataSurfaceLists.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datasurfaces.f90.html">DataSurfaces.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datasystemvariables.f90.html">DataSystemVariables.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datatimings.f90.html">DataTimings.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataucsdshareddata.f90.html">DataUCSDSharedData.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datavectortypes.f90.html">DataVectorTypes.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataviewfactorinformation.f90.html">DataViewFactorInformation.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datawater.f90.html">DataWater.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datazonecontrols.f90.html">DataZoneControls.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datazoneenergydemands.f90.html">DataZoneEnergyDemands.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datazoneequipment.f90.html">DataZoneEquipment.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/daylightingdevices.f90.html">DaylightingDevices.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/daylightingmanager.f90.html">DaylightingManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/delightmanagerf.f90.html">DElightManagerF.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/delightmanagerf_no.f90.html">DElightManagerF_NO.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/demandmanager.f90.html">DemandManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/desiccantdehumidifiers.f90.html">DesiccantDehumidifiers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/directair.f90.html">DirectAir.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/displayroutines.f90.html">DisplayRoutines.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dxcoil.f90.html">DXCoil.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/earthtube.f90.html">EarthTube.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/economiclifecyclecost.f90.html">EconomicLifeCycleCost.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/economictariff.f90.html">EconomicTariff.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/ecoroof.f90.html">EcoRoof.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/electricpowergenerators.f90.html">ElectricPowerGenerators.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/electricpowermanager.f90.html">ElectricPowerManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/emsmanager.f90.html">EMSManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/energyplus.f90.html">EnergyPlus.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/exteriorenergyusemanager.f90.html">ExteriorEnergyUseManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/externalinterface_no.f90.html">ExternalInterface_NO.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/fancoilunits.f90.html">FanCoilUnits.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/faultsmanager.f90.html">FaultsManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/fluidproperties.f90.html">FluidProperties.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/general.f90.html">General.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/generalroutines.f90.html">GeneralRoutines.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/globalnames.f90.html">GlobalNames.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalanceairmanager.f90.html">HeatBalanceAirManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalanceconvectioncoeffs.f90.html">HeatBalanceConvectionCoeffs.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalancehamtmanager.f90.html">HeatBalanceHAMTManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalanceinternalheatgains.f90.html">HeatBalanceInternalHeatGains.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalanceintradexchange.f90.html">HeatBalanceIntRadExchange.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalancemanager.f90.html">HeatBalanceManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalancemovableinsulation.f90.html">HeatBalanceMovableInsulation.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalancesurfacemanager.f90.html">HeatBalanceSurfaceManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalfinitedifferencemanager.f90.html">HeatBalFiniteDifferenceManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatrecovery.f90.html">HeatRecovery.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/humidifiers.f90.html">Humidifiers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvaccontrollers.f90.html">HVACControllers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvaccooledbeam.f90.html">HVACCooledBeam.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacdualductsystem.f90.html">HVACDualDuctSystem.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacduct.f90.html">HVACDuct.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacdxsystem.f90.html">HVACDXSystem.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacevapcomponent.f90.html">HVACEvapComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacfancomponent.f90.html">HVACFanComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacfurnace.f90.html">HVACFurnace.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacheatingcoils.f90.html">HVACHeatingCoils.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvachxassistedcoolingcoil.f90.html">HVACHXAssistedCoolingCoil.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacinterfacemanager.f90.html">HVACInterfaceManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacmanager.f90.html">HVACManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacmixercomponent.f90.html">HVACMixerComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacmultispeedheatpump.f90.html">HVACMultiSpeedHeatPump.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacsingleductinduc.f90.html">HVACSingleDuctInduc.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacsingleductsystem.f90.html">HVACSingleDuctSystem.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacsplittercomponent.f90.html">HVACSplitterComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacstandaloneerv.f90.html">HVACStandAloneERV.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacsteamcoilcomponent.f90.html">HVACSteamCoilComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvactranspiredcollector.f90.html">HVACTranspiredCollector.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacunitarybypassvav.f90.html">HVACUnitaryBypassVAV.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacunitarysystem.f90.html">HVACUnitarySystem.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacvariablerefrigerantflow.f90.html">HVACVariableRefrigerantFlow.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacwatercoilcomponent.f90.html">HVACWaterCoilComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacwatertoair.f90.html">HVACWatertoAir.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacwatertoairmultispeedhp.f90.html">HVACWatertoAirMultiSpeedHP.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/inputprocessor.f90.html">InputProcessor.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/matrixdatamanager.f90.html">MatrixDataManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/mixedair.f90.html">MixedAir.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/moisturebalanceempdmanager.f90.html">MoistureBalanceEMPDManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/nodeinputmanager.f90.html">NodeInputManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/nonzoneequipmentmanager.f90.html">NonZoneEquipmentManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/outairnodemanager.f90.html">OutAirNodeManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/outdoorairunit.f90.html">OutdoorAirUnit.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/outputprocessor.f90.html">OutputProcessor.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/outputreportpredefined.f90.html">OutputReportPredefined.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/outputreports.f90.html">OutputReports.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/outputreporttabular.f90.html">OutputReportTabular.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/packagedterminalheatpump.f90.html">PackagedTerminalHeatPump.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/packagedthermalstoragecoil.f90.html">PackagedThermalStorageCoil.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/photovoltaics.f90.html">Photovoltaics.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/photovoltaicthermalcollectors.f90.html">PhotovoltaicThermalCollectors.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantabsorptionchillers.f90.html">PlantAbsorptionChillers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantboilers.f90.html">PlantBoilers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantboilerssteam.f90.html">PlantBoilersSteam.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantcentralgshp.f90.html">PlantCentralGSHP.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantchillers.f90.html">PlantChillers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantcondloopoperation.f90.html">PlantCondLoopOperation.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantcondlooptowers.f90.html">PlantCondLoopTowers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/planteirchillers.f90.html">PlantEIRChillers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantevapfluidcoolers.f90.html">PlantEvapFluidCoolers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantexhaustabsorptionchiller.f90.html">PlantExhaustAbsorptionChiller.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantfluidcoolers.f90.html">PlantFluidCoolers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantgasabsorptionchiller.f90.html">PlantGasAbsorptionChiller.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantgroundheatexchangers.f90.html">PlantGroundHeatExchangers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantheatexchanger.f90.html">PlantHeatExchanger.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/planticethermalstorage.f90.html">PlantIceThermalStorage.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantloadprofile.f90.html">PlantLoadProfile.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantloopequipment.f90.html">PlantLoopEquipment.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantloopsolver.f90.html">PlantLoopSolver.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantmanager.f90.html">PlantManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantoutsideenergysources.f90.html">PlantOutsideEnergySources.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantpipeheattransfer.f90.html">PlantPipeHeatTransfer.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantpipes.f90.html">PlantPipes.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantpipingsystemmanager.f90.html">PlantPipingSystemManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantpondgroundheatexchanger.f90.html">PlantPondGroundHeatExchanger.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantpressuresystem.f90.html">PlantPressureSystem.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantpumps.f90.html">PlantPumps.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantsolarcollectors.f90.html">PlantSolarCollectors.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantsurfacegroundheatexchanger.f90.html">PlantSurfaceGroundHeatExchanger.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantutilities.f90.html">PlantUtilities.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantvalves.f90.html">PlantValves.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantwatersources.f90.html">PlantWaterSources.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantwaterthermaltank.f90.html">PlantWaterThermalTank.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantwatertowatergshp.f90.html">PlantWatertoWaterGSHP.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantwateruse.f90.html">PlantWaterUse.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/pollutionanalysismodule.f90.html">PollutionAnalysisModule.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/poweredinductionunits.f90.html">PoweredInductionUnits.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/psychroutines.f90.html">PsychRoutines.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/purchasedairmanager.f90.html">Purchasedairmanager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/radiantsystemhightemp.f90.html">RadiantSystemHighTemp.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/radiantsystemlowtemp.f90.html">RadiantSystemLowTemp.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/refrigeratedcase.f90.html">RefrigeratedCase.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/reportsizingmanager.f90.html">ReportSizingManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/returnairpath.f90.html">ReturnAirPath.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/roomairmanager.f90.html">RoomAirManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/roomairmodelcrossvent.f90.html">RoomAirModelCrossVent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/roomairmodeldisplacementvent.f90.html">RoomAirModelDisplacementVent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/roomairmodelmundt.f90.html">RoomAirModelMundt.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/roomairmodelufad.f90.html">RoomAirModelUFAD.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/roomairmodelusertemppattern.f90.html">RoomAirModelUserTempPattern.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/rootfinder.f90.html">RootFinder.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/runtimelanguageprocessor.f90.html">RuntimeLanguageProcessor.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/schedulemanager.f90.html">ScheduleManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/setpointmanager.f90.html">SetPointManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/simairservingzones.f90.html">SimAirServingZones.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/simulationmanager.f90.html">SimulationManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/sizingmanager.f90.html">SizingManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/solarreflectionmanager.f90.html">SolarReflectionManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/solarshading.f90.html">SolarShading.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/sortandstringutilities.f90.html">SortAndStringUtilities.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/sqlite3.c.html">sqlite3.c</a>
+
+      <a class="list-group-item" href="../sourcefile/sqlitecroutines.c.html">SQLiteCRoutines.c</a>
+
+      <a class="list-group-item" href="../sourcefile/sqlitefortranroutines.f90.html">SQLiteFortranRoutines.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/sqlitefortranroutines_no.f90.html">SQLiteFortranRoutines_NO.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/standardratings.f90.html">StandardRatings.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/surfacegeometry.f90.html">SurfaceGeometry.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/systemavailabilitymanager.f90.html">SystemAvailabilityManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/systemreports.f90.html">SystemReports.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/tarcogcomplexfenestration.f90.html">TarcogComplexFenestration.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/thermalchimney.f90.html">ThermalChimney.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/thermalcomfort.f90.html">ThermalComfort.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/unitheater.f90.html">UnitHeater.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/unitventilator.f90.html">UnitVentilator.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/userdefinedcomponents.f90.html">UserDefinedComponents.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/utilityroutines.f90.html">UtilityRoutines.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/vectorutilities.f90.html">VectorUtilities.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/ventilatedslab.f90.html">VentilatedSlab.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/watermanager.f90.html">WaterManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/weathermanager.f90.html">WeatherManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/windowac.f90.html">WindowAC.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/windowcomplexmanager.f90.html">WindowComplexManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/windowequivalentlayer.f90.html">WindowEquivalentLayer.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/windowmanager.f90.html">WindowManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/windturbine.f90.html">WindTurbine.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/zoneairloopequipmentmanager.f90.html">Zoneairloopequipmentmanager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/zonecontaminantpredictorcorrector.f90.html">ZoneContaminantPredictorCorrector.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/zonedehumidifier.f90.html">ZoneDehumidifier.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/zoneequipmentmanager.f90.html">Zoneequipmentmanager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/zoneplenumcomponent.f90.html">ZonePlenumComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/zonetemppredictorcorrector.f90.html">ZoneTempPredictorCorrector.f90</a>
+
+    </div>
+  </div>
+</div>
+
+
+  </section>
+
+    <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2017 </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> EnergyPlusFortran</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js'],
+        'HTML-CSS': {
+           styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#000000 ! important'} }
+        }
+      });
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>

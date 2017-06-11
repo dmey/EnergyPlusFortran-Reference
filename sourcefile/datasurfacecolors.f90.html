@@ -1,0 +1,1922 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	 <meta name="description" content="">
+
+    <meta name="author" content="dmey (forked from NREL)" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>DataSurfaceColors.f90 &ndash; EnergyPlusFortran</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">EnergyPlusFortran <small>8.1.0.009</small></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+		 aria-expanded="false">Contents <span class="caret"></span></a>
+	      <ul class="dropdown-menu">
+
+            <li><a href="../lists/files.html">Source Files</a></li>
+
+
+            <li><a href="../lists/modules.html">Modules</a></li>
+
+
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+
+
+            <li><a href="../lists/types.html">Derived Types</a></li>
+
+
+            <li><a href="../program/energyplus.html">Program</a></li>
+
+            </ul>
+            </li>
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/energyplus.html">Program</a></li>
+
+          </ul>
+
+
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+
+  <div class="row">
+    <h1>DataSurfaceColors.f90
+    <small>Source File</small>
+
+    </h1>
+
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+	  data-placement="bottom" data-html="true"
+	  title=" 0.0% of total for source files.">107 statements</a>
+     </li>
+
+
+    <li><i class="fa fa-code"></i><a href="../src/DataSurfaceColors.f90"> Source File</a></li>
+
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+
+     <li class="active">DataSurfaceColors.f90</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+
+<div id="sidebar">
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#mods-0">Modules</a></h3></div>
+  <div id="mods-0" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../module/datasurfacecolors.html">DataSurfaceColors</a>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/datasurfacecolors.f90.html#src">DataSurfaceColors.f90</a>
+  </div>
+</div>
+
+
+  <hr>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allfiles-0">All Source Files</a></h3></div>
+  <div id="allfiles-0" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../sourcefile/airflownetworkbalancemanager.f90.html">AirflowNetworkBalanceManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/airflownetworksolver.f90.html">AirflowNetworkSolver.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/baseboardradiator.f90.html">BaseboardRadiator.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/baseboardradiatorelectric.f90.html">BaseboardRadiatorElectric.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/baseboardradiatorsteam.f90.html">BaseboardRadiatorSteam.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/baseboardradiatorwater.f90.html">BaseboardRadiatorWater.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/branchinputmanager.f90.html">BranchInputManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/branchnodeconnections.f90.html">BranchNodeConnections.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/conductiontransferfunctioncalc.f90.html">ConductionTransferFunctionCalc.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/cooltower.f90.html">CoolTower.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/costestimatemanager.f90.html">CostEstimateManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/curvemanager.f90.html">CurveManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/cvfonlyroutines.f90.html">CVFOnlyRoutines.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataairflownetwork.f90.html">DataAirflowNetwork.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataairloop.f90.html">DataAirLoop.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataairsystems.f90.html">DataAirSystems.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/databranchairloopplant.f90.html">DataBranchAirLoopPlant.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/databranchnodeconnections.f90.html">DataBranchNodeConnections.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/databsdfwindow.f90.html">DataBSDFWindow.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datacomplexfenestration.f90.html">DataComplexFenestration.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datacontaminantbalance.f90.html">DataContaminantBalance.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataconvergparams.f90.html">DataConvergParams.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataconversions.f90.html">DataConversions.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datacostestimate.f90.html">DataCostEstimate.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datadaylighting.f90.html">DataDaylighting.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datadaylightingdevices.f90.html">DataDaylightingDevices.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datadefineequip.f90.html">Datadefineequip.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datadelight.f90.html">DataDElight.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataenvironment.f90.html">DataEnvironment.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataequivalentlayerwindow.f90.html">DataEquivalentLayerWindow.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataerrortracking.f90.html">DataErrorTracking.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datagenerators.f90.html">DataGenerators.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataglobalconstants.f90.html">DataGlobalConstants.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataglobals.f90.html">DataGlobals.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataheatbalance.f90.html">DataHeatBalance.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataheatbalfansys.f90.html">DataHeatBalFanSys.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataheatbalsurface.f90.html">DataHeatBalSurface.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datahvaccontrollers.f90.html">DataHVACControllers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datahvacglobals.f90.html">DataHVACGlobals.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datainterfaces.f90.html">DataInterfaces.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataipshortcuts.f90.html">DataIPShortCuts.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataloopnode.f90.html">DataLoopNode.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datamoisturebalance.f90.html">DataMoistureBalance.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datamoisturebalanceempd.f90.html">DataMoistureBalanceEMPD.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataoutputs.f90.html">DataOutputs.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataphotovoltaics.f90.html">DataPhotovoltaics.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataplant.f90.html">DataPlant.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataplantpipingsystems.f90.html">DataPlantPipingSystems.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataprecisionglobals.f90.html">DataPrecisionGlobals.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datareportingflags.f90.html">DataReportingFlags.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataroomair.f90.html">DataRoomAir.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datarootfinder.f90.html">DataRootFinder.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataruntimelanguage.f90.html">DataRuntimeLanguage.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datashadowingcombinations.f90.html">DataShadowingCombinations.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datasizing.f90.html">DataSizing.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datastringglobals.f90.html">DataStringGlobals.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datasurfacecolors.f90.html">DataSurfaceColors.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datasurfacelists.f90.html">DataSurfaceLists.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datasurfaces.f90.html">DataSurfaces.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datasystemvariables.f90.html">DataSystemVariables.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datatimings.f90.html">DataTimings.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataucsdshareddata.f90.html">DataUCSDSharedData.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datavectortypes.f90.html">DataVectorTypes.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataviewfactorinformation.f90.html">DataViewFactorInformation.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datawater.f90.html">DataWater.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datazonecontrols.f90.html">DataZoneControls.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datazoneenergydemands.f90.html">DataZoneEnergyDemands.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datazoneequipment.f90.html">DataZoneEquipment.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/daylightingdevices.f90.html">DaylightingDevices.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/daylightingmanager.f90.html">DaylightingManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/delightmanagerf.f90.html">DElightManagerF.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/delightmanagerf_no.f90.html">DElightManagerF_NO.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/demandmanager.f90.html">DemandManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/desiccantdehumidifiers.f90.html">DesiccantDehumidifiers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/directair.f90.html">DirectAir.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/displayroutines.f90.html">DisplayRoutines.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dxcoil.f90.html">DXCoil.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/earthtube.f90.html">EarthTube.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/economiclifecyclecost.f90.html">EconomicLifeCycleCost.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/economictariff.f90.html">EconomicTariff.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/ecoroof.f90.html">EcoRoof.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/electricpowergenerators.f90.html">ElectricPowerGenerators.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/electricpowermanager.f90.html">ElectricPowerManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/emsmanager.f90.html">EMSManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/energyplus.f90.html">EnergyPlus.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/exteriorenergyusemanager.f90.html">ExteriorEnergyUseManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/externalinterface_no.f90.html">ExternalInterface_NO.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/fancoilunits.f90.html">FanCoilUnits.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/faultsmanager.f90.html">FaultsManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/fluidproperties.f90.html">FluidProperties.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/general.f90.html">General.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/generalroutines.f90.html">GeneralRoutines.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/globalnames.f90.html">GlobalNames.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalanceairmanager.f90.html">HeatBalanceAirManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalanceconvectioncoeffs.f90.html">HeatBalanceConvectionCoeffs.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalancehamtmanager.f90.html">HeatBalanceHAMTManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalanceinternalheatgains.f90.html">HeatBalanceInternalHeatGains.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalanceintradexchange.f90.html">HeatBalanceIntRadExchange.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalancemanager.f90.html">HeatBalanceManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalancemovableinsulation.f90.html">HeatBalanceMovableInsulation.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalancesurfacemanager.f90.html">HeatBalanceSurfaceManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalfinitedifferencemanager.f90.html">HeatBalFiniteDifferenceManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatrecovery.f90.html">HeatRecovery.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/humidifiers.f90.html">Humidifiers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvaccontrollers.f90.html">HVACControllers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvaccooledbeam.f90.html">HVACCooledBeam.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacdualductsystem.f90.html">HVACDualDuctSystem.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacduct.f90.html">HVACDuct.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacdxsystem.f90.html">HVACDXSystem.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacevapcomponent.f90.html">HVACEvapComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacfancomponent.f90.html">HVACFanComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacfurnace.f90.html">HVACFurnace.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacheatingcoils.f90.html">HVACHeatingCoils.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvachxassistedcoolingcoil.f90.html">HVACHXAssistedCoolingCoil.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacinterfacemanager.f90.html">HVACInterfaceManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacmanager.f90.html">HVACManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacmixercomponent.f90.html">HVACMixerComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacmultispeedheatpump.f90.html">HVACMultiSpeedHeatPump.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacsingleductinduc.f90.html">HVACSingleDuctInduc.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacsingleductsystem.f90.html">HVACSingleDuctSystem.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacsplittercomponent.f90.html">HVACSplitterComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacstandaloneerv.f90.html">HVACStandAloneERV.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacsteamcoilcomponent.f90.html">HVACSteamCoilComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvactranspiredcollector.f90.html">HVACTranspiredCollector.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacunitarybypassvav.f90.html">HVACUnitaryBypassVAV.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacunitarysystem.f90.html">HVACUnitarySystem.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacvariablerefrigerantflow.f90.html">HVACVariableRefrigerantFlow.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacwatercoilcomponent.f90.html">HVACWaterCoilComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacwatertoair.f90.html">HVACWatertoAir.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacwatertoairmultispeedhp.f90.html">HVACWatertoAirMultiSpeedHP.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/inputprocessor.f90.html">InputProcessor.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/matrixdatamanager.f90.html">MatrixDataManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/mixedair.f90.html">MixedAir.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/moisturebalanceempdmanager.f90.html">MoistureBalanceEMPDManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/nodeinputmanager.f90.html">NodeInputManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/nonzoneequipmentmanager.f90.html">NonZoneEquipmentManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/outairnodemanager.f90.html">OutAirNodeManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/outdoorairunit.f90.html">OutdoorAirUnit.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/outputprocessor.f90.html">OutputProcessor.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/outputreportpredefined.f90.html">OutputReportPredefined.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/outputreports.f90.html">OutputReports.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/outputreporttabular.f90.html">OutputReportTabular.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/packagedterminalheatpump.f90.html">PackagedTerminalHeatPump.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/packagedthermalstoragecoil.f90.html">PackagedThermalStorageCoil.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/photovoltaics.f90.html">Photovoltaics.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/photovoltaicthermalcollectors.f90.html">PhotovoltaicThermalCollectors.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantabsorptionchillers.f90.html">PlantAbsorptionChillers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantboilers.f90.html">PlantBoilers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantboilerssteam.f90.html">PlantBoilersSteam.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantcentralgshp.f90.html">PlantCentralGSHP.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantchillers.f90.html">PlantChillers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantcondloopoperation.f90.html">PlantCondLoopOperation.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantcondlooptowers.f90.html">PlantCondLoopTowers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/planteirchillers.f90.html">PlantEIRChillers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantevapfluidcoolers.f90.html">PlantEvapFluidCoolers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantexhaustabsorptionchiller.f90.html">PlantExhaustAbsorptionChiller.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantfluidcoolers.f90.html">PlantFluidCoolers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantgasabsorptionchiller.f90.html">PlantGasAbsorptionChiller.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantgroundheatexchangers.f90.html">PlantGroundHeatExchangers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantheatexchanger.f90.html">PlantHeatExchanger.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/planticethermalstorage.f90.html">PlantIceThermalStorage.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantloadprofile.f90.html">PlantLoadProfile.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantloopequipment.f90.html">PlantLoopEquipment.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantloopsolver.f90.html">PlantLoopSolver.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantmanager.f90.html">PlantManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantoutsideenergysources.f90.html">PlantOutsideEnergySources.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantpipeheattransfer.f90.html">PlantPipeHeatTransfer.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantpipes.f90.html">PlantPipes.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantpipingsystemmanager.f90.html">PlantPipingSystemManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantpondgroundheatexchanger.f90.html">PlantPondGroundHeatExchanger.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantpressuresystem.f90.html">PlantPressureSystem.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantpumps.f90.html">PlantPumps.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantsolarcollectors.f90.html">PlantSolarCollectors.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantsurfacegroundheatexchanger.f90.html">PlantSurfaceGroundHeatExchanger.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantutilities.f90.html">PlantUtilities.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantvalves.f90.html">PlantValves.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantwatersources.f90.html">PlantWaterSources.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantwaterthermaltank.f90.html">PlantWaterThermalTank.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantwatertowatergshp.f90.html">PlantWatertoWaterGSHP.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantwateruse.f90.html">PlantWaterUse.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/pollutionanalysismodule.f90.html">PollutionAnalysisModule.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/poweredinductionunits.f90.html">PoweredInductionUnits.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/psychroutines.f90.html">PsychRoutines.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/purchasedairmanager.f90.html">Purchasedairmanager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/radiantsystemhightemp.f90.html">RadiantSystemHighTemp.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/radiantsystemlowtemp.f90.html">RadiantSystemLowTemp.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/refrigeratedcase.f90.html">RefrigeratedCase.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/reportsizingmanager.f90.html">ReportSizingManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/returnairpath.f90.html">ReturnAirPath.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/roomairmanager.f90.html">RoomAirManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/roomairmodelcrossvent.f90.html">RoomAirModelCrossVent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/roomairmodeldisplacementvent.f90.html">RoomAirModelDisplacementVent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/roomairmodelmundt.f90.html">RoomAirModelMundt.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/roomairmodelufad.f90.html">RoomAirModelUFAD.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/roomairmodelusertemppattern.f90.html">RoomAirModelUserTempPattern.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/rootfinder.f90.html">RootFinder.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/runtimelanguageprocessor.f90.html">RuntimeLanguageProcessor.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/schedulemanager.f90.html">ScheduleManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/setpointmanager.f90.html">SetPointManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/simairservingzones.f90.html">SimAirServingZones.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/simulationmanager.f90.html">SimulationManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/sizingmanager.f90.html">SizingManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/solarreflectionmanager.f90.html">SolarReflectionManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/solarshading.f90.html">SolarShading.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/sortandstringutilities.f90.html">SortAndStringUtilities.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/sqlite3.c.html">sqlite3.c</a>
+
+      <a class="list-group-item" href="../sourcefile/sqlitecroutines.c.html">SQLiteCRoutines.c</a>
+
+      <a class="list-group-item" href="../sourcefile/sqlitefortranroutines.f90.html">SQLiteFortranRoutines.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/sqlitefortranroutines_no.f90.html">SQLiteFortranRoutines_NO.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/standardratings.f90.html">StandardRatings.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/surfacegeometry.f90.html">SurfaceGeometry.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/systemavailabilitymanager.f90.html">SystemAvailabilityManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/systemreports.f90.html">SystemReports.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/tarcogcomplexfenestration.f90.html">TarcogComplexFenestration.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/thermalchimney.f90.html">ThermalChimney.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/thermalcomfort.f90.html">ThermalComfort.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/unitheater.f90.html">UnitHeater.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/unitventilator.f90.html">UnitVentilator.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/userdefinedcomponents.f90.html">UserDefinedComponents.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/utilityroutines.f90.html">UtilityRoutines.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/vectorutilities.f90.html">VectorUtilities.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/ventilatedslab.f90.html">VentilatedSlab.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/watermanager.f90.html">WaterManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/weathermanager.f90.html">WeatherManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/windowac.f90.html">WindowAC.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/windowcomplexmanager.f90.html">WindowComplexManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/windowequivalentlayer.f90.html">WindowEquivalentLayer.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/windowmanager.f90.html">WindowManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/windturbine.f90.html">WindTurbine.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/zoneairloopequipmentmanager.f90.html">Zoneairloopequipmentmanager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/zonecontaminantpredictorcorrector.f90.html">ZoneContaminantPredictorCorrector.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/zonedehumidifier.f90.html">ZoneDehumidifier.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/zoneequipmentmanager.f90.html">Zoneequipmentmanager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/zoneplenumcomponent.f90.html">ZonePlenumComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/zonetemppredictorcorrector.f90.html">ZoneTempPredictorCorrector.f90</a>
+
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+    </div>
+    <div class="col-md-9" id='text'>
+
+
+    <h3>This File Depends On</h3>
+
+                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: sourcefile~~datasurfacecolors.f90~~EfferentGraph Pages: 1 -->
+<svg id="sourcefiledatasurfacecolorsf90EfferentGraph" width="641pt" height="310pt"
+ viewBox="0.00 0.00 641.00 309.76" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="sourcefile~~datasurfacecolors.f90~~EfferentGraph" class="graph" transform="scale(.8608 .8608) rotate(0) translate(4 355.8609)">
+<title>sourcefile~~datasurfacecolors.f90~~EfferentGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-355.8609 740.6802,-355.8609 740.6802,4 -4,4"/>
+<!-- sourcefile~datasurfacecolors.f90 -->
+<g id="sourcefile~~datasurfacecolors.f90~~EfferentGraph_node1" class="node">
+<title>sourcefile~datasurfacecolors.f90</title>
+<polygon fill="none" stroke="#000000" points="736.7905,-171.2847 618.3496,-171.2847 618.3496,-149.2738 736.7905,-149.2738 736.7905,-171.2847"/>
+<text text-anchor="middle" x="677.5701" y="-157.1293" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">DataSurfaceColors.f90</text>
+</g>
+<!-- sourcefile~dataglobals.f90 -->
+<g id="sourcefile~~datasurfacecolors.f90~~EfferentGraph_node2" class="node">
+<title>sourcefile~dataglobals.f90</title>
+<g id="a_sourcefile~~datasurfacecolors.f90~~EfferentGraph_node2"><a xlink:href="../sourcefile/dataglobals.f90.html" xlink:title="DataGlobals.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="267.6355,-253.2847 180.0456,-253.2847 180.0456,-231.2738 267.6355,-231.2738 267.6355,-253.2847"/>
+<text text-anchor="middle" x="223.8406" y="-239.1293" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataGlobals.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~dataglobals.f90&#45;&gt;sourcefile~datasurfacecolors.f90 -->
+<g id="sourcefile~~datasurfacecolors.f90~~EfferentGraph_edge20" class="edge">
+<title>sourcefile~dataglobals.f90&#45;&gt;sourcefile~datasurfacecolors.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M532.6809,-322.2793C596.2041,-288.9426 645.2892,-215.7687 666.3445,-180.3173"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="669.537,-181.7889 671.5286,-171.3829 663.4825,-178.2758 669.537,-181.7889"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M382.0521,-322.2793C448.9929,-321.4349 473.4019,-353.3885 532.6809,-322.2793"/>
+</g>
+<!-- sourcefile~inputprocessor.f90 -->
+<g id="sourcefile~~datasurfacecolors.f90~~EfferentGraph_node3" class="node">
+<title>sourcefile~inputprocessor.f90</title>
+<g id="a_sourcefile~~datasurfacecolors.f90~~EfferentGraph_node3"><a xlink:href="../sourcefile/inputprocessor.f90.html" xlink:title="InputProcessor.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="582.24,-171.2847 483.1218,-171.2847 483.1218,-149.2738 582.24,-149.2738 582.24,-171.2847"/>
+<text text-anchor="middle" x="532.6809" y="-157.1293" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">InputProcessor.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~dataglobals.f90&#45;&gt;sourcefile~inputprocessor.f90 -->
+<g id="sourcefile~~datasurfacecolors.f90~~EfferentGraph_edge13" class="edge">
+<title>sourcefile~dataglobals.f90&#45;&gt;sourcefile~inputprocessor.f90</title>
+<path fill="none" stroke="#7fff00" stroke-dasharray="5,2" d="M382.0521,-322.2793C412.0834,-321.9005 423.134,-321.6399 446.9019,-303.2793 488.5051,-271.1408 514.2473,-212.6448 525.6972,-181.3547"/>
+<polygon fill="#7fff00" stroke="#7fff00" points="529.1434,-182.1042 529.1536,-171.5093 522.5386,-179.7853 529.1434,-182.1042"/>
+<path fill="none" stroke="#7fff00" stroke-dasharray="5,2" d="M235.8984,-253.5283C261.0354,-275.7414 321.7299,-323.0402 382.0521,-322.2793"/>
+</g>
+<!-- sourcefile~sortandstringutilities.f90 -->
+<g id="sourcefile~~datasurfacecolors.f90~~EfferentGraph_node6" class="node">
+<title>sourcefile~sortandstringutilities.f90</title>
+<g id="a_sourcefile~~datasurfacecolors.f90~~EfferentGraph_node6"><a xlink:href="../sourcefile/sortandstringutilities.f90.html" xlink:title="SortAndStringUtilities.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="446.2726,-294.2847 317.8316,-294.2847 317.8316,-272.2738 446.2726,-272.2738 446.2726,-294.2847"/>
+<text text-anchor="middle" x="382.0521" y="-280.1293" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">SortAndStringUtilities.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~dataglobals.f90&#45;&gt;sourcefile~sortandstringutilities.f90 -->
+<g id="sourcefile~~datasurfacecolors.f90~~EfferentGraph_edge2" class="edge">
+<title>sourcefile~dataglobals.f90&#45;&gt;sourcefile~sortandstringutilities.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M266.6549,-253.3745C286.0801,-258.4084 309.2329,-264.4084 329.6837,-269.7082"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="328.9197,-273.1257 339.4779,-272.2463 330.6757,-266.3496 328.9197,-273.1257"/>
+</g>
+<!-- sourcefile~dataoutputs.f90 -->
+<g id="sourcefile~~datasurfacecolors.f90~~EfferentGraph_node7" class="node">
+<title>sourcefile~dataoutputs.f90</title>
+<g id="a_sourcefile~~datasurfacecolors.f90~~EfferentGraph_node7"><a xlink:href="../sourcefile/dataoutputs.f90.html" xlink:title="DataOutputs.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="426.5167,-253.2847 337.5875,-253.2847 337.5875,-231.2738 426.5167,-231.2738 426.5167,-253.2847"/>
+<text text-anchor="middle" x="382.0521" y="-239.1293" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataOutputs.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~dataglobals.f90&#45;&gt;sourcefile~dataoutputs.f90 -->
+<g id="sourcefile~~datasurfacecolors.f90~~EfferentGraph_edge3" class="edge">
+<title>sourcefile~dataglobals.f90&#45;&gt;sourcefile~dataoutputs.f90</title>
+<path fill="none" stroke="#ffff00" stroke-dasharray="5,2" d="M267.4914,-242.2793C286.1065,-242.2793 308.0243,-242.2793 327.6776,-242.2793"/>
+<polygon fill="#ffff00" stroke="#ffff00" points="327.7192,-245.7794 337.7192,-242.2793 327.7192,-238.7794 327.7192,-245.7794"/>
+</g>
+<!-- sourcefile~dataipshortcuts.f90 -->
+<g id="sourcefile~~datasurfacecolors.f90~~EfferentGraph_node8" class="node">
+<title>sourcefile~dataipshortcuts.f90</title>
+<g id="a_sourcefile~~datasurfacecolors.f90~~EfferentGraph_node8"><a xlink:href="../sourcefile/dataipshortcuts.f90.html" xlink:title="DataIPShortCuts.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="436.3521,-212.2847 327.7521,-212.2847 327.7521,-190.2738 436.3521,-190.2738 436.3521,-212.2847"/>
+<text text-anchor="middle" x="382.0521" y="-198.1293" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataIPShortCuts.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~dataglobals.f90&#45;&gt;sourcefile~dataipshortcuts.f90 -->
+<g id="sourcefile~~datasurfacecolors.f90~~EfferentGraph_edge4" class="edge">
+<title>sourcefile~dataglobals.f90&#45;&gt;sourcefile~dataipshortcuts.f90</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M266.6549,-231.1841C286.0801,-226.1501 309.2329,-220.1501 329.6837,-214.8504"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="330.6757,-218.209 339.4779,-212.3122 328.9197,-211.4328 330.6757,-218.209"/>
+</g>
+<!-- sourcefile~datasizing.f90 -->
+<g id="sourcefile~~datasurfacecolors.f90~~EfferentGraph_node9" class="node">
+<title>sourcefile~datasizing.f90</title>
+<g id="a_sourcefile~~datasurfacecolors.f90~~EfferentGraph_node9"><a xlink:href="../sourcefile/datasizing.f90.html" xlink:title="DataSizing.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="422.3437,-171.2847 341.7606,-171.2847 341.7606,-149.2738 422.3437,-149.2738 422.3437,-171.2847"/>
+<text text-anchor="middle" x="382.0521" y="-157.1293" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataSizing.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~dataglobals.f90&#45;&gt;sourcefile~datasizing.f90 -->
+<g id="sourcefile~~datasurfacecolors.f90~~EfferentGraph_edge6" class="edge">
+<title>sourcefile~dataglobals.f90&#45;&gt;sourcefile~datasizing.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M238.3164,-231.0588C256.08,-217.7175 287.5067,-195.4761 317.2024,-181.2793 322.1404,-178.9185 327.4109,-176.7253 332.7324,-174.7162"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="334.0624,-177.9579 342.3057,-171.3022 331.7111,-171.3646 334.0624,-177.9579"/>
+</g>
+<!-- sourcefile~inputprocessor.f90&#45;&gt;sourcefile~datasurfacecolors.f90 -->
+<g id="sourcefile~~datasurfacecolors.f90~~EfferentGraph_edge21" class="edge">
+<title>sourcefile~inputprocessor.f90&#45;&gt;sourcefile~datasurfacecolors.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M582.5435,-160.2793C590.8393,-160.2793 599.5741,-160.2793 608.249,-160.2793"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="608.3753,-163.7794 618.3752,-160.2793 608.3752,-156.7794 608.3753,-163.7794"/>
+</g>
+<!-- sourcefile~datainterfaces.f90 -->
+<g id="sourcefile~~datasurfacecolors.f90~~EfferentGraph_node4" class="node">
+<title>sourcefile~datainterfaces.f90</title>
+<g id="a_sourcefile~~datasurfacecolors.f90~~EfferentGraph_node4"><a xlink:href="../sourcefile/datainterfaces.f90.html" xlink:title="DataInterfaces.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="430.8519,-93.2847 333.2524,-93.2847 333.2524,-71.2738 430.8519,-71.2738 430.8519,-93.2847"/>
+<text text-anchor="middle" x="382.0521" y="-79.1293" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataInterfaces.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~datainterfaces.f90&#45;&gt;sourcefile~datasurfacecolors.f90 -->
+<g id="sourcefile~~datasurfacecolors.f90~~EfferentGraph_edge22" class="edge">
+<title>sourcefile~datainterfaces.f90&#45;&gt;sourcefile~datasurfacecolors.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M423.7659,-93.2893C476.7474,-107.2735 568.1753,-131.4053 625.626,-146.569"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="625.029,-150.0312 635.5911,-149.1992 626.8155,-143.263 625.029,-150.0312"/>
+</g>
+<!-- sourcefile~datainterfaces.f90&#45;&gt;sourcefile~inputprocessor.f90 -->
+<g id="sourcefile~~datasurfacecolors.f90~~EfferentGraph_edge18" class="edge">
+<title>sourcefile~datainterfaces.f90&#45;&gt;sourcefile~inputprocessor.f90</title>
+<path fill="none" stroke="#7fff00" stroke-dasharray="5,2" d="M414.2237,-93.3342C424.8125,-97.3264 436.5259,-102.1295 446.9019,-107.2793 468.335,-117.917 491.3348,-132.3047 508.118,-143.4051"/>
+<polygon fill="#7fff00" stroke="#7fff00" points="506.4968,-146.5318 516.753,-149.1891 510.3925,-140.7159 506.4968,-146.5318"/>
+</g>
+<!-- sourcefile~dataprecisionglobals.f90 -->
+<g id="sourcefile~~datasurfacecolors.f90~~EfferentGraph_node5" class="node">
+<title>sourcefile~dataprecisionglobals.f90</title>
+<g id="a_sourcefile~~datasurfacecolors.f90~~EfferentGraph_node5"><a xlink:href="../sourcefile/dataprecisionglobals.f90.html" xlink:title="DataPrecisionGlobals.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="130.719,-253.2847 -.2403,-253.2847 -.2403,-231.2738 130.719,-231.2738 130.719,-253.2847"/>
+<text text-anchor="middle" x="65.2394" y="-239.1293" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataPrecisionGlobals.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~dataprecisionglobals.f90&#45;&gt;sourcefile~datasurfacecolors.f90 -->
+<g id="sourcefile~~datasurfacecolors.f90~~EfferentGraph_edge23" class="edge">
+<title>sourcefile~dataprecisionglobals.f90&#45;&gt;sourcefile~datasurfacecolors.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M83.918,-253.3214C149.653,-290.6235 374.8446,-405.1109 532.6809,-322.2793"/>
+</g>
+<!-- sourcefile~dataprecisionglobals.f90&#45;&gt;sourcefile~dataglobals.f90 -->
+<g id="sourcefile~~datasurfacecolors.f90~~EfferentGraph_edge1" class="edge">
+<title>sourcefile~dataprecisionglobals.f90&#45;&gt;sourcefile~dataglobals.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M130.6642,-242.2793C143.5969,-242.2793 157.0378,-242.2793 169.5527,-242.2793"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="169.816,-245.7794 179.816,-242.2793 169.816,-238.7794 169.816,-245.7794"/>
+</g>
+<!-- sourcefile~dataprecisionglobals.f90&#45;&gt;sourcefile~inputprocessor.f90 -->
+<g id="sourcefile~~datasurfacecolors.f90~~EfferentGraph_edge12" class="edge">
+<title>sourcefile~dataprecisionglobals.f90&#45;&gt;sourcefile~inputprocessor.f90</title>
+<path fill="none" stroke="#7fff00" stroke-dasharray="5,2" d="M223.8406,-121.2793C318.7044,-89.2243 438.029,-123.9982 496.7155,-145.6567"/>
+<polygon fill="#7fff00" stroke="#7fff00" points="495.6838,-149.0083 506.2755,-149.2684 498.1578,-142.46 495.6838,-149.0083"/>
+</g>
+<!-- sourcefile~dataprecisionglobals.f90&#45;&gt;sourcefile~datainterfaces.f90 -->
+<g id="sourcefile~~datasurfacecolors.f90~~EfferentGraph_edge19" class="edge">
+<title>sourcefile~dataprecisionglobals.f90&#45;&gt;sourcefile~datainterfaces.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M223.8406,-121.2793C256.1062,-110.3766 293.0143,-101.1032 323.0626,-94.3379"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="323.9677,-97.7223 332.9732,-92.141 322.4527,-90.8882 323.9677,-97.7223"/>
+</g>
+<!-- sourcefile~dataprecisionglobals.f90&#45;&gt;sourcefile~dataipshortcuts.f90 -->
+<g id="sourcefile~~datasurfacecolors.f90~~EfferentGraph_edge5" class="edge">
+<title>sourcefile~dataprecisionglobals.f90&#45;&gt;sourcefile~dataipshortcuts.f90</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M223.8406,-121.2793C270.3428,-105.5659 272.7585,-159.4441 317.2024,-180.2793 322.1582,-182.6025 327.44,-184.7718 332.7682,-186.7668"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="331.7541,-190.1207 342.3488,-190.1653 334.0944,-183.5235 331.7541,-190.1207"/>
+</g>
+<!-- sourcefile~dataprecisionglobals.f90&#45;&gt;sourcefile~datasizing.f90 -->
+<g id="sourcefile~~datasurfacecolors.f90~~EfferentGraph_edge7" class="edge">
+<title>sourcefile~dataprecisionglobals.f90&#45;&gt;sourcefile~datasizing.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M223.8406,-121.2793C245.768,-113.8699 304.3035,-131.8665 343.6892,-145.8178"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="342.6615,-149.1677 353.256,-149.2597 345.0313,-142.581 342.6615,-149.1677"/>
+</g>
+<!-- sourcefile~datasystemvariables.f90 -->
+<g id="sourcefile~~datasurfacecolors.f90~~EfferentGraph_node11" class="node">
+<title>sourcefile~datasystemvariables.f90</title>
+<g id="a_sourcefile~~datasurfacecolors.f90~~EfferentGraph_node11"><a xlink:href="../sourcefile/datasystemvariables.f90.html" xlink:title="DataSystemVariables.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="446.7519,-52.2847 317.3523,-52.2847 317.3523,-30.2738 446.7519,-30.2738 446.7519,-52.2847"/>
+<text text-anchor="middle" x="382.0521" y="-38.1293" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataSystemVariables.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~dataprecisionglobals.f90&#45;&gt;sourcefile~datasystemvariables.f90 -->
+<g id="sourcefile~~datasurfacecolors.f90~~EfferentGraph_edge9" class="edge">
+<title>sourcefile~dataprecisionglobals.f90&#45;&gt;sourcefile~datasystemvariables.f90</title>
+<path fill="none" stroke="#ff00ff" stroke-dasharray="5,2" d="M223.8406,-121.2793C270.3428,-105.5659 272.7585,-83.1145 317.2024,-62.2793 322.1582,-59.956 327.44,-57.7868 332.7682,-55.7918"/>
+<polygon fill="#ff00ff" stroke="#ff00ff" points="334.0944,-59.0351 342.3488,-52.3932 331.7541,-52.4379 334.0944,-59.0351"/>
+<path fill="none" stroke="#ff00ff" stroke-dasharray="5,2" d="M74.9236,-231.0097C97.7299,-205.4476 157.891,-143.564 223.8406,-121.2793"/>
+</g>
+<!-- sourcefile~sortandstringutilities.f90&#45;&gt;sourcefile~inputprocessor.f90 -->
+<g id="sourcefile~~datasurfacecolors.f90~~EfferentGraph_edge10" class="edge">
+<title>sourcefile~sortandstringutilities.f90&#45;&gt;sourcefile~inputprocessor.f90</title>
+<path fill="none" stroke="#7fff00" stroke-dasharray="5,2" d="M427.5256,-272.1709C434.3193,-269.5034 441.0111,-266.2437 446.9019,-262.2793 479.2946,-240.4793 506.2546,-203.0987 520.8689,-180.1508"/>
+<polygon fill="#7fff00" stroke="#7fff00" points="523.8963,-181.91 526.1884,-171.5661 517.946,-178.223 523.8963,-181.91"/>
+</g>
+<!-- sourcefile~dataoutputs.f90&#45;&gt;sourcefile~inputprocessor.f90 -->
+<g id="sourcefile~~datasurfacecolors.f90~~EfferentGraph_edge11" class="edge">
+<title>sourcefile~dataoutputs.f90&#45;&gt;sourcefile~inputprocessor.f90</title>
+<path fill="none" stroke="#7fff00" stroke-dasharray="5,2" d="M422.5989,-231.2577C430.8279,-228.4401 439.2885,-225.1052 446.9019,-221.2793 470.6783,-209.3311 495.1599,-191.2388 511.8515,-177.8581"/>
+<polygon fill="#7fff00" stroke="#7fff00" points="514.2927,-180.3834 519.8251,-171.3478 509.8655,-174.9612 514.2927,-180.3834"/>
+</g>
+<!-- sourcefile~dataipshortcuts.f90&#45;&gt;sourcefile~inputprocessor.f90 -->
+<g id="sourcefile~~datasurfacecolors.f90~~EfferentGraph_edge14" class="edge">
+<title>sourcefile~dataipshortcuts.f90&#45;&gt;sourcefile~inputprocessor.f90</title>
+<path fill="none" stroke="#7fff00" stroke-dasharray="5,2" d="M422.8144,-190.1841C441.1405,-185.1959 462.9512,-179.2592 482.2907,-173.9951"/>
+<polygon fill="#7fff00" stroke="#7fff00" points="483.4175,-177.3158 492.1472,-171.3122 481.579,-170.5615 483.4175,-177.3158"/>
+</g>
+<!-- sourcefile~datasizing.f90&#45;&gt;sourcefile~inputprocessor.f90 -->
+<g id="sourcefile~~datasurfacecolors.f90~~EfferentGraph_edge15" class="edge">
+<title>sourcefile~datasizing.f90&#45;&gt;sourcefile~inputprocessor.f90</title>
+<path fill="none" stroke="#7fff00" stroke-dasharray="5,2" d="M422.4179,-160.2793C437.8615,-160.2793 455.8244,-160.2793 472.7122,-160.2793"/>
+<polygon fill="#7fff00" stroke="#7fff00" points="473.0562,-163.7794 483.0562,-160.2793 473.0561,-156.7794 473.0562,-163.7794"/>
+</g>
+<!-- sourcefile~datastringglobals.f90 -->
+<g id="sourcefile~~datasurfacecolors.f90~~EfferentGraph_node10" class="node">
+<title>sourcefile~datastringglobals.f90</title>
+<g id="a_sourcefile~~datasurfacecolors.f90~~EfferentGraph_node10"><a xlink:href="../sourcefile/datastringglobals.f90.html" xlink:title="DataStringGlobals.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="281.0645,-33.2847 166.6166,-33.2847 166.6166,-11.2738 281.0645,-11.2738 281.0645,-33.2847"/>
+<text text-anchor="middle" x="223.8406" y="-19.1293" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataStringGlobals.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~datastringglobals.f90&#45;&gt;sourcefile~inputprocessor.f90 -->
+<g id="sourcefile~~datasurfacecolors.f90~~EfferentGraph_edge16" class="edge">
+<title>sourcefile~datastringglobals.f90&#45;&gt;sourcefile~inputprocessor.f90</title>
+<path fill="none" stroke="#7fff00" stroke-dasharray="5,2" d="M262.5699,-11.253C309.442,-.2325 389.242,10.8934 446.9019,-21.2793 492.2881,-46.6035 516.6545,-106.9141 526.8353,-139.1341"/>
+<polygon fill="#7fff00" stroke="#7fff00" points="523.5353,-140.315 529.754,-148.8928 530.2418,-138.3092 523.5353,-140.315"/>
+</g>
+<!-- sourcefile~datastringglobals.f90&#45;&gt;sourcefile~datasystemvariables.f90 -->
+<g id="sourcefile~~datasurfacecolors.f90~~EfferentGraph_edge8" class="edge">
+<title>sourcefile~datastringglobals.f90&#45;&gt;sourcefile~datasystemvariables.f90</title>
+<path fill="none" stroke="#ff00ff" stroke-dasharray="5,2" d="M281.4061,-29.1925C289.7886,-30.1991 298.5204,-31.2477 307.1841,-32.2882"/>
+<polygon fill="#ff00ff" stroke="#ff00ff" points="306.9524,-35.7854 317.2985,-33.5029 307.7872,-28.8354 306.9524,-35.7854"/>
+</g>
+<!-- sourcefile~datasystemvariables.f90&#45;&gt;sourcefile~inputprocessor.f90 -->
+<g id="sourcefile~~datasurfacecolors.f90~~EfferentGraph_edge17" class="edge">
+<title>sourcefile~datasystemvariables.f90&#45;&gt;sourcefile~inputprocessor.f90</title>
+<path fill="none" stroke="#7fff00" stroke-dasharray="5,2" d="M427.117,-52.3582C434.0358,-55.0372 440.8734,-58.3082 446.9019,-62.2793 478.4589,-83.0666 505.3712,-118.4793 520.2539,-140.5621"/>
+<polygon fill="#7fff00" stroke="#7fff00" points="517.4622,-142.6874 525.8742,-149.1286 523.315,-138.8475 517.4622,-142.6874"/>
+</g>
+</g>
+</svg>
+</div>
+                <script>var pansourcefiledatasurfacecolorsf90EfferentGraph = svgPanZoom('#sourcefiledatasurfacecolorsf90EfferentGraph', {
+                    zoomEnabled: true,
+                    controlIconsEnabled: true,
+                    fit: true,
+                    center: true,});
+                    </script>
+                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
+                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                      </div>
+                      <div class="modal-body">
+
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="186pt" height="31pt"
+ viewBox="0.00 0.00 186.41 30.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 26.5)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-26.5 182.4064,-26.5 182.4064,4 -4,4"/>
+<!-- Source File -->
+<g id="node1" class="node">
+<title>Source File</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="65.1576,-22.2554 -.0526,-22.2554 -.0526,-.2446 65.1576,-.2446 65.1576,-22.2554"/>
+<text text-anchor="middle" x="32.5525" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Source File</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node2" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="178.2607,-22.2554 82.8443,-22.2554 82.8443,-.2446 178.2607,-.2446 178.2607,-22.2554"/>
+<text text-anchor="middle" x="130.5525" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+
+    <p>Solid arrows point from a file to a file which depends upon it. A file
+    is dependent upon another if the latter must be compiled before the former
+    can be. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+      <h3>Files Dependent On This One</h3>
+
+                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: sourcefile~~datasurfacecolors.f90~~AfferentGraph Pages: 1 -->
+<svg id="sourcefiledatasurfacecolorsf90AfferentGraph" width="260pt" height="31pt"
+ viewBox="0.00 0.00 260.02 30.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="sourcefile~~datasurfacecolors.f90~~AfferentGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 26.5)">
+<title>sourcefile~~datasurfacecolors.f90~~AfferentGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-26.5 256.0198,-26.5 256.0198,4 -4,4"/>
+<!-- sourcefile~datasurfacecolors.f90 -->
+<g id="sourcefile~~datasurfacecolors.f90~~AfferentGraph_node1" class="node">
+<title>sourcefile~datasurfacecolors.f90</title>
+<polygon fill="none" stroke="#000000" points="118.3305,-22.2554 -.1103,-22.2554 -.1103,-.2446 118.3305,-.2446 118.3305,-22.2554"/>
+<text text-anchor="middle" x="59.1101" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">DataSurfaceColors.f90</text>
+</g>
+<!-- sourcefile~outputreports.f90 -->
+<g id="sourcefile~~datasurfacecolors.f90~~AfferentGraph_node2" class="node">
+<title>sourcefile~outputreports.f90</title>
+<g id="a_sourcefile~~datasurfacecolors.f90~~AfferentGraph_node2"><a xlink:href="../sourcefile/outputreports.f90.html" xlink:title="OutputReports.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="251.9198,-22.2554 154.3202,-22.2554 154.3202,-.2446 251.9198,-.2446 251.9198,-22.2554"/>
+<text text-anchor="middle" x="203.12" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">OutputReports.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~datasurfacecolors.f90&#45;&gt;sourcefile~outputreports.f90 -->
+<g id="sourcefile~~datasurfacecolors.f90~~AfferentGraph_edge1" class="edge">
+<title>sourcefile~datasurfacecolors.f90&#45;&gt;sourcefile~outputreports.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M118.5159,-11.25C126.8884,-11.25 135.4956,-11.25 143.8653,-11.25"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="143.925,-14.7501 153.925,-11.25 143.925,-7.7501 143.925,-14.7501"/>
+</g>
+</g>
+</svg>
+</div>
+                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
+                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                      </div>
+                      <div class="modal-body">
+
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="186pt" height="31pt"
+ viewBox="0.00 0.00 186.41 30.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 26.5)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-26.5 182.4064,-26.5 182.4064,4 -4,4"/>
+<!-- Source File -->
+<g id="node1" class="node">
+<title>Source File</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="65.1576,-22.2554 -.0526,-22.2554 -.0526,-.2446 65.1576,-.2446 65.1576,-22.2554"/>
+<text text-anchor="middle" x="32.5525" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Source File</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node2" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="178.2607,-22.2554 82.8443,-22.2554 82.8443,-.2446 178.2607,-.2446 178.2607,-22.2554"/>
+<text text-anchor="middle" x="130.5525" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+
+    <p>Solid arrows point from a file to a file which depends upon it. A file
+    is dependent upon another if the latter must be compiled before the former
+    can be. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+      <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#mods-1">Modules</a></h3></div>
+  <div id="mods-1" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../module/datasurfacecolors.html">DataSurfaceColors</a>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/datasurfacecolors.f90.html#src">DataSurfaceColors.f90</a>
+  </div>
+</div>
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    <section>
+      <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl"><pre><span></span><a name="ln-1"></a><span class="k">MODULE </span><span class="n">DataSurfaceColors</span>
+<a name="ln-2"></a>
+<a name="ln-3"></a>          <span class="c">! Module containing the data dealing with the coloring of surfaces for</span>
+<a name="ln-4"></a>          <span class="c">! various outputs (such as DXF)</span>
+<a name="ln-5"></a>
+<a name="ln-6"></a>          <span class="c">! MODULE INFORMATION:</span>
+<a name="ln-7"></a>          <span class="c">!       AUTHOR         Linda Lawrie</span>
+<a name="ln-8"></a>          <span class="c">!       DATE WRITTEN   Aug 2007</span>
+<a name="ln-9"></a>          <span class="c">!       MODIFIED       na</span>
+<a name="ln-10"></a>          <span class="c">!       RE-ENGINEERED  na</span>
+<a name="ln-11"></a>
+<a name="ln-12"></a>          <span class="c">! PURPOSE OF THIS MODULE:</span>
+<a name="ln-13"></a>          <span class="c">! Contain the data for surface colors and user settings for DXF and possibly</span>
+<a name="ln-14"></a>          <span class="c">! other surface reporting.</span>
+<a name="ln-15"></a>
+<a name="ln-16"></a>          <span class="c">! METHODOLOGY EMPLOYED:</span>
+<a name="ln-17"></a>          <span class="c">! na</span>
+<a name="ln-18"></a>
+<a name="ln-19"></a>          <span class="c">! REFERENCES:</span>
+<a name="ln-20"></a>          <span class="c">! na</span>
+<a name="ln-21"></a>
+<a name="ln-22"></a>          <span class="c">! OTHER NOTES:</span>
+<a name="ln-23"></a>          <span class="c">! na</span>
+<a name="ln-24"></a>
+<a name="ln-25"></a>          <span class="c">! USE STATEMENTS:</span>
+<a name="ln-26"></a><span class="k">USE </span><span class="n">DataPrecisionGlobals</span>
+<a name="ln-27"></a>
+<a name="ln-28"></a><span class="k">IMPLICIT NONE</span> <span class="c">! Enforce explicit typing of all variables</span>
+<a name="ln-29"></a>
+<a name="ln-30"></a><span class="k">PUBLIC</span> <span class="c">! Everything private unless explicitly made public</span>
+<a name="ln-31"></a>
+<a name="ln-32"></a>          <span class="c">! MODULE PARAMETER DEFINITIONS:</span>
+<a name="ln-33"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">NumColors</span><span class="o">=</span><span class="mi">15</span>
+<a name="ln-34"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">ColorNo_Text</span> <span class="o">=</span> <span class="mi">1</span>
+<a name="ln-35"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">ColorNo_Wall</span> <span class="o">=</span> <span class="mi">2</span>
+<a name="ln-36"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">ColorNo_Window</span> <span class="o">=</span> <span class="mi">3</span>
+<a name="ln-37"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">ColorNo_GlassDoor</span> <span class="o">=</span> <span class="mi">4</span>
+<a name="ln-38"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">ColorNo_Door</span> <span class="o">=</span> <span class="mi">5</span>
+<a name="ln-39"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">ColorNo_Floor</span> <span class="o">=</span> <span class="mi">6</span>
+<a name="ln-40"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">ColorNo_Roof</span> <span class="o">=</span> <span class="mi">7</span>
+<a name="ln-41"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">ColorNo_ShdDetBldg</span> <span class="o">=</span> <span class="mi">8</span>
+<a name="ln-42"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">ColorNo_ShdDetFix</span> <span class="o">=</span> <span class="mi">9</span>
+<a name="ln-43"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">ColorNo_ShdAtt</span> <span class="o">=</span> <span class="mi">10</span>
+<a name="ln-44"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">ColorNo_PV</span> <span class="o">=</span> <span class="mi">11</span>
+<a name="ln-45"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">ColorNo_TDDDome</span> <span class="o">=</span> <span class="mi">12</span>
+<a name="ln-46"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">ColorNo_TDDDiffuser</span> <span class="o">=</span> <span class="mi">13</span>
+<a name="ln-47"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">ColorNo_DaylSensor1</span> <span class="o">=</span> <span class="mi">14</span>
+<a name="ln-48"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">ColorNo_DaylSensor2</span> <span class="o">=</span> <span class="mi">15</span>
+<a name="ln-49"></a>
+<a name="ln-50"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span><span class="p">,</span> <span class="k">dimension</span><span class="p">(</span><span class="n">NumColors</span><span class="p">)</span> <span class="kd">::</span> <span class="n">defaultcolorno</span><span class="o">=</span>    <span class="p">&amp;</span>
+<a name="ln-51"></a>     <span class="p">(</span><span class="o">/</span> <span class="mi">3</span><span class="p">,</span>   <span class="p">&amp;</span> <span class="c">! text</span>
+<a name="ln-52"></a>       <span class="mi">43</span><span class="p">,</span>   <span class="p">&amp;</span> <span class="c">! wall</span>
+<a name="ln-53"></a>      <span class="mi">143</span><span class="p">,</span>   <span class="p">&amp;</span> <span class="c">! window</span>
+<a name="ln-54"></a>      <span class="mi">143</span><span class="p">,</span>   <span class="p">&amp;</span> <span class="c">! glassdoor</span>
+<a name="ln-55"></a>       <span class="mi">45</span><span class="p">,</span>   <span class="p">&amp;</span> <span class="c">! door</span>
+<a name="ln-56"></a>        <span class="mi">8</span><span class="p">,</span>   <span class="p">&amp;</span> <span class="c">! floor</span>
+<a name="ln-57"></a>       <span class="mi">15</span><span class="p">,</span>   <span class="p">&amp;</span> <span class="c">! roof</span>
+<a name="ln-58"></a>      <span class="mi">195</span><span class="p">,</span>   <span class="p">&amp;</span> <span class="c">! detached building shade (moves with building)</span>
+<a name="ln-59"></a>        <span class="mi">9</span><span class="p">,</span>   <span class="p">&amp;</span> <span class="c">! detached building fixed</span>
+<a name="ln-60"></a>       <span class="mi">13</span><span class="p">,</span>   <span class="p">&amp;</span> <span class="c">! attached building shading</span>
+<a name="ln-61"></a>      <span class="mi">174</span><span class="p">,</span>   <span class="p">&amp;</span> <span class="c">! PV</span>
+<a name="ln-62"></a>      <span class="mi">143</span><span class="p">,</span>   <span class="p">&amp;</span> <span class="c">! TDD:Dome</span>
+<a name="ln-63"></a>      <span class="mi">143</span><span class="p">,</span>   <span class="p">&amp;</span> <span class="c">! TDD:Diffuser</span>
+<a name="ln-64"></a>       <span class="mi">10</span><span class="p">,</span>   <span class="p">&amp;</span> <span class="c">! Daylight Sensor 1</span>
+<a name="ln-65"></a>        <span class="mi">5</span><span class="o">/</span><span class="p">)</span>    <span class="c">! Daylight Sensor 2</span>
+<a name="ln-66"></a>
+<a name="ln-67"></a><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span> <span class="k">parameter</span><span class="p">,</span> <span class="k">dimension</span><span class="p">(</span><span class="n">NumColors</span><span class="p">)</span> <span class="kd">::</span> <span class="n">colorkeys</span><span class="o">=</span>   <span class="p">&amp;</span>
+<a name="ln-68"></a>     <span class="p">(</span><span class="o">/</span><span class="s1">&#39;Text                     &#39;</span><span class="p">,</span>    <span class="p">&amp;</span>
+<a name="ln-69"></a>       <span class="s1">&#39;Walls                    &#39;</span><span class="p">,</span>    <span class="p">&amp;</span>
+<a name="ln-70"></a>       <span class="s1">&#39;Windows                  &#39;</span><span class="p">,</span>    <span class="p">&amp;</span>
+<a name="ln-71"></a>       <span class="s1">&#39;GlassDoors               &#39;</span><span class="p">,</span>    <span class="p">&amp;</span>
+<a name="ln-72"></a>       <span class="s1">&#39;Doors                    &#39;</span><span class="p">,</span>    <span class="p">&amp;</span>
+<a name="ln-73"></a>       <span class="s1">&#39;Roofs                    &#39;</span><span class="p">,</span>    <span class="p">&amp;</span>
+<a name="ln-74"></a>       <span class="s1">&#39;Floors                   &#39;</span><span class="p">,</span>    <span class="p">&amp;</span>
+<a name="ln-75"></a>       <span class="s1">&#39;DetachedBuildingShades   &#39;</span><span class="p">,</span>    <span class="p">&amp;</span>
+<a name="ln-76"></a>       <span class="s1">&#39;DetachedFixedShades      &#39;</span><span class="p">,</span>    <span class="p">&amp;</span>
+<a name="ln-77"></a>       <span class="s1">&#39;AttachedBuildingShades   &#39;</span><span class="p">,</span>    <span class="p">&amp;</span>
+<a name="ln-78"></a>       <span class="s1">&#39;Photovoltaics            &#39;</span><span class="p">,</span>    <span class="p">&amp;</span>
+<a name="ln-79"></a>       <span class="s1">&#39;TubularDaylightDomes     &#39;</span><span class="p">,</span>    <span class="p">&amp;</span>
+<a name="ln-80"></a>       <span class="s1">&#39;TubularDaylightDiffusers &#39;</span><span class="p">,</span>    <span class="p">&amp;</span>
+<a name="ln-81"></a>       <span class="s1">&#39;DaylightReferencePoint1  &#39;</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-82"></a>       <span class="s1">&#39;DaylightReferencePoint2  &#39;</span><span class="o">/</span><span class="p">)</span>
+<a name="ln-83"></a>
+<a name="ln-84"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">parameter</span><span class="p">,</span> <span class="k">dimension</span><span class="p">(</span><span class="n">NumColors</span><span class="p">)</span> <span class="kd">::</span> <span class="n">colorkeyptr</span><span class="o">=</span>    <span class="p">&amp;</span>
+<a name="ln-85"></a>     <span class="p">(</span><span class="o">/</span><span class="n">ColorNo_Text</span><span class="p">,</span>       <span class="p">&amp;</span>
+<a name="ln-86"></a>       <span class="n">ColorNo_Wall</span><span class="p">,</span>       <span class="p">&amp;</span>
+<a name="ln-87"></a>       <span class="n">ColorNo_Window</span><span class="p">,</span>     <span class="p">&amp;</span>
+<a name="ln-88"></a>       <span class="n">ColorNo_GlassDoor</span><span class="p">,</span>  <span class="p">&amp;</span>
+<a name="ln-89"></a>       <span class="n">ColorNo_Door</span><span class="p">,</span>       <span class="p">&amp;</span>
+<a name="ln-90"></a>       <span class="n">ColorNo_Floor</span><span class="p">,</span>      <span class="p">&amp;</span>
+<a name="ln-91"></a>       <span class="n">ColorNo_Roof</span><span class="p">,</span>       <span class="p">&amp;</span>
+<a name="ln-92"></a>       <span class="n">ColorNo_ShdDetBldg</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-93"></a>       <span class="n">ColorNo_ShdDetFix</span><span class="p">,</span>  <span class="p">&amp;</span>
+<a name="ln-94"></a>       <span class="n">ColorNo_ShdAtt</span><span class="p">,</span>     <span class="p">&amp;</span>
+<a name="ln-95"></a>       <span class="n">ColorNo_PV</span><span class="p">,</span>         <span class="p">&amp;</span>
+<a name="ln-96"></a>       <span class="n">ColorNo_TDDDome</span><span class="p">,</span>    <span class="p">&amp;</span>
+<a name="ln-97"></a>       <span class="n">ColorNo_TDDDiffuser</span><span class="p">,&amp;</span>
+<a name="ln-98"></a>       <span class="n">ColorNo_DaylSensor1</span><span class="p">,&amp;</span>
+<a name="ln-99"></a>       <span class="n">ColorNo_DaylSensor2</span> <span class="o">/</span><span class="p">)</span>
+<a name="ln-100"></a>
+<a name="ln-101"></a>          <span class="c">! DERIVED TYPE DEFINITIONS:</span>
+<a name="ln-102"></a>          <span class="c">! na</span>
+<a name="ln-103"></a>
+<a name="ln-104"></a>          <span class="c">! MODULE VARIABLE DECLARATIONS:</span>
+<a name="ln-105"></a><span class="kt">integer</span><span class="p">,</span> <span class="k">dimension</span><span class="p">(</span><span class="n">NumColors</span><span class="p">)</span> <span class="kd">::</span> <span class="n">DXFcolorno</span><span class="o">=</span><span class="n">defaultcolorno</span>
+<a name="ln-106"></a>
+<a name="ln-107"></a>          <span class="c">! SUBROUTINE SPECIFICATIONS FOR MODULE:</span>
+<a name="ln-108"></a>
+<a name="ln-109"></a><span class="k">PUBLIC  </span><span class="n">MatchAndSetColorTextString</span>
+<a name="ln-110"></a><span class="k">PUBLIC  </span><span class="n">SetUpSchemeColors</span>
+<a name="ln-111"></a>
+<a name="ln-112"></a><span class="k">CONTAINS</span>
+<a name="ln-113"></a>
+<a name="ln-114"></a><span class="k">FUNCTION </span><span class="n">MatchAndSetColorTextString</span><span class="p">(</span><span class="n">String</span><span class="p">,</span><span class="n">SetValue</span><span class="p">,</span><span class="n">ColorType</span><span class="p">)</span> <span class="k">RESULT</span><span class="p">(</span><span class="n">WasSet</span><span class="p">)</span>
+<a name="ln-115"></a>
+<a name="ln-116"></a>          <span class="c">! FUNCTION INFORMATION:</span>
+<a name="ln-117"></a>          <span class="c">!       AUTHOR         Linda Lawrie</span>
+<a name="ln-118"></a>          <span class="c">!       DATE WRITTEN   August 2007</span>
+<a name="ln-119"></a>          <span class="c">!       MODIFIED       na</span>
+<a name="ln-120"></a>          <span class="c">!       RE-ENGINEERED  na</span>
+<a name="ln-121"></a>
+<a name="ln-122"></a>          <span class="c">! PURPOSE OF THIS FUNCTION:</span>
+<a name="ln-123"></a>          <span class="c">! &lt;description&gt;</span>
+<a name="ln-124"></a>
+<a name="ln-125"></a>          <span class="c">! METHODOLOGY EMPLOYED:</span>
+<a name="ln-126"></a>          <span class="c">! &lt;description&gt;</span>
+<a name="ln-127"></a>
+<a name="ln-128"></a>          <span class="c">! REFERENCES:</span>
+<a name="ln-129"></a>          <span class="c">! na</span>
+<a name="ln-130"></a>
+<a name="ln-131"></a>          <span class="c">! USE STATEMENTS:</span>
+<a name="ln-132"></a>  <span class="k">USE </span><span class="n">InputProcessor</span><span class="p">,</span> <span class="n">ONLY</span><span class="p">:</span> <span class="n">FindItem</span> <span class="c">! case insensitive Find</span>
+<a name="ln-133"></a>
+<a name="ln-134"></a>  <span class="k">IMPLICIT NONE</span> <span class="c">! Enforce explicit typing of all variables in this routine</span>
+<a name="ln-135"></a>
+<a name="ln-136"></a>          <span class="c">! FUNCTION ARGUMENT DEFINITIONS:</span>
+<a name="ln-137"></a>  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">String</span>   <span class="c">! string to be matched</span>
+<a name="ln-138"></a>  <span class="kt">integer</span><span class="p">,</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>          <span class="kd">::</span> <span class="n">SetValue</span> <span class="c">! value to be used for the color</span>
+<a name="ln-139"></a>  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span> <span class="k">optional</span> <span class="kd">::</span> <span class="n">ColorType</span>  <span class="c">! for now, must be DXF</span>
+<a name="ln-140"></a>  <span class="kt">logical</span> <span class="kd">::</span> <span class="n">WasSet</span>
+<a name="ln-141"></a>
+<a name="ln-142"></a>          <span class="c">! FUNCTION PARAMETER DEFINITIONS:</span>
+<a name="ln-143"></a>          <span class="c">! na</span>
+<a name="ln-144"></a>
+<a name="ln-145"></a>          <span class="c">! INTERFACE BLOCK SPECIFICATIONS:</span>
+<a name="ln-146"></a>          <span class="c">! na</span>
+<a name="ln-147"></a>
+<a name="ln-148"></a>          <span class="c">! DERIVED TYPE DEFINITIONS:</span>
+<a name="ln-149"></a>          <span class="c">! na</span>
+<a name="ln-150"></a>
+<a name="ln-151"></a>          <span class="c">! FUNCTION LOCAL VARIABLE DECLARATIONS:</span>
+<a name="ln-152"></a>  <span class="kt">integer</span> <span class="kd">::</span> <span class="n">found</span>
+<a name="ln-153"></a>
+<a name="ln-154"></a>  <span class="n">WasSet</span><span class="o">=</span><span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-155"></a>  <span class="n">found</span><span class="o">=</span><span class="n">FindItem</span><span class="p">(</span><span class="n">String</span><span class="p">,</span><span class="n">colorkeys</span><span class="p">,</span><span class="n">NumColors</span><span class="p">)</span>
+<a name="ln-156"></a>
+<a name="ln-157"></a>  <span class="k">if</span> <span class="p">(</span><span class="n">found</span> <span class="o">/=</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-158"></a><span class="k">    if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">colortype</span><span class="p">))</span> <span class="k">then</span>
+<a name="ln-159"></a><span class="k">      if</span> <span class="p">(</span><span class="n">colortype</span> <span class="o">==</span> <span class="s1">&#39;DXF&#39;</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-160"></a><span class="k">        </span><span class="n">DXFcolorno</span><span class="p">(</span><span class="n">colorkeyptr</span><span class="p">(</span><span class="n">found</span><span class="p">))</span><span class="o">=</span><span class="n">SetValue</span>
+<a name="ln-161"></a>        <span class="n">WasSet</span><span class="o">=</span><span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-162"></a>      <span class="k">else</span>
+<a name="ln-163"></a><span class="k">      </span><span class="n">endif</span>
+<a name="ln-164"></a>    <span class="k">else</span>
+<a name="ln-165"></a><span class="k">      </span><span class="n">DXFcolorno</span><span class="p">(</span><span class="n">colorkeyptr</span><span class="p">(</span><span class="n">found</span><span class="p">))</span><span class="o">=</span><span class="n">SetValue</span>
+<a name="ln-166"></a>      <span class="n">WasSet</span><span class="o">=</span><span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-167"></a>    <span class="n">endif</span>
+<a name="ln-168"></a>  <span class="n">endif</span>
+<a name="ln-169"></a>
+<a name="ln-170"></a>  <span class="k">RETURN</span>
+<a name="ln-171"></a>
+<a name="ln-172"></a><span class="k">END FUNCTION </span><span class="n">MatchAndSetColorTextString</span>
+<a name="ln-173"></a>
+<a name="ln-174"></a><span class="k">SUBROUTINE </span><span class="n">SetUpSchemeColors</span><span class="p">(</span><span class="n">SchemeName</span><span class="p">,</span><span class="n">ColorType</span><span class="p">)</span>
+<a name="ln-175"></a>
+<a name="ln-176"></a>          <span class="c">! SUBROUTINE INFORMATION:</span>
+<a name="ln-177"></a>          <span class="c">!       AUTHOR         Linda Lawrie</span>
+<a name="ln-178"></a>          <span class="c">!       DATE WRITTEN   August 2007</span>
+<a name="ln-179"></a>          <span class="c">!       MODIFIED       na</span>
+<a name="ln-180"></a>          <span class="c">!       RE-ENGINEERED  na</span>
+<a name="ln-181"></a>
+<a name="ln-182"></a>          <span class="c">! PURPOSE OF THIS SUBROUTINE:</span>
+<a name="ln-183"></a>          <span class="c">! This routine resets the colorno array(s) with the entered scheme name as</span>
+<a name="ln-184"></a>          <span class="c">! required for reporting.</span>
+<a name="ln-185"></a>
+<a name="ln-186"></a>          <span class="c">! METHODOLOGY EMPLOYED:</span>
+<a name="ln-187"></a>          <span class="c">! This routine first sets the color arrays to default.  Then, attempts to find the</span>
+<a name="ln-188"></a>          <span class="c">! scheme name in the Input File.  If found, processes that scheme and sets colors.</span>
+<a name="ln-189"></a>          <span class="c">! Worst case: the colors remain as default.  Note -- this allocates and deallocates</span>
+<a name="ln-190"></a>          <span class="c">! the alphas and numerics required to process the Report:SurfaceColorScheme object.</span>
+<a name="ln-191"></a>
+<a name="ln-192"></a>          <span class="c">! REFERENCES:</span>
+<a name="ln-193"></a>          <span class="c">! na</span>
+<a name="ln-194"></a>
+<a name="ln-195"></a>          <span class="c">! USE STATEMENTS:</span>
+<a name="ln-196"></a>  <span class="k">USE </span><span class="n">DataGlobals</span><span class="p">,</span> <span class="n">ONLY</span><span class="p">:</span> <span class="n">MaxNameLength</span>
+<a name="ln-197"></a>  <span class="k">USE </span><span class="n">DataInterfaces</span><span class="p">,</span> <span class="n">ONLY</span><span class="p">:</span> <span class="n">ShowWarningError</span>
+<a name="ln-198"></a>  <span class="k">USE </span><span class="n">InputProcessor</span><span class="p">,</span> <span class="n">ONLY</span><span class="p">:</span> <span class="n">GetObjectItemNum</span><span class="p">,</span> <span class="n">GetObjectItem</span><span class="p">,</span> <span class="n">GetObjectDefMaxArgs</span>
+<a name="ln-199"></a>
+<a name="ln-200"></a>  <span class="k">IMPLICIT NONE</span> <span class="c">! Enforce explicit typing of all variables in this routine</span>
+<a name="ln-201"></a>
+<a name="ln-202"></a>          <span class="c">! SUBROUTINE ARGUMENT DEFINITIONS:</span>
+<a name="ln-203"></a>  <span class="kt">CHARACTER</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span> <span class="k">INTENT</span><span class="p">(</span><span class="n">IN</span><span class="p">)</span> <span class="kd">::</span> <span class="n">SchemeName</span>
+<a name="ln-204"></a>  <span class="kt">CHARACTER</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span> <span class="k">INTENT</span><span class="p">(</span><span class="n">IN</span><span class="p">),</span> <span class="k">OPTIONAL</span> <span class="kd">::</span> <span class="n">ColorType</span>
+<a name="ln-205"></a>
+<a name="ln-206"></a>          <span class="c">! SUBROUTINE PARAMETER DEFINITIONS:</span>
+<a name="ln-207"></a>  <span class="kt">CHARACTER</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span> <span class="k">PARAMETER</span> <span class="kd">::</span> <span class="n">CurrentModuleObject</span><span class="o">=</span><span class="s1">&#39;OutputControl:SurfaceColorScheme&#39;</span>
+<a name="ln-208"></a>
+<a name="ln-209"></a>          <span class="c">! INTERFACE BLOCK SPECIFICATIONS:</span>
+<a name="ln-210"></a>          <span class="c">! na</span>
+<a name="ln-211"></a>
+<a name="ln-212"></a>          <span class="c">! DERIVED TYPE DEFINITIONS:</span>
+<a name="ln-213"></a>          <span class="c">! na</span>
+<a name="ln-214"></a>
+<a name="ln-215"></a>          <span class="c">! SUBROUTINE LOCAL VARIABLE DECLARATIONS:</span>
+<a name="ln-216"></a>  <span class="kt">integer</span> <span class="kd">::</span> <span class="n">numAlphas</span>
+<a name="ln-217"></a>  <span class="kt">integer</span> <span class="kd">::</span> <span class="n">numNumbers</span>
+<a name="ln-218"></a>  <span class="kt">integer</span> <span class="kd">::</span> <span class="n">numptr</span>
+<a name="ln-219"></a>  <span class="kt">integer</span> <span class="kd">::</span> <span class="n">numargs</span>
+<a name="ln-220"></a>  <span class="kt">integer</span> <span class="kd">::</span> <span class="n">status</span>
+<a name="ln-221"></a>  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="n">maxnamelength</span><span class="p">),</span> <span class="k">dimension</span><span class="p">(:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">cAlphas</span>
+<a name="ln-222"></a>  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="n">maxnamelength</span><span class="p">),</span> <span class="k">dimension</span><span class="p">(:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">cAlphafields</span>
+<a name="ln-223"></a>  <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="n">maxnamelength</span><span class="p">),</span> <span class="k">dimension</span><span class="p">(:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">cNumericfields</span>
+<a name="ln-224"></a>  <span class="kt">logical</span><span class="p">,</span> <span class="k">dimension</span><span class="p">(:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">lAlphablanks</span>
+<a name="ln-225"></a>  <span class="kt">logical</span><span class="p">,</span> <span class="k">dimension</span><span class="p">(:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">lNumericblanks</span>
+<a name="ln-226"></a>  <span class="kt">real</span><span class="p">(</span><span class="n">r64</span><span class="p">),</span> <span class="k">dimension</span><span class="p">(:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">rNumerics</span>
+<a name="ln-227"></a>
+<a name="ln-228"></a>  <span class="n">DXFcolorno</span><span class="o">=</span><span class="n">defaultcolorno</span>
+<a name="ln-229"></a><span class="c">! first see if there is a scheme name</span>
+<a name="ln-230"></a>  <span class="n">numptr</span><span class="o">=</span><span class="n">GetObjectItemNum</span><span class="p">(</span><span class="n">CurrentModuleObject</span><span class="p">,</span><span class="n">SchemeName</span><span class="p">)</span>
+<a name="ln-231"></a>
+<a name="ln-232"></a>
+<a name="ln-233"></a>  <span class="k">if</span> <span class="p">(</span><span class="n">numptr</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-234"></a>
+<a name="ln-235"></a><span class="k">    CALL </span><span class="n">GetObjectDefMaxArgs</span><span class="p">(</span><span class="n">CurrentModuleObject</span><span class="p">,</span><span class="n">numargs</span><span class="p">,</span><span class="n">numAlphas</span><span class="p">,</span><span class="n">numNumbers</span><span class="p">)</span>
+<a name="ln-236"></a>
+<a name="ln-237"></a>    <span class="k">allocate</span><span class="p">(</span><span class="n">cAlphas</span><span class="p">(</span><span class="n">NumAlphas</span><span class="p">))</span>
+<a name="ln-238"></a>    <span class="k">allocate</span><span class="p">(</span><span class="n">cAlphafields</span><span class="p">(</span><span class="n">NumAlphas</span><span class="p">))</span>
+<a name="ln-239"></a>    <span class="k">allocate</span><span class="p">(</span><span class="n">lAlphablanks</span><span class="p">(</span><span class="n">NumAlphas</span><span class="p">))</span>
+<a name="ln-240"></a>    <span class="k">allocate</span><span class="p">(</span><span class="n">rNumerics</span><span class="p">(</span><span class="n">numNumbers</span><span class="p">))</span>
+<a name="ln-241"></a>    <span class="k">allocate</span><span class="p">(</span><span class="n">cNumericfields</span><span class="p">(</span><span class="n">numNumbers</span><span class="p">))</span>
+<a name="ln-242"></a>    <span class="k">allocate</span><span class="p">(</span><span class="n">lNumericBlanks</span><span class="p">(</span><span class="n">numNumbers</span><span class="p">))</span>
+<a name="ln-243"></a>
+<a name="ln-244"></a>    <span class="n">cAlphas</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">numAlphas</span><span class="p">)</span><span class="o">=</span><span class="s1">&#39; &#39;</span>
+<a name="ln-245"></a>    <span class="n">rNumerics</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">numNumbers</span><span class="p">)</span><span class="o">=</span><span class="mf">0.0d0</span>
+<a name="ln-246"></a>
+<a name="ln-247"></a>    <span class="k">CALL </span><span class="n">GetObjectItem</span><span class="p">(</span><span class="n">CurrentModuleObject</span><span class="p">,</span><span class="n">numptr</span><span class="p">,</span><span class="n">cAlphas</span><span class="p">,</span><span class="n">numAlphas</span><span class="p">,</span><span class="n">rNumerics</span><span class="p">,</span><span class="n">numNumbers</span><span class="p">,</span><span class="n">status</span><span class="p">,</span>  <span class="p">&amp;</span>
+<a name="ln-248"></a>                   <span class="n">AlphaBlank</span><span class="o">=</span><span class="n">lAlphablanks</span><span class="p">,</span><span class="n">NumBlank</span><span class="o">=</span><span class="n">lNumericblanks</span><span class="p">,</span>  <span class="p">&amp;</span>
+<a name="ln-249"></a>                   <span class="n">AlphaFieldnames</span><span class="o">=</span><span class="n">cAlphafields</span><span class="p">,</span><span class="n">NumericFieldNames</span><span class="o">=</span><span class="n">cNumericfields</span><span class="p">)</span>
+<a name="ln-250"></a>    <span class="k">do </span><span class="n">numargs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">numNumbers</span>
+<a name="ln-251"></a>      <span class="n">numptr</span><span class="o">=</span><span class="n">rNumerics</span><span class="p">(</span><span class="n">numargs</span><span class="p">)</span>  <span class="c">! set to integer</span>
+<a name="ln-252"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">lNumericblanks</span><span class="p">(</span><span class="n">numargs</span><span class="p">))</span> <span class="k">then</span>
+<a name="ln-253"></a><span class="k">        if</span> <span class="p">(.</span><span class="nb">not</span><span class="p">.</span> <span class="n">lAlphablanks</span><span class="p">(</span><span class="n">numargs</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span> <span class="k">then</span>
+<a name="ln-254"></a><span class="k">          CALL </span><span class="n">ShowWarningError</span><span class="p">(</span><span class="s1">&#39;SetUpSchemeColors: &#39;</span><span class="o">//</span><span class="nb">TRIM</span><span class="p">(</span><span class="n">cAlphafields</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="o">//</span><span class="s1">&#39;=&#39;</span><span class="o">//</span><span class="nb">TRIM</span><span class="p">(</span><span class="n">SchemeName</span><span class="p">)</span><span class="o">//</span>  <span class="p">&amp;</span>
+<a name="ln-255"></a>             <span class="s1">&#39;, &#39;</span><span class="o">//</span><span class="nb">TRIM</span><span class="p">(</span><span class="n">cAlphafields</span><span class="p">(</span><span class="n">numargs</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span><span class="o">//</span><span class="s1">&#39;=&#39;</span><span class="o">//</span><span class="nb">TRIM</span><span class="p">(</span><span class="n">cAlphas</span><span class="p">(</span><span class="n">numargs</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span><span class="o">//</span>  <span class="p">&amp;</span>
+<a name="ln-256"></a>            <span class="s1">&#39;, &#39;</span><span class="o">//</span><span class="nb">TRIM</span><span class="p">(</span><span class="n">cNumericfields</span><span class="p">(</span><span class="n">numargs</span><span class="p">))</span><span class="o">//</span><span class="s1">&#39; was blank.  Default color retained.&#39;</span><span class="p">)</span>
+<a name="ln-257"></a>        <span class="n">endif</span>
+<a name="ln-258"></a>        <span class="k">cycle</span>
+<a name="ln-259"></a><span class="k">      </span><span class="n">endif</span>
+<a name="ln-260"></a>      <span class="k">if</span> <span class="p">(.</span><span class="nb">not</span><span class="p">.</span> <span class="n">MatchAndSetColorTextString</span><span class="p">(</span><span class="n">cAlphas</span><span class="p">(</span><span class="n">numargs</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span><span class="n">numptr</span><span class="p">,</span><span class="n">ColorType</span><span class="p">))</span> <span class="k">then</span>
+<a name="ln-261"></a><span class="k">        CALL </span><span class="n">ShowWarningError</span><span class="p">(</span><span class="s1">&#39;SetUpSchemeColors: &#39;</span><span class="o">//</span><span class="nb">TRIM</span><span class="p">(</span><span class="n">cAlphafields</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="o">//</span><span class="s1">&#39;=&#39;</span><span class="o">//</span><span class="nb">TRIM</span><span class="p">(</span><span class="n">SchemeName</span><span class="p">)</span><span class="o">//</span>  <span class="p">&amp;</span>
+<a name="ln-262"></a>           <span class="s1">&#39;, &#39;</span><span class="o">//</span><span class="nb">TRIM</span><span class="p">(</span><span class="n">cAlphafields</span><span class="p">(</span><span class="n">numargs</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span><span class="o">//</span><span class="s1">&#39;=&#39;</span><span class="o">//</span><span class="nb">TRIM</span><span class="p">(</span><span class="n">cAlphas</span><span class="p">(</span><span class="n">numargs</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span><span class="o">//</span>  <span class="p">&amp;</span>
+<a name="ln-263"></a>           <span class="s1">&#39;, is invalid.  No color set.&#39;</span><span class="p">)</span>
+<a name="ln-264"></a>      <span class="n">endif</span>
+<a name="ln-265"></a>    <span class="n">enddo</span>
+<a name="ln-266"></a>
+<a name="ln-267"></a>    <span class="k">deallocate</span><span class="p">(</span><span class="n">cAlphas</span><span class="p">)</span>
+<a name="ln-268"></a>    <span class="k">deallocate</span><span class="p">(</span><span class="n">cAlphafields</span><span class="p">)</span>
+<a name="ln-269"></a>    <span class="k">deallocate</span><span class="p">(</span><span class="n">lAlphablanks</span><span class="p">)</span>
+<a name="ln-270"></a>    <span class="k">deallocate</span><span class="p">(</span><span class="n">rNumerics</span><span class="p">)</span>
+<a name="ln-271"></a>    <span class="k">deallocate</span><span class="p">(</span><span class="n">cNumericfields</span><span class="p">)</span>
+<a name="ln-272"></a>    <span class="k">deallocate</span><span class="p">(</span><span class="n">lNumericBlanks</span><span class="p">)</span>
+<a name="ln-273"></a>
+<a name="ln-274"></a>  <span class="k">else</span>
+<a name="ln-275"></a><span class="k">    CALL </span><span class="n">ShowWarningError</span><span class="p">(</span><span class="s1">&#39;SetUpSchemeColors: Name=&#39;</span><span class="o">//</span><span class="nb">TRIM</span><span class="p">(</span><span class="n">SchemeName</span><span class="p">)</span><span class="o">//</span>  <span class="p">&amp;</span>
+<a name="ln-276"></a>       <span class="s1">&#39; not on input file. Default colors will be used.&#39;</span><span class="p">)</span>
+<a name="ln-277"></a>  <span class="n">endif</span>
+<a name="ln-278"></a>
+<a name="ln-279"></a>  <span class="k">RETURN</span>
+<a name="ln-280"></a>
+<a name="ln-281"></a><span class="k">END SUBROUTINE </span><span class="n">SetUpSchemeColors</span>
+<a name="ln-282"></a>
+<a name="ln-283"></a>
+<a name="ln-284"></a><span class="c">!     NOTICE</span>
+<a name="ln-285"></a><span class="c">!</span>
+<a name="ln-286"></a><span class="c">!     Copyright © 1996-2013 The Board of Trustees of the University of Illinois</span>
+<a name="ln-287"></a><span class="c">!     and The Regents of the University of California through Ernest Orlando Lawrence</span>
+<a name="ln-288"></a><span class="c">!     Berkeley National Laboratory.  All rights reserved.</span>
+<a name="ln-289"></a><span class="c">!</span>
+<a name="ln-290"></a><span class="c">!     Portions of the EnergyPlus software package have been developed and copyrighted</span>
+<a name="ln-291"></a><span class="c">!     by other individuals, companies and institutions.  These portions have been</span>
+<a name="ln-292"></a><span class="c">!     incorporated into the EnergyPlus software package under license.   For a complete</span>
+<a name="ln-293"></a><span class="c">!     list of contributors, see &quot;Notice&quot; located in EnergyPlus.f90.</span>
+<a name="ln-294"></a><span class="c">!</span>
+<a name="ln-295"></a><span class="c">!     NOTICE: The U.S. Government is granted for itself and others acting on its</span>
+<a name="ln-296"></a><span class="c">!     behalf a paid-up, nonexclusive, irrevocable, worldwide license in this data to</span>
+<a name="ln-297"></a><span class="c">!     reproduce, prepare derivative works, and perform publicly and display publicly.</span>
+<a name="ln-298"></a><span class="c">!     Beginning five (5) years after permission to assert copyright is granted,</span>
+<a name="ln-299"></a><span class="c">!     subject to two possible five year renewals, the U.S. Government is granted for</span>
+<a name="ln-300"></a><span class="c">!     itself and others acting on its behalf a paid-up, non-exclusive, irrevocable</span>
+<a name="ln-301"></a><span class="c">!     worldwide license in this data to reproduce, prepare derivative works,</span>
+<a name="ln-302"></a><span class="c">!     distribute copies to the public, perform publicly and display publicly, and to</span>
+<a name="ln-303"></a><span class="c">!     permit others to do so.</span>
+<a name="ln-304"></a><span class="c">!</span>
+<a name="ln-305"></a><span class="c">!     TRADEMARKS: EnergyPlus is a trademark of the US Department of Energy.</span>
+<a name="ln-306"></a><span class="c">!</span>
+<a name="ln-307"></a>
+<a name="ln-308"></a><span class="k">END MODULE </span><span class="n">DataSurfaceColors</span>
+</pre></div>
+
+    </section>
+    </div>
+  </div>
+
+  <section class="visible-xs visible-sm hidden-md">
+    <hr>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allfiles-1">All Source Files</a></h3></div>
+  <div id="allfiles-1" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../sourcefile/airflownetworkbalancemanager.f90.html">AirflowNetworkBalanceManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/airflownetworksolver.f90.html">AirflowNetworkSolver.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/baseboardradiator.f90.html">BaseboardRadiator.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/baseboardradiatorelectric.f90.html">BaseboardRadiatorElectric.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/baseboardradiatorsteam.f90.html">BaseboardRadiatorSteam.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/baseboardradiatorwater.f90.html">BaseboardRadiatorWater.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/branchinputmanager.f90.html">BranchInputManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/branchnodeconnections.f90.html">BranchNodeConnections.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/conductiontransferfunctioncalc.f90.html">ConductionTransferFunctionCalc.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/cooltower.f90.html">CoolTower.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/costestimatemanager.f90.html">CostEstimateManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/curvemanager.f90.html">CurveManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/cvfonlyroutines.f90.html">CVFOnlyRoutines.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataairflownetwork.f90.html">DataAirflowNetwork.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataairloop.f90.html">DataAirLoop.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataairsystems.f90.html">DataAirSystems.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/databranchairloopplant.f90.html">DataBranchAirLoopPlant.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/databranchnodeconnections.f90.html">DataBranchNodeConnections.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/databsdfwindow.f90.html">DataBSDFWindow.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datacomplexfenestration.f90.html">DataComplexFenestration.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datacontaminantbalance.f90.html">DataContaminantBalance.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataconvergparams.f90.html">DataConvergParams.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataconversions.f90.html">DataConversions.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datacostestimate.f90.html">DataCostEstimate.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datadaylighting.f90.html">DataDaylighting.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datadaylightingdevices.f90.html">DataDaylightingDevices.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datadefineequip.f90.html">Datadefineequip.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datadelight.f90.html">DataDElight.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataenvironment.f90.html">DataEnvironment.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataequivalentlayerwindow.f90.html">DataEquivalentLayerWindow.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataerrortracking.f90.html">DataErrorTracking.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datagenerators.f90.html">DataGenerators.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataglobalconstants.f90.html">DataGlobalConstants.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataglobals.f90.html">DataGlobals.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataheatbalance.f90.html">DataHeatBalance.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataheatbalfansys.f90.html">DataHeatBalFanSys.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataheatbalsurface.f90.html">DataHeatBalSurface.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datahvaccontrollers.f90.html">DataHVACControllers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datahvacglobals.f90.html">DataHVACGlobals.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datainterfaces.f90.html">DataInterfaces.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataipshortcuts.f90.html">DataIPShortCuts.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataloopnode.f90.html">DataLoopNode.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datamoisturebalance.f90.html">DataMoistureBalance.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datamoisturebalanceempd.f90.html">DataMoistureBalanceEMPD.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataoutputs.f90.html">DataOutputs.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataphotovoltaics.f90.html">DataPhotovoltaics.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataplant.f90.html">DataPlant.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataplantpipingsystems.f90.html">DataPlantPipingSystems.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataprecisionglobals.f90.html">DataPrecisionGlobals.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datareportingflags.f90.html">DataReportingFlags.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataroomair.f90.html">DataRoomAir.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datarootfinder.f90.html">DataRootFinder.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataruntimelanguage.f90.html">DataRuntimeLanguage.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datashadowingcombinations.f90.html">DataShadowingCombinations.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datasizing.f90.html">DataSizing.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datastringglobals.f90.html">DataStringGlobals.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datasurfacecolors.f90.html">DataSurfaceColors.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datasurfacelists.f90.html">DataSurfaceLists.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datasurfaces.f90.html">DataSurfaces.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datasystemvariables.f90.html">DataSystemVariables.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datatimings.f90.html">DataTimings.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataucsdshareddata.f90.html">DataUCSDSharedData.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datavectortypes.f90.html">DataVectorTypes.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dataviewfactorinformation.f90.html">DataViewFactorInformation.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datawater.f90.html">DataWater.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datazonecontrols.f90.html">DataZoneControls.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datazoneenergydemands.f90.html">DataZoneEnergyDemands.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/datazoneequipment.f90.html">DataZoneEquipment.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/daylightingdevices.f90.html">DaylightingDevices.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/daylightingmanager.f90.html">DaylightingManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/delightmanagerf.f90.html">DElightManagerF.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/delightmanagerf_no.f90.html">DElightManagerF_NO.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/demandmanager.f90.html">DemandManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/desiccantdehumidifiers.f90.html">DesiccantDehumidifiers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/directair.f90.html">DirectAir.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/displayroutines.f90.html">DisplayRoutines.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/dxcoil.f90.html">DXCoil.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/earthtube.f90.html">EarthTube.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/economiclifecyclecost.f90.html">EconomicLifeCycleCost.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/economictariff.f90.html">EconomicTariff.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/ecoroof.f90.html">EcoRoof.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/electricpowergenerators.f90.html">ElectricPowerGenerators.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/electricpowermanager.f90.html">ElectricPowerManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/emsmanager.f90.html">EMSManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/energyplus.f90.html">EnergyPlus.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/exteriorenergyusemanager.f90.html">ExteriorEnergyUseManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/externalinterface_no.f90.html">ExternalInterface_NO.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/fancoilunits.f90.html">FanCoilUnits.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/faultsmanager.f90.html">FaultsManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/fluidproperties.f90.html">FluidProperties.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/general.f90.html">General.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/generalroutines.f90.html">GeneralRoutines.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/globalnames.f90.html">GlobalNames.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalanceairmanager.f90.html">HeatBalanceAirManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalanceconvectioncoeffs.f90.html">HeatBalanceConvectionCoeffs.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalancehamtmanager.f90.html">HeatBalanceHAMTManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalanceinternalheatgains.f90.html">HeatBalanceInternalHeatGains.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalanceintradexchange.f90.html">HeatBalanceIntRadExchange.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalancemanager.f90.html">HeatBalanceManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalancemovableinsulation.f90.html">HeatBalanceMovableInsulation.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalancesurfacemanager.f90.html">HeatBalanceSurfaceManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatbalfinitedifferencemanager.f90.html">HeatBalFiniteDifferenceManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/heatrecovery.f90.html">HeatRecovery.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/humidifiers.f90.html">Humidifiers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvaccontrollers.f90.html">HVACControllers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvaccooledbeam.f90.html">HVACCooledBeam.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacdualductsystem.f90.html">HVACDualDuctSystem.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacduct.f90.html">HVACDuct.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacdxsystem.f90.html">HVACDXSystem.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacevapcomponent.f90.html">HVACEvapComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacfancomponent.f90.html">HVACFanComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacfurnace.f90.html">HVACFurnace.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacheatingcoils.f90.html">HVACHeatingCoils.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvachxassistedcoolingcoil.f90.html">HVACHXAssistedCoolingCoil.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacinterfacemanager.f90.html">HVACInterfaceManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacmanager.f90.html">HVACManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacmixercomponent.f90.html">HVACMixerComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacmultispeedheatpump.f90.html">HVACMultiSpeedHeatPump.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacsingleductinduc.f90.html">HVACSingleDuctInduc.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacsingleductsystem.f90.html">HVACSingleDuctSystem.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacsplittercomponent.f90.html">HVACSplitterComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacstandaloneerv.f90.html">HVACStandAloneERV.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacsteamcoilcomponent.f90.html">HVACSteamCoilComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvactranspiredcollector.f90.html">HVACTranspiredCollector.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacunitarybypassvav.f90.html">HVACUnitaryBypassVAV.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacunitarysystem.f90.html">HVACUnitarySystem.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacvariablerefrigerantflow.f90.html">HVACVariableRefrigerantFlow.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacwatercoilcomponent.f90.html">HVACWaterCoilComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacwatertoair.f90.html">HVACWatertoAir.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/hvacwatertoairmultispeedhp.f90.html">HVACWatertoAirMultiSpeedHP.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/inputprocessor.f90.html">InputProcessor.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/matrixdatamanager.f90.html">MatrixDataManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/mixedair.f90.html">MixedAir.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/moisturebalanceempdmanager.f90.html">MoistureBalanceEMPDManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/nodeinputmanager.f90.html">NodeInputManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/nonzoneequipmentmanager.f90.html">NonZoneEquipmentManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/outairnodemanager.f90.html">OutAirNodeManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/outdoorairunit.f90.html">OutdoorAirUnit.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/outputprocessor.f90.html">OutputProcessor.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/outputreportpredefined.f90.html">OutputReportPredefined.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/outputreports.f90.html">OutputReports.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/outputreporttabular.f90.html">OutputReportTabular.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/packagedterminalheatpump.f90.html">PackagedTerminalHeatPump.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/packagedthermalstoragecoil.f90.html">PackagedThermalStorageCoil.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/photovoltaics.f90.html">Photovoltaics.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/photovoltaicthermalcollectors.f90.html">PhotovoltaicThermalCollectors.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantabsorptionchillers.f90.html">PlantAbsorptionChillers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantboilers.f90.html">PlantBoilers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantboilerssteam.f90.html">PlantBoilersSteam.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantcentralgshp.f90.html">PlantCentralGSHP.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantchillers.f90.html">PlantChillers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantcondloopoperation.f90.html">PlantCondLoopOperation.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantcondlooptowers.f90.html">PlantCondLoopTowers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/planteirchillers.f90.html">PlantEIRChillers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantevapfluidcoolers.f90.html">PlantEvapFluidCoolers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantexhaustabsorptionchiller.f90.html">PlantExhaustAbsorptionChiller.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantfluidcoolers.f90.html">PlantFluidCoolers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantgasabsorptionchiller.f90.html">PlantGasAbsorptionChiller.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantgroundheatexchangers.f90.html">PlantGroundHeatExchangers.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantheatexchanger.f90.html">PlantHeatExchanger.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/planticethermalstorage.f90.html">PlantIceThermalStorage.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantloadprofile.f90.html">PlantLoadProfile.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantloopequipment.f90.html">PlantLoopEquipment.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantloopsolver.f90.html">PlantLoopSolver.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantmanager.f90.html">PlantManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantoutsideenergysources.f90.html">PlantOutsideEnergySources.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantpipeheattransfer.f90.html">PlantPipeHeatTransfer.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantpipes.f90.html">PlantPipes.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantpipingsystemmanager.f90.html">PlantPipingSystemManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantpondgroundheatexchanger.f90.html">PlantPondGroundHeatExchanger.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantpressuresystem.f90.html">PlantPressureSystem.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantpumps.f90.html">PlantPumps.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantsolarcollectors.f90.html">PlantSolarCollectors.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantsurfacegroundheatexchanger.f90.html">PlantSurfaceGroundHeatExchanger.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantutilities.f90.html">PlantUtilities.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantvalves.f90.html">PlantValves.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantwatersources.f90.html">PlantWaterSources.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantwaterthermaltank.f90.html">PlantWaterThermalTank.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantwatertowatergshp.f90.html">PlantWatertoWaterGSHP.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/plantwateruse.f90.html">PlantWaterUse.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/pollutionanalysismodule.f90.html">PollutionAnalysisModule.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/poweredinductionunits.f90.html">PoweredInductionUnits.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/psychroutines.f90.html">PsychRoutines.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/purchasedairmanager.f90.html">Purchasedairmanager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/radiantsystemhightemp.f90.html">RadiantSystemHighTemp.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/radiantsystemlowtemp.f90.html">RadiantSystemLowTemp.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/refrigeratedcase.f90.html">RefrigeratedCase.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/reportsizingmanager.f90.html">ReportSizingManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/returnairpath.f90.html">ReturnAirPath.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/roomairmanager.f90.html">RoomAirManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/roomairmodelcrossvent.f90.html">RoomAirModelCrossVent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/roomairmodeldisplacementvent.f90.html">RoomAirModelDisplacementVent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/roomairmodelmundt.f90.html">RoomAirModelMundt.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/roomairmodelufad.f90.html">RoomAirModelUFAD.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/roomairmodelusertemppattern.f90.html">RoomAirModelUserTempPattern.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/rootfinder.f90.html">RootFinder.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/runtimelanguageprocessor.f90.html">RuntimeLanguageProcessor.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/schedulemanager.f90.html">ScheduleManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/setpointmanager.f90.html">SetPointManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/simairservingzones.f90.html">SimAirServingZones.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/simulationmanager.f90.html">SimulationManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/sizingmanager.f90.html">SizingManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/solarreflectionmanager.f90.html">SolarReflectionManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/solarshading.f90.html">SolarShading.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/sortandstringutilities.f90.html">SortAndStringUtilities.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/sqlite3.c.html">sqlite3.c</a>
+
+      <a class="list-group-item" href="../sourcefile/sqlitecroutines.c.html">SQLiteCRoutines.c</a>
+
+      <a class="list-group-item" href="../sourcefile/sqlitefortranroutines.f90.html">SQLiteFortranRoutines.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/sqlitefortranroutines_no.f90.html">SQLiteFortranRoutines_NO.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/standardratings.f90.html">StandardRatings.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/surfacegeometry.f90.html">SurfaceGeometry.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/systemavailabilitymanager.f90.html">SystemAvailabilityManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/systemreports.f90.html">SystemReports.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/tarcogcomplexfenestration.f90.html">TarcogComplexFenestration.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/thermalchimney.f90.html">ThermalChimney.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/thermalcomfort.f90.html">ThermalComfort.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/unitheater.f90.html">UnitHeater.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/unitventilator.f90.html">UnitVentilator.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/userdefinedcomponents.f90.html">UserDefinedComponents.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/utilityroutines.f90.html">UtilityRoutines.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/vectorutilities.f90.html">VectorUtilities.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/ventilatedslab.f90.html">VentilatedSlab.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/watermanager.f90.html">WaterManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/weathermanager.f90.html">WeatherManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/windowac.f90.html">WindowAC.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/windowcomplexmanager.f90.html">WindowComplexManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/windowequivalentlayer.f90.html">WindowEquivalentLayer.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/windowmanager.f90.html">WindowManager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/windturbine.f90.html">WindTurbine.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/zoneairloopequipmentmanager.f90.html">Zoneairloopequipmentmanager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/zonecontaminantpredictorcorrector.f90.html">ZoneContaminantPredictorCorrector.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/zonedehumidifier.f90.html">ZoneDehumidifier.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/zoneequipmentmanager.f90.html">Zoneequipmentmanager.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/zoneplenumcomponent.f90.html">ZonePlenumComponent.f90</a>
+
+      <a class="list-group-item" href="../sourcefile/zonetemppredictorcorrector.f90.html">ZoneTempPredictorCorrector.f90</a>
+
+    </div>
+  </div>
+</div>
+
+
+  </section>
+
+    <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2017 </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> EnergyPlusFortran</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js'],
+        'HTML-CSS': {
+           styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#000000 ! important'} }
+        }
+      });
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>

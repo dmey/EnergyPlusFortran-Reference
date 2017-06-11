@@ -1,0 +1,3909 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	 <meta name="description" content="">
+
+    <meta name="author" content="dmey (forked from NREL)" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>SteamCoilEquipConditions &ndash; EnergyPlusFortran </title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">EnergyPlusFortran <small>8.1.0.009</small></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+		 aria-expanded="false">Contents <span class="caret"></span></a>
+	      <ul class="dropdown-menu">
+
+            <li><a href="../lists/files.html">Source Files</a></li>
+
+
+            <li><a href="../lists/modules.html">Modules</a></li>
+
+
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+
+
+            <li><a href="../lists/types.html">Derived Types</a></li>
+
+
+            <li><a href="../program/energyplus.html">Program</a></li>
+
+            </ul>
+            </li>
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/energyplus.html">Program</a></li>
+
+          </ul>
+
+
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+
+  <div class="row">
+    <h1>SteamCoilEquipConditions
+    <small>Derived Type</small>
+
+    </h1>
+
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+	  data-placement="bottom" data-html="true"
+	  title="<p> 0.3% of total for derived types.</p>Including implementation: 55 statements,  0.3% of total for derived types.">55 statements</a>
+     </li>
+
+
+    <li><i class="fa fa-code"></i><a href="../src/HVACSteamCoilComponent.f90"> Source File</a></li>
+
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+
+     <li><a href='../sourcefile/hvacsteamcoilcomponent.f90.html'>HVACSteamCoilComponent.f90</a></li>
+
+     <li><a href='../module/steamcoils.html'>SteamCoils</a></li>
+
+     <li class="active">SteamCoilEquipConditions</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+
+<div id="sidebar">
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-name%7E197">Name</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-steamcoiltypea">SteamCoilTypeA</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-steamcoiltype">SteamCoilType</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-steamcoilmodel">SteamCoilModel</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-steamcoiltype_num">SteamCoilType_Num</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-schedule%7E14">Schedule</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-schedptr%7E35">SchedPtr</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-inletairmassflowrate%7E4">InletAirMassFlowRate</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-outletairmassflowrate%7E3">OutletAirMassFlowRate</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-inletairtemp%7E4">InletAirTemp</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-outletairtemp%7E4">OutletAirTemp</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-inletairhumrat%7E4">InletAirHumRat</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-outletairhumrat%7E4">OutletAirHumRat</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-inletairenthalpy%7E4">InletAirEnthalpy</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-outletairenthalpy%7E4">OutletAirEnthalpy</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-totsteamcoilload">TotSteamCoilLoad</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-sensteamcoilload">SenSteamCoilLoad</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-totsteamheatingcoilenergy">TotSteamHeatingCoilEnergy</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-totsteamcoolingcoilenergy">TotSteamCoolingCoilEnergy</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-sensteamcoolingcoilenergy">SenSteamCoolingCoilEnergy</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-totsteamheatingcoilrate">TotSteamHeatingCoilRate</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-looploss">LoopLoss</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-totsteamcoolingcoilrate">TotSteamCoolingCoilRate</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-sensteamcoolingcoilrate">SenSteamCoolingCoilRate</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-leavingrelhum">LeavingRelHum</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-desiredoutlettemp%7E5">DesiredOutletTemp</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-desiredoutlethumrat%7E3">DesiredOutletHumRat</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-inletsteamtemp">InletSteamTemp</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-outletsteamtemp">OutletSteamTemp</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-inletsteammassflowrate">InletSteamMassFlowRate</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-outletsteammassflowrate">OutletSteamMassFlowRate</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-maxsteamvolflowrate">MaxSteamVolFlowRate</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-maxsteammassflowrate">MaxSteamMassFlowRate</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-inletsteamenthalpy">InletSteamEnthalpy</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-outletwaterenthalpy">OutletWaterEnthalpy</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-inletsteampress">InletSteamPress</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-inletsteamquality">InletSteamQuality</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-outletsteamquality">OutletSteamQuality</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-degofsubcooling">DegOfSubCooling</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-loopsubcoolreturn">LoopSubCoolReturn</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-airinletnodenum%7E3">AirInletNodeNum</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-airoutletnodenum%7E3">AirOutletNodeNum</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-steaminletnodenum">SteamInletNodeNum</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-steamoutletnodenum">SteamOutletNodeNum</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-tempsetpointnodenum%7E3">TempSetPointNodeNum</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-typeofcoil">TypeofCoil</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-fluidindex%7E5">FluidIndex</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-loopnum%7E12">LoopNum</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-loopside%7E7">LoopSide</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-branchnum%7E13">BranchNum</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-compnum%7E17">CompNum</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-coil_planttypenum">Coil_PlantTypeNum</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-operatingcapacity">OperatingCapacity</a>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../type/steamcoilequipconditions.html#src">SteamCoilEquipConditions</a>
+  </div>
+</div>
+
+
+  <hr>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#alltypes-0">All Derived Types</a></h3></div>
+  <div id="alltypes-0" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../type/actuatorusedtype.html">ActuatorUsedType</a>
+
+      <a class="list-group-item" href="../type/aiflownetworkreportprop.html">AiflowNetworkReportProp</a>
+
+      <a class="list-group-item" href="../type/airchillersetdata.html">AirChillerSetData</a>
+
+      <a class="list-group-item" href="../type/airconnectionstruct.html">AirConnectionStruct</a>
+
+      <a class="list-group-item" href="../type/airflownetworkcompprop.html">AirflowNetworkCompProp</a>
+
+      <a class="list-group-item" href="../type/airflownetworkexchangeprop.html">AirflowNetworkExchangeProp</a>
+
+      <a class="list-group-item" href="../type/airflownetworklinkageprop.html">AirflowNetworkLinkageProp</a>
+
+      <a class="list-group-item" href="../type/airflownetworklinkreportdata.html">AirflowNetworkLinkReportData</a>
+
+      <a class="list-group-item" href="../type/airflownetworklinksimudata.html">AirflowNetworkLinkSimuData</a>
+
+      <a class="list-group-item" href="../type/airflownetworknodeprop.html">AirflowNetworkNodeProp</a>
+
+      <a class="list-group-item" href="../type/airflownetworknodereportdata.html">AirflowNetworkNodeReportData</a>
+
+      <a class="list-group-item" href="../type/airflownetworknodesimudata.html">AirflowNetworkNodeSimuData</a>
+
+      <a class="list-group-item" href="../type/airflownetworkreportvars.html">AirflowNetworkReportVars</a>
+
+      <a class="list-group-item" href="../type/airflownetworksimuprop.html">AirflowNetworkSimuProp</a>
+
+      <a class="list-group-item" href="../type/airin.html">AirIn</a>
+
+      <a class="list-group-item" href="../type/airloopbranchdata.html">AirLoopBranchData</a>
+
+      <a class="list-group-item" href="../type/airloopcompdata.html">AirLoopCompData</a>
+
+      <a class="list-group-item" href="../type/airloopcontroldata.html">AirLoopControlData</a>
+
+      <a class="list-group-item" href="../type/airloopflowdata.html">AirLoopFlowData</a>
+
+      <a class="list-group-item" href="../type/airloopmixerdata.html">AirLoopMixerData</a>
+
+      <a class="list-group-item" href="../type/airloopoutsideairconnectdata.html">AirLoopOutsideAirConnectData</a>
+
+      <a class="list-group-item" href="../type/airloopsplitterdata.html">AirLoopSplitterData</a>
+
+      <a class="list-group-item" href="../type/airloopstatstype.html">AirLoopStatsType</a>
+
+      <a class="list-group-item" href="../type/airlooptozonedata.html">AirLooptoZoneData</a>
+
+      <a class="list-group-item" href="../type/airloopzoneequipconnectdata.html">AirLoopZoneEquipConnectData</a>
+
+      <a class="list-group-item" href="../type/airmodeldata.html">AirModelData</a>
+
+      <a class="list-group-item" href="../type/airnodedata.html">AirNodeData</a>
+
+      <a class="list-group-item" href="../type/airpatterninfobyzonestruct.html">AirPatternInfobyZoneStruct</a>
+
+      <a class="list-group-item" href="../type/airreportvars.html">AirReportVars</a>
+
+      <a class="list-group-item" href="../type/airterminalmixerdata.html">AirTerminalMixerData</a>
+
+      <a class="list-group-item" href="../type/anglefactordata.html">AngleFactorData</a>
+
+      <a class="list-group-item" href="../type/balanceddesdehumperfdata.html">BalancedDesDehumPerfData</a>
+
+      <a class="list-group-item" href="../type/baseboardparams.html">BaseboardParams</a>
+
+      <a class="list-group-item" href="../type/baseboardparams%7E2.html">BaseboardParams</a>
+
+      <a class="list-group-item" href="../type/basecell.html">BaseCell</a>
+
+      <a class="list-group-item" href="../type/basechillerspecs.html">BaseChillerSpecs</a>
+
+      <a class="list-group-item" href="../type/basementzoneinfo.html">BasementZoneInfo</a>
+
+      <a class="list-group-item" href="../type/basereportvars.html">BaseReportVars</a>
+
+      <a class="list-group-item" href="../type/basethermalpropertyset.html">BaseThermalPropertySet</a>
+
+      <a class="list-group-item" href="../type/basiselemdescr.html">BasisElemDescr</a>
+
+      <a class="list-group-item" href="../type/basisstruct.html">BasisStruct</a>
+
+      <a class="list-group-item" href="../type/batterydichargedatastruct.html">BatteryDichargeDataStruct</a>
+
+      <a class="list-group-item" href="../type/bbheatdata.html">BBHeatData</a>
+
+      <a class="list-group-item" href="../type/binobjvaridtype.html">BinObjVarIDType</a>
+
+      <a class="list-group-item" href="../type/binresultstype.html">BinResultsType</a>
+
+      <a class="list-group-item" href="../type/binstatisticstype.html">BinStatisticsType</a>
+
+      <a class="list-group-item" href="../type/blastabsorberspecs.html">BLASTAbsorberSpecs</a>
+
+      <a class="list-group-item" href="../type/boilerspecs.html">BoilerSpecs</a>
+
+      <a class="list-group-item" href="../type/boilerspecs%7E2.html">BoilerSpecs</a>
+
+      <a class="list-group-item" href="../type/boundingboxvertstruct.html">BoundingBoxVertStruct</a>
+
+      <a class="list-group-item" href="../type/branchdata.html">BranchData</a>
+
+      <a class="list-group-item" href="../type/branchdata%7E2.html">BranchData</a>
+
+      <a class="list-group-item" href="../type/branchlistdata.html">BranchListData</a>
+
+      <a class="list-group-item" href="../type/bsdfbksurfdescr.html">BSDFBkSurfDescr</a>
+
+      <a class="list-group-item" href="../type/bsdfdaylghtgeomdescr.html">BSDFDaylghtGeomDescr</a>
+
+      <a class="list-group-item" href="../type/bsdfdaylghtposition.html">BSDFDaylghtPosition</a>
+
+      <a class="list-group-item" href="../type/bsdfgeomdescr.html">BSDFGeomDescr</a>
+
+      <a class="list-group-item" href="../type/bsdflayerabsorpstruct.html">BSDFLayerAbsorpStruct</a>
+
+      <a class="list-group-item" href="../type/bsdfrefpoints.html">BSDFRefPoints</a>
+
+      <a class="list-group-item" href="../type/bsdfrefpointsgeomdescr.html">BSDFRefPointsGeomDescr</a>
+
+      <a class="list-group-item" href="../type/bsdfstatedescr.html">BSDFStateDescr</a>
+
+      <a class="list-group-item" href="../type/bsdfwindowdescript.html">BSDFWindowDescript</a>
+
+      <a class="list-group-item" href="../type/bsdfwindowgeomdescr.html">BSDFWindowGeomDescr</a>
+
+      <a class="list-group-item" href="../type/bsdfwindowinputstruct.html">BSDFWindowInputStruct</a>
+
+      <a class="list-group-item" href="../type/cached_psat_t.html">cached_psat_t</a>
+
+      <a class="list-group-item" href="../type/cached_twb_t.html">cached_twb_t</a>
+
+      <a class="list-group-item" href="../type/cartesiancell.html">CartesianCell</a>
+
+      <a class="list-group-item" href="../type/cartesianpipecellinformation.html">CartesianPipeCellInformation</a>
+
+      <a class="list-group-item" href="../type/caseandwalkinlistdef.html">CaseAndWalkInListDef</a>
+
+      <a class="list-group-item" href="../type/caserafractiondata.html">CaseRAFractionData</a>
+
+      <a class="list-group-item" href="../type/casewizonereportdata.html">CaseWIZoneReportData</a>
+
+      <a class="list-group-item" href="../type/cashflowtype.html">CashFlowType</a>
+
+      <a class="list-group-item" href="../type/cbvavdata.html">CBVAVData</a>
+
+      <a class="list-group-item" href="../type/cecinverterlookuptabledata.html">CECInverterLookUpTableData</a>
+
+      <a class="list-group-item" href="../type/cfsfillgas.html">CFSFILLGAS</a>
+
+      <a class="list-group-item" href="../type/cfsgap.html">CFSGAP</a>
+
+      <a class="list-group-item" href="../type/cfslayer.html">CFSLAYER</a>
+
+      <a class="list-group-item" href="../type/cfslwp.html">CFSLWP</a>
+
+      <a class="list-group-item" href="../type/cfsswp.html">CFSSWP</a>
+
+      <a class="list-group-item" href="../type/cfsty.html">CFSTY</a>
+
+      <a class="list-group-item" href="../type/cgshpnodedata.html">CGSHPNodeData</a>
+
+      <a class="list-group-item" href="../type/chargeblocktype.html">ChargeBlockType</a>
+
+      <a class="list-group-item" href="../type/chargesimpletype.html">ChargeSimpleType</a>
+
+      <a class="list-group-item" href="../type/chillerheaterspecs.html">ChillerheaterSpecs</a>
+
+      <a class="list-group-item" href="../type/chreportvars.html">CHReportVars</a>
+
+      <a class="list-group-item" href="../type/coefficientprops.html">CoefficientProps</a>
+
+      <a class="list-group-item" href="../type/coilcreditdata.html">CoilCreditData</a>
+
+      <a class="list-group-item" href="../type/coiltype.html">CoilType</a>
+
+      <a class="list-group-item" href="../type/collectordata.html">CollectorData</a>
+
+      <a class="list-group-item" href="../type/columntagtype.html">ColumnTagType</a>
+
+      <a class="list-group-item" href="../type/commonpipedata.html">CommonPipeData</a>
+
+      <a class="list-group-item" href="../type/compdata.html">CompData</a>
+
+      <a class="list-group-item" href="../type/compdeswaterflowdata.html">CompDesWaterFlowData</a>
+
+      <a class="list-group-item" href="../type/componentdata.html">ComponentData</a>
+
+      <a class="list-group-item" href="../type/componentdata%7E2.html">ComponentData</a>
+
+      <a class="list-group-item" href="../type/componentlistdata.html">ComponentListData</a>
+
+      <a class="list-group-item" href="../type/componentnamedata.html">ComponentNameData</a>
+
+      <a class="list-group-item" href="../type/componentprops.html">ComponentProps</a>
+
+      <a class="list-group-item" href="../type/componentsetptdata.html">ComponentSetPtData</a>
+
+      <a class="list-group-item" href="../type/compressorlistdef.html">CompressorListDef</a>
+
+      <a class="list-group-item" href="../type/compsizetableentrytype.html">CompSizeTableEntryType</a>
+
+      <a class="list-group-item" href="../type/computationtype.html">ComputationType</a>
+
+      <a class="list-group-item" href="../type/connectairsyscomp.html">ConnectAirSysComp</a>
+
+      <a class="list-group-item" href="../type/connectairsyssubcomp.html">ConnectAirSysSubComp</a>
+
+      <a class="list-group-item" href="../type/connectairsyssubsubcomp.html">ConnectAirSysSubSubComp</a>
+
+      <a class="list-group-item" href="../type/connectedloopdata.html">ConnectedLoopData</a>
+
+      <a class="list-group-item" href="../type/connectionpoint.html">ConnectionPoint</a>
+
+      <a class="list-group-item" href="../type/connectordata.html">ConnectorData</a>
+
+      <a class="list-group-item" href="../type/connectzonecomp.html">ConnectZoneComp</a>
+
+      <a class="list-group-item" href="../type/connectzonesubcomp.html">ConnectZoneSubComp</a>
+
+      <a class="list-group-item" href="../type/connectzonesubsubcomp.html">ConnectZoneSubSubComp</a>
+
+      <a class="list-group-item" href="../type/constantflowradiantsystemdata.html">ConstantFlowRadiantSystemData</a>
+
+      <a class="list-group-item" href="../type/constcopchillerspecs.html">ConstCOPChillerSpecs</a>
+
+      <a class="list-group-item" href="../type/constcopreportvars.html">ConstCOPReportVars</a>
+
+      <a class="list-group-item" href="../type/constgradpattern.html">ConstGradPattern</a>
+
+      <a class="list-group-item" href="../type/constructiondata.html">ConstructionData</a>
+
+      <a class="list-group-item" href="../type/constructiondatafd.html">ConstructionDataFD</a>
+
+      <a class="list-group-item" href="../type/contaminantdata.html">ContaminantData</a>
+
+      <a class="list-group-item" href="../type/controllerlistprops.html">ControllerListProps</a>
+
+      <a class="list-group-item" href="../type/controllerpropstype.html">ControllerPropsType</a>
+
+      <a class="list-group-item" href="../type/controllerstatstype.html">ControllerStatsType</a>
+
+      <a class="list-group-item" href="../type/controllist.html">ControlList</a>
+
+      <a class="list-group-item" href="../type/controlstype.html">ControlsType</a>
+
+      <a class="list-group-item" href="../type/convectioncoefficient.html">ConvectionCoefficient</a>
+
+      <a class="list-group-item" href="../type/coolbeamdata.html">CoolBeamData</a>
+
+      <a class="list-group-item" href="../type/cooltowerparams.html">CoolTowerParams</a>
+
+      <a class="list-group-item" href="../type/costadjustmentstruct.html">CostAdjustmentStruct</a>
+
+      <a class="list-group-item" href="../type/costlineitemstruct.html">CostLineItemStruct</a>
+
+      <a class="list-group-item" href="../type/ctgeneratorspecs.html">CTGeneratorSpecs</a>
+
+      <a class="list-group-item" href="../type/cursimconditionsinfo.html">CurSimConditionsInfo</a>
+
+      <a class="list-group-item" href="../type/cvdata.html">CVData</a>
+
+      <a class="list-group-item" href="../type/cvdvparameters.html">CVDVParameters</a>
+
+      <a class="list-group-item" href="../type/cvflow.html">CVFlow</a>
+
+      <a class="list-group-item" href="../type/damperdesignparams.html">DamperDesignParams</a>
+
+      <a class="list-group-item" href="../type/damperflowconditions.html">DamperFlowConditions</a>
+
+      <a class="list-group-item" href="../type/dataperioddata.html">DataPeriodData</a>
+
+      <a class="list-group-item" href="../type/datasetpointmanager.html">DataSetPointManager</a>
+
+      <a class="list-group-item" href="../type/daylightsavingperioddata.html">DaylightSavingPeriodData</a>
+
+      <a class="list-group-item" href="../type/dayscheduledata.html">DayScheduleData</a>
+
+      <a class="list-group-item" href="../type/dayweathervariables.html">DayWeatherVariables</a>
+
+      <a class="list-group-item" href="../type/dctoacinverterstruct.html">DCtoACInverterStruct</a>
+
+      <a class="list-group-item" href="../type/defineashraeadaptiveoptimumstartcoeffs.html">DefineASHRAEAdaptiveOptimumStartCoeffs</a>
+
+      <a class="list-group-item" href="../type/definecoldestsetpointmanager.html">DefineColdestSetPointManager</a>
+
+      <a class="list-group-item" href="../type/definecondentsetpointmanager.html">DefineCondEntSetPointManager</a>
+
+      <a class="list-group-item" href="../type/definedifftsysavailmanager.html">DefineDiffTSysAvailManager</a>
+
+      <a class="list-group-item" href="../type/definefollowoatempsetpointmanager.html">DefineFollowOATempSetPointManager</a>
+
+      <a class="list-group-item" href="../type/definefollowsysnodetempsetpointmanager.html">DefineFollowSysNodeTempSetPointManager</a>
+
+      <a class="list-group-item" href="../type/definegroundtempsetpointmanager.html">DefineGroundTempSetPointManager</a>
+
+      <a class="list-group-item" href="../type/definehilosysavailmanager.html">DefineHiLoSysAvailManager</a>
+
+      <a class="list-group-item" href="../type/definehybridventsysavailmanager.html">DefineHybridVentSysAvailManager</a>
+
+      <a class="list-group-item" href="../type/defineidealcondentsetpointmanager.html">DefineIdealCondEntSetPointManager</a>
+
+      <a class="list-group-item" href="../type/definelinearmodelnode.html">DefineLinearModelNode</a>
+
+      <a class="list-group-item" href="../type/definemixedairsetpointmanager.html">DefineMixedAirSetPointManager</a>
+
+      <a class="list-group-item" href="../type/definenightcycsysavailmanager.html">DefineNightCycSysAvailManager</a>
+
+      <a class="list-group-item" href="../type/definenightventsysavailmanager.html">DefineNightVentSysAvailManager</a>
+
+      <a class="list-group-item" href="../type/defineoapretreatsetpointmanager.html">DefineOAPretreatSetPointManager</a>
+
+      <a class="list-group-item" href="../type/defineoptstartsysavailmanager.html">DefineOptStartSysAvailManager</a>
+
+      <a class="list-group-item" href="../type/defineoutsideairsetpointmanager.html">DefineOutsideAirSetPointManager</a>
+
+      <a class="list-group-item" href="../type/definepriairsysavailmgrs.html">DefinePriAirSysAvailMgrs</a>
+
+      <a class="list-group-item" href="../type/defineprimaryairsystem.html">DefinePrimaryAirSystem</a>
+
+      <a class="list-group-item" href="../type/definescheddualsetpointmanager.html">DefineSchedDualSetPointManager</a>
+
+      <a class="list-group-item" href="../type/defineschedoffsysavailmanager.html">DefineSchedOffSysAvailManager</a>
+
+      <a class="list-group-item" href="../type/defineschedonsysavailmanager.html">DefineSchedOnSysAvailManager</a>
+
+      <a class="list-group-item" href="../type/defineschedsysavailmanager.html">DefineSchedSysAvailManager</a>
+
+      <a class="list-group-item" href="../type/definescheduledsetpointmanager.html">DefineScheduledSetPointManager</a>
+
+      <a class="list-group-item" href="../type/definesurfacesettings.html">DefineSurfaceSettings</a>
+
+      <a class="list-group-item" href="../type/defineszcoolingsetpointmanager.html">DefineSZCoolingSetPointManager</a>
+
+      <a class="list-group-item" href="../type/defineszheatingsetpointmanager.html">DefineSZHeatingSetPointManager</a>
+
+      <a class="list-group-item" href="../type/defineszmaxhumsetpointmanager.html">DefineSZMaxHumSetPointManager</a>
+
+      <a class="list-group-item" href="../type/defineszminhumsetpointmanager.html">DefineSZMinHumSetPointManager</a>
+
+      <a class="list-group-item" href="../type/defineszonestagecoolinggsetpointmanager.html">DefineSZOneStageCoolinggSetPointManager</a>
+
+      <a class="list-group-item" href="../type/defineszonestageheatingsetpointmanager.html">DefineSZOneStageHeatingSetPointManager</a>
+
+      <a class="list-group-item" href="../type/defineszreheatsetpointmanager.html">DefineSZReheatSetPointManager</a>
+
+      <a class="list-group-item" href="../type/definewarmestsetpointmanager.html">DefineWarmestSetPointManager</a>
+
+      <a class="list-group-item" href="../type/definezonecompavailmgrs.html">DefineZoneCompAvailMgrs</a>
+
+      <a class="list-group-item" href="../type/definezonedata.html">DefineZoneData</a>
+
+      <a class="list-group-item" href="../type/defmultizoneaveragecoolingsetpointmanager.html">DefMultiZoneAverageCoolingSetPointManager</a>
+
+      <a class="list-group-item" href="../type/defmultizoneaverageheatingsetpointmanager.html">DefMultiZoneAverageHeatingSetPointManager</a>
+
+      <a class="list-group-item" href="../type/defmultizoneaveragemaxhumsetpointmanager.html">DefMultiZoneAverageMaxHumSetPointManager</a>
+
+      <a class="list-group-item" href="../type/defmultizoneaverageminhumsetpointmanager.html">DefMultiZoneAverageMinHumSetPointManager</a>
+
+      <a class="list-group-item" href="../type/defmultizonemaxhumsetpointmanager.html">DefMultiZoneMaxHumSetPointManager</a>
+
+      <a class="list-group-item" href="../type/defmultizoneminhumsetpointmanager.html">DefMultiZoneMinHumSetPointManager</a>
+
+      <a class="list-group-item" href="../type/defrabflowsetpointmanager.html">DefRABFlowSetPointManager</a>
+
+      <a class="list-group-item" href="../type/defwarmestsetptmanagertempflow.html">DefWarmestSetPtManagerTempFlow</a>
+
+      <a class="list-group-item" href="../type/demandmanagerdata.html">DemandManagerData</a>
+
+      <a class="list-group-item" href="../type/demandmanagerlistdata.html">DemandManagerListData</a>
+
+      <a class="list-group-item" href="../type/desdayweathdata.html">DesDayWeathData</a>
+
+      <a class="list-group-item" href="../type/desiccantdehumidifierdata.html">DesiccantDehumidifierData</a>
+
+      <a class="list-group-item" href="../type/designdaydata.html">DesignDayData</a>
+
+      <a class="list-group-item" href="../type/designspecmshpdata.html">DesignSpecMSHPData</a>
+
+      <a class="list-group-item" href="../type/detailedicestoragedata.html">DetailedIceStorageData</a>
+
+      <a class="list-group-item" href="../type/directairprops.html">DirectAirProps</a>
+
+      <a class="list-group-item" href="../type/directionneighbor_dictionary.html">DirectionNeighbor_Dictionary</a>
+
+      <a class="list-group-item" href="../type/directionreal_dictionary.html">DirectionReal_Dictionary</a>
+
+      <a class="list-group-item" href="../type/dissyscompcoilprop.html">DisSysCompCoilProp</a>
+
+      <a class="list-group-item" href="../type/dissyscompcpdprop.html">DisSysCompCPDProp</a>
+
+      <a class="list-group-item" href="../type/dissyscompcvfprop.html">DisSysCompCVFProp</a>
+
+      <a class="list-group-item" href="../type/dissyscompdamperprop.html">DisSysCompDamperProp</a>
+
+      <a class="list-group-item" href="../type/dissyscompdetfanprop.html">DisSysCompDetFanProp</a>
+
+      <a class="list-group-item" href="../type/dissyscompductprop.html">DisSysCompDuctProp</a>
+
+      <a class="list-group-item" href="../type/dissyscompelrprop.html">DisSysCompELRProp</a>
+
+      <a class="list-group-item" href="../type/dissyscomphxprop.html">DisSysCompHXProp</a>
+
+      <a class="list-group-item" href="../type/dissyscompleakprop.html">DisSysCompLeakProp</a>
+
+      <a class="list-group-item" href="../type/dissyscomptermunitprop.html">DisSysCompTermUnitProp</a>
+
+      <a class="list-group-item" href="../type/dissyslinkageprop.html">DisSysLinkageProp</a>
+
+      <a class="list-group-item" href="../type/dissysnodeprop.html">DisSysNodeProp</a>
+
+      <a class="list-group-item" href="../type/distributionstructure.html">DistributionStructure</a>
+
+      <a class="list-group-item" href="../type/domainrectangle.html">DomainRectangle</a>
+
+      <a class="list-group-item" href="../type/dtriangle.html">dTriangle</a>
+
+      <a class="list-group-item" href="../type/ductdata.html">DuctData</a>
+
+      <a class="list-group-item" href="../type/dvdata.html">DVData</a>
+
+      <a class="list-group-item" href="../type/dxcoildata.html">DXCoilData</a>
+
+      <a class="list-group-item" href="../type/dxcoolingconditions.html">DXCoolingConditions</a>
+
+      <a class="list-group-item" href="../type/dxheatpumpsystemstruct.html">DXHeatPumpSystemStruct</a>
+
+      <a class="list-group-item" href="../type/earthtubedata.html">EarthTubeData</a>
+
+      <a class="list-group-item" href="../type/earthtubezonereportvars.html">EarthTubeZoneReportVars</a>
+
+      <a class="list-group-item" href="../type/econvartype.html">EconVarType</a>
+
+      <a class="list-group-item" href="../type/elecbaseboardparams.html">ElecBaseboardParams</a>
+
+      <a class="list-group-item" href="../type/elecstoragedatastruct.html">ElecStorageDataStruct</a>
+
+      <a class="list-group-item" href="../type/electricchillerspecs.html">ElectricChillerSpecs</a>
+
+      <a class="list-group-item" href="../type/electriceirchillerspecs.html">ElectricEIRChillerSpecs</a>
+
+      <a class="list-group-item" href="../type/electricpowerloadcenter.html">ElectricPowerLoadCenter</a>
+
+      <a class="list-group-item" href="../type/electricradiantsystemdata.html">ElectricRadiantSystemData</a>
+
+      <a class="list-group-item" href="../type/electricreportvars.html">ElectricReportVars</a>
+
+      <a class="list-group-item" href="../type/electrictransformer.html">ElectricTransformer</a>
+
+      <a class="list-group-item" href="../type/emsactuatoravailabletype.html">EMSActuatorAvailableType</a>
+
+      <a class="list-group-item" href="../type/emsprogramcallmanagementtype.html">EMSProgramCallManagementType</a>
+
+      <a class="list-group-item" href="../type/endusecategorytype.html">EndUseCategoryType</a>
+
+      <a class="list-group-item" href="../type/energy.html">Energy</a>
+
+      <a class="list-group-item" href="../type/enginedrivenchillerspecs.html">EngineDrivenChillerSpecs</a>
+
+      <a class="list-group-item" href="../type/enginedrivenreportvars.html">EngineDrivenReportVars</a>
+
+      <a class="list-group-item" href="../type/environmentdata.html">EnvironmentData</a>
+
+      <a class="list-group-item" href="../type/eqnodeconnectiondef.html">EqNodeConnectionDef</a>
+
+      <a class="list-group-item" href="../type/equipconfiguration.html">EquipConfiguration</a>
+
+      <a class="list-group-item" href="../type/equiplist.html">EquipList</a>
+
+      <a class="list-group-item" href="../type/equiplistcompdata.html">EquipListCompData</a>
+
+      <a class="list-group-item" href="../type/equiplistptrdata.html">EquipListPtrData</a>
+
+      <a class="list-group-item" href="../type/equipmentdata.html">EquipmentData</a>
+
+      <a class="list-group-item" href="../type/equipmeterdata.html">EquipMeterData</a>
+
+      <a class="list-group-item" href="../type/equipoplist.html">EquipOpList</a>
+
+      <a class="list-group-item" href="../type/erlexpressiontype.html">ErlExpressionType</a>
+
+      <a class="list-group-item" href="../type/erlstacktype.html">ErlStackType</a>
+
+      <a class="list-group-item" href="../type/erlvaluetype.html">ErlValueType</a>
+
+      <a class="list-group-item" href="../type/erlvariabletype.html">ErlVariableType</a>
+
+      <a class="list-group-item" href="../type/evapconditions.html">EvapConditions</a>
+
+      <a class="list-group-item" href="../type/evapfluidcoolerinletconds.html">EvapFluidCoolerInletConds</a>
+
+      <a class="list-group-item" href="../type/evapfluidcoolerspecs.html">EvapFluidCoolerspecs</a>
+
+      <a class="list-group-item" href="../type/exhaustabsorberspecs.html">ExhaustAbsorberSpecs</a>
+
+      <a class="list-group-item" href="../type/extendedfluidproperties.html">ExtendedFluidProperties</a>
+
+      <a class="list-group-item" href="../type/exteriorequipmentusage.html">ExteriorEquipmentUsage</a>
+
+      <a class="list-group-item" href="../type/exteriorlightusage.html">ExteriorLightUsage</a>
+
+      <a class="list-group-item" href="../type/extventedcavitystruct.html">ExtVentedCavityStruct</a>
+
+      <a class="list-group-item" href="../type/face.html">Face</a>
+
+      <a class="list-group-item" href="../type/fancoildata.html">FanCoilData</a>
+
+      <a class="list-group-item" href="../type/fanequipconditions.html">FanEquipConditions</a>
+
+      <a class="list-group-item" href="../type/farfieldinfo.html">FarfieldInfo</a>
+
+      <a class="list-group-item" href="../type/faultproperties.html">FaultProperties</a>
+
+      <a class="list-group-item" href="../type/fcairsupplydatastruct.html">FCAirSupplyDataStruct</a>
+
+      <a class="list-group-item" href="../type/fcauxilheatdatastruct.html">FCAuxilHeatDataStruct</a>
+
+      <a class="list-group-item" href="../type/fcdatastruct.html">FCDataStruct</a>
+
+      <a class="list-group-item" href="../type/fcelecstoragedatastruct.html">FCElecStorageDataStruct</a>
+
+      <a class="list-group-item" href="../type/fcexhausthxdatastruct.html">FCExhaustHXDataStruct</a>
+
+      <a class="list-group-item" href="../type/fcinverterdatastruct.html">FCInverterDataStruct</a>
+
+      <a class="list-group-item" href="../type/fcpowermodulestruct.html">FCPowerModuleStruct</a>
+
+      <a class="list-group-item" href="../type/fcreportdatastruct.html">FCReportDataStruct</a>
+
+      <a class="list-group-item" href="../type/fcstackcoolerdatastruct.html">FCStackCoolerDataStruct</a>
+
+      <a class="list-group-item" href="../type/fcwatersupplydatastruct.html">FCWaterSupplyDataStruct</a>
+
+      <a class="list-group-item" href="../type/fenestrationsolarabsorbed.html">FenestrationSolarAbsorbed</a>
+
+      <a class="list-group-item" href="../type/filesectionsdefinition.html">FileSectionsDefinition</a>
+
+      <a class="list-group-item" href="../type/fluidcellinformation.html">FluidCellInformation</a>
+
+      <a class="list-group-item" href="../type/fluidcoolerinletconds.html">FluidCoolerInletConds</a>
+
+      <a class="list-group-item" href="../type/fluidcoolerspecs.html">FluidCoolerspecs</a>
+
+      <a class="list-group-item" href="../type/fluidpropsglycoldata.html">FluidPropsGlycolData</a>
+
+      <a class="list-group-item" href="../type/fluidpropsglycolerrors.html">FluidPropsGlycolErrors</a>
+
+      <a class="list-group-item" href="../type/fluidpropsglycolrawdata.html">FluidPropsGlycolRawData</a>
+
+      <a class="list-group-item" href="../type/fluidpropsrefrigerantdata.html">FluidPropsRefrigerantData</a>
+
+      <a class="list-group-item" href="../type/fluidpropsrefrigerrors.html">FluidPropsRefrigErrors</a>
+
+      <a class="list-group-item" href="../type/framedividerproperties.html">FrameDividerProperties</a>
+
+      <a class="list-group-item" href="../type/fueltypeprops.html">FuelTypeProps</a>
+
+      <a class="list-group-item" href="../type/fulldomainstructureinfo.html">FullDomainStructureInfo</a>
+
+      <a class="list-group-item" href="../type/furnaceequipconditions.html">FurnaceEquipConditions</a>
+
+      <a class="list-group-item" href="../type/gapdeflectionstate.html">GapDeflectionState</a>
+
+      <a class="list-group-item" href="../type/gapsupportpillar.html">GapSupportPillar</a>
+
+      <a class="list-group-item" href="../type/gasabsorberspecs.html">GasAbsorberSpecs</a>
+
+      <a class="list-group-item" href="../type/gaspropertydatastruct.html">GasPropertyDataStruct</a>
+
+      <a class="list-group-item" href="../type/gasturbinereportvars.html">GasTurbineReportVars</a>
+
+      <a class="list-group-item" href="../type/gendata.html">GenData</a>
+
+      <a class="list-group-item" href="../type/generatordynamicsmanagerstruct.html">GeneratorDynamicsManagerStruct</a>
+
+      <a class="list-group-item" href="../type/generatorfuelsupplydatastruct.html">GeneratorFuelSupplyDataStruct</a>
+
+      <a class="list-group-item" href="../type/genericcomponentzoneintgainstruct.html">GenericComponentZoneIntGainStruct</a>
+
+      <a class="list-group-item" href="../type/glhespecs.html">GlheSpecs</a>
+
+      <a class="list-group-item" href="../type/globalinternalgainmiscobject.html">GlobalInternalGainMiscObject</a>
+
+      <a class="list-group-item" href="../type/gridregion.html">GridRegion</a>
+
+      <a class="list-group-item" href="../type/groundwaterwelldatastruct.html">GroundwaterWellDataStruct</a>
+
+      <a class="list-group-item" href="../type/gshpspecs%7E2.html">GshpSpecs</a>
+
+      <a class="list-group-item" href="../type/gshpspecs.html">GshpSpecs</a>
+
+      <a class="list-group-item" href="../type/gshpspecs%7E3.html">GshpSpecs</a>
+
+      <a class="list-group-item" href="../type/gtchillerspecs.html">GTChillerSpecs</a>
+
+      <a class="list-group-item" href="../type/halfloopdata.html">HalfLoopData</a>
+
+      <a class="list-group-item" href="../type/hcinsidefaceusercurvestruct.html">HcInsideFaceUserCurveStruct</a>
+
+      <a class="list-group-item" href="../type/hcoutsidefaceusercurvestruct.html">HcOutsideFaceUserCurveStruct</a>
+
+      <a class="list-group-item" href="../type/heatexchangerstruct.html">HeatExchangerStruct</a>
+
+      <a class="list-group-item" href="../type/heatexchcond.html">HeatExchCond</a>
+
+      <a class="list-group-item" href="../type/heatingcoilequipconditions.html">HeatingCoilEquipConditions</a>
+
+      <a class="list-group-item" href="../type/heatpumpwaterheaterdata.html">HeatPumpWaterHeaterData</a>
+
+      <a class="list-group-item" href="../type/heatreclaimdxcoildata.html">HeatReclaimDXCoilData</a>
+
+      <a class="list-group-item" href="../type/heatreclaimrefrigcondenserdata.html">HeatReclaimRefrigCondenserData</a>
+
+      <a class="list-group-item" href="../type/heatreclaimrefrigeratedrackdata.html">HeatReclaimRefrigeratedRackData</a>
+
+      <a class="list-group-item" href="../type/hightempradiantsystemdata.html">HighTempRadiantSystemData</a>
+
+      <a class="list-group-item" href="../type/humidifierdata.html">HumidifierData</a>
+
+      <a class="list-group-item" href="../type/hvacairloopiterationconvergencestruct.html">HVACAirLoopIterationConvergenceStruct</a>
+
+      <a class="list-group-item" href="../type/hvacnodeconverglogstruct.html">HVACNodeConvergLogStruct</a>
+
+      <a class="list-group-item" href="../type/hvaczoneinletconvergencestruct.html">HVACZoneInletConvergenceStruct</a>
+
+      <a class="list-group-item" href="../type/hwbaseboardparams.html">HWBaseboardParams</a>
+
+      <a class="list-group-item" href="../type/hxassistedcoilparameters.html">HXAssistedCoilParameters</a>
+
+      <a class="list-group-item" href="../type/hydronicradiantsystemdata.html">HydronicRadiantSystemData</a>
+
+      <a class="list-group-item" href="../type/icenginegeneratorspecs.html">ICEngineGeneratorSpecs</a>
+
+      <a class="list-group-item" href="../type/icestoragemapping.html">IceStorageMapping</a>
+
+      <a class="list-group-item" href="../type/icestoragespecs.html">IceStorageSpecs</a>
+
+      <a class="list-group-item" href="../type/illummapdata.html">IllumMapData</a>
+
+      <a class="list-group-item" href="../type/indirectabsorberspecs.html">IndirectAbsorberSpecs</a>
+
+      <a class="list-group-item" href="../type/indunitdata.html">IndUnitData</a>
+
+      <a class="list-group-item" href="../type/infiltrationdata.html">InfiltrationData</a>
+
+      <a class="list-group-item" href="../type/insidefaceadaptiveconvalgostruct.html">InsideFaceAdaptiveConvAlgoStruct</a>
+
+      <a class="list-group-item" href="../type/instructiontype.html">InstructionType</a>
+
+      <a class="list-group-item" href="../type/integervariables.html">IntegerVariables</a>
+
+      <a class="list-group-item" href="../type/integervariabletype.html">IntegerVariableType</a>
+
+      <a class="list-group-item" href="../type/internalvarsavailabletype.html">InternalVarsAvailableType</a>
+
+      <a class="list-group-item" href="../type/internalvarsusedtype.html">InternalVarsUsedType</a>
+
+      <a class="list-group-item" href="../type/intwinadjzoneextwinstruct.html">IntWinAdjZoneExtWinStruct</a>
+
+      <a class="list-group-item" href="../type/irrigationdatastruct.html">IrrigationDataStruct</a>
+
+      <a class="list-group-item" href="../type/lightsdata.html">LightsData</a>
+
+      <a class="list-group-item" href="../type/linedefinition.html">LineDefinition</a>
+
+      <a class="list-group-item" href="../type/localpipedata.html">LocalPipeData</a>
+
+      <a class="list-group-item" href="../type/location.html">Location</a>
+
+      <a class="list-group-item" href="../type/looppipedata.html">LoopPipeData</a>
+
+      <a class="list-group-item" href="../type/loopsidepumpinformation.html">LoopSidePumpInformation</a>
+
+      <a class="list-group-item" href="../type/loopsidereportvars.html">LoopSideReportVars</a>
+
+      <a class="list-group-item" href="../type/m_flowcontrolvalidator.html">m_FlowControlValidator</a>
+
+      <a class="list-group-item" href="../type/mapcalcdata.html">MapCalcData</a>
+
+      <a class="list-group-item" href="../type/markednodedata.html">MarkedNodeData</a>
+
+      <a class="list-group-item" href="../type/materialdatafd.html">MaterialDataFD</a>
+
+      <a class="list-group-item" href="../type/materialproperties.html">MaterialProperties</a>
+
+      <a class="list-group-item" href="../type/matrixdatastruct.html">MatrixDataStruct</a>
+
+      <a class="list-group-item" href="../type/meshextents.html">MeshExtents</a>
+
+      <a class="list-group-item" href="../type/meshpartition.html">MeshPartition</a>
+
+      <a class="list-group-item" href="../type/meshpartitions.html">MeshPartitions</a>
+
+      <a class="list-group-item" href="../type/meshproperties.html">MeshProperties</a>
+
+      <a class="list-group-item" href="../type/meterarraytype.html">MeterArrayType</a>
+
+      <a class="list-group-item" href="../type/meterdata.html">MeterData</a>
+
+      <a class="list-group-item" href="../type/metertype.html">MeterType</a>
+
+      <a class="list-group-item" href="../type/microchpdatastruct.html">MicroCHPDataStruct</a>
+
+      <a class="list-group-item" href="../type/microchpparamsnonnormalized.html">MicroCHPParamsNonNormalized</a>
+
+      <a class="list-group-item" href="../type/microchpreportdatastruct.html">MicroCHPReportDataStruct</a>
+
+      <a class="list-group-item" href="../type/missingdata.html">MissingData</a>
+
+      <a class="list-group-item" href="../type/missingdatacounts.html">MissingDataCounts</a>
+
+      <a class="list-group-item" href="../type/mixerconditions.html">MixerConditions</a>
+
+      <a class="list-group-item" href="../type/mixerdata.html">MixerData</a>
+
+      <a class="list-group-item" href="../type/mixerdata%7E2.html">MixerData</a>
+
+      <a class="list-group-item" href="../type/mixingdata.html">MixingData</a>
+
+      <a class="list-group-item" href="../type/moistureinfo.html">MoistureInfo</a>
+
+      <a class="list-group-item" href="../type/monetaryunittype.html">monetaryUnitType</a>
+
+      <a class="list-group-item" href="../type/monthlycolumnstype.html">MonthlyColumnsType</a>
+
+      <a class="list-group-item" href="../type/monthlyfieldsetinputtype.html">MonthlyFieldSetInputType</a>
+
+      <a class="list-group-item" href="../type/monthlyinputtype.html">MonthlyInputType</a>
+
+      <a class="list-group-item" href="../type/monthlytablestype.html">MonthlyTablesType</a>
+
+      <a class="list-group-item" href="../type/morenodedata.html">MoreNodeData</a>
+
+      <a class="list-group-item" href="../type/msheatpumpdata.html">MSHeatPumpData</a>
+
+      <a class="list-group-item" href="../type/msheatpumpreportdata.html">MSHeatPumpReportData</a>
+
+      <a class="list-group-item" href="../type/mtgeneratorspecs.html">MTGeneratorSpecs</a>
+
+      <a class="list-group-item" href="../type/multizonecompdetopeningprop.html">MultizoneCompDetOpeningProp</a>
+
+      <a class="list-group-item" href="../type/multizonecompexhaustfanprop.html">MultizoneCompExhaustFanProp</a>
+
+      <a class="list-group-item" href="../type/multizonecomphoropeningprop.html">MultizoneCompHorOpeningProp</a>
+
+      <a class="list-group-item" href="../type/multizonecompsimpleopeningprop.html">MultizoneCompSimpleOpeningProp</a>
+
+      <a class="list-group-item" href="../type/multizonecparrayprop.html">MultizoneCPArrayProp</a>
+
+      <a class="list-group-item" href="../type/multizonecpvalueprop.html">MultizoneCPValueProp</a>
+
+      <a class="list-group-item" href="../type/multizoneexternalnodeprop.html">MultizoneExternalNodeProp</a>
+
+      <a class="list-group-item" href="../type/multizonesurfacecrackprop.html">MultizoneSurfaceCrackProp</a>
+
+      <a class="list-group-item" href="../type/multizonesurfacecrackstdcndns.html">MultizoneSurfaceCrackStdCndns</a>
+
+      <a class="list-group-item" href="../type/multizonesurfaceelaprop.html">MultizoneSurfaceELAProp</a>
+
+      <a class="list-group-item" href="../type/multizonesurfaceprop.html">MultizoneSurfaceProp</a>
+
+      <a class="list-group-item" href="../type/multizonezoneprop.html">MultizoneZoneProp</a>
+
+      <a class="list-group-item" href="../type/namedmonthlytype.html">NamedMonthlyType</a>
+
+      <a class="list-group-item" href="../type/neighborinformation.html">NeighborInformation</a>
+
+      <a class="list-group-item" href="../type/nightventperfdata.html">NightVentPerfData</a>
+
+      <a class="list-group-item" href="../type/nodeconnectiondef.html">NodeConnectionDef</a>
+
+      <a class="list-group-item" href="../type/nodedata.html">NodeData</a>
+
+      <a class="list-group-item" href="../type/nodelistdef.html">NodeListDef</a>
+
+      <a class="list-group-item" href="../type/nonrecurringcosttype.html">NonrecurringCostType</a>
+
+      <a class="list-group-item" href="../type/oacontrollerdata.html">OAControllerData</a>
+
+      <a class="list-group-item" href="../type/oacontrollerprops.html">OAControllerProps</a>
+
+      <a class="list-group-item" href="../type/oaequiplist.html">OAEquipList</a>
+
+      <a class="list-group-item" href="../type/oamixerprops.html">OAMixerProps</a>
+
+      <a class="list-group-item" href="../type/oarequirementsdata.html">OARequirementsData</a>
+
+      <a class="list-group-item" href="../type/oaunitdata.html">OAUnitData</a>
+
+      <a class="list-group-item" href="../type/objectsdefinition.html">ObjectsDefinition</a>
+
+      <a class="list-group-item" href="../type/operationdata.html">OperationData</a>
+
+      <a class="list-group-item" href="../type/operatortype.html">OperatorType</a>
+
+      <a class="list-group-item" href="../type/opschemeptrdata.html">OpSchemePtrData</a>
+
+      <a class="list-group-item" href="../type/optstartdatatype.html">OptStartDataType</a>
+
+      <a class="list-group-item" href="../type/oscdata.html">OSCData</a>
+
+      <a class="list-group-item" href="../type/oscmdata.html">OSCMData</a>
+
+      <a class="list-group-item" href="../type/outputreportingvariables.html">OutputReportingVariables</a>
+
+      <a class="list-group-item" href="../type/outputtablebinnedtype.html">OutputTableBinnedType</a>
+
+      <a class="list-group-item" href="../type/outputvarsensortype.html">OutputVarSensorType</a>
+
+      <a class="list-group-item" href="../type/outsideairsysprops.html">OutsideAirSysProps</a>
+
+      <a class="list-group-item" href="../type/outsideenergysourcespecs.html">OutsideEnergySourceSpecs</a>
+
+      <a class="list-group-item" href="../type/outsidefaceadpativeconvalgostruct.html">OutsideFaceAdpativeConvAlgoStruct</a>
+
+      <a class="list-group-item" href="../type/packagedtescoolingcoilstruct.html">PackagedTESCoolingCoilStruct</a>
+
+      <a class="list-group-item" href="../type/parametersdata.html">ParametersData</a>
+
+      <a class="list-group-item" href="../type/parentlistdata.html">ParentListData</a>
+
+      <a class="list-group-item" href="../type/peopledata.html">PeopleData</a>
+
+      <a class="list-group-item" href="../type/perfcurvetabledatastruct.html">PerfCurveTableDataStruct</a>
+
+      <a class="list-group-item" href="../type/perfomancecurvedata.html">PerfomanceCurveData</a>
+
+      <a class="list-group-item" href="../type/pipecircuitinfo.html">PipeCircuitInfo</a>
+
+      <a class="list-group-item" href="../type/pipedata.html">PipeData</a>
+
+      <a class="list-group-item" href="../type/pipeheattransferreport.html">PipeHeatTransferReport</a>
+
+      <a class="list-group-item" href="../type/pipehtdata.html">PipeHTData</a>
+
+      <a class="list-group-item" href="../type/pipesegmentinfo.html">PipeSegmentInfo</a>
+
+      <a class="list-group-item" href="../type/planeeq.html">PlaneEq</a>
+
+      <a class="list-group-item" href="../type/plantavailmgrdata.html">PlantAvailMgrData</a>
+
+      <a class="list-group-item" href="../type/plantcallingorderinfostruct.html">PlantCallingOrderInfoStruct</a>
+
+      <a class="list-group-item" href="../type/plantconnection.html">PlantConnection</a>
+
+      <a class="list-group-item" href="../type/plantconnectionstruct.html">PlantConnectionStruct</a>
+
+      <a class="list-group-item" href="../type/plantconnectionstruct%7E2.html">PlantConnectionStruct</a>
+
+      <a class="list-group-item" href="../type/plantconvergencepoint.html">PlantConvergencePoint</a>
+
+      <a class="list-group-item" href="../type/plantiterationconvergencestruct.html">PlantIterationConvergenceStruct</a>
+
+      <a class="list-group-item" href="../type/plantlocation.html">PlantLocation</a>
+
+      <a class="list-group-item" href="../type/plantlocatorstruct.html">PlantLocatorStruct</a>
+
+      <a class="list-group-item" href="../type/plantloopdata.html">PlantLoopData</a>
+
+      <a class="list-group-item" href="../type/plantpressurecurvedata.html">PlantPressureCurveData</a>
+
+      <a class="list-group-item" href="../type/plantprofiledata.html">PlantProfileData</a>
+
+      <a class="list-group-item" href="../type/plantsizingdata.html">PlantSizingData</a>
+
+      <a class="list-group-item" href="../type/point.html">Point</a>
+
+      <a class="list-group-item" href="../type/point3dinteger.html">Point3DInteger</a>
+
+      <a class="list-group-item" href="../type/point3dreal.html">Point3DReal</a>
+
+      <a class="list-group-item" href="../type/pointf.html">PointF</a>
+
+      <a class="list-group-item" href="../type/pointtype.html">PointType</a>
+
+      <a class="list-group-item" href="../type/pollutionprops.html">PollutionProps</a>
+
+      <a class="list-group-item" href="../type/polyhedron.html">Polyhedron</a>
+
+      <a class="list-group-item" href="../type/pondgroundheatexchangerdata.html">PondGroundHeatExchangerData</a>
+
+      <a class="list-group-item" href="../type/pondgroundheatexchangerreport.html">PondGroundHeatExchangerReport</a>
+
+      <a class="list-group-item" href="../type/powindunitdata.html">PowIndUnitData</a>
+
+      <a class="list-group-item" href="../type/ptunitdata.html">PTUnitData</a>
+
+      <a class="list-group-item" href="../type/pumpspecs.html">PumpSpecs</a>
+
+      <a class="list-group-item" href="../type/pumpvfdcontroldata.html">PumpVFDControlData</a>
+
+      <a class="list-group-item" href="../type/pvarraystruct.html">PVArrayStruct</a>
+
+      <a class="list-group-item" href="../type/pvreportvariables.html">PVReportVariables</a>
+
+      <a class="list-group-item" href="../type/pvtcollectorstruct.html">PVTCollectorStruct</a>
+
+      <a class="list-group-item" href="../type/pvtreportstruct.html">PVTReportStruct</a>
+
+      <a class="list-group-item" href="../type/qualifytype.html">QualifyType</a>
+
+      <a class="list-group-item" href="../type/radialcellinformation.html">RadialCellInformation</a>
+
+      <a class="list-group-item" href="../type/radialsizing.html">RadialSizing</a>
+
+      <a class="list-group-item" href="../type/radsystypedata.html">RadSysTypeData</a>
+
+      <a class="list-group-item" href="../type/rainfallcollectordatastruct.html">RainfallCollectorDataStruct</a>
+
+      <a class="list-group-item" href="../type/rangecheckdef.html">RangeCheckDef</a>
+
+      <a class="list-group-item" href="../type/rangedatacounts.html">RangeDataCounts</a>
+
+      <a class="list-group-item" href="../type/ratchettype.html">RatchetType</a>
+
+      <a class="list-group-item" href="../type/realvariables.html">RealVariables</a>
+
+      <a class="list-group-item" href="../type/realvariabletype.html">RealVariableType</a>
+
+      <a class="list-group-item" href="../type/rectanglef.html">RectangleF</a>
+
+      <a class="list-group-item" href="../type/recurringcoststype.html">RecurringCostsType</a>
+
+      <a class="list-group-item" href="../type/recurringerrordata.html">RecurringErrorData</a>
+
+      <a class="list-group-item" href="../type/reformulatedeirchillerspecs.html">ReformulatedEIRChillerSpecs</a>
+
+      <a class="list-group-item" href="../type/refrigcasecreditdata.html">RefrigCaseCreditData</a>
+
+      <a class="list-group-item" href="../type/refrigcasedata.html">RefrigCaseData</a>
+
+      <a class="list-group-item" href="../type/refrigcompressordata.html">RefrigCompressorData</a>
+
+      <a class="list-group-item" href="../type/refrigcondenserdata.html">RefrigCondenserData</a>
+
+      <a class="list-group-item" href="../type/refriggascoolerdata.html">RefrigGasCoolerData</a>
+
+      <a class="list-group-item" href="../type/refrigrackdata.html">RefrigRackData</a>
+
+      <a class="list-group-item" href="../type/refrigsystemdata.html">RefrigSystemData</a>
+
+      <a class="list-group-item" href="../type/reportbranchdata.html">ReportBranchData</a>
+
+      <a class="list-group-item" href="../type/reportcompdata.html">ReportCompData</a>
+
+      <a class="list-group-item" href="../type/reporteirvars.html">ReportEIRVars</a>
+
+      <a class="list-group-item" href="../type/reportinginformation.html">ReportingInformation</a>
+
+      <a class="list-group-item" href="../type/reportloopdata.html">ReportLoopData</a>
+
+      <a class="list-group-item" href="../type/reportnametype.html">reportNameType</a>
+
+      <a class="list-group-item" href="../type/reportvars.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E10.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E3.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E12.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E17.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E20.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E15.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E16.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E2.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E21.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E4.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E18.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E5.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E19.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E6.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E11.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E13.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E14.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E8.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E7.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E9.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reqreportvariables.html">ReqReportVariables</a>
+
+      <a class="list-group-item" href="../type/returnair.html">ReturnAir</a>
+
+      <a class="list-group-item" href="../type/roofgeocharactisticsstruct.html">RoofGeoCharactisticsStruct</a>
+
+      <a class="list-group-item" href="../type/rootfinderdatatype.html">RootFinderDataType</a>
+
+      <a class="list-group-item" href="../type/runperioddata.html">RunPeriodData</a>
+
+      <a class="list-group-item" href="../type/runtimereportvartype.html">RuntimeReportVarType</a>
+
+      <a class="list-group-item" href="../type/scheduledata.html">ScheduleData</a>
+
+      <a class="list-group-item" href="../type/scheduletypedata.html">ScheduleTypeData</a>
+
+      <a class="list-group-item" href="../type/screentransdata.html">ScreenTransData</a>
+
+      <a class="list-group-item" href="../type/secondaryloopdata.html">SecondaryLoopData</a>
+
+      <a class="list-group-item" href="../type/secretobjects.html">SecretObjects</a>
+
+      <a class="list-group-item" href="../type/sectionsdefinition.html">SectionsDefinition</a>
+
+      <a class="list-group-item" href="../type/shadingvertexdata.html">ShadingVertexData</a>
+
+      <a class="list-group-item" href="../type/shadowingcombinations.html">ShadowingCombinations</a>
+
+      <a class="list-group-item" href="../type/shadowrelatetype.html">ShadowRelateType</a>
+
+      <a class="list-group-item" href="../type/shelfdata.html">ShelfData</a>
+
+      <a class="list-group-item" href="../type/simplepvparamsstruct.html">SimplePVParamsStruct</a>
+
+      <a class="list-group-item" href="../type/simplepvtmodelstruct.html">SimplePVTModelStruct</a>
+
+      <a class="list-group-item" href="../type/simplewatertoairhpconditions.html">SimpleWatertoAirHPConditions</a>
+
+      <a class="list-group-item" href="../type/simulationcontrol.html">SimulationControl</a>
+
+      <a class="list-group-item" href="../type/simulationorder.html">SimulationOrder</a>
+
+      <a class="list-group-item" href="../type/siterainfalldatastruct.html">SiteRainFallDataStruct</a>
+
+      <a class="list-group-item" href="../type/slablistdata.html">SlabListData</a>
+
+      <a class="list-group-item" href="../type/snlmoduleparamsstuct.html">SNLModuleParamsStuct</a>
+
+      <a class="list-group-item" href="../type/snlpvcalcstruct.html">SNLPVCalcStruct</a>
+
+      <a class="list-group-item" href="../type/snlpvinputstruct.html">SNLPVInputStruct</a>
+
+      <a class="list-group-item" href="../type/solreflrecsurfdata.html">SolReflRecSurfData</a>
+
+      <a class="list-group-item" href="../type/solutiontrackertype.html">SolutionTrackerType</a>
+
+      <a class="list-group-item" href="../type/specialdaydata.html">SpecialDayData</a>
+
+      <a class="list-group-item" href="../type/spectraldataproperties.html">SpectralDataProperties</a>
+
+      <a class="list-group-item" href="../type/splitterconditions.html">SplitterConditions</a>
+
+      <a class="list-group-item" href="../type/splitterdata.html">SplitterData</a>
+
+      <a class="list-group-item" href="../type/splitterdata%7E2.html">SplitterData</a>
+
+      <a class="list-group-item" href="../type/stacktype.html">StackType</a>
+
+      <a class="list-group-item" href="../type/standaloneervdata.html">StandAloneERVData</a>
+
+      <a class="list-group-item" href="../type/steambaseboardparams.html">SteamBaseboardParams</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html">SteamCoilEquipConditions</a>
+
+      <a class="list-group-item" href="../type/storagetankdatastruct.html">StorageTankDataStruct</a>
+
+      <a class="list-group-item" href="../type/stormwindowdata.html">StormWindowData</a>
+
+      <a class="list-group-item" href="../type/stratifiednodedata.html">StratifiedNodeData</a>
+
+      <a class="list-group-item" href="../type/subcell.html">subcell</a>
+
+      <a class="list-group-item" href="../type/subcomponentdata.html">SubcomponentData</a>
+
+      <a class="list-group-item" href="../type/subcoolerdata.html">SubcoolerData</a>
+
+      <a class="list-group-item" href="../type/subequipmentdata.html">SubEquipmentData</a>
+
+      <a class="list-group-item" href="../type/subsubcomponentdata.html">SubSubcomponentData</a>
+
+      <a class="list-group-item" href="../type/subsubequipmentdata.html">SubSubEquipmentData</a>
+
+      <a class="list-group-item" href="../type/subtabletype.html">SubTableType</a>
+
+      <a class="list-group-item" href="../type/summarizeloads.html">SummarizeLoads</a>
+
+      <a class="list-group-item" href="../type/supplyair.html">SupplyAir</a>
+
+      <a class="list-group-item" href="../type/surfaceassocnestedstruct.html">SurfaceAssocNestedStruct</a>
+
+      <a class="list-group-item" href="../type/surfacedata.html">SurfaceData</a>
+
+      <a class="list-group-item" href="../type/surfacedatafd.html">SurfaceDataFD</a>
+
+      <a class="list-group-item" href="../type/surfaceerrortracking.html">SurfaceErrorTracking</a>
+
+      <a class="list-group-item" href="../type/surfacegroundheatexchangerdata.html">SurfaceGroundHeatExchangerData</a>
+
+      <a class="list-group-item" href="../type/surfacegroundheatexchangerqtf.html">SurfaceGroundHeatExchangerQTF</a>
+
+      <a class="list-group-item" href="../type/surfacegroundheatexchngrreport.html">SurfaceGroundHeatExchngrReport</a>
+
+      <a class="list-group-item" href="../type/surfacelistdata.html">SurfaceListData</a>
+
+      <a class="list-group-item" href="../type/surfacescreenproperties.html">SurfaceScreenProperties</a>
+
+      <a class="list-group-item" href="../type/surfacesolarincident.html">SurfaceSolarIncident</a>
+
+      <a class="list-group-item" href="../type/surfacewindowcalc.html">SurfaceWindowCalc</a>
+
+      <a class="list-group-item" href="../type/surfmappattern.html">SurfMapPattern</a>
+
+      <a class="list-group-item" href="../type/sysavailmanagerlist.html">SysAvailManagerList</a>
+
+      <a class="list-group-item" href="../type/sysdesignparams.html">SysDesignParams</a>
+
+      <a class="list-group-item" href="../type/sysflowconditions.html">SysFlowConditions</a>
+
+      <a class="list-group-item" href="../type/systemsizingdata.html">SystemSizingData</a>
+
+      <a class="list-group-item" href="../type/systemsizinginputdata.html">SystemSizingInputData</a>
+
+      <a class="list-group-item" href="../type/tabledatastruct.html">TableDataStruct</a>
+
+      <a class="list-group-item" href="../type/tableentrytype.html">TableEntryType</a>
+
+      <a class="list-group-item" href="../type/tablelookupdata.html">TableLookupData</a>
+
+      <a class="list-group-item" href="../type/tarifftype.html">TariffType</a>
+
+      <a class="list-group-item" href="../type/tcglazingstype.html">TCGlazingsType</a>
+
+      <a class="list-group-item" href="../type/tddpipedata.html">TDDPipeData</a>
+
+      <a class="list-group-item" href="../type/temperaturepatternstruct.html">TemperaturePatternStruct</a>
+
+      <a class="list-group-item" href="../type/tempervalvedata.html">TemperValveData</a>
+
+      <a class="list-group-item" href="../type/tempgridregiondata.html">TempGridRegionData</a>
+
+      <a class="list-group-item" href="../type/temploopdata.html">TempLoopData</a>
+
+      <a class="list-group-item" href="../type/tempvsheightpattern.html">TempVsHeightPattern</a>
+
+      <a class="list-group-item" href="../type/terminalunitlistdata.html">TerminalUnitListData</a>
+
+      <a class="list-group-item" href="../type/termunitsizingdata.html">TermUnitSizingData</a>
+
+      <a class="list-group-item" href="../type/thermalchimneydata.html">ThermalChimneyData</a>
+
+      <a class="list-group-item" href="../type/thermalcomfortdatatype.html">ThermalComfortDataType</a>
+
+      <a class="list-group-item" href="../type/thermalcomfortinash55type.html">ThermalComfortInASH55Type</a>
+
+      <a class="list-group-item" href="../type/thermalcomfortsetpointtype.html">ThermalComfortSetpointType</a>
+
+      <a class="list-group-item" href="../type/thermchimreportvars.html">ThermChimReportVars</a>
+
+      <a class="list-group-item" href="../type/thermchimznreportvars.html">ThermChimZnReportVars</a>
+
+      <a class="list-group-item" href="../type/timesteps.html">TimeSteps</a>
+
+      <a class="list-group-item" href="../type/timings.html">timings</a>
+
+      <a class="list-group-item" href="../type/tocentriestype.html">TOCEntriesType</a>
+
+      <a class="list-group-item" href="../type/tokentype.html">TokenType</a>
+
+      <a class="list-group-item" href="../type/towerinletconds.html">TowerInletConds</a>
+
+      <a class="list-group-item" href="../type/towerspecs.html">Towerspecs</a>
+
+      <a class="list-group-item" href="../type/transferloadlistdef.html">TransferLoadListDef</a>
+
+      <a class="list-group-item" href="../type/transrefrigsystemdata.html">TransRefrigSystemData</a>
+
+      <a class="list-group-item" href="../type/trendvariabletype.html">TrendVariableType</a>
+
+      <a class="list-group-item" href="../type/triquadraticcurvedatastruct.html">TriQuadraticCurveDataStruct</a>
+
+      <a class="list-group-item" href="../type/trnsyspvcalcstruct.html">TRNSYSPVCalcStruct</a>
+
+      <a class="list-group-item" href="../type/trnsyspvmoduleparamsstruct.html">TRNSYSPVModuleParamsStruct</a>
+
+      <a class="list-group-item" href="../type/tstatobject.html">TStatObject</a>
+
+      <a class="list-group-item" href="../type/twovertgradinterpolpattern.html">TwoVertGradInterpolPattern</a>
+
+      <a class="list-group-item" href="../type/typicalextremedata.html">TypicalExtremeData</a>
+
+      <a class="list-group-item" href="../type/ufedata.html">UFEData</a>
+
+      <a class="list-group-item" href="../type/ufidata.html">UFIData</a>
+
+      <a class="list-group-item" href="../type/unitarysystemdata.html">UnitarySystemData</a>
+
+      <a class="list-group-item" href="../type/unitconvtype.html">UnitConvType</a>
+
+      <a class="list-group-item" href="../type/unitheaterdata.html">UnitHeaterData</a>
+
+      <a class="list-group-item" href="../type/unitventilatordata.html">UnitVentilatorData</a>
+
+      <a class="list-group-item" href="../type/useadjustmenttype.html">UseAdjustmentType</a>
+
+      <a class="list-group-item" href="../type/usepriceescalationtype.html">UsePriceEscalationType</a>
+
+      <a class="list-group-item" href="../type/userairterminalcomponentstruct.html">UserAirTerminalComponentStruct</a>
+
+      <a class="list-group-item" href="../type/usercoilcomponentstruct.html">UserCoilComponentStruct</a>
+
+      <a class="list-group-item" href="../type/userplantcomponentstruct.html">UserPlantComponentStruct</a>
+
+      <a class="list-group-item" href="../type/userzonehvacforcedaircomponentstruct.html">UserZoneHVACForcedAirComponentStruct</a>
+
+      <a class="list-group-item" href="../type/utscdatastruct.html">UTSCDataStruct</a>
+
+      <a class="list-group-item" href="../type/variablespeedcoildata.html">VariableSpeedCoilData</a>
+
+      <a class="list-group-item" href="../type/variabletypeforddoutput.html">VariableTypeForDDOutput</a>
+
+      <a class="list-group-item" href="../type/vector.html">vector</a>
+
+      <a class="list-group-item" href="../type/vector_2d.html">Vector_2d</a>
+
+      <a class="list-group-item" href="../type/ventilatedslabdata.html">VentilatedSlabData</a>
+
+      <a class="list-group-item" href="../type/ventilationdata.html">VentilationData</a>
+
+      <a class="list-group-item" href="../type/ventilationmechanicalprops.html">VentilationMechanicalProps</a>
+
+      <a class="list-group-item" href="../type/vrfcondenserequipment.html">VRFCondenserEquipment</a>
+
+      <a class="list-group-item" href="../type/vrfterminalunitequipment.html">VRFTerminalUnitEquipment</a>
+
+      <a class="list-group-item" href="../type/vstowerdata.html">VSTowerData</a>
+
+      <a class="list-group-item" href="../type/walkindata.html">WalkInData</a>
+
+      <a class="list-group-item" href="../type/warehousecoildata.html">WarehouseCoilData</a>
+
+      <a class="list-group-item" href="../type/warmupconvergence.html">WarmupConvergence</a>
+
+      <a class="list-group-item" href="../type/watercoilequipconditions.html">WaterCoilEquipConditions</a>
+
+      <a class="list-group-item" href="../type/waterconnectionstype.html">WaterConnectionsType</a>
+
+      <a class="list-group-item" href="../type/waterequipmenttype.html">WaterEquipmentType</a>
+
+      <a class="list-group-item" href="../type/waterheaterdesuperheaterdata.html">WaterHeaterDesuperheaterData</a>
+
+      <a class="list-group-item" href="../type/waterheatersizingdata.html">WaterHeaterSizingData</a>
+
+      <a class="list-group-item" href="../type/watersourcespecs.html">WaterSourceSpecs</a>
+
+      <a class="list-group-item" href="../type/waterthermaltankdata.html">WaterThermalTankData</a>
+
+      <a class="list-group-item" href="../type/watertoairhpequipconditions.html">WatertoAirHPEquipConditions</a>
+
+      <a class="list-group-item" href="../type/waterusetankconnectionstruct.html">WaterUseTankConnectionStruct</a>
+
+      <a class="list-group-item" href="../type/weatherproperties.html">WeatherProperties</a>
+
+      <a class="list-group-item" href="../type/weekscheduledata.html">WeekScheduleData</a>
+
+      <a class="list-group-item" href="../type/wholebuildingelectricpowersummary.html">WholeBuildingElectricPowerSummary</a>
+
+      <a class="list-group-item" href="../type/windacdata.html">WindACData</a>
+
+      <a class="list-group-item" href="../type/windowblindproperties.html">WindowBlindProperties</a>
+
+      <a class="list-group-item" href="../type/windowcomplexshade.html">WindowComplexShade</a>
+
+      <a class="list-group-item" href="../type/windowindex.html">WindowIndex</a>
+
+      <a class="list-group-item" href="../type/windowshadingcontroldata.html">WindowShadingControlData</a>
+
+      <a class="list-group-item" href="../type/windowstateindex.html">WindowStateIndex</a>
+
+      <a class="list-group-item" href="../type/windowthermalmodelparams.html">WindowThermalModelParams</a>
+
+      <a class="list-group-item" href="../type/windturbineparams.html">WindTurbineParams</a>
+
+      <a class="list-group-item" href="../type/wrappercomponentspecs.html">WrapperComponentSpecs</a>
+
+      <a class="list-group-item" href="../type/wrapperreportvars.html">WrapperReportVars</a>
+
+      <a class="list-group-item" href="../type/wrapperspecs.html">WrapperSpecs</a>
+
+      <a class="list-group-item" href="../type/zoneairbalancedata.html">ZoneAirBalanceData</a>
+
+      <a class="list-group-item" href="../type/zoneairdistributiondata.html">ZoneAirDistributionData</a>
+
+      <a class="list-group-item" href="../type/zoneairequip.html">ZoneAirEquip</a>
+
+      <a class="list-group-item" href="../type/zonecateusedata.html">ZoneCatEUseData</a>
+
+      <a class="list-group-item" href="../type/zonecomfortcontrols.html">ZoneComfortControls</a>
+
+      <a class="list-group-item" href="../type/zonecomfortcontrolsfangerdata.html">ZoneComfortControlsFangerData</a>
+
+      <a class="list-group-item" href="../type/zonecomfortfangercontroltype.html">ZoneComfortFangerControlType</a>
+
+      <a class="list-group-item" href="../type/zonecomptypedata.html">ZoneCompTypeData</a>
+
+      <a class="list-group-item" href="../type/zonecontamgenericdatabldiff.html">ZoneContamGenericDataBLDiff</a>
+
+      <a class="list-group-item" href="../type/zonecontamgenericdataconstant.html">ZoneContamGenericDataConstant</a>
+
+      <a class="list-group-item" href="../type/zonecontamgenericdatacutoff.html">ZoneContamGenericDataCutoff</a>
+
+      <a class="list-group-item" href="../type/zonecontamgenericdatadecay.html">ZoneContamGenericDataDecay</a>
+
+      <a class="list-group-item" href="../type/zonecontamgenericdatadrs.html">ZoneContamGenericDataDRS</a>
+
+      <a class="list-group-item" href="../type/zonecontamgenericdatadvs.html">ZoneContamGenericDataDVS</a>
+
+      <a class="list-group-item" href="../type/zonecontamgenericdatapdriven.html">ZoneContamGenericDataPDriven</a>
+
+      <a class="list-group-item" href="../type/zonecontcontrols.html">ZoneContControls</a>
+
+      <a class="list-group-item" href="../type/zonedata.html">ZoneData</a>
+
+      <a class="list-group-item" href="../type/zonedaylightcalc.html">ZoneDaylightCalc</a>
+
+      <a class="list-group-item" href="../type/zonedehumidifierdata.html">ZoneDehumidifierData</a>
+
+      <a class="list-group-item" href="../type/zoneeqsizingdata.html">ZoneEqSizingData</a>
+
+      <a class="list-group-item" href="../type/zoneequipdata.html">ZoneEquipData</a>
+
+      <a class="list-group-item" href="../type/zoneevapcoolerunitstruct.html">ZoneEvapCoolerUnitStruct</a>
+
+      <a class="list-group-item" href="../type/zonegroupdata.html">ZoneGroupData</a>
+
+      <a class="list-group-item" href="../type/zonehumiditycontrols.html">ZoneHumidityControls</a>
+
+      <a class="list-group-item" href="../type/zoneinternalgainsstruct.html">ZoneInternalGainsStruct</a>
+
+      <a class="list-group-item" href="../type/zonelistdata.html">ZoneListData</a>
+
+      <a class="list-group-item" href="../type/zonelistdata%7E2.html">ZoneListData</a>
+
+      <a class="list-group-item" href="../type/zonepredefreptype.html">ZonePreDefRepType</a>
+
+      <a class="list-group-item" href="../type/zonepurchasedair.html">ZonePurchasedAir</a>
+
+      <a class="list-group-item" href="../type/zonereportvars.html">ZoneReportVars</a>
+
+      <a class="list-group-item" href="../type/zonereturnplenumconditions.html">ZoneReturnPlenumConditions</a>
+
+      <a class="list-group-item" href="../type/zonesatgedcontrols.html">ZoneSatgedControls</a>
+
+      <a class="list-group-item" href="../type/zonesimdata.html">ZoneSimData</a>
+
+      <a class="list-group-item" href="../type/zonesizingdata.html">ZoneSizingData</a>
+
+      <a class="list-group-item" href="../type/zonesizinginputdata.html">ZoneSizingInputData</a>
+
+      <a class="list-group-item" href="../type/zonesupplyplenumconditions.html">ZoneSupplyPlenumConditions</a>
+
+      <a class="list-group-item" href="../type/zonesystemcontaminantdemanddata.html">ZoneSystemContaminantDemandData</a>
+
+      <a class="list-group-item" href="../type/zonesystemdemanddata.html">ZoneSystemDemandData</a>
+
+      <a class="list-group-item" href="../type/zonesystemmoisturedemand.html">ZoneSystemMoistureDemand</a>
+
+      <a class="list-group-item" href="../type/zonetempcontrols.html">ZoneTempControls</a>
+
+      <a class="list-group-item" href="../type/zonetempcontroltype.html">ZoneTempControlType</a>
+
+      <a class="list-group-item" href="../type/zoneviewfactorinformation.html">ZoneViewFactorInformation</a>
+
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <h2>type, private :: SteamCoilEquipConditions</h2>
+
+
+    <section class="visible-xs visible-sm hidden-md">
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-name%7E197">Name</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-steamcoiltypea">SteamCoilTypeA</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-steamcoiltype">SteamCoilType</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-steamcoilmodel">SteamCoilModel</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-steamcoiltype_num">SteamCoilType_Num</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-schedule%7E14">Schedule</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-schedptr%7E35">SchedPtr</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-inletairmassflowrate%7E4">InletAirMassFlowRate</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-outletairmassflowrate%7E3">OutletAirMassFlowRate</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-inletairtemp%7E4">InletAirTemp</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-outletairtemp%7E4">OutletAirTemp</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-inletairhumrat%7E4">InletAirHumRat</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-outletairhumrat%7E4">OutletAirHumRat</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-inletairenthalpy%7E4">InletAirEnthalpy</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-outletairenthalpy%7E4">OutletAirEnthalpy</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-totsteamcoilload">TotSteamCoilLoad</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-sensteamcoilload">SenSteamCoilLoad</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-totsteamheatingcoilenergy">TotSteamHeatingCoilEnergy</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-totsteamcoolingcoilenergy">TotSteamCoolingCoilEnergy</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-sensteamcoolingcoilenergy">SenSteamCoolingCoilEnergy</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-totsteamheatingcoilrate">TotSteamHeatingCoilRate</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-looploss">LoopLoss</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-totsteamcoolingcoilrate">TotSteamCoolingCoilRate</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-sensteamcoolingcoilrate">SenSteamCoolingCoilRate</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-leavingrelhum">LeavingRelHum</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-desiredoutlettemp%7E5">DesiredOutletTemp</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-desiredoutlethumrat%7E3">DesiredOutletHumRat</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-inletsteamtemp">InletSteamTemp</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-outletsteamtemp">OutletSteamTemp</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-inletsteammassflowrate">InletSteamMassFlowRate</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-outletsteammassflowrate">OutletSteamMassFlowRate</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-maxsteamvolflowrate">MaxSteamVolFlowRate</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-maxsteammassflowrate">MaxSteamMassFlowRate</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-inletsteamenthalpy">InletSteamEnthalpy</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-outletwaterenthalpy">OutletWaterEnthalpy</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-inletsteampress">InletSteamPress</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-inletsteamquality">InletSteamQuality</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-outletsteamquality">OutletSteamQuality</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-degofsubcooling">DegOfSubCooling</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-loopsubcoolreturn">LoopSubCoolReturn</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-airinletnodenum%7E3">AirInletNodeNum</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-airoutletnodenum%7E3">AirOutletNodeNum</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-steaminletnodenum">SteamInletNodeNum</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-steamoutletnodenum">SteamOutletNodeNum</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-tempsetpointnodenum%7E3">TempSetPointNodeNum</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-typeofcoil">TypeofCoil</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-fluidindex%7E5">FluidIndex</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-loopnum%7E12">LoopNum</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-loopside%7E7">LoopSide</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-branchnum%7E13">BranchNum</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-compnum%7E17">CompNum</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-coil_planttypenum">Coil_PlantTypeNum</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html#variable-operatingcapacity">OperatingCapacity</a>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../type/steamcoilequipconditions.html#src">SteamCoilEquipConditions</a>
+  </div>
+</div>
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+
+    <section>
+    <h2>Components</h2>
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-name%7E197"></span>character(len=MaxNameLength),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>Name</strong></td><td> =</td><td>' '</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-steamcoiltypea"></span>character(len=10),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>SteamCoilTypeA</strong></td><td> =</td><td>' '</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-steamcoiltype"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>SteamCoilType</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-steamcoilmodel"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>SteamCoilModel</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-steamcoiltype_num"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>SteamCoilType_Num</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-schedule%7E14"></span>character(len=MaxNameLength),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>Schedule</strong></td><td> =</td><td>' '</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-schedptr%7E35"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>SchedPtr</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-inletairmassflowrate%7E4"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>InletAirMassFlowRate</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-outletairmassflowrate%7E3"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>OutletAirMassFlowRate</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-inletairtemp%7E4"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>InletAirTemp</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-outletairtemp%7E4"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>OutletAirTemp</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-inletairhumrat%7E4"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>InletAirHumRat</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-outletairhumrat%7E4"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>OutletAirHumRat</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-inletairenthalpy%7E4"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>InletAirEnthalpy</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-outletairenthalpy%7E4"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>OutletAirEnthalpy</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-totsteamcoilload"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>TotSteamCoilLoad</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-sensteamcoilload"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>SenSteamCoilLoad</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-totsteamheatingcoilenergy"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>TotSteamHeatingCoilEnergy</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-totsteamcoolingcoilenergy"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>TotSteamCoolingCoilEnergy</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-sensteamcoolingcoilenergy"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>SenSteamCoolingCoilEnergy</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-totsteamheatingcoilrate"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>TotSteamHeatingCoilRate</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-looploss"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>LoopLoss</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-totsteamcoolingcoilrate"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>TotSteamCoolingCoilRate</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-sensteamcoolingcoilrate"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>SenSteamCoolingCoilRate</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-leavingrelhum"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>LeavingRelHum</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-desiredoutlettemp%7E5"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>DesiredOutletTemp</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-desiredoutlethumrat%7E3"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>DesiredOutletHumRat</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-inletsteamtemp"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>InletSteamTemp</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-outletsteamtemp"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>OutletSteamTemp</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-inletsteammassflowrate"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>InletSteamMassFlowRate</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-outletsteammassflowrate"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>OutletSteamMassFlowRate</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-maxsteamvolflowrate"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>MaxSteamVolFlowRate</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-maxsteammassflowrate"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>MaxSteamMassFlowRate</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-inletsteamenthalpy"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>InletSteamEnthalpy</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-outletwaterenthalpy"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>OutletWaterEnthalpy</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-inletsteampress"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>InletSteamPress</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-inletsteamquality"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>InletSteamQuality</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-outletsteamquality"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>OutletSteamQuality</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-degofsubcooling"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>DegOfSubCooling</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-loopsubcoolreturn"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>LoopSubCoolReturn</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-airinletnodenum%7E3"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>AirInletNodeNum</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-airoutletnodenum%7E3"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>AirOutletNodeNum</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-steaminletnodenum"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>SteamInletNodeNum</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-steamoutletnodenum"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>SteamOutletNodeNum</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-tempsetpointnodenum%7E3"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>TempSetPointNodeNum</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-typeofcoil"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>TypeofCoil</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-fluidindex%7E5"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>FluidIndex</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-loopnum%7E12"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>LoopNum</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-loopside%7E7"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>LoopSide</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-branchnum%7E13"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>BranchNum</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-compnum%7E17"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>CompNum</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-coil_planttypenum"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>Coil_PlantTypeNum</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-operatingcapacity"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>OperatingCapacity</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+
+
+    <section>
+    <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="highlight"><pre><span></span> <span class="k">TYPE </span><span class="n">SteamCoilEquipConditions</span>
+     <span class="kt">CHARACTER</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="n">MaxNameLength</span><span class="p">)</span> <span class="kd">::</span> <span class="n">Name</span>           <span class="o">=</span> <span class="s1">&#39; &#39;</span> <span class="c">! Name of the SteamCoil</span>
+     <span class="kt">CHARACTER</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>            <span class="kd">::</span> <span class="n">SteamCoilTypeA</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span> <span class="c">! Type of SteamCoil ie. Heating or Cooling</span>
+     <span class="kt">INTEGER</span>      <span class="kd">::</span> <span class="n">SteamCoilType</span>                  <span class="o">=</span> <span class="mi">0</span>   <span class="c">! Type of SteamCoil ie. Heating or Cooling</span>
+     <span class="kt">INTEGER</span>      <span class="kd">::</span> <span class="n">SteamCoilModel</span>                 <span class="o">=</span> <span class="mi">0</span>   <span class="c">! Type of SteamCoil ie. Simple, Detailed, etc.</span>
+     <span class="kt">INTEGER</span>      <span class="kd">::</span> <span class="n">SteamCoilType_Num</span>              <span class="o">=</span> <span class="mi">0</span>   <span class="c">!</span>
+     <span class="kt">CHARACTER</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="n">MaxNameLength</span><span class="p">)</span> <span class="kd">::</span> <span class="n">Schedule</span>       <span class="o">=</span> <span class="s1">&#39; &#39;</span> <span class="c">! SteamCoil Operation Schedule</span>
+     <span class="kt">INTEGER</span>      <span class="kd">::</span> <span class="n">SchedPtr</span>                       <span class="o">=</span> <span class="mi">0</span>   <span class="c">! Pointer to the correct schedule</span>
+     <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">InletAirMassFlowRate</span>           <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! MassFlow through the SteamCoil being Simulated [kg/s]</span>
+     <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">OutletAirMassFlowRate</span>          <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! MassFlow throught the SteamCoil being Simulated[kg/s]</span>
+     <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">InletAirTemp</span>                   <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! Inlet Air Temperature Operating Condition [C]</span>
+     <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">OutletAirTemp</span>                  <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! Outlet Air Temperature Operating Condition [C]</span>
+     <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">InletAirHumRat</span>                 <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! Inlet Air Humidity Ratio Operating Condition</span>
+     <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">OutletAirHumRat</span>                <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! Outlet Air Humidity Ratio Calculated Condition</span>
+     <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">InletAirEnthalpy</span>               <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! Inlet Air enthalpy [J/kg]</span>
+     <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">OutletAirEnthalpy</span>              <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! Outlet Air enthalpy [J/kg]</span>
+     <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">TotSteamCoilLoad</span>               <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! Total Load on the Coil [W]</span>
+     <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">SenSteamCoilLoad</span>               <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! Sensible Load on the Coil [W]</span>
+     <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">TotSteamHeatingCoilEnergy</span>      <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! Total Heating Coil energy of the Coil [J]</span>
+     <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">TotSteamCoolingCoilEnergy</span>      <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! Total Cooling Coil energy of the Coil [J]</span>
+     <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">SenSteamCoolingCoilEnergy</span>      <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! Sensible Cooling Coil energy of the Coil [J]</span>
+     <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">TotSteamHeatingCoilRate</span>        <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! Total Heating Coil Rate on the Coil [W]</span>
+     <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">LoopLoss</span>                       <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! Loss in loop due to cond return to atm pressure</span>
+     <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">TotSteamCoolingCoilRate</span>        <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! Total Cooling Coil Rate on the Coil [W]</span>
+     <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">SenSteamCoolingCoilRate</span>        <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! Sensible Cooling Coil Rate on the Coil [W]</span>
+     <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">LeavingRelHum</span>                  <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! Simple Coil Latent Model requires User input for leaving RH</span>
+     <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">DesiredOutletTemp</span>              <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! Temp desired at the outlet (C)</span>
+     <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">DesiredOutletHumRat</span>            <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! Humudity Ratio desired at outlet (C)</span>
+     <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">InletSteamTemp</span>                 <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! Inlet Steam Temperature [C]</span>
+     <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">OutletSteamTemp</span>                <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! Outlet Steam Temperature [C]</span>
+     <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">InletSteamMassFlowRate</span>         <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! Inlet Steam Mass Flow Rate [Kg/s]</span>
+     <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">OutletSteamMassFlowRate</span>        <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! Outlet Steam Mass Flow Rate [Kg/s]</span>
+     <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">MaxSteamVolFlowRate</span>            <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! Maximum water Volume flow rate [m3/s]</span>
+     <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">MaxSteamMassFlowRate</span>           <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! Maximum water mass flow rate [Kg/s]</span>
+     <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">InletSteamEnthalpy</span>             <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! Inlet Water Enthalpy (J/Kg)</span>
+     <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">OutletWaterEnthalpy</span>            <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! Outlet Water Enthalpy (J/kg)</span>
+     <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">InletSteamPress</span>                <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! Pressure at steam inlet (Pa)</span>
+     <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">InletSteamQuality</span>              <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! Quality of steam at inlet</span>
+     <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">OutletSteamQuality</span>             <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! Quality of steam at outlet</span>
+     <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">DegOfSubCooling</span>                <span class="o">=</span> <span class="mf">0.0d0</span>
+     <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">LoopSubCoolReturn</span>              <span class="o">=</span> <span class="mf">0.0d0</span>
+     <span class="kt">INTEGER</span>      <span class="kd">::</span> <span class="n">AirInletNodeNum</span>                <span class="o">=</span> <span class="mi">0</span>   <span class="c">! Inlet node number at air side</span>
+     <span class="kt">INTEGER</span>      <span class="kd">::</span> <span class="n">AirOutletNodeNum</span>               <span class="o">=</span> <span class="mi">0</span>   <span class="c">! Outlet node number at air side</span>
+     <span class="kt">INTEGER</span>      <span class="kd">::</span> <span class="n">SteamInletNodeNum</span>              <span class="o">=</span> <span class="mi">0</span>   <span class="c">! SteamInletNodeNum</span>
+     <span class="kt">INTEGER</span>      <span class="kd">::</span> <span class="n">SteamOutletNodeNum</span>             <span class="o">=</span> <span class="mi">0</span>   <span class="c">! SteamOutletNodeNum</span>
+     <span class="kt">INTEGER</span>      <span class="kd">::</span> <span class="n">TempSetPointNodeNum</span>            <span class="o">=</span> <span class="mi">0</span>   <span class="c">! If applicable : node number that the temp setpoint exists.</span>
+     <span class="kt">INTEGER</span>      <span class="kd">::</span> <span class="n">TypeofCoil</span>                     <span class="o">=</span> <span class="mi">0</span>   <span class="c">! Control of Coil , temperature or Zone load</span>
+     <span class="kt">INTEGER</span>      <span class="kd">::</span> <span class="n">FluidIndex</span>                     <span class="o">=</span> <span class="mi">0</span>   <span class="c">! Fluid index for FluidProperties (Steam)</span>
+     <span class="kt">INTEGER</span>      <span class="kd">::</span> <span class="n">LoopNum</span>                        <span class="o">=</span> <span class="mi">0</span>   <span class="c">! index for plant loop with steam coil</span>
+     <span class="kt">INTEGER</span>      <span class="kd">::</span> <span class="n">LoopSide</span>                       <span class="o">=</span> <span class="mi">0</span>   <span class="c">! index for plant loop side for steam coil</span>
+     <span class="kt">INTEGER</span>      <span class="kd">::</span> <span class="n">BranchNum</span>                      <span class="o">=</span> <span class="mi">0</span>   <span class="c">! index for plant branch for steam coil</span>
+     <span class="kt">INTEGER</span>      <span class="kd">::</span> <span class="n">CompNum</span>                        <span class="o">=</span> <span class="mi">0</span>   <span class="c">! index for plant component for steam coil</span>
+     <span class="kt">INTEGER</span>      <span class="kd">::</span> <span class="n">Coil_PlantTypeNum</span>              <span class="o">=</span> <span class="mi">0</span>   <span class="c">! plant level index for coil type</span>
+     <span class="kt">REAL</span><span class="p">(</span><span class="n">r64</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">OperatingCapacity</span>              <span class="o">=</span> <span class="mf">0.0d0</span> <span class="c">! capacity of steam coil at operating conditions (W)</span>
+ <span class="k">END TYPE </span><span class="n">SteamCoilEquipConditions</span>
+</pre></div>
+
+    </section>
+
+
+    </div>
+  </div>
+
+  <section class="visible-xs visible-sm hidden-md">
+    <hr>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#alltypes-1">All Derived Types</a></h3></div>
+  <div id="alltypes-1" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../type/actuatorusedtype.html">ActuatorUsedType</a>
+
+      <a class="list-group-item" href="../type/aiflownetworkreportprop.html">AiflowNetworkReportProp</a>
+
+      <a class="list-group-item" href="../type/airchillersetdata.html">AirChillerSetData</a>
+
+      <a class="list-group-item" href="../type/airconnectionstruct.html">AirConnectionStruct</a>
+
+      <a class="list-group-item" href="../type/airflownetworkcompprop.html">AirflowNetworkCompProp</a>
+
+      <a class="list-group-item" href="../type/airflownetworkexchangeprop.html">AirflowNetworkExchangeProp</a>
+
+      <a class="list-group-item" href="../type/airflownetworklinkageprop.html">AirflowNetworkLinkageProp</a>
+
+      <a class="list-group-item" href="../type/airflownetworklinkreportdata.html">AirflowNetworkLinkReportData</a>
+
+      <a class="list-group-item" href="../type/airflownetworklinksimudata.html">AirflowNetworkLinkSimuData</a>
+
+      <a class="list-group-item" href="../type/airflownetworknodeprop.html">AirflowNetworkNodeProp</a>
+
+      <a class="list-group-item" href="../type/airflownetworknodereportdata.html">AirflowNetworkNodeReportData</a>
+
+      <a class="list-group-item" href="../type/airflownetworknodesimudata.html">AirflowNetworkNodeSimuData</a>
+
+      <a class="list-group-item" href="../type/airflownetworkreportvars.html">AirflowNetworkReportVars</a>
+
+      <a class="list-group-item" href="../type/airflownetworksimuprop.html">AirflowNetworkSimuProp</a>
+
+      <a class="list-group-item" href="../type/airin.html">AirIn</a>
+
+      <a class="list-group-item" href="../type/airloopbranchdata.html">AirLoopBranchData</a>
+
+      <a class="list-group-item" href="../type/airloopcompdata.html">AirLoopCompData</a>
+
+      <a class="list-group-item" href="../type/airloopcontroldata.html">AirLoopControlData</a>
+
+      <a class="list-group-item" href="../type/airloopflowdata.html">AirLoopFlowData</a>
+
+      <a class="list-group-item" href="../type/airloopmixerdata.html">AirLoopMixerData</a>
+
+      <a class="list-group-item" href="../type/airloopoutsideairconnectdata.html">AirLoopOutsideAirConnectData</a>
+
+      <a class="list-group-item" href="../type/airloopsplitterdata.html">AirLoopSplitterData</a>
+
+      <a class="list-group-item" href="../type/airloopstatstype.html">AirLoopStatsType</a>
+
+      <a class="list-group-item" href="../type/airlooptozonedata.html">AirLooptoZoneData</a>
+
+      <a class="list-group-item" href="../type/airloopzoneequipconnectdata.html">AirLoopZoneEquipConnectData</a>
+
+      <a class="list-group-item" href="../type/airmodeldata.html">AirModelData</a>
+
+      <a class="list-group-item" href="../type/airnodedata.html">AirNodeData</a>
+
+      <a class="list-group-item" href="../type/airpatterninfobyzonestruct.html">AirPatternInfobyZoneStruct</a>
+
+      <a class="list-group-item" href="../type/airreportvars.html">AirReportVars</a>
+
+      <a class="list-group-item" href="../type/airterminalmixerdata.html">AirTerminalMixerData</a>
+
+      <a class="list-group-item" href="../type/anglefactordata.html">AngleFactorData</a>
+
+      <a class="list-group-item" href="../type/balanceddesdehumperfdata.html">BalancedDesDehumPerfData</a>
+
+      <a class="list-group-item" href="../type/baseboardparams.html">BaseboardParams</a>
+
+      <a class="list-group-item" href="../type/baseboardparams%7E2.html">BaseboardParams</a>
+
+      <a class="list-group-item" href="../type/basecell.html">BaseCell</a>
+
+      <a class="list-group-item" href="../type/basechillerspecs.html">BaseChillerSpecs</a>
+
+      <a class="list-group-item" href="../type/basementzoneinfo.html">BasementZoneInfo</a>
+
+      <a class="list-group-item" href="../type/basereportvars.html">BaseReportVars</a>
+
+      <a class="list-group-item" href="../type/basethermalpropertyset.html">BaseThermalPropertySet</a>
+
+      <a class="list-group-item" href="../type/basiselemdescr.html">BasisElemDescr</a>
+
+      <a class="list-group-item" href="../type/basisstruct.html">BasisStruct</a>
+
+      <a class="list-group-item" href="../type/batterydichargedatastruct.html">BatteryDichargeDataStruct</a>
+
+      <a class="list-group-item" href="../type/bbheatdata.html">BBHeatData</a>
+
+      <a class="list-group-item" href="../type/binobjvaridtype.html">BinObjVarIDType</a>
+
+      <a class="list-group-item" href="../type/binresultstype.html">BinResultsType</a>
+
+      <a class="list-group-item" href="../type/binstatisticstype.html">BinStatisticsType</a>
+
+      <a class="list-group-item" href="../type/blastabsorberspecs.html">BLASTAbsorberSpecs</a>
+
+      <a class="list-group-item" href="../type/boilerspecs.html">BoilerSpecs</a>
+
+      <a class="list-group-item" href="../type/boilerspecs%7E2.html">BoilerSpecs</a>
+
+      <a class="list-group-item" href="../type/boundingboxvertstruct.html">BoundingBoxVertStruct</a>
+
+      <a class="list-group-item" href="../type/branchdata.html">BranchData</a>
+
+      <a class="list-group-item" href="../type/branchdata%7E2.html">BranchData</a>
+
+      <a class="list-group-item" href="../type/branchlistdata.html">BranchListData</a>
+
+      <a class="list-group-item" href="../type/bsdfbksurfdescr.html">BSDFBkSurfDescr</a>
+
+      <a class="list-group-item" href="../type/bsdfdaylghtgeomdescr.html">BSDFDaylghtGeomDescr</a>
+
+      <a class="list-group-item" href="../type/bsdfdaylghtposition.html">BSDFDaylghtPosition</a>
+
+      <a class="list-group-item" href="../type/bsdfgeomdescr.html">BSDFGeomDescr</a>
+
+      <a class="list-group-item" href="../type/bsdflayerabsorpstruct.html">BSDFLayerAbsorpStruct</a>
+
+      <a class="list-group-item" href="../type/bsdfrefpoints.html">BSDFRefPoints</a>
+
+      <a class="list-group-item" href="../type/bsdfrefpointsgeomdescr.html">BSDFRefPointsGeomDescr</a>
+
+      <a class="list-group-item" href="../type/bsdfstatedescr.html">BSDFStateDescr</a>
+
+      <a class="list-group-item" href="../type/bsdfwindowdescript.html">BSDFWindowDescript</a>
+
+      <a class="list-group-item" href="../type/bsdfwindowgeomdescr.html">BSDFWindowGeomDescr</a>
+
+      <a class="list-group-item" href="../type/bsdfwindowinputstruct.html">BSDFWindowInputStruct</a>
+
+      <a class="list-group-item" href="../type/cached_psat_t.html">cached_psat_t</a>
+
+      <a class="list-group-item" href="../type/cached_twb_t.html">cached_twb_t</a>
+
+      <a class="list-group-item" href="../type/cartesiancell.html">CartesianCell</a>
+
+      <a class="list-group-item" href="../type/cartesianpipecellinformation.html">CartesianPipeCellInformation</a>
+
+      <a class="list-group-item" href="../type/caseandwalkinlistdef.html">CaseAndWalkInListDef</a>
+
+      <a class="list-group-item" href="../type/caserafractiondata.html">CaseRAFractionData</a>
+
+      <a class="list-group-item" href="../type/casewizonereportdata.html">CaseWIZoneReportData</a>
+
+      <a class="list-group-item" href="../type/cashflowtype.html">CashFlowType</a>
+
+      <a class="list-group-item" href="../type/cbvavdata.html">CBVAVData</a>
+
+      <a class="list-group-item" href="../type/cecinverterlookuptabledata.html">CECInverterLookUpTableData</a>
+
+      <a class="list-group-item" href="../type/cfsfillgas.html">CFSFILLGAS</a>
+
+      <a class="list-group-item" href="../type/cfsgap.html">CFSGAP</a>
+
+      <a class="list-group-item" href="../type/cfslayer.html">CFSLAYER</a>
+
+      <a class="list-group-item" href="../type/cfslwp.html">CFSLWP</a>
+
+      <a class="list-group-item" href="../type/cfsswp.html">CFSSWP</a>
+
+      <a class="list-group-item" href="../type/cfsty.html">CFSTY</a>
+
+      <a class="list-group-item" href="../type/cgshpnodedata.html">CGSHPNodeData</a>
+
+      <a class="list-group-item" href="../type/chargeblocktype.html">ChargeBlockType</a>
+
+      <a class="list-group-item" href="../type/chargesimpletype.html">ChargeSimpleType</a>
+
+      <a class="list-group-item" href="../type/chillerheaterspecs.html">ChillerheaterSpecs</a>
+
+      <a class="list-group-item" href="../type/chreportvars.html">CHReportVars</a>
+
+      <a class="list-group-item" href="../type/coefficientprops.html">CoefficientProps</a>
+
+      <a class="list-group-item" href="../type/coilcreditdata.html">CoilCreditData</a>
+
+      <a class="list-group-item" href="../type/coiltype.html">CoilType</a>
+
+      <a class="list-group-item" href="../type/collectordata.html">CollectorData</a>
+
+      <a class="list-group-item" href="../type/columntagtype.html">ColumnTagType</a>
+
+      <a class="list-group-item" href="../type/commonpipedata.html">CommonPipeData</a>
+
+      <a class="list-group-item" href="../type/compdata.html">CompData</a>
+
+      <a class="list-group-item" href="../type/compdeswaterflowdata.html">CompDesWaterFlowData</a>
+
+      <a class="list-group-item" href="../type/componentdata.html">ComponentData</a>
+
+      <a class="list-group-item" href="../type/componentdata%7E2.html">ComponentData</a>
+
+      <a class="list-group-item" href="../type/componentlistdata.html">ComponentListData</a>
+
+      <a class="list-group-item" href="../type/componentnamedata.html">ComponentNameData</a>
+
+      <a class="list-group-item" href="../type/componentprops.html">ComponentProps</a>
+
+      <a class="list-group-item" href="../type/componentsetptdata.html">ComponentSetPtData</a>
+
+      <a class="list-group-item" href="../type/compressorlistdef.html">CompressorListDef</a>
+
+      <a class="list-group-item" href="../type/compsizetableentrytype.html">CompSizeTableEntryType</a>
+
+      <a class="list-group-item" href="../type/computationtype.html">ComputationType</a>
+
+      <a class="list-group-item" href="../type/connectairsyscomp.html">ConnectAirSysComp</a>
+
+      <a class="list-group-item" href="../type/connectairsyssubcomp.html">ConnectAirSysSubComp</a>
+
+      <a class="list-group-item" href="../type/connectairsyssubsubcomp.html">ConnectAirSysSubSubComp</a>
+
+      <a class="list-group-item" href="../type/connectedloopdata.html">ConnectedLoopData</a>
+
+      <a class="list-group-item" href="../type/connectionpoint.html">ConnectionPoint</a>
+
+      <a class="list-group-item" href="../type/connectordata.html">ConnectorData</a>
+
+      <a class="list-group-item" href="../type/connectzonecomp.html">ConnectZoneComp</a>
+
+      <a class="list-group-item" href="../type/connectzonesubcomp.html">ConnectZoneSubComp</a>
+
+      <a class="list-group-item" href="../type/connectzonesubsubcomp.html">ConnectZoneSubSubComp</a>
+
+      <a class="list-group-item" href="../type/constantflowradiantsystemdata.html">ConstantFlowRadiantSystemData</a>
+
+      <a class="list-group-item" href="../type/constcopchillerspecs.html">ConstCOPChillerSpecs</a>
+
+      <a class="list-group-item" href="../type/constcopreportvars.html">ConstCOPReportVars</a>
+
+      <a class="list-group-item" href="../type/constgradpattern.html">ConstGradPattern</a>
+
+      <a class="list-group-item" href="../type/constructiondata.html">ConstructionData</a>
+
+      <a class="list-group-item" href="../type/constructiondatafd.html">ConstructionDataFD</a>
+
+      <a class="list-group-item" href="../type/contaminantdata.html">ContaminantData</a>
+
+      <a class="list-group-item" href="../type/controllerlistprops.html">ControllerListProps</a>
+
+      <a class="list-group-item" href="../type/controllerpropstype.html">ControllerPropsType</a>
+
+      <a class="list-group-item" href="../type/controllerstatstype.html">ControllerStatsType</a>
+
+      <a class="list-group-item" href="../type/controllist.html">ControlList</a>
+
+      <a class="list-group-item" href="../type/controlstype.html">ControlsType</a>
+
+      <a class="list-group-item" href="../type/convectioncoefficient.html">ConvectionCoefficient</a>
+
+      <a class="list-group-item" href="../type/coolbeamdata.html">CoolBeamData</a>
+
+      <a class="list-group-item" href="../type/cooltowerparams.html">CoolTowerParams</a>
+
+      <a class="list-group-item" href="../type/costadjustmentstruct.html">CostAdjustmentStruct</a>
+
+      <a class="list-group-item" href="../type/costlineitemstruct.html">CostLineItemStruct</a>
+
+      <a class="list-group-item" href="../type/ctgeneratorspecs.html">CTGeneratorSpecs</a>
+
+      <a class="list-group-item" href="../type/cursimconditionsinfo.html">CurSimConditionsInfo</a>
+
+      <a class="list-group-item" href="../type/cvdata.html">CVData</a>
+
+      <a class="list-group-item" href="../type/cvdvparameters.html">CVDVParameters</a>
+
+      <a class="list-group-item" href="../type/cvflow.html">CVFlow</a>
+
+      <a class="list-group-item" href="../type/damperdesignparams.html">DamperDesignParams</a>
+
+      <a class="list-group-item" href="../type/damperflowconditions.html">DamperFlowConditions</a>
+
+      <a class="list-group-item" href="../type/dataperioddata.html">DataPeriodData</a>
+
+      <a class="list-group-item" href="../type/datasetpointmanager.html">DataSetPointManager</a>
+
+      <a class="list-group-item" href="../type/daylightsavingperioddata.html">DaylightSavingPeriodData</a>
+
+      <a class="list-group-item" href="../type/dayscheduledata.html">DayScheduleData</a>
+
+      <a class="list-group-item" href="../type/dayweathervariables.html">DayWeatherVariables</a>
+
+      <a class="list-group-item" href="../type/dctoacinverterstruct.html">DCtoACInverterStruct</a>
+
+      <a class="list-group-item" href="../type/defineashraeadaptiveoptimumstartcoeffs.html">DefineASHRAEAdaptiveOptimumStartCoeffs</a>
+
+      <a class="list-group-item" href="../type/definecoldestsetpointmanager.html">DefineColdestSetPointManager</a>
+
+      <a class="list-group-item" href="../type/definecondentsetpointmanager.html">DefineCondEntSetPointManager</a>
+
+      <a class="list-group-item" href="../type/definedifftsysavailmanager.html">DefineDiffTSysAvailManager</a>
+
+      <a class="list-group-item" href="../type/definefollowoatempsetpointmanager.html">DefineFollowOATempSetPointManager</a>
+
+      <a class="list-group-item" href="../type/definefollowsysnodetempsetpointmanager.html">DefineFollowSysNodeTempSetPointManager</a>
+
+      <a class="list-group-item" href="../type/definegroundtempsetpointmanager.html">DefineGroundTempSetPointManager</a>
+
+      <a class="list-group-item" href="../type/definehilosysavailmanager.html">DefineHiLoSysAvailManager</a>
+
+      <a class="list-group-item" href="../type/definehybridventsysavailmanager.html">DefineHybridVentSysAvailManager</a>
+
+      <a class="list-group-item" href="../type/defineidealcondentsetpointmanager.html">DefineIdealCondEntSetPointManager</a>
+
+      <a class="list-group-item" href="../type/definelinearmodelnode.html">DefineLinearModelNode</a>
+
+      <a class="list-group-item" href="../type/definemixedairsetpointmanager.html">DefineMixedAirSetPointManager</a>
+
+      <a class="list-group-item" href="../type/definenightcycsysavailmanager.html">DefineNightCycSysAvailManager</a>
+
+      <a class="list-group-item" href="../type/definenightventsysavailmanager.html">DefineNightVentSysAvailManager</a>
+
+      <a class="list-group-item" href="../type/defineoapretreatsetpointmanager.html">DefineOAPretreatSetPointManager</a>
+
+      <a class="list-group-item" href="../type/defineoptstartsysavailmanager.html">DefineOptStartSysAvailManager</a>
+
+      <a class="list-group-item" href="../type/defineoutsideairsetpointmanager.html">DefineOutsideAirSetPointManager</a>
+
+      <a class="list-group-item" href="../type/definepriairsysavailmgrs.html">DefinePriAirSysAvailMgrs</a>
+
+      <a class="list-group-item" href="../type/defineprimaryairsystem.html">DefinePrimaryAirSystem</a>
+
+      <a class="list-group-item" href="../type/definescheddualsetpointmanager.html">DefineSchedDualSetPointManager</a>
+
+      <a class="list-group-item" href="../type/defineschedoffsysavailmanager.html">DefineSchedOffSysAvailManager</a>
+
+      <a class="list-group-item" href="../type/defineschedonsysavailmanager.html">DefineSchedOnSysAvailManager</a>
+
+      <a class="list-group-item" href="../type/defineschedsysavailmanager.html">DefineSchedSysAvailManager</a>
+
+      <a class="list-group-item" href="../type/definescheduledsetpointmanager.html">DefineScheduledSetPointManager</a>
+
+      <a class="list-group-item" href="../type/definesurfacesettings.html">DefineSurfaceSettings</a>
+
+      <a class="list-group-item" href="../type/defineszcoolingsetpointmanager.html">DefineSZCoolingSetPointManager</a>
+
+      <a class="list-group-item" href="../type/defineszheatingsetpointmanager.html">DefineSZHeatingSetPointManager</a>
+
+      <a class="list-group-item" href="../type/defineszmaxhumsetpointmanager.html">DefineSZMaxHumSetPointManager</a>
+
+      <a class="list-group-item" href="../type/defineszminhumsetpointmanager.html">DefineSZMinHumSetPointManager</a>
+
+      <a class="list-group-item" href="../type/defineszonestagecoolinggsetpointmanager.html">DefineSZOneStageCoolinggSetPointManager</a>
+
+      <a class="list-group-item" href="../type/defineszonestageheatingsetpointmanager.html">DefineSZOneStageHeatingSetPointManager</a>
+
+      <a class="list-group-item" href="../type/defineszreheatsetpointmanager.html">DefineSZReheatSetPointManager</a>
+
+      <a class="list-group-item" href="../type/definewarmestsetpointmanager.html">DefineWarmestSetPointManager</a>
+
+      <a class="list-group-item" href="../type/definezonecompavailmgrs.html">DefineZoneCompAvailMgrs</a>
+
+      <a class="list-group-item" href="../type/definezonedata.html">DefineZoneData</a>
+
+      <a class="list-group-item" href="../type/defmultizoneaveragecoolingsetpointmanager.html">DefMultiZoneAverageCoolingSetPointManager</a>
+
+      <a class="list-group-item" href="../type/defmultizoneaverageheatingsetpointmanager.html">DefMultiZoneAverageHeatingSetPointManager</a>
+
+      <a class="list-group-item" href="../type/defmultizoneaveragemaxhumsetpointmanager.html">DefMultiZoneAverageMaxHumSetPointManager</a>
+
+      <a class="list-group-item" href="../type/defmultizoneaverageminhumsetpointmanager.html">DefMultiZoneAverageMinHumSetPointManager</a>
+
+      <a class="list-group-item" href="../type/defmultizonemaxhumsetpointmanager.html">DefMultiZoneMaxHumSetPointManager</a>
+
+      <a class="list-group-item" href="../type/defmultizoneminhumsetpointmanager.html">DefMultiZoneMinHumSetPointManager</a>
+
+      <a class="list-group-item" href="../type/defrabflowsetpointmanager.html">DefRABFlowSetPointManager</a>
+
+      <a class="list-group-item" href="../type/defwarmestsetptmanagertempflow.html">DefWarmestSetPtManagerTempFlow</a>
+
+      <a class="list-group-item" href="../type/demandmanagerdata.html">DemandManagerData</a>
+
+      <a class="list-group-item" href="../type/demandmanagerlistdata.html">DemandManagerListData</a>
+
+      <a class="list-group-item" href="../type/desdayweathdata.html">DesDayWeathData</a>
+
+      <a class="list-group-item" href="../type/desiccantdehumidifierdata.html">DesiccantDehumidifierData</a>
+
+      <a class="list-group-item" href="../type/designdaydata.html">DesignDayData</a>
+
+      <a class="list-group-item" href="../type/designspecmshpdata.html">DesignSpecMSHPData</a>
+
+      <a class="list-group-item" href="../type/detailedicestoragedata.html">DetailedIceStorageData</a>
+
+      <a class="list-group-item" href="../type/directairprops.html">DirectAirProps</a>
+
+      <a class="list-group-item" href="../type/directionneighbor_dictionary.html">DirectionNeighbor_Dictionary</a>
+
+      <a class="list-group-item" href="../type/directionreal_dictionary.html">DirectionReal_Dictionary</a>
+
+      <a class="list-group-item" href="../type/dissyscompcoilprop.html">DisSysCompCoilProp</a>
+
+      <a class="list-group-item" href="../type/dissyscompcpdprop.html">DisSysCompCPDProp</a>
+
+      <a class="list-group-item" href="../type/dissyscompcvfprop.html">DisSysCompCVFProp</a>
+
+      <a class="list-group-item" href="../type/dissyscompdamperprop.html">DisSysCompDamperProp</a>
+
+      <a class="list-group-item" href="../type/dissyscompdetfanprop.html">DisSysCompDetFanProp</a>
+
+      <a class="list-group-item" href="../type/dissyscompductprop.html">DisSysCompDuctProp</a>
+
+      <a class="list-group-item" href="../type/dissyscompelrprop.html">DisSysCompELRProp</a>
+
+      <a class="list-group-item" href="../type/dissyscomphxprop.html">DisSysCompHXProp</a>
+
+      <a class="list-group-item" href="../type/dissyscompleakprop.html">DisSysCompLeakProp</a>
+
+      <a class="list-group-item" href="../type/dissyscomptermunitprop.html">DisSysCompTermUnitProp</a>
+
+      <a class="list-group-item" href="../type/dissyslinkageprop.html">DisSysLinkageProp</a>
+
+      <a class="list-group-item" href="../type/dissysnodeprop.html">DisSysNodeProp</a>
+
+      <a class="list-group-item" href="../type/distributionstructure.html">DistributionStructure</a>
+
+      <a class="list-group-item" href="../type/domainrectangle.html">DomainRectangle</a>
+
+      <a class="list-group-item" href="../type/dtriangle.html">dTriangle</a>
+
+      <a class="list-group-item" href="../type/ductdata.html">DuctData</a>
+
+      <a class="list-group-item" href="../type/dvdata.html">DVData</a>
+
+      <a class="list-group-item" href="../type/dxcoildata.html">DXCoilData</a>
+
+      <a class="list-group-item" href="../type/dxcoolingconditions.html">DXCoolingConditions</a>
+
+      <a class="list-group-item" href="../type/dxheatpumpsystemstruct.html">DXHeatPumpSystemStruct</a>
+
+      <a class="list-group-item" href="../type/earthtubedata.html">EarthTubeData</a>
+
+      <a class="list-group-item" href="../type/earthtubezonereportvars.html">EarthTubeZoneReportVars</a>
+
+      <a class="list-group-item" href="../type/econvartype.html">EconVarType</a>
+
+      <a class="list-group-item" href="../type/elecbaseboardparams.html">ElecBaseboardParams</a>
+
+      <a class="list-group-item" href="../type/elecstoragedatastruct.html">ElecStorageDataStruct</a>
+
+      <a class="list-group-item" href="../type/electricchillerspecs.html">ElectricChillerSpecs</a>
+
+      <a class="list-group-item" href="../type/electriceirchillerspecs.html">ElectricEIRChillerSpecs</a>
+
+      <a class="list-group-item" href="../type/electricpowerloadcenter.html">ElectricPowerLoadCenter</a>
+
+      <a class="list-group-item" href="../type/electricradiantsystemdata.html">ElectricRadiantSystemData</a>
+
+      <a class="list-group-item" href="../type/electricreportvars.html">ElectricReportVars</a>
+
+      <a class="list-group-item" href="../type/electrictransformer.html">ElectricTransformer</a>
+
+      <a class="list-group-item" href="../type/emsactuatoravailabletype.html">EMSActuatorAvailableType</a>
+
+      <a class="list-group-item" href="../type/emsprogramcallmanagementtype.html">EMSProgramCallManagementType</a>
+
+      <a class="list-group-item" href="../type/endusecategorytype.html">EndUseCategoryType</a>
+
+      <a class="list-group-item" href="../type/energy.html">Energy</a>
+
+      <a class="list-group-item" href="../type/enginedrivenchillerspecs.html">EngineDrivenChillerSpecs</a>
+
+      <a class="list-group-item" href="../type/enginedrivenreportvars.html">EngineDrivenReportVars</a>
+
+      <a class="list-group-item" href="../type/environmentdata.html">EnvironmentData</a>
+
+      <a class="list-group-item" href="../type/eqnodeconnectiondef.html">EqNodeConnectionDef</a>
+
+      <a class="list-group-item" href="../type/equipconfiguration.html">EquipConfiguration</a>
+
+      <a class="list-group-item" href="../type/equiplist.html">EquipList</a>
+
+      <a class="list-group-item" href="../type/equiplistcompdata.html">EquipListCompData</a>
+
+      <a class="list-group-item" href="../type/equiplistptrdata.html">EquipListPtrData</a>
+
+      <a class="list-group-item" href="../type/equipmentdata.html">EquipmentData</a>
+
+      <a class="list-group-item" href="../type/equipmeterdata.html">EquipMeterData</a>
+
+      <a class="list-group-item" href="../type/equipoplist.html">EquipOpList</a>
+
+      <a class="list-group-item" href="../type/erlexpressiontype.html">ErlExpressionType</a>
+
+      <a class="list-group-item" href="../type/erlstacktype.html">ErlStackType</a>
+
+      <a class="list-group-item" href="../type/erlvaluetype.html">ErlValueType</a>
+
+      <a class="list-group-item" href="../type/erlvariabletype.html">ErlVariableType</a>
+
+      <a class="list-group-item" href="../type/evapconditions.html">EvapConditions</a>
+
+      <a class="list-group-item" href="../type/evapfluidcoolerinletconds.html">EvapFluidCoolerInletConds</a>
+
+      <a class="list-group-item" href="../type/evapfluidcoolerspecs.html">EvapFluidCoolerspecs</a>
+
+      <a class="list-group-item" href="../type/exhaustabsorberspecs.html">ExhaustAbsorberSpecs</a>
+
+      <a class="list-group-item" href="../type/extendedfluidproperties.html">ExtendedFluidProperties</a>
+
+      <a class="list-group-item" href="../type/exteriorequipmentusage.html">ExteriorEquipmentUsage</a>
+
+      <a class="list-group-item" href="../type/exteriorlightusage.html">ExteriorLightUsage</a>
+
+      <a class="list-group-item" href="../type/extventedcavitystruct.html">ExtVentedCavityStruct</a>
+
+      <a class="list-group-item" href="../type/face.html">Face</a>
+
+      <a class="list-group-item" href="../type/fancoildata.html">FanCoilData</a>
+
+      <a class="list-group-item" href="../type/fanequipconditions.html">FanEquipConditions</a>
+
+      <a class="list-group-item" href="../type/farfieldinfo.html">FarfieldInfo</a>
+
+      <a class="list-group-item" href="../type/faultproperties.html">FaultProperties</a>
+
+      <a class="list-group-item" href="../type/fcairsupplydatastruct.html">FCAirSupplyDataStruct</a>
+
+      <a class="list-group-item" href="../type/fcauxilheatdatastruct.html">FCAuxilHeatDataStruct</a>
+
+      <a class="list-group-item" href="../type/fcdatastruct.html">FCDataStruct</a>
+
+      <a class="list-group-item" href="../type/fcelecstoragedatastruct.html">FCElecStorageDataStruct</a>
+
+      <a class="list-group-item" href="../type/fcexhausthxdatastruct.html">FCExhaustHXDataStruct</a>
+
+      <a class="list-group-item" href="../type/fcinverterdatastruct.html">FCInverterDataStruct</a>
+
+      <a class="list-group-item" href="../type/fcpowermodulestruct.html">FCPowerModuleStruct</a>
+
+      <a class="list-group-item" href="../type/fcreportdatastruct.html">FCReportDataStruct</a>
+
+      <a class="list-group-item" href="../type/fcstackcoolerdatastruct.html">FCStackCoolerDataStruct</a>
+
+      <a class="list-group-item" href="../type/fcwatersupplydatastruct.html">FCWaterSupplyDataStruct</a>
+
+      <a class="list-group-item" href="../type/fenestrationsolarabsorbed.html">FenestrationSolarAbsorbed</a>
+
+      <a class="list-group-item" href="../type/filesectionsdefinition.html">FileSectionsDefinition</a>
+
+      <a class="list-group-item" href="../type/fluidcellinformation.html">FluidCellInformation</a>
+
+      <a class="list-group-item" href="../type/fluidcoolerinletconds.html">FluidCoolerInletConds</a>
+
+      <a class="list-group-item" href="../type/fluidcoolerspecs.html">FluidCoolerspecs</a>
+
+      <a class="list-group-item" href="../type/fluidpropsglycoldata.html">FluidPropsGlycolData</a>
+
+      <a class="list-group-item" href="../type/fluidpropsglycolerrors.html">FluidPropsGlycolErrors</a>
+
+      <a class="list-group-item" href="../type/fluidpropsglycolrawdata.html">FluidPropsGlycolRawData</a>
+
+      <a class="list-group-item" href="../type/fluidpropsrefrigerantdata.html">FluidPropsRefrigerantData</a>
+
+      <a class="list-group-item" href="../type/fluidpropsrefrigerrors.html">FluidPropsRefrigErrors</a>
+
+      <a class="list-group-item" href="../type/framedividerproperties.html">FrameDividerProperties</a>
+
+      <a class="list-group-item" href="../type/fueltypeprops.html">FuelTypeProps</a>
+
+      <a class="list-group-item" href="../type/fulldomainstructureinfo.html">FullDomainStructureInfo</a>
+
+      <a class="list-group-item" href="../type/furnaceequipconditions.html">FurnaceEquipConditions</a>
+
+      <a class="list-group-item" href="../type/gapdeflectionstate.html">GapDeflectionState</a>
+
+      <a class="list-group-item" href="../type/gapsupportpillar.html">GapSupportPillar</a>
+
+      <a class="list-group-item" href="../type/gasabsorberspecs.html">GasAbsorberSpecs</a>
+
+      <a class="list-group-item" href="../type/gaspropertydatastruct.html">GasPropertyDataStruct</a>
+
+      <a class="list-group-item" href="../type/gasturbinereportvars.html">GasTurbineReportVars</a>
+
+      <a class="list-group-item" href="../type/gendata.html">GenData</a>
+
+      <a class="list-group-item" href="../type/generatordynamicsmanagerstruct.html">GeneratorDynamicsManagerStruct</a>
+
+      <a class="list-group-item" href="../type/generatorfuelsupplydatastruct.html">GeneratorFuelSupplyDataStruct</a>
+
+      <a class="list-group-item" href="../type/genericcomponentzoneintgainstruct.html">GenericComponentZoneIntGainStruct</a>
+
+      <a class="list-group-item" href="../type/glhespecs.html">GlheSpecs</a>
+
+      <a class="list-group-item" href="../type/globalinternalgainmiscobject.html">GlobalInternalGainMiscObject</a>
+
+      <a class="list-group-item" href="../type/gridregion.html">GridRegion</a>
+
+      <a class="list-group-item" href="../type/groundwaterwelldatastruct.html">GroundwaterWellDataStruct</a>
+
+      <a class="list-group-item" href="../type/gshpspecs%7E2.html">GshpSpecs</a>
+
+      <a class="list-group-item" href="../type/gshpspecs.html">GshpSpecs</a>
+
+      <a class="list-group-item" href="../type/gshpspecs%7E3.html">GshpSpecs</a>
+
+      <a class="list-group-item" href="../type/gtchillerspecs.html">GTChillerSpecs</a>
+
+      <a class="list-group-item" href="../type/halfloopdata.html">HalfLoopData</a>
+
+      <a class="list-group-item" href="../type/hcinsidefaceusercurvestruct.html">HcInsideFaceUserCurveStruct</a>
+
+      <a class="list-group-item" href="../type/hcoutsidefaceusercurvestruct.html">HcOutsideFaceUserCurveStruct</a>
+
+      <a class="list-group-item" href="../type/heatexchangerstruct.html">HeatExchangerStruct</a>
+
+      <a class="list-group-item" href="../type/heatexchcond.html">HeatExchCond</a>
+
+      <a class="list-group-item" href="../type/heatingcoilequipconditions.html">HeatingCoilEquipConditions</a>
+
+      <a class="list-group-item" href="../type/heatpumpwaterheaterdata.html">HeatPumpWaterHeaterData</a>
+
+      <a class="list-group-item" href="../type/heatreclaimdxcoildata.html">HeatReclaimDXCoilData</a>
+
+      <a class="list-group-item" href="../type/heatreclaimrefrigcondenserdata.html">HeatReclaimRefrigCondenserData</a>
+
+      <a class="list-group-item" href="../type/heatreclaimrefrigeratedrackdata.html">HeatReclaimRefrigeratedRackData</a>
+
+      <a class="list-group-item" href="../type/hightempradiantsystemdata.html">HighTempRadiantSystemData</a>
+
+      <a class="list-group-item" href="../type/humidifierdata.html">HumidifierData</a>
+
+      <a class="list-group-item" href="../type/hvacairloopiterationconvergencestruct.html">HVACAirLoopIterationConvergenceStruct</a>
+
+      <a class="list-group-item" href="../type/hvacnodeconverglogstruct.html">HVACNodeConvergLogStruct</a>
+
+      <a class="list-group-item" href="../type/hvaczoneinletconvergencestruct.html">HVACZoneInletConvergenceStruct</a>
+
+      <a class="list-group-item" href="../type/hwbaseboardparams.html">HWBaseboardParams</a>
+
+      <a class="list-group-item" href="../type/hxassistedcoilparameters.html">HXAssistedCoilParameters</a>
+
+      <a class="list-group-item" href="../type/hydronicradiantsystemdata.html">HydronicRadiantSystemData</a>
+
+      <a class="list-group-item" href="../type/icenginegeneratorspecs.html">ICEngineGeneratorSpecs</a>
+
+      <a class="list-group-item" href="../type/icestoragemapping.html">IceStorageMapping</a>
+
+      <a class="list-group-item" href="../type/icestoragespecs.html">IceStorageSpecs</a>
+
+      <a class="list-group-item" href="../type/illummapdata.html">IllumMapData</a>
+
+      <a class="list-group-item" href="../type/indirectabsorberspecs.html">IndirectAbsorberSpecs</a>
+
+      <a class="list-group-item" href="../type/indunitdata.html">IndUnitData</a>
+
+      <a class="list-group-item" href="../type/infiltrationdata.html">InfiltrationData</a>
+
+      <a class="list-group-item" href="../type/insidefaceadaptiveconvalgostruct.html">InsideFaceAdaptiveConvAlgoStruct</a>
+
+      <a class="list-group-item" href="../type/instructiontype.html">InstructionType</a>
+
+      <a class="list-group-item" href="../type/integervariables.html">IntegerVariables</a>
+
+      <a class="list-group-item" href="../type/integervariabletype.html">IntegerVariableType</a>
+
+      <a class="list-group-item" href="../type/internalvarsavailabletype.html">InternalVarsAvailableType</a>
+
+      <a class="list-group-item" href="../type/internalvarsusedtype.html">InternalVarsUsedType</a>
+
+      <a class="list-group-item" href="../type/intwinadjzoneextwinstruct.html">IntWinAdjZoneExtWinStruct</a>
+
+      <a class="list-group-item" href="../type/irrigationdatastruct.html">IrrigationDataStruct</a>
+
+      <a class="list-group-item" href="../type/lightsdata.html">LightsData</a>
+
+      <a class="list-group-item" href="../type/linedefinition.html">LineDefinition</a>
+
+      <a class="list-group-item" href="../type/localpipedata.html">LocalPipeData</a>
+
+      <a class="list-group-item" href="../type/location.html">Location</a>
+
+      <a class="list-group-item" href="../type/looppipedata.html">LoopPipeData</a>
+
+      <a class="list-group-item" href="../type/loopsidepumpinformation.html">LoopSidePumpInformation</a>
+
+      <a class="list-group-item" href="../type/loopsidereportvars.html">LoopSideReportVars</a>
+
+      <a class="list-group-item" href="../type/m_flowcontrolvalidator.html">m_FlowControlValidator</a>
+
+      <a class="list-group-item" href="../type/mapcalcdata.html">MapCalcData</a>
+
+      <a class="list-group-item" href="../type/markednodedata.html">MarkedNodeData</a>
+
+      <a class="list-group-item" href="../type/materialdatafd.html">MaterialDataFD</a>
+
+      <a class="list-group-item" href="../type/materialproperties.html">MaterialProperties</a>
+
+      <a class="list-group-item" href="../type/matrixdatastruct.html">MatrixDataStruct</a>
+
+      <a class="list-group-item" href="../type/meshextents.html">MeshExtents</a>
+
+      <a class="list-group-item" href="../type/meshpartition.html">MeshPartition</a>
+
+      <a class="list-group-item" href="../type/meshpartitions.html">MeshPartitions</a>
+
+      <a class="list-group-item" href="../type/meshproperties.html">MeshProperties</a>
+
+      <a class="list-group-item" href="../type/meterarraytype.html">MeterArrayType</a>
+
+      <a class="list-group-item" href="../type/meterdata.html">MeterData</a>
+
+      <a class="list-group-item" href="../type/metertype.html">MeterType</a>
+
+      <a class="list-group-item" href="../type/microchpdatastruct.html">MicroCHPDataStruct</a>
+
+      <a class="list-group-item" href="../type/microchpparamsnonnormalized.html">MicroCHPParamsNonNormalized</a>
+
+      <a class="list-group-item" href="../type/microchpreportdatastruct.html">MicroCHPReportDataStruct</a>
+
+      <a class="list-group-item" href="../type/missingdata.html">MissingData</a>
+
+      <a class="list-group-item" href="../type/missingdatacounts.html">MissingDataCounts</a>
+
+      <a class="list-group-item" href="../type/mixerconditions.html">MixerConditions</a>
+
+      <a class="list-group-item" href="../type/mixerdata.html">MixerData</a>
+
+      <a class="list-group-item" href="../type/mixerdata%7E2.html">MixerData</a>
+
+      <a class="list-group-item" href="../type/mixingdata.html">MixingData</a>
+
+      <a class="list-group-item" href="../type/moistureinfo.html">MoistureInfo</a>
+
+      <a class="list-group-item" href="../type/monetaryunittype.html">monetaryUnitType</a>
+
+      <a class="list-group-item" href="../type/monthlycolumnstype.html">MonthlyColumnsType</a>
+
+      <a class="list-group-item" href="../type/monthlyfieldsetinputtype.html">MonthlyFieldSetInputType</a>
+
+      <a class="list-group-item" href="../type/monthlyinputtype.html">MonthlyInputType</a>
+
+      <a class="list-group-item" href="../type/monthlytablestype.html">MonthlyTablesType</a>
+
+      <a class="list-group-item" href="../type/morenodedata.html">MoreNodeData</a>
+
+      <a class="list-group-item" href="../type/msheatpumpdata.html">MSHeatPumpData</a>
+
+      <a class="list-group-item" href="../type/msheatpumpreportdata.html">MSHeatPumpReportData</a>
+
+      <a class="list-group-item" href="../type/mtgeneratorspecs.html">MTGeneratorSpecs</a>
+
+      <a class="list-group-item" href="../type/multizonecompdetopeningprop.html">MultizoneCompDetOpeningProp</a>
+
+      <a class="list-group-item" href="../type/multizonecompexhaustfanprop.html">MultizoneCompExhaustFanProp</a>
+
+      <a class="list-group-item" href="../type/multizonecomphoropeningprop.html">MultizoneCompHorOpeningProp</a>
+
+      <a class="list-group-item" href="../type/multizonecompsimpleopeningprop.html">MultizoneCompSimpleOpeningProp</a>
+
+      <a class="list-group-item" href="../type/multizonecparrayprop.html">MultizoneCPArrayProp</a>
+
+      <a class="list-group-item" href="../type/multizonecpvalueprop.html">MultizoneCPValueProp</a>
+
+      <a class="list-group-item" href="../type/multizoneexternalnodeprop.html">MultizoneExternalNodeProp</a>
+
+      <a class="list-group-item" href="../type/multizonesurfacecrackprop.html">MultizoneSurfaceCrackProp</a>
+
+      <a class="list-group-item" href="../type/multizonesurfacecrackstdcndns.html">MultizoneSurfaceCrackStdCndns</a>
+
+      <a class="list-group-item" href="../type/multizonesurfaceelaprop.html">MultizoneSurfaceELAProp</a>
+
+      <a class="list-group-item" href="../type/multizonesurfaceprop.html">MultizoneSurfaceProp</a>
+
+      <a class="list-group-item" href="../type/multizonezoneprop.html">MultizoneZoneProp</a>
+
+      <a class="list-group-item" href="../type/namedmonthlytype.html">NamedMonthlyType</a>
+
+      <a class="list-group-item" href="../type/neighborinformation.html">NeighborInformation</a>
+
+      <a class="list-group-item" href="../type/nightventperfdata.html">NightVentPerfData</a>
+
+      <a class="list-group-item" href="../type/nodeconnectiondef.html">NodeConnectionDef</a>
+
+      <a class="list-group-item" href="../type/nodedata.html">NodeData</a>
+
+      <a class="list-group-item" href="../type/nodelistdef.html">NodeListDef</a>
+
+      <a class="list-group-item" href="../type/nonrecurringcosttype.html">NonrecurringCostType</a>
+
+      <a class="list-group-item" href="../type/oacontrollerdata.html">OAControllerData</a>
+
+      <a class="list-group-item" href="../type/oacontrollerprops.html">OAControllerProps</a>
+
+      <a class="list-group-item" href="../type/oaequiplist.html">OAEquipList</a>
+
+      <a class="list-group-item" href="../type/oamixerprops.html">OAMixerProps</a>
+
+      <a class="list-group-item" href="../type/oarequirementsdata.html">OARequirementsData</a>
+
+      <a class="list-group-item" href="../type/oaunitdata.html">OAUnitData</a>
+
+      <a class="list-group-item" href="../type/objectsdefinition.html">ObjectsDefinition</a>
+
+      <a class="list-group-item" href="../type/operationdata.html">OperationData</a>
+
+      <a class="list-group-item" href="../type/operatortype.html">OperatorType</a>
+
+      <a class="list-group-item" href="../type/opschemeptrdata.html">OpSchemePtrData</a>
+
+      <a class="list-group-item" href="../type/optstartdatatype.html">OptStartDataType</a>
+
+      <a class="list-group-item" href="../type/oscdata.html">OSCData</a>
+
+      <a class="list-group-item" href="../type/oscmdata.html">OSCMData</a>
+
+      <a class="list-group-item" href="../type/outputreportingvariables.html">OutputReportingVariables</a>
+
+      <a class="list-group-item" href="../type/outputtablebinnedtype.html">OutputTableBinnedType</a>
+
+      <a class="list-group-item" href="../type/outputvarsensortype.html">OutputVarSensorType</a>
+
+      <a class="list-group-item" href="../type/outsideairsysprops.html">OutsideAirSysProps</a>
+
+      <a class="list-group-item" href="../type/outsideenergysourcespecs.html">OutsideEnergySourceSpecs</a>
+
+      <a class="list-group-item" href="../type/outsidefaceadpativeconvalgostruct.html">OutsideFaceAdpativeConvAlgoStruct</a>
+
+      <a class="list-group-item" href="../type/packagedtescoolingcoilstruct.html">PackagedTESCoolingCoilStruct</a>
+
+      <a class="list-group-item" href="../type/parametersdata.html">ParametersData</a>
+
+      <a class="list-group-item" href="../type/parentlistdata.html">ParentListData</a>
+
+      <a class="list-group-item" href="../type/peopledata.html">PeopleData</a>
+
+      <a class="list-group-item" href="../type/perfcurvetabledatastruct.html">PerfCurveTableDataStruct</a>
+
+      <a class="list-group-item" href="../type/perfomancecurvedata.html">PerfomanceCurveData</a>
+
+      <a class="list-group-item" href="../type/pipecircuitinfo.html">PipeCircuitInfo</a>
+
+      <a class="list-group-item" href="../type/pipedata.html">PipeData</a>
+
+      <a class="list-group-item" href="../type/pipeheattransferreport.html">PipeHeatTransferReport</a>
+
+      <a class="list-group-item" href="../type/pipehtdata.html">PipeHTData</a>
+
+      <a class="list-group-item" href="../type/pipesegmentinfo.html">PipeSegmentInfo</a>
+
+      <a class="list-group-item" href="../type/planeeq.html">PlaneEq</a>
+
+      <a class="list-group-item" href="../type/plantavailmgrdata.html">PlantAvailMgrData</a>
+
+      <a class="list-group-item" href="../type/plantcallingorderinfostruct.html">PlantCallingOrderInfoStruct</a>
+
+      <a class="list-group-item" href="../type/plantconnection.html">PlantConnection</a>
+
+      <a class="list-group-item" href="../type/plantconnectionstruct.html">PlantConnectionStruct</a>
+
+      <a class="list-group-item" href="../type/plantconnectionstruct%7E2.html">PlantConnectionStruct</a>
+
+      <a class="list-group-item" href="../type/plantconvergencepoint.html">PlantConvergencePoint</a>
+
+      <a class="list-group-item" href="../type/plantiterationconvergencestruct.html">PlantIterationConvergenceStruct</a>
+
+      <a class="list-group-item" href="../type/plantlocation.html">PlantLocation</a>
+
+      <a class="list-group-item" href="../type/plantlocatorstruct.html">PlantLocatorStruct</a>
+
+      <a class="list-group-item" href="../type/plantloopdata.html">PlantLoopData</a>
+
+      <a class="list-group-item" href="../type/plantpressurecurvedata.html">PlantPressureCurveData</a>
+
+      <a class="list-group-item" href="../type/plantprofiledata.html">PlantProfileData</a>
+
+      <a class="list-group-item" href="../type/plantsizingdata.html">PlantSizingData</a>
+
+      <a class="list-group-item" href="../type/point.html">Point</a>
+
+      <a class="list-group-item" href="../type/point3dinteger.html">Point3DInteger</a>
+
+      <a class="list-group-item" href="../type/point3dreal.html">Point3DReal</a>
+
+      <a class="list-group-item" href="../type/pointf.html">PointF</a>
+
+      <a class="list-group-item" href="../type/pointtype.html">PointType</a>
+
+      <a class="list-group-item" href="../type/pollutionprops.html">PollutionProps</a>
+
+      <a class="list-group-item" href="../type/polyhedron.html">Polyhedron</a>
+
+      <a class="list-group-item" href="../type/pondgroundheatexchangerdata.html">PondGroundHeatExchangerData</a>
+
+      <a class="list-group-item" href="../type/pondgroundheatexchangerreport.html">PondGroundHeatExchangerReport</a>
+
+      <a class="list-group-item" href="../type/powindunitdata.html">PowIndUnitData</a>
+
+      <a class="list-group-item" href="../type/ptunitdata.html">PTUnitData</a>
+
+      <a class="list-group-item" href="../type/pumpspecs.html">PumpSpecs</a>
+
+      <a class="list-group-item" href="../type/pumpvfdcontroldata.html">PumpVFDControlData</a>
+
+      <a class="list-group-item" href="../type/pvarraystruct.html">PVArrayStruct</a>
+
+      <a class="list-group-item" href="../type/pvreportvariables.html">PVReportVariables</a>
+
+      <a class="list-group-item" href="../type/pvtcollectorstruct.html">PVTCollectorStruct</a>
+
+      <a class="list-group-item" href="../type/pvtreportstruct.html">PVTReportStruct</a>
+
+      <a class="list-group-item" href="../type/qualifytype.html">QualifyType</a>
+
+      <a class="list-group-item" href="../type/radialcellinformation.html">RadialCellInformation</a>
+
+      <a class="list-group-item" href="../type/radialsizing.html">RadialSizing</a>
+
+      <a class="list-group-item" href="../type/radsystypedata.html">RadSysTypeData</a>
+
+      <a class="list-group-item" href="../type/rainfallcollectordatastruct.html">RainfallCollectorDataStruct</a>
+
+      <a class="list-group-item" href="../type/rangecheckdef.html">RangeCheckDef</a>
+
+      <a class="list-group-item" href="../type/rangedatacounts.html">RangeDataCounts</a>
+
+      <a class="list-group-item" href="../type/ratchettype.html">RatchetType</a>
+
+      <a class="list-group-item" href="../type/realvariables.html">RealVariables</a>
+
+      <a class="list-group-item" href="../type/realvariabletype.html">RealVariableType</a>
+
+      <a class="list-group-item" href="../type/rectanglef.html">RectangleF</a>
+
+      <a class="list-group-item" href="../type/recurringcoststype.html">RecurringCostsType</a>
+
+      <a class="list-group-item" href="../type/recurringerrordata.html">RecurringErrorData</a>
+
+      <a class="list-group-item" href="../type/reformulatedeirchillerspecs.html">ReformulatedEIRChillerSpecs</a>
+
+      <a class="list-group-item" href="../type/refrigcasecreditdata.html">RefrigCaseCreditData</a>
+
+      <a class="list-group-item" href="../type/refrigcasedata.html">RefrigCaseData</a>
+
+      <a class="list-group-item" href="../type/refrigcompressordata.html">RefrigCompressorData</a>
+
+      <a class="list-group-item" href="../type/refrigcondenserdata.html">RefrigCondenserData</a>
+
+      <a class="list-group-item" href="../type/refriggascoolerdata.html">RefrigGasCoolerData</a>
+
+      <a class="list-group-item" href="../type/refrigrackdata.html">RefrigRackData</a>
+
+      <a class="list-group-item" href="../type/refrigsystemdata.html">RefrigSystemData</a>
+
+      <a class="list-group-item" href="../type/reportbranchdata.html">ReportBranchData</a>
+
+      <a class="list-group-item" href="../type/reportcompdata.html">ReportCompData</a>
+
+      <a class="list-group-item" href="../type/reporteirvars.html">ReportEIRVars</a>
+
+      <a class="list-group-item" href="../type/reportinginformation.html">ReportingInformation</a>
+
+      <a class="list-group-item" href="../type/reportloopdata.html">ReportLoopData</a>
+
+      <a class="list-group-item" href="../type/reportnametype.html">reportNameType</a>
+
+      <a class="list-group-item" href="../type/reportvars.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E10.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E3.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E12.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E17.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E20.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E15.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E16.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E2.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E21.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E4.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E18.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E5.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E19.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E6.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E11.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E13.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E14.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E8.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E7.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reportvars%7E9.html">ReportVars</a>
+
+      <a class="list-group-item" href="../type/reqreportvariables.html">ReqReportVariables</a>
+
+      <a class="list-group-item" href="../type/returnair.html">ReturnAir</a>
+
+      <a class="list-group-item" href="../type/roofgeocharactisticsstruct.html">RoofGeoCharactisticsStruct</a>
+
+      <a class="list-group-item" href="../type/rootfinderdatatype.html">RootFinderDataType</a>
+
+      <a class="list-group-item" href="../type/runperioddata.html">RunPeriodData</a>
+
+      <a class="list-group-item" href="../type/runtimereportvartype.html">RuntimeReportVarType</a>
+
+      <a class="list-group-item" href="../type/scheduledata.html">ScheduleData</a>
+
+      <a class="list-group-item" href="../type/scheduletypedata.html">ScheduleTypeData</a>
+
+      <a class="list-group-item" href="../type/screentransdata.html">ScreenTransData</a>
+
+      <a class="list-group-item" href="../type/secondaryloopdata.html">SecondaryLoopData</a>
+
+      <a class="list-group-item" href="../type/secretobjects.html">SecretObjects</a>
+
+      <a class="list-group-item" href="../type/sectionsdefinition.html">SectionsDefinition</a>
+
+      <a class="list-group-item" href="../type/shadingvertexdata.html">ShadingVertexData</a>
+
+      <a class="list-group-item" href="../type/shadowingcombinations.html">ShadowingCombinations</a>
+
+      <a class="list-group-item" href="../type/shadowrelatetype.html">ShadowRelateType</a>
+
+      <a class="list-group-item" href="../type/shelfdata.html">ShelfData</a>
+
+      <a class="list-group-item" href="../type/simplepvparamsstruct.html">SimplePVParamsStruct</a>
+
+      <a class="list-group-item" href="../type/simplepvtmodelstruct.html">SimplePVTModelStruct</a>
+
+      <a class="list-group-item" href="../type/simplewatertoairhpconditions.html">SimpleWatertoAirHPConditions</a>
+
+      <a class="list-group-item" href="../type/simulationcontrol.html">SimulationControl</a>
+
+      <a class="list-group-item" href="../type/simulationorder.html">SimulationOrder</a>
+
+      <a class="list-group-item" href="../type/siterainfalldatastruct.html">SiteRainFallDataStruct</a>
+
+      <a class="list-group-item" href="../type/slablistdata.html">SlabListData</a>
+
+      <a class="list-group-item" href="../type/snlmoduleparamsstuct.html">SNLModuleParamsStuct</a>
+
+      <a class="list-group-item" href="../type/snlpvcalcstruct.html">SNLPVCalcStruct</a>
+
+      <a class="list-group-item" href="../type/snlpvinputstruct.html">SNLPVInputStruct</a>
+
+      <a class="list-group-item" href="../type/solreflrecsurfdata.html">SolReflRecSurfData</a>
+
+      <a class="list-group-item" href="../type/solutiontrackertype.html">SolutionTrackerType</a>
+
+      <a class="list-group-item" href="../type/specialdaydata.html">SpecialDayData</a>
+
+      <a class="list-group-item" href="../type/spectraldataproperties.html">SpectralDataProperties</a>
+
+      <a class="list-group-item" href="../type/splitterconditions.html">SplitterConditions</a>
+
+      <a class="list-group-item" href="../type/splitterdata.html">SplitterData</a>
+
+      <a class="list-group-item" href="../type/splitterdata%7E2.html">SplitterData</a>
+
+      <a class="list-group-item" href="../type/stacktype.html">StackType</a>
+
+      <a class="list-group-item" href="../type/standaloneervdata.html">StandAloneERVData</a>
+
+      <a class="list-group-item" href="../type/steambaseboardparams.html">SteamBaseboardParams</a>
+
+      <a class="list-group-item" href="../type/steamcoilequipconditions.html">SteamCoilEquipConditions</a>
+
+      <a class="list-group-item" href="../type/storagetankdatastruct.html">StorageTankDataStruct</a>
+
+      <a class="list-group-item" href="../type/stormwindowdata.html">StormWindowData</a>
+
+      <a class="list-group-item" href="../type/stratifiednodedata.html">StratifiedNodeData</a>
+
+      <a class="list-group-item" href="../type/subcell.html">subcell</a>
+
+      <a class="list-group-item" href="../type/subcomponentdata.html">SubcomponentData</a>
+
+      <a class="list-group-item" href="../type/subcoolerdata.html">SubcoolerData</a>
+
+      <a class="list-group-item" href="../type/subequipmentdata.html">SubEquipmentData</a>
+
+      <a class="list-group-item" href="../type/subsubcomponentdata.html">SubSubcomponentData</a>
+
+      <a class="list-group-item" href="../type/subsubequipmentdata.html">SubSubEquipmentData</a>
+
+      <a class="list-group-item" href="../type/subtabletype.html">SubTableType</a>
+
+      <a class="list-group-item" href="../type/summarizeloads.html">SummarizeLoads</a>
+
+      <a class="list-group-item" href="../type/supplyair.html">SupplyAir</a>
+
+      <a class="list-group-item" href="../type/surfaceassocnestedstruct.html">SurfaceAssocNestedStruct</a>
+
+      <a class="list-group-item" href="../type/surfacedata.html">SurfaceData</a>
+
+      <a class="list-group-item" href="../type/surfacedatafd.html">SurfaceDataFD</a>
+
+      <a class="list-group-item" href="../type/surfaceerrortracking.html">SurfaceErrorTracking</a>
+
+      <a class="list-group-item" href="../type/surfacegroundheatexchangerdata.html">SurfaceGroundHeatExchangerData</a>
+
+      <a class="list-group-item" href="../type/surfacegroundheatexchangerqtf.html">SurfaceGroundHeatExchangerQTF</a>
+
+      <a class="list-group-item" href="../type/surfacegroundheatexchngrreport.html">SurfaceGroundHeatExchngrReport</a>
+
+      <a class="list-group-item" href="../type/surfacelistdata.html">SurfaceListData</a>
+
+      <a class="list-group-item" href="../type/surfacescreenproperties.html">SurfaceScreenProperties</a>
+
+      <a class="list-group-item" href="../type/surfacesolarincident.html">SurfaceSolarIncident</a>
+
+      <a class="list-group-item" href="../type/surfacewindowcalc.html">SurfaceWindowCalc</a>
+
+      <a class="list-group-item" href="../type/surfmappattern.html">SurfMapPattern</a>
+
+      <a class="list-group-item" href="../type/sysavailmanagerlist.html">SysAvailManagerList</a>
+
+      <a class="list-group-item" href="../type/sysdesignparams.html">SysDesignParams</a>
+
+      <a class="list-group-item" href="../type/sysflowconditions.html">SysFlowConditions</a>
+
+      <a class="list-group-item" href="../type/systemsizingdata.html">SystemSizingData</a>
+
+      <a class="list-group-item" href="../type/systemsizinginputdata.html">SystemSizingInputData</a>
+
+      <a class="list-group-item" href="../type/tabledatastruct.html">TableDataStruct</a>
+
+      <a class="list-group-item" href="../type/tableentrytype.html">TableEntryType</a>
+
+      <a class="list-group-item" href="../type/tablelookupdata.html">TableLookupData</a>
+
+      <a class="list-group-item" href="../type/tarifftype.html">TariffType</a>
+
+      <a class="list-group-item" href="../type/tcglazingstype.html">TCGlazingsType</a>
+
+      <a class="list-group-item" href="../type/tddpipedata.html">TDDPipeData</a>
+
+      <a class="list-group-item" href="../type/temperaturepatternstruct.html">TemperaturePatternStruct</a>
+
+      <a class="list-group-item" href="../type/tempervalvedata.html">TemperValveData</a>
+
+      <a class="list-group-item" href="../type/tempgridregiondata.html">TempGridRegionData</a>
+
+      <a class="list-group-item" href="../type/temploopdata.html">TempLoopData</a>
+
+      <a class="list-group-item" href="../type/tempvsheightpattern.html">TempVsHeightPattern</a>
+
+      <a class="list-group-item" href="../type/terminalunitlistdata.html">TerminalUnitListData</a>
+
+      <a class="list-group-item" href="../type/termunitsizingdata.html">TermUnitSizingData</a>
+
+      <a class="list-group-item" href="../type/thermalchimneydata.html">ThermalChimneyData</a>
+
+      <a class="list-group-item" href="../type/thermalcomfortdatatype.html">ThermalComfortDataType</a>
+
+      <a class="list-group-item" href="../type/thermalcomfortinash55type.html">ThermalComfortInASH55Type</a>
+
+      <a class="list-group-item" href="../type/thermalcomfortsetpointtype.html">ThermalComfortSetpointType</a>
+
+      <a class="list-group-item" href="../type/thermchimreportvars.html">ThermChimReportVars</a>
+
+      <a class="list-group-item" href="../type/thermchimznreportvars.html">ThermChimZnReportVars</a>
+
+      <a class="list-group-item" href="../type/timesteps.html">TimeSteps</a>
+
+      <a class="list-group-item" href="../type/timings.html">timings</a>
+
+      <a class="list-group-item" href="../type/tocentriestype.html">TOCEntriesType</a>
+
+      <a class="list-group-item" href="../type/tokentype.html">TokenType</a>
+
+      <a class="list-group-item" href="../type/towerinletconds.html">TowerInletConds</a>
+
+      <a class="list-group-item" href="../type/towerspecs.html">Towerspecs</a>
+
+      <a class="list-group-item" href="../type/transferloadlistdef.html">TransferLoadListDef</a>
+
+      <a class="list-group-item" href="../type/transrefrigsystemdata.html">TransRefrigSystemData</a>
+
+      <a class="list-group-item" href="../type/trendvariabletype.html">TrendVariableType</a>
+
+      <a class="list-group-item" href="../type/triquadraticcurvedatastruct.html">TriQuadraticCurveDataStruct</a>
+
+      <a class="list-group-item" href="../type/trnsyspvcalcstruct.html">TRNSYSPVCalcStruct</a>
+
+      <a class="list-group-item" href="../type/trnsyspvmoduleparamsstruct.html">TRNSYSPVModuleParamsStruct</a>
+
+      <a class="list-group-item" href="../type/tstatobject.html">TStatObject</a>
+
+      <a class="list-group-item" href="../type/twovertgradinterpolpattern.html">TwoVertGradInterpolPattern</a>
+
+      <a class="list-group-item" href="../type/typicalextremedata.html">TypicalExtremeData</a>
+
+      <a class="list-group-item" href="../type/ufedata.html">UFEData</a>
+
+      <a class="list-group-item" href="../type/ufidata.html">UFIData</a>
+
+      <a class="list-group-item" href="../type/unitarysystemdata.html">UnitarySystemData</a>
+
+      <a class="list-group-item" href="../type/unitconvtype.html">UnitConvType</a>
+
+      <a class="list-group-item" href="../type/unitheaterdata.html">UnitHeaterData</a>
+
+      <a class="list-group-item" href="../type/unitventilatordata.html">UnitVentilatorData</a>
+
+      <a class="list-group-item" href="../type/useadjustmenttype.html">UseAdjustmentType</a>
+
+      <a class="list-group-item" href="../type/usepriceescalationtype.html">UsePriceEscalationType</a>
+
+      <a class="list-group-item" href="../type/userairterminalcomponentstruct.html">UserAirTerminalComponentStruct</a>
+
+      <a class="list-group-item" href="../type/usercoilcomponentstruct.html">UserCoilComponentStruct</a>
+
+      <a class="list-group-item" href="../type/userplantcomponentstruct.html">UserPlantComponentStruct</a>
+
+      <a class="list-group-item" href="../type/userzonehvacforcedaircomponentstruct.html">UserZoneHVACForcedAirComponentStruct</a>
+
+      <a class="list-group-item" href="../type/utscdatastruct.html">UTSCDataStruct</a>
+
+      <a class="list-group-item" href="../type/variablespeedcoildata.html">VariableSpeedCoilData</a>
+
+      <a class="list-group-item" href="../type/variabletypeforddoutput.html">VariableTypeForDDOutput</a>
+
+      <a class="list-group-item" href="../type/vector.html">vector</a>
+
+      <a class="list-group-item" href="../type/vector_2d.html">Vector_2d</a>
+
+      <a class="list-group-item" href="../type/ventilatedslabdata.html">VentilatedSlabData</a>
+
+      <a class="list-group-item" href="../type/ventilationdata.html">VentilationData</a>
+
+      <a class="list-group-item" href="../type/ventilationmechanicalprops.html">VentilationMechanicalProps</a>
+
+      <a class="list-group-item" href="../type/vrfcondenserequipment.html">VRFCondenserEquipment</a>
+
+      <a class="list-group-item" href="../type/vrfterminalunitequipment.html">VRFTerminalUnitEquipment</a>
+
+      <a class="list-group-item" href="../type/vstowerdata.html">VSTowerData</a>
+
+      <a class="list-group-item" href="../type/walkindata.html">WalkInData</a>
+
+      <a class="list-group-item" href="../type/warehousecoildata.html">WarehouseCoilData</a>
+
+      <a class="list-group-item" href="../type/warmupconvergence.html">WarmupConvergence</a>
+
+      <a class="list-group-item" href="../type/watercoilequipconditions.html">WaterCoilEquipConditions</a>
+
+      <a class="list-group-item" href="../type/waterconnectionstype.html">WaterConnectionsType</a>
+
+      <a class="list-group-item" href="../type/waterequipmenttype.html">WaterEquipmentType</a>
+
+      <a class="list-group-item" href="../type/waterheaterdesuperheaterdata.html">WaterHeaterDesuperheaterData</a>
+
+      <a class="list-group-item" href="../type/waterheatersizingdata.html">WaterHeaterSizingData</a>
+
+      <a class="list-group-item" href="../type/watersourcespecs.html">WaterSourceSpecs</a>
+
+      <a class="list-group-item" href="../type/waterthermaltankdata.html">WaterThermalTankData</a>
+
+      <a class="list-group-item" href="../type/watertoairhpequipconditions.html">WatertoAirHPEquipConditions</a>
+
+      <a class="list-group-item" href="../type/waterusetankconnectionstruct.html">WaterUseTankConnectionStruct</a>
+
+      <a class="list-group-item" href="../type/weatherproperties.html">WeatherProperties</a>
+
+      <a class="list-group-item" href="../type/weekscheduledata.html">WeekScheduleData</a>
+
+      <a class="list-group-item" href="../type/wholebuildingelectricpowersummary.html">WholeBuildingElectricPowerSummary</a>
+
+      <a class="list-group-item" href="../type/windacdata.html">WindACData</a>
+
+      <a class="list-group-item" href="../type/windowblindproperties.html">WindowBlindProperties</a>
+
+      <a class="list-group-item" href="../type/windowcomplexshade.html">WindowComplexShade</a>
+
+      <a class="list-group-item" href="../type/windowindex.html">WindowIndex</a>
+
+      <a class="list-group-item" href="../type/windowshadingcontroldata.html">WindowShadingControlData</a>
+
+      <a class="list-group-item" href="../type/windowstateindex.html">WindowStateIndex</a>
+
+      <a class="list-group-item" href="../type/windowthermalmodelparams.html">WindowThermalModelParams</a>
+
+      <a class="list-group-item" href="../type/windturbineparams.html">WindTurbineParams</a>
+
+      <a class="list-group-item" href="../type/wrappercomponentspecs.html">WrapperComponentSpecs</a>
+
+      <a class="list-group-item" href="../type/wrapperreportvars.html">WrapperReportVars</a>
+
+      <a class="list-group-item" href="../type/wrapperspecs.html">WrapperSpecs</a>
+
+      <a class="list-group-item" href="../type/zoneairbalancedata.html">ZoneAirBalanceData</a>
+
+      <a class="list-group-item" href="../type/zoneairdistributiondata.html">ZoneAirDistributionData</a>
+
+      <a class="list-group-item" href="../type/zoneairequip.html">ZoneAirEquip</a>
+
+      <a class="list-group-item" href="../type/zonecateusedata.html">ZoneCatEUseData</a>
+
+      <a class="list-group-item" href="../type/zonecomfortcontrols.html">ZoneComfortControls</a>
+
+      <a class="list-group-item" href="../type/zonecomfortcontrolsfangerdata.html">ZoneComfortControlsFangerData</a>
+
+      <a class="list-group-item" href="../type/zonecomfortfangercontroltype.html">ZoneComfortFangerControlType</a>
+
+      <a class="list-group-item" href="../type/zonecomptypedata.html">ZoneCompTypeData</a>
+
+      <a class="list-group-item" href="../type/zonecontamgenericdatabldiff.html">ZoneContamGenericDataBLDiff</a>
+
+      <a class="list-group-item" href="../type/zonecontamgenericdataconstant.html">ZoneContamGenericDataConstant</a>
+
+      <a class="list-group-item" href="../type/zonecontamgenericdatacutoff.html">ZoneContamGenericDataCutoff</a>
+
+      <a class="list-group-item" href="../type/zonecontamgenericdatadecay.html">ZoneContamGenericDataDecay</a>
+
+      <a class="list-group-item" href="../type/zonecontamgenericdatadrs.html">ZoneContamGenericDataDRS</a>
+
+      <a class="list-group-item" href="../type/zonecontamgenericdatadvs.html">ZoneContamGenericDataDVS</a>
+
+      <a class="list-group-item" href="../type/zonecontamgenericdatapdriven.html">ZoneContamGenericDataPDriven</a>
+
+      <a class="list-group-item" href="../type/zonecontcontrols.html">ZoneContControls</a>
+
+      <a class="list-group-item" href="../type/zonedata.html">ZoneData</a>
+
+      <a class="list-group-item" href="../type/zonedaylightcalc.html">ZoneDaylightCalc</a>
+
+      <a class="list-group-item" href="../type/zonedehumidifierdata.html">ZoneDehumidifierData</a>
+
+      <a class="list-group-item" href="../type/zoneeqsizingdata.html">ZoneEqSizingData</a>
+
+      <a class="list-group-item" href="../type/zoneequipdata.html">ZoneEquipData</a>
+
+      <a class="list-group-item" href="../type/zoneevapcoolerunitstruct.html">ZoneEvapCoolerUnitStruct</a>
+
+      <a class="list-group-item" href="../type/zonegroupdata.html">ZoneGroupData</a>
+
+      <a class="list-group-item" href="../type/zonehumiditycontrols.html">ZoneHumidityControls</a>
+
+      <a class="list-group-item" href="../type/zoneinternalgainsstruct.html">ZoneInternalGainsStruct</a>
+
+      <a class="list-group-item" href="../type/zonelistdata.html">ZoneListData</a>
+
+      <a class="list-group-item" href="../type/zonelistdata%7E2.html">ZoneListData</a>
+
+      <a class="list-group-item" href="../type/zonepredefreptype.html">ZonePreDefRepType</a>
+
+      <a class="list-group-item" href="../type/zonepurchasedair.html">ZonePurchasedAir</a>
+
+      <a class="list-group-item" href="../type/zonereportvars.html">ZoneReportVars</a>
+
+      <a class="list-group-item" href="../type/zonereturnplenumconditions.html">ZoneReturnPlenumConditions</a>
+
+      <a class="list-group-item" href="../type/zonesatgedcontrols.html">ZoneSatgedControls</a>
+
+      <a class="list-group-item" href="../type/zonesimdata.html">ZoneSimData</a>
+
+      <a class="list-group-item" href="../type/zonesizingdata.html">ZoneSizingData</a>
+
+      <a class="list-group-item" href="../type/zonesizinginputdata.html">ZoneSizingInputData</a>
+
+      <a class="list-group-item" href="../type/zonesupplyplenumconditions.html">ZoneSupplyPlenumConditions</a>
+
+      <a class="list-group-item" href="../type/zonesystemcontaminantdemanddata.html">ZoneSystemContaminantDemandData</a>
+
+      <a class="list-group-item" href="../type/zonesystemdemanddata.html">ZoneSystemDemandData</a>
+
+      <a class="list-group-item" href="../type/zonesystemmoisturedemand.html">ZoneSystemMoistureDemand</a>
+
+      <a class="list-group-item" href="../type/zonetempcontrols.html">ZoneTempControls</a>
+
+      <a class="list-group-item" href="../type/zonetempcontroltype.html">ZoneTempControlType</a>
+
+      <a class="list-group-item" href="../type/zoneviewfactorinformation.html">ZoneViewFactorInformation</a>
+
+    </div>
+  </div>
+</div>
+
+
+  </section>
+
+    <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2017 </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> EnergyPlusFortran</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js'],
+        'HTML-CSS': {
+           styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#000000 ! important'} }
+        }
+      });
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>

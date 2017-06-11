@@ -1,0 +1,3151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	 <meta name="description" content="">
+
+    <meta name="author" content="dmey (forked from NREL)" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>SizingManager &ndash; EnergyPlusFortran</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">EnergyPlusFortran <small>8.1.0.009</small></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+		 aria-expanded="false">Contents <span class="caret"></span></a>
+	      <ul class="dropdown-menu">
+
+            <li><a href="../lists/files.html">Source Files</a></li>
+
+
+            <li><a href="../lists/modules.html">Modules</a></li>
+
+
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+
+
+            <li><a href="../lists/types.html">Derived Types</a></li>
+
+
+            <li><a href="../program/energyplus.html">Program</a></li>
+
+            </ul>
+            </li>
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/energyplus.html">Program</a></li>
+
+          </ul>
+
+
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+
+  <div class="row">
+    <h1>SizingManager
+    <small>Module</small>
+
+    </h1>
+
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+	  data-placement="bottom" data-html="true"
+	  title=" 0.4% of total for modules and submodules.">1483 statements</a>
+     </li>
+
+
+    <li><i class="fa fa-code"></i><a href="../src/SizingManager.f90"> Source File</a></li>
+
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+
+     <li><a href='../sourcefile/sizingmanager.f90.html'>SizingManager.f90</a></li>
+
+     <li class="active">SizingManager</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+
+<div id="sidebar">
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../module/sizingmanager.html#variable-numairloops%7E2">NumAirLoops</a>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#types-0">Derived Types</a></h3></div>
+  <div id="types-0" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../module/sizingmanager.html#type-zonelistdata%7E2">ZoneListData</a>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-0">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-0" class="panel-collapse collapse">
+
+      <a class="list-group-item" href="../module/sizingmanager.html#proc-managesizing">ManageSizing</a>
+
+      <a class="list-group-item" href="../module/sizingmanager.html#proc-getoarequirements">GetOARequirements</a>
+
+      <a class="list-group-item" href="../module/sizingmanager.html#proc-getzoneairdistribution">GetZoneAirDistribution</a>
+
+      <a class="list-group-item" href="../module/sizingmanager.html#proc-getsizingparams">GetSizingParams</a>
+
+      <a class="list-group-item" href="../module/sizingmanager.html#proc-getzonesizinginput">GetZoneSizingInput</a>
+
+      <a class="list-group-item" href="../module/sizingmanager.html#proc-getzoneandzonelistnames">GetZoneAndZoneListNames</a>
+
+      <a class="list-group-item" href="../module/sizingmanager.html#proc-getsystemsizinginput">GetSystemSizingInput</a>
+
+      <a class="list-group-item" href="../module/sizingmanager.html#proc-getplantsizinginput">GetPlantSizingInput</a>
+
+      <a class="list-group-item" href="../module/sizingmanager.html#proc-setupzonesizing">SetupZoneSizing</a>
+
+      <a class="list-group-item" href="../module/sizingmanager.html#proc-reportzonesizing">ReportZoneSizing</a>
+
+      <a class="list-group-item" href="../module/sizingmanager.html#proc-reportsyssizing">ReportSysSizing</a>
+
+    </div>
+  </div>
+</div>
+
+
+  <hr>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allmods-0">All Modules</a></h3></div>
+  <div id="allmods-0" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../module/airflownetworkbalancemanager.html">AirflowNetworkBalanceManager</a>
+
+      <a class="list-group-item" href="../module/airflownetworksolver.html">AirflowNetworkSolver</a>
+
+      <a class="list-group-item" href="../module/baseboardelectric.html">BaseboardElectric</a>
+
+      <a class="list-group-item" href="../module/baseboardradiator.html">BaseboardRadiator</a>
+
+      <a class="list-group-item" href="../module/boilers.html">Boilers</a>
+
+      <a class="list-group-item" href="../module/boilersteam.html">BoilerSteam</a>
+
+      <a class="list-group-item" href="../module/branchinputmanager.html">BranchInputManager</a>
+
+      <a class="list-group-item" href="../module/branchnodeconnections.html">BranchNodeConnections</a>
+
+      <a class="list-group-item" href="../module/chillerabsorption.html">ChillerAbsorption</a>
+
+      <a class="list-group-item" href="../module/chillerelectriceir.html">ChillerElectricEIR</a>
+
+      <a class="list-group-item" href="../module/chillerexhaustabsorption.html">ChillerExhaustAbsorption</a>
+
+      <a class="list-group-item" href="../module/chillergasabsorption.html">ChillerGasAbsorption</a>
+
+      <a class="list-group-item" href="../module/chillerindirectabsorption.html">ChillerIndirectAbsorption</a>
+
+      <a class="list-group-item" href="../module/chillerreformulatedeir.html">ChillerReformulatedEIR</a>
+
+      <a class="list-group-item" href="../module/condenserlooptowers.html">CondenserLoopTowers</a>
+
+      <a class="list-group-item" href="../module/conductiontransferfunctioncalc.html">ConductionTransferFunctionCalc</a>
+
+      <a class="list-group-item" href="../module/convectioncoefficients.html">ConvectionCoefficients</a>
+
+      <a class="list-group-item" href="../module/cooltower.html">CoolTower</a>
+
+      <a class="list-group-item" href="../module/costestimatemanager.html">CostEstimateManager</a>
+
+      <a class="list-group-item" href="../module/crossventmgr.html">CrossVentMgr</a>
+
+      <a class="list-group-item" href="../module/ctelectricgenerator.html">CTElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/curvemanager.html">CurveManager</a>
+
+      <a class="list-group-item" href="../module/dataairflownetwork.html">DataAirflowNetwork</a>
+
+      <a class="list-group-item" href="../module/dataairloop.html">DataAirLoop</a>
+
+      <a class="list-group-item" href="../module/dataairsystems.html">DataAirSystems</a>
+
+      <a class="list-group-item" href="../module/databranchairloopplant.html">DataBranchAirLoopPlant</a>
+
+      <a class="list-group-item" href="../module/databranchnodeconnections.html">DataBranchNodeConnections</a>
+
+      <a class="list-group-item" href="../module/databsdfwindow.html">DataBSDFWindow</a>
+
+      <a class="list-group-item" href="../module/datacomplexfenestration.html">DataComplexFenestration</a>
+
+      <a class="list-group-item" href="../module/datacontaminantbalance.html">DataContaminantBalance</a>
+
+      <a class="list-group-item" href="../module/dataconvergparams.html">DataConvergParams</a>
+
+      <a class="list-group-item" href="../module/dataconversions.html">DataConversions</a>
+
+      <a class="list-group-item" href="../module/datacostestimate.html">DataCostEstimate</a>
+
+      <a class="list-group-item" href="../module/datadaylighting.html">DataDaylighting</a>
+
+      <a class="list-group-item" href="../module/datadaylightingdevices.html">DataDaylightingDevices</a>
+
+      <a class="list-group-item" href="../module/datadefineequip.html">DataDefineEquip</a>
+
+      <a class="list-group-item" href="../module/datadelight.html">DataDElight</a>
+
+      <a class="list-group-item" href="../module/dataenvironment.html">DataEnvironment</a>
+
+      <a class="list-group-item" href="../module/dataerrortracking.html">DataErrorTracking</a>
+
+      <a class="list-group-item" href="../module/datagenerators.html">DataGenerators</a>
+
+      <a class="list-group-item" href="../module/dataglobalconstants.html">DataGlobalConstants</a>
+
+      <a class="list-group-item" href="../module/dataglobals.html">DataGlobals</a>
+
+      <a class="list-group-item" href="../module/dataheatbalance.html">DataHeatBalance</a>
+
+      <a class="list-group-item" href="../module/dataheatbalfansys.html">DataHeatBalFanSys</a>
+
+      <a class="list-group-item" href="../module/dataheatbalsurface.html">DataHeatBalSurface</a>
+
+      <a class="list-group-item" href="../module/datahvaccontrollers.html">DataHVACControllers</a>
+
+      <a class="list-group-item" href="../module/datahvacglobals.html">DataHVACGlobals</a>
+
+      <a class="list-group-item" href="../module/datainterfaces.html">DataInterfaces</a>
+
+      <a class="list-group-item" href="../module/dataipshortcuts.html">DataIPShortCuts</a>
+
+      <a class="list-group-item" href="../module/dataloopnode.html">DataLoopNode</a>
+
+      <a class="list-group-item" href="../module/datamoisturebalance.html">DataMoistureBalance</a>
+
+      <a class="list-group-item" href="../module/datamoisturebalanceempd.html">DataMoistureBalanceEMPD</a>
+
+      <a class="list-group-item" href="../module/dataoutputs.html">DataOutputs</a>
+
+      <a class="list-group-item" href="../module/dataphotovoltaics.html">DataPhotovoltaics</a>
+
+      <a class="list-group-item" href="../module/dataplant.html">DataPlant</a>
+
+      <a class="list-group-item" href="../module/dataplantpipingsystems.html">DataPlantPipingSystems</a>
+
+      <a class="list-group-item" href="../module/dataprecisionglobals.html">DataPrecisionGlobals</a>
+
+      <a class="list-group-item" href="../module/datareportingflags.html">DataReportingFlags</a>
+
+      <a class="list-group-item" href="../module/dataroomairmodel.html">DataRoomAirModel</a>
+
+      <a class="list-group-item" href="../module/datarootfinder.html">DataRootFinder</a>
+
+      <a class="list-group-item" href="../module/dataruntimelanguage.html">DataRuntimeLanguage</a>
+
+      <a class="list-group-item" href="../module/datashadowingcombinations.html">DataShadowingCombinations</a>
+
+      <a class="list-group-item" href="../module/datasizing.html">DataSizing</a>
+
+      <a class="list-group-item" href="../module/datastringglobals.html">DataStringGlobals</a>
+
+      <a class="list-group-item" href="../module/datasurfacecolors.html">DataSurfaceColors</a>
+
+      <a class="list-group-item" href="../module/datasurfacelists.html">DataSurfaceLists</a>
+
+      <a class="list-group-item" href="../module/datasurfaces.html">DataSurfaces</a>
+
+      <a class="list-group-item" href="../module/datasystemvariables.html">DataSystemVariables</a>
+
+      <a class="list-group-item" href="../module/datatimings.html">DataTimings</a>
+
+      <a class="list-group-item" href="../module/dataucsdshareddata.html">DataUCSDSharedData</a>
+
+      <a class="list-group-item" href="../module/datavectortypes.html">DataVectorTypes</a>
+
+      <a class="list-group-item" href="../module/dataviewfactorinformation.html">DataViewFactorInformation</a>
+
+      <a class="list-group-item" href="../module/datawater.html">DataWater</a>
+
+      <a class="list-group-item" href="../module/datawindowequivalentlayer.html">DataWindowEquivalentLayer</a>
+
+      <a class="list-group-item" href="../module/datazonecontrols.html">DataZoneControls</a>
+
+      <a class="list-group-item" href="../module/datazoneenergydemands.html">DataZoneEnergyDemands</a>
+
+      <a class="list-group-item" href="../module/datazoneequipment.html">DataZoneEquipment</a>
+
+      <a class="list-group-item" href="../module/daylightingdevices.html">DaylightingDevices</a>
+
+      <a class="list-group-item" href="../module/daylightingmanager.html">DaylightingManager</a>
+
+      <a class="list-group-item" href="../module/delightmanagerf%7E2.html">DELIGHTMANAGERF</a>
+
+      <a class="list-group-item" href="../module/delightmanagerf.html">DELIGHTMANAGERF</a>
+
+      <a class="list-group-item" href="../module/demandmanager.html">DemandManager</a>
+
+      <a class="list-group-item" href="../module/desiccantdehumidifiers.html">DesiccantDehumidifiers</a>
+
+      <a class="list-group-item" href="../module/directairmanager.html">DirectAirManager</a>
+
+      <a class="list-group-item" href="../module/displacementventmgr.html">DisplacementVentMgr</a>
+
+      <a class="list-group-item" href="../module/dualduct.html">DualDuct</a>
+
+      <a class="list-group-item" href="../module/dxcoils.html">DXCoils</a>
+
+      <a class="list-group-item" href="../module/dxfearclipping.html">DXFEarClipping</a>
+
+      <a class="list-group-item" href="../module/earthtube.html">EarthTube</a>
+
+      <a class="list-group-item" href="../module/economiclifecyclecost.html">EconomicLifeCycleCost</a>
+
+      <a class="list-group-item" href="../module/economictariff.html">EconomicTariff</a>
+
+      <a class="list-group-item" href="../module/ecoroofmanager.html">EcoRoofManager</a>
+
+      <a class="list-group-item" href="../module/electricbaseboardradiator.html">ElectricBaseboardRadiator</a>
+
+      <a class="list-group-item" href="../module/emsmanager.html">EMSManager</a>
+
+      <a class="list-group-item" href="../module/evaporativecoolers.html">EvaporativeCoolers</a>
+
+      <a class="list-group-item" href="../module/evaporativefluidcoolers.html">EvaporativeFluidCoolers</a>
+
+      <a class="list-group-item" href="../module/exteriorenergyuse.html">ExteriorEnergyUse</a>
+
+      <a class="list-group-item" href="../module/externalinterface.html">ExternalInterface</a>
+
+      <a class="list-group-item" href="../module/fancoilunits.html">FanCoilUnits</a>
+
+      <a class="list-group-item" href="../module/fans.html">Fans</a>
+
+      <a class="list-group-item" href="../module/faultsmanager.html">FaultsManager</a>
+
+      <a class="list-group-item" href="../module/fluidcoolers.html">FluidCoolers</a>
+
+      <a class="list-group-item" href="../module/fluidproperties.html">FluidProperties</a>
+
+      <a class="list-group-item" href="../module/fuelcellelectricgenerator.html">FuelCellElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/furnaces.html">Furnaces</a>
+
+      <a class="list-group-item" href="../module/general.html">General</a>
+
+      <a class="list-group-item" href="../module/generatordynamicsmanager.html">GeneratorDynamicsManager</a>
+
+      <a class="list-group-item" href="../module/generatorfuelsupply.html">GeneratorFuelSupply</a>
+
+      <a class="list-group-item" href="../module/globalnames.html">GlobalNames</a>
+
+      <a class="list-group-item" href="../module/groundheatexchangers.html">GroundHeatExchangers</a>
+
+      <a class="list-group-item" href="../module/heatbalanceairmanager.html">HeatBalanceAirManager</a>
+
+      <a class="list-group-item" href="../module/heatbalancehamtmanager.html">HeatBalanceHAMTManager</a>
+
+      <a class="list-group-item" href="../module/heatbalanceintradexchange.html">HeatBalanceIntRadExchange</a>
+
+      <a class="list-group-item" href="../module/heatbalancemanager.html">HeatBalanceManager</a>
+
+      <a class="list-group-item" href="../module/heatbalancemovableinsulation.html">HeatBalanceMovableInsulation</a>
+
+      <a class="list-group-item" href="../module/heatbalancesurfacemanager.html">HeatBalanceSurfaceManager</a>
+
+      <a class="list-group-item" href="../module/heatbalfinitediffmanager.html">HeatBalFiniteDiffManager</a>
+
+      <a class="list-group-item" href="../module/heatingcoils.html">HeatingCoils</a>
+
+      <a class="list-group-item" href="../module/heatpumpwatertowatercooling.html">HeatPumpWaterToWaterCOOLING</a>
+
+      <a class="list-group-item" href="../module/heatpumpwatertowaterheating.html">HeatPumpWaterToWaterHEATING</a>
+
+      <a class="list-group-item" href="../module/heatpumpwatertowatersimple.html">HeatPumpWaterToWaterSimple</a>
+
+      <a class="list-group-item" href="../module/heatrecovery.html">HeatRecovery</a>
+
+      <a class="list-group-item" href="../module/hightempradiantsystem.html">HighTempRadiantSystem</a>
+
+      <a class="list-group-item" href="../module/humidifiers.html">Humidifiers</a>
+
+      <a class="list-group-item" href="../module/hvaccontrollers.html">HVACControllers</a>
+
+      <a class="list-group-item" href="../module/hvaccooledbeam.html">HVACCooledBeam</a>
+
+      <a class="list-group-item" href="../module/hvacduct.html">HVACDuct</a>
+
+      <a class="list-group-item" href="../module/hvacdxheatpumpsystem.html">HVACDXHeatPumpSystem</a>
+
+      <a class="list-group-item" href="../module/hvacdxsystem.html">HVACDXSystem</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html">HVACHXAssistedCoolingCoil</a>
+
+      <a class="list-group-item" href="../module/hvacinterfacemanager.html">HVACInterfaceManager</a>
+
+      <a class="list-group-item" href="../module/hvacmanager.html">HVACManager</a>
+
+      <a class="list-group-item" href="../module/hvacmultispeedheatpump.html">HVACMultiSpeedHeatPump</a>
+
+      <a class="list-group-item" href="../module/hvacsingleductinduc.html">HVACSingleDuctInduc</a>
+
+      <a class="list-group-item" href="../module/hvacstandaloneerv.html">HVACStandAloneERV</a>
+
+      <a class="list-group-item" href="../module/hvacunitarybypassvav.html">HVACUnitaryBypassVAV</a>
+
+      <a class="list-group-item" href="../module/hvacunitarysystem.html">HVACUnitarySystem</a>
+
+      <a class="list-group-item" href="../module/hvacvariablerefrigerantflow.html">HVACVariableRefrigerantFlow</a>
+
+      <a class="list-group-item" href="../module/hwbaseboardradiator.html">HWBaseboardRadiator</a>
+
+      <a class="list-group-item" href="../module/icengineelectricgenerator.html">ICEngineElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/icethermalstorage.html">IceThermalStorage</a>
+
+      <a class="list-group-item" href="../module/inputprocessor.html">InputProcessor</a>
+
+      <a class="list-group-item" href="../module/internalheatgains.html">InternalHeatGains</a>
+
+      <a class="list-group-item" href="../module/iso_c_function_binding.html">ISO_C_FUNCTION_BINDING</a>
+
+      <a class="list-group-item" href="../module/iso_c_function_binding%7E2.html">ISO_C_FUNCTION_BINDING</a>
+
+      <a class="list-group-item" href="../module/lowtempradiantsystem.html">LowTempRadiantSystem</a>
+
+      <a class="list-group-item" href="../module/manageelectricpower.html">ManageElectricPower</a>
+
+      <a class="list-group-item" href="../module/matrixdatamanager.html">MatrixDataManager</a>
+
+      <a class="list-group-item" href="../module/microchpelectricgenerator.html">MicroCHPElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/microturbineelectricgenerator.html">MicroturbineElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/mixedair.html">MixedAir</a>
+
+      <a class="list-group-item" href="../module/mixercomponent.html">MixerComponent</a>
+
+      <a class="list-group-item" href="../module/moisturebalanceempdmanager.html">MoistureBalanceEMPDManager</a>
+
+      <a class="list-group-item" href="../module/mundtsimmgr.html">MundtSimMgr</a>
+
+      <a class="list-group-item" href="../module/nodeinputmanager.html">NodeInputManager</a>
+
+      <a class="list-group-item" href="../module/nonzoneequipmentmanager.html">NonZoneEquipmentManager</a>
+
+      <a class="list-group-item" href="../module/outairnodemanager.html">OutAirNodeManager</a>
+
+      <a class="list-group-item" href="../module/outdoorairunit.html">OutdoorAirUnit</a>
+
+      <a class="list-group-item" href="../module/outputprocessor.html">OutputProcessor</a>
+
+      <a class="list-group-item" href="../module/outputreportpredefined.html">OutputReportPredefined</a>
+
+      <a class="list-group-item" href="../module/outputreporttabular.html">OutputReportTabular</a>
+
+      <a class="list-group-item" href="../module/outsideenergysources.html">OutsideEnergySources</a>
+
+      <a class="list-group-item" href="../module/packagedterminalheatpump.html">PackagedTerminalHeatPump</a>
+
+      <a class="list-group-item" href="../module/packagedthermalstoragecoil.html">PackagedThermalStorageCoil</a>
+
+      <a class="list-group-item" href="../module/photovoltaics.html">Photovoltaics</a>
+
+      <a class="list-group-item" href="../module/photovoltaicthermalcollectors.html">PhotovoltaicThermalCollectors</a>
+
+      <a class="list-group-item" href="../module/pipeheattransfer.html">PipeHeatTransfer</a>
+
+      <a class="list-group-item" href="../module/pipes.html">Pipes</a>
+
+      <a class="list-group-item" href="../module/plantcentralgshp.html">PlantCentralGSHP</a>
+
+      <a class="list-group-item" href="../module/plantchillers.html">PlantChillers</a>
+
+      <a class="list-group-item" href="../module/plantcomponenttemperaturesources.html">PlantComponentTemperatureSources</a>
+
+      <a class="list-group-item" href="../module/plantcondloopoperation.html">PlantCondLoopOperation</a>
+
+      <a class="list-group-item" href="../module/plantheatexchangerfluidtofluid.html">PlantHeatExchangerFluidToFluid</a>
+
+      <a class="list-group-item" href="../module/plantloadprofile.html">PlantLoadProfile</a>
+
+      <a class="list-group-item" href="../module/plantloopequip.html">PlantLoopEquip</a>
+
+      <a class="list-group-item" href="../module/plantloopsolver.html">PlantLoopSolver</a>
+
+      <a class="list-group-item" href="../module/plantmanager.html">PlantManager</a>
+
+      <a class="list-group-item" href="../module/plantpipingsystemsmanager.html">PlantPipingSystemsManager</a>
+
+      <a class="list-group-item" href="../module/plantpressuresystem.html">PlantPressureSystem</a>
+
+      <a class="list-group-item" href="../module/plantutilities.html">PlantUtilities</a>
+
+      <a class="list-group-item" href="../module/plantvalves.html">PlantValves</a>
+
+      <a class="list-group-item" href="../module/pollutionmodule.html">PollutionModule</a>
+
+      <a class="list-group-item" href="../module/pondgroundheatexchanger.html">PondGroundHeatExchanger</a>
+
+      <a class="list-group-item" href="../module/poweredinductionunits.html">PoweredInductionUnits</a>
+
+      <a class="list-group-item" href="../module/psychrometrics.html">Psychrometrics</a>
+
+      <a class="list-group-item" href="../module/pumps.html">Pumps</a>
+
+      <a class="list-group-item" href="../module/purchasedairmanager.html">PurchasedAirManager</a>
+
+      <a class="list-group-item" href="../module/refrigeratedcase.html">RefrigeratedCase</a>
+
+      <a class="list-group-item" href="../module/reportsizingmanager.html">ReportSizingManager</a>
+
+      <a class="list-group-item" href="../module/returnairpathmanager.html">ReturnAirPathManager</a>
+
+      <a class="list-group-item" href="../module/roomairmodelmanager.html">RoomAirModelManager</a>
+
+      <a class="list-group-item" href="../module/roomairmodelusertemppattern.html">RoomAirModelUserTempPattern</a>
+
+      <a class="list-group-item" href="../module/rootfinder.html">RootFinder</a>
+
+      <a class="list-group-item" href="../module/runtimelanguageprocessor.html">RuntimeLanguageProcessor</a>
+
+      <a class="list-group-item" href="../module/schedulemanager.html">ScheduleManager</a>
+
+      <a class="list-group-item" href="../module/setpointmanager.html">SetPointManager</a>
+
+      <a class="list-group-item" href="../module/simairservingzones.html">SimAirServingZones</a>
+
+      <a class="list-group-item" href="../module/simulationmanager.html">SimulationManager</a>
+
+      <a class="list-group-item" href="../module/singleduct.html">SingleDuct</a>
+
+      <a class="list-group-item" href="../module/sizingmanager.html">SizingManager</a>
+
+      <a class="list-group-item" href="../module/solarcollectors.html">SolarCollectors</a>
+
+      <a class="list-group-item" href="../module/solarreflectionmanager.html">SolarReflectionManager</a>
+
+      <a class="list-group-item" href="../module/solarshading.html">SolarShading</a>
+
+      <a class="list-group-item" href="../module/sortandstringutilities.html">SortAndStringUtilities</a>
+
+      <a class="list-group-item" href="../module/splittercomponent.html">SplitterComponent</a>
+
+      <a class="list-group-item" href="../module/sqliteprocedures%7E2.html">SQLiteProcedures</a>
+
+      <a class="list-group-item" href="../module/sqliteprocedures.html">SQLiteProcedures</a>
+
+      <a class="list-group-item" href="../module/standardratings.html">StandardRatings</a>
+
+      <a class="list-group-item" href="../module/steambaseboardradiator.html">SteamBaseboardRadiator</a>
+
+      <a class="list-group-item" href="../module/steamcoils.html">SteamCoils</a>
+
+      <a class="list-group-item" href="../module/surfacegeometry.html">SurfaceGeometry</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html">SurfaceGroundHeatExchanger</a>
+
+      <a class="list-group-item" href="../module/systemavailabilitymanager.html">SystemAvailabilityManager</a>
+
+      <a class="list-group-item" href="../module/systemreports.html">SystemReports</a>
+
+      <a class="list-group-item" href="../module/tarcogargs.html">TARCOGArgs</a>
+
+      <a class="list-group-item" href="../module/tarcogcommon.html">TARCOGCommon</a>
+
+      <a class="list-group-item" href="../module/tarcogdeflection.html">TARCOGDeflection</a>
+
+      <a class="list-group-item" href="../module/tarcoggasses90.html">TARCOGGasses90</a>
+
+      <a class="list-group-item" href="../module/tarcoggassesparams.html">TARCOGGassesParams</a>
+
+      <a class="list-group-item" href="../module/tarcogmain.html">TARCOGMain</a>
+
+      <a class="list-group-item" href="../module/tarcogoutput.html">TARCOGOutput</a>
+
+      <a class="list-group-item" href="../module/tarcogparams.html">TARCOGParams</a>
+
+      <a class="list-group-item" href="../module/tarcogshading.html">TarcogShading</a>
+
+      <a class="list-group-item" href="../module/thermalchimney.html">ThermalChimney</a>
+
+      <a class="list-group-item" href="../module/thermalcomfort.html">ThermalComfort</a>
+
+      <a class="list-group-item" href="../module/thermalen673calc.html">ThermalEN673Calc</a>
+
+      <a class="list-group-item" href="../module/thermaliso15099calc.html">ThermalISO15099Calc</a>
+
+      <a class="list-group-item" href="../module/transpiredcollector.html">TranspiredCollector</a>
+
+      <a class="list-group-item" href="../module/ufadmanager.html">UFADManager</a>
+
+      <a class="list-group-item" href="../module/unitheater.html">UnitHeater</a>
+
+      <a class="list-group-item" href="../module/unitventilator.html">UnitVentilator</a>
+
+      <a class="list-group-item" href="../module/userdefinedcomponents.html">UserDefinedComponents</a>
+
+      <a class="list-group-item" href="../module/variablespeedcoils.html">VariableSpeedCoils</a>
+
+      <a class="list-group-item" href="../module/vectors.html">vectors</a>
+
+      <a class="list-group-item" href="../module/ventilatedslab.html">VentilatedSlab</a>
+
+      <a class="list-group-item" href="../module/watercoils.html">WaterCoils</a>
+
+      <a class="list-group-item" href="../module/watermanager.html">WaterManager</a>
+
+      <a class="list-group-item" href="../module/waterthermaltanks.html">WaterThermalTanks</a>
+
+      <a class="list-group-item" href="../module/watertoairheatpump.html">WatertoAirHeatPump</a>
+
+      <a class="list-group-item" href="../module/watertoairheatpumpsimple.html">WatertoAirHeatPumpSimple</a>
+
+      <a class="list-group-item" href="../module/wateruse.html">WaterUse</a>
+
+      <a class="list-group-item" href="../module/weathermanager.html">WeatherManager</a>
+
+      <a class="list-group-item" href="../module/windowac.html">WindowAC</a>
+
+      <a class="list-group-item" href="../module/windowcomplexmanager.html">WindowComplexManager</a>
+
+      <a class="list-group-item" href="../module/windowequivalentlayer.html">WindowEquivalentLayer</a>
+
+      <a class="list-group-item" href="../module/windowmanager.html">WindowManager</a>
+
+      <a class="list-group-item" href="../module/windturbine.html">WindTurbine</a>
+
+      <a class="list-group-item" href="../module/zoneairloopequipmentmanager.html">ZoneAirLoopEquipmentManager</a>
+
+      <a class="list-group-item" href="../module/zonecontaminantpredictorcorrector.html">ZoneContaminantPredictorCorrector</a>
+
+      <a class="list-group-item" href="../module/zonedehumidifier.html">ZoneDehumidifier</a>
+
+      <a class="list-group-item" href="../module/zoneequipmentmanager.html">ZoneEquipmentManager</a>
+
+      <a class="list-group-item" href="../module/zoneplenum.html">ZonePlenum</a>
+
+      <a class="list-group-item" href="../module/zonetemppredictorcorrector.html">ZoneTempPredictorCorrector</a>
+
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+
+
+    <ul class="list-inline">
+      <li><h4>Uses:</h4></li>
+
+      <li><a href='../module/dataprecisionglobals.html'>DataPrecisionGlobals</a></li>
+
+      <li><a href='../module/dataglobals.html'>DataGlobals</a></li>
+
+      <li><a href='../module/heatbalancemanager.html'>HeatBalanceManager</a></li>
+
+      <li><a href='../module/weathermanager.html'>WeatherManager</a></li>
+
+      <li><a href='../module/datasizing.html'>DataSizing</a></li>
+
+      <li><a href='../module/datahvacglobals.html'>DataHVACGlobals</a></li>
+
+      <li><a href='../module/datazoneequipment.html'>DataZoneEquipment</a></li>
+
+      <li><a href='../module/datastringglobals.html'>DataStringGlobals</a></li>
+
+      <li><a href='../module/datainterfaces.html'>DataInterfaces</a></li>
+
+    </ul>
+
+                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: module~~sizingmanager~~UsesGraph Pages: 1 -->
+<svg id="modulesizingmanagerUsesGraph" width="641pt" height="700pt"
+ viewBox="0.00 0.00 641.00 700.02" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~sizingmanager~~UsesGraph" class="graph" transform="scale(.5215 .5215) rotate(0) translate(4 1338.3012)">
+<title>module~~sizingmanager~~UsesGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-1338.3012 1225.1304,-1338.3012 1225.1304,4 -4,4"/>
+<!-- module~sizingmanager -->
+<g id="module~~sizingmanager~~UsesGraph_node1" class="node">
+<title>module~sizingmanager</title>
+<polygon fill="none" stroke="#000000" points="1221.15,-464.2554 1139.0714,-464.2554 1139.0714,-442.2446 1221.15,-442.2446 1221.15,-464.2554"/>
+<text text-anchor="middle" x="1180.1107" y="-450.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">SizingManager</text>
+</g>
+<!-- module~datastringglobals -->
+<g id="module~~sizingmanager~~UsesGraph_node2" class="node">
+<title>module~datastringglobals</title>
+<g id="a_module~~sizingmanager~~UsesGraph_node2"><a xlink:href="../module/datastringglobals.html" xlink:title="DataStringGlobals">
+<polygon fill="#337ab7" stroke="#337ab7" points="246.2803,-1064.2554 148.8599,-1064.2554 148.8599,-1042.2446 246.2803,-1042.2446 246.2803,-1064.2554"/>
+<text text-anchor="middle" x="197.5701" y="-1050.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataStringGlobals</text>
+</a>
+</g>
+</g>
+<!-- module~datastringglobals&#45;&gt;module~sizingmanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge103" class="edge">
+<title>module~datastringglobals&#45;&gt;module~sizingmanager</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M202.8636,-1064.4245C221.1133,-1102.9282 280.3891,-1227.8107 282.175,-1229.25 292.9981,-1237.9721 512.5478,-1292.1327 525.5621,-1287.25"/>
+</g>
+<!-- module~datasystemvariables -->
+<g id="module~~sizingmanager~~UsesGraph_node14" class="node">
+<title>module~datasystemvariables</title>
+<g id="a_module~~sizingmanager~~UsesGraph_node14"><a xlink:href="../module/datasystemvariables.html" xlink:title="DataSystemVariables">
+<polygon fill="#337ab7" stroke="#337ab7" points="405.3487,-1064.2554 292.9768,-1064.2554 292.9768,-1042.2446 405.3487,-1042.2446 405.3487,-1064.2554"/>
+<text text-anchor="middle" x="349.1627" y="-1050.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataSystemVariables</text>
+</a>
+</g>
+</g>
+<!-- module~datastringglobals&#45;&gt;module~datasystemvariables -->
+<g id="module~~sizingmanager~~UsesGraph_edge4" class="edge">
+<title>module~datastringglobals&#45;&gt;module~datasystemvariables</title>
+<path fill="none" stroke="#0066ff" stroke-dasharray="5,2" d="M246.3694,-1053.25C257.9324,-1053.25 270.4596,-1053.25 282.6606,-1053.25"/>
+<polygon fill="#0066ff" stroke="#0066ff" points="282.8045,-1056.7501 292.8044,-1053.25 282.8044,-1049.7501 282.8045,-1056.7501"/>
+</g>
+<!-- module~inputprocessor -->
+<g id="module~~sizingmanager~~UsesGraph_node17" class="node">
+<title>module~inputprocessor</title>
+<g id="a_module~~sizingmanager~~UsesGraph_node17"><a xlink:href="../module/inputprocessor.html" xlink:title="InputProcessor">
+<polygon fill="#337ab7" stroke="#337ab7" points="566.6817,-829.2554 484.4426,-829.2554 484.4426,-807.2446 566.6817,-807.2446 566.6817,-829.2554"/>
+<text text-anchor="middle" x="525.5621" y="-815.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">InputProcessor</text>
+</a>
+</g>
+</g>
+<!-- module~datastringglobals&#45;&gt;module~inputprocessor -->
+<g id="module~~sizingmanager~~UsesGraph_edge28" class="edge">
+<title>module~datastringglobals&#45;&gt;module~inputprocessor</title>
+<path fill="none" stroke="#ff7f00" stroke-dasharray="5,2" d="M218.6316,-1042.1487C258.6592,-1020.6651 347.8194,-970.9479 416.1504,-919.25 450.7,-893.1104 486.9039,-857.9103 507.7894,-836.7151"/>
+<polygon fill="#ff7f00" stroke="#ff7f00" points="510.5239,-838.9245 515.0085,-829.3256 505.5168,-834.0328 510.5239,-838.9245"/>
+</g>
+<!-- module~weathermanager -->
+<g id="module~~sizingmanager~~UsesGraph_node3" class="node">
+<title>module~weathermanager</title>
+<g id="a_module~~sizingmanager~~UsesGraph_node3"><a xlink:href="../module/weathermanager.html" xlink:title="WeatherManager">
+<polygon fill="#337ab7" stroke="#337ab7" points="756.5808,-983.2554 663.7024,-983.2554 663.7024,-961.2446 756.5808,-961.2446 756.5808,-983.2554"/>
+<text text-anchor="middle" x="710.1416" y="-969.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">WeatherManager</text>
+</a>
+</g>
+</g>
+<!-- module~weathermanager&#45;&gt;module~sizingmanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge104" class="edge">
+<title>module~weathermanager&#45;&gt;module~sizingmanager</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M747.2516,-961.1289C759.513,-957.1323 773.1287,-952.3434 785.3093,-947.25 832.2945,-927.6031 836.7848,-900.7192 887.4177,-895.25"/>
+</g>
+<!-- module~dataglobals -->
+<g id="module~~sizingmanager~~UsesGraph_node4" class="node">
+<title>module~dataglobals</title>
+<g id="a_module~~sizingmanager~~UsesGraph_node4"><a xlink:href="../module/dataglobals.html" xlink:title="DataGlobals">
+<polygon fill="#337ab7" stroke="#337ab7" points="232.3512,-598.2554 162.789,-598.2554 162.789,-576.2446 232.3512,-576.2446 232.3512,-598.2554"/>
+<text text-anchor="middle" x="197.5701" y="-584.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataGlobals</text>
+</a>
+</g>
+</g>
+<!-- module~dataglobals&#45;&gt;module~sizingmanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge105" class="edge">
+<title>module~dataglobals&#45;&gt;module~sizingmanager</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M203.0415,-576.116C213.1732,-555.0177 234.8519,-507.5354 246.175,-465.25 274.9846,-357.6631 220.6185,-310.0709 282.175,-217.25 320.6316,-159.2616 358.8175,-175.6771 416.1504,-136.25 432.8521,-124.7645 433.962,-117.1969 452.1504,-108.25 482.3921,-93.374 492.8576,-97.3906 525.5621,-89.25"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M525.5621,-89.25C711.3908,-35.0088 807.7586,-42.8677 953.5261,-170.25 1050.1641,-254.6993 1136.6073,-384.162 1167.7865,-433.3541"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="1164.9885,-435.4797 1173.2721,-442.0852 1170.9157,-431.7557 1164.9885,-435.4797"/>
+</g>
+<!-- module~dataglobals&#45;&gt;module~weathermanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge12" class="edge">
+<title>module~dataglobals&#45;&gt;module~weathermanager</title>
+<path fill="none" stroke="#ffaa00" stroke-dasharray="5,2" d="M201.5844,-598.4645C210.0426,-622.1683 230.2302,-679.1378 246.175,-727.25 262.8899,-777.6854 244.0543,-804.2376 282.175,-841.25 326.5811,-884.3649 361.475,-850.2432 416.1504,-879.25 430.1815,-886.6939 510.6785,-965.7038 525.5621,-971.25"/>
+</g>
+<!-- module~datahvacglobals -->
+<g id="module~~sizingmanager~~UsesGraph_node5" class="node">
+<title>module~datahvacglobals</title>
+<g id="a_module~~sizingmanager~~UsesGraph_node5"><a xlink:href="../module/datahvacglobals.html" xlink:title="DataHVACGlobals">
+<polygon fill="#337ab7" stroke="#337ab7" points="398.3418,-1298.2554 299.9836,-1298.2554 299.9836,-1276.2446 398.3418,-1276.2446 398.3418,-1298.2554"/>
+<text text-anchor="middle" x="349.1627" y="-1284.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataHVACGlobals</text>
+</a>
+</g>
+</g>
+<!-- module~dataglobals&#45;&gt;module~datahvacglobals -->
+<g id="module~~sizingmanager~~UsesGraph_edge20" class="edge">
+<title>module~dataglobals&#45;&gt;module~datahvacglobals</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M202.654,-598.5765C212.9209,-622.0311 236.0145,-677.856 246.175,-727.25 268.7097,-836.7983 232.0838,-1129.2524 282.175,-1229.25 290.6764,-1246.2213 306.545,-1260.307 320.704,-1270.3459"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="318.9647,-1273.3939 329.2178,-1276.0633 322.8672,-1267.5827 318.9647,-1273.3939"/>
+</g>
+<!-- module~datasizing -->
+<g id="module~~sizingmanager~~UsesGraph_node6" class="node">
+<title>module~datasizing</title>
+<g id="a_module~~sizingmanager~~UsesGraph_node6"><a xlink:href="../module/datasizing.html" xlink:title="DataSizing">
+<polygon fill="#337ab7" stroke="#337ab7" points="380.4405,-832.2554 317.885,-832.2554 317.885,-810.2446 380.4405,-810.2446 380.4405,-832.2554"/>
+<text text-anchor="middle" x="349.1627" y="-818.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataSizing</text>
+</a>
+</g>
+</g>
+<!-- module~dataglobals&#45;&gt;module~datasizing -->
+<g id="module~~sizingmanager~~UsesGraph_edge22" class="edge">
+<title>module~dataglobals&#45;&gt;module~datasizing</title>
+<path fill="none" stroke="#00ffa9" stroke-dasharray="5,2" d="M201.3607,-598.3833C215.6438,-640.0866 266.2093,-785.4287 282.175,-800.25 289.3349,-806.8966 298.5784,-811.4398 307.8988,-814.5451"/>
+<polygon fill="#00ffa9" stroke="#00ffa9" points="306.9796,-817.9224 317.5555,-817.2886 308.8927,-811.1888 306.9796,-817.9224"/>
+</g>
+<!-- module~datazoneequipment -->
+<g id="module~~sizingmanager~~UsesGraph_node7" class="node">
+<title>module~datazoneequipment</title>
+<g id="a_module~~sizingmanager~~UsesGraph_node7"><a xlink:href="../module/datazoneequipment.html" xlink:title="DataZoneEquipment">
+<polygon fill="#337ab7" stroke="#337ab7" points="403.473,-1220.2554 294.8525,-1220.2554 294.8525,-1198.2446 403.473,-1198.2446 403.473,-1220.2554"/>
+<text text-anchor="middle" x="349.1627" y="-1206.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataZoneEquipment</text>
+</a>
+</g>
+</g>
+<!-- module~dataglobals&#45;&gt;module~datazoneequipment -->
+<g id="module~~sizingmanager~~UsesGraph_edge24" class="edge">
+<title>module~dataglobals&#45;&gt;module~datazoneequipment</title>
+<path fill="none" stroke="#00a9ff" stroke-dasharray="5,2" d="M202.6006,-598.5877C212.7692,-622.0628 235.6909,-677.9236 246.175,-727.25 265.8346,-819.745 239.2701,-1066.9826 282.175,-1151.25 290.8453,-1168.2788 306.8735,-1182.4378 321.0777,-1192.5026"/>
+<polygon fill="#00a9ff" stroke="#00a9ff" points="319.3512,-1195.5592 329.604,-1198.2294 323.2542,-1189.7482 319.3512,-1195.5592"/>
+</g>
+<!-- module~heatbalancemanager -->
+<g id="module~~sizingmanager~~UsesGraph_node8" class="node">
+<title>module~heatbalancemanager</title>
+<g id="a_module~~sizingmanager~~UsesGraph_node8"><a xlink:href="../module/heatbalancemanager.html" xlink:title="HeatBalanceManager">
+<polygon fill="#337ab7" stroke="#337ab7" points="1102.8744,-464.2554 989.7428,-464.2554 989.7428,-442.2446 1102.8744,-442.2446 1102.8744,-464.2554"/>
+<text text-anchor="middle" x="1046.3086" y="-450.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">HeatBalanceManager</text>
+</a>
+</g>
+</g>
+<!-- module~dataglobals&#45;&gt;module~heatbalancemanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge89" class="edge">
+<title>module~dataglobals&#45;&gt;module~heatbalancemanager</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M710.1416,-473.25C788.8128,-468.9362 809.6699,-486.0189 887.4177,-473.25"/>
+</g>
+<!-- module~dataenvironment -->
+<g id="module~~sizingmanager~~UsesGraph_node12" class="node">
+<title>module~dataenvironment</title>
+<g id="a_module~~sizingmanager~~UsesGraph_node12"><a xlink:href="../module/dataenvironment.html" xlink:title="DataEnvironment">
+<polygon fill="#337ab7" stroke="#337ab7" points="395.7866,-637.2554 302.5389,-637.2554 302.5389,-615.2446 395.7866,-615.2446 395.7866,-637.2554"/>
+<text text-anchor="middle" x="349.1627" y="-623.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataEnvironment</text>
+</a>
+</g>
+</g>
+<!-- module~dataglobals&#45;&gt;module~dataenvironment -->
+<g id="module~~sizingmanager~~UsesGraph_edge2" class="edge">
+<title>module~dataglobals&#45;&gt;module~dataenvironment</title>
+<path fill="none" stroke="#cbff00" stroke-dasharray="5,2" d="M232.7295,-596.2954C251.6817,-601.1712 275.4464,-607.2851 296.5556,-612.7159"/>
+<polygon fill="#cbff00" stroke="#cbff00" points="295.7988,-616.135 306.3555,-615.237 297.5429,-609.3558 295.7988,-616.135"/>
+</g>
+<!-- module~psychrometrics -->
+<g id="module~~sizingmanager~~UsesGraph_node15" class="node">
+<title>module~psychrometrics</title>
+<g id="a_module~~sizingmanager~~UsesGraph_node15"><a xlink:href="../module/psychrometrics.html" xlink:title="Psychrometrics">
+<polygon fill="#337ab7" stroke="#337ab7" points="567.3244,-1021.2554 483.7998,-1021.2554 483.7998,-999.2446 567.3244,-999.2446 567.3244,-1021.2554"/>
+<text text-anchor="middle" x="525.5621" y="-1007.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Psychrometrics</text>
+</a>
+</g>
+</g>
+<!-- module~dataglobals&#45;&gt;module~psychrometrics -->
+<g id="module~~sizingmanager~~UsesGraph_edge7" class="edge">
+<title>module~dataglobals&#45;&gt;module~psychrometrics</title>
+<path fill="none" stroke="#cc00ff" stroke-dasharray="5,2" d="M202.0507,-598.3254C211.3917,-621.7659 233.1569,-678.2648 246.175,-727.25 268.4742,-811.1578 226.7176,-852.4499 282.175,-919.25 329.7831,-976.5953 417.3146,-997.8245 473.4088,-1005.6696"/>
+<polygon fill="#cc00ff" stroke="#cc00ff" points="473.1318,-1009.163 483.5002,-1006.9844 474.0363,-1002.2217 473.1318,-1009.163"/>
+</g>
+<!-- module~datawindowequivalentlayer -->
+<g id="module~~sizingmanager~~UsesGraph_node16" class="node">
+<title>module~datawindowequivalentlayer</title>
+<g id="a_module~~sizingmanager~~UsesGraph_node16"><a xlink:href="../module/datawindowequivalentlayer.html" xlink:title="DataWindowEquivalentLayer">
+<polygon fill="#337ab7" stroke="#337ab7" points="598.8857,-407.2554 452.2385,-407.2554 452.2385,-385.2446 598.8857,-385.2446 598.8857,-407.2554"/>
+<text text-anchor="middle" x="525.5621" y="-393.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataWindowEquivalentLayer</text>
+</a>
+</g>
+</g>
+<!-- module~dataglobals&#45;&gt;module~datawindowequivalentlayer -->
+<g id="module~~sizingmanager~~UsesGraph_edge26" class="edge">
+<title>module~dataglobals&#45;&gt;module~datawindowequivalentlayer</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M349.1627,-549.25C386.9971,-539.4149 391.9509,-522.951 416.1504,-492.25 438.0522,-464.4639 425.4323,-444.4426 452.1504,-421.25 456.408,-417.5542 461.2371,-414.3985 466.3366,-411.7052"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="468.1456,-414.7242 475.7429,-407.3397 465.1988,-408.3747 468.1456,-414.7242"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M232.536,-578.6684C263.2897,-571.0769 309.248,-559.6259 349.1627,-549.25"/>
+</g>
+<!-- module~dataglobals&#45;&gt;module~inputprocessor -->
+<g id="module~~sizingmanager~~UsesGraph_edge29" class="edge">
+<title>module~dataglobals&#45;&gt;module~inputprocessor</title>
+<path fill="none" stroke="#ff7f00" stroke-dasharray="5,2" d="M212.9564,-598.4317C229.7551,-610.5328 257.5517,-630.245 282.175,-646.25 340.5153,-684.1706 368.0543,-676.9676 416.1504,-727.25 439.2463,-751.3958 426.5911,-771.7287 452.1504,-793.25 458.7386,-798.7974 466.6181,-803.1334 474.7321,-806.517"/>
+<polygon fill="#ff7f00" stroke="#ff7f00" points="473.7088,-809.8704 484.3018,-810.0672 476.1436,-803.3075 473.7088,-809.8704"/>
+</g>
+<!-- module~dataroomairmodel -->
+<g id="module~~sizingmanager~~UsesGraph_node18" class="node">
+<title>module~dataroomairmodel</title>
+<g id="a_module~~sizingmanager~~UsesGraph_node18"><a xlink:href="../module/dataroomairmodel.html" xlink:title="DataRoomAirModel">
+<polygon fill="#337ab7" stroke="#337ab7" points="400.7821,-910.2554 297.5434,-910.2554 297.5434,-888.2446 400.7821,-888.2446 400.7821,-910.2554"/>
+<text text-anchor="middle" x="349.1627" y="-896.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataRoomAirModel</text>
+</a>
+</g>
+</g>
+<!-- module~dataglobals&#45;&gt;module~dataroomairmodel -->
+<g id="module~~sizingmanager~~UsesGraph_edge35" class="edge">
+<title>module~dataglobals&#45;&gt;module~dataroomairmodel</title>
+<path fill="none" stroke="#ffff00" stroke-dasharray="5,2" d="M201.8376,-598.3851C210.7751,-621.9389 231.8192,-678.64 246.175,-727.25 265.2265,-791.7596 237.475,-823.9872 282.175,-874.25 285.2273,-877.6821 288.7965,-880.6443 292.6696,-883.2007"/>
+<polygon fill="#ffff00" stroke="#ffff00" points="291.1158,-886.342 301.551,-888.1741 294.5359,-880.2344 291.1158,-886.342"/>
+</g>
+<!-- module~dataipshortcuts -->
+<g id="module~~sizingmanager~~UsesGraph_node19" class="node">
+<title>module~dataipshortcuts</title>
+<g id="a_module~~sizingmanager~~UsesGraph_node19"><a xlink:href="../module/dataipshortcuts.html" xlink:title="DataIPShortCuts">
+<polygon fill="#337ab7" stroke="#337ab7" points="394.4489,-442.2554 303.8766,-442.2554 303.8766,-420.2446 394.4489,-420.2446 394.4489,-442.2554"/>
+<text text-anchor="middle" x="349.1627" y="-428.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataIPShortCuts</text>
+</a>
+</g>
+</g>
+<!-- module~dataglobals&#45;&gt;module~dataipshortcuts -->
+<g id="module~~sizingmanager~~UsesGraph_edge37" class="edge">
+<title>module~dataglobals&#45;&gt;module~dataipshortcuts</title>
+<path fill="none" stroke="#7fff00" stroke-dasharray="5,2" d="M201.5134,-575.9378C211.1082,-550.0707 238.1653,-486.2218 282.175,-452.25 285.9558,-449.3316 290.1488,-446.8145 294.5391,-444.6444"/>
+<polygon fill="#7fff00" stroke="#7fff00" points="295.9684,-447.8397 303.7593,-440.6597 293.1914,-441.4141 295.9684,-447.8397"/>
+</g>
+<!-- module~schedulemanager -->
+<g id="module~~sizingmanager~~UsesGraph_node20" class="node">
+<title>module~schedulemanager</title>
+<g id="a_module~~sizingmanager~~UsesGraph_node20"><a xlink:href="../module/schedulemanager.html" xlink:title="ScheduleManager">
+<polygon fill="#337ab7" stroke="#337ab7" points="574.2877,-599.2554 476.8365,-599.2554 476.8365,-577.2446 574.2877,-577.2446 574.2877,-599.2554"/>
+<text text-anchor="middle" x="525.5621" y="-585.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">ScheduleManager</text>
+</a>
+</g>
+</g>
+<!-- module~dataglobals&#45;&gt;module~schedulemanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge41" class="edge">
+<title>module~dataglobals&#45;&gt;module~schedulemanager</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M349.1627,-549.25C373.9974,-542.7942 439.1491,-560.5235 482.9341,-574.1589"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="481.8855,-577.4981 492.4752,-577.1702 483.9924,-570.8226 481.8855,-577.4981"/>
+</g>
+<!-- module~dataheatbalance -->
+<g id="module~~sizingmanager~~UsesGraph_node22" class="node">
+<title>module~dataheatbalance</title>
+<g id="a_module~~sizingmanager~~UsesGraph_node22"><a xlink:href="../module/dataheatbalance.html" xlink:title="DataHeatBalance">
+<polygon fill="#337ab7" stroke="#337ab7" points="757.4451,-445.2554 662.8381,-445.2554 662.8381,-423.2446 757.4451,-423.2446 757.4451,-445.2554"/>
+<text text-anchor="middle" x="710.1416" y="-431.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataHeatBalance</text>
+</a>
+</g>
+</g>
+<!-- module~dataglobals&#45;&gt;module~dataheatbalance -->
+<g id="module~~sizingmanager~~UsesGraph_edge51" class="edge">
+<title>module~dataglobals&#45;&gt;module~dataheatbalance</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M349.1627,-549.25C379.7709,-541.2933 388.435,-540.4824 416.1504,-525.25 433.9141,-515.4871 434.2515,-506.7628 452.1504,-497.25 482.4621,-481.1402 492.3543,-481.943 525.5621,-473.25"/>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M525.5621,-473.25C567.8466,-462.1809 616.2056,-452.054 652.8148,-444.8951"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="653.6631,-448.2959 662.814,-442.9563 652.3306,-441.4239 653.6631,-448.2959"/>
+</g>
+<!-- module~windowmanager -->
+<g id="module~~sizingmanager~~UsesGraph_node23" class="node">
+<title>module~windowmanager</title>
+<g id="a_module~~sizingmanager~~UsesGraph_node23"><a xlink:href="../module/windowmanager.html" xlink:title="WindowManager">
+<polygon fill="#337ab7" stroke="#337ab7" points="932.7039,-598.2554 842.1316,-598.2554 842.1316,-576.2446 932.7039,-576.2446 932.7039,-598.2554"/>
+<text text-anchor="middle" x="887.4177" y="-584.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">WindowManager</text>
+</a>
+</g>
+</g>
+<!-- module~dataglobals&#45;&gt;module~windowmanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge57" class="edge">
+<title>module~dataglobals&#45;&gt;module~windowmanager</title>
+<path fill="none" stroke="#007fff" stroke-dasharray="5,2" d="M349.1627,-549.25C524.9952,-503.5419 743.3202,-548.8941 838.8491,-573.5719"/>
+<polygon fill="#007fff" stroke="#007fff" points="838.2335,-577.0288 848.7944,-576.1817 840.0103,-570.258 838.2335,-577.0288"/>
+</g>
+<!-- module~windowcomplexmanager -->
+<g id="module~~sizingmanager~~UsesGraph_node24" class="node">
+<title>module~windowcomplexmanager</title>
+<g id="a_module~~sizingmanager~~UsesGraph_node24"><a xlink:href="../module/windowcomplexmanager.html" xlink:title="WindowComplexManager">
+<polygon fill="#337ab7" stroke="#337ab7" points="953.6347,-445.2554 821.2007,-445.2554 821.2007,-423.2446 953.6347,-423.2446 953.6347,-445.2554"/>
+<text text-anchor="middle" x="887.4177" y="-431.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">WindowComplexManager</text>
+</a>
+</g>
+</g>
+<!-- module~dataglobals&#45;&gt;module~windowcomplexmanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge69" class="edge">
+<title>module~dataglobals&#45;&gt;module~windowcomplexmanager</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M525.5621,-473.25C604.9233,-452.4751 628.2293,-477.7415 710.1416,-473.25"/>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M710.1416,-473.25C756.1069,-470.7296 807.3377,-458.3867 842.8579,-448.2519"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="844.2756,-451.4844 852.8973,-445.3267 842.3174,-444.7639 844.2756,-451.4844"/>
+</g>
+<!-- module~datacontaminantbalance -->
+<g id="module~~sizingmanager~~UsesGraph_node26" class="node">
+<title>module~datacontaminantbalance</title>
+<g id="a_module~~sizingmanager~~UsesGraph_node26"><a xlink:href="../module/datacontaminantbalance.html" xlink:title="DataContaminantBalance">
+<polygon fill="#337ab7" stroke="#337ab7" points="775.8,-100.2554 644.4832,-100.2554 644.4832,-78.2446 775.8,-78.2446 775.8,-100.2554"/>
+<text text-anchor="middle" x="710.1416" y="-86.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataContaminantBalance</text>
+</a>
+</g>
+</g>
+<!-- module~dataglobals&#45;&gt;module~datacontaminantbalance -->
+<g id="module~~sizingmanager~~UsesGraph_edge80" class="edge">
+<title>module~dataglobals&#45;&gt;module~datacontaminantbalance</title>
+<path fill="none" stroke="#ff00ff" stroke-dasharray="5,2" d="M525.5621,-89.25C560.5065,-80.5519 600.3388,-79.4901 634.0343,-81.0365"/>
+<polygon fill="#ff00ff" stroke="#ff00ff" points="634.1068,-84.5456 644.2824,-81.5946 634.4875,-77.5559 634.1068,-84.5456"/>
+</g>
+<!-- module~datasurfaces -->
+<g id="module~~sizingmanager~~UsesGraph_node27" class="node">
+<title>module~datasurfaces</title>
+<g id="a_module~~sizingmanager~~UsesGraph_node27"><a xlink:href="../module/datasurfaces.html" xlink:title="DataSurfaces">
+<polygon fill="#337ab7" stroke="#337ab7" points="563.1783,-139.2554 487.9459,-139.2554 487.9459,-117.2446 563.1783,-117.2446 563.1783,-139.2554"/>
+<text text-anchor="middle" x="525.5621" y="-125.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataSurfaces</text>
+</a>
+</g>
+</g>
+<!-- module~dataglobals&#45;&gt;module~datasurfaces -->
+<g id="module~~sizingmanager~~UsesGraph_edge84" class="edge">
+<title>module~dataglobals&#45;&gt;module~datasurfaces</title>
+<path fill="none" stroke="#ff007f" stroke-dasharray="5,2" d="M202.0346,-575.7667C215.7202,-540.9758 257.6412,-437.5092 282.175,-411.25 328.911,-361.2275 368.4692,-384.3723 416.1504,-335.25 416.379,-335.0145 487.5533,-200.2363 514.9693,-148.3129"/>
+<polygon fill="#ff007f" stroke="#ff007f" points="518.12,-149.8416 519.6941,-139.3643 511.9299,-146.5732 518.12,-149.8416"/>
+</g>
+<!-- module~databsdfwindow -->
+<g id="module~~sizingmanager~~UsesGraph_node28" class="node">
+<title>module~databsdfwindow</title>
+<g id="a_module~~sizingmanager~~UsesGraph_node28"><a xlink:href="../module/databsdfwindow.html" xlink:title="DataBSDFWindow">
+<polygon fill="#337ab7" stroke="#337ab7" points="398.6912,-248.2554 299.6343,-248.2554 299.6343,-226.2446 398.6912,-226.2446 398.6912,-248.2554"/>
+<text text-anchor="middle" x="349.1627" y="-234.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataBSDFWindow</text>
+</a>
+</g>
+</g>
+<!-- module~dataglobals&#45;&gt;module~databsdfwindow -->
+<g id="module~~sizingmanager~~UsesGraph_edge45" class="edge">
+<title>module~dataglobals&#45;&gt;module~databsdfwindow</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M202.9174,-576.0818C212.8423,-554.9263 234.1902,-507.3527 246.175,-465.25 271.2615,-377.121 223.5276,-332.6526 282.175,-262.25 284.9459,-258.9238 288.205,-256.0398 291.7679,-253.5394"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="293.7028,-256.4619 300.5459,-248.3735 290.1524,-250.4291 293.7028,-256.4619"/>
+</g>
+<!-- module~datacomplexfenestration -->
+<g id="module~~sizingmanager~~UsesGraph_node29" class="node">
+<title>module~datacomplexfenestration</title>
+<g id="a_module~~sizingmanager~~UsesGraph_node29"><a xlink:href="../module/datacomplexfenestration.html" xlink:title="DataComplexFenestration">
+<polygon fill="#337ab7" stroke="#337ab7" points="416.1381,-483.2554 282.1874,-483.2554 282.1874,-461.2446 416.1381,-461.2446 416.1381,-483.2554"/>
+<text text-anchor="middle" x="349.1627" y="-469.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataComplexFenestration</text>
+</a>
+</g>
+</g>
+<!-- module~dataglobals&#45;&gt;module~datacomplexfenestration -->
+<g id="module~~sizingmanager~~UsesGraph_edge47" class="edge">
+<title>module~dataglobals&#45;&gt;module~datacomplexfenestration</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M212.1054,-576.2233C238.5231,-556.1825 294.5958,-513.6451 326.2217,-489.6533"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="328.597,-492.2446 334.4486,-483.4123 324.3663,-486.6677 328.597,-492.2446"/>
+</g>
+<!-- module~vectors -->
+<g id="module~~sizingmanager~~UsesGraph_node32" class="node">
+<title>module~vectors</title>
+<g id="a_module~~sizingmanager~~UsesGraph_node32"><a xlink:href="../module/vectors.html" xlink:title="vectors">
+<polygon fill="#337ab7" stroke="#337ab7" points="376.1627,-326.2554 322.1627,-326.2554 322.1627,-304.2446 376.1627,-304.2446 376.1627,-326.2554"/>
+<text text-anchor="middle" x="349.1627" y="-312.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">vectors</text>
+</a>
+</g>
+</g>
+<!-- module~dataglobals&#45;&gt;module~vectors -->
+<g id="module~~sizingmanager~~UsesGraph_edge65" class="edge">
+<title>module~dataglobals&#45;&gt;module~vectors</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M202.5067,-575.9531C211.747,-554.5832 231.9995,-506.6665 246.175,-465.25 264.8966,-410.5515 242.8938,-382.6694 282.175,-340.25 290.1177,-331.6729 301.2815,-326.0231 312.2219,-322.3076"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="313.4954,-325.5817 322.1076,-319.4107 311.5269,-318.8641 313.4954,-325.5817"/>
+</g>
+<!-- module~datahvacglobals&#45;&gt;module~sizingmanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge106" class="edge">
+<title>module~datahvacglobals&#45;&gt;module~sizingmanager</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M398.3446,-1296.29C434.6742,-1300.8432 484.7027,-1302.5797 525.5621,-1287.25"/>
+</g>
+<!-- module~datasizing&#45;&gt;module~sizingmanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge107" class="edge">
+<title>module~datasizing&#45;&gt;module~sizingmanager</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M380.7363,-826.0266C392.2338,-828.4735 405.1107,-832.0665 416.1504,-837.25 434.2541,-845.7503 433.4135,-857.2551 452.1504,-864.25 633.844,-932.0807 710.2349,-974.1157 887.4177,-895.25"/>
+</g>
+<!-- module~datasizing&#45;&gt;module~inputprocessor -->
+<g id="module~~sizingmanager~~UsesGraph_edge32" class="edge">
+<title>module~datasizing&#45;&gt;module~inputprocessor</title>
+<path fill="none" stroke="#ff7f00" stroke-dasharray="5,2" d="M380.6994,-820.7137C406.5844,-820.2734 443.7611,-819.6412 473.9713,-819.1274"/>
+<polygon fill="#ff7f00" stroke="#ff7f00" points="474.3975,-822.6208 484.3365,-818.9511 474.2784,-815.6218 474.3975,-822.6208"/>
+</g>
+<!-- module~datazoneequipment&#45;&gt;module~sizingmanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge108" class="edge">
+<title>module~datazoneequipment&#45;&gt;module~sizingmanager</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M525.5621,-1287.25C579.3021,-1262.2371 833.8904,-920.7148 887.4177,-895.25"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M380.7569,-1220.3483C392.0189,-1224.4862 404.7371,-1229.3687 416.1504,-1234.25 465.8298,-1255.4973 474.9731,-1306.2301 525.5621,-1287.25"/>
+</g>
+<!-- module~heatbalancemanager&#45;&gt;module~sizingmanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge109" class="edge">
+<title>module~heatbalancemanager&#45;&gt;module~sizingmanager</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1103.0527,-453.25C1111.5598,-453.25 1120.2912,-453.25 1128.6793,-453.25"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="1128.7027,-456.7501 1138.7026,-453.25 1128.7026,-449.7501 1128.7027,-456.7501"/>
+</g>
+<!-- module~datainterfaces -->
+<g id="module~~sizingmanager~~UsesGraph_node9" class="node">
+<title>module~datainterfaces</title>
+<g id="a_module~~sizingmanager~~UsesGraph_node9"><a xlink:href="../module/datainterfaces.html" xlink:title="DataInterfaces">
+<polygon fill="#337ab7" stroke="#337ab7" points="389.4491,-791.2554 308.8763,-791.2554 308.8763,-769.2446 389.4491,-769.2446 389.4491,-791.2554"/>
+<text text-anchor="middle" x="349.1627" y="-777.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataInterfaces</text>
+</a>
+</g>
+</g>
+<!-- module~datainterfaces&#45;&gt;module~sizingmanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge110" class="edge">
+<title>module~datainterfaces&#45;&gt;module~sizingmanager</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M710.1416,-857.25C790.51,-863.0738 807.3046,-903.9036 887.4177,-895.25"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M887.4177,-895.25C1089.7082,-873.3991 1160.8915,-559.664 1176.5493,-474.4657"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="1180.0309,-474.8765 1178.3293,-464.4192 1173.1383,-473.6552 1180.0309,-474.8765"/>
+</g>
+<!-- module~datainterfaces&#45;&gt;module~weathermanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge17" class="edge">
+<title>module~datainterfaces&#45;&gt;module~weathermanager</title>
+<path fill="none" stroke="#ffaa00" stroke-dasharray="5,2" d="M525.5621,-971.25C566.3222,-986.4386 615.751,-985.8015 653.1963,-981.851"/>
+<polygon fill="#ffaa00" stroke="#ffaa00" points="653.8953,-985.2934 663.4229,-980.6593 653.085,-978.3404 653.8953,-985.2934"/>
+<path fill="none" stroke="#ffaa00" stroke-dasharray="5,2" d="M389.3388,-787.2457C398.8847,-790.3455 408.5051,-794.8133 416.1504,-801.25 442.9127,-823.7818 433.7414,-841.5009 452.1504,-871.25 481.1628,-918.1343 473.8977,-951.998 525.5621,-971.25"/>
+</g>
+<!-- module~datainterfaces&#45;&gt;module~heatbalancemanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge99" class="edge">
+<title>module~datainterfaces&#45;&gt;module~heatbalancemanager</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M710.1416,-857.25C788.8187,-861.4542 820.4022,-898.6829 887.4177,-857.25"/>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M389.5394,-789.3656C398.6712,-792.3743 408.053,-796.2694 416.1504,-801.25 435.6933,-813.2706 431.3559,-828.5541 452.1504,-838.25 556.3529,-886.8369 595.3321,-851.1151 710.1416,-857.25"/>
+</g>
+<!-- module~datainterfaces&#45;&gt;module~psychrometrics -->
+<g id="module~~sizingmanager~~UsesGraph_edge9" class="edge">
+<title>module~datainterfaces&#45;&gt;module~psychrometrics</title>
+<path fill="none" stroke="#cc00ff" stroke-dasharray="5,2" d="M389.6508,-785.5097C399.5348,-788.6227 409.241,-793.531 416.1504,-801.25 471.7264,-863.338 397.3373,-922.4875 452.1504,-985.25 458.0061,-991.9549 465.7338,-996.864 473.9762,-1000.4577"/>
+<polygon fill="#cc00ff" stroke="#cc00ff" points="472.8356,-1003.7678 483.4282,-1003.9818 475.281,-997.2088 472.8356,-1003.7678"/>
+</g>
+<!-- module~datainterfaces&#45;&gt;module~inputprocessor -->
+<g id="module~~sizingmanager~~UsesGraph_edge33" class="edge">
+<title>module~datainterfaces&#45;&gt;module~inputprocessor</title>
+<path fill="none" stroke="#ff7f00" stroke-dasharray="5,2" d="M389.6323,-788.968C414.7966,-794.3889 447.3787,-801.4077 474.3349,-807.2146"/>
+<polygon fill="#ff7f00" stroke="#ff7f00" points="473.8507,-810.6905 484.3635,-809.375 475.3248,-803.8475 473.8507,-810.6905"/>
+</g>
+<!-- module~datainterfaces&#45;&gt;module~schedulemanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge40" class="edge">
+<title>module~datainterfaces&#45;&gt;module~schedulemanager</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M389.471,-772.2036C399.3553,-768.5011 409.1066,-763.1059 416.1504,-755.25 459.6146,-706.7745 407.9886,-661.0909 452.1504,-613.25 456.5254,-608.5105 461.8337,-604.6694 467.573,-601.5564"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="469.2771,-604.6242 476.8742,-597.2394 466.33,-598.2747 469.2771,-604.6242"/>
+</g>
+<!-- module~datainterfaces&#45;&gt;module~windowmanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge61" class="edge">
+<title>module~datainterfaces&#45;&gt;module~windowmanager</title>
+<path fill="none" stroke="#007fff" stroke-dasharray="5,2" d="M389.478,-778.6958C425.2518,-777.6327 478.9221,-776.811 525.5621,-779.25"/>
+</g>
+<!-- module~datainterfaces&#45;&gt;module~windowcomplexmanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge75" class="edge">
+<title>module~datainterfaces&#45;&gt;module~windowcomplexmanager</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M382.7677,-769.2023C393.6172,-765.2429 405.5699,-760.4576 416.1504,-755.25 590.8674,-669.2569 650.3429,-659.6242 785.3093,-519.25 806.8632,-496.8325 797.4432,-479.1879 821.3093,-459.25 825.7735,-455.5206 830.8512,-452.3152 836.1623,-449.5675"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="837.6458,-452.7376 845.2535,-445.3638 834.7079,-446.384 837.6458,-452.7376"/>
+</g>
+<!-- module~dataprecisionglobals -->
+<g id="module~~sizingmanager~~UsesGraph_node10" class="node">
+<title>module~dataprecisionglobals</title>
+<g id="a_module~~sizingmanager~~UsesGraph_node10"><a xlink:href="../module/dataprecisionglobals.html" xlink:title="DataPrecisionGlobals">
+<polygon fill="#337ab7" stroke="#337ab7" points="112.9476,-521.2554 .0175,-521.2554 .0175,-499.2446 112.9476,-499.2446 112.9476,-521.2554"/>
+<text text-anchor="middle" x="56.4825" y="-507.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataPrecisionGlobals</text>
+</a>
+</g>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~sizingmanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge111" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~sizingmanager</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M197.5701,-1170.25C247.8656,-1221.1592 219.6757,-1272.3901 282.175,-1307.25 376.9641,-1360.1199 423.8889,-1325.2338 525.5621,-1287.25"/>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~weathermanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge18" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~weathermanager</title>
+<path fill="none" stroke="#ffaa00" stroke-dasharray="5,2" d="M197.5701,-1170.25C229.1543,-1201.853 564.7066,-1174.9216 598.9739,-1146.25 651.2243,-1102.5319 588.8658,-1047.4041 634.9739,-997.25 640.2749,-991.4838 646.9377,-987.0459 654.0938,-983.6306"/>
+<polygon fill="#ffaa00" stroke="#ffaa00" points="655.4348,-986.8636 663.3569,-979.8286 652.7768,-980.3879 655.4348,-986.8636"/>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~dataglobals -->
+<g id="module~~sizingmanager~~UsesGraph_edge19" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~dataglobals</title>
+<path fill="none" stroke="#aaff00" stroke-dasharray="5,2" d="M76.6969,-521.2822C100.6889,-534.3761 140.887,-556.3146 168.284,-571.2668"/>
+<polygon fill="#aaff00" stroke="#aaff00" points="166.9386,-574.5198 177.3932,-576.2382 170.2921,-568.3754 166.9386,-574.5198"/>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~datahvacglobals -->
+<g id="module~~sizingmanager~~UsesGraph_edge21" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~datahvacglobals</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M197.5701,-1170.25C236.8383,-1209.5416 236.0848,-1231.2416 282.175,-1262.25 287.8494,-1266.0675 294.1839,-1269.3998 300.6317,-1272.2789"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="299.5163,-1275.6047 310.0957,-1276.1765 302.182,-1269.1321 299.5163,-1275.6047"/>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~datasizing -->
+<g id="module~~sizingmanager~~UsesGraph_edge23" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~datasizing</title>
+<path fill="none" stroke="#00ffa9" stroke-dasharray="5,2" d="M197.5701,-741.25C232.857,-770.5137 241.0242,-780.0476 282.175,-800.25 290.283,-804.2305 299.3105,-807.6662 308.0456,-810.5391"/>
+<polygon fill="#00ffa9" stroke="#00ffa9" points="307.1309,-813.9198 317.7191,-813.5424 309.2066,-807.2346 307.1309,-813.9198"/>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~datazoneequipment -->
+<g id="module~~sizingmanager~~UsesGraph_edge25" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~datazoneequipment</title>
+<path fill="none" stroke="#00a9ff" stroke-dasharray="5,2" d="M197.5701,-1170.25C220.352,-1193.0454 254.559,-1203.0903 284.7164,-1207.306"/>
+<polygon fill="#00a9ff" stroke="#00a9ff" points="284.418,-1210.7954 294.7661,-1208.5223 285.2591,-1203.8461 284.418,-1210.7954"/>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~heatbalancemanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge101" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~heatbalancemanager</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M197.5701,-741.25C279.7176,-812.1332 204.8961,-894.0883 282.175,-970.25 333.2077,-1020.5449 538.6195,-1068.8667 598.9739,-1030.25 631.135,-1009.6723 605.5997,-976.6413 634.9739,-952.25 661.4843,-930.2366 677.755,-945.0187 710.1416,-933.25"/>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~datainterfaces -->
+<g id="module~~sizingmanager~~UsesGraph_edge102" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~datainterfaces</title>
+<path fill="none" stroke="#aa00ff" stroke-dasharray="5,2" d="M197.5701,-741.25C225.8828,-764.73 266.6331,-774.2835 298.7546,-778.0733"/>
+<polygon fill="#aa00ff" stroke="#aa00ff" points="298.5481,-781.5705 308.8537,-779.1116 299.2641,-774.6072 298.5481,-781.5705"/>
+</g>
+<!-- module~general -->
+<g id="module~~sizingmanager~~UsesGraph_node11" class="node">
+<title>module~general</title>
+<g id="a_module~~sizingmanager~~UsesGraph_node11"><a xlink:href="../module/general.html" xlink:title="General">
+<polygon fill="#337ab7" stroke="#337ab7" points="376.1627,-1142.2554 322.1627,-1142.2554 322.1627,-1120.2446 376.1627,-1120.2446 376.1627,-1142.2554"/>
+<text text-anchor="middle" x="349.1627" y="-1128.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">General</text>
+</a>
+</g>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~general -->
+<g id="module~~sizingmanager~~UsesGraph_edge1" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~general</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M197.5701,-1170.25C205.7508,-1178.4356 270.1644,-1158.4599 312.3533,-1144.176"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="313.7008,-1147.4143 322.0311,-1140.8678 311.4365,-1140.7906 313.7008,-1147.4143"/>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~dataenvironment -->
+<g id="module~~sizingmanager~~UsesGraph_edge3" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~dataenvironment</title>
+<path fill="none" stroke="#cbff00" stroke-dasharray="5,2" d="M197.5701,-741.25C239.8284,-776.2952 236.4577,-681.6449 282.175,-651.25 287.8702,-647.4636 294.2166,-644.1491 300.6701,-641.2787"/>
+<polygon fill="#cbff00" stroke="#cbff00" points="302.2195,-644.426 310.1387,-637.3877 299.5588,-637.9514 302.2195,-644.426"/>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~datasystemvariables -->
+<g id="module~~sizingmanager~~UsesGraph_edge5" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~datasystemvariables</title>
+<path fill="none" stroke="#0066ff" stroke-dasharray="5,2" d="M197.5701,-741.25C299.9324,-826.1399 191.5157,-930.9606 282.175,-1028.25 285.3551,-1031.6627 289.045,-1034.6121 293.0265,-1037.1608"/>
+<polygon fill="#0066ff" stroke="#0066ff" points="291.669,-1040.4072 302.1238,-1042.1245 295.0218,-1034.2624 291.669,-1040.4072"/>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~psychrometrics -->
+<g id="module~~sizingmanager~~UsesGraph_edge10" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~psychrometrics</title>
+<path fill="none" stroke="#cc00ff" stroke-dasharray="5,2" d="M57.2458,-521.3775C62.8732,-600.1319 100.4535,-1073.0757 197.5701,-1170.25"/>
+<path fill="none" stroke="#cc00ff" stroke-dasharray="5,2" d="M197.5701,-1170.25C229.976,-1202.6751 240.7512,-1130.8865 282.175,-1111.25 338.1028,-1084.7381 359.1285,-1097.3187 416.1504,-1073.25 446.542,-1060.4218 479.0141,-1040.903 500.6167,-1026.9939"/>
+<polygon fill="#cc00ff" stroke="#cc00ff" points="502.7092,-1029.8078 509.1717,-1021.4122 498.8841,-1023.9452 502.7092,-1029.8078"/>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~datawindowequivalentlayer -->
+<g id="module~~sizingmanager~~UsesGraph_edge27" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~datawindowequivalentlayer</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M197.5701,-451.25C237.479,-439.5346 241.8916,-421.6046 282.175,-411.25 334.1259,-397.8964 394.2723,-394.0867 441.7758,-393.6448"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="442.0358,-397.1438 452.0202,-393.5995 442.0048,-390.1439 442.0358,-397.1438"/>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~inputprocessor -->
+<g id="module~~sizingmanager~~UsesGraph_edge34" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~inputprocessor</title>
+<path fill="none" stroke="#ff7f00" stroke-dasharray="5,2" d="M349.1627,-741.25C379.7261,-746.1056 389.1292,-745.1652 416.1504,-760.25 435.1023,-770.83 433.4791,-782.1822 452.1504,-793.25 459.1493,-797.3988 466.9346,-800.9819 474.745,-804.0353"/>
+<polygon fill="#ff7f00" stroke="#ff7f00" points="473.6394,-807.3575 484.2333,-807.4994 476.0401,-800.782 473.6394,-807.3575"/>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~dataroomairmodel -->
+<g id="module~~sizingmanager~~UsesGraph_edge36" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~dataroomairmodel</title>
+<path fill="none" stroke="#ffff00" stroke-dasharray="5,2" d="M197.5701,-741.25C251.4963,-785.9715 227.7318,-830.1594 282.175,-874.25 286.81,-878.0036 292.0647,-881.2288 297.5434,-883.9918"/>
+<polygon fill="#ffff00" stroke="#ffff00" points="296.3506,-887.2934 306.9051,-888.217 299.2303,-880.9131 296.3506,-887.2934"/>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~dataipshortcuts -->
+<g id="module~~sizingmanager~~UsesGraph_edge38" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~dataipshortcuts</title>
+<path fill="none" stroke="#7fff00" stroke-dasharray="5,2" d="M197.5701,-451.25C228.6716,-442.1201 264.5912,-437.1496 293.6574,-434.4477"/>
+<polygon fill="#7fff00" stroke="#7fff00" points="293.9728,-437.9335 303.6334,-433.5835 293.3686,-430.9597 293.9728,-437.9335"/>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~schedulemanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge42" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~schedulemanager</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M60.2865,-521.4206C73.362,-558.2119 119.9804,-676.9043 197.5701,-741.25"/>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M197.5701,-741.25C252.0749,-786.4513 221.5289,-642.801 282.175,-606.25 337.9692,-572.6233 414.5355,-572.8953 466.798,-578.4772"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="466.5751,-581.9749 476.9131,-579.6559 467.3854,-575.0219 466.5751,-581.9749"/>
+</g>
+<!-- module~dataheatbalfansys -->
+<g id="module~~sizingmanager~~UsesGraph_node21" class="node">
+<title>module~dataheatbalfansys</title>
+<g id="a_module~~sizingmanager~~UsesGraph_node21"><a xlink:href="../module/dataheatbalfansys.html" xlink:title="DataHeatBalFanSys">
+<polygon fill="#337ab7" stroke="#337ab7" points="763.7723,-751.2554 656.5109,-751.2554 656.5109,-729.2446 763.7723,-729.2446 763.7723,-751.2554"/>
+<text text-anchor="middle" x="710.1416" y="-737.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataHeatBalFanSys</text>
+</a>
+</g>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~dataheatbalfansys -->
+<g id="module~~sizingmanager~~UsesGraph_edge43" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~dataheatbalfansys</title>
+<path fill="none" stroke="#00ff7f" stroke-dasharray="5,2" d="M197.5701,-741.25C226.8843,-765.6081 244.1895,-730.3716 282.175,-727.25 411.0765,-716.6571 562.4534,-726.4685 646.2101,-733.8415"/>
+<polygon fill="#00ff7f" stroke="#00ff7f" points="646.0581,-737.3419 656.3309,-734.7497 646.6838,-730.3699 646.0581,-737.3419"/>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~dataheatbalance -->
+<g id="module~~sizingmanager~~UsesGraph_edge56" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~dataheatbalance</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M197.5701,-451.25C237.7378,-439.7379 241.4493,-482.902 282.175,-492.25 340.2104,-505.5712 360.6563,-513.8363 416.1504,-492.25 436.379,-484.3814 433.4117,-470.2031 452.1504,-459.25 481.7858,-441.9275 491.6613,-440.6407 525.5621,-435.25"/>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~windowmanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge63" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~windowmanager</title>
+<path fill="none" stroke="#007fff" stroke-dasharray="5,2" d="M525.5621,-779.25C641.1558,-785.2949 686.9507,-821.2748 785.3093,-760.25 841.9525,-725.1068 870.933,-646.0049 881.9828,-608.1744"/>
+<polygon fill="#007fff" stroke="#007fff" points="885.4327,-608.832 884.7402,-598.2598 878.6886,-606.9563 885.4327,-608.832"/>
+<path fill="none" stroke="#007fff" stroke-dasharray="5,2" d="M197.5701,-741.25C248.5798,-785.2651 282.6227,-730.6789 349.1627,-741.25"/>
+<path fill="none" stroke="#007fff" stroke-dasharray="5,2" d="M349.1627,-741.25C428.3676,-753.8332 445.4518,-775.4957 525.5621,-779.25"/>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~windowcomplexmanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge77" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~windowcomplexmanager</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M710.1416,-166.25C802.7324,-232.408 860.3249,-363.2981 879.9046,-413.7514"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="876.6861,-415.1353 883.5047,-423.2445 883.2313,-412.6532 876.6861,-415.1353"/>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M525.5621,-51.25C559.7506,-48.1713 569.4682,-57.7074 598.9739,-75.25 617.8908,-86.497 618.1813,-95.0248 634.9739,-109.25 666.9652,-136.3502 676.0281,-141.8752 710.1416,-166.25"/>
+</g>
+<!-- module~dataheatbalsurface -->
+<g id="module~~sizingmanager~~UsesGraph_node25" class="node">
+<title>module~dataheatbalsurface</title>
+<g id="a_module~~sizingmanager~~UsesGraph_node25"><a xlink:href="../module/dataheatbalsurface.html" xlink:title="DataHeatBalSurface">
+<polygon fill="#337ab7" stroke="#337ab7" points="941.1383,-22.2554 833.6971,-22.2554 833.6971,-.2446 941.1383,-.2446 941.1383,-22.2554"/>
+<text text-anchor="middle" x="887.4177" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataHeatBalSurface</text>
+</a>
+</g>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~dataheatbalsurface -->
+<g id="module~~sizingmanager~~UsesGraph_edge78" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~dataheatbalsurface</title>
+<path fill="none" stroke="#7f00ff" stroke-dasharray="5,2" d="M349.1627,-122.25C399.2676,-117.6728 405.2792,-93.5404 452.1504,-75.25 484.1286,-62.7712 491.3737,-54.3287 525.5621,-51.25"/>
+<path fill="none" stroke="#7f00ff" stroke-dasharray="5,2" d="M525.5621,-51.25C574.4466,-46.8479 586.2299,-42.0029 634.9739,-36.25 699.0119,-28.6921 772.3741,-21.6018 823.4482,-16.9165"/>
+<polygon fill="#7f00ff" stroke="#7f00ff" points="824.0361,-20.3775 833.6766,-15.983 823.3998,-13.4064 824.0361,-20.3775"/>
+<path fill="none" stroke="#7f00ff" stroke-dasharray="5,2" d="M197.5701,-122.25C258.8183,-94.1791 282.0676,-128.3793 349.1627,-122.25"/>
+<path fill="none" stroke="#7f00ff" stroke-dasharray="5,2" d="M58.4399,-498.9611C69.1724,-438.6981 123.126,-156.3687 197.5701,-122.25"/>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~datacontaminantbalance -->
+<g id="module~~sizingmanager~~UsesGraph_edge81" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~datacontaminantbalance</title>
+<path fill="none" stroke="#ff00ff" stroke-dasharray="5,2" d="M525.5621,-51.25C576.9412,-46.6232 635.0512,-62.1115 672.1096,-74.6915"/>
+<polygon fill="#ff00ff" stroke="#ff00ff" points="671.3858,-78.1462 681.9806,-78.1435 673.6965,-71.5386 671.3858,-78.1462"/>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~datasurfaces -->
+<g id="module~~sizingmanager~~UsesGraph_edge85" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~datasurfaces</title>
+<path fill="none" stroke="#ff007f" stroke-dasharray="5,2" d="M349.1627,-122.25C392.49,-118.292 442.0187,-120.5701 477.5419,-123.3844"/>
+<polygon fill="#ff007f" stroke="#ff007f" points="477.376,-126.8826 487.6328,-124.228 477.9592,-119.907 477.376,-126.8826"/>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~databsdfwindow -->
+<g id="module~~sizingmanager~~UsesGraph_edge46" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~databsdfwindow</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M197.5701,-122.25C256.5377,-95.2243 314.2326,-177.3159 337.9146,-217.0327"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="335.1409,-219.2271 343.1827,-226.125 341.1977,-215.7177 335.1409,-219.2271"/>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~datacomplexfenestration -->
+<g id="module~~sizingmanager~~UsesGraph_edge48" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~datacomplexfenestration</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M197.5701,-451.25C214.7405,-446.2096 255.8127,-452.2878 290.8793,-459.1793"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="290.5647,-462.6863 301.0595,-461.234 291.9496,-455.8247 290.5647,-462.6863"/>
+</g>
+<!-- module~datavectortypes -->
+<g id="module~~sizingmanager~~UsesGraph_node30" class="node">
+<title>module~datavectortypes</title>
+<g id="a_module~~sizingmanager~~UsesGraph_node30"><a xlink:href="../module/datavectortypes.html" xlink:title="DataVectorTypes">
+<polygon fill="#337ab7" stroke="#337ab7" points="243.5403,-287.2554 151.5998,-287.2554 151.5998,-265.2446 243.5403,-265.2446 243.5403,-287.2554"/>
+<text text-anchor="middle" x="197.5701" y="-273.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataVectorTypes</text>
+</a>
+</g>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~datavectortypes -->
+<g id="module~~sizingmanager~~UsesGraph_edge49" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~datavectortypes</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M63.2875,-498.9637C85.637,-461.896 156.9874,-343.5582 185.5658,-296.1596"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="188.6672,-297.7941 190.8334,-287.4231 182.6726,-294.1797 188.6672,-297.7941"/>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~vectors -->
+<g id="module~~sizingmanager~~UsesGraph_edge66" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~vectors</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M78.8894,-499.0526C106.2563,-485.8093 154.2627,-463.963 197.5701,-451.25"/>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M197.5701,-451.25C257.0885,-433.7782 232.3605,-377.2124 282.175,-340.25 291.0893,-333.6356 301.9494,-328.5917 312.3083,-324.8283"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="313.6221,-328.0799 322.0065,-321.6029 311.413,-321.4376 313.6221,-328.0799"/>
+</g>
+<!-- module~general&#45;&gt;module~weathermanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge11" class="edge">
+<title>module~general&#45;&gt;module~weathermanager</title>
+<path fill="none" stroke="#ffaa00" stroke-dasharray="5,2" d="M376.5166,-1124.5814C422.412,-1113.3696 511.3209,-1091.5427 525.5621,-1087.25"/>
+</g>
+<!-- module~general&#45;&gt;module~psychrometrics -->
+<g id="module~~sizingmanager~~UsesGraph_edge6" class="edge">
+<title>module~general&#45;&gt;module~psychrometrics</title>
+<path fill="none" stroke="#cc00ff" stroke-dasharray="5,2" d="M376.3358,-1123.7454C388.9661,-1119.6093 403.8713,-1113.7711 416.1504,-1106.25 434.6594,-1094.913 435.9125,-1087.6529 452.1504,-1073.25 469.5855,-1057.7852 489.689,-1040.5751 504.4454,-1028.0557"/>
+<polygon fill="#cc00ff" stroke="#cc00ff" points="507.0841,-1030.4077 512.4552,-1021.2752 502.5613,-1025.0649 507.0841,-1030.4077"/>
+</g>
+<!-- module~dataenvironment&#45;&gt;module~weathermanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge13" class="edge">
+<title>module~dataenvironment&#45;&gt;module~weathermanager</title>
+<path fill="none" stroke="#ffaa00" stroke-dasharray="5,2" d="M395.9448,-634.4115C402.9142,-636.4788 409.8621,-639.0524 416.1504,-642.25 511.3627,-690.6657 543.0762,-707.2285 598.9739,-798.25 634.626,-856.3044 588.8658,-897.0959 634.9739,-947.25 640.2749,-953.0162 646.9377,-957.4541 654.0938,-960.8694"/>
+<polygon fill="#ffaa00" stroke="#ffaa00" points="652.7768,-964.1121 663.3569,-964.6714 655.4348,-957.6364 652.7768,-964.1121"/>
+</g>
+<!-- module~dataenvironment&#45;&gt;module~heatbalancemanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge92" class="edge">
+<title>module~dataenvironment&#45;&gt;module~heatbalancemanager</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M525.5621,-627.25C560.0712,-628.0487 694.7004,-606.2561 785.3093,-559.25 837.9769,-531.9271 829.1547,-484.4678 887.4177,-473.25"/>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M395.9721,-627.4825C431.5297,-628.1841 481.6377,-628.6703 525.5621,-627.25"/>
+</g>
+<!-- module~dataenvironment&#45;&gt;module~psychrometrics -->
+<g id="module~~sizingmanager~~UsesGraph_edge8" class="edge">
+<title>module~dataenvironment&#45;&gt;module~psychrometrics</title>
+<path fill="none" stroke="#cc00ff" stroke-dasharray="5,2" d="M359.0697,-637.4206C374.1399,-655.1033 402.5092,-691.2425 416.1504,-727.25 457.167,-835.5185 378.3997,-896.0016 452.1504,-985.25 457.8833,-992.1876 465.6274,-997.2066 473.9415,-1000.8361"/>
+<polygon fill="#cc00ff" stroke="#cc00ff" points="472.9008,-1004.1829 483.4939,-1004.3717 475.3306,-997.6181 472.9008,-1004.1829"/>
+</g>
+<!-- module~dataenvironment&#45;&gt;module~schedulemanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge39" class="edge">
+<title>module~dataenvironment&#45;&gt;module~schedulemanager</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M395.9714,-616.1665C417.6658,-611.4931 443.681,-605.8889 466.6909,-600.932"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="467.6463,-604.3066 476.6849,-598.7791 466.1721,-597.4636 467.6463,-604.3066"/>
+</g>
+<!-- module~dataenvironment&#45;&gt;module~windowmanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge58" class="edge">
+<title>module~dataenvironment&#45;&gt;module~windowmanager</title>
+<path fill="none" stroke="#007fff" stroke-dasharray="5,2" d="M525.5621,-627.25C640.5609,-638.689 672.9333,-666.2167 785.3093,-639.25 813.6594,-632.4469 843.014,-616.391 862.9318,-603.9059"/>
+<polygon fill="#007fff" stroke="#007fff" points="864.8674,-606.8224 871.3817,-598.4669 861.0787,-600.9364 864.8674,-606.8224"/>
+</g>
+<!-- module~dataenvironment&#45;&gt;module~windowcomplexmanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge71" class="edge">
+<title>module~dataenvironment&#45;&gt;module~windowcomplexmanager</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M365.5839,-615.1159C385.3407,-602.1756 419.89,-580.9747 452.1504,-568.25 487.5892,-554.2716 751.0021,-503.8126 785.3093,-487.25 803.5632,-478.4375 803.6318,-469.1681 821.3093,-459.25 827.9307,-455.535 835.2132,-452.1554 842.4506,-449.1661"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="844.191,-452.2433 852.2253,-445.3367 841.6376,-445.7256 844.191,-452.2433"/>
+</g>
+<!-- module~datareportingflags -->
+<g id="module~~sizingmanager~~UsesGraph_node13" class="node">
+<title>module~datareportingflags</title>
+<g id="a_module~~sizingmanager~~UsesGraph_node13"><a xlink:href="../module/datareportingflags.html" xlink:title="DataReportingFlags">
+<polygon fill="#337ab7" stroke="#337ab7" points="578.4452,-1137.2554 472.6791,-1137.2554 472.6791,-1115.2446 578.4452,-1115.2446 578.4452,-1137.2554"/>
+<text text-anchor="middle" x="525.5621" y="-1123.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataReportingFlags</text>
+</a>
+</g>
+</g>
+<!-- module~datareportingflags&#45;&gt;module~weathermanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge14" class="edge">
+<title>module~datareportingflags&#45;&gt;module~weathermanager</title>
+<path fill="none" stroke="#ffaa00" stroke-dasharray="5,2" d="M577.9469,-1115.0826C585.6993,-1111.6401 593.0564,-1107.1378 598.9739,-1101.25 633.6473,-1066.7501 600.1774,-1031.6258 634.9739,-997.25 640.3549,-991.934 646.8933,-987.7483 653.8435,-984.4526"/>
+<polygon fill="#ffaa00" stroke="#ffaa00" points="655.5835,-987.5219 663.5061,-980.4875 652.926,-981.0459 655.5835,-987.5219"/>
+</g>
+<!-- module~datasystemvariables&#45;&gt;module~weathermanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge15" class="edge">
+<title>module~datasystemvariables&#45;&gt;module~weathermanager</title>
+<path fill="none" stroke="#ffaa00" stroke-dasharray="5,2" d="M525.5621,-1087.25C558.4283,-1077.3434 572.5807,-1085.1983 598.9739,-1063.25 624.6646,-1041.8858 609.3378,-1018.6798 634.9739,-997.25 640.6322,-992.52 647.2183,-988.6747 654.0952,-985.5509"/>
+<polygon fill="#ffaa00" stroke="#ffaa00" points="655.6263,-988.7075 663.5932,-981.7232 653.0097,-982.2149 655.6263,-988.7075"/>
+<path fill="none" stroke="#ffaa00" stroke-dasharray="5,2" d="M371.5152,-1064.3631C405.3481,-1079.6681 471.3635,-1103.5867 525.5621,-1087.25"/>
+</g>
+<!-- module~datasystemvariables&#45;&gt;module~inputprocessor -->
+<g id="module~~sizingmanager~~UsesGraph_edge31" class="edge">
+<title>module~datasystemvariables&#45;&gt;module~inputprocessor</title>
+<path fill="none" stroke="#ff7f00" stroke-dasharray="5,2" d="M362.9557,-1042.065C377.2159,-1030.1112 399.6613,-1010.1754 416.1504,-990.25 458.0686,-939.596 496.768,-871.8779 514.8441,-838.5398"/>
+<polygon fill="#ff7f00" stroke="#ff7f00" points="518.1287,-839.8207 519.7725,-829.3542 511.9605,-836.5112 518.1287,-839.8207"/>
+</g>
+<!-- module~psychrometrics&#45;&gt;module~weathermanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge16" class="edge">
+<title>module~psychrometrics&#45;&gt;module~weathermanager</title>
+<path fill="none" stroke="#ffaa00" stroke-dasharray="5,2" d="M567.4461,-1001.6272C592.9287,-996.381 625.8072,-989.6122 653.5806,-983.8944"/>
+<polygon fill="#ffaa00" stroke="#ffaa00" points="654.47,-987.2848 663.5588,-981.8402 653.0584,-980.4286 654.47,-987.2848"/>
+</g>
+<!-- module~datawindowequivalentlayer&#45;&gt;module~heatbalancemanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge86" class="edge">
+<title>module~datawindowequivalentlayer&#45;&gt;module~heatbalancemanager</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M534.4862,-385.0824C558.8987,-355.4606 630.3104,-274.8642 710.1416,-241.25"/>
+</g>
+<!-- module~datawindowequivalentlayer&#45;&gt;module~dataheatbalance -->
+<g id="module~~sizingmanager~~UsesGraph_edge50" class="edge">
+<title>module~datawindowequivalentlayer&#45;&gt;module~dataheatbalance</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M579.4463,-407.3433C602.537,-412.0971 629.5315,-417.6545 652.973,-422.4805"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="652.2797,-425.9111 662.7801,-424.4995 653.6913,-419.0549 652.2797,-425.9111"/>
+</g>
+<!-- module~inputprocessor&#45;&gt;module~heatbalancemanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge87" class="edge">
+<title>module~inputprocessor&#45;&gt;module~heatbalancemanager</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M567.0044,-821.72C618.317,-826.1359 708.3621,-834.2756 785.3093,-843.25 830.807,-848.5564 848.19,-880.9013 887.4177,-857.25"/>
+</g>
+<!-- module~dataroomairmodel&#45;&gt;module~heatbalancemanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge88" class="edge">
+<title>module~dataroomairmodel&#45;&gt;module~heatbalancemanager</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M400.9811,-909.653C486.8825,-925.9804 654.8027,-953.7476 710.1416,-933.25"/>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M710.1416,-933.25C761.4077,-914.6208 770.9193,-902.1332 821.3093,-881.25 850.1856,-869.2828 860.8309,-873.6875 887.4177,-857.25"/>
+</g>
+<!-- module~dataipshortcuts&#45;&gt;module~heatbalancemanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge90" class="edge">
+<title>module~dataipshortcuts&#45;&gt;module~heatbalancemanager</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M367.4028,-420.1971C419.452,-388.9799 573.7257,-298.69 710.1416,-241.25"/>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M710.1416,-241.25C784.7855,-205.5032 819.3119,-137.2273 887.4177,-184.25"/>
+</g>
+<!-- module~dataipshortcuts&#45;&gt;module~inputprocessor -->
+<g id="module~~sizingmanager~~UsesGraph_edge30" class="edge">
+<title>module~dataipshortcuts&#45;&gt;module~inputprocessor</title>
+<path fill="none" stroke="#ff7f00" stroke-dasharray="5,2" d="M394.6186,-437.6784C402.86,-440.8287 410.5911,-445.4603 416.1504,-452.25 512.6976,-570.164 357.0512,-674.165 452.1504,-793.25 457.9502,-800.5126 465.9601,-805.6763 474.5665,-809.3449"/>
+<polygon fill="#ff7f00" stroke="#ff7f00" points="473.4687,-812.6696 484.0631,-812.7675 475.8421,-806.0842 473.4687,-812.6696"/>
+</g>
+<!-- module~schedulemanager&#45;&gt;module~heatbalancemanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge91" class="edge">
+<title>module~schedulemanager&#45;&gt;module~heatbalancemanager</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M574.4382,-579.9233C627.4129,-570.0912 713.9409,-551.6652 785.3093,-525.25 833.0703,-507.5725 837.4343,-483.0104 887.4177,-473.25"/>
+</g>
+<!-- module~dataheatbalfansys&#45;&gt;module~heatbalancemanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge93" class="edge">
+<title>module~dataheatbalfansys&#45;&gt;module~heatbalancemanager</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M723.9264,-751.4154C762.6851,-782.5165 870.8777,-867.2224 887.4177,-857.25"/>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M887.4177,-857.25C957.857,-814.7805 1023.6853,-551.0515 1041.561,-474.227"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="1045.0143,-474.8271 1043.8453,-464.297 1038.1925,-473.2578 1045.0143,-474.8271"/>
+</g>
+<!-- module~dataheatbalfansys&#45;&gt;module~windowmanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge59" class="edge">
+<title>module~dataheatbalfansys&#45;&gt;module~windowmanager</title>
+<path fill="none" stroke="#007fff" stroke-dasharray="5,2" d="M757.4432,-729.14C767.1617,-725.6199 776.9634,-721.074 785.3093,-715.25 827.0158,-686.1463 860.2981,-635.2064 876.5616,-607.165"/>
+<polygon fill="#007fff" stroke="#007fff" points="879.7133,-608.702 881.5903,-598.2747 873.6205,-605.2556 879.7133,-608.702"/>
+</g>
+<!-- module~dataheatbalfansys&#45;&gt;module~windowcomplexmanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge72" class="edge">
+<title>module~dataheatbalfansys&#45;&gt;module~windowcomplexmanager</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M730.2432,-729.063C747.7533,-718.1981 772.3154,-700.0262 785.3093,-677.25 833.9712,-591.9536 759.0694,-535.2082 821.3093,-459.25 824.0653,-455.8866 827.325,-452.9753 830.8963,-450.4554"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="832.8708,-453.3542 839.704,-445.2574 829.313,-447.3257 832.8708,-453.3542"/>
+</g>
+<!-- module~dataheatbalance&#45;&gt;module~heatbalancemanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge94" class="edge">
+<title>module~dataheatbalance&#45;&gt;module~heatbalancemanager</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M744.7729,-445.3081C788.2825,-458.5991 860.5096,-478.5044 887.4177,-473.25"/>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M887.4177,-473.25C917.3103,-467.4128 950.7148,-462.909 979.1519,-459.6663"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="979.8361,-463.1119 989.3883,-458.5286 979.0628,-456.1547 979.8361,-463.1119"/>
+</g>
+<!-- module~dataheatbalance&#45;&gt;module~windowmanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge60" class="edge">
+<title>module~dataheatbalance&#45;&gt;module~windowmanager</title>
+<path fill="none" stroke="#007fff" stroke-dasharray="5,2" d="M757.4432,-445.36C767.1617,-448.8801 776.9634,-453.426 785.3093,-459.25 827.0158,-488.3537 860.2981,-539.2936 876.5616,-567.335"/>
+<polygon fill="#007fff" stroke="#007fff" points="873.6205,-569.2444 881.5903,-576.2253 879.7133,-565.798 873.6205,-569.2444"/>
+</g>
+<!-- module~dataheatbalance&#45;&gt;module~windowcomplexmanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge73" class="edge">
+<title>module~dataheatbalance&#45;&gt;module~windowcomplexmanager</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M757.6483,-434.25C774.0141,-434.25 792.7835,-434.25 810.8687,-434.25"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="811.1191,-437.7501 821.1191,-434.25 811.119,-430.7501 811.1191,-437.7501"/>
+</g>
+<!-- module~windowmanager&#45;&gt;module~heatbalancemanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge95" class="edge">
+<title>module~windowmanager&#45;&gt;module~heatbalancemanager</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M900.6914,-576.0557C928.3323,-552.7448 992.2496,-498.8404 1025.4471,-470.8435"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="1027.7964,-473.4407 1033.1845,-464.3182 1023.2836,-468.0896 1027.7964,-473.4407"/>
+</g>
+<!-- module~windowcomplexmanager&#45;&gt;module~heatbalancemanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge96" class="edge">
+<title>module~windowcomplexmanager&#45;&gt;module~heatbalancemanager</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M953.8811,-442.1976C962.3452,-443.2097 971.0114,-444.246 979.4812,-445.2588"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="979.3434,-448.7672 989.6883,-446.4794 980.1746,-441.8167 979.3434,-448.7672"/>
+</g>
+<!-- module~dataheatbalsurface&#45;&gt;module~heatbalancemanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge97" class="edge">
+<title>module~dataheatbalsurface&#45;&gt;module~heatbalancemanager</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M892.3653,-22.3131C903.7874,-48.0254 932.616,-113.9165 953.5261,-170.25 989.4982,-267.1616 1025.8729,-385.3073 1040.0819,-432.4141"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="1036.7583,-433.5159 1042.9881,-442.0855 1043.4621,-431.5013 1036.7583,-433.5159"/>
+</g>
+<!-- module~datacontaminantbalance&#45;&gt;module~heatbalancemanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge98" class="edge">
+<title>module~datacontaminantbalance&#45;&gt;module~heatbalancemanager</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M750.3761,-100.3346C761.922,-104.1242 774.3472,-108.8049 785.3093,-114.25 834.5867,-138.727 842.1968,-152.9059 887.4177,-184.25"/>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M887.4177,-184.25C978.3532,-247.2805 1025.2548,-380.6622 1040.5588,-432.2571"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="1037.2242,-433.326 1043.3493,-441.9708 1043.952,-431.3931 1037.2242,-433.326"/>
+</g>
+<!-- module~datasurfaces&#45;&gt;module~heatbalancemanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge100" class="edge">
+<title>module~datasurfaces&#45;&gt;module~heatbalancemanager</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M563.2933,-123.963C633.7173,-117.9847 787.1043,-114.7194 887.4177,-184.25"/>
+</g>
+<!-- module~datasurfaces&#45;&gt;module~dataheatbalance -->
+<g id="module~~sizingmanager~~UsesGraph_edge55" class="edge">
+<title>module~datasurfaces&#45;&gt;module~dataheatbalance</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M535.9581,-139.4425C551.8566,-157.1544 582.1344,-193.3321 598.9739,-229.25 626.6118,-288.2005 600.3475,-316.1136 634.9739,-371.25 646.8934,-390.2298 666.4273,-406.347 682.5944,-417.5278"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="680.8938,-420.5999 691.16,-423.2183 684.7673,-414.7693 680.8938,-420.5999"/>
+</g>
+<!-- module~datasurfaces&#45;&gt;module~windowmanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge62" class="edge">
+<title>module~datasurfaces&#45;&gt;module~windowmanager</title>
+<path fill="none" stroke="#007fff" stroke-dasharray="5,2" d="M531.1111,-139.3562C552.2492,-181.6034 626.9494,-330.3232 634.9739,-338.25 688.237,-390.8648 732.6324,-361.0483 785.3093,-414.25 810.7619,-439.9562 803.2988,-455.877 821.3093,-487.25 837.9324,-516.2061 859.6833,-548.1425 873.6067,-567.952"/>
+<polygon fill="#007fff" stroke="#007fff" points="870.7724,-570.0059 879.4066,-576.146 876.486,-565.9617 870.7724,-570.0059"/>
+</g>
+<!-- module~datasurfaces&#45;&gt;module~windowcomplexmanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge76" class="edge">
+<title>module~datasurfaces&#45;&gt;module~windowcomplexmanager</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M563.5552,-132.3565C610.5478,-138.0606 687.1605,-149.5943 710.1416,-166.25"/>
+</g>
+<!-- module~datasurfaces&#45;&gt;module~datacontaminantbalance -->
+<g id="module~~sizingmanager~~UsesGraph_edge79" class="edge">
+<title>module~datasurfaces&#45;&gt;module~datacontaminantbalance</title>
+<path fill="none" stroke="#ff00ff" stroke-dasharray="5,2" d="M563.3599,-120.2637C587.6891,-115.1231 619.8897,-108.3194 647.9307,-102.3946"/>
+<polygon fill="#ff00ff" stroke="#ff00ff" points="648.9907,-105.748 658.0512,-100.2562 647.5436,-98.8992 648.9907,-105.748"/>
+</g>
+<!-- module~databsdfwindow&#45;&gt;module~dataheatbalance -->
+<g id="module~~sizingmanager~~UsesGraph_edge52" class="edge">
+<title>module~databsdfwindow&#45;&gt;module~dataheatbalance</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M379.9928,-248.3168C391.4098,-252.5301 404.4258,-257.4699 416.1504,-262.25 498.4463,-295.8021 523.2782,-296.6827 598.9739,-343.25 608.5372,-349.1333 659.6494,-391.7641 689.1279,-416.5352"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="686.9107,-419.2437 696.8162,-423.003 691.417,-413.8871 686.9107,-419.2437"/>
+</g>
+<!-- module~databsdfwindow&#45;&gt;module~windowcomplexmanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge70" class="edge">
+<title>module~databsdfwindow&#45;&gt;module~windowcomplexmanager</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M371.667,-226.17C396.8638,-213.9496 436.2471,-195.4523 452.1504,-191.25 507.839,-176.5349 663.5026,-132.4482 710.1416,-166.25"/>
+</g>
+<!-- module~databsdfwindow&#45;&gt;module~datasurfaces -->
+<g id="module~~sizingmanager~~UsesGraph_edge82" class="edge">
+<title>module~databsdfwindow&#45;&gt;module~datasurfaces</title>
+<path fill="none" stroke="#ff007f" stroke-dasharray="5,2" d="M391.8527,-226.1758C400.4803,-222.6535 409.0662,-218.0976 416.1504,-212.25 439.8404,-192.6952 428.1796,-172.4596 452.1504,-153.25 459.7142,-147.1885 468.8296,-142.5592 478.0256,-139.0358"/>
+<polygon fill="#ff007f" stroke="#ff007f" points="479.2586,-142.313 487.5765,-135.7508 476.9818,-135.6936 479.2586,-142.313"/>
+</g>
+<!-- module~datacomplexfenestration&#45;&gt;module~dataheatbalance -->
+<g id="module~~sizingmanager~~UsesGraph_edge53" class="edge">
+<title>module~datacomplexfenestration&#45;&gt;module~dataheatbalance</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M395.728,-461.1794C431.1593,-453.0736 481.2162,-442.3017 525.5621,-435.25"/>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M525.5621,-435.25C567.7972,-428.534 616.1583,-428.5484 652.7808,-430.1011"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="652.6295,-433.5978 662.7841,-430.5755 652.9612,-426.6056 652.6295,-433.5978"/>
+</g>
+<!-- module~datavectortypes&#45;&gt;module~dataheatbalance -->
+<g id="module~~sizingmanager~~UsesGraph_edge54" class="edge">
+<title>module~datavectortypes&#45;&gt;module~dataheatbalance</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M349.1627,-276.25C380.1063,-276.6885 388.7807,-280.8071 416.1504,-295.25 434.5704,-304.9701 434.0197,-315.0004 452.1504,-325.25 512.2858,-359.2457 539.6576,-340.8445 598.9739,-376.25 617.6113,-387.3746 616.2632,-398.249 634.9739,-409.25 641.8093,-413.2689 649.3786,-416.7456 657.0044,-419.7205"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="656.049,-423.0973 666.6431,-423.2234 658.44,-416.5182 656.049,-423.0973"/>
+</g>
+<!-- module~datavectortypes&#45;&gt;module~windowcomplexmanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge74" class="edge">
+<title>module~datavectortypes&#45;&gt;module~windowcomplexmanager</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M243.6774,-276.1483C273.7177,-276.1071 313.7651,-276.0995 349.1627,-276.25"/>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M349.1627,-276.25C461.9759,-276.7296 491.5269,-286.8671 598.9739,-321.25 615.8263,-326.6428 618.6922,-331.3223 634.9739,-338.25 708.5915,-369.5737 796.2187,-401.7885 846.4777,-419.7917"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="845.4214,-423.1309 856.016,-423.1984 847.7759,-416.5387 845.4214,-423.1309"/>
+</g>
+<!-- module~datavectortypes&#45;&gt;module~datasurfaces -->
+<g id="module~~sizingmanager~~UsesGraph_edge83" class="edge">
+<title>module~datavectortypes&#45;&gt;module~datasurfaces</title>
+<path fill="none" stroke="#ff007f" stroke-dasharray="5,2" d="M211.2517,-265.0955C227.4366,-252.2931 255.5538,-231.2629 282.175,-217.25 346.9325,-183.1629 427.6553,-156.4625 477.9127,-141.5232"/>
+<polygon fill="#ff007f" stroke="#ff007f" points="478.9363,-144.8705 487.5442,-138.6935 476.9631,-138.1543 478.9363,-144.8705"/>
+</g>
+<!-- module~datavectortypes&#45;&gt;module~databsdfwindow -->
+<g id="module~~sizingmanager~~UsesGraph_edge44" class="edge">
+<title>module~datavectortypes&#45;&gt;module~databsdfwindow</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M240.6049,-265.1785C257.9613,-260.7132 278.1557,-255.5179 296.3868,-250.8276"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="297.4702,-254.1629 306.2828,-248.2817 295.7261,-247.3837 297.4702,-254.1629"/>
+</g>
+<!-- module~datavectortypes&#45;&gt;module~vectors -->
+<g id="module~~sizingmanager~~UsesGraph_edge64" class="edge">
+<title>module~datavectortypes&#45;&gt;module~vectors</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M240.6049,-287.3215C263.1238,-293.1149 290.4199,-300.1373 312.0074,-305.6911"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="311.236,-309.1066 321.7927,-308.2086 312.9802,-302.3273 311.236,-309.1066"/>
+</g>
+<!-- module~datashadowingcombinations -->
+<g id="module~~sizingmanager~~UsesGraph_node31" class="node">
+<title>module~datashadowingcombinations</title>
+<g id="a_module~~sizingmanager~~UsesGraph_node31"><a xlink:href="../module/datashadowingcombinations.html" xlink:title="DataShadowingCombinations">
+<polygon fill="#337ab7" stroke="#337ab7" points="785.4774,-329.2554 634.8058,-329.2554 634.8058,-307.2446 785.4774,-307.2446 785.4774,-329.2554"/>
+<text text-anchor="middle" x="710.1416" y="-315.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataShadowingCombinations</text>
+</a>
+</g>
+</g>
+<!-- module~datashadowingcombinations&#45;&gt;module~windowcomplexmanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge67" class="edge">
+<title>module~datashadowingcombinations&#45;&gt;module~windowcomplexmanager</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M753.5849,-329.3711C764.3279,-333.0079 775.548,-337.6025 785.3093,-343.25 819.4215,-362.9861 852.2203,-395.3802 871.0708,-415.7243"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="868.4918,-418.0905 877.8108,-423.1311 873.6691,-413.3793 868.4918,-418.0905"/>
+</g>
+<!-- module~vectors&#45;&gt;module~windowcomplexmanager -->
+<g id="module~~sizingmanager~~UsesGraph_edge68" class="edge">
+<title>module~vectors&#45;&gt;module~windowcomplexmanager</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M376.3355,-305.6584C447.8692,-282.1321 645.5007,-228.3902 785.3093,-298.25 833.7166,-322.4382 865.1483,-381.7017 879.0992,-413.4185"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="876.0433,-415.1788 883.1595,-423.0281 882.4914,-412.4543 876.0433,-415.1788"/>
+</g>
+</g>
+</svg>
+</div>
+                <script>var panmodulesizingmanagerUsesGraph = svgPanZoom('#modulesizingmanagerUsesGraph', {
+                    zoomEnabled: true,
+                    controlIconsEnabled: true,
+                    fit: true,
+                    center: true,});
+                    </script>
+                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
+                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                      </div>
+                      <div class="modal-body">
+
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="484pt" height="31pt"
+ viewBox="0.00 0.00 483.85 30.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 26.5)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-26.5 479.8539,-26.5 479.8539,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-22.2554 0,-22.2554 0,-.2446 54,-.2446 54,-22.2554"/>
+<text text-anchor="middle" x="27" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="137.6205,-22.2554 72.3795,-22.2554 72.3795,-.2446 137.6205,-.2446 137.6205,-22.2554"/>
+<text text-anchor="middle" x="105" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="218.288,-22.2554 155.712,-22.2554 155.712,-.2446 218.288,-.2446 218.288,-22.2554"/>
+<text text-anchor="middle" x="187" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="290,-22.2554 236,-22.2554 236,-.2446 290,-.2446 290,-22.2554"/>
+<text text-anchor="middle" x="263" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="362,-22.2554 308,-22.2554 308,-.2446 362,-.2446 362,-22.2554"/>
+<text text-anchor="middle" x="335" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="475.7082,-22.2554 380.2918,-22.2554 380.2918,-.2446 475.7082,-.2446 475.7082,-22.2554"/>
+<text text-anchor="middle" x="428" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+
+    <p>Solid arrows point from a parent (sub)module to the submodule which is
+    descended from it. Dashed arrows point from a module being used to the
+    module or program unit using it. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+    <h3>Used By</h3>
+
+                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: module~~sizingmanager~~UsedByGraph Pages: 1 -->
+<svg id="modulesizingmanagerUsedByGraph" width="225pt" height="31pt"
+ viewBox="0.00 0.00 225.01 30.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~sizingmanager~~UsedByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 26.5)">
+<title>module~~sizingmanager~~UsedByGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-26.5 221.0078,-26.5 221.0078,4 -4,4"/>
+<!-- module~sizingmanager -->
+<g id="module~~sizingmanager~~UsedByGraph_node1" class="node">
+<title>module~sizingmanager</title>
+<polygon fill="none" stroke="#000000" points="82.059,-22.2554 -.0197,-22.2554 -.0197,-.2446 82.059,-.2446 82.059,-22.2554"/>
+<text text-anchor="middle" x="41.0197" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">SizingManager</text>
+</g>
+<!-- proc~managesimulation -->
+<g id="module~~sizingmanager~~UsedByGraph_node2" class="node">
+<title>proc~managesimulation</title>
+<g id="a_module~~sizingmanager~~UsedByGraph_node2"><a xlink:href="../proc/managesimulation.html" xlink:title="ManageSimulation">
+<polygon fill="#d9534f" stroke="#d9534f" points="216.9921,-22.2554 118.055,-22.2554 118.055,-.2446 216.9921,-.2446 216.9921,-22.2554"/>
+<text text-anchor="middle" x="167.5236" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">ManageSimulation</text>
+</a>
+</g>
+</g>
+<!-- module~sizingmanager&#45;&gt;proc~managesimulation -->
+<g id="module~~sizingmanager~~UsedByGraph_edge1" class="edge">
+<title>module~sizingmanager&#45;&gt;proc~managesimulation</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M82.0918,-11.25C90.2848,-11.25 99.0463,-11.25 107.721,-11.25"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="107.8252,-14.7501 117.8252,-11.25 107.8251,-7.7501 107.8252,-14.7501"/>
+</g>
+</g>
+</svg>
+</div>
+                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
+                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                      </div>
+                      <div class="modal-body">
+
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="484pt" height="31pt"
+ viewBox="0.00 0.00 483.85 30.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 26.5)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-26.5 479.8539,-26.5 479.8539,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-22.2554 0,-22.2554 0,-.2446 54,-.2446 54,-22.2554"/>
+<text text-anchor="middle" x="27" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="137.6205,-22.2554 72.3795,-22.2554 72.3795,-.2446 137.6205,-.2446 137.6205,-22.2554"/>
+<text text-anchor="middle" x="105" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="218.288,-22.2554 155.712,-22.2554 155.712,-.2446 218.288,-.2446 218.288,-22.2554"/>
+<text text-anchor="middle" x="187" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="290,-22.2554 236,-22.2554 236,-.2446 290,-.2446 290,-22.2554"/>
+<text text-anchor="middle" x="263" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="362,-22.2554 308,-22.2554 308,-.2446 362,-.2446 362,-22.2554"/>
+<text text-anchor="middle" x="335" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="475.7082,-22.2554 380.2918,-22.2554 380.2918,-.2446 475.7082,-.2446 475.7082,-22.2554"/>
+<text text-anchor="middle" x="428" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+
+    <p>Solid arrows point from a parent (sub)module to the submodule which is
+    descended from it. Dashed arrows point from a module being used to the
+    module or program unit using it. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+    <br>
+
+
+    <section class="visible-xs visible-sm hidden-md">
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../module/sizingmanager.html#variable-numairloops%7E2">NumAirLoops</a>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#types-1">Derived Types</a></h3></div>
+  <div id="types-1" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../module/sizingmanager.html#type-zonelistdata%7E2">ZoneListData</a>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-1">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-1" class="panel-collapse collapse">
+
+      <a class="list-group-item" href="../module/sizingmanager.html#proc-managesizing">ManageSizing</a>
+
+      <a class="list-group-item" href="../module/sizingmanager.html#proc-getoarequirements">GetOARequirements</a>
+
+      <a class="list-group-item" href="../module/sizingmanager.html#proc-getzoneairdistribution">GetZoneAirDistribution</a>
+
+      <a class="list-group-item" href="../module/sizingmanager.html#proc-getsizingparams">GetSizingParams</a>
+
+      <a class="list-group-item" href="../module/sizingmanager.html#proc-getzonesizinginput">GetZoneSizingInput</a>
+
+      <a class="list-group-item" href="../module/sizingmanager.html#proc-getzoneandzonelistnames">GetZoneAndZoneListNames</a>
+
+      <a class="list-group-item" href="../module/sizingmanager.html#proc-getsystemsizinginput">GetSystemSizingInput</a>
+
+      <a class="list-group-item" href="../module/sizingmanager.html#proc-getplantsizinginput">GetPlantSizingInput</a>
+
+      <a class="list-group-item" href="../module/sizingmanager.html#proc-setupzonesizing">SetupZoneSizing</a>
+
+      <a class="list-group-item" href="../module/sizingmanager.html#proc-reportzonesizing">ReportZoneSizing</a>
+
+      <a class="list-group-item" href="../module/sizingmanager.html#proc-reportsyssizing">ReportSysSizing</a>
+
+    </div>
+  </div>
+</div>
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+
+    <section>
+    <h2>Variables</h2>
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-numairloops%7E2"></span>integer,</td>
+
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>NumAirLoops</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+
+
+    <section>
+     <h2>Derived Types</h2>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="type-zonelistdata%7E2"></span><h3>type, private :: <a href='../type/zonelistdata%7E2.html'>ZoneListData</a>
+
+  </h3></div>
+  <div class="panel-body">
+
+
+     <h4>Components</h4>
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-name%7E321"></span>character(len=MaxNameLength),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>Name</strong></td><td> =</td><td>' '</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-numofzones%7E5"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>NumOfZones</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-zones"></span>integer,</td>
+
+  <td>public,</td>
+  <td>ALLOCATABLE, DIMENSION(:)</td><td>::</td>
+  <td><strong>Zones</strong></td><td></td><td></td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+  </div>
+</div>
+
+
+    </section>
+	<br>
+
+
+    <section>
+    <h2>Subroutines</h2>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-managesizing"></span><h3>
+public subroutine <a href='../proc/managesizing.html'>ManageSizing</a>()
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+      <em>None</em>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-getoarequirements"></span><h3>
+private subroutine <a href='../proc/getoarequirements.html'>GetOARequirements</a>()
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+      <em>None</em>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-getzoneairdistribution"></span><h3>
+private subroutine <a href='../proc/getzoneairdistribution.html'>GetZoneAirDistribution</a>()
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+      <em>None</em>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-getsizingparams"></span><h3>
+private subroutine <a href='../proc/getsizingparams.html'>GetSizingParams</a>()
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+      <em>None</em>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-getzonesizinginput"></span><h3>
+private subroutine <a href='../proc/getzonesizinginput.html'>GetZoneSizingInput</a>()
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+      <em>None</em>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-getzoneandzonelistnames"></span><h3>
+private subroutine <a href='../proc/getzoneandzonelistnames.html'>GetZoneAndZoneListNames</a>(ErrorsFound, NumZones, ZoneNames, NumZoneLists, ZoneListNames)
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(inout)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>ErrorsFound</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(inout)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>NumZones</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td></td>
+  <td></td>
+
+  <td>ALLOCATABLE, DIMENSION(:)</td><td>::</td>
+  <td><strong>ZoneNames</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(inout)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>NumZoneLists</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>type(<a href='../type/zonelistdata%7E2.html'>ZoneListData</a>),</td>
+  <td></td>
+  <td></td>
+
+  <td>ALLOCATABLE, DIMENSION(:)</td><td>::</td>
+  <td><strong>ZoneListNames</strong></td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-getsystemsizinginput"></span><h3>
+private subroutine <a href='../proc/getsystemsizinginput.html'>GetSystemSizingInput</a>()
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+      <em>None</em>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-getplantsizinginput"></span><h3>
+private subroutine <a href='../proc/getplantsizinginput.html'>GetPlantSizingInput</a>()
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+      <em>None</em>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-setupzonesizing"></span><h3>
+private subroutine <a href='../proc/setupzonesizing.html'>SetupZoneSizing</a>(ErrorsFound)
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(inout)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>ErrorsFound</strong></td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-reportzonesizing"></span><h3>
+private subroutine <a href='../proc/reportzonesizing.html'>ReportZoneSizing</a>(ZoneName, LoadType, CalcDesLoad, UserDesLoad, CalcDesFlow, UserDesFlow, DesDayName, PeakHrMin, PeakTemp, PeakHumRat, FloorArea, TotOccs, MinOAVolFlow)
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>ZoneName</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>LoadType</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>CalcDesLoad</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>UserDesLoad</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>CalcDesFlow</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>UserDesFlow</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>DesDayName</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>PeakHrMin</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>PeakTemp</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>PeakHumRat</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>FloorArea</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>TotOccs</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>MinOAVolFlow</strong></td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-reportsyssizing"></span><h3>
+private subroutine <a href='../proc/reportsyssizing.html'>ReportSysSizing</a>(SysName, VarDesc, VarValue)
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>SysName</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>VarDesc</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>VarValue</strong></td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+  </div>
+  </div>
+
+
+    </section>
+    <br>
+
+
+    </div>
+  </div>
+
+  <section class="visible-xs visible-sm hidden-md">
+    <hr>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allmods-1">All Modules</a></h3></div>
+  <div id="allmods-1" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../module/airflownetworkbalancemanager.html">AirflowNetworkBalanceManager</a>
+
+      <a class="list-group-item" href="../module/airflownetworksolver.html">AirflowNetworkSolver</a>
+
+      <a class="list-group-item" href="../module/baseboardelectric.html">BaseboardElectric</a>
+
+      <a class="list-group-item" href="../module/baseboardradiator.html">BaseboardRadiator</a>
+
+      <a class="list-group-item" href="../module/boilers.html">Boilers</a>
+
+      <a class="list-group-item" href="../module/boilersteam.html">BoilerSteam</a>
+
+      <a class="list-group-item" href="../module/branchinputmanager.html">BranchInputManager</a>
+
+      <a class="list-group-item" href="../module/branchnodeconnections.html">BranchNodeConnections</a>
+
+      <a class="list-group-item" href="../module/chillerabsorption.html">ChillerAbsorption</a>
+
+      <a class="list-group-item" href="../module/chillerelectriceir.html">ChillerElectricEIR</a>
+
+      <a class="list-group-item" href="../module/chillerexhaustabsorption.html">ChillerExhaustAbsorption</a>
+
+      <a class="list-group-item" href="../module/chillergasabsorption.html">ChillerGasAbsorption</a>
+
+      <a class="list-group-item" href="../module/chillerindirectabsorption.html">ChillerIndirectAbsorption</a>
+
+      <a class="list-group-item" href="../module/chillerreformulatedeir.html">ChillerReformulatedEIR</a>
+
+      <a class="list-group-item" href="../module/condenserlooptowers.html">CondenserLoopTowers</a>
+
+      <a class="list-group-item" href="../module/conductiontransferfunctioncalc.html">ConductionTransferFunctionCalc</a>
+
+      <a class="list-group-item" href="../module/convectioncoefficients.html">ConvectionCoefficients</a>
+
+      <a class="list-group-item" href="../module/cooltower.html">CoolTower</a>
+
+      <a class="list-group-item" href="../module/costestimatemanager.html">CostEstimateManager</a>
+
+      <a class="list-group-item" href="../module/crossventmgr.html">CrossVentMgr</a>
+
+      <a class="list-group-item" href="../module/ctelectricgenerator.html">CTElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/curvemanager.html">CurveManager</a>
+
+      <a class="list-group-item" href="../module/dataairflownetwork.html">DataAirflowNetwork</a>
+
+      <a class="list-group-item" href="../module/dataairloop.html">DataAirLoop</a>
+
+      <a class="list-group-item" href="../module/dataairsystems.html">DataAirSystems</a>
+
+      <a class="list-group-item" href="../module/databranchairloopplant.html">DataBranchAirLoopPlant</a>
+
+      <a class="list-group-item" href="../module/databranchnodeconnections.html">DataBranchNodeConnections</a>
+
+      <a class="list-group-item" href="../module/databsdfwindow.html">DataBSDFWindow</a>
+
+      <a class="list-group-item" href="../module/datacomplexfenestration.html">DataComplexFenestration</a>
+
+      <a class="list-group-item" href="../module/datacontaminantbalance.html">DataContaminantBalance</a>
+
+      <a class="list-group-item" href="../module/dataconvergparams.html">DataConvergParams</a>
+
+      <a class="list-group-item" href="../module/dataconversions.html">DataConversions</a>
+
+      <a class="list-group-item" href="../module/datacostestimate.html">DataCostEstimate</a>
+
+      <a class="list-group-item" href="../module/datadaylighting.html">DataDaylighting</a>
+
+      <a class="list-group-item" href="../module/datadaylightingdevices.html">DataDaylightingDevices</a>
+
+      <a class="list-group-item" href="../module/datadefineequip.html">DataDefineEquip</a>
+
+      <a class="list-group-item" href="../module/datadelight.html">DataDElight</a>
+
+      <a class="list-group-item" href="../module/dataenvironment.html">DataEnvironment</a>
+
+      <a class="list-group-item" href="../module/dataerrortracking.html">DataErrorTracking</a>
+
+      <a class="list-group-item" href="../module/datagenerators.html">DataGenerators</a>
+
+      <a class="list-group-item" href="../module/dataglobalconstants.html">DataGlobalConstants</a>
+
+      <a class="list-group-item" href="../module/dataglobals.html">DataGlobals</a>
+
+      <a class="list-group-item" href="../module/dataheatbalance.html">DataHeatBalance</a>
+
+      <a class="list-group-item" href="../module/dataheatbalfansys.html">DataHeatBalFanSys</a>
+
+      <a class="list-group-item" href="../module/dataheatbalsurface.html">DataHeatBalSurface</a>
+
+      <a class="list-group-item" href="../module/datahvaccontrollers.html">DataHVACControllers</a>
+
+      <a class="list-group-item" href="../module/datahvacglobals.html">DataHVACGlobals</a>
+
+      <a class="list-group-item" href="../module/datainterfaces.html">DataInterfaces</a>
+
+      <a class="list-group-item" href="../module/dataipshortcuts.html">DataIPShortCuts</a>
+
+      <a class="list-group-item" href="../module/dataloopnode.html">DataLoopNode</a>
+
+      <a class="list-group-item" href="../module/datamoisturebalance.html">DataMoistureBalance</a>
+
+      <a class="list-group-item" href="../module/datamoisturebalanceempd.html">DataMoistureBalanceEMPD</a>
+
+      <a class="list-group-item" href="../module/dataoutputs.html">DataOutputs</a>
+
+      <a class="list-group-item" href="../module/dataphotovoltaics.html">DataPhotovoltaics</a>
+
+      <a class="list-group-item" href="../module/dataplant.html">DataPlant</a>
+
+      <a class="list-group-item" href="../module/dataplantpipingsystems.html">DataPlantPipingSystems</a>
+
+      <a class="list-group-item" href="../module/dataprecisionglobals.html">DataPrecisionGlobals</a>
+
+      <a class="list-group-item" href="../module/datareportingflags.html">DataReportingFlags</a>
+
+      <a class="list-group-item" href="../module/dataroomairmodel.html">DataRoomAirModel</a>
+
+      <a class="list-group-item" href="../module/datarootfinder.html">DataRootFinder</a>
+
+      <a class="list-group-item" href="../module/dataruntimelanguage.html">DataRuntimeLanguage</a>
+
+      <a class="list-group-item" href="../module/datashadowingcombinations.html">DataShadowingCombinations</a>
+
+      <a class="list-group-item" href="../module/datasizing.html">DataSizing</a>
+
+      <a class="list-group-item" href="../module/datastringglobals.html">DataStringGlobals</a>
+
+      <a class="list-group-item" href="../module/datasurfacecolors.html">DataSurfaceColors</a>
+
+      <a class="list-group-item" href="../module/datasurfacelists.html">DataSurfaceLists</a>
+
+      <a class="list-group-item" href="../module/datasurfaces.html">DataSurfaces</a>
+
+      <a class="list-group-item" href="../module/datasystemvariables.html">DataSystemVariables</a>
+
+      <a class="list-group-item" href="../module/datatimings.html">DataTimings</a>
+
+      <a class="list-group-item" href="../module/dataucsdshareddata.html">DataUCSDSharedData</a>
+
+      <a class="list-group-item" href="../module/datavectortypes.html">DataVectorTypes</a>
+
+      <a class="list-group-item" href="../module/dataviewfactorinformation.html">DataViewFactorInformation</a>
+
+      <a class="list-group-item" href="../module/datawater.html">DataWater</a>
+
+      <a class="list-group-item" href="../module/datawindowequivalentlayer.html">DataWindowEquivalentLayer</a>
+
+      <a class="list-group-item" href="../module/datazonecontrols.html">DataZoneControls</a>
+
+      <a class="list-group-item" href="../module/datazoneenergydemands.html">DataZoneEnergyDemands</a>
+
+      <a class="list-group-item" href="../module/datazoneequipment.html">DataZoneEquipment</a>
+
+      <a class="list-group-item" href="../module/daylightingdevices.html">DaylightingDevices</a>
+
+      <a class="list-group-item" href="../module/daylightingmanager.html">DaylightingManager</a>
+
+      <a class="list-group-item" href="../module/delightmanagerf%7E2.html">DELIGHTMANAGERF</a>
+
+      <a class="list-group-item" href="../module/delightmanagerf.html">DELIGHTMANAGERF</a>
+
+      <a class="list-group-item" href="../module/demandmanager.html">DemandManager</a>
+
+      <a class="list-group-item" href="../module/desiccantdehumidifiers.html">DesiccantDehumidifiers</a>
+
+      <a class="list-group-item" href="../module/directairmanager.html">DirectAirManager</a>
+
+      <a class="list-group-item" href="../module/displacementventmgr.html">DisplacementVentMgr</a>
+
+      <a class="list-group-item" href="../module/dualduct.html">DualDuct</a>
+
+      <a class="list-group-item" href="../module/dxcoils.html">DXCoils</a>
+
+      <a class="list-group-item" href="../module/dxfearclipping.html">DXFEarClipping</a>
+
+      <a class="list-group-item" href="../module/earthtube.html">EarthTube</a>
+
+      <a class="list-group-item" href="../module/economiclifecyclecost.html">EconomicLifeCycleCost</a>
+
+      <a class="list-group-item" href="../module/economictariff.html">EconomicTariff</a>
+
+      <a class="list-group-item" href="../module/ecoroofmanager.html">EcoRoofManager</a>
+
+      <a class="list-group-item" href="../module/electricbaseboardradiator.html">ElectricBaseboardRadiator</a>
+
+      <a class="list-group-item" href="../module/emsmanager.html">EMSManager</a>
+
+      <a class="list-group-item" href="../module/evaporativecoolers.html">EvaporativeCoolers</a>
+
+      <a class="list-group-item" href="../module/evaporativefluidcoolers.html">EvaporativeFluidCoolers</a>
+
+      <a class="list-group-item" href="../module/exteriorenergyuse.html">ExteriorEnergyUse</a>
+
+      <a class="list-group-item" href="../module/externalinterface.html">ExternalInterface</a>
+
+      <a class="list-group-item" href="../module/fancoilunits.html">FanCoilUnits</a>
+
+      <a class="list-group-item" href="../module/fans.html">Fans</a>
+
+      <a class="list-group-item" href="../module/faultsmanager.html">FaultsManager</a>
+
+      <a class="list-group-item" href="../module/fluidcoolers.html">FluidCoolers</a>
+
+      <a class="list-group-item" href="../module/fluidproperties.html">FluidProperties</a>
+
+      <a class="list-group-item" href="../module/fuelcellelectricgenerator.html">FuelCellElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/furnaces.html">Furnaces</a>
+
+      <a class="list-group-item" href="../module/general.html">General</a>
+
+      <a class="list-group-item" href="../module/generatordynamicsmanager.html">GeneratorDynamicsManager</a>
+
+      <a class="list-group-item" href="../module/generatorfuelsupply.html">GeneratorFuelSupply</a>
+
+      <a class="list-group-item" href="../module/globalnames.html">GlobalNames</a>
+
+      <a class="list-group-item" href="../module/groundheatexchangers.html">GroundHeatExchangers</a>
+
+      <a class="list-group-item" href="../module/heatbalanceairmanager.html">HeatBalanceAirManager</a>
+
+      <a class="list-group-item" href="../module/heatbalancehamtmanager.html">HeatBalanceHAMTManager</a>
+
+      <a class="list-group-item" href="../module/heatbalanceintradexchange.html">HeatBalanceIntRadExchange</a>
+
+      <a class="list-group-item" href="../module/heatbalancemanager.html">HeatBalanceManager</a>
+
+      <a class="list-group-item" href="../module/heatbalancemovableinsulation.html">HeatBalanceMovableInsulation</a>
+
+      <a class="list-group-item" href="../module/heatbalancesurfacemanager.html">HeatBalanceSurfaceManager</a>
+
+      <a class="list-group-item" href="../module/heatbalfinitediffmanager.html">HeatBalFiniteDiffManager</a>
+
+      <a class="list-group-item" href="../module/heatingcoils.html">HeatingCoils</a>
+
+      <a class="list-group-item" href="../module/heatpumpwatertowatercooling.html">HeatPumpWaterToWaterCOOLING</a>
+
+      <a class="list-group-item" href="../module/heatpumpwatertowaterheating.html">HeatPumpWaterToWaterHEATING</a>
+
+      <a class="list-group-item" href="../module/heatpumpwatertowatersimple.html">HeatPumpWaterToWaterSimple</a>
+
+      <a class="list-group-item" href="../module/heatrecovery.html">HeatRecovery</a>
+
+      <a class="list-group-item" href="../module/hightempradiantsystem.html">HighTempRadiantSystem</a>
+
+      <a class="list-group-item" href="../module/humidifiers.html">Humidifiers</a>
+
+      <a class="list-group-item" href="../module/hvaccontrollers.html">HVACControllers</a>
+
+      <a class="list-group-item" href="../module/hvaccooledbeam.html">HVACCooledBeam</a>
+
+      <a class="list-group-item" href="../module/hvacduct.html">HVACDuct</a>
+
+      <a class="list-group-item" href="../module/hvacdxheatpumpsystem.html">HVACDXHeatPumpSystem</a>
+
+      <a class="list-group-item" href="../module/hvacdxsystem.html">HVACDXSystem</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html">HVACHXAssistedCoolingCoil</a>
+
+      <a class="list-group-item" href="../module/hvacinterfacemanager.html">HVACInterfaceManager</a>
+
+      <a class="list-group-item" href="../module/hvacmanager.html">HVACManager</a>
+
+      <a class="list-group-item" href="../module/hvacmultispeedheatpump.html">HVACMultiSpeedHeatPump</a>
+
+      <a class="list-group-item" href="../module/hvacsingleductinduc.html">HVACSingleDuctInduc</a>
+
+      <a class="list-group-item" href="../module/hvacstandaloneerv.html">HVACStandAloneERV</a>
+
+      <a class="list-group-item" href="../module/hvacunitarybypassvav.html">HVACUnitaryBypassVAV</a>
+
+      <a class="list-group-item" href="../module/hvacunitarysystem.html">HVACUnitarySystem</a>
+
+      <a class="list-group-item" href="../module/hvacvariablerefrigerantflow.html">HVACVariableRefrigerantFlow</a>
+
+      <a class="list-group-item" href="../module/hwbaseboardradiator.html">HWBaseboardRadiator</a>
+
+      <a class="list-group-item" href="../module/icengineelectricgenerator.html">ICEngineElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/icethermalstorage.html">IceThermalStorage</a>
+
+      <a class="list-group-item" href="../module/inputprocessor.html">InputProcessor</a>
+
+      <a class="list-group-item" href="../module/internalheatgains.html">InternalHeatGains</a>
+
+      <a class="list-group-item" href="../module/iso_c_function_binding.html">ISO_C_FUNCTION_BINDING</a>
+
+      <a class="list-group-item" href="../module/iso_c_function_binding%7E2.html">ISO_C_FUNCTION_BINDING</a>
+
+      <a class="list-group-item" href="../module/lowtempradiantsystem.html">LowTempRadiantSystem</a>
+
+      <a class="list-group-item" href="../module/manageelectricpower.html">ManageElectricPower</a>
+
+      <a class="list-group-item" href="../module/matrixdatamanager.html">MatrixDataManager</a>
+
+      <a class="list-group-item" href="../module/microchpelectricgenerator.html">MicroCHPElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/microturbineelectricgenerator.html">MicroturbineElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/mixedair.html">MixedAir</a>
+
+      <a class="list-group-item" href="../module/mixercomponent.html">MixerComponent</a>
+
+      <a class="list-group-item" href="../module/moisturebalanceempdmanager.html">MoistureBalanceEMPDManager</a>
+
+      <a class="list-group-item" href="../module/mundtsimmgr.html">MundtSimMgr</a>
+
+      <a class="list-group-item" href="../module/nodeinputmanager.html">NodeInputManager</a>
+
+      <a class="list-group-item" href="../module/nonzoneequipmentmanager.html">NonZoneEquipmentManager</a>
+
+      <a class="list-group-item" href="../module/outairnodemanager.html">OutAirNodeManager</a>
+
+      <a class="list-group-item" href="../module/outdoorairunit.html">OutdoorAirUnit</a>
+
+      <a class="list-group-item" href="../module/outputprocessor.html">OutputProcessor</a>
+
+      <a class="list-group-item" href="../module/outputreportpredefined.html">OutputReportPredefined</a>
+
+      <a class="list-group-item" href="../module/outputreporttabular.html">OutputReportTabular</a>
+
+      <a class="list-group-item" href="../module/outsideenergysources.html">OutsideEnergySources</a>
+
+      <a class="list-group-item" href="../module/packagedterminalheatpump.html">PackagedTerminalHeatPump</a>
+
+      <a class="list-group-item" href="../module/packagedthermalstoragecoil.html">PackagedThermalStorageCoil</a>
+
+      <a class="list-group-item" href="../module/photovoltaics.html">Photovoltaics</a>
+
+      <a class="list-group-item" href="../module/photovoltaicthermalcollectors.html">PhotovoltaicThermalCollectors</a>
+
+      <a class="list-group-item" href="../module/pipeheattransfer.html">PipeHeatTransfer</a>
+
+      <a class="list-group-item" href="../module/pipes.html">Pipes</a>
+
+      <a class="list-group-item" href="../module/plantcentralgshp.html">PlantCentralGSHP</a>
+
+      <a class="list-group-item" href="../module/plantchillers.html">PlantChillers</a>
+
+      <a class="list-group-item" href="../module/plantcomponenttemperaturesources.html">PlantComponentTemperatureSources</a>
+
+      <a class="list-group-item" href="../module/plantcondloopoperation.html">PlantCondLoopOperation</a>
+
+      <a class="list-group-item" href="../module/plantheatexchangerfluidtofluid.html">PlantHeatExchangerFluidToFluid</a>
+
+      <a class="list-group-item" href="../module/plantloadprofile.html">PlantLoadProfile</a>
+
+      <a class="list-group-item" href="../module/plantloopequip.html">PlantLoopEquip</a>
+
+      <a class="list-group-item" href="../module/plantloopsolver.html">PlantLoopSolver</a>
+
+      <a class="list-group-item" href="../module/plantmanager.html">PlantManager</a>
+
+      <a class="list-group-item" href="../module/plantpipingsystemsmanager.html">PlantPipingSystemsManager</a>
+
+      <a class="list-group-item" href="../module/plantpressuresystem.html">PlantPressureSystem</a>
+
+      <a class="list-group-item" href="../module/plantutilities.html">PlantUtilities</a>
+
+      <a class="list-group-item" href="../module/plantvalves.html">PlantValves</a>
+
+      <a class="list-group-item" href="../module/pollutionmodule.html">PollutionModule</a>
+
+      <a class="list-group-item" href="../module/pondgroundheatexchanger.html">PondGroundHeatExchanger</a>
+
+      <a class="list-group-item" href="../module/poweredinductionunits.html">PoweredInductionUnits</a>
+
+      <a class="list-group-item" href="../module/psychrometrics.html">Psychrometrics</a>
+
+      <a class="list-group-item" href="../module/pumps.html">Pumps</a>
+
+      <a class="list-group-item" href="../module/purchasedairmanager.html">PurchasedAirManager</a>
+
+      <a class="list-group-item" href="../module/refrigeratedcase.html">RefrigeratedCase</a>
+
+      <a class="list-group-item" href="../module/reportsizingmanager.html">ReportSizingManager</a>
+
+      <a class="list-group-item" href="../module/returnairpathmanager.html">ReturnAirPathManager</a>
+
+      <a class="list-group-item" href="../module/roomairmodelmanager.html">RoomAirModelManager</a>
+
+      <a class="list-group-item" href="../module/roomairmodelusertemppattern.html">RoomAirModelUserTempPattern</a>
+
+      <a class="list-group-item" href="../module/rootfinder.html">RootFinder</a>
+
+      <a class="list-group-item" href="../module/runtimelanguageprocessor.html">RuntimeLanguageProcessor</a>
+
+      <a class="list-group-item" href="../module/schedulemanager.html">ScheduleManager</a>
+
+      <a class="list-group-item" href="../module/setpointmanager.html">SetPointManager</a>
+
+      <a class="list-group-item" href="../module/simairservingzones.html">SimAirServingZones</a>
+
+      <a class="list-group-item" href="../module/simulationmanager.html">SimulationManager</a>
+
+      <a class="list-group-item" href="../module/singleduct.html">SingleDuct</a>
+
+      <a class="list-group-item" href="../module/sizingmanager.html">SizingManager</a>
+
+      <a class="list-group-item" href="../module/solarcollectors.html">SolarCollectors</a>
+
+      <a class="list-group-item" href="../module/solarreflectionmanager.html">SolarReflectionManager</a>
+
+      <a class="list-group-item" href="../module/solarshading.html">SolarShading</a>
+
+      <a class="list-group-item" href="../module/sortandstringutilities.html">SortAndStringUtilities</a>
+
+      <a class="list-group-item" href="../module/splittercomponent.html">SplitterComponent</a>
+
+      <a class="list-group-item" href="../module/sqliteprocedures%7E2.html">SQLiteProcedures</a>
+
+      <a class="list-group-item" href="../module/sqliteprocedures.html">SQLiteProcedures</a>
+
+      <a class="list-group-item" href="../module/standardratings.html">StandardRatings</a>
+
+      <a class="list-group-item" href="../module/steambaseboardradiator.html">SteamBaseboardRadiator</a>
+
+      <a class="list-group-item" href="../module/steamcoils.html">SteamCoils</a>
+
+      <a class="list-group-item" href="../module/surfacegeometry.html">SurfaceGeometry</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html">SurfaceGroundHeatExchanger</a>
+
+      <a class="list-group-item" href="../module/systemavailabilitymanager.html">SystemAvailabilityManager</a>
+
+      <a class="list-group-item" href="../module/systemreports.html">SystemReports</a>
+
+      <a class="list-group-item" href="../module/tarcogargs.html">TARCOGArgs</a>
+
+      <a class="list-group-item" href="../module/tarcogcommon.html">TARCOGCommon</a>
+
+      <a class="list-group-item" href="../module/tarcogdeflection.html">TARCOGDeflection</a>
+
+      <a class="list-group-item" href="../module/tarcoggasses90.html">TARCOGGasses90</a>
+
+      <a class="list-group-item" href="../module/tarcoggassesparams.html">TARCOGGassesParams</a>
+
+      <a class="list-group-item" href="../module/tarcogmain.html">TARCOGMain</a>
+
+      <a class="list-group-item" href="../module/tarcogoutput.html">TARCOGOutput</a>
+
+      <a class="list-group-item" href="../module/tarcogparams.html">TARCOGParams</a>
+
+      <a class="list-group-item" href="../module/tarcogshading.html">TarcogShading</a>
+
+      <a class="list-group-item" href="../module/thermalchimney.html">ThermalChimney</a>
+
+      <a class="list-group-item" href="../module/thermalcomfort.html">ThermalComfort</a>
+
+      <a class="list-group-item" href="../module/thermalen673calc.html">ThermalEN673Calc</a>
+
+      <a class="list-group-item" href="../module/thermaliso15099calc.html">ThermalISO15099Calc</a>
+
+      <a class="list-group-item" href="../module/transpiredcollector.html">TranspiredCollector</a>
+
+      <a class="list-group-item" href="../module/ufadmanager.html">UFADManager</a>
+
+      <a class="list-group-item" href="../module/unitheater.html">UnitHeater</a>
+
+      <a class="list-group-item" href="../module/unitventilator.html">UnitVentilator</a>
+
+      <a class="list-group-item" href="../module/userdefinedcomponents.html">UserDefinedComponents</a>
+
+      <a class="list-group-item" href="../module/variablespeedcoils.html">VariableSpeedCoils</a>
+
+      <a class="list-group-item" href="../module/vectors.html">vectors</a>
+
+      <a class="list-group-item" href="../module/ventilatedslab.html">VentilatedSlab</a>
+
+      <a class="list-group-item" href="../module/watercoils.html">WaterCoils</a>
+
+      <a class="list-group-item" href="../module/watermanager.html">WaterManager</a>
+
+      <a class="list-group-item" href="../module/waterthermaltanks.html">WaterThermalTanks</a>
+
+      <a class="list-group-item" href="../module/watertoairheatpump.html">WatertoAirHeatPump</a>
+
+      <a class="list-group-item" href="../module/watertoairheatpumpsimple.html">WatertoAirHeatPumpSimple</a>
+
+      <a class="list-group-item" href="../module/wateruse.html">WaterUse</a>
+
+      <a class="list-group-item" href="../module/weathermanager.html">WeatherManager</a>
+
+      <a class="list-group-item" href="../module/windowac.html">WindowAC</a>
+
+      <a class="list-group-item" href="../module/windowcomplexmanager.html">WindowComplexManager</a>
+
+      <a class="list-group-item" href="../module/windowequivalentlayer.html">WindowEquivalentLayer</a>
+
+      <a class="list-group-item" href="../module/windowmanager.html">WindowManager</a>
+
+      <a class="list-group-item" href="../module/windturbine.html">WindTurbine</a>
+
+      <a class="list-group-item" href="../module/zoneairloopequipmentmanager.html">ZoneAirLoopEquipmentManager</a>
+
+      <a class="list-group-item" href="../module/zonecontaminantpredictorcorrector.html">ZoneContaminantPredictorCorrector</a>
+
+      <a class="list-group-item" href="../module/zonedehumidifier.html">ZoneDehumidifier</a>
+
+      <a class="list-group-item" href="../module/zoneequipmentmanager.html">ZoneEquipmentManager</a>
+
+      <a class="list-group-item" href="../module/zoneplenum.html">ZonePlenum</a>
+
+      <a class="list-group-item" href="../module/zonetemppredictorcorrector.html">ZoneTempPredictorCorrector</a>
+
+    </div>
+  </div>
+</div>
+
+
+  </section>
+
+    <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2017 </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> EnergyPlusFortran</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js'],
+        'HTML-CSS': {
+           styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#000000 ! important'} }
+        }
+      });
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>

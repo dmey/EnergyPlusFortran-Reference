@@ -1,0 +1,4235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	 <meta name="description" content="">
+
+    <meta name="author" content="dmey (forked from NREL)" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>HVACHXAssistedCoolingCoil &ndash; EnergyPlusFortran</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">EnergyPlusFortran <small>8.1.0.009</small></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+		 aria-expanded="false">Contents <span class="caret"></span></a>
+	      <ul class="dropdown-menu">
+
+            <li><a href="../lists/files.html">Source Files</a></li>
+
+
+            <li><a href="../lists/modules.html">Modules</a></li>
+
+
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+
+
+            <li><a href="../lists/types.html">Derived Types</a></li>
+
+
+            <li><a href="../program/energyplus.html">Program</a></li>
+
+            </ul>
+            </li>
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/energyplus.html">Program</a></li>
+
+          </ul>
+
+
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+
+  <div class="row">
+    <h1>HVACHXAssistedCoolingCoil
+    <small>Module</small>
+
+    </h1>
+
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+	  data-placement="bottom" data-html="true"
+	  title=" 0.3% of total for modules and submodules.">935 statements</a>
+     </li>
+
+
+    <li><i class="fa fa-code"></i><a href="../src/HVACHXAssistedCoolingCoil.f90"> Source File</a></li>
+
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+
+     <li><a href='../sourcefile/hvachxassistedcoolingcoil.f90.html'>HVACHXAssistedCoolingCoil.f90</a></li>
+
+     <li class="active">HVACHXAssistedCoolingCoil</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+
+<div id="sidebar">
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#variable-on%7E6">On</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#variable-off%7E6">Off</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#variable-totalnumhxassistedcoils">TotalNumHXAssistedCoils</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#variable-hxassistedcoil">HXAssistedCoil</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#variable-hxassistedcoiloutlettemp">HXAssistedCoilOutletTemp</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#variable-hxassistedcoiloutlethumrat">HXAssistedCoilOutletHumRat</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#variable-getcoilsinputflag%7E3">GetCoilsInputFlag</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#variable-checkequipname%7E33">CheckEquipName</a>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#types-0">Derived Types</a></h3></div>
+  <div id="types-0" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#type-hxassistedcoilparameters">HXAssistedCoilParameters</a>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#funcs-0">Functions</a></h3></div>
+  <div id="funcs-0" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#proc-getcoilcapacity%7E3">GetCoilCapacity</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#proc-getcoilgrouptypenum">GetCoilGroupTypeNum</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#proc-getcoilobjecttypenum">GetCoilObjectTypeNum</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#proc-getcoilinletnode%7E3">GetCoilInletNode</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#proc-getcoilwaterinletnode">GetCoilWaterInletNode</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#proc-getcoiloutletnode%7E3">GetCoilOutletNode</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#proc-gethxdxcoilname">GetHXDXCoilName</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#proc-getactualdxcoilindex">GetActualDXCoilIndex</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#proc-gethxcoiltype">GetHXCoilType</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#proc-getcoilmaxwaterflowrate">GetCoilMaxWaterFlowRate</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#proc-gethxcoilairflowrate">GetHXCoilAirFlowRate</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#proc-verifyheatexchangerparent">VerifyHeatExchangerParent</a>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-0">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-0" class="panel-collapse collapse">
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#proc-simhxassistedcoolingcoil">SimHXAssistedCoolingCoil</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#proc-gethxassistedcoolingcoilinput">GetHXAssistedCoolingCoilInput</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#proc-inithxassistedcoolingcoil">InitHXAssistedCoolingCoil</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#proc-calchxassistedcoolingcoil">CalcHXAssistedCoolingCoil</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#proc-gethxdxcoilindex">GetHXDXCoilIndex</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#proc-checkhxassistedcoolingcoilschedule">CheckHXAssistedCoolingCoilSchedule</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#proc-gethxcoiltypeandname">GetHXCoilTypeAndName</a>
+
+    </div>
+  </div>
+</div>
+
+
+  <hr>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allmods-0">All Modules</a></h3></div>
+  <div id="allmods-0" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../module/airflownetworkbalancemanager.html">AirflowNetworkBalanceManager</a>
+
+      <a class="list-group-item" href="../module/airflownetworksolver.html">AirflowNetworkSolver</a>
+
+      <a class="list-group-item" href="../module/baseboardelectric.html">BaseboardElectric</a>
+
+      <a class="list-group-item" href="../module/baseboardradiator.html">BaseboardRadiator</a>
+
+      <a class="list-group-item" href="../module/boilers.html">Boilers</a>
+
+      <a class="list-group-item" href="../module/boilersteam.html">BoilerSteam</a>
+
+      <a class="list-group-item" href="../module/branchinputmanager.html">BranchInputManager</a>
+
+      <a class="list-group-item" href="../module/branchnodeconnections.html">BranchNodeConnections</a>
+
+      <a class="list-group-item" href="../module/chillerabsorption.html">ChillerAbsorption</a>
+
+      <a class="list-group-item" href="../module/chillerelectriceir.html">ChillerElectricEIR</a>
+
+      <a class="list-group-item" href="../module/chillerexhaustabsorption.html">ChillerExhaustAbsorption</a>
+
+      <a class="list-group-item" href="../module/chillergasabsorption.html">ChillerGasAbsorption</a>
+
+      <a class="list-group-item" href="../module/chillerindirectabsorption.html">ChillerIndirectAbsorption</a>
+
+      <a class="list-group-item" href="../module/chillerreformulatedeir.html">ChillerReformulatedEIR</a>
+
+      <a class="list-group-item" href="../module/condenserlooptowers.html">CondenserLoopTowers</a>
+
+      <a class="list-group-item" href="../module/conductiontransferfunctioncalc.html">ConductionTransferFunctionCalc</a>
+
+      <a class="list-group-item" href="../module/convectioncoefficients.html">ConvectionCoefficients</a>
+
+      <a class="list-group-item" href="../module/cooltower.html">CoolTower</a>
+
+      <a class="list-group-item" href="../module/costestimatemanager.html">CostEstimateManager</a>
+
+      <a class="list-group-item" href="../module/crossventmgr.html">CrossVentMgr</a>
+
+      <a class="list-group-item" href="../module/ctelectricgenerator.html">CTElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/curvemanager.html">CurveManager</a>
+
+      <a class="list-group-item" href="../module/dataairflownetwork.html">DataAirflowNetwork</a>
+
+      <a class="list-group-item" href="../module/dataairloop.html">DataAirLoop</a>
+
+      <a class="list-group-item" href="../module/dataairsystems.html">DataAirSystems</a>
+
+      <a class="list-group-item" href="../module/databranchairloopplant.html">DataBranchAirLoopPlant</a>
+
+      <a class="list-group-item" href="../module/databranchnodeconnections.html">DataBranchNodeConnections</a>
+
+      <a class="list-group-item" href="../module/databsdfwindow.html">DataBSDFWindow</a>
+
+      <a class="list-group-item" href="../module/datacomplexfenestration.html">DataComplexFenestration</a>
+
+      <a class="list-group-item" href="../module/datacontaminantbalance.html">DataContaminantBalance</a>
+
+      <a class="list-group-item" href="../module/dataconvergparams.html">DataConvergParams</a>
+
+      <a class="list-group-item" href="../module/dataconversions.html">DataConversions</a>
+
+      <a class="list-group-item" href="../module/datacostestimate.html">DataCostEstimate</a>
+
+      <a class="list-group-item" href="../module/datadaylighting.html">DataDaylighting</a>
+
+      <a class="list-group-item" href="../module/datadaylightingdevices.html">DataDaylightingDevices</a>
+
+      <a class="list-group-item" href="../module/datadefineequip.html">DataDefineEquip</a>
+
+      <a class="list-group-item" href="../module/datadelight.html">DataDElight</a>
+
+      <a class="list-group-item" href="../module/dataenvironment.html">DataEnvironment</a>
+
+      <a class="list-group-item" href="../module/dataerrortracking.html">DataErrorTracking</a>
+
+      <a class="list-group-item" href="../module/datagenerators.html">DataGenerators</a>
+
+      <a class="list-group-item" href="../module/dataglobalconstants.html">DataGlobalConstants</a>
+
+      <a class="list-group-item" href="../module/dataglobals.html">DataGlobals</a>
+
+      <a class="list-group-item" href="../module/dataheatbalance.html">DataHeatBalance</a>
+
+      <a class="list-group-item" href="../module/dataheatbalfansys.html">DataHeatBalFanSys</a>
+
+      <a class="list-group-item" href="../module/dataheatbalsurface.html">DataHeatBalSurface</a>
+
+      <a class="list-group-item" href="../module/datahvaccontrollers.html">DataHVACControllers</a>
+
+      <a class="list-group-item" href="../module/datahvacglobals.html">DataHVACGlobals</a>
+
+      <a class="list-group-item" href="../module/datainterfaces.html">DataInterfaces</a>
+
+      <a class="list-group-item" href="../module/dataipshortcuts.html">DataIPShortCuts</a>
+
+      <a class="list-group-item" href="../module/dataloopnode.html">DataLoopNode</a>
+
+      <a class="list-group-item" href="../module/datamoisturebalance.html">DataMoistureBalance</a>
+
+      <a class="list-group-item" href="../module/datamoisturebalanceempd.html">DataMoistureBalanceEMPD</a>
+
+      <a class="list-group-item" href="../module/dataoutputs.html">DataOutputs</a>
+
+      <a class="list-group-item" href="../module/dataphotovoltaics.html">DataPhotovoltaics</a>
+
+      <a class="list-group-item" href="../module/dataplant.html">DataPlant</a>
+
+      <a class="list-group-item" href="../module/dataplantpipingsystems.html">DataPlantPipingSystems</a>
+
+      <a class="list-group-item" href="../module/dataprecisionglobals.html">DataPrecisionGlobals</a>
+
+      <a class="list-group-item" href="../module/datareportingflags.html">DataReportingFlags</a>
+
+      <a class="list-group-item" href="../module/dataroomairmodel.html">DataRoomAirModel</a>
+
+      <a class="list-group-item" href="../module/datarootfinder.html">DataRootFinder</a>
+
+      <a class="list-group-item" href="../module/dataruntimelanguage.html">DataRuntimeLanguage</a>
+
+      <a class="list-group-item" href="../module/datashadowingcombinations.html">DataShadowingCombinations</a>
+
+      <a class="list-group-item" href="../module/datasizing.html">DataSizing</a>
+
+      <a class="list-group-item" href="../module/datastringglobals.html">DataStringGlobals</a>
+
+      <a class="list-group-item" href="../module/datasurfacecolors.html">DataSurfaceColors</a>
+
+      <a class="list-group-item" href="../module/datasurfacelists.html">DataSurfaceLists</a>
+
+      <a class="list-group-item" href="../module/datasurfaces.html">DataSurfaces</a>
+
+      <a class="list-group-item" href="../module/datasystemvariables.html">DataSystemVariables</a>
+
+      <a class="list-group-item" href="../module/datatimings.html">DataTimings</a>
+
+      <a class="list-group-item" href="../module/dataucsdshareddata.html">DataUCSDSharedData</a>
+
+      <a class="list-group-item" href="../module/datavectortypes.html">DataVectorTypes</a>
+
+      <a class="list-group-item" href="../module/dataviewfactorinformation.html">DataViewFactorInformation</a>
+
+      <a class="list-group-item" href="../module/datawater.html">DataWater</a>
+
+      <a class="list-group-item" href="../module/datawindowequivalentlayer.html">DataWindowEquivalentLayer</a>
+
+      <a class="list-group-item" href="../module/datazonecontrols.html">DataZoneControls</a>
+
+      <a class="list-group-item" href="../module/datazoneenergydemands.html">DataZoneEnergyDemands</a>
+
+      <a class="list-group-item" href="../module/datazoneequipment.html">DataZoneEquipment</a>
+
+      <a class="list-group-item" href="../module/daylightingdevices.html">DaylightingDevices</a>
+
+      <a class="list-group-item" href="../module/daylightingmanager.html">DaylightingManager</a>
+
+      <a class="list-group-item" href="../module/delightmanagerf%7E2.html">DELIGHTMANAGERF</a>
+
+      <a class="list-group-item" href="../module/delightmanagerf.html">DELIGHTMANAGERF</a>
+
+      <a class="list-group-item" href="../module/demandmanager.html">DemandManager</a>
+
+      <a class="list-group-item" href="../module/desiccantdehumidifiers.html">DesiccantDehumidifiers</a>
+
+      <a class="list-group-item" href="../module/directairmanager.html">DirectAirManager</a>
+
+      <a class="list-group-item" href="../module/displacementventmgr.html">DisplacementVentMgr</a>
+
+      <a class="list-group-item" href="../module/dualduct.html">DualDuct</a>
+
+      <a class="list-group-item" href="../module/dxcoils.html">DXCoils</a>
+
+      <a class="list-group-item" href="../module/dxfearclipping.html">DXFEarClipping</a>
+
+      <a class="list-group-item" href="../module/earthtube.html">EarthTube</a>
+
+      <a class="list-group-item" href="../module/economiclifecyclecost.html">EconomicLifeCycleCost</a>
+
+      <a class="list-group-item" href="../module/economictariff.html">EconomicTariff</a>
+
+      <a class="list-group-item" href="../module/ecoroofmanager.html">EcoRoofManager</a>
+
+      <a class="list-group-item" href="../module/electricbaseboardradiator.html">ElectricBaseboardRadiator</a>
+
+      <a class="list-group-item" href="../module/emsmanager.html">EMSManager</a>
+
+      <a class="list-group-item" href="../module/evaporativecoolers.html">EvaporativeCoolers</a>
+
+      <a class="list-group-item" href="../module/evaporativefluidcoolers.html">EvaporativeFluidCoolers</a>
+
+      <a class="list-group-item" href="../module/exteriorenergyuse.html">ExteriorEnergyUse</a>
+
+      <a class="list-group-item" href="../module/externalinterface.html">ExternalInterface</a>
+
+      <a class="list-group-item" href="../module/fancoilunits.html">FanCoilUnits</a>
+
+      <a class="list-group-item" href="../module/fans.html">Fans</a>
+
+      <a class="list-group-item" href="../module/faultsmanager.html">FaultsManager</a>
+
+      <a class="list-group-item" href="../module/fluidcoolers.html">FluidCoolers</a>
+
+      <a class="list-group-item" href="../module/fluidproperties.html">FluidProperties</a>
+
+      <a class="list-group-item" href="../module/fuelcellelectricgenerator.html">FuelCellElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/furnaces.html">Furnaces</a>
+
+      <a class="list-group-item" href="../module/general.html">General</a>
+
+      <a class="list-group-item" href="../module/generatordynamicsmanager.html">GeneratorDynamicsManager</a>
+
+      <a class="list-group-item" href="../module/generatorfuelsupply.html">GeneratorFuelSupply</a>
+
+      <a class="list-group-item" href="../module/globalnames.html">GlobalNames</a>
+
+      <a class="list-group-item" href="../module/groundheatexchangers.html">GroundHeatExchangers</a>
+
+      <a class="list-group-item" href="../module/heatbalanceairmanager.html">HeatBalanceAirManager</a>
+
+      <a class="list-group-item" href="../module/heatbalancehamtmanager.html">HeatBalanceHAMTManager</a>
+
+      <a class="list-group-item" href="../module/heatbalanceintradexchange.html">HeatBalanceIntRadExchange</a>
+
+      <a class="list-group-item" href="../module/heatbalancemanager.html">HeatBalanceManager</a>
+
+      <a class="list-group-item" href="../module/heatbalancemovableinsulation.html">HeatBalanceMovableInsulation</a>
+
+      <a class="list-group-item" href="../module/heatbalancesurfacemanager.html">HeatBalanceSurfaceManager</a>
+
+      <a class="list-group-item" href="../module/heatbalfinitediffmanager.html">HeatBalFiniteDiffManager</a>
+
+      <a class="list-group-item" href="../module/heatingcoils.html">HeatingCoils</a>
+
+      <a class="list-group-item" href="../module/heatpumpwatertowatercooling.html">HeatPumpWaterToWaterCOOLING</a>
+
+      <a class="list-group-item" href="../module/heatpumpwatertowaterheating.html">HeatPumpWaterToWaterHEATING</a>
+
+      <a class="list-group-item" href="../module/heatpumpwatertowatersimple.html">HeatPumpWaterToWaterSimple</a>
+
+      <a class="list-group-item" href="../module/heatrecovery.html">HeatRecovery</a>
+
+      <a class="list-group-item" href="../module/hightempradiantsystem.html">HighTempRadiantSystem</a>
+
+      <a class="list-group-item" href="../module/humidifiers.html">Humidifiers</a>
+
+      <a class="list-group-item" href="../module/hvaccontrollers.html">HVACControllers</a>
+
+      <a class="list-group-item" href="../module/hvaccooledbeam.html">HVACCooledBeam</a>
+
+      <a class="list-group-item" href="../module/hvacduct.html">HVACDuct</a>
+
+      <a class="list-group-item" href="../module/hvacdxheatpumpsystem.html">HVACDXHeatPumpSystem</a>
+
+      <a class="list-group-item" href="../module/hvacdxsystem.html">HVACDXSystem</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html">HVACHXAssistedCoolingCoil</a>
+
+      <a class="list-group-item" href="../module/hvacinterfacemanager.html">HVACInterfaceManager</a>
+
+      <a class="list-group-item" href="../module/hvacmanager.html">HVACManager</a>
+
+      <a class="list-group-item" href="../module/hvacmultispeedheatpump.html">HVACMultiSpeedHeatPump</a>
+
+      <a class="list-group-item" href="../module/hvacsingleductinduc.html">HVACSingleDuctInduc</a>
+
+      <a class="list-group-item" href="../module/hvacstandaloneerv.html">HVACStandAloneERV</a>
+
+      <a class="list-group-item" href="../module/hvacunitarybypassvav.html">HVACUnitaryBypassVAV</a>
+
+      <a class="list-group-item" href="../module/hvacunitarysystem.html">HVACUnitarySystem</a>
+
+      <a class="list-group-item" href="../module/hvacvariablerefrigerantflow.html">HVACVariableRefrigerantFlow</a>
+
+      <a class="list-group-item" href="../module/hwbaseboardradiator.html">HWBaseboardRadiator</a>
+
+      <a class="list-group-item" href="../module/icengineelectricgenerator.html">ICEngineElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/icethermalstorage.html">IceThermalStorage</a>
+
+      <a class="list-group-item" href="../module/inputprocessor.html">InputProcessor</a>
+
+      <a class="list-group-item" href="../module/internalheatgains.html">InternalHeatGains</a>
+
+      <a class="list-group-item" href="../module/iso_c_function_binding.html">ISO_C_FUNCTION_BINDING</a>
+
+      <a class="list-group-item" href="../module/iso_c_function_binding%7E2.html">ISO_C_FUNCTION_BINDING</a>
+
+      <a class="list-group-item" href="../module/lowtempradiantsystem.html">LowTempRadiantSystem</a>
+
+      <a class="list-group-item" href="../module/manageelectricpower.html">ManageElectricPower</a>
+
+      <a class="list-group-item" href="../module/matrixdatamanager.html">MatrixDataManager</a>
+
+      <a class="list-group-item" href="../module/microchpelectricgenerator.html">MicroCHPElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/microturbineelectricgenerator.html">MicroturbineElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/mixedair.html">MixedAir</a>
+
+      <a class="list-group-item" href="../module/mixercomponent.html">MixerComponent</a>
+
+      <a class="list-group-item" href="../module/moisturebalanceempdmanager.html">MoistureBalanceEMPDManager</a>
+
+      <a class="list-group-item" href="../module/mundtsimmgr.html">MundtSimMgr</a>
+
+      <a class="list-group-item" href="../module/nodeinputmanager.html">NodeInputManager</a>
+
+      <a class="list-group-item" href="../module/nonzoneequipmentmanager.html">NonZoneEquipmentManager</a>
+
+      <a class="list-group-item" href="../module/outairnodemanager.html">OutAirNodeManager</a>
+
+      <a class="list-group-item" href="../module/outdoorairunit.html">OutdoorAirUnit</a>
+
+      <a class="list-group-item" href="../module/outputprocessor.html">OutputProcessor</a>
+
+      <a class="list-group-item" href="../module/outputreportpredefined.html">OutputReportPredefined</a>
+
+      <a class="list-group-item" href="../module/outputreporttabular.html">OutputReportTabular</a>
+
+      <a class="list-group-item" href="../module/outsideenergysources.html">OutsideEnergySources</a>
+
+      <a class="list-group-item" href="../module/packagedterminalheatpump.html">PackagedTerminalHeatPump</a>
+
+      <a class="list-group-item" href="../module/packagedthermalstoragecoil.html">PackagedThermalStorageCoil</a>
+
+      <a class="list-group-item" href="../module/photovoltaics.html">Photovoltaics</a>
+
+      <a class="list-group-item" href="../module/photovoltaicthermalcollectors.html">PhotovoltaicThermalCollectors</a>
+
+      <a class="list-group-item" href="../module/pipeheattransfer.html">PipeHeatTransfer</a>
+
+      <a class="list-group-item" href="../module/pipes.html">Pipes</a>
+
+      <a class="list-group-item" href="../module/plantcentralgshp.html">PlantCentralGSHP</a>
+
+      <a class="list-group-item" href="../module/plantchillers.html">PlantChillers</a>
+
+      <a class="list-group-item" href="../module/plantcomponenttemperaturesources.html">PlantComponentTemperatureSources</a>
+
+      <a class="list-group-item" href="../module/plantcondloopoperation.html">PlantCondLoopOperation</a>
+
+      <a class="list-group-item" href="../module/plantheatexchangerfluidtofluid.html">PlantHeatExchangerFluidToFluid</a>
+
+      <a class="list-group-item" href="../module/plantloadprofile.html">PlantLoadProfile</a>
+
+      <a class="list-group-item" href="../module/plantloopequip.html">PlantLoopEquip</a>
+
+      <a class="list-group-item" href="../module/plantloopsolver.html">PlantLoopSolver</a>
+
+      <a class="list-group-item" href="../module/plantmanager.html">PlantManager</a>
+
+      <a class="list-group-item" href="../module/plantpipingsystemsmanager.html">PlantPipingSystemsManager</a>
+
+      <a class="list-group-item" href="../module/plantpressuresystem.html">PlantPressureSystem</a>
+
+      <a class="list-group-item" href="../module/plantutilities.html">PlantUtilities</a>
+
+      <a class="list-group-item" href="../module/plantvalves.html">PlantValves</a>
+
+      <a class="list-group-item" href="../module/pollutionmodule.html">PollutionModule</a>
+
+      <a class="list-group-item" href="../module/pondgroundheatexchanger.html">PondGroundHeatExchanger</a>
+
+      <a class="list-group-item" href="../module/poweredinductionunits.html">PoweredInductionUnits</a>
+
+      <a class="list-group-item" href="../module/psychrometrics.html">Psychrometrics</a>
+
+      <a class="list-group-item" href="../module/pumps.html">Pumps</a>
+
+      <a class="list-group-item" href="../module/purchasedairmanager.html">PurchasedAirManager</a>
+
+      <a class="list-group-item" href="../module/refrigeratedcase.html">RefrigeratedCase</a>
+
+      <a class="list-group-item" href="../module/reportsizingmanager.html">ReportSizingManager</a>
+
+      <a class="list-group-item" href="../module/returnairpathmanager.html">ReturnAirPathManager</a>
+
+      <a class="list-group-item" href="../module/roomairmodelmanager.html">RoomAirModelManager</a>
+
+      <a class="list-group-item" href="../module/roomairmodelusertemppattern.html">RoomAirModelUserTempPattern</a>
+
+      <a class="list-group-item" href="../module/rootfinder.html">RootFinder</a>
+
+      <a class="list-group-item" href="../module/runtimelanguageprocessor.html">RuntimeLanguageProcessor</a>
+
+      <a class="list-group-item" href="../module/schedulemanager.html">ScheduleManager</a>
+
+      <a class="list-group-item" href="../module/setpointmanager.html">SetPointManager</a>
+
+      <a class="list-group-item" href="../module/simairservingzones.html">SimAirServingZones</a>
+
+      <a class="list-group-item" href="../module/simulationmanager.html">SimulationManager</a>
+
+      <a class="list-group-item" href="../module/singleduct.html">SingleDuct</a>
+
+      <a class="list-group-item" href="../module/sizingmanager.html">SizingManager</a>
+
+      <a class="list-group-item" href="../module/solarcollectors.html">SolarCollectors</a>
+
+      <a class="list-group-item" href="../module/solarreflectionmanager.html">SolarReflectionManager</a>
+
+      <a class="list-group-item" href="../module/solarshading.html">SolarShading</a>
+
+      <a class="list-group-item" href="../module/sortandstringutilities.html">SortAndStringUtilities</a>
+
+      <a class="list-group-item" href="../module/splittercomponent.html">SplitterComponent</a>
+
+      <a class="list-group-item" href="../module/sqliteprocedures%7E2.html">SQLiteProcedures</a>
+
+      <a class="list-group-item" href="../module/sqliteprocedures.html">SQLiteProcedures</a>
+
+      <a class="list-group-item" href="../module/standardratings.html">StandardRatings</a>
+
+      <a class="list-group-item" href="../module/steambaseboardradiator.html">SteamBaseboardRadiator</a>
+
+      <a class="list-group-item" href="../module/steamcoils.html">SteamCoils</a>
+
+      <a class="list-group-item" href="../module/surfacegeometry.html">SurfaceGeometry</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html">SurfaceGroundHeatExchanger</a>
+
+      <a class="list-group-item" href="../module/systemavailabilitymanager.html">SystemAvailabilityManager</a>
+
+      <a class="list-group-item" href="../module/systemreports.html">SystemReports</a>
+
+      <a class="list-group-item" href="../module/tarcogargs.html">TARCOGArgs</a>
+
+      <a class="list-group-item" href="../module/tarcogcommon.html">TARCOGCommon</a>
+
+      <a class="list-group-item" href="../module/tarcogdeflection.html">TARCOGDeflection</a>
+
+      <a class="list-group-item" href="../module/tarcoggasses90.html">TARCOGGasses90</a>
+
+      <a class="list-group-item" href="../module/tarcoggassesparams.html">TARCOGGassesParams</a>
+
+      <a class="list-group-item" href="../module/tarcogmain.html">TARCOGMain</a>
+
+      <a class="list-group-item" href="../module/tarcogoutput.html">TARCOGOutput</a>
+
+      <a class="list-group-item" href="../module/tarcogparams.html">TARCOGParams</a>
+
+      <a class="list-group-item" href="../module/tarcogshading.html">TarcogShading</a>
+
+      <a class="list-group-item" href="../module/thermalchimney.html">ThermalChimney</a>
+
+      <a class="list-group-item" href="../module/thermalcomfort.html">ThermalComfort</a>
+
+      <a class="list-group-item" href="../module/thermalen673calc.html">ThermalEN673Calc</a>
+
+      <a class="list-group-item" href="../module/thermaliso15099calc.html">ThermalISO15099Calc</a>
+
+      <a class="list-group-item" href="../module/transpiredcollector.html">TranspiredCollector</a>
+
+      <a class="list-group-item" href="../module/ufadmanager.html">UFADManager</a>
+
+      <a class="list-group-item" href="../module/unitheater.html">UnitHeater</a>
+
+      <a class="list-group-item" href="../module/unitventilator.html">UnitVentilator</a>
+
+      <a class="list-group-item" href="../module/userdefinedcomponents.html">UserDefinedComponents</a>
+
+      <a class="list-group-item" href="../module/variablespeedcoils.html">VariableSpeedCoils</a>
+
+      <a class="list-group-item" href="../module/vectors.html">vectors</a>
+
+      <a class="list-group-item" href="../module/ventilatedslab.html">VentilatedSlab</a>
+
+      <a class="list-group-item" href="../module/watercoils.html">WaterCoils</a>
+
+      <a class="list-group-item" href="../module/watermanager.html">WaterManager</a>
+
+      <a class="list-group-item" href="../module/waterthermaltanks.html">WaterThermalTanks</a>
+
+      <a class="list-group-item" href="../module/watertoairheatpump.html">WatertoAirHeatPump</a>
+
+      <a class="list-group-item" href="../module/watertoairheatpumpsimple.html">WatertoAirHeatPumpSimple</a>
+
+      <a class="list-group-item" href="../module/wateruse.html">WaterUse</a>
+
+      <a class="list-group-item" href="../module/weathermanager.html">WeatherManager</a>
+
+      <a class="list-group-item" href="../module/windowac.html">WindowAC</a>
+
+      <a class="list-group-item" href="../module/windowcomplexmanager.html">WindowComplexManager</a>
+
+      <a class="list-group-item" href="../module/windowequivalentlayer.html">WindowEquivalentLayer</a>
+
+      <a class="list-group-item" href="../module/windowmanager.html">WindowManager</a>
+
+      <a class="list-group-item" href="../module/windturbine.html">WindTurbine</a>
+
+      <a class="list-group-item" href="../module/zoneairloopequipmentmanager.html">ZoneAirLoopEquipmentManager</a>
+
+      <a class="list-group-item" href="../module/zonecontaminantpredictorcorrector.html">ZoneContaminantPredictorCorrector</a>
+
+      <a class="list-group-item" href="../module/zonedehumidifier.html">ZoneDehumidifier</a>
+
+      <a class="list-group-item" href="../module/zoneequipmentmanager.html">ZoneEquipmentManager</a>
+
+      <a class="list-group-item" href="../module/zoneplenum.html">ZonePlenum</a>
+
+      <a class="list-group-item" href="../module/zonetemppredictorcorrector.html">ZoneTempPredictorCorrector</a>
+
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+
+
+    <ul class="list-inline">
+      <li><h4>Uses:</h4></li>
+
+      <li><a href='../module/dataprecisionglobals.html'>DataPrecisionGlobals</a></li>
+
+      <li><a href='../module/dataloopnode.html'>DataLoopNode</a></li>
+
+      <li><a href='../module/dataglobals.html'>DataGlobals</a></li>
+
+      <li><a href='../module/datahvacglobals.html'>DataHVACGlobals</a></li>
+
+      <li><a href='../module/datainterfaces.html'>DataInterfaces</a></li>
+
+    </ul>
+
+                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: module~~hvachxassistedcoolingcoil~~UsesGraph Pages: 1 -->
+<svg id="modulehvachxassistedcoolingcoilUsesGraph" width="556pt" height="184pt"
+ viewBox="0.00 0.00 555.79 184.26" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~hvachxassistedcoolingcoil~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 180.2573)">
+<title>module~~hvachxassistedcoolingcoil~~UsesGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-180.2573 551.7915,-180.2573 551.7915,4 -4,4"/>
+<!-- module~hvachxassistedcoolingcoil -->
+<g id="module~~hvachxassistedcoolingcoil~~UsesGraph_node1" class="node">
+<title>module~hvachxassistedcoolingcoil</title>
+<polygon fill="none" stroke="#000000" points="547.9727,-100.2554 399.2487,-100.2554 399.2487,-78.2446 547.9727,-78.2446 547.9727,-100.2554"/>
+<text text-anchor="middle" x="473.6107" y="-86.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">HVACHXAssistedCoolingCoil</text>
+</g>
+<!-- module~dataglobals -->
+<g id="module~~hvachxassistedcoolingcoil~~UsesGraph_node2" class="node">
+<title>module~dataglobals</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsesGraph_node2"><a xlink:href="../module/dataglobals.html" xlink:title="DataGlobals">
+<polygon fill="#337ab7" stroke="#337ab7" points="223.8891,-100.2554 154.3269,-100.2554 154.3269,-78.2446 223.8891,-78.2446 223.8891,-100.2554"/>
+<text text-anchor="middle" x="189.108" y="-86.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataGlobals</text>
+</a>
+</g>
+</g>
+<!-- module~dataglobals&#45;&gt;module~hvachxassistedcoolingcoil -->
+<g id="module~~hvachxassistedcoolingcoil~~UsesGraph_edge7" class="edge">
+<title>module~dataglobals&#45;&gt;module~hvachxassistedcoolingcoil</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M223.9936,-89.25C264.8517,-89.25 333.9621,-89.25 389.1178,-89.25"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="389.2442,-92.7501 399.2442,-89.25 389.2442,-85.7501 389.2442,-92.7501"/>
+</g>
+<!-- module~datahvacglobals -->
+<g id="module~~hvachxassistedcoolingcoil~~UsesGraph_node3" class="node">
+<title>module~datahvacglobals</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsesGraph_node3"><a xlink:href="../module/datahvacglobals.html" xlink:title="DataHVACGlobals">
+<polygon fill="#337ab7" stroke="#337ab7" points="363.5196,-139.2554 265.1613,-139.2554 265.1613,-117.2446 363.5196,-117.2446 363.5196,-139.2554"/>
+<text text-anchor="middle" x="314.3405" y="-125.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataHVACGlobals</text>
+</a>
+</g>
+</g>
+<!-- module~dataglobals&#45;&gt;module~datahvacglobals -->
+<g id="module~~hvachxassistedcoolingcoil~~UsesGraph_edge2" class="edge">
+<title>module~dataglobals&#45;&gt;module~datahvacglobals</title>
+<path fill="none" stroke="#cbff00" stroke-dasharray="5,2" d="M223.9922,-100.1137C237.8699,-104.4355 254.025,-109.4665 268.8052,-114.0694"/>
+<polygon fill="#cbff00" stroke="#cbff00" points="268.1847,-117.5419 278.7732,-117.1736 270.2661,-110.8585 268.1847,-117.5419"/>
+</g>
+<!-- module~dataloopnode -->
+<g id="module~~hvachxassistedcoolingcoil~~UsesGraph_node4" class="node">
+<title>module~dataloopnode</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsesGraph_node4"><a xlink:href="../module/dataloopnode.html" xlink:title="DataLoopNode">
+<polygon fill="#337ab7" stroke="#337ab7" points="355.4804,-61.2554 273.2005,-61.2554 273.2005,-39.2446 355.4804,-39.2446 355.4804,-61.2554"/>
+<text text-anchor="middle" x="314.3405" y="-47.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataLoopNode</text>
+</a>
+</g>
+</g>
+<!-- module~dataglobals&#45;&gt;module~dataloopnode -->
+<g id="module~~hvachxassistedcoolingcoil~~UsesGraph_edge4" class="edge">
+<title>module~dataglobals&#45;&gt;module~dataloopnode</title>
+<path fill="none" stroke="#00ff66" stroke-dasharray="5,2" d="M223.9922,-78.3863C237.8699,-74.0645 254.025,-69.0335 268.8052,-64.4306"/>
+<polygon fill="#00ff66" stroke="#00ff66" points="270.2661,-67.6415 278.7732,-61.3264 268.1847,-60.9581 270.2661,-67.6415"/>
+</g>
+<!-- module~datahvacglobals&#45;&gt;module~hvachxassistedcoolingcoil -->
+<g id="module~~hvachxassistedcoolingcoil~~UsesGraph_edge8" class="edge">
+<title>module~datahvacglobals&#45;&gt;module~hvachxassistedcoolingcoil</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M359.5549,-117.1785C377.9591,-112.6719 399.4006,-107.4216 418.6935,-102.6974"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="419.6785,-106.0597 428.5591,-100.2817 418.0136,-99.2606 419.6785,-106.0597"/>
+</g>
+<!-- module~dataloopnode&#45;&gt;module~hvachxassistedcoolingcoil -->
+<g id="module~~hvachxassistedcoolingcoil~~UsesGraph_edge9" class="edge">
+<title>module~dataloopnode&#45;&gt;module~hvachxassistedcoolingcoil</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M355.7711,-60.395C374.9396,-65.0887 397.9783,-70.7301 418.5806,-75.7749"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="417.9255,-79.2179 428.4711,-78.1968 419.5905,-72.4188 417.9255,-79.2179"/>
+</g>
+<!-- module~datainterfaces -->
+<g id="module~~hvachxassistedcoolingcoil~~UsesGraph_node5" class="node">
+<title>module~datainterfaces</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsesGraph_node5"><a xlink:href="../module/datainterfaces.html" xlink:title="DataInterfaces">
+<polygon fill="#337ab7" stroke="#337ab7" points="229.3944,-22.2554 148.8216,-22.2554 148.8216,-.2446 229.3944,-.2446 229.3944,-22.2554"/>
+<text text-anchor="middle" x="189.108" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataInterfaces</text>
+</a>
+</g>
+</g>
+<!-- module~datainterfaces&#45;&gt;module~hvachxassistedcoolingcoil -->
+<g id="module~~hvachxassistedcoolingcoil~~UsesGraph_edge10" class="edge">
+<title>module~datainterfaces&#45;&gt;module~hvachxassistedcoolingcoil</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M229.4488,-11.3153C265.3574,-12.3834 318.9332,-16.4808 363.4299,-30.25 394.808,-39.9597 427.6021,-58.8157 449.1664,-72.6064"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="447.3965,-75.6308 457.6838,-78.1652 451.2223,-69.7687 447.3965,-75.6308"/>
+</g>
+<!-- module~dataprecisionglobals -->
+<g id="module~~hvachxassistedcoolingcoil~~UsesGraph_node6" class="node">
+<title>module~dataprecisionglobals</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsesGraph_node6"><a xlink:href="../module/dataprecisionglobals.html" xlink:title="DataPrecisionGlobals">
+<polygon fill="#337ab7" stroke="#337ab7" points="112.9476,-80.2554 .0175,-80.2554 .0175,-58.2446 112.9476,-58.2446 112.9476,-80.2554"/>
+<text text-anchor="middle" x="56.4825" y="-66.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">DataPrecisionGlobals</text>
+</a>
+</g>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~hvachxassistedcoolingcoil -->
+<g id="module~~hvachxassistedcoolingcoil~~UsesGraph_edge11" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~hvachxassistedcoolingcoil</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M189.108,-167.25C264.7918,-185.8475 288.9778,-171.2887 363.4299,-148.25 394.808,-138.5403 427.6021,-119.6843 449.1664,-105.8936"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="451.2223,-108.7313 457.6838,-100.3348 447.3965,-102.8692 451.2223,-108.7313"/>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~dataglobals -->
+<g id="module~~hvachxassistedcoolingcoil~~UsesGraph_edge1" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~dataglobals</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M113.1124,-77.7898C123.4586,-79.35 134.1262,-80.9587 144.0783,-82.4595"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="143.7369,-85.9475 154.1471,-83.9779 144.7808,-79.0258 143.7369,-85.9475"/>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~datahvacglobals -->
+<g id="module~~hvachxassistedcoolingcoil~~UsesGraph_edge3" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~datahvacglobals</title>
+<path fill="none" stroke="#cbff00" stroke-dasharray="5,2" d="M189.108,-167.25C206.4183,-171.5036 249.3924,-155.9689 280.167,-143.2582"/>
+<polygon fill="#cbff00" stroke="#cbff00" points="281.8193,-146.3604 289.6821,-139.2592 279.1071,-139.9071 281.8193,-146.3604"/>
+<path fill="none" stroke="#cbff00" stroke-dasharray="5,2" d="M65.6415,-80.3221C85.3244,-103.013 134.3377,-153.7915 189.108,-167.25"/>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~dataloopnode -->
+<g id="module~~hvachxassistedcoolingcoil~~UsesGraph_edge5" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~dataloopnode</title>
+<path fill="none" stroke="#00ff66" stroke-dasharray="5,2" d="M113.0706,-65.0804C157.8135,-61.7835 219.7423,-57.2204 263.0495,-54.0293"/>
+<polygon fill="#00ff66" stroke="#00ff66" points="263.3719,-57.5151 273.0876,-53.2897 262.8574,-50.5341 263.3719,-57.5151"/>
+</g>
+<!-- module~dataprecisionglobals&#45;&gt;module~datainterfaces -->
+<g id="module~~hvachxassistedcoolingcoil~~UsesGraph_edge6" class="edge">
+<title>module~dataprecisionglobals&#45;&gt;module~datainterfaces</title>
+<path fill="none" stroke="#0066ff" stroke-dasharray="5,2" d="M81.7406,-58.2041C102.2583,-49.2313 131.4209,-36.4778 154.1762,-26.5264"/>
+<polygon fill="#0066ff" stroke="#0066ff" points="155.7325,-29.666 163.4923,-22.4523 152.9277,-23.2524 155.7325,-29.666"/>
+</g>
+</g>
+</svg>
+</div>
+                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
+                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                      </div>
+                      <div class="modal-body">
+
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="484pt" height="31pt"
+ viewBox="0.00 0.00 483.85 30.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 26.5)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-26.5 479.8539,-26.5 479.8539,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-22.2554 0,-22.2554 0,-.2446 54,-.2446 54,-22.2554"/>
+<text text-anchor="middle" x="27" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="137.6205,-22.2554 72.3795,-22.2554 72.3795,-.2446 137.6205,-.2446 137.6205,-22.2554"/>
+<text text-anchor="middle" x="105" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="218.288,-22.2554 155.712,-22.2554 155.712,-.2446 218.288,-.2446 218.288,-22.2554"/>
+<text text-anchor="middle" x="187" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="290,-22.2554 236,-22.2554 236,-.2446 290,-.2446 290,-22.2554"/>
+<text text-anchor="middle" x="263" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="362,-22.2554 308,-22.2554 308,-.2446 362,-.2446 362,-22.2554"/>
+<text text-anchor="middle" x="335" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="475.7082,-22.2554 380.2918,-22.2554 380.2918,-.2446 475.7082,-.2446 475.7082,-22.2554"/>
+<text text-anchor="middle" x="428" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+
+    <p>Solid arrows point from a parent (sub)module to the submodule which is
+    descended from it. Dashed arrows point from a module being used to the
+    module or program unit using it. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+    <h3>Used By</h3>
+
+                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: module~~hvachxassistedcoolingcoil~~UsedByGraph Pages: 1 -->
+<svg id="modulehvachxassistedcoolingcoilUsedByGraph" width="365pt" height="1999pt"
+ viewBox="0.00 0.00 364.85 1998.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 1994.5)">
+<title>module~~hvachxassistedcoolingcoil~~UsedByGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-1994.5 360.8455,-1994.5 360.8455,4 -4,4"/>
+<!-- module~hvachxassistedcoolingcoil -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node1" class="node">
+<title>module~hvachxassistedcoolingcoil</title>
+<polygon fill="none" stroke="#000000" points="148.5428,-1006.2554 -.1812,-1006.2554 -.1812,-984.2446 148.5428,-984.2446 148.5428,-1006.2554"/>
+<text text-anchor="middle" x="74.1808" y="-992.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">HVACHXAssistedCoolingCoil</text>
+</g>
+<!-- proc~getfancoilunits -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node2" class="node">
+<title>proc~getfancoilunits</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node2"><a xlink:href="../proc/getfancoilunits.html" xlink:title="GetFanCoilUnits">
+<polygon fill="#d9534f" stroke="#d9534f" points="315.1309,-1990.2554 226.0762,-1990.2554 226.0762,-1968.2446 315.1309,-1968.2446 315.1309,-1990.2554"/>
+<text text-anchor="middle" x="270.6035" y="-1976.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">GetFanCoilUnits</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~getfancoilunits -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge1" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~getfancoilunits</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M74.6939,-1006.4284C79.4936,-1108.8882 117.8416,-1882.8534 184.3616,-1958.25 192.4858,-1967.4583 203.9086,-1972.9687 215.7892,-1976.1911"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="215.2965,-1979.6662 225.8143,-1978.3907 216.7968,-1972.8288 215.2965,-1979.6662"/>
+</g>
+<!-- proc~simdxcoolingsystem -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node3" class="node">
+<title>proc~simdxcoolingsystem</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node3"><a xlink:href="../proc/simdxcoolingsystem.html" xlink:title="SimDXCoolingSystem">
+<polygon fill="#d9534f" stroke="#d9534f" points="328.3863,-1949.2554 212.8207,-1949.2554 212.8207,-1927.2446 328.3863,-1927.2446 328.3863,-1949.2554"/>
+<text text-anchor="middle" x="270.6035" y="-1935.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">SimDXCoolingSystem</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~simdxcoolingsystem -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge2" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~simdxcoolingsystem</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M74.7446,-1006.2641C79.9257,-1105.6154 120.5221,-1845.2566 184.3616,-1917.25 189.6094,-1923.1681 196.2198,-1927.5572 203.4354,-1930.7926"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="202.2492,-1934.0857 212.8419,-1934.302 204.6961,-1927.5272 202.2492,-1934.0857"/>
+</g>
+<!-- proc~simdxheatpumpsystem -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node4" class="node">
+<title>proc~simdxheatpumpsystem</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node4"><a xlink:href="../proc/simdxheatpumpsystem.html" xlink:title="SimDXHeatPumpSystem">
+<polygon fill="#d9534f" stroke="#d9534f" points="335.388,-1908.2554 205.819,-1908.2554 205.819,-1886.2446 335.388,-1886.2446 335.388,-1908.2554"/>
+<text text-anchor="middle" x="270.6035" y="-1894.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">SimDXHeatPumpSystem</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~simdxheatpumpsystem -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge3" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~simdxheatpumpsystem</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M74.8152,-1006.3805C80.457,-1103.6818 123.2599,-1807.7232 184.3616,-1876.25 187.9238,-1880.2451 192.107,-1883.5427 196.6771,-1886.2585"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="195.3641,-1889.5133 205.8812,-1890.7944 198.4585,-1883.2343 195.3641,-1889.5133"/>
+</g>
+<!-- proc~calcoaunitcoilcomps -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node5" class="node">
+<title>proc~calcoaunitcoilcomps</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node5"><a xlink:href="../proc/calcoaunitcoilcomps.html" xlink:title="CalcOAUnitCoilComps">
+<polygon fill="#d9534f" stroke="#d9534f" points="329.7983,-1867.2554 211.4088,-1867.2554 211.4088,-1845.2446 329.7983,-1845.2446 329.7983,-1867.2554"/>
+<text text-anchor="middle" x="270.6035" y="-1853.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">CalcOAUnitCoilComps</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~calcoaunitcoilcomps -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge4" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~calcoaunitcoilcomps</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M74.8908,-1006.4561C81.007,-1101.4683 125.9853,-1770.1743 184.3616,-1835.25 189.132,-1840.5679 195.0029,-1844.6484 201.4192,-1847.7653"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="200.5616,-1851.1927 211.1455,-1851.6743 203.172,-1844.6976 200.5616,-1851.1927"/>
+</g>
+<!-- proc~calcventilatedslabcomps -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node6" class="node">
+<title>proc~calcventilatedslabcomps</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node6"><a xlink:href="../proc/calcventilatedslabcomps.html" xlink:title="CalcVentilatedSlabComps">
+<polygon fill="#d9534f" stroke="#d9534f" points="337.5104,-1826.2554 203.6966,-1826.2554 203.6966,-1804.2446 337.5104,-1804.2446 337.5104,-1826.2554"/>
+<text text-anchor="middle" x="270.6035" y="-1812.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">CalcVentilatedSlabComps</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~calcventilatedslabcomps -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge5" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~calcventilatedslabcomps</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M74.9716,-1006.4887C81.5757,-1098.9755 128.6981,-1732.6095 184.3616,-1794.25 187.4664,-1797.6882 191.0313,-1800.6085 194.9055,-1803.0851"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="193.3494,-1806.2218 203.822,-1807.827 196.6362,-1800.0414 193.3494,-1806.2218"/>
+</g>
+<!-- proc~sizeoacontroller -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node7" class="node">
+<title>proc~sizeoacontroller</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node7"><a xlink:href="../proc/sizeoacontroller.html" xlink:title="SizeOAController">
+<polygon fill="#d9534f" stroke="#d9534f" points="317.2171,-1785.2554 223.9899,-1785.2554 223.9899,-1763.2446 317.2171,-1763.2446 317.2171,-1785.2554"/>
+<text text-anchor="middle" x="270.6035" y="-1771.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">SizeOAController</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~sizeoacontroller -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge6" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~sizeoacontroller</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M75.0577,-1006.4758C82.1627,-1096.2041 131.3979,-1695.0285 184.3616,-1753.25 192.1413,-1761.802 202.768,-1767.1451 213.9048,-1770.4255"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="213.2221,-1773.8612 223.7643,-1772.8062 214.8652,-1767.0568 213.2221,-1773.8612"/>
+</g>
+<!-- proc~calcventilatedslabradcomps -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node8" class="node">
+<title>proc~calcventilatedslabradcomps</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node8"><a xlink:href="../proc/calcventilatedslabradcomps.html" xlink:title="CalcVentilatedSlabRadComps">
+<polygon fill="#d9534f" stroke="#d9534f" points="346.7721,-1744.2554 194.4349,-1744.2554 194.4349,-1722.2446 346.7721,-1722.2446 346.7721,-1744.2554"/>
+<text text-anchor="middle" x="270.6035" y="-1730.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">CalcVentilatedSlabRadComps</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~calcventilatedslabradcomps -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge7" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~calcventilatedslabradcomps</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M74.2616,-1006.4664C75.0864,-1089.0737 84.2329,-1603.0763 184.3616,-1712.25 185.7287,-1713.7406 187.1823,-1715.1335 188.7099,-1716.4349"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="186.7161,-1719.3116 196.9075,-1722.2072 190.7462,-1713.5881 186.7161,-1719.3116"/>
+</g>
+<!-- proc~calcwindowacoutput -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node9" class="node">
+<title>proc~calcwindowacoutput</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node9"><a xlink:href="../proc/calcwindowacoutput.html" xlink:title="CalcWindowACOutput">
+<polygon fill="#d9534f" stroke="#d9534f" points="329.061,-1703.2554 212.1461,-1703.2554 212.1461,-1681.2446 329.061,-1681.2446 329.061,-1703.2554"/>
+<text text-anchor="middle" x="270.6035" y="-1689.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">CalcWindowACOutput</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~calcwindowacoutput -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge8" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~calcwindowacoutput</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M74.3726,-1006.3329C75.9743,-1085.8137 89.5568,-1568.8199 184.3616,-1671.25 189.471,-1676.7704 195.7674,-1680.9491 202.6124,-1684.097"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="201.6362,-1687.471 212.2265,-1687.78 204.1403,-1680.9342 201.6362,-1687.471"/>
+</g>
+<!-- proc~sizeunitarysystem -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node10" class="node">
+<title>proc~sizeunitarysystem</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node10"><a xlink:href="../proc/sizeunitarysystem.html" xlink:title="SizeUnitarySystem">
+<polygon fill="#d9534f" stroke="#d9534f" points="320.7951,-1662.2554 220.4119,-1662.2554 220.4119,-1640.2446 320.7951,-1640.2446 320.7951,-1662.2554"/>
+<text text-anchor="middle" x="270.6035" y="-1648.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">SizeUnitarySystem</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~sizeunitarysystem -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge9" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~sizeunitarysystem</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M74.501,-1006.3944C76.9364,-1083.2664 94.9479,-1534.6307 184.3616,-1630.25 191.3871,-1637.7632 200.6123,-1642.786 210.4123,-1646.1065"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="209.7703,-1649.5613 220.3437,-1648.8886 211.6586,-1642.8208 209.7703,-1649.5613"/>
+</g>
+<!-- proc~hxassistdxcoilresidual -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node11" class="node">
+<title>proc~hxassistdxcoilresidual</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node11"><a xlink:href="../proc/hxassistdxcoilresidual.html" xlink:title="HXAssistDXCoilResidual">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="334.7239,-1621.2554 206.4831,-1621.2554 206.4831,-1599.2446 334.7239,-1599.2446 334.7239,-1621.2554"/>
+<text text-anchor="middle" x="270.6035" y="-1607.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">HXAssistDXCoilResidual</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~hxassistdxcoilresidual -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge10" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~hxassistdxcoilresidual</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M74.6556,-1006.6231C78.0006,-1081.24 100.3885,-1500.4868 184.3616,-1589.25 188.04,-1593.1383 192.308,-1596.3581 196.9377,-1599.0191"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="195.6971,-1602.3059 206.227,-1603.4767 198.7255,-1595.9949 195.6971,-1602.3059"/>
+</g>
+<!-- proc~sizeairloopbranches -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node12" class="node">
+<title>proc~sizeairloopbranches</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node12"><a xlink:href="../proc/sizeairloopbranches.html" xlink:title="SizeAirLoopBranches">
+<polygon fill="#d9534f" stroke="#d9534f" points="327.0789,-1580.2554 214.1282,-1580.2554 214.1282,-1558.2446 327.0789,-1558.2446 327.0789,-1580.2554"/>
+<text text-anchor="middle" x="270.6035" y="-1566.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">SizeAirLoopBranches</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~sizeairloopbranches -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge11" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~sizeairloopbranches</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M74.8048,-1006.2976C79.0219,-1077.0353 105.6067,-1466.1007 184.3616,-1548.25 189.9103,-1554.0379 196.7662,-1558.3406 204.1685,-1561.5227"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="203.1855,-1564.8886 213.7799,-1564.9814 205.5557,-1558.3021 203.1855,-1564.8886"/>
+</g>
+<!-- proc~initunitarysystems -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node13" class="node">
+<title>proc~initunitarysystems</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node13"><a xlink:href="../proc/initunitarysystems.html" xlink:title="InitUnitarySystems">
+<polygon fill="#d9534f" stroke="#d9534f" points="320.1269,-1539.2554 221.0802,-1539.2554 221.0802,-1517.2446 320.1269,-1517.2446 320.1269,-1539.2554"/>
+<text text-anchor="middle" x="270.6035" y="-1525.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">InitUnitarySystems</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~initunitarysystems -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge12" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~initunitarysystems</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M74.9979,-1006.3486C80.2095,-1074.1261 110.9498,-1431.8373 184.3616,-1507.25 191.6928,-1514.781 201.239,-1519.7898 211.2996,-1523.0857"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="210.4787,-1526.4896 221.0475,-1525.7473 212.3226,-1519.7368 210.4787,-1526.4896"/>
+</g>
+<!-- proc~getdxcoolingsysteminput -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node14" class="node">
+<title>proc~getdxcoolingsysteminput</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node14"><a xlink:href="../proc/getdxcoolingsysteminput.html" xlink:title="GetDXCoolingSystemInput">
+<polygon fill="#d9534f" stroke="#d9534f" points="339.5814,-1498.2554 201.6256,-1498.2554 201.6256,-1476.2446 339.5814,-1476.2446 339.5814,-1498.2554"/>
+<text text-anchor="middle" x="270.6035" y="-1484.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">GetDXCoolingSystemInput</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~getdxcoolingsysteminput -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge13" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~getdxcoolingsysteminput</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M75.2148,-1006.2925C81.4655,-1070.7131 116.2347,-1397.5034 184.3616,-1466.25 186.9344,-1468.8462 189.7707,-1471.1416 192.7998,-1473.1696"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="191.3525,-1476.3706 201.7873,-1478.2049 194.7739,-1470.2637 191.3525,-1476.3706"/>
+</g>
+<!-- proc~getoutdoorairunitinputs -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node15" class="node">
+<title>proc~getoutdoorairunitinputs</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node15"><a xlink:href="../proc/getoutdoorairunitinputs.html" xlink:title="GetOutdoorAirUnitInputs">
+<polygon fill="#d9534f" stroke="#d9534f" points="334.0754,-1457.2554 207.1316,-1457.2554 207.1316,-1435.2446 334.0754,-1435.2446 334.0754,-1457.2554"/>
+<text text-anchor="middle" x="270.6035" y="-1443.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">GetOutdoorAirUnitInputs</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~getoutdoorairunitinputs -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge14" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~getoutdoorairunitinputs</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M75.5045,-1006.5209C82.9565,-1068.0878 121.5945,-1363.2307 184.3616,-1425.25 188.3352,-1429.1763 192.9127,-1432.4117 197.8434,-1435.0731"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="196.4951,-1438.305 207.0459,-1439.2692 199.3992,-1431.9358 196.4951,-1438.305"/>
+</g>
+<!-- proc~simairloopcomponent -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node16" class="node">
+<title>proc~simairloopcomponent</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node16"><a xlink:href="../proc/simairloopcomponent.html" xlink:title="SimAirLoopComponent">
+<polygon fill="#d9534f" stroke="#d9534f" points="330.6624,-1416.2554 210.5446,-1416.2554 210.5446,-1394.2446 330.6624,-1394.2446 330.6624,-1416.2554"/>
+<text text-anchor="middle" x="270.6035" y="-1402.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">SimAirLoopComponent</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~simairloopcomponent -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge15" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~simairloopcomponent</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M75.8356,-1006.5804C84.5457,-1064.7072 126.865,-1328.8512 184.3616,-1384.25 189.0952,-1388.8109 194.6457,-1392.4349 200.6096,-1395.3077"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="199.6815,-1398.7084 210.2635,-1399.2302 202.3166,-1392.2233 199.6815,-1398.7084"/>
+</g>
+<!-- proc~simfurnace -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node17" class="node">
+<title>proc~simfurnace</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node17"><a xlink:href="../proc/simfurnace.html" xlink:title="SimFurnace">
+<polygon fill="#d9534f" stroke="#d9534f" points="304.7062,-1375.2554 236.5008,-1375.2554 236.5008,-1353.2446 304.7062,-1353.2446 304.7062,-1375.2554"/>
+<text text-anchor="middle" x="270.6035" y="-1361.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">SimFurnace</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~simfurnace -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge16" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~simfurnace</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M76.2098,-1006.4528C86.2281,-1060.5744 132.0385,-1294.3581 184.3616,-1343.25 195.614,-1353.7645 211.224,-1359.2701 226.0745,-1362.0751"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="225.7582,-1365.5672 236.1714,-1363.6139 226.8129,-1358.6471 225.7582,-1365.5672"/>
+</g>
+<!-- proc~simoacomponent -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node18" class="node">
+<title>proc~simoacomponent</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node18"><a xlink:href="../proc/simoacomponent.html" xlink:title="SimOAComponent">
+<polygon fill="#d9534f" stroke="#d9534f" points="320.1422,-1334.2554 221.0648,-1334.2554 221.0648,-1312.2446 320.1422,-1312.2446 320.1422,-1334.2554"/>
+<text text-anchor="middle" x="270.6035" y="-1320.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">SimOAComponent</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~simoacomponent -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge17" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~simoacomponent</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M74.5939,-1006.5061C76.8732,-1051.3319 91.5283,-1218.7469 184.3616,-1302.25 191.9232,-1309.0517 201.3182,-1313.7421 211.0985,-1316.9577"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="210.3811,-1320.3911 220.9537,-1319.7053 212.2611,-1313.6482 210.3811,-1320.3911"/>
+</g>
+<!-- proc~getptunit -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node19" class="node">
+<title>proc~getptunit</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node19"><a xlink:href="../proc/getptunit.html" xlink:title="GetPTUnit">
+<polygon fill="#d9534f" stroke="#d9534f" points="301.1172,-1293.2554 240.0898,-1293.2554 240.0898,-1271.2446 301.1172,-1271.2446 301.1172,-1293.2554"/>
+<text text-anchor="middle" x="270.6035" y="-1279.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">GetPTUnit</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~getptunit -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge18" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~getptunit</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M75.2736,-1006.4061C79.8979,-1047.3084 101.6159,-1190.3469 184.3616,-1261.25 196.9363,-1272.0251 214.1505,-1277.4544 229.8933,-1280.1273"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="229.5785,-1283.6169 239.9626,-1281.5142 230.5337,-1276.6823 229.5785,-1283.6169"/>
+</g>
+<!-- proc~getcbvav -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node20" class="node">
+<title>proc~getcbvav</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node20"><a xlink:href="../proc/getcbvav.html" xlink:title="GetCBVAV">
+<polygon fill="#d9534f" stroke="#d9534f" points="302.0757,-1252.2554 239.1313,-1252.2554 239.1313,-1230.2446 302.0757,-1230.2446 302.0757,-1252.2554"/>
+<text text-anchor="middle" x="270.6035" y="-1238.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">GetCBVAV</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~getcbvav -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge19" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~getcbvav</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M76.196,-1006.463C83.4334,-1043.3337 111.6497,-1161.7938 184.3616,-1220.25 196.8521,-1230.2916 213.4273,-1235.6403 228.7071,-1238.4517"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="228.5996,-1241.9755 239.0122,-1240.0192 229.6523,-1235.0551 228.5996,-1241.9755"/>
+</g>
+<!-- proc~getfurnaceinput -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node21" class="node">
+<title>proc~getfurnaceinput</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node21"><a xlink:href="../proc/getfurnaceinput.html" xlink:title="GetFurnaceInput">
+<polygon fill="#d9534f" stroke="#d9534f" points="315.8999,-1211.2554 225.3071,-1211.2554 225.3071,-1189.2446 315.8999,-1189.2446 315.8999,-1211.2554"/>
+<text text-anchor="middle" x="270.6035" y="-1197.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">GetFurnaceInput</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~getfurnaceinput -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge20" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~getfurnaceinput</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M77.4775,-1006.4448C87.598,-1038.7647 121.4148,-1132.8656 184.3616,-1179.25 193.3848,-1185.8991 204.2424,-1190.4651 215.1637,-1193.5949"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="214.6111,-1197.0642 225.1605,-1196.0841 216.3025,-1190.2716 214.6111,-1197.0642"/>
+</g>
+<!-- proc~hxassistedcoolcoilhrresidual~2 -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node22" class="node">
+<title>proc~hxassistedcoolcoilhrresidual~2</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node22"><a xlink:href="../proc/hxassistedcoolcoilhrresidual%7E2.html" xlink:title="HXAssistedCoolCoilHRResidual">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="351.5772,-1170.2554 189.6299,-1170.2554 189.6299,-1148.2446 351.5772,-1148.2446 351.5772,-1170.2554"/>
+<text text-anchor="middle" x="270.6035" y="-1156.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">HXAssistedCoolCoilHRResidual</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~hxassistedcoolcoilhrresidual~2 -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge21" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~hxassistedcoolcoilhrresidual~2</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M79.5347,-1006.64C92.9953,-1033.9703 131.0252,-1103.5658 184.3616,-1138.25 187.7527,-1140.4552 191.3552,-1142.429 195.09,-1144.1957"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="194.0252,-1147.5441 204.6013,-1148.1741 196.7265,-1141.0863 194.0252,-1147.5441"/>
+</g>
+<!-- proc~calccbvav -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node23" class="node">
+<title>proc~calccbvav</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node23"><a xlink:href="../proc/calccbvav.html" xlink:title="CalcCBVAV">
+<polygon fill="#d9534f" stroke="#d9534f" points="304.1568,-1129.2554 237.0503,-1129.2554 237.0503,-1107.2446 304.1568,-1107.2446 304.1568,-1129.2554"/>
+<text text-anchor="middle" x="270.6035" y="-1115.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">CalcCBVAV</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~calccbvav -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge22" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~calccbvav</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M82.8622,-1006.4168C99.923,-1027.56 140.0398,-1073.4464 184.3616,-1097.25 197.3617,-1104.2319 212.703,-1108.9288 226.815,-1112.0733"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="226.3269,-1115.5454 236.8225,-1114.0991 227.7157,-1108.6845 226.3269,-1115.5454"/>
+</g>
+<!-- proc~getunitventilatorinput -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node24" class="node">
+<title>proc~getunitventilatorinput</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node24"><a xlink:href="../proc/getunitventilatorinput.html" xlink:title="GetUnitVentilatorInput">
+<polygon fill="#d9534f" stroke="#d9534f" points="327.8377,-1088.2554 213.3693,-1088.2554 213.3693,-1066.2446 327.8377,-1066.2446 327.8377,-1088.2554"/>
+<text text-anchor="middle" x="270.6035" y="-1074.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">GetUnitVentilatorInput</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~getunitventilatorinput -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge23" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~getunitventilatorinput</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M91.0363,-1006.4616C112.073,-1020.0028 149.5338,-1042.6517 184.3616,-1056.25 191.1711,-1058.9087 198.4182,-1061.3032 205.707,-1063.4401"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="205.0632,-1066.8936 215.6349,-1066.1949 206.9349,-1060.1484 205.0632,-1066.8936"/>
+</g>
+<!-- proc~calcunitventilatorcomponents -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node25" class="node">
+<title>proc~calcunitventilatorcomponents</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node25"><a xlink:href="../proc/calcunitventilatorcomponents.html" xlink:title="CalcUnitVentilatorComponents">
+<polygon fill="#d9534f" stroke="#d9534f" points="348.0994,-1047.2554 193.1077,-1047.2554 193.1077,-1025.2446 348.0994,-1025.2446 348.0994,-1047.2554"/>
+<text text-anchor="middle" x="270.6035" y="-1033.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">CalcUnitVentilatorComponents</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~calcunitventilatorcomponents -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge24" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~calcunitventilatorcomponents</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M127.0769,-1006.2912C151.854,-1011.463 181.5595,-1017.6635 207.5014,-1023.0785"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="207.1088,-1026.5719 217.613,-1025.1891 208.5391,-1019.7196 207.1088,-1026.5719"/>
+</g>
+<!-- proc~calcvarspeedheatpump~2 -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node26" class="node">
+<title>proc~calcvarspeedheatpump~2</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node26"><a xlink:href="../proc/calcvarspeedheatpump%7E2.html" xlink:title="CalcVarSpeedHeatPump">
+<polygon fill="#d9534f" stroke="#d9534f" points="334.6451,-1006.2554 206.5619,-1006.2554 206.5619,-984.2446 334.6451,-984.2446 334.6451,-1006.2554"/>
+<text text-anchor="middle" x="270.6035" y="-992.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">CalcVarSpeedHeatPump</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~calcvarspeedheatpump~2 -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge25" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~calcvarspeedheatpump~2</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M148.4398,-995.25C164.1246,-995.25 180.6775,-995.25 196.3617,-995.25"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="196.5252,-998.7501 206.5252,-995.25 196.5252,-991.7501 196.5252,-998.7501"/>
+</g>
+<!-- proc~sizefurnace -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node27" class="node">
+<title>proc~sizefurnace</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node27"><a xlink:href="../proc/sizefurnace.html" xlink:title="SizeFurnace">
+<polygon fill="#d9534f" stroke="#d9534f" points="306.0481,-965.2554 235.1589,-965.2554 235.1589,-943.2446 306.0481,-943.2446 306.0481,-965.2554"/>
+<text text-anchor="middle" x="270.6035" y="-951.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">SizeFurnace</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~sizefurnace -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge26" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~sizefurnace</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M127.0769,-984.2088C157.6716,-977.8227 195.7809,-969.868 225.0399,-963.7606"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="225.9194,-967.1526 234.9933,-961.6831 224.4891,-960.3003 225.9194,-967.1526"/>
+</g>
+<!-- proc~getdxheatpumpsysteminput -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node28" class="node">
+<title>proc~getdxheatpumpsysteminput</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node28"><a xlink:href="../proc/getdxheatpumpsysteminput.html" xlink:title="GetDXHeatPumpSystemInput">
+<polygon fill="#d9534f" stroke="#d9534f" points="346.583,-924.2554 194.624,-924.2554 194.624,-902.2446 346.583,-902.2446 346.583,-924.2554"/>
+<text text-anchor="middle" x="270.6035" y="-910.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">GetDXHeatPumpSystemInput</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~getdxheatpumpsysteminput -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge27" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~getdxheatpumpsysteminput</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M91.0363,-984.0384C112.073,-970.4972 149.5338,-947.8483 184.3616,-934.25 191.1711,-931.5913 198.4182,-929.1968 205.707,-927.0599"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="206.9349,-930.3516 215.6349,-924.3051 205.0632,-923.6064 206.9349,-930.3516"/>
+</g>
+<!-- proc~sizefancoilunit -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node29" class="node">
+<title>proc~sizefancoilunit</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node29"><a xlink:href="../proc/sizefancoilunit.html" xlink:title="SizeFanCoilUnit">
+<polygon fill="#d9534f" stroke="#d9534f" points="314.383,-883.2554 226.824,-883.2554 226.824,-861.2446 314.383,-861.2446 314.383,-883.2554"/>
+<text text-anchor="middle" x="270.6035" y="-869.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">SizeFanCoilUnit</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~sizefancoilunit -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge28" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~sizefancoilunit</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M82.8622,-984.0832C99.923,-962.94 140.0398,-917.0536 184.3616,-893.25 194.4418,-887.8363 205.9296,-883.7964 217.1605,-880.7888"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="218.039,-884.1771 226.9221,-878.4029 216.377,-877.3773 218.039,-884.1771"/>
+</g>
+<!-- proc~hxassistedcoolcoiltempresidual -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node30" class="node">
+<title>proc~hxassistedcoolcoiltempresidual</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node30"><a xlink:href="../proc/hxassistedcoolcoiltempresidual.html" xlink:title="HXAssistedCoolCoilTempResidual">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="357.0881,-842.2554 184.1189,-842.2554 184.1189,-820.2446 357.0881,-820.2446 357.0881,-842.2554"/>
+<text text-anchor="middle" x="270.6035" y="-828.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">HXAssistedCoolCoilTempResidual</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~hxassistedcoolcoiltempresidual -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge29" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~hxassistedcoolcoiltempresidual</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M79.5347,-983.86C92.9953,-956.5297 131.0252,-886.9342 184.3616,-852.25 187.7527,-850.0448 191.3552,-848.071 195.09,-846.3043"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="196.7265,-849.4137 204.6013,-842.3259 194.0252,-842.9559 196.7265,-849.4137"/>
+</g>
+<!-- proc~simoutdoorairequipcomps -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node31" class="node">
+<title>proc~simoutdoorairequipcomps</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node31"><a xlink:href="../proc/simoutdoorairequipcomps.html" xlink:title="SimOutdoorAirEquipComps">
+<polygon fill="#d9534f" stroke="#d9534f" points="341.072,-801.2554 200.135,-801.2554 200.135,-779.2446 341.072,-779.2446 341.072,-801.2554"/>
+<text text-anchor="middle" x="270.6035" y="-787.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">SimOutdoorAirEquipComps</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~simoutdoorairequipcomps -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge30" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~simoutdoorairequipcomps</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M77.4775,-984.0552C87.598,-951.7353 121.4148,-857.6344 184.3616,-811.25 187.1761,-809.176 190.1691,-807.3047 193.2869,-805.6164"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="194.8148,-808.7656 202.359,-801.3268 191.8225,-802.4373 194.8148,-808.7656"/>
+</g>
+<!-- proc~calc4pipefancoil -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node32" class="node">
+<title>proc~calc4pipefancoil</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node32"><a xlink:href="../proc/calc4pipefancoil.html" xlink:title="Calc4PipeFanCoil">
+<polygon fill="#d9534f" stroke="#d9534f" points="318.6445,-760.2554 222.5625,-760.2554 222.5625,-738.2446 318.6445,-738.2446 318.6445,-760.2554"/>
+<text text-anchor="middle" x="270.6035" y="-746.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Calc4PipeFanCoil</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~calc4pipefancoil -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge31" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~calc4pipefancoil</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M76.196,-984.037C83.4334,-947.1663 111.6497,-828.7062 184.3616,-770.25 192.5528,-763.6647 202.5008,-759.0977 212.6881,-755.9411"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="213.7204,-759.2881 222.4791,-753.3269 211.9146,-752.525 213.7204,-759.2881"/>
+</g>
+<!-- proc~hxassistedcoolcoilhrresidual -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node33" class="node">
+<title>proc~hxassistedcoolcoilhrresidual</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node33"><a xlink:href="../proc/hxassistedcoolcoilhrresidual.html" xlink:title="HXAssistedCoolCoilHRResidual">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="351.5772,-719.2554 189.6299,-719.2554 189.6299,-697.2446 351.5772,-697.2446 351.5772,-719.2554"/>
+<text text-anchor="middle" x="270.6035" y="-705.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">HXAssistedCoolCoilHRResidual</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~hxassistedcoolcoilhrresidual -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge32" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~hxassistedcoolcoilhrresidual</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M75.2736,-984.0939C79.8979,-943.1916 101.6159,-800.1531 184.3616,-729.25 186.4094,-727.4953 188.5802,-725.8823 190.8477,-724.4"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="192.975,-727.2221 200.0169,-719.3061 189.5755,-721.1029 192.975,-727.2221"/>
+</g>
+<!-- proc~sizeunitventilator -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node34" class="node">
+<title>proc~sizeunitventilator</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node34"><a xlink:href="../proc/sizeunitventilator.html" xlink:title="SizeUnitVentilator">
+<polygon fill="#d9534f" stroke="#d9534f" points="317.9859,-678.2554 223.2211,-678.2554 223.2211,-656.2446 317.9859,-656.2446 317.9859,-678.2554"/>
+<text text-anchor="middle" x="270.6035" y="-664.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">SizeUnitVentilator</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~sizeunitventilator -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge33" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~sizeunitventilator</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M74.5939,-983.9939C76.8732,-939.1681 91.5283,-771.7531 184.3616,-688.25 192.5194,-680.9121 202.8109,-676.0315 213.4181,-672.809"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="214.3839,-676.1746 223.1961,-670.2927 212.6393,-669.3954 214.3839,-676.1746"/>
+</g>
+<!-- proc~calcptunit -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node35" class="node">
+<title>proc~calcptunit</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node35"><a xlink:href="../proc/calcptunit.html" xlink:title="CalcPTUnit">
+<polygon fill="#d9534f" stroke="#d9534f" points="303.1983,-637.2554 238.0087,-637.2554 238.0087,-615.2446 303.1983,-615.2446 303.1983,-637.2554"/>
+<text text-anchor="middle" x="270.6035" y="-623.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">CalcPTUnit</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~calcptunit -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge34" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~calcptunit</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M76.2098,-984.0472C86.2281,-929.9256 132.0385,-696.1419 184.3616,-647.25 196.0917,-636.2891 212.5571,-630.7716 227.9611,-628.0822"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="228.4522,-631.5476 237.8701,-626.6945 227.4813,-624.6153 228.4522,-631.5476"/>
+</g>
+<!-- proc~calcunitventilator -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node36" class="node">
+<title>proc~calcunitventilator</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node36"><a xlink:href="../proc/calcunitventilator.html" xlink:title="CalcUnitVentilator">
+<polygon fill="#d9534f" stroke="#d9534f" points="318.5663,-596.2554 222.6407,-596.2554 222.6407,-574.2446 318.5663,-574.2446 318.5663,-596.2554"/>
+<text text-anchor="middle" x="270.6035" y="-582.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">CalcUnitVentilator</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~calcunitventilator -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge35" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~calcunitventilator</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M75.8356,-983.9196C84.5457,-925.7928 126.865,-661.6488 184.3616,-606.25 192.2631,-598.6368 202.4409,-593.6341 213.0174,-590.3786"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="213.9816,-593.7445 222.7889,-587.8554 212.2314,-586.9668 213.9816,-593.7445"/>
+</g>
+<!-- proc~calcfurnaceoutput -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node37" class="node">
+<title>proc~calcfurnaceoutput</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node37"><a xlink:href="../proc/calcfurnaceoutput.html" xlink:title="CalcFurnaceOutput">
+<polygon fill="#d9534f" stroke="#d9534f" points="322.148,-555.2554 219.0591,-555.2554 219.0591,-533.2446 322.148,-533.2446 322.148,-555.2554"/>
+<text text-anchor="middle" x="270.6035" y="-541.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">CalcFurnaceOutput</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~calcfurnaceoutput -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge36" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~calcfurnaceoutput</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M75.5045,-983.9791C82.9565,-922.4122 121.5945,-627.2693 184.3616,-565.25 191.2768,-558.4171 200.0211,-553.6766 209.273,-550.4122"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="210.4484,-553.7144 219.0428,-547.5188 208.4605,-547.0026 210.4484,-553.7144"/>
+</g>
+<!-- proc~calcunitarycoolingsystem -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node38" class="node">
+<title>proc~calcunitarycoolingsystem</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node38"><a xlink:href="../proc/calcunitarycoolingsystem.html" xlink:title="CalcUnitaryCoolingSystem">
+<polygon fill="#d9534f" stroke="#d9534f" points="338.9808,-514.2554 202.2263,-514.2554 202.2263,-492.2446 338.9808,-492.2446 338.9808,-514.2554"/>
+<text text-anchor="middle" x="270.6035" y="-500.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">CalcUnitaryCoolingSystem</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~calcunitarycoolingsystem -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge37" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~calcunitarycoolingsystem</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M75.2148,-984.2075C81.4655,-919.7869 116.2347,-592.9966 184.3616,-524.25 187.07,-521.517 190.0704,-519.1173 193.2803,-517.012"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="195.1346,-519.9866 202.209,-512.0996 191.7603,-513.8535 195.1346,-519.9866"/>
+</g>
+<!-- proc~hxassistedcoolcoiltempresidual~2 -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node39" class="node">
+<title>proc~hxassistedcoolcoiltempresidual~2</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node39"><a xlink:href="../proc/hxassistedcoolcoiltempresidual%7E2.html" xlink:title="HXAssistedCoolCoilTempResidual">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="357.0881,-473.2554 184.1189,-473.2554 184.1189,-451.2446 357.0881,-451.2446 357.0881,-473.2554"/>
+<text text-anchor="middle" x="270.6035" y="-459.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">HXAssistedCoolCoilTempResidual</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~hxassistedcoolcoiltempresidual~2 -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge38" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~hxassistedcoolcoiltempresidual~2</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M74.9979,-984.1514C80.2095,-916.3739 110.9498,-558.6627 184.3616,-483.25 185.8127,-481.7593 187.3506,-480.3675 188.9621,-479.0682"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="191.2027,-481.7804 197.5719,-473.3137 187.313,-475.9606 191.2027,-481.7804"/>
+</g>
+<!-- proc~getairflownetworkinput -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node40" class="node">
+<title>proc~getairflownetworkinput</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node40"><a xlink:href="../proc/getairflownetworkinput.html" xlink:title="GetAirflowNetworkInput">
+<polygon fill="#d9534f" stroke="#d9534f" points="331.8949,-432.2554 209.3122,-432.2554 209.3122,-410.2446 331.8949,-410.2446 331.8949,-432.2554"/>
+<text text-anchor="middle" x="270.6035" y="-418.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">GetAirflowNetworkInput</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~getairflownetworkinput -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge39" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~getairflownetworkinput</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M74.8048,-984.2024C79.0219,-913.4647 105.6067,-524.3993 184.3616,-442.25 188.8406,-437.5779 194.1712,-433.8737 199.9536,-430.9453"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="201.5169,-434.0841 209.3543,-426.9549 198.7817,-427.6406 201.5169,-434.0841"/>
+</g>
+<!-- proc~getwindowac -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node41" class="node">
+<title>proc~getwindowac</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node41"><a xlink:href="../proc/getwindowac.html" xlink:title="GetWindowAC">
+<polygon fill="#d9534f" stroke="#d9534f" points="310.9586,-391.2554 230.2484,-391.2554 230.2484,-369.2446 310.9586,-369.2446 310.9586,-391.2554"/>
+<text text-anchor="middle" x="270.6035" y="-377.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">GetWindowAC</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~getwindowac -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge40" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~getwindowac</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M74.6556,-983.8769C78.0006,-909.26 100.3885,-490.0132 184.3616,-401.25 193.6446,-391.4374 206.6818,-385.8825 219.8137,-382.82"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="220.6353,-386.2269 229.8137,-380.9348 219.3384,-379.3481 220.6353,-386.2269"/>
+</g>
+<!-- proc~controldxsystem -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node42" class="node">
+<title>proc~controldxsystem</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node42"><a xlink:href="../proc/controldxsystem.html" xlink:title="ControlDXSystem">
+<polygon fill="#d9534f" stroke="#d9534f" points="318.5457,-350.2554 222.6613,-350.2554 222.6613,-328.2446 318.5457,-328.2446 318.5457,-350.2554"/>
+<text text-anchor="middle" x="270.6035" y="-336.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">ControlDXSystem</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~controldxsystem -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge41" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~controldxsystem</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M74.501,-984.1056C76.9364,-907.2336 94.9479,-455.8693 184.3616,-360.25 191.9364,-352.1494 202.0682,-346.9438 212.7206,-343.6455"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="213.7686,-346.9903 222.5914,-341.1245 212.0363,-340.208 213.7686,-346.9903"/>
+</g>
+<!-- proc~getunitarysysteminput -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node43" class="node">
+<title>proc~getunitarysysteminput</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node43"><a xlink:href="../proc/getunitarysysteminput.html" xlink:title="GetUnitarySystemInput">
+<polygon fill="#d9534f" stroke="#d9534f" points="330.6471,-309.2554 210.5599,-309.2554 210.5599,-287.2446 330.6471,-287.2446 330.6471,-309.2554"/>
+<text text-anchor="middle" x="270.6035" y="-295.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">GetUnitarySystemInput</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~getunitarysysteminput -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge42" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~getunitarysysteminput</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M74.3726,-984.1671C75.9743,-904.6863 89.5568,-421.6801 184.3616,-319.25 189.0736,-314.159 194.7951,-310.2091 201.0253,-307.1564"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="202.5287,-310.323 210.4592,-303.2974 199.8784,-303.8441 202.5287,-310.323"/>
+</g>
+<!-- proc~controlcoolingsystem -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node44" class="node">
+<title>proc~controlcoolingsystem</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node44"><a xlink:href="../proc/controlcoolingsystem.html" xlink:title="ControlCoolingSystem">
+<polygon fill="#d9534f" stroke="#d9534f" points="329.0661,-268.2554 212.1409,-268.2554 212.1409,-246.2446 329.0661,-246.2446 329.0661,-268.2554"/>
+<text text-anchor="middle" x="270.6035" y="-254.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">ControlCoolingSystem</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~controlcoolingsystem -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge43" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~controlcoolingsystem</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M74.2616,-984.0336C75.0864,-901.4263 84.2329,-387.4237 184.3616,-278.25 189.4459,-272.7064 195.7267,-268.5134 202.563,-265.3575"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="204.0894,-268.5205 212.1692,-261.6672 201.5792,-261.9861 204.0894,-268.5205"/>
+</g>
+<!-- proc~getventilatedslabinput -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node45" class="node">
+<title>proc~getventilatedslabinput</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node45"><a xlink:href="../proc/getventilatedslabinput.html" xlink:title="GetVentilatedSlabInput">
+<polygon fill="#d9534f" stroke="#d9534f" points="330.5242,-227.2554 210.6829,-227.2554 210.6829,-205.2446 330.5242,-205.2446 330.5242,-227.2554"/>
+<text text-anchor="middle" x="270.6035" y="-213.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">GetVentilatedSlabInput</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~getventilatedslabinput -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge44" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~getventilatedslabinput</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M75.0577,-984.0242C82.1627,-894.2959 131.3979,-295.4715 184.3616,-237.25 189.0992,-232.042 194.8927,-228.0241 201.2142,-224.9373"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="202.842,-228.0541 210.7923,-221.051 200.2101,-221.5677 202.842,-228.0541"/>
+</g>
+<!-- proc~calcvrf -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node46" class="node">
+<title>proc~calcvrf</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node46"><a xlink:href="../proc/calcvrf.html" xlink:title="CalcVRF">
+<polygon fill="#d9534f" stroke="#d9534f" points="297.6086,-186.2554 243.5984,-186.2554 243.5984,-164.2446 297.6086,-164.2446 297.6086,-186.2554"/>
+<text text-anchor="middle" x="270.6035" y="-172.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">CalcVRF</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~calcvrf -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge45" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~calcvrf</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M74.9716,-984.0113C81.5757,-891.5245 128.6981,-257.8905 184.3616,-196.25 196.5066,-182.8009 215.6913,-177.2764 232.8856,-175.234"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="233.5778,-178.6887 243.2536,-174.3726 232.9981,-171.7127 233.5778,-178.6887"/>
+</g>
+<!-- proc~calcoutdoorairunit -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node47" class="node">
+<title>proc~calcoutdoorairunit</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node47"><a xlink:href="../proc/calcoutdoorairunit.html" xlink:title="CalcOutdoorAirUnit">
+<polygon fill="#d9534f" stroke="#d9534f" points="322.0542,-145.2554 219.1528,-145.2554 219.1528,-123.2446 322.0542,-123.2446 322.0542,-145.2554"/>
+<text text-anchor="middle" x="270.6035" y="-131.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">CalcOutdoorAirUnit</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~calcoutdoorairunit -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge46" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~calcoutdoorairunit</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M74.8908,-984.0439C81.007,-889.0317 125.9853,-220.3257 184.3616,-155.25 191.0758,-147.7652 199.9701,-142.7316 209.497,-139.3859"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="210.5502,-142.7247 219.1773,-136.5746 208.5979,-136.0025 210.5502,-142.7247"/>
+</g>
+<!-- proc~sizeventilatedslab -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node48" class="node">
+<title>proc~sizeventilatedslab</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node48"><a xlink:href="../proc/sizeventilatedslab.html" xlink:title="SizeVentilatedSlab">
+<polygon fill="#d9534f" stroke="#d9534f" points="320.1728,-104.2554 221.0342,-104.2554 221.0342,-82.2446 320.1728,-82.2446 320.1728,-104.2554"/>
+<text text-anchor="middle" x="270.6035" y="-90.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">SizeVentilatedSlab</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~sizeventilatedslab -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge47" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~sizeventilatedslab</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M74.8152,-984.1195C80.457,-886.8182 123.2599,-182.7768 184.3616,-114.25 191.4339,-106.3182 200.9541,-101.1359 211.0902,-97.7973"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="212.1991,-101.1231 220.9372,-95.1317 210.37,-94.3663 212.1991,-101.1231"/>
+</g>
+<!-- proc~calcventilatedslab -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node49" class="node">
+<title>proc~calcventilatedslab</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node49"><a xlink:href="../proc/calcventilatedslab.html" xlink:title="CalcVentilatedSlab">
+<polygon fill="#d9534f" stroke="#d9534f" points="320.7513,-63.2554 220.4557,-63.2554 220.4557,-41.2446 320.7513,-41.2446 320.7513,-63.2554"/>
+<text text-anchor="middle" x="270.6035" y="-49.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">CalcVentilatedSlab</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~calcventilatedslab -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge48" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~calcventilatedslab</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M74.7446,-984.2359C79.9257,-884.8846 120.5221,-145.2434 184.3616,-73.25 191.3347,-65.3862 200.7136,-60.222 210.7215,-56.8771"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="211.7389,-60.2273 220.4514,-54.1988 209.8811,-53.4783 211.7389,-60.2273"/>
+</g>
+<!-- proc~sizeoutdoorairunit -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_node50" class="node">
+<title>proc~sizeoutdoorairunit</title>
+<g id="a_module~~hvachxassistedcoolingcoil~~UsedByGraph_node50"><a xlink:href="../proc/sizeoutdoorairunit.html" xlink:title="SizeOutdoorAirUnit">
+<polygon fill="#d9534f" stroke="#d9534f" points="321.474,-22.2554 219.7331,-22.2554 219.7331,-.2446 321.474,-.2446 321.474,-22.2554"/>
+<text text-anchor="middle" x="270.6035" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">SizeOutdoorAirUnit</text>
+</a>
+</g>
+</g>
+<!-- module~hvachxassistedcoolingcoil&#45;&gt;proc~sizeoutdoorairunit -->
+<g id="module~~hvachxassistedcoolingcoil~~UsedByGraph_edge49" class="edge">
+<title>module~hvachxassistedcoolingcoil&#45;&gt;proc~sizeoutdoorairunit</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M74.6939,-984.0716C79.4936,-881.6118 117.8416,-107.6466 184.3616,-32.25 191.0903,-24.6234 200.0818,-19.5334 209.7221,-16.179"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="210.8689,-19.4914 219.5189,-13.3736 208.9417,-12.7619 210.8689,-19.4914"/>
+</g>
+</g>
+</svg>
+</div>
+                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
+                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                      </div>
+                      <div class="modal-body">
+
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="484pt" height="31pt"
+ viewBox="0.00 0.00 483.85 30.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 26.5)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-26.5 479.8539,-26.5 479.8539,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-22.2554 0,-22.2554 0,-.2446 54,-.2446 54,-22.2554"/>
+<text text-anchor="middle" x="27" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="137.6205,-22.2554 72.3795,-22.2554 72.3795,-.2446 137.6205,-.2446 137.6205,-22.2554"/>
+<text text-anchor="middle" x="105" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="218.288,-22.2554 155.712,-22.2554 155.712,-.2446 218.288,-.2446 218.288,-22.2554"/>
+<text text-anchor="middle" x="187" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="290,-22.2554 236,-22.2554 236,-.2446 290,-.2446 290,-22.2554"/>
+<text text-anchor="middle" x="263" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="362,-22.2554 308,-22.2554 308,-.2446 362,-.2446 362,-22.2554"/>
+<text text-anchor="middle" x="335" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="475.7082,-22.2554 380.2918,-22.2554 380.2918,-.2446 475.7082,-.2446 475.7082,-22.2554"/>
+<text text-anchor="middle" x="428" y="-8.1" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+
+    <p>Solid arrows point from a parent (sub)module to the submodule which is
+    descended from it. Dashed arrows point from a module being used to the
+    module or program unit using it. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+    <br>
+
+
+    <section class="visible-xs visible-sm hidden-md">
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#variable-on%7E6">On</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#variable-off%7E6">Off</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#variable-totalnumhxassistedcoils">TotalNumHXAssistedCoils</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#variable-hxassistedcoil">HXAssistedCoil</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#variable-hxassistedcoiloutlettemp">HXAssistedCoilOutletTemp</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#variable-hxassistedcoiloutlethumrat">HXAssistedCoilOutletHumRat</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#variable-getcoilsinputflag%7E3">GetCoilsInputFlag</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#variable-checkequipname%7E33">CheckEquipName</a>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#types-1">Derived Types</a></h3></div>
+  <div id="types-1" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#type-hxassistedcoilparameters">HXAssistedCoilParameters</a>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#funcs-1">Functions</a></h3></div>
+  <div id="funcs-1" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#proc-getcoilcapacity%7E3">GetCoilCapacity</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#proc-getcoilgrouptypenum">GetCoilGroupTypeNum</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#proc-getcoilobjecttypenum">GetCoilObjectTypeNum</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#proc-getcoilinletnode%7E3">GetCoilInletNode</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#proc-getcoilwaterinletnode">GetCoilWaterInletNode</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#proc-getcoiloutletnode%7E3">GetCoilOutletNode</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#proc-gethxdxcoilname">GetHXDXCoilName</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#proc-getactualdxcoilindex">GetActualDXCoilIndex</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#proc-gethxcoiltype">GetHXCoilType</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#proc-getcoilmaxwaterflowrate">GetCoilMaxWaterFlowRate</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#proc-gethxcoilairflowrate">GetHXCoilAirFlowRate</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#proc-verifyheatexchangerparent">VerifyHeatExchangerParent</a>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-1">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-1" class="panel-collapse collapse">
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#proc-simhxassistedcoolingcoil">SimHXAssistedCoolingCoil</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#proc-gethxassistedcoolingcoilinput">GetHXAssistedCoolingCoilInput</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#proc-inithxassistedcoolingcoil">InitHXAssistedCoolingCoil</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#proc-calchxassistedcoolingcoil">CalcHXAssistedCoolingCoil</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#proc-gethxdxcoilindex">GetHXDXCoilIndex</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#proc-checkhxassistedcoolingcoilschedule">CheckHXAssistedCoolingCoilSchedule</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html#proc-gethxcoiltypeandname">GetHXCoilTypeAndName</a>
+
+    </div>
+  </div>
+</div>
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+
+    <section>
+    <h2>Variables</h2>
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-on%7E6"></span>integer,</td>
+
+  <td>private,</td>
+  <td>parameter</td><td>::</td>
+  <td><strong>On</strong></td><td> =</td><td>1</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-off%7E6"></span>integer,</td>
+
+  <td>private,</td>
+  <td>parameter</td><td>::</td>
+  <td><strong>Off</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-totalnumhxassistedcoils"></span>integer,</td>
+
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>TotalNumHXAssistedCoils</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-hxassistedcoil"></span>type(<a href='../type/hxassistedcoilparameters.html'>HXAssistedCoilParameters</a>),</td>
+
+  <td>private,</td>
+  <td>ALLOCATABLE, DIMENSION(:)</td><td>::</td>
+  <td><strong>HXAssistedCoil</strong></td><td></td><td></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-hxassistedcoiloutlettemp"></span>real(kind=r64),</td>
+
+  <td>public,</td>
+  <td>ALLOCATABLE, DIMENSION(:)</td><td>::</td>
+  <td><strong>HXAssistedCoilOutletTemp</strong></td><td></td><td></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-hxassistedcoiloutlethumrat"></span>real(kind=r64),</td>
+
+  <td>public,</td>
+  <td>ALLOCATABLE, DIMENSION(:)</td><td>::</td>
+  <td><strong>HXAssistedCoilOutletHumRat</strong></td><td></td><td></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-getcoilsinputflag%7E3"></span>logical,</td>
+
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>GetCoilsInputFlag</strong></td><td> =</td><td>.True.</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-checkequipname%7E33"></span>logical,</td>
+
+  <td>private,</td>
+  <td>ALLOCATABLE, DIMENSION(:)</td><td>::</td>
+  <td><strong>CheckEquipName</strong></td><td></td><td></td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+
+
+    <section>
+     <h2>Derived Types</h2>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="type-hxassistedcoilparameters"></span><h3>type, private :: <a href='../type/hxassistedcoilparameters.html'>HXAssistedCoilParameters</a>
+
+  </h3></div>
+  <div class="panel-body">
+
+
+     <h4>Components</h4>
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-hxassistedcoiltype"></span>character(len=MaxNameLength),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>HXAssistedCoilType</strong></td><td> =</td><td>' '</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-hxassistedcoiltype_num"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>HXAssistedCoilType_Num</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-name%7E192"></span>character(len=MaxNameLength),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>Name</strong></td><td> =</td><td>' '</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-coolingcoiltype%7E3"></span>character(len=MaxNameLength),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>CoolingCoilType</strong></td><td> =</td><td>' '</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-coolingcoiltype_num%7E3"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>CoolingCoilType_Num</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-coolingcoilname%7E3"></span>character(len=MaxNameLength),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>CoolingCoilName</strong></td><td> =</td><td>' '</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-coolingcoilindex%7E3"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>CoolingCoilIndex</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-heatexchangertype"></span>character(len=MaxNameLength),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>HeatExchangerType</strong></td><td> =</td><td>' '</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-heatexchangertype_num"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>HeatExchangerType_Num</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-heatexchangername"></span>character(len=MaxNameLength),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>HeatExchangerName</strong></td><td> =</td><td>' '</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-heatexchangerindex"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>HeatExchangerIndex</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-hxassistedcoilinletnodenum"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>HXAssistedCoilInletNodeNum</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-hxassistedcoiloutletnodenum"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>HXAssistedCoilOutletNodeNum</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-hxexhaustairinletnodenum"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>HXExhaustAirInletNodeNum</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-massflowrate%7E3"></span>real(kind=r64),</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>MassFlowRate</strong></td><td> =</td><td>0.0d0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-maxitercounter"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>MaxIterCounter</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" id="variable-maxiterindex"></span>integer,</td>
+
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>MaxIterIndex</strong></td><td> =</td><td>0</td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+  </div>
+</div>
+
+
+    </section>
+	<br>
+
+
+    <section>
+    <h2>Functions</h2>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-getcoilcapacity%7E3"></span><h3>
+public function <a href='../proc/getcoilcapacity%7E3.html'>GetCoilCapacity</a>(CoilType, CoilName, ErrorsFound) result(CoilCapacity)
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>CoilType</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>CoilName</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(inout)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>ErrorsFound</strong></td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+     <h4>Return Value <small>real(kind=r64)
+  </small></h4>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-getcoilgrouptypenum"></span><h3>
+public function <a href='../proc/getcoilgrouptypenum.html'>GetCoilGroupTypeNum</a>(CoilType, CoilName, ErrorsFound, PrintWarning) result(TypeNum)
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>CoilType</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>CoilName</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(inout)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>ErrorsFound</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+
+  <td></td><td>::</td>
+  <td><strong>PrintWarning</strong></td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+     <h4>Return Value <small>integer
+  </small></h4>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-getcoilobjecttypenum"></span><h3>
+public function <a href='../proc/getcoilobjecttypenum.html'>GetCoilObjectTypeNum</a>(CoilType, CoilName, ErrorsFound, PrintWarning) result(TypeNum)
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>CoilType</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>CoilName</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(inout)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>ErrorsFound</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+
+  <td></td><td>::</td>
+  <td><strong>PrintWarning</strong></td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+     <h4>Return Value <small>integer
+  </small></h4>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-getcoilinletnode%7E3"></span><h3>
+public function <a href='../proc/getcoilinletnode%7E3.html'>GetCoilInletNode</a>(CoilType, CoilName, ErrorsFound) result(NodeNumber)
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>CoilType</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>CoilName</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(inout)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>ErrorsFound</strong></td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+     <h4>Return Value <small>integer
+  </small></h4>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-getcoilwaterinletnode"></span><h3>
+public function <a href='../proc/getcoilwaterinletnode.html'>GetCoilWaterInletNode</a>(CoilType, CoilName, ErrorsFound) result(NodeNumber)
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>CoilType</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>CoilName</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(inout)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>ErrorsFound</strong></td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+     <h4>Return Value <small>integer
+  </small></h4>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-getcoiloutletnode%7E3"></span><h3>
+public function <a href='../proc/getcoiloutletnode%7E3.html'>GetCoilOutletNode</a>(CoilType, CoilName, ErrorsFound) result(NodeNumber)
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>CoilType</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>CoilName</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(inout)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>ErrorsFound</strong></td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+     <h4>Return Value <small>integer
+  </small></h4>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-gethxdxcoilname"></span><h3>
+public function <a href='../proc/gethxdxcoilname.html'>GetHXDXCoilName</a>(CoilType, CoilName, ErrorsFound) result(DXCoilName)
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>CoilType</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>CoilName</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(inout)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>ErrorsFound</strong></td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+     <h4>Return Value <small>character(len=MaxNameLength)
+  </small></h4>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-getactualdxcoilindex"></span><h3>
+public function <a href='../proc/getactualdxcoilindex.html'>GetActualDXCoilIndex</a>(CoilType, CoilName, ErrorsFound) result(DXCoilIndex)
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>CoilType</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>CoilName</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(inout)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>ErrorsFound</strong></td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+     <h4>Return Value <small>integer
+  </small></h4>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-gethxcoiltype"></span><h3>
+public function <a href='../proc/gethxcoiltype.html'>GetHXCoilType</a>(CoilType, CoilName, ErrorsFound) result(CoolingCoilType)
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>CoilType</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>CoilName</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(inout)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>ErrorsFound</strong></td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+     <h4>Return Value <small>character(len=MaxNameLength)
+  </small></h4>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-getcoilmaxwaterflowrate"></span><h3>
+public function <a href='../proc/getcoilmaxwaterflowrate.html'>GetCoilMaxWaterFlowRate</a>(CoilType, CoilName, ErrorsFound) result(MaxWaterFlowRate)
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>CoilType</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>CoilName</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(inout)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>ErrorsFound</strong></td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+     <h4>Return Value <small>real(kind=r64)
+  </small></h4>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-gethxcoilairflowrate"></span><h3>
+public function <a href='../proc/gethxcoilairflowrate.html'>GetHXCoilAirFlowRate</a>(CoilType, CoilName, ErrorsFound) result(MaxAirFlowRate)
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>CoilType</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>CoilName</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(inout)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>ErrorsFound</strong></td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+     <h4>Return Value <small>real(kind=r64)
+  </small></h4>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-verifyheatexchangerparent"></span><h3>
+public function <a href='../proc/verifyheatexchangerparent.html'>VerifyHeatExchangerParent</a>(HXType, HXName) result(Found)
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>HXType</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>HXName</strong></td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+     <h4>Return Value <small>logical
+  </small></h4>
+
+
+  </div>
+  </div>
+
+
+    </section>
+    <br>
+
+
+    <section>
+    <h2>Subroutines</h2>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-simhxassistedcoolingcoil"></span><h3>
+public subroutine <a href='../proc/simhxassistedcoolingcoil.html'>SimHXAssistedCoolingCoil</a>(HXAssistedCoilName, FirstHVACIteration, CompOp, PartLoadRatio, CompIndex, FanOpMode, HXUnitEnable, OnOffAFR, EconomizerFlag, QTotOut)
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>HXAssistedCoilName</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>FirstHVACIteration</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>CompOp</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>PartLoadRatio</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(inout)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>CompIndex</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>FanOpMode</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+
+  <td></td><td>::</td>
+  <td><strong>HXUnitEnable</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+
+  <td></td><td>::</td>
+  <td><strong>OnOffAFR</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+
+  <td></td><td>::</td>
+  <td><strong>EconomizerFlag</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(inout),</td>
+  <td>optional</td>
+
+  <td></td><td>::</td>
+  <td><strong>QTotOut</strong></td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-gethxassistedcoolingcoilinput"></span><h3>
+private subroutine <a href='../proc/gethxassistedcoolingcoilinput.html'>GetHXAssistedCoolingCoilInput</a>()
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+      <em>None</em>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-inithxassistedcoolingcoil"></span><h3>
+private subroutine <a href='../proc/inithxassistedcoolingcoil.html'>InitHXAssistedCoolingCoil</a>(HXAssistedCoilNum)
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>HXAssistedCoilNum</strong></td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-calchxassistedcoolingcoil"></span><h3>
+public subroutine <a href='../proc/calchxassistedcoolingcoil.html'>CalcHXAssistedCoolingCoil</a>(HXAssistedCoilNum, FirstHVACIteration, CompOp, PartLoadRatio, HXUnitOn, FanOpMode, OnOffAirFlow, EconomizerFlag)
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>HXAssistedCoilNum</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>FirstHVACIteration</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>CompOp</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>PartLoadRatio</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>HXUnitOn</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>FanOpMode</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+
+  <td></td><td>::</td>
+  <td><strong>OnOffAirFlow</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+
+  <td></td><td>::</td>
+  <td><strong>EconomizerFlag</strong></td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-gethxdxcoilindex"></span><h3>
+public subroutine <a href='../proc/gethxdxcoilindex.html'>GetHXDXCoilIndex</a>(HXDXCoilName, HXDXCoilIndex, ErrorsFound, CurrentModuleObject)
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>HXDXCoilName</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(inout)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>HXDXCoilIndex</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(inout)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>ErrorsFound</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+
+  <td></td><td>::</td>
+  <td><strong>CurrentModuleObject</strong></td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-checkhxassistedcoolingcoilschedule"></span><h3>
+public subroutine <a href='../proc/checkhxassistedcoolingcoilschedule.html'>CheckHXAssistedCoolingCoilSchedule</a>(CompType, CompName, Value, CompIndex)
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>CompType</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>CompName</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>real(kind=r64),</td>
+  <td>intent(out)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>Value</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(inout)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>CompIndex</strong></td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+  </div>
+  </div>
+
+
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-gethxcoiltypeandname"></span><h3>
+public subroutine <a href='../proc/gethxcoiltypeandname.html'>GetHXCoilTypeAndName</a>(CoilType, CoilName, ErrorsFound, CoolingCoilType, CoolingCoilName)
+
+
+</h3></div>
+  <div class="panel-body">
+
+
+    <h4>Arguments</h4>
+
+
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+<tbody>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>CoilType</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>CoilName</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(inout)</td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>ErrorsFound</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=MaxNameLength)</td>
+  <td></td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>CoolingCoilType</strong></td><td></td>
+
+</tr>
+
+
+<tr>
+
+  <td><span class="anchor" ></span>character(len=MaxNameLength)</td>
+  <td></td>
+  <td></td>
+
+  <td></td><td>::</td>
+  <td><strong>CoolingCoilName</strong></td><td></td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+  </div>
+  </div>
+
+
+    </section>
+    <br>
+
+
+    </div>
+  </div>
+
+  <section class="visible-xs visible-sm hidden-md">
+    <hr>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allmods-1">All Modules</a></h3></div>
+  <div id="allmods-1" class="panel-collapse collapse">
+    <div class="list-group">
+
+      <a class="list-group-item" href="../module/airflownetworkbalancemanager.html">AirflowNetworkBalanceManager</a>
+
+      <a class="list-group-item" href="../module/airflownetworksolver.html">AirflowNetworkSolver</a>
+
+      <a class="list-group-item" href="../module/baseboardelectric.html">BaseboardElectric</a>
+
+      <a class="list-group-item" href="../module/baseboardradiator.html">BaseboardRadiator</a>
+
+      <a class="list-group-item" href="../module/boilers.html">Boilers</a>
+
+      <a class="list-group-item" href="../module/boilersteam.html">BoilerSteam</a>
+
+      <a class="list-group-item" href="../module/branchinputmanager.html">BranchInputManager</a>
+
+      <a class="list-group-item" href="../module/branchnodeconnections.html">BranchNodeConnections</a>
+
+      <a class="list-group-item" href="../module/chillerabsorption.html">ChillerAbsorption</a>
+
+      <a class="list-group-item" href="../module/chillerelectriceir.html">ChillerElectricEIR</a>
+
+      <a class="list-group-item" href="../module/chillerexhaustabsorption.html">ChillerExhaustAbsorption</a>
+
+      <a class="list-group-item" href="../module/chillergasabsorption.html">ChillerGasAbsorption</a>
+
+      <a class="list-group-item" href="../module/chillerindirectabsorption.html">ChillerIndirectAbsorption</a>
+
+      <a class="list-group-item" href="../module/chillerreformulatedeir.html">ChillerReformulatedEIR</a>
+
+      <a class="list-group-item" href="../module/condenserlooptowers.html">CondenserLoopTowers</a>
+
+      <a class="list-group-item" href="../module/conductiontransferfunctioncalc.html">ConductionTransferFunctionCalc</a>
+
+      <a class="list-group-item" href="../module/convectioncoefficients.html">ConvectionCoefficients</a>
+
+      <a class="list-group-item" href="../module/cooltower.html">CoolTower</a>
+
+      <a class="list-group-item" href="../module/costestimatemanager.html">CostEstimateManager</a>
+
+      <a class="list-group-item" href="../module/crossventmgr.html">CrossVentMgr</a>
+
+      <a class="list-group-item" href="../module/ctelectricgenerator.html">CTElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/curvemanager.html">CurveManager</a>
+
+      <a class="list-group-item" href="../module/dataairflownetwork.html">DataAirflowNetwork</a>
+
+      <a class="list-group-item" href="../module/dataairloop.html">DataAirLoop</a>
+
+      <a class="list-group-item" href="../module/dataairsystems.html">DataAirSystems</a>
+
+      <a class="list-group-item" href="../module/databranchairloopplant.html">DataBranchAirLoopPlant</a>
+
+      <a class="list-group-item" href="../module/databranchnodeconnections.html">DataBranchNodeConnections</a>
+
+      <a class="list-group-item" href="../module/databsdfwindow.html">DataBSDFWindow</a>
+
+      <a class="list-group-item" href="../module/datacomplexfenestration.html">DataComplexFenestration</a>
+
+      <a class="list-group-item" href="../module/datacontaminantbalance.html">DataContaminantBalance</a>
+
+      <a class="list-group-item" href="../module/dataconvergparams.html">DataConvergParams</a>
+
+      <a class="list-group-item" href="../module/dataconversions.html">DataConversions</a>
+
+      <a class="list-group-item" href="../module/datacostestimate.html">DataCostEstimate</a>
+
+      <a class="list-group-item" href="../module/datadaylighting.html">DataDaylighting</a>
+
+      <a class="list-group-item" href="../module/datadaylightingdevices.html">DataDaylightingDevices</a>
+
+      <a class="list-group-item" href="../module/datadefineequip.html">DataDefineEquip</a>
+
+      <a class="list-group-item" href="../module/datadelight.html">DataDElight</a>
+
+      <a class="list-group-item" href="../module/dataenvironment.html">DataEnvironment</a>
+
+      <a class="list-group-item" href="../module/dataerrortracking.html">DataErrorTracking</a>
+
+      <a class="list-group-item" href="../module/datagenerators.html">DataGenerators</a>
+
+      <a class="list-group-item" href="../module/dataglobalconstants.html">DataGlobalConstants</a>
+
+      <a class="list-group-item" href="../module/dataglobals.html">DataGlobals</a>
+
+      <a class="list-group-item" href="../module/dataheatbalance.html">DataHeatBalance</a>
+
+      <a class="list-group-item" href="../module/dataheatbalfansys.html">DataHeatBalFanSys</a>
+
+      <a class="list-group-item" href="../module/dataheatbalsurface.html">DataHeatBalSurface</a>
+
+      <a class="list-group-item" href="../module/datahvaccontrollers.html">DataHVACControllers</a>
+
+      <a class="list-group-item" href="../module/datahvacglobals.html">DataHVACGlobals</a>
+
+      <a class="list-group-item" href="../module/datainterfaces.html">DataInterfaces</a>
+
+      <a class="list-group-item" href="../module/dataipshortcuts.html">DataIPShortCuts</a>
+
+      <a class="list-group-item" href="../module/dataloopnode.html">DataLoopNode</a>
+
+      <a class="list-group-item" href="../module/datamoisturebalance.html">DataMoistureBalance</a>
+
+      <a class="list-group-item" href="../module/datamoisturebalanceempd.html">DataMoistureBalanceEMPD</a>
+
+      <a class="list-group-item" href="../module/dataoutputs.html">DataOutputs</a>
+
+      <a class="list-group-item" href="../module/dataphotovoltaics.html">DataPhotovoltaics</a>
+
+      <a class="list-group-item" href="../module/dataplant.html">DataPlant</a>
+
+      <a class="list-group-item" href="../module/dataplantpipingsystems.html">DataPlantPipingSystems</a>
+
+      <a class="list-group-item" href="../module/dataprecisionglobals.html">DataPrecisionGlobals</a>
+
+      <a class="list-group-item" href="../module/datareportingflags.html">DataReportingFlags</a>
+
+      <a class="list-group-item" href="../module/dataroomairmodel.html">DataRoomAirModel</a>
+
+      <a class="list-group-item" href="../module/datarootfinder.html">DataRootFinder</a>
+
+      <a class="list-group-item" href="../module/dataruntimelanguage.html">DataRuntimeLanguage</a>
+
+      <a class="list-group-item" href="../module/datashadowingcombinations.html">DataShadowingCombinations</a>
+
+      <a class="list-group-item" href="../module/datasizing.html">DataSizing</a>
+
+      <a class="list-group-item" href="../module/datastringglobals.html">DataStringGlobals</a>
+
+      <a class="list-group-item" href="../module/datasurfacecolors.html">DataSurfaceColors</a>
+
+      <a class="list-group-item" href="../module/datasurfacelists.html">DataSurfaceLists</a>
+
+      <a class="list-group-item" href="../module/datasurfaces.html">DataSurfaces</a>
+
+      <a class="list-group-item" href="../module/datasystemvariables.html">DataSystemVariables</a>
+
+      <a class="list-group-item" href="../module/datatimings.html">DataTimings</a>
+
+      <a class="list-group-item" href="../module/dataucsdshareddata.html">DataUCSDSharedData</a>
+
+      <a class="list-group-item" href="../module/datavectortypes.html">DataVectorTypes</a>
+
+      <a class="list-group-item" href="../module/dataviewfactorinformation.html">DataViewFactorInformation</a>
+
+      <a class="list-group-item" href="../module/datawater.html">DataWater</a>
+
+      <a class="list-group-item" href="../module/datawindowequivalentlayer.html">DataWindowEquivalentLayer</a>
+
+      <a class="list-group-item" href="../module/datazonecontrols.html">DataZoneControls</a>
+
+      <a class="list-group-item" href="../module/datazoneenergydemands.html">DataZoneEnergyDemands</a>
+
+      <a class="list-group-item" href="../module/datazoneequipment.html">DataZoneEquipment</a>
+
+      <a class="list-group-item" href="../module/daylightingdevices.html">DaylightingDevices</a>
+
+      <a class="list-group-item" href="../module/daylightingmanager.html">DaylightingManager</a>
+
+      <a class="list-group-item" href="../module/delightmanagerf%7E2.html">DELIGHTMANAGERF</a>
+
+      <a class="list-group-item" href="../module/delightmanagerf.html">DELIGHTMANAGERF</a>
+
+      <a class="list-group-item" href="../module/demandmanager.html">DemandManager</a>
+
+      <a class="list-group-item" href="../module/desiccantdehumidifiers.html">DesiccantDehumidifiers</a>
+
+      <a class="list-group-item" href="../module/directairmanager.html">DirectAirManager</a>
+
+      <a class="list-group-item" href="../module/displacementventmgr.html">DisplacementVentMgr</a>
+
+      <a class="list-group-item" href="../module/dualduct.html">DualDuct</a>
+
+      <a class="list-group-item" href="../module/dxcoils.html">DXCoils</a>
+
+      <a class="list-group-item" href="../module/dxfearclipping.html">DXFEarClipping</a>
+
+      <a class="list-group-item" href="../module/earthtube.html">EarthTube</a>
+
+      <a class="list-group-item" href="../module/economiclifecyclecost.html">EconomicLifeCycleCost</a>
+
+      <a class="list-group-item" href="../module/economictariff.html">EconomicTariff</a>
+
+      <a class="list-group-item" href="../module/ecoroofmanager.html">EcoRoofManager</a>
+
+      <a class="list-group-item" href="../module/electricbaseboardradiator.html">ElectricBaseboardRadiator</a>
+
+      <a class="list-group-item" href="../module/emsmanager.html">EMSManager</a>
+
+      <a class="list-group-item" href="../module/evaporativecoolers.html">EvaporativeCoolers</a>
+
+      <a class="list-group-item" href="../module/evaporativefluidcoolers.html">EvaporativeFluidCoolers</a>
+
+      <a class="list-group-item" href="../module/exteriorenergyuse.html">ExteriorEnergyUse</a>
+
+      <a class="list-group-item" href="../module/externalinterface.html">ExternalInterface</a>
+
+      <a class="list-group-item" href="../module/fancoilunits.html">FanCoilUnits</a>
+
+      <a class="list-group-item" href="../module/fans.html">Fans</a>
+
+      <a class="list-group-item" href="../module/faultsmanager.html">FaultsManager</a>
+
+      <a class="list-group-item" href="../module/fluidcoolers.html">FluidCoolers</a>
+
+      <a class="list-group-item" href="../module/fluidproperties.html">FluidProperties</a>
+
+      <a class="list-group-item" href="../module/fuelcellelectricgenerator.html">FuelCellElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/furnaces.html">Furnaces</a>
+
+      <a class="list-group-item" href="../module/general.html">General</a>
+
+      <a class="list-group-item" href="../module/generatordynamicsmanager.html">GeneratorDynamicsManager</a>
+
+      <a class="list-group-item" href="../module/generatorfuelsupply.html">GeneratorFuelSupply</a>
+
+      <a class="list-group-item" href="../module/globalnames.html">GlobalNames</a>
+
+      <a class="list-group-item" href="../module/groundheatexchangers.html">GroundHeatExchangers</a>
+
+      <a class="list-group-item" href="../module/heatbalanceairmanager.html">HeatBalanceAirManager</a>
+
+      <a class="list-group-item" href="../module/heatbalancehamtmanager.html">HeatBalanceHAMTManager</a>
+
+      <a class="list-group-item" href="../module/heatbalanceintradexchange.html">HeatBalanceIntRadExchange</a>
+
+      <a class="list-group-item" href="../module/heatbalancemanager.html">HeatBalanceManager</a>
+
+      <a class="list-group-item" href="../module/heatbalancemovableinsulation.html">HeatBalanceMovableInsulation</a>
+
+      <a class="list-group-item" href="../module/heatbalancesurfacemanager.html">HeatBalanceSurfaceManager</a>
+
+      <a class="list-group-item" href="../module/heatbalfinitediffmanager.html">HeatBalFiniteDiffManager</a>
+
+      <a class="list-group-item" href="../module/heatingcoils.html">HeatingCoils</a>
+
+      <a class="list-group-item" href="../module/heatpumpwatertowatercooling.html">HeatPumpWaterToWaterCOOLING</a>
+
+      <a class="list-group-item" href="../module/heatpumpwatertowaterheating.html">HeatPumpWaterToWaterHEATING</a>
+
+      <a class="list-group-item" href="../module/heatpumpwatertowatersimple.html">HeatPumpWaterToWaterSimple</a>
+
+      <a class="list-group-item" href="../module/heatrecovery.html">HeatRecovery</a>
+
+      <a class="list-group-item" href="../module/hightempradiantsystem.html">HighTempRadiantSystem</a>
+
+      <a class="list-group-item" href="../module/humidifiers.html">Humidifiers</a>
+
+      <a class="list-group-item" href="../module/hvaccontrollers.html">HVACControllers</a>
+
+      <a class="list-group-item" href="../module/hvaccooledbeam.html">HVACCooledBeam</a>
+
+      <a class="list-group-item" href="../module/hvacduct.html">HVACDuct</a>
+
+      <a class="list-group-item" href="../module/hvacdxheatpumpsystem.html">HVACDXHeatPumpSystem</a>
+
+      <a class="list-group-item" href="../module/hvacdxsystem.html">HVACDXSystem</a>
+
+      <a class="list-group-item" href="../module/hvachxassistedcoolingcoil.html">HVACHXAssistedCoolingCoil</a>
+
+      <a class="list-group-item" href="../module/hvacinterfacemanager.html">HVACInterfaceManager</a>
+
+      <a class="list-group-item" href="../module/hvacmanager.html">HVACManager</a>
+
+      <a class="list-group-item" href="../module/hvacmultispeedheatpump.html">HVACMultiSpeedHeatPump</a>
+
+      <a class="list-group-item" href="../module/hvacsingleductinduc.html">HVACSingleDuctInduc</a>
+
+      <a class="list-group-item" href="../module/hvacstandaloneerv.html">HVACStandAloneERV</a>
+
+      <a class="list-group-item" href="../module/hvacunitarybypassvav.html">HVACUnitaryBypassVAV</a>
+
+      <a class="list-group-item" href="../module/hvacunitarysystem.html">HVACUnitarySystem</a>
+
+      <a class="list-group-item" href="../module/hvacvariablerefrigerantflow.html">HVACVariableRefrigerantFlow</a>
+
+      <a class="list-group-item" href="../module/hwbaseboardradiator.html">HWBaseboardRadiator</a>
+
+      <a class="list-group-item" href="../module/icengineelectricgenerator.html">ICEngineElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/icethermalstorage.html">IceThermalStorage</a>
+
+      <a class="list-group-item" href="../module/inputprocessor.html">InputProcessor</a>
+
+      <a class="list-group-item" href="../module/internalheatgains.html">InternalHeatGains</a>
+
+      <a class="list-group-item" href="../module/iso_c_function_binding.html">ISO_C_FUNCTION_BINDING</a>
+
+      <a class="list-group-item" href="../module/iso_c_function_binding%7E2.html">ISO_C_FUNCTION_BINDING</a>
+
+      <a class="list-group-item" href="../module/lowtempradiantsystem.html">LowTempRadiantSystem</a>
+
+      <a class="list-group-item" href="../module/manageelectricpower.html">ManageElectricPower</a>
+
+      <a class="list-group-item" href="../module/matrixdatamanager.html">MatrixDataManager</a>
+
+      <a class="list-group-item" href="../module/microchpelectricgenerator.html">MicroCHPElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/microturbineelectricgenerator.html">MicroturbineElectricGenerator</a>
+
+      <a class="list-group-item" href="../module/mixedair.html">MixedAir</a>
+
+      <a class="list-group-item" href="../module/mixercomponent.html">MixerComponent</a>
+
+      <a class="list-group-item" href="../module/moisturebalanceempdmanager.html">MoistureBalanceEMPDManager</a>
+
+      <a class="list-group-item" href="../module/mundtsimmgr.html">MundtSimMgr</a>
+
+      <a class="list-group-item" href="../module/nodeinputmanager.html">NodeInputManager</a>
+
+      <a class="list-group-item" href="../module/nonzoneequipmentmanager.html">NonZoneEquipmentManager</a>
+
+      <a class="list-group-item" href="../module/outairnodemanager.html">OutAirNodeManager</a>
+
+      <a class="list-group-item" href="../module/outdoorairunit.html">OutdoorAirUnit</a>
+
+      <a class="list-group-item" href="../module/outputprocessor.html">OutputProcessor</a>
+
+      <a class="list-group-item" href="../module/outputreportpredefined.html">OutputReportPredefined</a>
+
+      <a class="list-group-item" href="../module/outputreporttabular.html">OutputReportTabular</a>
+
+      <a class="list-group-item" href="../module/outsideenergysources.html">OutsideEnergySources</a>
+
+      <a class="list-group-item" href="../module/packagedterminalheatpump.html">PackagedTerminalHeatPump</a>
+
+      <a class="list-group-item" href="../module/packagedthermalstoragecoil.html">PackagedThermalStorageCoil</a>
+
+      <a class="list-group-item" href="../module/photovoltaics.html">Photovoltaics</a>
+
+      <a class="list-group-item" href="../module/photovoltaicthermalcollectors.html">PhotovoltaicThermalCollectors</a>
+
+      <a class="list-group-item" href="../module/pipeheattransfer.html">PipeHeatTransfer</a>
+
+      <a class="list-group-item" href="../module/pipes.html">Pipes</a>
+
+      <a class="list-group-item" href="../module/plantcentralgshp.html">PlantCentralGSHP</a>
+
+      <a class="list-group-item" href="../module/plantchillers.html">PlantChillers</a>
+
+      <a class="list-group-item" href="../module/plantcomponenttemperaturesources.html">PlantComponentTemperatureSources</a>
+
+      <a class="list-group-item" href="../module/plantcondloopoperation.html">PlantCondLoopOperation</a>
+
+      <a class="list-group-item" href="../module/plantheatexchangerfluidtofluid.html">PlantHeatExchangerFluidToFluid</a>
+
+      <a class="list-group-item" href="../module/plantloadprofile.html">PlantLoadProfile</a>
+
+      <a class="list-group-item" href="../module/plantloopequip.html">PlantLoopEquip</a>
+
+      <a class="list-group-item" href="../module/plantloopsolver.html">PlantLoopSolver</a>
+
+      <a class="list-group-item" href="../module/plantmanager.html">PlantManager</a>
+
+      <a class="list-group-item" href="../module/plantpipingsystemsmanager.html">PlantPipingSystemsManager</a>
+
+      <a class="list-group-item" href="../module/plantpressuresystem.html">PlantPressureSystem</a>
+
+      <a class="list-group-item" href="../module/plantutilities.html">PlantUtilities</a>
+
+      <a class="list-group-item" href="../module/plantvalves.html">PlantValves</a>
+
+      <a class="list-group-item" href="../module/pollutionmodule.html">PollutionModule</a>
+
+      <a class="list-group-item" href="../module/pondgroundheatexchanger.html">PondGroundHeatExchanger</a>
+
+      <a class="list-group-item" href="../module/poweredinductionunits.html">PoweredInductionUnits</a>
+
+      <a class="list-group-item" href="../module/psychrometrics.html">Psychrometrics</a>
+
+      <a class="list-group-item" href="../module/pumps.html">Pumps</a>
+
+      <a class="list-group-item" href="../module/purchasedairmanager.html">PurchasedAirManager</a>
+
+      <a class="list-group-item" href="../module/refrigeratedcase.html">RefrigeratedCase</a>
+
+      <a class="list-group-item" href="../module/reportsizingmanager.html">ReportSizingManager</a>
+
+      <a class="list-group-item" href="../module/returnairpathmanager.html">ReturnAirPathManager</a>
+
+      <a class="list-group-item" href="../module/roomairmodelmanager.html">RoomAirModelManager</a>
+
+      <a class="list-group-item" href="../module/roomairmodelusertemppattern.html">RoomAirModelUserTempPattern</a>
+
+      <a class="list-group-item" href="../module/rootfinder.html">RootFinder</a>
+
+      <a class="list-group-item" href="../module/runtimelanguageprocessor.html">RuntimeLanguageProcessor</a>
+
+      <a class="list-group-item" href="../module/schedulemanager.html">ScheduleManager</a>
+
+      <a class="list-group-item" href="../module/setpointmanager.html">SetPointManager</a>
+
+      <a class="list-group-item" href="../module/simairservingzones.html">SimAirServingZones</a>
+
+      <a class="list-group-item" href="../module/simulationmanager.html">SimulationManager</a>
+
+      <a class="list-group-item" href="../module/singleduct.html">SingleDuct</a>
+
+      <a class="list-group-item" href="../module/sizingmanager.html">SizingManager</a>
+
+      <a class="list-group-item" href="../module/solarcollectors.html">SolarCollectors</a>
+
+      <a class="list-group-item" href="../module/solarreflectionmanager.html">SolarReflectionManager</a>
+
+      <a class="list-group-item" href="../module/solarshading.html">SolarShading</a>
+
+      <a class="list-group-item" href="../module/sortandstringutilities.html">SortAndStringUtilities</a>
+
+      <a class="list-group-item" href="../module/splittercomponent.html">SplitterComponent</a>
+
+      <a class="list-group-item" href="../module/sqliteprocedures%7E2.html">SQLiteProcedures</a>
+
+      <a class="list-group-item" href="../module/sqliteprocedures.html">SQLiteProcedures</a>
+
+      <a class="list-group-item" href="../module/standardratings.html">StandardRatings</a>
+
+      <a class="list-group-item" href="../module/steambaseboardradiator.html">SteamBaseboardRadiator</a>
+
+      <a class="list-group-item" href="../module/steamcoils.html">SteamCoils</a>
+
+      <a class="list-group-item" href="../module/surfacegeometry.html">SurfaceGeometry</a>
+
+      <a class="list-group-item" href="../module/surfacegroundheatexchanger.html">SurfaceGroundHeatExchanger</a>
+
+      <a class="list-group-item" href="../module/systemavailabilitymanager.html">SystemAvailabilityManager</a>
+
+      <a class="list-group-item" href="../module/systemreports.html">SystemReports</a>
+
+      <a class="list-group-item" href="../module/tarcogargs.html">TARCOGArgs</a>
+
+      <a class="list-group-item" href="../module/tarcogcommon.html">TARCOGCommon</a>
+
+      <a class="list-group-item" href="../module/tarcogdeflection.html">TARCOGDeflection</a>
+
+      <a class="list-group-item" href="../module/tarcoggasses90.html">TARCOGGasses90</a>
+
+      <a class="list-group-item" href="../module/tarcoggassesparams.html">TARCOGGassesParams</a>
+
+      <a class="list-group-item" href="../module/tarcogmain.html">TARCOGMain</a>
+
+      <a class="list-group-item" href="../module/tarcogoutput.html">TARCOGOutput</a>
+
+      <a class="list-group-item" href="../module/tarcogparams.html">TARCOGParams</a>
+
+      <a class="list-group-item" href="../module/tarcogshading.html">TarcogShading</a>
+
+      <a class="list-group-item" href="../module/thermalchimney.html">ThermalChimney</a>
+
+      <a class="list-group-item" href="../module/thermalcomfort.html">ThermalComfort</a>
+
+      <a class="list-group-item" href="../module/thermalen673calc.html">ThermalEN673Calc</a>
+
+      <a class="list-group-item" href="../module/thermaliso15099calc.html">ThermalISO15099Calc</a>
+
+      <a class="list-group-item" href="../module/transpiredcollector.html">TranspiredCollector</a>
+
+      <a class="list-group-item" href="../module/ufadmanager.html">UFADManager</a>
+
+      <a class="list-group-item" href="../module/unitheater.html">UnitHeater</a>
+
+      <a class="list-group-item" href="../module/unitventilator.html">UnitVentilator</a>
+
+      <a class="list-group-item" href="../module/userdefinedcomponents.html">UserDefinedComponents</a>
+
+      <a class="list-group-item" href="../module/variablespeedcoils.html">VariableSpeedCoils</a>
+
+      <a class="list-group-item" href="../module/vectors.html">vectors</a>
+
+      <a class="list-group-item" href="../module/ventilatedslab.html">VentilatedSlab</a>
+
+      <a class="list-group-item" href="../module/watercoils.html">WaterCoils</a>
+
+      <a class="list-group-item" href="../module/watermanager.html">WaterManager</a>
+
+      <a class="list-group-item" href="../module/waterthermaltanks.html">WaterThermalTanks</a>
+
+      <a class="list-group-item" href="../module/watertoairheatpump.html">WatertoAirHeatPump</a>
+
+      <a class="list-group-item" href="../module/watertoairheatpumpsimple.html">WatertoAirHeatPumpSimple</a>
+
+      <a class="list-group-item" href="../module/wateruse.html">WaterUse</a>
+
+      <a class="list-group-item" href="../module/weathermanager.html">WeatherManager</a>
+
+      <a class="list-group-item" href="../module/windowac.html">WindowAC</a>
+
+      <a class="list-group-item" href="../module/windowcomplexmanager.html">WindowComplexManager</a>
+
+      <a class="list-group-item" href="../module/windowequivalentlayer.html">WindowEquivalentLayer</a>
+
+      <a class="list-group-item" href="../module/windowmanager.html">WindowManager</a>
+
+      <a class="list-group-item" href="../module/windturbine.html">WindTurbine</a>
+
+      <a class="list-group-item" href="../module/zoneairloopequipmentmanager.html">ZoneAirLoopEquipmentManager</a>
+
+      <a class="list-group-item" href="../module/zonecontaminantpredictorcorrector.html">ZoneContaminantPredictorCorrector</a>
+
+      <a class="list-group-item" href="../module/zonedehumidifier.html">ZoneDehumidifier</a>
+
+      <a class="list-group-item" href="../module/zoneequipmentmanager.html">ZoneEquipmentManager</a>
+
+      <a class="list-group-item" href="../module/zoneplenum.html">ZonePlenum</a>
+
+      <a class="list-group-item" href="../module/zonetemppredictorcorrector.html">ZoneTempPredictorCorrector</a>
+
+    </div>
+  </div>
+</div>
+
+
+  </section>
+
+    <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2017 </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> EnergyPlusFortran</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js'],
+        'HTML-CSS': {
+           styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#000000 ! important'} }
+        }
+      });
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>
